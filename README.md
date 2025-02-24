@@ -1,4 +1,5 @@
 # Template Base de Projetos
+>atualizar o readme, para refletir o que for desenvolvido neste projeto em específico!
 
 Template base para projetos da Beets Jr, com frontend em React e backend em Node.js.
 
