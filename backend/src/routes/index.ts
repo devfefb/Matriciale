@@ -35,9 +35,16 @@ router.post('/register', async (req, res) => {
 // Rota de login
 router.post('/login', async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { email, password } = req.body; 
+    const dominios = ['exemplo1.com', 'exemplo2.com', 'exemplo3.com'];
+    const dominioUsuario = email.split('@')[1];
     
-    // Aqui você normalmente usaria o método de login do Firebase
+    if (dominios.includes(dominioUsuario)) {
+      // se o dominio do usuário estiver dentre os domínios selecionados ele faz o login corretamente
+    }
+
+
+    // Aqui você normalmente usaria o método de login do Firebase 
     // Por enquanto, vamos apenas verificar se o usuário existe
     const user = await auth.getUserByEmail(email);
     
