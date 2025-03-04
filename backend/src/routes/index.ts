@@ -10,7 +10,13 @@ router.use('/users', usersRouter);
 router.post('/register', async (req, res) => {
   try {
     const { email, password, name } = req.body;
+    const dominios = ['exemplo1.com', 'exemplo2.com', 'exemplo3.com'];
+    const dominioUsuario = email.split('@')[1];
     
+    if (!dominios.includes(dominioUsuario)) {
+      // se o dominio do usuário não estiver dentre os domínios selecionados será exibida uma memsagem de erro 
+      return res.status(400).json({ message: "domínio de email inválido" });
+    }
     const userRecord = await auth.createUser({
       email,
       password,
@@ -39,8 +45,9 @@ router.post('/login', async (req, res) => {
     const dominios = ['exemplo1.com', 'exemplo2.com', 'exemplo3.com'];
     const dominioUsuario = email.split('@')[1];
     
-    if (dominios.includes(dominioUsuario)) {
-      // se o dominio do usuário estiver dentre os domínios selecionados ele faz o login corretamente
+    if (!dominios.includes(dominioUsuario)) {
+      // se o dominio do usuário não estiver dentre os domínios selecionados será exibida uma memsagem de erro 
+      return res.status(400).json({ message: "domínio de email inválido" });
     }
 
 

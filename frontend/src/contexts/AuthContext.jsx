@@ -1,5 +1,7 @@
 import React, { createContext, useState, useContext, useCallback } from 'react';
 import api from '../services/api';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../config/firebaseConfig'; // Importe o auth do arquivo de configuração do Firebase
 
 const AuthContext = createContext({});
 
@@ -21,6 +23,14 @@ export function AuthProvider({ children }) {
       const response = await api.post('/login', { email, password });
       const { token, user: userData } = response.data;
 
+      if (!userData || !token) {
+        throw new Error('Erro ao fazer login');
+      }
+
+      // Autenticação Firebase
+      await signInWithEmailAndPassword(auth, email, password); // Faz o login no Firebase também
+
+      // Armazenar o token e dados do usuário no localStorage
       localStorage.setItem('@BaseRepo:token', token);
       localStorage.setItem('@BaseRepo:user', JSON.stringify(userData));
       
@@ -37,13 +47,17 @@ export function AuthProvider({ children }) {
       const response = await api.post('/register', { name, email, password });
       const { token, user: userData } = response.data;
 
+      if(!userData || !token)
+      {
+        throw new Error('Erro ao criar conta')
+      }
+
       localStorage.setItem('@BaseRepo:token', token);
       localStorage.setItem('@BaseRepo:user', JSON.stringify(userData));
       
       api.defaults.headers.authorization = `Bearer ${token}`;
       setUser(userData);
     } catch (error) {
-      console.error('Erro no registro:', error);
       throw new Error(error.response?.data?.error || 'Erro ao criar conta');
     }
   }, []);
@@ -68,4 +82,4 @@ export function useAuth() {
     throw new Error('useAuth must be used within an AuthProvider');
   }
   return context;
-} 
+}
