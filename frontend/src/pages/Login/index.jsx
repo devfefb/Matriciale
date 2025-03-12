@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import {
-  Container,
-  Paper,
   TextField,
   Button,
   Typography,
   Box,
   Link as MuiLink,
+  InputAdornment,
+  IconButton,
 } from '@mui/material';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { useAuth } from '../../contexts/AuthContext';
 
 export default function Login() {
   const navigate = useNavigate();
   const { signIn } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -36,75 +38,202 @@ export default function Login() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Função para verificar se os campos estão preenchidos
+  const isFormFilled = formData.email.trim() !== '' && formData.password.trim() !== '';
+
   return (
-    <Container component="main" maxWidth="xs">
+    <Box
+      sx={{
+        display: 'flex',
+        minHeight: '100vh',
+        backgroundColor: '#fff',
+      }}
+    >
       <Box
         sx={{
-          marginTop: 8,
+          flex: '0 0 45%',
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '0 64px',
+          backgroundColor: '#f5f5f5',
+          maxWidth: '800px',
         }}
       >
-        <Typography component="h1" variant="h5">
-          {import.meta.env.VITE_APP_NAME}
-        </Typography>
-        <Paper
-          elevation={3}
-          sx={{
-            marginTop: 3,
-            padding: 3,
-            display: 'flex',
-            flexDirection: 'column',
-            width: '100%',
-          }}
-        >
+        <Box sx={{ maxWidth: '400px', margin: '0 auto', width: '100%' }}>
+          <Typography
+            variant="h3"
+            component="h1"
+            sx={{
+              color: '#00205C',
+              fontWeight: 'bold',
+              marginBottom: 1,
+              lineHeight: 1.2,
+              fontSize: '2.5rem',
+            }}
+          >
+            Bem-vindo<br />à Matriciale!
+          </Typography>
+          
+          <Typography
+            sx={{
+              color: '#FF0000',
+              marginBottom: 4,
+              fontSize: '1rem',
+            }}
+          >
+            Sentimos sua falta!
+          </Typography>
+
           <form onSubmit={handleSubmit}>
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email"
-              name="email"
-              autoComplete="email"
-              autoFocus
-              value={formData.email}
-              onChange={handleChange}
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Senha"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-              value={formData.password}
-              onChange={handleChange}
-            />
+            <Box sx={{ mb: 2 }}>
+              <Typography
+                component="label"
+                sx={{
+                  display: 'block',
+                  mb: 1,
+                  color: '#666',
+                }}
+              >
+                Email
+              </Typography>
+              <TextField
+                required
+                fullWidth
+                id="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                value={formData.email}
+                onChange={handleChange}
+                variant="outlined"
+                sx={{
+                  backgroundColor: '#fff',
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: '#ddd',
+                    },
+                  },
+                }}
+              />
+            </Box>
+
+            <Box sx={{ mb: 3 }}>
+              <Typography
+                component="label"
+                sx={{
+                  display: 'block',
+                  mb: 1,
+                  color: '#666',
+                }}
+              >
+                Senha
+              </Typography>
+              <TextField
+                required
+                fullWidth
+                name="password"
+                type={showPassword ? 'text' : 'password'}
+                placeholder="Digite sua senha"
+                value={formData.password}
+                onChange={handleChange}
+                variant="outlined"
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton
+                        onClick={() => setShowPassword(!showPassword)}
+                        edge="end"
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+                sx={{
+                  backgroundColor: '#fff',
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: '#ddd',
+                    },
+                  },
+                }}
+              />
+            </Box>
+
             {error && (
               <Typography color="error" align="center" sx={{ mt: 2 }}>
                 {error}
               </Typography>
             )}
+
             <Button
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              disabled={!isFormFilled}
+              sx={{
+                mt: 2,
+                mb: 2,
+                py: 1.5,
+                backgroundColor: isFormFilled ? '#00205C' : '#E6EEF8',
+                color: isFormFilled ? '#fff' : '#00205C',
+                '&:hover': {
+                  backgroundColor: isFormFilled ? '#001a4d' : '#d5e3f7',
+                },
+                '&:disabled': {
+                  backgroundColor: '#E6EEF8',
+                  color: '#00205C',
+                  opacity: 0.7,
+                },
+                transition: 'all 0.3s ease',
+              }}
             >
-              Entrar
+              ENTRAR
             </Button>
+
             <Box sx={{ textAlign: 'center' }}>
-              <MuiLink component={Link} to="/register" variant="body2">
-                Não tem uma conta? Cadastre-se
+              <Typography component="span" sx={{ color: '#666' }}>
+                Esqueceu sua senha?{' '}
+              </Typography>
+              <MuiLink
+                component={Link}
+                to="/forgot-password"
+                sx={{
+                  color: '#00205C',
+                  textDecoration: 'none',
+                  '&:hover': {
+                    textDecoration: 'underline',
+                  },
+                }}
+              >
+                Clique aqui!
               </MuiLink>
             </Box>
           </form>
-        </Paper>
+        </Box>
       </Box>
-    </Container>
+
+      <Box
+        sx={{
+          flex: 1,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#fff',
+          p: 4,
+        }}
+      >
+        <img
+          src="/src/assets/img/Ativo 96Matriciale 1 - logo.png"
+          alt="Matriciale Logo"
+          style={{
+            maxWidth: '400px',
+            width: '100%',
+            height: 'auto',
+            objectFit: 'contain',
+          }}
+        />
+      </Box>
+    </Box>
   );
-} 
+}
