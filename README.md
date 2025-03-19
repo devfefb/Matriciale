@@ -135,12 +135,6 @@ cd ../backend
 cp .env.example .env
 ```
 
-5. Execute as migrações do banco de dados
-```bash
-cd ../backend
-npx prisma migrate dev
-```
-
 6. Inicie os servidores
 
 Em um terminal:
