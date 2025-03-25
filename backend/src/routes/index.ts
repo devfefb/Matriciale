@@ -50,7 +50,6 @@ router.post('/login', async (req, res) => {
       return res.status(400).json({ message: "domínio de email inválido" });
     }
 
-
     // Aqui você normalmente usaria o método de login do Firebase 
     // Por enquanto, vamos apenas verificar se o usuário existe
     const user = await auth.getUserByEmail(email);

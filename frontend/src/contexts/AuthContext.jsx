@@ -20,22 +20,22 @@ export function AuthProvider({ children }) {
 
   const signIn = useCallback(async ({ email, password }) => {
     try {
-      // const response = await api.post('/login', { email, password });
-      // const { token, user: userData } = response.data;
-
-      // if (!userData || !token) {
-      //   throw new Error('Erro ao fazer login');
-      // }
+      const response = await api.post('/login', { email, password });
+      const { token, user: userData } = response.data;
+      console.log("user data:", user, "\ntoken:", token);
+      if (!userData || !token) {
+        throw new Error('Erro ao fazer login');
+      }
 
       // Autenticação Firebase
       await signInWithEmailAndPassword(auth, email, password); // Faz o login no Firebase também
 
       // Armazenar o token e dados do usuário no localStorage
-      // localStorage.setItem('@BaseRepo:token', token);
-      // localStorage.setItem('@BaseRepo:user', JSON.stringify(userData));
+      localStorage.setItem('@BaseRepo:token', token);
+      localStorage.setItem('@BaseRepo:user', JSON.stringify(userData));
       
-      // api.defaults.headers.authorization = `Bearer ${token}`;
-      // setUser(userData);
+      api.defaults.headers.authorization = `Bearer ${token}`;
+      setUser(userData);
     } catch (error) {
       console.error('Erro no login:', error);
       throw new Error(error.response?.data?.error || 'Erro ao fazer login');
@@ -46,7 +46,6 @@ export function AuthProvider({ children }) {
     try {
       const response = await api.post('/register', { name, email, password });
       const { token, user: userData } = response.data;
-
       if(!userData || !token)
       {
         throw new Error('Erro ao criar conta')
