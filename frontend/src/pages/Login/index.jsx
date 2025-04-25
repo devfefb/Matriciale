@@ -65,14 +65,14 @@ export default function Login() {
             variant="h3"
             component="h1"
             sx={{
-              color: '#00205C',
+              color: '#0D92F4',
               fontWeight: 'bold',
               marginBottom: 1,
               lineHeight: 1.2,
               fontSize: '2.5rem',
             }}
           >
-            Bem-vindo<br />à Matriciale!
+            Bem-vindo<br />à Well!
           </Typography>
           
           <Typography
@@ -137,18 +137,6 @@ export default function Login() {
                 value={formData.password}
                 onChange={handleChange}
                 variant="outlined"
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <IconButton
-                        onClick={() => setShowPassword(!showPassword)}
-                        edge="end"
-                      >
-                        {showPassword ? <VisibilityOff /> : <Visibility />}
-                      </IconButton>
-                    </InputAdornment>
-                  ),
-                }}
                 sx={{
                   backgroundColor: '#fff',
                   '& .MuiOutlinedInput-root': {
@@ -175,14 +163,14 @@ export default function Login() {
                 mt: 2,
                 mb: 2,
                 py: 1.5,
-                backgroundColor: isFormFilled ? '#00205C' : '#E6EEF8',
-                color: isFormFilled ? '#fff' : '#00205C',
+                backgroundColor: isFormFilled ? '#0D92F4' : '#E6EEF8',
+                color: isFormFilled ? '#fff' : '#0D92F4',
                 '&:hover': {
                   backgroundColor: isFormFilled ? '#001a4d' : '#d5e3f7',
                 },
                 '&:disabled': {
                   backgroundColor: '#E6EEF8',
-                  color: '#00205C',
+                  color: '#0D92F4',
                   opacity: 0.7,
                 },
                 transition: 'all 0.3s ease',
@@ -199,7 +187,7 @@ export default function Login() {
                 component={Link}
                 to="/forgot-password"
                 sx={{
-                  color: '#00205C',
+                  color: '#0D92F4',
                   textDecoration: 'none',
                   '&:hover': {
                     textDecoration: 'underline',
@@ -224,10 +212,10 @@ export default function Login() {
         }}
       >
         <img
-          src="/src/assets/img/Ativo 96Matriciale 1 - logo.png"
+          src="/src/assets/img/wellft-removebg-preview.png"
           alt="Matriciale Logo"
           style={{
-            maxWidth: '400px',
+            maxWidth: '600px',
             width: '100%',
             height: 'auto',
             objectFit: 'contain',
