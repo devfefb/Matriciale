@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'LT Wave';
+    src: url('./theme/assets/fonts/LTWave-Light.otf');
+  }
+  
+*{
+    font-family: 'LT Wave';
+
+}

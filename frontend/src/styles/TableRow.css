@@ -1,0 +1,88 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+.table-row {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.table-row td {
+  height: 44.82px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20.75px;
+}
+
+.zerado { background-color: #8D2ABB8A; }
+.quatro-semanas { background-color: #C5262678; }
+.oito-semanas { background-color: #F4660070; }
+.doze-semanas { background-color: #379A1352; }
+.dezesseis-semanas { background-color: #005E0070; }
+.mais-dezesseis-semanas { background-color: #136EF882; }
+
+.medicineInfo {
+  background-color: #5E17EB21;
+}
+
+
+.details-button {
+  background-color: #0D92F4;
+  color: #FCF9F2;
+  border: none;
+  padding: 6.64px 13.28px;
+  border-radius: 19px;
+  cursor: pointer;
+  width: 112.88px;
+  height: 36.52px;
+  font-weight: 600;
+  font-size: 18.26px;
+  margin-right: 4.15px;
+} 
+
+.coluna-codigo{
+  width: 14%;
+}
+
+.coluna-nome{
+  width: 16%;
+}
+
+.coluna-class-item{
+  width: 21%
+}
+
+.coluna-class-modelo{
+  width: 17%
+}
+
+.coluna-unidade{
+  width: 13%;
+}
+
+.coluna-quantidade{
+  width: 7.5%;
+}
+
+td:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+td:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 8.3px; /* 8.3px de espaçamento entre as linhas */
+}
+
+.colunaInfo {
+  width: 25%;
+}

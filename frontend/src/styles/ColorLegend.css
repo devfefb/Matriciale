@@ -1,0 +1,95 @@
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.color-legend {
+  background-color: #DDDBD4;
+  min-width: 300px;
+  border-radius: 15px;
+  height: 100%;
+  border: 2px solid #D5D2CC;
+}
+
+.titulo-legenda{
+  width: 274px;
+  height: 25px;
+  text-align: center;
+  margin-left: 13px;
+  color: #0D92F4;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.legend-items {
+  margin-left: 10px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 284px;
+  height: 27px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  width: 134px;
+  gap: 7px;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.color-circle1 {
+  width: 17px;   
+  height: 17px;
+  border-radius: 50%;  
+  display: inline-block;
+  background-color: #8D2ABB8A;
+} 
+
+.color-circle2 {
+  width: 17px;   
+  height: 17px;
+  border-radius: 50%;  
+  display: inline-block;
+  background-color: #C5262678;
+} 
+
+.color-circle3 {
+  width: 17px;   
+  height: 17px;
+  border-radius: 50%;  
+  display: inline-block;
+  background-color: #F4660070;
+} 
+
+.color-circle4 {
+  width: 17px;   
+  height: 17px;
+  border-radius: 50%;  
+  display: inline-block;
+  background-color: #379A1352;
+} 
+
+.color-circle5 {
+  width: 17px;   
+  height: 17px;
+  border-radius: 50%;  
+  display: inline-block;
+  background-color: #005E0070;
+} 
+
+.color-circle6 {
+  width: 17px;   
+  height: 17px;
+  border-radius: 50%;  
+  display: inline-block;
+  background-color: #136EF882;
+} 

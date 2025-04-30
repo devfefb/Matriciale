@@ -4,6 +4,7 @@ import { ThemeProvider, CssBaseline } from '@mui/material';
 import { AuthProvider } from './contexts/AuthContext';
 import theme from './theme';
 import Routes from './routes';
+import './App.css'
 
 function App() {
   return (

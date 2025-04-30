@@ -14,9 +14,13 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.19",
     "@mui/material": "^5.14.20",
+    "@mui/x-charts": "^7.28.0",
     "axios": "^1.6.2",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
     "react-router-dom": "^6.20.1"
   },
   "devDependencies": {
@@ -29,4 +33,4 @@
     "eslint-plugin-react-refresh": "^0.4.4",
     "vite": "^5.0.0"
   }
-} 
+}

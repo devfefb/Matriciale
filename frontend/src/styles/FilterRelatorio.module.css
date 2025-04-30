@@ -1,0 +1,28 @@
+ul{
+    position: absolute;
+    list-style: none;
+}
+
+li{
+    background-color: #E9E6E0;
+    text-align: center;
+    color: #434343;
+    font-size: 13.28px;
+    font-weight: 700;
+    border: 1px solid #CFCDC7;
+    padding: 3.3px;
+    transition: 0.20s;
+}
+
+li:hover{
+    background-color: #CFCDC7;
+    color: black;
+}
+
+.primeiro_item{
+    border-radius: 10px 10px 0px 0px;
+}
+
+.ultimo_item{
+    border-radius: 0px 0px 10px 10px;
+}

@@ -5,6 +5,11 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Users from '../pages/Users';
 import Dashboard from '../pages/Dashboard';
+import Relatorio from '../pages/Relatorio';
+import Gerenciamento from '../pages/Gerenciamento';
+import MedicineInfoTable from '../components/Gerenciamento/MedicineInfoTable';
+import Calendar from '../components/Tela_Principal/Calendar/Calendar';
+import RelatorioImpressao from '../components/Relatorio/RelatorioImpressao';
 
 function PrivateRoute({ children }) {
   const { user } = useAuth();
@@ -44,6 +49,11 @@ export default function AppRoutes() {
         path="/" 
         element={<Navigate to={user ? "/dashboard" : "/login"} />} 
       />
+      <Route path="/relatorio" element={<Relatorio/>}/>
+      <Route path="/gerenciamento" element={<Gerenciamento/>}/>
+      <Route path="/medicine/:codigo/:nome" element={<MedicineInfoTable/>}/>
+      <Route path='/calendar' element={<Calendar/>}/>
+      <Route path="/relatorio/impressao" element={<RelatorioImpressao />} />
     </Routes>
   );
 } 

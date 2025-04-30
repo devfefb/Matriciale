@@ -1,0 +1,28 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+thead {
+  background-color: #E6E3DC;
+}
+
+th {
+  color: #0D92F4;
+  font-weight: 700;
+  font-size: 26.56px;
+}
+
+th:last-child {
+  text-align: center;
+  margin-right: 0.83px;
+}
+
+@media (max-width: 637.44px) {
+  th {
+    padding: 8.3px;
+    font-size: 11.62px;
+  }
+}

@@ -1,0 +1,66 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.medicine-table-container {
+  padding-left: 21px;
+  padding-top: 31px;
+  padding-bottom: 31px;
+  padding-right: 17px;
+  width: 76.6%;
+  height: 100%;
+  min-height: 743px;
+  margin: 0 auto;
+  background-color: #E6E3DC;
+  border-radius: 47px;
+  margin-top: 24.9px;
+  margin-left: 21.58px;
+  margin-bottom: 24px;
+}
+
+.title-controls-legends-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-title{
+  font-size: 26.6px;
+  text-align: center;
+}
+
+.main-title-gerenciamento {
+  max-width: 996px;
+  height: 36px;
+  font-weight: 700;
+  font-size: 26px;
+  color: #2A2928;
+  margin-bottom: 21px;
+}
+
+.medicine-table {
+  width: 100%;
+  border-collapse: separate;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.linha-divisao {
+  width: 100%;
+  height: 1px;
+  background-color: #D9D9D9;
+  margin-top: 15px;
+  margin-bottom: 11px;
+}
+
+.medicine-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}

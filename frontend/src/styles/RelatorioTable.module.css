@@ -1,0 +1,105 @@
+.container_relatorio{
+    width: 76.96%;
+    height: 100%;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #E9E6E0;
+    margin-top: 24.9px;
+    margin-left: 21.58px;
+    margin-bottom: 24px;
+    padding: 24.9px;
+}
+
+.header_relatorio{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 90.47px;
+    padding-right: 90.47px;
+    padding-bottom: 19.14px;
+    border-bottom: 2px solid #B4B4B4;
+    background-color: #E9E6E0;
+    margin-bottom: 25.69px;
+}
+
+@media print{
+
+    .header_relatorio{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 60px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-bottom: 2px solid #000;
+        margin-bottom: 25.69px;
+
+    }
+
+    .header_relatorio button{
+        background-color: transparent;
+        color: white;
+        font-size: 0px;
+        height: 0px;
+        margin-top: 0px;
+    }
+
+    .header_relatorio_txt1{
+        white-space: nowrap;
+    }
+    .header_relatorio_txt2{
+        white-space: nowrap;
+    }
+}
+
+.header_relatorio button{
+    background-color: #0D92F4;
+    border-radius: 15px 15px 15px 15px;
+    color: #ECECEC;
+    border: none;
+    padding: 5px 5px 5px 5px;
+    margin-top: 20px;
+    transition: 0.15s;
+}
+
+.header_relatorio button:hover{
+    background-color: #0966AB;
+}
+
+.header_relatorio_txt1{
+    color: #000;
+    font-size: 29.88px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.header_relatorio_txt1 span{
+    color: #464646;
+}
+
+.header_relatorio_txt2{
+    color: #202020;
+    font-size: 19.92px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.header_relatorio_txt3{
+    color: #000;
+    text-align: right;
+    font-size: 12.45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.tabela_relatorio th{
+    color: var(--Azul2, #0D92F4);
+    text-align: left;
+    font-size: 16.6px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    white-space: nowrap;
+}

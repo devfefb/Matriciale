@@ -1,0 +1,51 @@
+
+
+.sidebar{
+    display: block;
+    width: 20%;
+    height: 100%;
+    background-color: #0D92F4;
+    padding-top: 38.18px;
+    padding-bottom: 18.26px;
+}
+
+.sidebar a{
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    color: #FFF;
+    text-align: center;
+    font-size: 19.9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 44.82px;
+    padding-right: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    margin-top: 24.9px;
+    transition: 0.25s;
+}
+
+
+
+
+
+.sidebar a:hover{
+    background-color: #0B7ED1;
+}
+
+.sidebar img{
+    height: 36.5px;
+    width: 36.5px;
+}
+
+.configuracao{
+    
+    margin-top: 100%;
+}
+
+.configuracao:hover{
+    background: var(--Azul2, #2A4BBB);
+}
