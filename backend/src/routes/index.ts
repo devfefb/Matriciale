@@ -69,4 +69,89 @@ router.post('/login', async (req, res) => {
   }
 });
 
+//Tarefas prioritárias
+router.post('/priority', async (req, res) => {
+  try {;
+  } catch (error: any) {
+    return res.status(400).json({ error: error.message });
+  }
+});
+
+// Tarefas agendadas
+router.post('/schedule', async (req, res) => {
+  try {;
+  } catch (error: any) {
+    return res.status(400).json({ error: error.message });
+  }
+});
+
+
+//Visualizar medicamentos, color vem NULL por padrão
+//Como fazer busca por cor + nome do medicamento simultaneamente?
+router.post('/viewmedicines/:color', async (req, res) => {
+  //Renderizar tela dos medicamentos
+  try {;
+  } catch (error: any) {
+    return res.status(400).json({ error: error.message });
+  }
+});
+
+//Exibir detalhes do medicamento em específico
+router.post('/viewmedicines/details/:id', async (req, res) => {
+  try {;
+  } catch (error: any) {
+    return res.status(400).json({ error: error.message });
+  }
+});
+
+
+//Visualizar farmácias
+router.post('/viewpharmacies', async (req, res) => {
+  try {;
+  } catch (error: any) {
+    return res.status(400).json({ error: error.message });
+  }
+});
+
+//Relatórios
+router.post('/reports', async (req, res) => {
+  try {;
+  } catch (error: any) {
+    return res.status(400).json({ error: error.message });
+  }
+});
+
+//Agenda
+router.post('/calendar', async (req, res) => {
+  try {;
+  } catch (error: any) {
+    return res.status(400).json({ error: error.message });
+  }
+});
+
+//Exibir detalhes da tarefa em questão
+router.post('/calendar/:id', async (req, res) => {
+  try {;
+  } catch (error: any) {
+    return res.status(400).json({ error: error.message });
+  }
+});
+
+//Pacientes
+router.post('/pacient', async (req, res) => {
+  try {;
+  } catch (error: any) {
+    return res.status(400).json({ error: error.message });
+  }
+});
+
+//Configurações
+router.post('/config', async (req, res) => {
+  try {;
+  } catch (error: any) {
+    return res.status(400).json({ error: error.message });
+  }
+});
+
+
 export { router }; 
