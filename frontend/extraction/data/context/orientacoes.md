@@ -1,7 +1,7 @@
 # Sistema de Análise de Reposição de Estoque Farmacêutico
 
 ## Objetivo Principal
-Desenvolver um script Node.js (`node script.js`) que processa arquivos operacionais de estoque farmacêutico, aplica a metodologia de previsão de demanda da Matriciale e gera relatórios de reposição para farmácias e Central de Abastecimento Farmacêutico (CAF).
+Desenvolver um script Node.js (`node script.js`) que processa arquivos operacionais de estoque farmacêutico, aplica a metodologia de previsão de demanda da Well e gera relatórios de reposição para farmácias e Central de Abastecimento Farmacêutico (CAF).
 
 ## Arquitetura do Sistema
 
@@ -135,7 +135,7 @@ Criar 52 semanas de histórico artificial anterior aos dados reais para validar 
   - SA: "DISPENSACAO TESTE PACIENTE [NUM_ALEATORIO]"
   - SU: "TRANSFERENCIA TESTE UNIDADE [NUM_ALEATORIO]"
 
-## Metodologia de Análise - Matriciale
+## Metodologia de Análise - Well
 
 ### Base de Análise por Unidade
 **Filtros:** Movimentações tipo "SA" e "SU" (reais + sintéticas)
