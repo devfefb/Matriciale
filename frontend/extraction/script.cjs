@@ -74,25 +74,25 @@ const ReportGenerator = require('./utils/reportGenerator.cjs');
 
 async function main() {
   try {
-    logger.info('Iniciando processamento do Sistema Matriciale');
-    logger.info(`Timestamp: ${CONFIG.timestamp}`);
-    logger.info(`Input: ${CONFIG.inputDir}`);
-    logger.info(`Output: ${outputPath}`);
+  //  logger.info('Iniciando processamento do Sistema Matriciale');
+  //  logger.info(`Timestamp: ${CONFIG.timestamp}`);
+  //  logger.info(`Input: ${CONFIG.inputDir}`);
+  //  logger.info(`Output: ${outputPath}`);
 
     // 1. Verificar arquivos de entrada
     const inputFiles = fs.readdirSync(CONFIG.inputDir);
     const balanceteFiles = inputFiles.filter(f => f.includes('Balancete') && f.endsWith('.xlsx'));
     const movimentacaoFiles = inputFiles.filter(f => f.includes('Movimentação') && f.endsWith('.pdf'));
 
-    logger.info(`Encontrados ${balanceteFiles.length} arquivos de balancete`);
-    logger.info(`Encontrados ${movimentacaoFiles.length} arquivos de movimentação`);
+  //  logger.info(`Encontrados ${balanceteFiles.length} arquivos de balancete`);
+  //  logger.info(`Encontrados ${movimentacaoFiles.length} arquivos de movimentação`);
 
     if (balanceteFiles.length === 0 || movimentacaoFiles.length === 0) {
       throw new Error('Arquivos de entrada insuficientes');
     }
 
     // 2. Processar Balancetes
-    logger.info('Processando arquivos de balancete...');
+  //  logger.info('Processando arquivos de balancete...');
     const balanceteProcessor = new BalanceteProcessor(logger);
     const balanceteData = await balanceteProcessor.processFiles(balanceteFiles.map(f => 
       path.join(CONFIG.inputDir, f)
@@ -103,10 +103,10 @@ async function main() {
       path.join(paths.intermediarios, 'balancete_processado.json'),
       JSON.stringify(balanceteData, null, 2)
     );
-    logger.info(`Balancete processado: ${balanceteData.total_registros} registros`);
+  //  logger.info(`Balancete processado: ${balanceteData.total_registros} registros`);
 
     // 3. Processar Movimentações
-    logger.info('Processando arquivos de movimentação...');
+  //  logger.info('Processando arquivos de movimentação...');
     const movimentacaoProcessor = new MovimentacaoProcessor(logger);
     const movimentacaoData = await movimentacaoProcessor.processFiles(movimentacaoFiles.map(f => 
       path.join(CONFIG.inputDir, f)
@@ -117,10 +117,10 @@ async function main() {
       path.join(paths.intermediarios, 'movimentacao_processada.json'),
       JSON.stringify(movimentacaoData, null, 2)
     );
-    logger.info(`Movimentação processada: ${movimentacaoData.total_movimentacoes} registros`);
+  //  logger.info(`Movimentação processada: ${movimentacaoData.total_movimentacoes} registros`);
 
     // 4. Gerar dados sintéticos
-    logger.info('Gerando dados sintéticos...');
+  //  logger.info('Gerando dados sintéticos...');
     const synthesizer = new DataSynthesizer(logger);
     const syntheticData = synthesizer.generateHistoricalData(movimentacaoData);
 
@@ -128,10 +128,10 @@ async function main() {
       path.join(paths.intermediarios, 'dados_sinteticos.json'),
       JSON.stringify(syntheticData, null, 2)
     );
-    logger.info(`Dados sintéticos gerados: ${syntheticData.total_movimentacoes_sinteticas} registros`);
+  //  logger.info(`Dados sintéticos gerados: ${syntheticData.total_movimentacoes_sinteticas} registros`);
 
     // 5. Consolidar dados
-    logger.info('Consolidando dados reais e sintéticos...');
+  //  logger.info('Consolidando dados reais e sintéticos...');
     const consolidatedData = {
       timestamp: new Date().toISOString(),
       movimentacoes: [...syntheticData.movimentacoes_sinteticas, ...movimentacaoData.movimentacoes]
@@ -144,7 +144,7 @@ async function main() {
     );
 
     // 6. Aplicar metodologia Matriciale
-    logger.info('Aplicando metodologia de análise...');
+  //  logger.info('Aplicando metodologia de análise...');
     const analyzer = new MatricialeAnalyzer(logger);
     const metrics = analyzer.calculateMetrics(consolidatedData, balanceteData);
 
@@ -152,15 +152,15 @@ async function main() {
       path.join(paths.intermediarios, 'metricas_calculadas.json'),
       JSON.stringify(metrics, null, 2)
     );
-    logger.info(`Métricas calculadas para ${metrics.itens.length} itens`);
+  //  logger.info(`Métricas calculadas para ${metrics.itens.length} itens`);
 
     // 7. Gerar relatórios Excel
-    logger.info('Gerando relatórios Excel...');
+  //  logger.info('Gerando relatórios Excel...');
     const reportGenerator = new ReportGenerator(logger);
     await reportGenerator.generateReports(metrics, paths.relatorios, CONFIG.timestamp);
 
     // 8. Gerar estatísticas finais
-    logger.info('Gerando estatísticas finais...');
+  //  logger.info('Gerando estatísticas finais...');
     const stats = {
       timestamp: new Date().toISOString(),
       duracao_processamento: moment().diff(moment(CONFIG.timestamp, 'YYYY-MM-DD_HH-mm-ss'), 'seconds') + 's',
@@ -180,13 +180,13 @@ async function main() {
       JSON.stringify(stats, null, 2)
     );
 
-    logger.info('Processamento concluído com sucesso!');
-    logger.info(`Relatórios gerados em: ${paths.relatorios}`);
-    logger.info(`Duração total: ${stats.duracao_processamento}`);
+  //  logger.info('Processamento concluído com sucesso!');
+  //  logger.info(`Relatórios gerados em: ${paths.relatorios}`);
+  //  logger.info(`Duração total: ${stats.duracao_processamento}`);
 
   } catch (error) {
-    logger.error(`Erro fatal: ${error.message}`);
-    logger.error(error.stack);
+  //  logger.error(`Erro fatal: ${error.message}`);
+  //  logger.error(error.stack);
     process.exit(1);
   }
 }
