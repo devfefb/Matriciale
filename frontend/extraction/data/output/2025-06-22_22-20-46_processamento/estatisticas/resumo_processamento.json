@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-06-23T01:20:51.234Z",
+  "duracao_processamento": "5s",
+  "estatisticas": {
+    "total_itens_processados": 513,
+    "total_movimentacoes": 40938,
+    "total_farmacias": 3,
+    "periodo_analise": "52 semanas",
+    "dados_sinteticos_gerados": 37296,
+    "itens_com_reposicao": 488,
+    "valor_reposicao_total": 4960042.50692
+  }
+}

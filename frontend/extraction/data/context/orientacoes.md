@@ -18,7 +18,7 @@ src/
 ```
 
 ### Execução
-- **Comando**: `node script.js`
+- **Comando**: `node script.js` ou simplesmente `npm run extract`
 - **Processamento**: Batch de todos os arquivos em `data/input`
 - **Independente**: Não utiliza drag & drop, processamento autônomo
 
@@ -123,7 +123,7 @@ src/
 ### Propósito
 Criar 52 semanas de histórico artificial anterior aos dados reais para validar algoritmos de mediana.
 
-### Regras de Geração
+### Regras de Geração (para simular dados que não temos)
 - **Base temporal**: 52 semanas antes da data mais antiga dos dados reais
 - **Frequência**: 70% de chance de movimentação por item/semana
 - **Volumes**: Inteiros aleatórios 1-200

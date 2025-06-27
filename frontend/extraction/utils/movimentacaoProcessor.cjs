@@ -318,6 +318,7 @@ class MovimentacaoProcessor {
         const tipo = this.determineTipo(mov, tp);
         const qtdmov = this.calculateQtdMov(mov, tp);
 
+        // criacao do objeto movimentacao
         movimentacoes.push({
           id_unidade: unidadeId,
           unidade: unidade,

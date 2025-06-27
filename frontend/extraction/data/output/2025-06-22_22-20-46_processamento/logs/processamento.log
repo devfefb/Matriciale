@@ -1,0 +1,25 @@
+2025-06-22 22:20:46 [INFO] Processando balancete: D:\Beets\Matriciale\Matriciale\frontend\extraction\data\input\Balancete CAF 01-06.xlsx
+2025-06-22 22:20:46 [INFO] 368 itens processados de CAF
+2025-06-22 22:20:46 [INFO] Processando balancete: D:\Beets\Matriciale\Matriciale\frontend\extraction\data\input\Balancete ESF3 01-06.xlsx
+2025-06-22 22:20:46 [INFO] 204 itens processados de Farmácia ESF3
+2025-06-22 22:20:46 [INFO] Processando balancete: D:\Beets\Matriciale\Matriciale\frontend\extraction\data\input\Balancete Olavo 01-06.xlsx
+2025-06-22 22:20:46 [INFO] 344 itens processados de Farmácia Olavo
+2025-06-22 22:20:46 [INFO] Processando movimentação: D:\Beets\Matriciale\Matriciale\frontend\extraction\data\input\Movimentação CAF 01-06 PDF.pdf
+2025-06-22 22:20:48 [INFO] 525 movimentações processadas de CAF
+2025-06-22 22:20:48 [INFO] Processando movimentação: D:\Beets\Matriciale\Matriciale\frontend\extraction\data\input\Movimentação ESF3 01-06 PDF.pdf
+2025-06-22 22:20:48 [INFO] 602 movimentações processadas de Farmácia ESF3
+2025-06-22 22:20:48 [INFO] Processando movimentação: D:\Beets\Matriciale\Matriciale\frontend\extraction\data\input\Movimentação Olavo 01-06 PDF.pdf
+2025-06-22 22:20:49 [INFO] 2515 movimentações processadas de Farmácia Olavo
+2025-06-22 22:20:49 [INFO] Gerando dados sintéticos de 2024-05-26 até 2025-05-25
+2025-06-22 22:20:49 [INFO] Gerando dados sintéticos para 513 itens únicos
+2025-06-22 22:20:50 [INFO] Geradas 37296 movimentações sintéticas
+2025-06-22 22:20:50 [INFO] Iniciando cálculo de métricas Matriciale
+2025-06-22 22:20:50 [INFO] Analisando 40172 movimentações SA/SU
+2025-06-22 22:20:50 [INFO] Métricas calculadas para 513 itens
+2025-06-22 22:20:50 [INFO] Iniciando geração de relatórios Excel
+2025-06-22 22:20:50 [INFO] Relatório gerado: reposicao_farmacia_Farmácia_ESF3_2025-06-22_22-20-46.xlsx
+2025-06-22 22:20:51 [INFO] Relatório gerado: reposicao_farmacia_Farmácia_Olavo_2025-06-22_22-20-46.xlsx
+2025-06-22 22:20:51 [INFO] Relatório CAF gerado: reposicao_caf_2025-06-22_22-20-46.xlsx
+2025-06-22 22:20:51 [INFO] Dashboard executivo gerado: dashboard_executivo_2025-06-22_22-20-46.xlsx
+2025-06-22 22:20:51 [INFO] Relatório de auditoria gerado: auditoria_calculos_2025-06-22_22-20-46.xlsx
+2025-06-22 22:20:51 [INFO] Todos os relatórios Excel foram gerados com sucesso
