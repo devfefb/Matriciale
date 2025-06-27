@@ -11,7 +11,11 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "extract": "node extraction/script.cjs",
     "debug": "node extraction/script.cjs --debug",
-    "test": "node extraction/script.cjs --test"
+    "test": "node extraction/script.cjs --test",
+    "extract:movimentacao": "node extraction/scriptMovimentacao.cjs",
+    "extract:balancete": "node extraction/scriptBalancete.cjs",
+    "debug:movimentacao": "node extraction/scriptMovimentacao.cjs --debug",
+    "debug:balancete": "node extraction/scriptBalancete.cjs --debug"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",

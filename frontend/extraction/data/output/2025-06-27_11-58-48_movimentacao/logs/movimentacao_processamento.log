@@ -1,0 +1,30 @@
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] === INICIANDO PROCESSAMENTO ISOLADO DE MOVIMENTAÇÃO ===
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] Timestamp: 2025-06-27_11-58-48
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] Input: D:\Beets\Matriciale\Matriciale\frontend\extraction\data\input
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] Output: D:\Beets\Matriciale\Matriciale\frontend\extraction\data\output\2025-06-27_11-58-48_movimentacao
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] Limitação: Máximo 10 páginas por PDF
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] Encontrados 1 arquivos de movimentação
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] Arquivo 1: Movimentação CAF 01-06 PDF.pdf
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] Iniciando processamento dos arquivos de movimentação...
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] [MOVIMENTACAO] Processador limitado inicializado - Máximo 10 páginas por PDF
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] [MOVIMENTACAO] Processando arquivo: D:\Beets\Matriciale\Matriciale\frontend\extraction\data\input\Movimentação CAF 01-06 PDF.pdf
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] [MOVIMENTACAO] PDF limitado a 10 páginas - Texto extraído: 4359 caracteres
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] [MOVIMENTACAO] Processando página 1/10
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] [MOVIMENTACAO] Processando página 2/10
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] [MOVIMENTACAO] Processando página 3/10
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] [MOVIMENTACAO] Processando página 4/10
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] [MOVIMENTACAO] Processando página 5/10
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] [MOVIMENTACAO] Processando página 6/10
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] [MOVIMENTACAO] Processando página 7/10
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] [MOVIMENTACAO] Processando página 8/10
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] [MOVIMENTACAO] Processando página 9/10
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] [MOVIMENTACAO] Processando página 10/10
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] [MOVIMENTACAO] 26 movimentações processadas de CAF (limitado a 10 páginas)
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] Movimentação processada: 26 registros
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] Período: Invalid date até Invalid date
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] Dados salvos em: D:\Beets\Matriciale\Matriciale\frontend\extraction\data\output\2025-06-27_11-58-48_movimentacao\intermediarios\movimentacao_processada.json
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] Gerando estatísticas de movimentação...
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] === PROCESSAMENTO DE MOVIMENTAÇÃO CONCLUÍDO COM SUCESSO ===
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] Relatórios gerados em: D:\Beets\Matriciale\Matriciale\frontend\extraction\data\output\2025-06-27_11-58-48_movimentacao\relatorios_movimentacao
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] Duração total: 0s
+2025-06-27 11:58:48 [MOVIMENTACAO][INFO] Total de movimentações processadas: 26
