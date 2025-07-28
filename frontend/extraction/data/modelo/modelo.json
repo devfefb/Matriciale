@@ -1,1770 +1,440 @@
 {
-    "palmares_paulista": {
-        "estoque_CAF": [
-            {
-                "semanas": [
-                    {
-                        "indice": "2025_01",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    },
-                    {
-                        "indice": "2025_02",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    },
-                    {
-                        "indice": "2025_03",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    }
-                ]
-            }
-        ],
-        "estoque_ESF3": [
-            {
-                "semanas": [
-                    {
-                        "indice": "2025_01",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    },
-                    {
-                        "indice": "2025_02",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    },
-                    {
-                        "indice": "2025_03",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    }
-                ]
-            }
-        ],
-        "estoque_Olavo": [
-            {
-                "semanas": [
-                    {
-                        "indice": "2025_01",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    },
-                    {
-                        "indice": "2025_02",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    },
-                    {
-                        "indice": "2025_03",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    }
-                ]
-            }
-        ]
-    },
-    "pirangi": {
-        "estoque_CAF": [
-            {
-                "semanas": [
-                    {
-                        "indice": "2025_01",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    },
-                    {
-                        "indice": "2025_02",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    },
-                    {
-                        "indice": "2025_03",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    }
-                ]
-            }
-        ],
-        "estoque_ESF3": [
-            {
-                "semanas": [
-                    {
-                        "indice": "2025_01",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    },
-                    {
-                        "indice": "2025_02",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    },
-                    {
-                        "indice": "2025_03",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    }
-                ]
-            }
-        ],
-        "estoque_Olavo": [
-            {
-                "semanas": [
-                    {
-                        "indice": "2025_01",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    },
-                    {
-                        "indice": "2025_02",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    },
-                    {
-                        "indice": "2025_03",
-                        "medicamentos": [
-                            {
-                                "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-                                "estoque": 12290,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACICLOVIR 200 MG CPR",
-                                "estoque": 500,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            },
-                            {
-                                "nome": "ACIDO ASCORBICO AMP 5 ML",
-                                "estoque": 700,
-                                "tipo_movimento": "ORDINÁRIO",
-                                "medianas": [
-                                    {
-                                        "Md04": 10000
-                                    },
-                                    {
-                                        "Md08": 500
-                                    },
-                                    {
-                                        "Md012": 600
-                                    }
-                                ],
-                                "contagens": [
-                                    {
-                                        "Cont04": 10000
-                                    },
-                                    {
-                                        "Cont08": 500
-                                    },
-                                    {
-                                        "Cont012": 600
-                                    }
-                                ],
-                                "metodo": 520,
-                                "metodo_estatistico": 1560,
-                                "reposicao": 0
-                            }
-                        ],
-                        "total_geral": 13390
-                    }
-                ]
-            }
-        ]
-    }
+    "cidades": [
+        {
+            "nome": "palmares_paulista",
+            "estoques": [
+                {
+                    "nome": "CAF",
+                    "medicamentos": [
+                        {
+                            "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 12290 },
+                                { "2025_02": 12290 },
+                                { "2025_03": 12290 }
+                            ]
+                        },
+                        {
+                            "nome": "ACICLOVIR 200 MG CPR",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 500 },
+                                { "2025_02": 500 },
+                                { "2025_03": 500 }
+                            ]
+                        },
+                        {
+                            "nome": "ACIDO ASCORBICO AMP 5 ML",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 700 },
+                                { "2025_02": 700 },
+                                { "2025_03": 700 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nome": "ESF3",
+                    "medicamentos": [
+                        {
+                            "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 12290 },
+                                { "2025_02": 12290 },
+                                { "2025_03": 12290 }
+                            ]
+                        },
+                        {
+                            "nome": "ACICLOVIR 200 MG CPR",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 500 },
+                                { "2025_02": 500 },
+                                { "2025_03": 500 }
+                            ]
+                        },
+                        {
+                            "nome": "ACIDO ASCORBICO AMP 5 ML",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 700 },
+                                { "2025_02": 700 },
+                                { "2025_03": 700 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nome": "Olavo",
+                    "medicamentos": [
+                        {
+                            "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 12290 },
+                                { "2025_02": 12290 },
+                                { "2025_03": 12290 }
+                            ]
+                        },
+                        {
+                            "nome": "ACICLOVIR 200 MG CPR",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 500 },
+                                { "2025_02": 500 },
+                                { "2025_03": 500 }
+                            ]
+                        },
+                        {
+                            "nome": "ACIDO ASCORBICO AMP 5 ML",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 700 },
+                                { "2025_02": 700 },
+                                { "2025_03": 700 }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nome": "pirangi",
+            "estoques": [
+                {
+                    "nome": "CAF",
+                    "medicamentos": [
+                        {
+                            "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 12290 },
+                                { "2025_02": 12290 },
+                                { "2025_03": 12290 }
+                            ]
+                        },
+                        {
+                            "nome": "ACICLOVIR 200 MG CPR",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 500 },
+                                { "2025_02": 500 },
+                                { "2025_03": 500 }
+                            ]
+                        },
+                        {
+                            "nome": "ACIDO ASCORBICO AMP 5 ML",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 700 },
+                                { "2025_02": 700 },
+                                { "2025_03": 700 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nome": "ESF3",
+                    "medicamentos": [
+                        {
+                            "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 12290 },
+                                { "2025_02": 12290 },
+                                { "2025_03": 12290 }
+                            ]
+                        },
+                        {
+                            "nome": "ACICLOVIR 200 MG CPR",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 500 },
+                                { "2025_02": 500 },
+                                { "2025_03": 500 }
+                            ]
+                        },
+                        {
+                            "nome": "ACIDO ASCORBICO AMP 5 ML",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 700 },
+                                { "2025_02": 700 },
+                                { "2025_03": 700 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nome": "Olavo",
+                    "medicamentos": [
+                        {
+                            "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 12290 },
+                                { "2025_02": 12290 },
+                                { "2025_03": 12290 }
+                            ]
+                        },
+                        {
+                            "nome": "ACICLOVIR 200 MG CPR",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 500 },
+                                { "2025_02": 500 },
+                                { "2025_03": 500 }
+                            ]
+                        },
+                        {
+                            "nome": "ACIDO ASCORBICO AMP 5 ML",
+                            "tipo_movimento": "ORDINÁRIO",
+                            "medianas": [
+                                { "Md04": 10000 },
+                                { "Md08": 500 },
+                                { "Md012": 600 }
+                            ],
+                            "contagens": [
+                                { "Cont04": 10000 },
+                                { "Cont08": 500 },
+                                { "Cont012": 600 }
+                            ],
+                            "metodo": 520,
+                            "metodo_estatistico": 1560,
+                            "reposicao": 0,
+                            "semanas": [
+                                { "2025_01": 700 },
+                                { "2025_02": 700 },
+                                { "2025_03": 700 }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
