@@ -49,7 +49,7 @@ function main() {
             return;
         }
 
-        console.log(`\n--- INICIANDO CÁLCULO DAS MEDIANAS PARA OS 5 PRIMEIROS MEDICAMENTOS ---\n`);
+        console.log(`\n--- INICIANDO CÁLCULO DAS MÁXIMA PARA OS 5 PRIMEIROS MEDICAMENTOS ---\n`);
 
         for (const medicamento of primeirosMedicamentos) {
             if (typeof medicamento !== 'object' || medicamento === null) {
@@ -77,7 +77,7 @@ function main() {
             // Extrai apenas os valores para exibir o histórico de forma limpa
             const historicoValores = historicoSemanas.map(s => s.value);
             console.log("Valores das últimas 12 semanas:", historicoValores.slice(-12).join(', '));
-            console.log("maxima Calculadas:");
+            console.log("maxima Calculada:");
             console.log(JSON.stringify(maxima, null, 2));
             console.log("\n");
         }
