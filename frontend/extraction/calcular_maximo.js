@@ -14,13 +14,15 @@ const __dirname = dirname(__filename);
  */
 function calcularMaximaMedicamento(historicoSemanas) {
 
-    let maxima = -1; 
-    
-    for (const semana of historicoSemanas){
-        if (semana.value > maxima) maxima = semana.value;
+    const valores = historicoSemanas.map(s => s.value);
+
+    const numerosValidos = valores.filter(v => typeof v === 'number' && !isNaN(v));
+
+    if (numerosValidos.length === 0) {
+        return 0; 
     }
 
-    return maxima;
+    return Math.max(...numerosValidos);
 
 }
 
@@ -42,7 +44,7 @@ function main() {
         
         const dadosPlanilha = xlsx.utils.sheet_to_json(sheet);
         
-        const primeirosMedicamentos = dadosPlanilha.slice(0, 5);
+        const primeirosMedicamentos = dadosPlanilha.slice(0, 10);
         
         if (primeirosMedicamentos.length === 0) {
             console.log("A planilha não contém dados ou está vazia.");
