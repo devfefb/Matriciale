@@ -70,20 +70,6 @@ function calcularTPMetodo(dadosCalculados) {
         }
     }
 
-    // --- REGRA 2: INTERMITENTES ---
-    // Se a série histórica for inferior a 52 semanas, APLICA-SE A REGRA.
-    // Itens com < 50% de ocorrências nas últimas 52 semanas.
-    const periodo = Math.min(totalSemanasHistorico, 52);
-    if (periodo > 0 && (contagens.Cont52 / periodo) < 0.5) {
-        return "2.INTERMITENTES";
-    }
-
-    // --- REGRA 3: INATIVOS ---
-    // Itens que não possuíram ocorrências nas últimas 16 semanas.
-    if (contagens.Cont16 === 0) {
-        return "3.INATIVOS";
-    }
-
     // --- REGRA 4: RECENTES ---
     // Se a série histórica for inferior a 26 semanas, não pode ser RECENTE.
     if (contagens.Cont04 > 0 && (contagens.Cont04 / 4) >= 0.5 && contagens.ContTt === contagens.Cont04) {
@@ -101,7 +87,20 @@ function calcularTPMetodo(dadosCalculados) {
     if (contagens.Cont26 > 0 && (contagens.Cont26 / 26) >= 0.5 && contagens.ContTt === contagens.Cont26) {
         return "4.RECENTES";
     }
-    
+
+    // --- REGRA 2: INTERMITENTES ---
+    // Se a série histórica for inferior a 52 semanas, APLICA-SE A REGRA.
+    // Itens com < 50% de ocorrências nas últimas 52 semanas.
+    const periodo = Math.min(totalSemanasHistorico, 52);
+    if (periodo > 0 && (contagens.Cont52 / periodo) < 0.5) {
+        return "2.INTERMITENTES";
+    }
+
+    // --- REGRA 3: INATIVOS ---
+    // Itens que não possuíram ocorrências nas últimas 16 semanas.
+    if (contagens.Cont16 === 0) {
+        return "3.INATIVOS";
+    }
    
     // --- REGRA 5: ORDINÁRIOS (padrão) ---
     // Se não se enquadrar em nenhuma das categorias acima.
@@ -126,7 +125,7 @@ function main() {
         
         const dadosPlanilha = xlsx.utils.sheet_to_json(sheet, { defval: 0 });
         
-        const primeirosMedicamentos = dadosPlanilha.filter(med => med['NOME ITEM']).slice(0, 10);        
+        const primeirosMedicamentos = dadosPlanilha.filter(med => med['NOME ITEM']).slice(0, 50);        
 
         if (primeirosMedicamentos.length === 0) {
             console.log("A planilha não contém dados ou está vazia.");
