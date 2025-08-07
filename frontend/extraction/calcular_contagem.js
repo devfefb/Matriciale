@@ -15,27 +15,26 @@ const __dirname = dirname(__filename);
  * @returns {object} - Um objeto contendo todas as contagens calculadas.
  */
 function calcularContagensParaHistorico(historicoSemanas) {
-    // Extrai apenas os valores para os cálculos
-    const historicoValores = historicoSemanas.map(s => s.value);
+    const contarUltimas = (n) => {
+        const ultimasNSemanas = historicoSemanas.slice(-n); // já está em ordem correta
+        return ultimasNSemanas.filter(s => s.value > 0).length;
+    };
 
-    // A lógica é: pegar as últimas N semanas, filtrar as que tiveram valor > 0, e contar o tamanho do array resultante.
-    const cont04 = historicoValores.slice(-4).filter(v => v > 0).length;
-    const cont08 = historicoValores.slice(-8).filter(v => v > 0).length;
-    const cont12 = historicoValores.slice(-12).filter(v => v > 0).length;
-    const cont16 = historicoValores.slice(-16).filter(v => v > 0).length;
-    const cont26 = historicoValores.slice(-26).filter(v => v > 0).length;
-    const cont52 = historicoValores.slice(-52).filter(v => v > 0).length;
-    const contTotal = historicoValores.filter(v => v > 0).length;
+    const cont04 = contarUltimas(4);
+    const cont08 = contarUltimas(8);
+    const cont12 = contarUltimas(12);
+    const cont16 = contarUltimas(16);
+    const cont26 = contarUltimas(26);
+    const cont52 = contarUltimas(52);
 
-    // LÓGICA ContAno: Conta as semanas com movimentação (>0) do ano mais recente
+    const contTotal = historicoSemanas.filter(s => s.value > 0).length;
+
     let contAno = 0;
     if (historicoSemanas.length > 0) {
         const anoMaisRecente = historicoSemanas[historicoSemanas.length - 1].week.substring(0, 4);
-        const valoresDoAno = historicoSemanas
-            .filter(s => s.week.startsWith(anoMaisRecente))
-            .map(s => s.value);
-        
-        contAno = valoresDoAno.filter(v => v > 0).length;
+        contAno = historicoSemanas
+            .filter(s => s.week.startsWith(anoMaisRecente) && s.value > 0)
+            .length;
     }
 
     return {
@@ -66,7 +65,7 @@ function main() {
         const sheetName = workbook.SheetNames[0];
         const sheet = workbook.Sheets[sheetName];
         
-        const dadosPlanilha = xlsx.utils.sheet_to_json(sheet);
+        const dadosPlanilha = xlsx.utils.sheet_to_json(sheet, { defval: 0 });
         
         const primeirosMedicamentos = dadosPlanilha.slice(0, 5);
         
