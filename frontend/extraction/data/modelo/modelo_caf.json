@@ -15,7 +15,7 @@
                             "total_geral": 58180,
                             "maximo": 1380,
                             "metodo": 1015,
-                            "metodo_estatistico": 16240,
+                            "MetEst": 16240,
                             "reposicao": 7050,
                             "semanas": [
                                 {
@@ -205,7 +205,7 @@
                             "total_geral": 8023,
                             "maximo": 580,
                             "metodo": 235,
-                            "metodo_estatistico": 3760,
+                            "MetEst": 3760,
                             "reposicao": 665,
                             "semanas": [
                                 {
@@ -395,7 +395,7 @@
                             "total_geral": 387,
                             "maximo": 19,
                             "metodo": 6,
-                            "metodo_estatistico": 96,
+                            "MetEst": 96,
                             "reposicao": 47,
                             "semanas": [
                                 {
@@ -585,7 +585,7 @@
                             "total_geral": 17810,
                             "maximo": 540,
                             "metodo": 360,
-                            "metodo_estatistico": 5760,
+                            "MetEst": 5760,
                             "reposicao": 1560,
                             "semanas": [
                                 {

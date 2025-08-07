@@ -26,51 +26,38 @@ function calcularMediana(numeros) {
 }
 
 /**
- * Calcula todas as medianas com base no histórico completo de semanas.
- * @param { {week: string, value: number}[] } historicoSemanas - Array de objetos com semana e valor.
+ * Calcula todas as medianas com base no histórico de semanas com consumo.
+ * @param { {week: string, value: number}[] } historicoSemanas - Array de objetos com semana e valor (já filtrado).
  * @returns {object} - Um objeto contendo todas as medianas calculadas.
  */
 function calcularMedianasParaHistorico(historicoSemanas) {
-    // Extrai apenas os valores para os cálculos gerais
-    const historicoValores = historicoSemanas.map(s => s.value);
+    // Extrai apenas os valores para os cálculos
+    const valores = historicoSemanas.map(item => item.value);
 
-    // --- LÓGICA Md52: Mediana das últimas 52 semanas ---
-    const md52 = calcularMediana(historicoValores.slice(-52));
+    // Função para calcular a mediana de uma fatia do array de valores
+    const calcularMedianaDeSlice = (data) => {
+        // Reutilize sua função `calcularMediana` aqui.
+        // Ela já trata o caso de array vazio retornando 0.
+        return calcularMediana(data); 
+    };
 
-    // --- LÓGICA MdAno: Mediana das semanas do ano mais recente ---
-    let mdAno = 0;
-    if (historicoSemanas.length > 0) {
-        // Pega a última semana para descobrir qual é o "ano atual"
-        const anoMaisRecente = historicoSemanas[historicoSemanas.length - 1].week.substring(0, 4);
-
-        // Filtra o histórico para pegar valores apenas desse ano
-        const valoresDoAno = historicoSemanas
-            .filter(s => s.week.startsWith(anoMaisRecente))
-            .map(s => s.value);
-            
-        mdAno = calcularMediana(valoresDoAno);
-    }
-    
-    // --- Outras medianas ---
-    const md04 = calcularMediana(historicoValores.slice(-4));
-    const md08 = calcularMediana(historicoValores.slice(-8));
-    const md12 = calcularMediana(historicoValores.slice(-12));
-    const md16 = calcularMediana(historicoValores.slice(-16));
-    const md26 = calcularMediana(historicoValores.slice(-26));
-    const mdTotal = calcularMediana(historicoValores);
+    // Obtém o ano atual para o cálculo de "MdAno"
+    const anoAtual = new Date().getFullYear().toString();
+    const valoresAnoAtual = historicoSemanas
+        .filter(item => item.week.startsWith(anoAtual))
+        .map(item => item.value);
 
     return {
-        "Md04": Math.round(md04),
-        "Md08": Math.round(md08),
-        "Md12": Math.round(md12),
-        "Md16": Math.round(md16),
-        "Md26": Math.round(md26),
-        "Md52": Math.round(md52),
-        "MdAno": Math.round(mdAno), // Lógica corrigida!
-        "MdTt": Math.round(mdTotal)
+        Md04: calcularMedianaDeSlice(valores.slice(-4)),
+        Md08: calcularMedianaDeSlice(valores.slice(-8)),
+        Md12: calcularMedianaDeSlice(valores.slice(-12)),
+        Md16: calcularMedianaDeSlice(valores.slice(-16)),
+        Md26: calcularMedianaDeSlice(valores.slice(-26)),
+        Md52: calcularMedianaDeSlice(valores.slice(-52)),
+        MdAno: calcularMedianaDeSlice(valoresAnoAtual),
+        MdTt: calcularMedianaDeSlice(valores) // Mediana de todo o período com consumo
     };
 }
-
 
 // --- FUNÇÃO PRINCIPAL PARA VERIFICAÇÃO ---
 
@@ -108,8 +95,7 @@ function main() {
                 .filter(key => /^\d{4}_\d{2}$/.test(key))
                 .sort(); // <-- ADICIONE AQUI
 
-            console.log('Semanas encontradas:', colunasSemanas.join(', '));
-
+            // Dentro do seu loop principal, ao processar cada medicamento
             const historicoSemanas = colunasSemanas.map(semana => {
                 const rawValue = medicamento[semana];
                 const value = Number(rawValue);
@@ -118,6 +104,8 @@ function main() {
                     value: !isNaN(value) && value > 0 ? rawValue : 0
                 };
             });
+
+            console.log('historicoSemanas:', historicoSemanas);
 
             const medianas = calcularMedianasParaHistorico(historicoSemanas);
 

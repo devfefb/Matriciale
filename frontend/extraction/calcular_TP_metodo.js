@@ -155,7 +155,7 @@ function main() {
                 const value = Number(rawValue);
                 return {
                     week: semana,
-                    value: !isNaN(value) && value > 0 ? 1 : 0
+                    value: !isNaN(value) && value > 0 ? rawValue : 0
                 };
             });
 

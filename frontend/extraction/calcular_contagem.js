@@ -67,7 +67,7 @@ function main() {
         
         const dadosPlanilha = xlsx.utils.sheet_to_json(sheet, { defval: 0 });
         
-        const primeirosMedicamentos = dadosPlanilha.slice(0, 5);
+        const primeirosMedicamentos = dadosPlanilha.slice(0, 1);
         
         if (primeirosMedicamentos.length === 0) {
             console.log("A planilha não contém dados ou está vazia.");
@@ -86,10 +86,16 @@ function main() {
                 .filter(key => /^\d{4}_\d{2}$/.test(key))
                 .sort();
 
-            const historicoSemanas = colunasSemanas.map(semana => ({
-                week: semana,
-                value: medicamento[semana] || 0 // Garante que o valor seja numérico
-            }));
+            const historicoSemanas = colunasSemanas.map(semana => {
+                const rawValue = medicamento[semana];
+                const value = Number(rawValue);
+                return {
+                    week: semana,
+                    value: !isNaN(value) && value > 0 ? rawValue : 0
+                };
+            });
+
+            console.log("Histórico de Semanas:", historicoSemanas);
 
             // Chama a nova função para calcular as contagens
             const contagens = calcularContagensParaHistorico(historicoSemanas);
