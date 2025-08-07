@@ -17,7 +17,7 @@ const dadosTeste = {
                                 "medianas": [],
                                 "contagens": [],
                                 "metodo": 100,
-                                "metodo_estatistico": 200,
+                                "metest": 200,
                                 "reposicao": 0
                             }
                         ],
@@ -34,7 +34,7 @@ const dadosTeste = {
                                 "medianas": [],
                                 "contagens": [],
                                 "metodo": 100,
-                                "metodo_estatistico": 200,
+                                "metest": 200,
                                 "reposicao": 0
                             }
                         ],
@@ -51,7 +51,7 @@ const dadosTeste = {
                                 "medianas": [],
                                 "contagens": [],
                                 "metodo": 150,
-                                "metodo_estatistico": 300,
+                                "metest": 300,
                                 "reposicao": 0
                             }
                         ],
@@ -68,7 +68,7 @@ const dadosTeste = {
                                 "medianas": [],
                                 "contagens": [],
                                 "metodo": 150,
-                                "metodo_estatistico": 300,
+                                "metest": 300,
                                 "reposicao": 0
                             }
                         ],
