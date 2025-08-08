@@ -2,14 +2,15 @@
   "name": "functions",
   "scripts": {
     "build": "tsc",
-    "serve": "npm run build && node lib/local-dev.js",
+    "serve": "npm run build && node dist/local-dev.js",
     "start": "npm run serve",
-    "deploy": "firebase deploy --only functions"
+    "deploy": "firebase deploy --only functions",
+    "inserir-dados": "ts-node src/scripts/executar-insercao.ts"
   },
   "engines": {
     "node": "20"
   },
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "dependencies": {
     "@google-cloud/storage": "^7.16.0",
     "axios": "^1.10.0",

@@ -1,6 +1,19 @@
 import { Request, Response, NextFunction } from 'express';
 import { auth } from '../config/firebase';
 
+// Extend Express Request interface to include 'user'
+declare global {
+  namespace Express {
+    interface Request {
+      user?: {
+        id: string;
+        email: string;
+        role: string;
+      };
+    }
+  }
+}
+
 export async function authMiddleware(
   req: Request,
   res: Response,
