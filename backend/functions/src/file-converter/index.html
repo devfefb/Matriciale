@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversão de Arquivos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Drag and Drop File Converter</h1>
+        <div id="dropZone" class="drop-zone">
+            <p>Arraste e solte seu arquivo aqui (.csv, .xlsx, .pdf)</p>
+            <button id="browseBtn" class="browse-btn">Escolher Arquivo</button>
+            <input type="file" id="fileInput" accept=".csv,.xlsx,.pdf" style="display:none;">
+        </div>
+        <div class="output-container">
+            <h2>Resultado (JSON):</h2>
+            <pre id="jsonOutput" class="json-output"></pre>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script>
+        // Set the workerSrc for PDF.js
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

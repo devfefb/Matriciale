@@ -1,0 +1,21 @@
+{
+  "name": "extracao-estoque",
+  "version": "1.0.0",
+  "description": "Script para extração de dados de estoque de medicamentos",
+  "main": "data/extracao_estoques/script_extracao.cjs",
+  "scripts": {
+    "extrair": "node data/extracao_estoques/script_extracao.cjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  },
+  "keywords": [
+    "excel",
+    "extracao",
+    "medicamentos",
+    "estoque"
+  ],
+  "author": "Matriciale",
+  "license": "MIT"
+}
