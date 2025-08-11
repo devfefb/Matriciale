@@ -4,7 +4,8 @@ import {
   Contagens, 
   Medianas, 
   MedicamentoCalculado,
-  DadosCalculados 
+  DadosCalculados,
+  AnaliseReposicao
 } from './interfaces';
 
 // --- FUNÇÕES DE CÁLCULO DE CONTAGEM ---
@@ -205,6 +206,42 @@ function calcularMetodo(dadosMedicamento: {
   return "MÉTODO C";
 }
 
+// --- FUNÇÕES DE CÁLCULO DE METEST ---
+
+/**
+ * Calcula o MetEst baseado no TP_Metodo e no valor do campo Metodo
+ */
+function calcularMetEst(tpMetodo: string, metodo: number): number {
+  switch (tpMetodo) {
+    case "ORDINÁRIOS":
+      return metodo * 16;
+    case "INTERMITENTES":
+      return metodo * 3;
+    case "INATIVOS":
+      return metodo * 16;
+    case "ENTRANTES":
+      return metodo * 16;
+    case "RECENTES":
+      return metodo * 3;
+    default:
+      console.warn(`TP_Metodo desconhecido: ${tpMetodo}. Usando multiplicador padrão 16.`);
+      return metodo * 16;
+  }
+}
+
+// --- FUNÇÕES DE CÁLCULO DE REPOSIÇÃO ---
+
+/**
+ * Calcula a reposição baseado na fórmula: reposição = metest - estoque
+ */
+function calcularReposicao(metEst: number, estoque: number): number {
+  if (typeof metEst !== 'number' || typeof estoque !== 'number') {
+    throw new Error('MetEst e estoque devem ser números válidos');
+  }
+  
+  return metEst - estoque;
+}
+
 // --- FUNÇÃO PARA CONVERTER MOVIMENTAÇÕES PARA HISTÓRICO ---
 
 /**
@@ -274,6 +311,22 @@ async function calcularCamposMedicamento(medicamentoRef: FirebaseFirestore.Docum
       tp_metodo
     });
 
+    // Calcula MetEst
+    const metEst = calcularMetEst(String(tp_metodo), Number(metodo));
+
+    // Calcula reposição (assumindo estoque = 0 por padrão, pode ser ajustado)
+    const estoque = 0; // TODO: Buscar estoque atual do medicamento
+    const reposicao = calcularReposicao(metEst, estoque);
+    
+    // Cria análise de reposição
+    const analise_reposicao: AnaliseReposicao = {
+      metEst,
+      estoque_atual: estoque,
+      reposicao_calculada: reposicao,
+      status: reposicao > 0 ? 'NECESSITA_REPOSICAO' : 'ESTOQUE_SUFICIENTE',
+      percentual_cobertura: estoque > 0 ? ((estoque / metEst) * 100).toFixed(2) : '0'
+    };
+
     // Atualiza o documento com os campos calculados
     await medicamentoRef.update({
       contagens,
@@ -281,10 +334,13 @@ async function calcularCamposMedicamento(medicamentoRef: FirebaseFirestore.Docum
       medianas,
       tp_metodo,
       metodo,
+      metEst,
+      reposicao,
+      analise_reposicao,
       data_atualizacao: new Date()
     });
 
-    console.log(`✅ ${medicamento.nome} - Contagens: ${contagens.Cont52}, Máximo: ${maximo}, TP: ${tp_metodo}, Método: ${metodo}`);
+    console.log(`✅ ${medicamento.nome} - Contagens: ${contagens.Cont52}, Máximo: ${maximo}, TP: ${tp_metodo}, Método: ${metodo}, MetEst: ${metEst}, Reposição: ${reposicao}`);
     
   } catch (error) {
     console.error(`❌ Erro ao calcular campos para medicamento ${medicamentoRef.id}:`, error);

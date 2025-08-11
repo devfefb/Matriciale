@@ -6,7 +6,8 @@
     "start": "npm run serve",
     "deploy": "firebase deploy --only functions",
     "inserir-dados": "ts-node src/scripts/executar-insercao.ts",
-    "validar-dados": "ts-node src/scripts/executar-validacao.ts"
+    "validar-dados": "ts-node src/scripts/executar-validacao.ts",
+    "calcular-campos": "ts-node src/scripts/executar-calculos.ts"
   },
   "engines": {
     "node": "20"
