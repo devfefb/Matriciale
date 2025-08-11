@@ -7,7 +7,6 @@ import {
   MedicamentoFirebase 
 } from './interfaces';
 import { 
-  generateHash, 
   processarMovimentacoes, 
   carregarDados 
 } from './utils';
@@ -24,12 +23,10 @@ async function inserirMedicamento(unidadeRef: FirebaseFirestore.DocumentReferenc
       data_atualizacao: new Date()
     };
 
-    // Gerar ID único baseado no nome e código do medicamento
-    const idMedicamento = generateHash(`${medicamento.nome}_${medicamento.cod_item}`);
+    // Usar ID gerado automaticamente pelo Firebase
+    const docRef = await unidadeRef.collection('medicamentos_unidade').add(medicamentoData);
     
-    await unidadeRef.collection('medicamentos_unidade').doc(idMedicamento).set(medicamentoData);
-    
-    console.log(`✅ Medicamento inserido: ${medicamento.nome} (${medicamento.cod_item})`);
+    console.log(`✅ Medicamento inserido: ${medicamento.nome} (${medicamento.cod_item}) - ID: ${docRef.id}`);
     return true;
   } catch (error) {
     console.error(`❌ Erro ao inserir medicamento ${medicamento.nome}:`, error);

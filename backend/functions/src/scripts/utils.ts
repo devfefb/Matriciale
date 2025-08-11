@@ -2,17 +2,6 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { DadosCompletos } from './interfaces';
 
-// Função para gerar hash único para o ID do documento
-export function generateHash(str: string): string {
-  let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    const char = str.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
-    hash = hash & hash; // Convert to 32bit integer
-  }
-  return Math.abs(hash).toString(36);
-}
-
 // Função para converter movimentações semanais para o formato do Firestore
 export function processarMovimentacoes(movimentacoes: { [key: string]: number }[]): { [key: string]: number } {
   const movimentacoesMap: { [key: string]: number } = {};
