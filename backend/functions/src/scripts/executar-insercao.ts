@@ -16,3 +16,4 @@ service.executar()
     console.error('\n❌ Erro durante execução:', error);
     process.exit(1);
   });
+
