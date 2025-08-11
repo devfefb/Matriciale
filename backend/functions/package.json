@@ -5,7 +5,8 @@
     "serve": "npm run build && node dist/local-dev.js",
     "start": "npm run serve",
     "deploy": "firebase deploy --only functions",
-    "inserir-dados": "ts-node src/scripts/executar-insercao.ts"
+    "inserir-dados": "ts-node src/scripts/executar-insercao.ts",
+    "validar-dados": "ts-node src/scripts/executar-validacao.ts"
   },
   "engines": {
     "node": "20"

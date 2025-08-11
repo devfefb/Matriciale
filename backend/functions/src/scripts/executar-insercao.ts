@@ -1,19 +1,23 @@
-#!/usr/bin/env ts-node
+import { inserirDadosNoFirebase } from './inserir-banco';
+import { verificarVariaveisAmbiente } from './utils';
 
-import InserirDadosService from './inserirDados';
+console.log('🏥 Script de Inserção de Dados de Medicamentos no Firebase');
+console.log('========================================================\n');
 
-console.log('🏥 Script de Inserção de Dados - Sistema Well');
-console.log('=============================================\n');
+// Verificar variáveis de ambiente
+verificarVariaveisAmbiente();
 
-const service = new InserirDadosService();
+console.log('✅ Variáveis de ambiente verificadas');
+console.log('🚀 Iniciando processo de inserção...\n');
 
-service.executar()
-  .then(() => {
-    console.log('\n✅ Script executado com sucesso!');
-    process.exit(0);
-  })
-  .catch((error) => {
-    console.error('\n❌ Erro durante execução:', error);
-    process.exit(1);
-  });
+// Executar inserção
+inserirDadosNoFirebase()
+    .then(() => {
+        console.log('\n🎉 Processo concluído com sucesso!');
+        process.exit(0);
+    })
+    .catch((error) => {
+        console.error('\n💥 Erro durante o processo:', error);
+        process.exit(1);
+    });
 

@@ -3,6 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 
+// TRANSFORMAR os nomes das abas em variaveis para controle superior
+
 // Configuração de entrada e saída
 const PLANILHA_PATH = path.join(__dirname, 'Saída - Palmares - Base de Movimentações.xlsx');
 const CLASSIFICACAO_PATH = path.join(__dirname, 'classificacao_medicamentos.json');
