@@ -1,5 +1,3 @@
-// Interfaces compartilhadas para os scripts de inserção e validação
-
 export interface MovimentacaoSemanal {
   [key: string]: number;
 }
@@ -53,4 +51,19 @@ export interface EstatisticasGerais {
   totalMedicamentos: number;
   totalMovimentacoes: number;
   municipios: EstatisticasMunicipio[];
+}
+
+// Interfaces para inserção de movimentações semanais
+export interface MovimentacaoSemana {
+  nome_medicamento: string;
+  quantidade: number;
+}
+
+export interface DadosUnidade {
+  nome_unidade: string;
+  movimentacoes: MovimentacaoSemana[];
+}
+
+export interface DadosPlanilha {
+  unidades: DadosUnidade[];
 }
