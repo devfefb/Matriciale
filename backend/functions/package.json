@@ -9,7 +9,8 @@
     "validar-dados": "ts-node src/scripts/executar-validacao.ts",
     "calcular-campos": "ts-node src/scripts/executar-calculos.ts",
     "inserir-semana": "ts-node src/scripts/auxiliar/executar-inserir-semana.ts",
-    "preencher-nulos": "ts-node src/scripts/auxiliar/executar-preencher-nulos.ts"
+    "preencher-nulos": "ts-node src/scripts/auxiliar/executar-preencher-nulos.ts",
+    "extrair-campos-calculados": "ts-node src/scripts/auxiliar/executar-extrair-campos-calculados.ts"
   },
   "engines": {
     "node": "20"
