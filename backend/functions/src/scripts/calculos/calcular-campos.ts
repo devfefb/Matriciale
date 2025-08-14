@@ -1,4 +1,6 @@
 import { db } from '../../config/firebase';
+import * as fs from 'fs';
+import * as path from 'path';
 import { 
   SemanaHistorico, 
   Contagens, 
@@ -7,6 +9,180 @@ import {
   DadosCalculados,
   AnaliseReposicao
 } from './interfaces';
+
+// Interfaces para cálculo de estoque
+interface ItemMovimentacao {
+  cod_sistemico_item: string;
+  descricao_item: string;
+  qtd_periodo_final: number;
+  [key: string]: any;
+}
+
+interface DadosUnidade {
+  periodo_inicio: string;
+  periodo_fim: string;
+  itens: ItemMovimentacao[];
+}
+
+interface EstoqueCalculado {
+  descricao_item: string;
+  estoque_proprio: number;
+  estoque_geral: number;
+  unidades_contribuindo: string[];
+}
+
+// Cache global para estoque consolidado
+let estoqueConsolidadoCache: Map<string, EstoqueCalculado> | null = null;
+
+// Exporta funções de estoque para uso em outros módulos
+export { carregarEstoqueConsolidado, buscarEstoqueMedicamento };
+
+// --- FUNÇÕES DE CÁLCULO DE ESTOQUE ---
+
+/**
+ * Carrega dados de movimentação de um arquivo JSON
+ */
+function carregarDadosUnidade(caminhoArquivo: string): DadosUnidade {
+  try {
+    const dados = fs.readFileSync(caminhoArquivo, 'utf8');
+    return JSON.parse(dados);
+  } catch (error) {
+    console.error(`❌ Erro ao carregar arquivo ${caminhoArquivo}:`, error);
+    throw error;
+  }
+}
+
+/**
+ * Calcula o estoque consolidado para todos os medicamentos
+ */
+function calcularEstoqueConsolidado(
+  dadosCAF: DadosUnidade,
+  dadosESF3: DadosUnidade,
+  dadosOlavo: DadosUnidade
+): Map<string, EstoqueCalculado> {
+  console.log('🔄 Calculando estoque consolidado...');
+  
+  const estoqueConsolidado = new Map<string, EstoqueCalculado>();
+  
+  // Processa CAF (estoque próprio)
+  console.log('📊 Processando dados da CAF...');
+  for (const item of dadosCAF.itens) {
+    const estoqueItem: EstoqueCalculado = {
+      descricao_item: item.descricao_item,
+      estoque_proprio: item.qtd_periodo_final,
+      estoque_geral: item.qtd_periodo_final, // Inicializa com o valor da CAF
+      unidades_contribuindo: ['CAF']
+    };
+    estoqueConsolidado.set(item.descricao_item, estoqueItem);
+  }
+  
+  // Processa ESF3 (adiciona ao estoque geral)
+  console.log('📊 Processando dados da ESF3...');
+  for (const item of dadosESF3.itens) {
+    const estoqueExistente = estoqueConsolidado.get(item.descricao_item);
+    
+    if (estoqueExistente) {
+      // Medicamento já existe na CAF, adiciona ao estoque geral
+      estoqueExistente.estoque_geral += item.qtd_periodo_final;
+      estoqueExistente.unidades_contribuindo.push('ESF3');
+    } else {
+      // Medicamento não existe na CAF, cria registro com estoque próprio = 0
+      const estoqueItem: EstoqueCalculado = {
+        descricao_item: item.descricao_item,
+        estoque_proprio: 0,
+        estoque_geral: item.qtd_periodo_final,
+        unidades_contribuindo: ['ESF3']
+      };
+      estoqueConsolidado.set(item.descricao_item, estoqueItem);
+    }
+  }
+  
+  // Processa Olavo (adiciona ao estoque geral)
+  console.log('📊 Processando dados da Olavo...');
+  for (const item of dadosOlavo.itens) {
+    const estoqueExistente = estoqueConsolidado.get(item.descricao_item);
+    
+    if (estoqueExistente) {
+      // Medicamento já existe, adiciona ao estoque geral
+      estoqueExistente.estoque_geral += item.qtd_periodo_final;
+      estoqueExistente.unidades_contribuindo.push('Olavo');
+    } else {
+      // Medicamento não existe na CAF, cria registro com estoque próprio = 0
+      const estoqueItem: EstoqueCalculado = {
+        descricao_item: item.descricao_item,
+        estoque_proprio: 0,
+        estoque_geral: item.qtd_periodo_final,
+        unidades_contribuindo: ['Olavo']
+      };
+      estoqueConsolidado.set(item.descricao_item, estoqueItem);
+    }
+  }
+  
+  console.log(`✅ Estoque consolidado calculado para ${estoqueConsolidado.size} medicamentos`);
+  return estoqueConsolidado;
+}
+
+/**
+ * Carrega e calcula o estoque consolidado (com cache)
+ */
+async function carregarEstoqueConsolidado(): Promise<Map<string, EstoqueCalculado>> {
+  if (estoqueConsolidadoCache) {
+    console.log('📦 Usando cache de estoque consolidado...');
+    return estoqueConsolidadoCache;
+  }
+
+  console.log('📖 Carregando dados de estoque das unidades...');
+  
+  // Caminhos dos arquivos JSON
+  const caminhoCAF = path.join(__dirname, '../dados/2025_22/movimentacoesCAF.json');
+  const caminhoESF3 = path.join(__dirname, '../dados/2025_22/movimentacoesESF3.json');
+  const caminhoOlavo = path.join(__dirname, '../dados/2025_22/movimentacoesOlavo.json');
+  
+  // Verifica se os arquivos existem
+  if (!fs.existsSync(caminhoCAF)) {
+    throw new Error(`Arquivo CAF não encontrado: ${caminhoCAF}`);
+  }
+  if (!fs.existsSync(caminhoESF3)) {
+    throw new Error(`Arquivo ESF3 não encontrado: ${caminhoESF3}`);
+  }
+  if (!fs.existsSync(caminhoOlavo)) {
+    throw new Error(`Arquivo Olavo não encontrado: ${caminhoOlavo}`);
+  }
+  
+  // Carrega dados das unidades
+  const dadosCAF = carregarDadosUnidade(caminhoCAF);
+  const dadosESF3 = carregarDadosUnidade(caminhoESF3);
+  const dadosOlavo = carregarDadosUnidade(caminhoOlavo);
+  
+  console.log(`📊 CAF: ${dadosCAF.itens.length} itens`);
+  console.log(`📊 ESF3: ${dadosESF3.itens.length} itens`);
+  console.log(`📊 Olavo: ${dadosOlavo.itens.length} itens`);
+  
+  // Calcula estoque consolidado
+  estoqueConsolidadoCache = calcularEstoqueConsolidado(dadosCAF, dadosESF3, dadosOlavo);
+  
+  return estoqueConsolidadoCache;
+}
+
+/**
+ * Busca o estoque de um medicamento pelo nome
+ */
+async function buscarEstoqueMedicamento(nomeMedicamento: string): Promise<number> {
+  try {
+    const estoqueConsolidado = await carregarEstoqueConsolidado();
+    const estoqueItem = estoqueConsolidado.get(nomeMedicamento);
+    
+    if (estoqueItem) {
+      return estoqueItem.estoque_geral; // Retorna o estoque geral consolidado
+    }
+    
+    console.warn(`⚠️ Estoque não encontrado para medicamento: "${nomeMedicamento}"`);
+    return 0; // Retorna 0 se não encontrar
+  } catch (error) {
+    console.error(`❌ Erro ao buscar estoque para "${nomeMedicamento}":`, error);
+    return 0; // Retorna 0 em caso de erro
+  }
+}
 
 // --- FUNÇÕES DE CÁLCULO DE CONTAGEM ---
 
@@ -206,6 +382,27 @@ function calcularMetodo(dadosMedicamento: {
   return "MÉTODO C";
 }
 
+// --- FUNÇÕES DE CÁLCULO DE MÉTODO NUMÉRICO ---
+
+/**
+ * Extrai o número do método baseado na string do método
+ */
+function extrairNumeroMetodo(metodoString: string): number {
+  switch (metodoString) {
+    case "MÉTODO A":
+      return 1;
+    case "MÉTODO B":
+      return 2;
+    case "MÉTODO C":
+      return 3;
+    case "MÉTODO D":
+      return 4;
+    default:
+      console.warn(`Método desconhecido: ${metodoString}. Usando método C (3).`);
+      return 3;
+  }
+}
+
 // --- FUNÇÕES DE CÁLCULO DE METEST ---
 
 /**
@@ -280,6 +477,9 @@ async function calcularCamposMedicamento(medicamentoRef: FirebaseFirestore.Docum
     
     // Converte movimentações para histórico
     const historicoSemanas = converterMovimentacoesParaHistorico(medicamento.movimentacoes_semanais);
+
+    // somar todos os valores do objeto de movimentações semanais
+    const totalGeral = historicoSemanas.reduce((acc, curr) => acc + curr.value, 0);
     
     if (historicoSemanas.length === 0) {
       console.log(`⚠️ Medicamento sem movimentações: ${medicamento.nome}`);
@@ -304,18 +504,21 @@ async function calcularCamposMedicamento(medicamentoRef: FirebaseFirestore.Docum
     const tp_metodo = calcularTPMetodo(dadosCalculados);
     
     // Calcula método
-    const metodo = calcularMetodo({
+    const metodoString = calcularMetodo({
       contagens,
       medianas,
       maximo,
       tp_metodo
     });
 
-    // Calcula MetEst
-    const metEst = calcularMetEst(String(tp_metodo), Number(metodo));
+    // Extrai o número do método (ex: "MÉTODO A" -> 1, "MÉTODO B" -> 2, etc.)
+    const metodoNumero = extrairNumeroMetodo(metodoString);
 
-    // Calcula reposição (assumindo estoque = 0 por padrão, pode ser ajustado)
-    const estoque = 0; // TODO: Buscar estoque atual do medicamento
+    // Calcula MetEst
+    const metEst = calcularMetEst(String(tp_metodo), metodoNumero);
+
+    // Busca estoque atual do medicamento
+    const estoque = await buscarEstoqueMedicamento(medicamento.nome);
     const reposicao = calcularReposicao(metEst, estoque);
     
     // Cria análise de reposição
@@ -333,14 +536,15 @@ async function calcularCamposMedicamento(medicamentoRef: FirebaseFirestore.Docum
       maximo,
       medianas,
       tp_metodo,
-      metodo,
+      metodo: metodoString,
       metEst,
       reposicao,
       analise_reposicao,
+      totalGeral,
       data_atualizacao: new Date()
     });
 
-    console.log(`✅ ${medicamento.nome} - Contagens: ${contagens.Cont52}, Máximo: ${maximo}, TP: ${tp_metodo}, Método: ${metodo}, MetEst: ${metEst}, Reposição: ${reposicao}`);
+    console.log(`✅ ${medicamento.nome} - Contagens: ${contagens.Cont52}, Máximo: ${maximo}, TP: ${tp_metodo}, Método: ${metodoString}, MetEst: ${metEst}, Estoque: ${estoque}, Reposição: ${reposicao}`);
     
   } catch (error) {
     console.error(`❌ Erro ao calcular campos para medicamento ${medicamentoRef.id}:`, error);
@@ -353,6 +557,10 @@ export async function calcularCamposTodosMedicamentos(): Promise<void> {
   try {
     console.log('🚀 Iniciando cálculo de campos para todos os medicamentos...');
     
+    // Pré-carrega o estoque consolidado
+    console.log('📦 Pré-carregando dados de estoque...');
+    await carregarEstoqueConsolidado();
+    
     // Busca todos os municípios
     const municipiosSnapshot = await db.collection('municipio').get();
     
@@ -362,7 +570,7 @@ export async function calcularCamposTodosMedicamentos(): Promise<void> {
     
     for (const municipioDoc of municipiosSnapshot.docs) {
       const municipio = municipioDoc.data();
-      console.log(`\n��️ Processando município: ${municipio.nome}`);
+      console.log(`\n🏛️ Processando município: ${municipio.nome}`);
       
       // Busca todas as unidades do município
       const unidadesSnapshot = await municipioDoc.ref.collection('unidades').get();
@@ -392,13 +600,13 @@ export async function calcularCamposTodosMedicamentos(): Promise<void> {
     
     console.log('\n🎉 Processamento concluído!');
     console.log(`📊 Resumo final:`);
-    console.log(`   �� Total processados: ${totalProcessados}`);
+    console.log(`   📦 Total processados: ${totalProcessados}`);
     console.log(`   ✅ Sucessos: ${totalSucessos}`);
     console.log(`   ❌ Erros: ${totalErros}`);
     console.log(`   📈 Taxa de sucesso: ${((totalSucessos / totalProcessados) * 100).toFixed(2)}%`);
     
   } catch (error) {
-    console.error('�� Erro fatal durante o processamento:', error);
+    console.error('💥 Erro fatal durante o processamento:', error);
     throw error;
   }
 }

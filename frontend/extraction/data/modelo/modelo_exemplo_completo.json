@@ -2,6 +2,7 @@
     "cidades": [
         {
             "nome": "palmares_paulista",
+            "estoque": 1,
             "estoques": [
                 {
                     "nome": "CAF",

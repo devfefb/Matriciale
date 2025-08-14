@@ -1,22 +1,38 @@
-import { verificarVariaveisAmbiente } from "../utils";
 import { calcularCamposTodosMedicamentos } from "./calcular-campos";
 
-console.log('🧮 Script de Cálculo de Campos para Medicamentos');
-console.log('===============================================\n');
+/**
+ * Script principal para executar o cálculo de campos com integração de estoque
+ */
+async function executarCalculos(): Promise<void> {
+  try {
+    console.log('🚀 Iniciando execução do script de cálculos com estoque...');
+    console.log('📅 Data/Hora:', new Date().toLocaleString('pt-BR'));
+    console.log('=' .repeat(80));
+    
+    // Executa o cálculo de campos para todos os medicamentos
+    await calcularCamposTodosMedicamentos();
+    
+    console.log('=' .repeat(80));
+    console.log('✅ Script de cálculos executado com sucesso!');
+    console.log('📅 Data/Hora final:', new Date().toLocaleString('pt-BR'));
+    
+  } catch (error) {
+    console.error('❌ Erro durante a execução do script:', error);
+    throw error;
+  }
+}
 
-// Verificar variáveis de ambiente
-verificarVariaveisAmbiente();
-
-console.log('✅ Variáveis de ambiente verificadas');
-console.log('�� Iniciando processo de cálculos...\n');
-
-// Executar cálculos
-calcularCamposTodosMedicamentos()
+// Executa o script se for chamado diretamente
+if (require.main === module) {
+  executarCalculos()
     .then(() => {
-        console.log('\n�� Processo concluído com sucesso!');
-        process.exit(0);
+      console.log('\n🎉 Processamento concluído com sucesso!');
+      process.exit(0);
     })
     .catch((error) => {
-        console.error('\n💥 Erro durante o processo:', error);
-        process.exit(1);
+      console.error('\n💥 Erro fatal no processamento:', error);
+      process.exit(1);
     });
+}
+
+export { executarCalculos };
