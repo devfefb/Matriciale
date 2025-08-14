@@ -49,7 +49,7 @@ async function extrairDados(diretorioInput = './extraction/data/input', diretori
         console.log(`📅 Período de apuração: ${inventoryData.periodo_inicio} a ${inventoryData.periodo_fim}`);
         console.log(`📦 Total de itens processados: ${inventoryData.itens.length}`);
         
-        // 6. Salvar resultado
+        // 6. Salvar resultado (especificar unidade)
         const arquivoSaida = path.join(diretorioOutput, 'inventoryData.json');
         await salvarDados(inventoryData, arquivoSaida);
         
