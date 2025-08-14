@@ -189,7 +189,7 @@ async function buscarEstoqueMedicamento(nomeMedicamento: string): Promise<number
 /**
  * Calcula as contagens de semanas com movimentação (valor > 0).
  */
-function calcularContagensParaHistorico(historicoSemanas: SemanaHistorico[]): Contagens {
+function calcularContagensParaHistorico(historicoSemanas: SemanaHistorico[], usar49Semanas: boolean = false): Contagens {
   const contarUltimas = (n: number): number => {
     const ultimasNSemanas = historicoSemanas.slice(-n);
     return ultimasNSemanas.filter(s => s.value > 0).length;
@@ -200,7 +200,10 @@ function calcularContagensParaHistorico(historicoSemanas: SemanaHistorico[]): Co
   const cont12 = contarUltimas(12);
   const cont16 = contarUltimas(16);
   const cont26 = contarUltimas(26);
-  const cont52 = contarUltimas(52);
+  
+  // Usa 49 semanas para ESF3, 52 para outras unidades
+  const semanasPrincipais = usar49Semanas ? 49 : 52;
+  const cont52 = contarUltimas(semanasPrincipais);
 
   const contTotal = historicoSemanas.filter(s => s.value > 0).length;
 
@@ -218,7 +221,7 @@ function calcularContagensParaHistorico(historicoSemanas: SemanaHistorico[]): Co
     Cont12: cont12,
     Cont16: cont16,
     Cont26: cont26,
-    Cont52: cont52,
+    Cont52: cont52, // Pode ser Cont49 para ESF3
     ContAno: contAno,
     ContTt: contTotal
   };
@@ -264,10 +267,12 @@ function calcularMediana(numeros: number[]): number {
 /**
  * Calcula todas as medianas com base no histórico completo de semanas.
  */
-function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[]): Medianas {
+function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[], usar49Semanas: boolean = false): Medianas {
   const historicoValores = historicoSemanas.map(s => s.value);
 
-  const md52 = calcularMediana(historicoValores.slice(-52));
+  // Usa 49 semanas para ESF3, 52 para outras unidades
+  const semanasPrincipais = usar49Semanas ? 49 : 52;
+  const md52 = calcularMediana(historicoValores.slice(-semanasPrincipais));
 
   let mdAno = 0;
   if (historicoSemanas.length > 0) {
@@ -291,7 +296,7 @@ function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[]): Med
     Md12: Math.round(md12),
     Md16: Math.round(md16),
     Md26: Math.round(md26),
-    Md52: Math.round(md52),
+    Md52: Math.round(md52), // Pode ser Md49 para ESF3
     MdAno: Math.round(mdAno),
     MdTt: Math.round(mdTotal)
   };
@@ -302,7 +307,7 @@ function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[]): Med
 /**
  * Calcula o TP_metodo baseado nas contagens de ocorrências semanais
  */
-function calcularTPMetodo(dadosCalculados: DadosCalculados): string {
+function calcularTPMetodo(dadosCalculados: DadosCalculados, usar49Semanas: boolean = false): string {
   const { contagens, semanas, totalSemanasHistorico } = dadosCalculados;
 
   // --- REGRA 1: ENTRANTES ---
@@ -314,7 +319,7 @@ function calcularTPMetodo(dadosCalculados: DadosCalculados): string {
   }
 
   // --- REGRA 2: INTERMITENTES ---
-  const periodo = Math.min(totalSemanasHistorico, 52);
+  const periodo = Math.min(totalSemanasHistorico, usar49Semanas ? 49 : 52);
   if (periodo > 0 && (contagens.Cont52 / periodo) < 0.5) {
     return "INTERMITENTES";
   }
@@ -465,7 +470,7 @@ function converterMovimentacoesParaHistorico(movimentacoes: { [key: string]: num
 /**
  * Calcula todos os campos para um medicamento
  */
-async function calcularCamposMedicamento(medicamentoRef: FirebaseFirestore.DocumentReference): Promise<void> {
+async function calcularCamposMedicamento(medicamentoRef: FirebaseFirestore.DocumentReference, usar49Semanas: boolean = false): Promise<void> {
   try {
     const doc = await medicamentoRef.get();
     if (!doc.exists) {
@@ -487,13 +492,13 @@ async function calcularCamposMedicamento(medicamentoRef: FirebaseFirestore.Docum
     }
 
     // Calcula contagens
-    const contagens = calcularContagensParaHistorico(historicoSemanas);
+    const contagens = calcularContagensParaHistorico(historicoSemanas, usar49Semanas);
     
     // Calcula máximo
     const maximo = calcularMaximaMedicamento(historicoSemanas);
     
     // Calcula medianas
-    const medianas = calcularMedianasParaHistorico(historicoSemanas);
+    const medianas = calcularMedianasParaHistorico(historicoSemanas, usar49Semanas);
     
     // Calcula TP_metodo
     const dadosCalculados: DadosCalculados = {
@@ -501,7 +506,7 @@ async function calcularCamposMedicamento(medicamentoRef: FirebaseFirestore.Docum
       semanas: historicoSemanas,
       totalSemanasHistorico: historicoSemanas.length
     };
-    const tp_metodo = calcularTPMetodo(dadosCalculados);
+    const tp_metodo = calcularTPMetodo(dadosCalculados, usar49Semanas);
     
     // Calcula método
     const metodoString = calcularMetodo({
@@ -544,7 +549,9 @@ async function calcularCamposMedicamento(medicamentoRef: FirebaseFirestore.Docum
       data_atualizacao: new Date()
     });
 
-    console.log(`✅ ${medicamento.nome} - Contagens: ${contagens.Cont52}, Máximo: ${maximo}, TP: ${tp_metodo}, Método: ${metodoString}, MetEst: ${metEst}, Estoque: ${estoque}, Reposição: ${reposicao}`);
+    const semanasLabel = usar49Semanas ? 'Cont49' : 'Cont52';
+    const contagemPrincipal = contagens.Cont52; // Pode ser Cont49 para ESF3
+    console.log(`✅ ${medicamento.nome} - ${semanasLabel}: ${contagemPrincipal}, Máximo: ${maximo}, TP: ${tp_metodo}, Método: ${metodoString}, MetEst: ${metEst}, Estoque: ${estoque}, Reposição: ${reposicao}`);
     
   } catch (error) {
     console.error(`❌ Erro ao calcular campos para medicamento ${medicamentoRef.id}:`, error);
@@ -553,6 +560,14 @@ async function calcularCamposMedicamento(medicamentoRef: FirebaseFirestore.Docum
 
 // --- FUNÇÃO PRINCIPAL ---
 
+/**
+ * Calcula campos para todos os medicamentos de todas as unidades
+ * 
+ * DIRETIVA ESPECIAL PARA ESF3:
+ * - Para a unidade ESF3, usa 49 semanas em vez de 52 semanas
+ * - Isso significa que Cont52 e Md52 na verdade são Cont49 e Md49 para ESF3
+ * - Outras unidades continuam usando 52 semanas normalmente
+ */
 export async function calcularCamposTodosMedicamentos(): Promise<void> {
   try {
     console.log('🚀 Iniciando cálculo de campos para todos os medicamentos...');
@@ -574,7 +589,7 @@ export async function calcularCamposTodosMedicamentos(): Promise<void> {
       
       // Busca todas as unidades do município
       const unidadesSnapshot = await municipioDoc.ref.collection('unidades').get();
-      
+
       for (const unidadeDoc of unidadesSnapshot.docs) {
         const unidade = unidadeDoc.data();
         console.log(`🏥 Processando unidade: ${unidade.nome}`);
@@ -583,12 +598,17 @@ export async function calcularCamposTodosMedicamentos(): Promise<void> {
         const medicamentosSnapshot = await unidadeDoc.ref.collection('medicamentos_unidade').get();
         
         console.log(`💊 Processando ${medicamentosSnapshot.docs.length} medicamentos...`);
+        if (unidadeDoc.id === 'ESF3') {
+          console.log(`📊 Unidade ESF3: usando 49 semanas para cálculos (Md49/Cont49)`);
+        }
         
         for (const medicamentoDoc of medicamentosSnapshot.docs) {
           totalProcessados++;
           
           try {
-            await calcularCamposMedicamento(medicamentoDoc.ref);
+            // Determina se deve usar 49 semanas baseado no ID da unidade
+            const usar49Semanas = unidadeDoc.id === 'ESF3';
+            await calcularCamposMedicamento(medicamentoDoc.ref, usar49Semanas);
             totalSucessos++;
           } catch (error) {
             console.error(`❌ Erro ao processar medicamento ${medicamentoDoc.id}:`, error);

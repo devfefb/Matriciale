@@ -11,7 +11,8 @@
     "inserir-semana": "ts-node src/scripts/auxiliar/executar-inserir-semana.ts",
     "preencher-nulos": "ts-node src/scripts/auxiliar/executar-preencher-nulos.ts",
     "extrair-campos-calculados": "ts-node src/scripts/auxiliar/executar-extrair-campos-calculados.ts",
-    "calcular-estoques": "ts-node src/scripts/executar-processamento-estoque.ts"
+    "calcular-estoques": "ts-node src/scripts/executar-processamento-estoque.ts",
+    "validar-calculos": "ts-node src/scripts/executar-validacao.ts" 
   },
   "engines": {
     "node": "20"

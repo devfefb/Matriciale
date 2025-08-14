@@ -65,7 +65,7 @@ export interface Contagens {
   Cont12: number;
   Cont16: number;
   Cont26: number;
-  Cont52: number;
+  Cont52: number; // Para ESF3, este campo representa Cont49 (49 semanas)
   ContAno: number;
   ContTt: number;
 }
@@ -76,7 +76,7 @@ export interface Medianas {
   Md12: number;
   Md16: number;
   Md26: number;
-  Md52: number;
+  Md52: number; // Para ESF3, este campo representa Md49 (49 semanas)
   MdAno: number;
   MdTt: number;
 }
