@@ -12,7 +12,7 @@
     "preencher-nulos": "ts-node src/scripts/auxiliar/executar-preencher-nulos.ts",
     "extrair-campos-calculados": "ts-node src/scripts/auxiliar/executar-extrair-campos-calculados.ts",
     "calcular-estoques": "ts-node src/scripts/executar-processamento-estoque.ts",
-    "validar-calculos": "ts-node src/scripts/executar-validacao.ts" 
+    "validar-calculos": "ts-node src/scripts/executar-validacao.ts"
   },
   "engines": {
     "node": "20"
@@ -46,7 +46,7 @@
     "@types/mime-types": "^2.1.4",
     "@types/morgan": "^1.9.10",
     "@types/multer": "^1.4.11",
-    "@types/node": "^24.0.3",
+    "@types/node": "^24.3.0",
     "@types/node-cache": "^4.2.5",
     "@types/node-fetch": "^2.6.11",
     "@types/uuid": "^9.0.8",

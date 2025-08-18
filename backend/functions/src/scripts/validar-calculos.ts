@@ -278,19 +278,43 @@ function calcularMaximaMedicamento(historicoSemanas: SemanaHistorico[]): number 
 }
 
 function calcularMediana(numeros: number[]): number {
-  if (!Array.isArray(numeros) || numeros.length === 0) {
+  try {
+    // Verifica se o array é válido
+    if (!Array.isArray(numeros) || numeros.length === 0) {
+      return 0;
+    }
+    
+    // Filtra apenas números válidos (não NaN, não undefined, não null)
+    const numerosValidos = numeros.filter(n => typeof n === 'number' && !isNaN(n) && n !== null && n !== undefined);
+    
+    // Se não há números válidos, retorna 0
+    if (numerosValidos.length === 0) {
+      return 0;
+    }
+    
+    // Calcula a mediana
+    const sorted = [...numerosValidos].sort((a, b) => a - b);
+    const middleIndex = Math.floor(sorted.length / 2);
+    
+    let mediana: number;
+    if (sorted.length % 2 !== 0) {
+      // Número ímpar de elementos - mediana é o elemento do meio
+      mediana = sorted[middleIndex];
+    } else {
+      // Número par de elementos - mediana é a média dos dois elementos do meio
+      mediana = (sorted[middleIndex - 1] + sorted[middleIndex]) / 2;
+    }
+    
+    // Arredonda para 0 casas decimais (ARRED(MED(...);0))
+    const medianaArredondada = Math.round(mediana);
+    
+    return medianaArredondada;
+    
+  } catch (error) {
+    // Se houver qualquer erro, retorna 0 (SE(ÉERROS(...);0;...))
+    console.warn('⚠️ Erro ao calcular mediana:', error);
     return 0;
   }
-  const numerosValidos = numeros.filter(n => typeof n === 'number' && !isNaN(n));
-  if (numerosValidos.length === 0) {
-    return 0;
-  }
-  const sorted = [...numerosValidos].sort((a, b) => a - b);
-  const middleIndex = Math.floor(sorted.length / 2);
-  if (sorted.length % 2 !== 0) {
-    return sorted[middleIndex];
-  }
-  return (sorted[middleIndex - 1] + sorted[middleIndex]) / 2;
 }
 
 function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[], usar49Semanas: boolean = false): Medianas {
@@ -316,14 +340,14 @@ function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[], usar
   const mdTotal = calcularMediana(historicoValores);
 
   return {
-    Md04: Math.round(md04),
-    Md08: Math.round(md08),
-    Md12: Math.round(md12),
-    Md16: Math.round(md16),
-    Md26: Math.round(md26),
-    Md52: Math.round(md52),
-    MdAno: Math.round(mdAno),
-    MdTt: Math.round(mdTotal)
+    Md04: md04,
+    Md08: md08,
+    Md12: md12,
+    Md16: md16,
+    Md26: md26,
+    Md52: md52,
+    MdAno: mdAno,
+    MdTt: mdTotal
   };
 }
 

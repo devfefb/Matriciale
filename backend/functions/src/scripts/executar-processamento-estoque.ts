@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { processarEstoqueCAF } from './processamento-estoque/processar-estoque';
 
 /**

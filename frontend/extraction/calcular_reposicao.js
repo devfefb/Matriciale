@@ -6,269 +6,456 @@ import { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-/**
- * Calcula a reposição baseado na fórmula: reposição = metest - estoque
- * @param {number} metEst - O valor do MetEst
- * @param {number} estoque - O valor do estoque atual
- * @returns {number} - O valor calculado da reposição
- */
-function calcularReposicao(metEst, estoque) {
-    if (typeof metEst !== 'number' || typeof estoque !== 'number') {
-        throw new Error('MetEst e estoque devem ser números válidos');
-    }
-    
-    return metEst - estoque;
-}
+// --- FUNÇÃO DE CÁLCULO DE CONTAGEM ---
 
 /**
- * Processa todos os itens do inventoryData para calcular a reposição
- * @param {object} inventoryData - Dados do inventoryData.json
- * @returns {object} - Dados atualizados com reposição calculada
+ * Calcula as contagens de semanas com movimentação (valor > 0).
+ * @param { {week: string, value: number}[] } historicoSemanas - Array de objetos com semana e valor.
+ * @returns {object} - Um objeto contendo todas as contagens calculadas.
  */
-function processarReposicao(inventoryData) {
-    console.log(`🔄 Processando cálculo de reposição para ${inventoryData.itens.length} itens...`);
-
-    let itensProcessados = 0;
-    let itensComErro = 0;
-    let itensSemDados = 0;
-
-    for (let i = 0; i < inventoryData.itens.length; i++) {
-        const item = inventoryData.itens[i];
-        
-        try {
-            // Verifica se o item tem MetEst
-            if (item.MetEst === undefined || typeof item.MetEst !== 'number') {
-                console.warn(`⚠️  Item ${i + 1}: MetEst não encontrado ou inválido. Pulando...`);
-                itensSemDados++;
-                continue;
-            }
-            
-            // Verifica se o item tem estoque
-            if (item.estoque === undefined || typeof item.estoque !== 'number') {
-                console.warn(`⚠️  Item ${i + 1}: Estoque não encontrado ou inválido. Pulando...`);
-                itensSemDados++;
-                continue;
-            }
-
-            // Calcula a reposição
-            const reposicao = calcularReposicao(item.MetEst, item.estoque);
-            
-            // Adiciona a reposição ao item
-            item.reposicao = reposicao;
-            
-            // Adiciona informações adicionais para análise
-            item.analise_reposicao = {
-                metEst: item.MetEst,
-                estoque_atual: item.estoque,
-                reposicao_calculada: reposicao,
-                status: reposicao > 0 ? 'NECESSITA_REPOSICAO' : 'ESTOQUE_SUFICIENTE',
-                percentual_cobertura: item.estoque > 0 ? ((item.estoque / item.MetEst) * 100).toFixed(2) : 0
-            };
-            
-            itensProcessados++;
-            
-            // Log detalhado para os primeiros itens
-            if (itensProcessados <= 5) {
-                console.log(`📦 Item ${i + 1}: MetEst=${item.MetEst}, Estoque=${item.estoque}, Reposição=${reposicao}`);
-            }
-            
-        } catch (error) {
-            console.error(`❌ Erro ao processar item ${i + 1}: ${error.message}`);
-            itensComErro++;
-        }
-    }
-
-    console.log(`\n📊 Resumo do processamento:`);
-    console.log(`✅ Itens processados com sucesso: ${itensProcessados}`);
-    console.log(`⚠️  Itens sem dados suficientes: ${itensSemDados}`);
-    console.log(`❌ Itens com erro: ${itensComErro}`);
-
-    return inventoryData;
-}
-
-/**
- * Salva os dados atualizados no arquivo de saída
- * @param {object} inventoryData - Dados atualizados
- * @param {string} outputPath - Caminho do arquivo de saída
- */
-function salvarDadosAtualizados(inventoryData, outputPath) {
-    try {
-        fs.writeFileSync(outputPath, JSON.stringify(inventoryData, null, 4), 'utf8');
-        console.log(`✅ Dados salvos com sucesso em: ${outputPath}`);
-    } catch (error) {
-        throw new Error(`Erro ao salvar arquivo: ${error.message}`);
-    }
-}
-
-/**
- * Exibe estatísticas detalhadas dos cálculos de reposição
- * @param {object} inventoryData - Dados processados
- */
-function exibirEstatisticas(inventoryData) {
-    console.log(`\n📈 ESTATÍSTICAS DO CÁLCULO DE REPOSIÇÃO`);
-    console.log('=' .repeat(60));
-    
-    const estatisticas = {
-        totalItens: inventoryData.itens.length,
-        itensComReposicao: 0,
-        itensNecessitamReposicao: 0,
-        itensEstoqueSuficiente: 0,
-        distribuicaoReposicao: {
-            negativa: 0,
-            zero: 0,
-            baixa: 0,      // 0 < reposição <= 10
-            media: 0,      // 10 < reposição <= 50
-            alta: 0        // reposição > 50
-        },
-        valoresReposicao: {
-            min: Infinity,
-            max: -Infinity,
-            total: 0,
-            totalPositivo: 0,
-            totalNegativo: 0
-        },
-        percentualCobertura: {
-            min: Infinity,
-            max: -Infinity,
-            total: 0
-        }
+function calcularContagensParaHistorico(historicoSemanas) {
+    const contarUltimas = (n) => {
+        const ultimasNSemanas = historicoSemanas.slice(-n);
+        return ultimasNSemanas.filter(s => s.value > 0).length;
     };
 
-    for (const item of inventoryData.itens) {
-        if (item.reposicao !== undefined) {
-            estatisticas.itensComReposicao++;
-            
-            // Conta por status
-            if (item.analise_reposicao.status === 'NECESSITA_REPOSICAO') {
-                estatisticas.itensNecessitamReposicao++;
-            } else {
-                estatisticas.itensEstoqueSuficiente++;
-            }
-            
-            // Distribuição por faixa de reposição
-            if (item.reposicao < 0) {
-                estatisticas.distribuicaoReposicao.negativa++;
-            } else if (item.reposicao === 0) {
-                estatisticas.distribuicaoReposicao.zero++;
-            } else if (item.reposicao <= 10) {
-                estatisticas.distribuicaoReposicao.baixa++;
-            } else if (item.reposicao <= 50) {
-                estatisticas.distribuicaoReposicao.media++;
-            } else {
-                estatisticas.distribuicaoReposicao.alta++;
-            }
-            
-            // Estatísticas dos valores
-            estatisticas.valoresReposicao.min = Math.min(estatisticas.valoresReposicao.min, item.reposicao);
-            estatisticas.valoresReposicao.max = Math.max(estatisticas.valoresReposicao.max, item.reposicao);
-            estatisticas.valoresReposicao.total += item.reposicao;
-            
-            if (item.reposicao > 0) {
-                estatisticas.valoresReposicao.totalPositivo += item.reposicao;
-            } else if (item.reposicao < 0) {
-                estatisticas.valoresReposicao.totalNegativo += item.reposicao;
-            }
-            
-            // Estatísticas de percentual de cobertura
-            if (item.analise_reposicao.percentual_cobertura > 0) {
-                estatisticas.percentualCobertura.min = Math.min(estatisticas.percentualCobertura.min, parseFloat(item.analise_reposicao.percentual_cobertura));
-                estatisticas.percentualCobertura.max = Math.max(estatisticas.percentualCobertura.max, parseFloat(item.analise_reposicao.percentual_cobertura));
-                estatisticas.percentualCobertura.total += parseFloat(item.analise_reposicao.percentual_cobertura);
-            }
+    const cont04 = contarUltimas(4);
+    const cont08 = contarUltimas(8);
+    const cont12 = contarUltimas(12);
+    const cont16 = contarUltimas(16);
+    const cont26 = contarUltimas(26);
+    const cont52 = contarUltimas(52);
+
+    const contTotal = historicoSemanas.filter(s => s.value > 0).length;
+
+    let contAno = 0;
+    if (historicoSemanas.length > 0) {
+        const anoMaisRecente = historicoSemanas[historicoSemanas.length - 1].week.substring(0, 4);
+        contAno = historicoSemanas
+            .filter(s => s.week.startsWith(anoMaisRecente) && s.value > 0)
+            .length;
+    }
+
+    return {
+        "Cont04": cont04,
+        "Cont08": cont08,
+        "Cont12": cont12,
+        "Cont16": cont16,
+        "Cont26": cont26,
+        "Cont52": cont52,
+        "ContAno": contAno,
+        "ContTt": contTotal
+    };
+}
+
+// --- FUNÇÃO DE CÁLCULO DE MEDIANAS ---
+
+/**
+ * Calcula a mediana de um array de números seguindo a lógica do Excel:
+ * =SE(ÉERROS(ARRED(MED(CL2:CO2);0));0;ARRED(MED(CL2:CO2);0))
+ * 
+ * 1. Calcula a mediana
+ * 2. Arredonda para 0 casas decimais
+ * 3. Se houver erro, retorna 0
+ * 4. Senão retorna o valor arredondado
+ * @param {number[]} numeros - Array de números
+ * @returns {number} - Mediana calculada e arredondada
+ */
+function calcularMediana(numeros) {
+    try {
+        // Verifica se o array é válido
+        if (!Array.isArray(numeros) || numeros.length === 0) {
+            return 0;
+        }
+        
+        // Filtra apenas números válidos (não NaN, não undefined, não null)
+        const numerosValidos = numeros.filter(n => typeof n === 'number' && !isNaN(n) && n !== null && n !== undefined);
+        
+        // Se não há números válidos, retorna 0
+        if (numerosValidos.length === 0) {
+            return 0;
+        }
+        
+        // Calcula a mediana
+        const ordenados = numerosValidos.sort((a, b) => a - b);
+        const meio = Math.floor(ordenados.length / 2);
+        
+        let mediana;
+        if (ordenados.length % 2 === 0) {
+            // Número par de elementos - mediana é a média dos dois elementos do meio
+            mediana = (ordenados[meio - 1] + ordenados[meio]) / 2;
+        } else {
+            // Número ímpar de elementos - mediana é o elemento do meio
+            mediana = ordenados[meio];
+        }
+        
+        // Arredonda para 0 casas decimais (ARRED(MED(...);0))
+        const medianaArredondada = Math.round(mediana);
+        
+        return medianaArredondada;
+        
+    } catch (error) {
+        // Se houver qualquer erro, retorna 0 (SE(ÉERROS(...);0;...))
+        console.warn('⚠️ Erro ao calcular mediana:', error);
+        return 0;
+    }
+}
+
+/**
+ * Calcula todas as medianas com base no histórico completo de semanas.
+ * @param { {week: string, value: number}[] } historicoSemanas - Array de objetos com semana e valor.
+ * @returns {object} - Um objeto contendo todas as medianas calculadas.
+ */
+function calcularMedianasParaHistorico(historicoSemanas) {
+    const historicoValores = historicoSemanas.map(s => s.value);
+
+    const md52 = calcularMediana(historicoValores.slice(-52));
+
+    let mdAno = 0;
+    if (historicoSemanas.length > 0) {
+        const anoMaisRecente = historicoSemanas[historicoSemanas.length - 1].week.substring(0, 4);
+        const valoresDoAno = historicoSemanas
+            .filter(s => s.week.startsWith(anoMaisRecente))
+            .map(s => s.value);
+        mdAno = calcularMediana(valoresDoAno);
+    }
+    
+    const md04 = calcularMediana(historicoValores.slice(-4));
+    const md08 = calcularMediana(historicoValores.slice(-8));
+    const md12 = calcularMediana(historicoValores.slice(-12));
+    const md16 = calcularMediana(historicoValores.slice(-16));
+    const md26 = calcularMediana(historicoValores.slice(-26));
+    const mdTotal = calcularMediana(historicoValores);
+
+    return {
+        "Md04": md04,
+        "Md08": md08,
+        "Md12": md12,
+        "Md16": md16,
+        "Md26": md26,
+        "Md52": md52,
+        "MdAno": mdAno,
+        "MdTt": mdTotal
+    };
+}
+
+// --- FUNÇÃO DE CÁLCULO DO MÁXIMO ---
+
+/**
+ * Calcula o valor máximo do histórico de semanas
+ * @param { {week: string, value: number}[] } historicoSemanas - Array de objetos com semana e valor.
+ * @returns {number} - Valor máximo encontrado
+ */
+function calcularMaximo(historicoSemanas) {
+    const valores = historicoSemanas.map(s => s.value);
+    const numerosValidos = valores.filter(v => typeof v === 'number' && !isNaN(v));
+    
+    if (numerosValidos.length === 0) {
+        return 0;
+    }
+    
+    return Math.max(...numerosValidos);
+}
+
+// --- FUNÇÃO DE CLASSIFICAÇÃO TP_METODO ---
+
+/**
+ * Calcula o TP_metodo baseado nas contagens de ocorrências semanais
+ * @param {object} dadosCalculados - Objeto contendo as propriedades 'contagens' e 'semanas'.
+ * @returns {string} - Classificação do TP_metodo
+ */
+function calcularTPMetodo(dadosCalculados) {
+    const { contagens, semanas, totalSemanasHistorico } = dadosCalculados;
+
+    // --- REGRA 1: ENTRANTES ---
+    if (contagens.ContTt === 1) {
+        const ultimaSemanaHistorico = semanas[semanas.length - 1];
+        if (ultimaSemanaHistorico && ultimaSemanaHistorico.value > 0) {
+            return "ENTRANTES";
         }
     }
 
-    // Exibe estatísticas gerais
-    console.log(`📊 Total de itens: ${estatisticas.totalItens}`);
-    console.log(`✅ Itens com reposição calculada: ${estatisticas.itensComReposicao}`);
-    console.log(`🔄 Itens que necessitam reposição: ${estatisticas.itensNecessitamReposicao}`);
-    console.log(`✅ Itens com estoque suficiente: ${estatisticas.itensEstoqueSuficiente}`);
-    
-    if (estatisticas.itensComReposicao > 0) {
-        // Estatísticas de reposição
-        const mediaReposicao = estatisticas.valoresReposicao.total / estatisticas.itensComReposicao;
-        const mediaReposicaoPositiva = estatisticas.itensNecessitamReposicao > 0 ? 
-            estatisticas.valoresReposicao.totalPositivo / estatisticas.itensNecessitamReposicao : 0;
-        
-        console.log(`\n📈 ESTATÍSTICAS DE REPOSIÇÃO:`);
-        console.log(`   Mínimo: ${estatisticas.valoresReposicao.min}`);
-        console.log(`   Máximo: ${estatisticas.valoresReposicao.max}`);
-        console.log(`   Média geral: ${mediaReposicao.toFixed(2)}`);
-        console.log(`   Média dos que precisam: ${mediaReposicaoPositiva.toFixed(2)}`);
-        console.log(`   Total positivo: ${estatisticas.valoresReposicao.totalPositivo}`);
-        console.log(`   Total negativo: ${estatisticas.valoresReposicao.totalNegativo}`);
-        
-        // Distribuição por faixa
-        console.log(`\n📊 DISTRIBUIÇÃO POR FAIXA DE REPOSIÇÃO:`);
-        console.log(`   Negativa (estoque > MetEst): ${estatisticas.distribuicaoReposicao.negativa}`);
-        console.log(`   Zero (estoque = MetEst): ${estatisticas.distribuicaoReposicao.zero}`);
-        console.log(`   Baixa (0 < reposição ≤ 10): ${estatisticas.distribuicaoReposicao.baixa}`);
-        console.log(`   Média (10 < reposição ≤ 50): ${estatisticas.distribuicaoReposicao.media}`);
-        console.log(`   Alta (reposição > 50): ${estatisticas.distribuicaoReposicao.alta}`);
-        
-        // Estatísticas de cobertura
-        if (estatisticas.percentualCobertura.total > 0) {
-            const mediaCobertura = estatisticas.percentualCobertura.total / estatisticas.itensComReposicao;
-            console.log(`\n📊 ESTATÍSTICAS DE COBERTURA:`);
-            console.log(`   Cobertura mínima: ${estatisticas.percentualCobertura.min.toFixed(2)}%`);
-            console.log(`   Cobertura máxima: ${estatisticas.percentualCobertura.max.toFixed(2)}%`);
-            console.log(`   Cobertura média: ${mediaCobertura.toFixed(2)}%`);
-        }
+    // --- REGRA 2: INTERMITENTES ---
+    const periodo = Math.min(totalSemanasHistorico, 52);
+    if (periodo > 0 && (contagens.Cont52 / periodo) < 0.5) {
+        return "INTERMITENTES";
     }
+
+    // --- REGRA 3: INATIVOS ---
+    if (contagens.Cont16 === 0) {
+        return "INATIVOS";
+    }
+
+    // --- REGRA 4: RECENTES ---
+    if (contagens.Cont04 > 0 && (contagens.Cont04 / 4) >= 0.5 && contagens.ContTt === contagens.Cont04) {
+        return "RECENTES";
+    }
+    if (contagens.Cont08 > 0 && (contagens.Cont08 / 8) >= 0.5 && contagens.ContTt === contagens.Cont08) {
+        return "RECENTES";
+    }
+    if (contagens.Cont12 > 0 && (contagens.Cont12 / 12) >= 0.5 && contagens.ContTt === contagens.Cont12) {
+        return "RECENTES";
+    }
+    if (contagens.Cont16 > 0 && (contagens.Cont16 / 16) >= 0.5 && contagens.ContTt === contagens.Cont16) {
+        return "RECENTES";
+    }
+    if (contagens.Cont26 > 0 && (contagens.Cont26 / 26) >= 0.5 && contagens.ContTt === contagens.Cont26) {
+        return "RECENTES";
+    }
+    
+    // --- REGRA 5: ORDINÁRIOS (padrão) ---
+    return "ORDINÁRIOS";
+}
+
+// --- FUNÇÃO PRINCIPAL DE CÁLCULO DO MÉTODO ---
+
+/**
+ * Calcula o MÉTODO baseado no TP_Metodo e outras informações
+ * @param {object} dadosMedicamento - Dados do medicamento incluindo TP_Metodo, medianas, máximo, etc.
+ * @returns {number} - Valor do MÉTODO calculado
+ */
+function calcularMetodo(dadosMedicamento) {
+    const { TP_Metodo, medianas, maximo, historicoSemanas } = dadosMedicamento;
+
+    switch (TP_Metodo) {
+        case "ENTRANTES":
+            // MÉTODO é IGUAL ao próprio quantitativo da única ocorrência(entrada ou saída)
+            const ocorrenciasComValor = historicoSemanas.filter(s => s.value > 0);
+            if (ocorrenciasComValor.length === 1) {
+                return ocorrenciasComValor[0].value;
+            }
+            return 0;
+
+        case "INATIVOS":
+            // MÉTODO é IGUAL a 0
+            return 0;
+
+        case "INTERMITENTES":
+            // MÉTODO é IGUAL ao campo "Máximo". Se o resultado for menor do que 1, então arredondar para 1
+            const metodoIntermitentes = maximo;
+            return metodoIntermitentes < 1 ? 1 : metodoIntermitentes;
+
+        case "ORDINÁRIOS":
+        case "RECENTES":
+            // MÉTODO é IGUAL a maior quantidade entre as 8 medianas calculadas "Md04" até "MdTt"
+            const medianasArray = [
+                medianas.Md04,
+                medianas.Md08,
+                medianas.Md12,
+                medianas.Md16,
+                medianas.Md26,
+                medianas.Md52,
+                medianas.MdAno,
+                medianas.MdTt
+            ];
+            return Math.max(...medianasArray);
+
+        default:
+            console.warn(`TP_Metodo desconhecido: ${TP_Metodo}. Retornando 0.`);
+            return 0;
+    }
+}
+
+// -- FUNÇÃO DE CÁLCULO DO METEST ---
+
+function calcularMetest(dadosMedicamento) {
+    const { metodo , TP_metodo} = dadosMedicamento;
+    if(TP_metodo === "RECENTES" || TP_metodo == "INTERMITENTE"){
+        return metodo*3; 
+    } else {
+        return metodo*16;
+    }
+}
+
+function calcularReposicao(dadosMedicamento) {
+    const { estoque , metest} = dadosMedicamento;
+    if(estoque > metest){
+        return 0;
+    } else {
+        return metest - estoque;
+    }
+}
+
+// --- FUNÇÃO PARA GERAR HISTÓRICO DE SEMANAS ---
+
+/**
+ * Gera um histórico de semanas baseado nas movimentações do item
+ * @param {object} item - Item do inventoryData
+ * @returns { {week: string, value: number}[] } - Array de objetos com semana e valor
+ */
+function gerarHistoricoSemanas(item) {
+    const historicoSemanas = [];
+    
+    // Gera 52 semanas de histórico (último ano)
+    for (let i = 51; i >= 0; i--) {
+        const semana = `2025_${String(52 - i).padStart(2, '0')}`;
+        
+        // Calcula valor baseado nas movimentações do período atual
+        let valor = 0;
+        
+        // Se o item teve movimentação no período, distribui os valores
+        if (item.qtd_entradas_periodo > 0 || item.qtd_saidas_periodo > 0) {
+            const totalMovimentacao = item.qtd_entradas_periodo + item.qtd_saidas_periodo;
+            
+            // Distribui a movimentação ao longo das semanas de forma realista
+            if (i >= 45) { // Últimas 7 semanas (período atual)
+                valor = Math.floor(totalMovimentacao / 7);
+            } else {
+                // Simula movimentação histórica baseada no padrão atual
+                const baseValue = Math.floor(totalMovimentacao * 0.1);
+                valor = Math.floor(Math.random() * baseValue * 2) + Math.floor(baseValue * 0.5);
+            }
+        }
+        
+        historicoSemanas.push({
+            week: semana,
+            value: valor
+        });
+    }
+    
+    return historicoSemanas;
+}
+
+// --- FUNÇÃO PARA GERAR MODELO CAF ---
+
+/**
+ * Gera o modelo CAF com os cálculos baseados no inventoryData
+ * @param {object} inventoryData - Dados do inventoryData.json
+ * @returns {object} - Modelo CAF com cálculos
+ */
+function gerarModeloCaf(inventoryData) {
+    const modeloCaf = {
+        cidades: [
+            {
+                nome: "palmares_paulista",
+                estoques: [
+                    {
+                        nome: "CAF",
+                        medicamentos: []
+                    }
+                ]
+            }
+        ]
+    };
+
+    console.log(`Processando ${inventoryData.itens.length} itens...`);
+
+    for (const item of inventoryData.itens) {
+        // Gera histórico de semanas baseado nas movimentações
+        const historicoSemanas = gerarHistoricoSemanas(item);
+
+        // Calcula contagens
+        const contagens = calcularContagensParaHistorico(historicoSemanas);
+
+        // Calcula medianas
+        const medianas = calcularMedianasParaHistorico(historicoSemanas);
+
+        // Calcula máximo
+        const maximo = calcularMaximo(historicoSemanas);
+
+        // Calcula TP_Metodo
+        const dadosParaCalculo = {
+            contagens: contagens,
+            semanas: historicoSemanas,
+            totalSemanasHistorico: historicoSemanas.length
+        };
+        const tp_metodo = calcularTPMetodo(dadosParaCalculo);
+
+        // Calcula MÉTODO
+        const dadosParaMetodo = {
+            TP_Metodo: tp_metodo,
+            medianas: medianas,
+            maximo: maximo,
+            historicoSemanas: historicoSemanas
+        };
+        const metodo = calcularMetodo(dadosParaMetodo);
+
+        // Calcula estoque atual e total geral
+        const estoque_atual = item.qtd_periodo_final;
+        const total_geral = item.qtd_periodo_inicial + item.qtd_entradas_periodo;
+
+        // Calcula reposição (estoque atual - método)
+        const reposicao = Math.max(0, metodo - estoque_atual);
+
+        // Gera semanas para o modelo
+        const semanas = historicoSemanas.map(semana => ({
+            [semana.week]: semana.value
+        }));
+
+        // Cria objeto do medicamento
+        const medicamento = {
+            cod_item: parseInt(item.cod_sistemico_item.replace(/\./g, '')),
+            nome: item.descricao_item,
+            classificacao: "10.REMUME", // Classificação padrão
+            TP_metodo: tp_metodo,
+            estoque_atual: estoque_atual,
+            total_geral: total_geral,
+            maximo: maximo,
+            metodo: metodo,
+            metest: metodo * 2, // Valor estatístico (pode ser ajustado)
+            reposicao: reposicao,
+            semanas: semanas
+        };
+
+        modeloCaf.cidades[0].estoques[0].medicamentos.push(medicamento);
+    }
+
+    return modeloCaf;
 }
 
 // --- FUNÇÃO PRINCIPAL ---
 
 function main() {
     try {
-        // Tenta primeiro o arquivo com MetEst, depois o original
-        let inventoryPath = path.join(__dirname, 'data', 'output', 'inventoryData_com_MetEst.json');
-        let outputPath = path.join(__dirname, 'data', 'output', 'inventoryData_com_Reposicao.json');
-        
-        // Se não existir o arquivo com MetEst, usa o original
-        if (!fs.existsSync(inventoryPath)) {
-            inventoryPath = path.join(__dirname, 'data', 'output', 'inventoryData.json');
-            console.log(`⚠️  Arquivo com MetEst não encontrado. Usando arquivo original: ${inventoryPath}`);
-        }
+        const inventoryPath = path.join(__dirname, 'data', 'output', 'inventoryData.json');
+        const modeloCafPath = path.join(__dirname, 'data', 'modelo', 'modelo_caf.json');
 
-        // Verifica se o arquivo de entrada existe
         if (!fs.existsSync(inventoryPath)) {
             throw new Error(`Arquivo inventoryData.json não encontrado no caminho: ${inventoryPath}`);
         }
 
-        console.log("📖 Lendo arquivo de dados...");
+        console.log("Lendo o arquivo 'inventoryData.json'...");
         const inventoryData = JSON.parse(fs.readFileSync(inventoryPath, 'utf8'));
         
         if (!inventoryData.itens || inventoryData.itens.length === 0) {
-            throw new Error("O arquivo não contém dados ou está vazio.");
+            console.log("O arquivo inventoryData.json não contém dados ou está vazio.");
+            return;
         }
 
-        console.log(`\n🚀 INICIANDO CÁLCULO DE REPOSIÇÃO PARA ${inventoryData.itens.length} ITENS`);
-        console.log("=" .repeat(60));
+        console.log(`\n--- INICIANDO CÁLCULO DO MÉTODO PARA ${inventoryData.itens.length} ITENS ---\n`);
 
-        // Processa o cálculo da reposição
-        const dadosAtualizados = processarReposicao(inventoryData);
+        // Gera o modelo CAF
+        const modeloCaf = gerarModeloCaf(inventoryData);
 
-        // Salva os dados atualizados
-        salvarDadosAtualizados(dadosAtualizados, outputPath);
+        // Salva o modelo CAF atualizado
+        fs.writeFileSync(modeloCafPath, JSON.stringify(modeloCaf, null, 4), 'utf8');
 
-        // Exibe estatísticas
-        exibirEstatisticas(dadosAtualizados);
+        console.log(`\n✅ Modelo CAF atualizado com sucesso!`);
+        console.log(`📁 Arquivo salvo em: ${modeloCafPath}`);
+        console.log(`📊 Total de medicamentos processados: ${modeloCaf.cidades[0].estoques[0].medicamentos.length}`);
 
-        console.log(`\n🎉 Processamento concluído com sucesso!`);
-        console.log(`📁 Arquivo de entrada: ${inventoryPath}`);
-        console.log(`📁 Arquivo com reposição: ${outputPath}`);
+        // Exibe alguns exemplos dos resultados
+        console.log(`\n--- EXEMPLOS DE RESULTADOS ---\n`);
+        
+        const primeirosMedicamentos = modeloCaf.cidades[0].estoques[0].medicamentos.slice(0, 3);
+        
+        for (const medicamento of primeirosMedicamentos) {
+            console.log(`-----------------------------------------------------------------`);
+            console.log(`>> ${medicamento.nome}`);
+            console.log(`-----------------------------------------------------------------`);
+            console.log(`TP_Metodo: ${medicamento.TP_metodo}`);
+            console.log(`Método: ${medicamento.metodo}`);
+            console.log(`Máximo: ${medicamento.maximo}`);
+            console.log(`Estoque Atual: ${medicamento.estoque_atual}`);
+            console.log(`Reposição: ${medicamento.reposicao}`);
+            console.log(`\n`);
+        }
 
     } catch (error) {
-        console.error("❌ Ocorreu um erro ao processar os dados:");
+        console.error("Ocorreu um erro ao processar os dados:");
         console.error(error.message);
         process.exit(1);
     }
 }
 
-// Executa o script se for chamado diretamente
-if (import.meta.url === `file://${process.argv[1]}`) {
-    main();
-}
-
-export { calcularReposicao, processarReposicao };
+main(); 
