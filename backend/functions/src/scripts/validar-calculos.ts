@@ -228,7 +228,6 @@ async function buscarEstoqueMedicamento(nomeMedicamento: string): Promise<number
 }
 
 // --- FUNÇÕES DE CÁLCULO (copiadas do script original) ---
-
 function calcularContagensParaHistorico(historicoSemanas: SemanaHistorico[], usar49Semanas: boolean = false): Contagens {
   const contarUltimas = (n: number): number => {
     const ultimasNSemanas = historicoSemanas.slice(-n);
@@ -317,38 +316,57 @@ function calcularMediana(numeros: number[]): number {
   }
 }
 
+/**
+ * Calcula todas as medianas espelhando a lógica do Excel (inclui zeros, ignora nulos).
+ * Mantém a opção de alternar entre 49 e 52 semanas para o cálculo principal.
+ */
+/**
+ * Calcula todas as medianas com a lógica de negócio dupla e definitiva.
+ * Mantém a opção de alternar entre 49 e 52 semanas.
+ */
 function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[], usar49Semanas: boolean = false): Medianas {
-  const historicoValores = historicoSemanas.map(s => s.value);
+    // --- DATASET 1: Para medianas de CONSISTÊNCIA (inclui zeros) ---
+    // Usado para Md04, Md08, Md12, Md16.
+    const historicoValoresComZeros = historicoSemanas.map(s => s.value);
 
-  const semanasPrincipais = usar49Semanas ? 49 : 52;
-  const md52 = calcularMediana(historicoValores.slice(-semanasPrincipais));
+    // --- DATASET 2: Para medianas de MAGNITUDE (FILTRA os zeros) ---
+    // Usado para Md26, Md52, MdAno, MdTt.
+    const historicoValoresSemZeros = historicoValoresComZeros.filter(v => v > 0);
 
-  let mdAno = 0;
-  if (historicoSemanas.length > 0) {
-    const anoMaisRecente = historicoSemanas[historicoSemanas.length - 1].week.substring(0, 4);
-    const valoresDoAno = historicoSemanas
-      .filter(s => s.week.startsWith(anoMaisRecente))
-      .map(s => s.value);
-    mdAno = calcularMediana(valoresDoAno);
-  }
-  
-  const md04 = calcularMediana(historicoValores.slice(-4));
-  const md08 = calcularMediana(historicoValores.slice(-8));
-  const md12 = calcularMediana(historicoValores.slice(-12));
-  const md16 = calcularMediana(historicoValores.slice(-16));
-  const md26 = calcularMediana(historicoValores.slice(-26));
-  const mdTotal = calcularMediana(historicoValores);
+    // --- Cálculos de CONSISTÊNCIA (usam o dataset COM ZEROS) ---
+    const md04 = calcularMediana(historicoValoresComZeros.slice(-4));
+    const md08 = calcularMediana(historicoValoresComZeros.slice(-8));
+    const md12 = calcularMediana(historicoValoresComZeros.slice(-12));
+    const md16 = calcularMediana(historicoValoresComZeros.slice(-16));
 
-  return {
-    Md04: md04,
-    Md08: md08,
-    Md12: md12,
-    Md16: md16,
-    Md26: md26,
-    Md52: md52,
-    MdAno: mdAno,
-    MdTt: mdTotal
-  };
+    // --- Cálculos de MAGNITUDE (usam o dataset SEM ZEROS) ---
+    const semanasPrincipais = usar49Semanas ? 49 : 52;
+    // O nome da propriedade no retorno continua Md52, mesmo que o cálculo possa usar 49 semanas.
+    const md52 = calcularMediana(historicoValoresSemZeros.slice(-semanasPrincipais));
+    const md26 = calcularMediana(historicoValoresSemZeros.slice(-26));
+    const mdTotal = calcularMediana(historicoValoresSemZeros);
+
+    let mdAno = 0;
+    if (historicoSemanas.length > 0) {
+        const anoMaisRecente = historicoSemanas[historicoSemanas.length - 1].week.substring(0, 4);
+        const valoresDoAno = historicoSemanas
+            .filter(s => s.week.startsWith(anoMaisRecente))
+            .map(s => s.value)
+            .filter(v => v > 0); // Magnitude do ano também filtra zeros
+        mdAno = calcularMediana(valoresDoAno);
+    }
+    
+    // O retorno usa a sua função `calcularMediana` que já faz o arredondamento.
+    return {
+        Md04: md04,
+        Md08: md08,
+        Md12: md12,
+        Md16: md16,
+        Md26: md26,
+        Md52: md52,
+        MdAno: mdAno,
+        MdTt: mdTotal
+    };
 }
 
 function calcularTPMetodo(dadosCalculados: DadosCalculados, usar49Semanas: boolean = false): string {
@@ -357,70 +375,58 @@ function calcularTPMetodo(dadosCalculados: DadosCalculados, usar49Semanas: boole
   if (contagens.ContTt === 1) {
     const ultimaSemanaHistorico = semanas[semanas.length - 1];
     if (ultimaSemanaHistorico && ultimaSemanaHistorico.value > 0) {
-      return "ENTRANTES";
+      return "5.ENTRANTES";
     }
   }
 
   const periodo = Math.min(totalSemanasHistorico, usar49Semanas ? 49 : 52);
   if (periodo > 0 && (contagens.Cont52 / periodo) < 0.5) {
-    return "INTERMITENTES";
+    return "2.INTERMITENTES";
   }
 
   if (contagens.Cont16 === 0) {
-    return "INATIVOS";
+    return "3.INATIVOS";
   }
 
   if (contagens.Cont04 > 0 && (contagens.Cont04 / 4) >= 0.5 && contagens.ContTt === contagens.Cont04) {
-    return "RECENTES";
+    return "4.RECENTES";
   }
   if (contagens.Cont08 > 0 && (contagens.Cont08 / 8) >= 0.5 && contagens.ContTt === contagens.Cont08) {
-    return "RECENTES";
+    return "4.RECENTES";
   }
   if (contagens.Cont12 > 0 && (contagens.Cont12 / 12) >= 0.5 && contagens.ContTt === contagens.Cont12) {
-    return "RECENTES";
+    return "4.RECENTES";
   }
   if (contagens.Cont16 > 0 && (contagens.Cont16 / 16) >= 0.5 && contagens.ContTt === contagens.Cont16) {
-    return "RECENTES";
+    return "4.RECENTES";
   }
   if (contagens.Cont26 > 0 && (contagens.Cont26 / 26) >= 0.5 && contagens.ContTt === contagens.Cont26) {
-    return "RECENTES";
+    return "4.RECENTES";
   }
   
-  return "ORDINÁRIOS";
+  return "1.ORDINÁRIOS";
 }
 
 function calcularMetodo(dadosMedicamento: {
-  contagens: Contagens;
   medianas: Medianas;
   maximo: number;
   tp_metodo: string;
-}): string {
-  const { contagens } = dadosMedicamento;
+}): number {
 
-  if (contagens.Cont52 >= 26) {
-    return "MÉTODO A";
+  if (dadosMedicamento.tp_metodo === "3.INATIVOS") {
+    return 0;
   }
-  if (contagens.Cont52 >= 13 && contagens.Cont52 < 26) {
-    return "MÉTODO B";
+  if (dadosMedicamento.tp_metodo === "5.ENTRANTES") {
+    return dadosMedicamento.maximo;;
   }
-  if (contagens.Cont52 >= 1 && contagens.Cont52 < 13) {
-    return "MÉTODO C";
+  if (dadosMedicamento.tp_metodo === "4.RECENTES" || dadosMedicamento.tp_metodo === "1.ORDINÁRIOS") {
+    const todasAsMedianas = Object.values(dadosMedicamento.medianas);
+    return Math.max(...todasAsMedianas);
   }
-  if (contagens.Cont52 === 0) {
-    return "MÉTODO D";
+  if (dadosMedicamento.tp_metodo === "2.INTERMITENTES") {
+    return dadosMedicamento.maximo / 4 ? Math.floor(dadosMedicamento.maximo / 4) : 1;
   }
 
-  return "MÉTODO C";
-}
-
-function extrairNumeroMetodo(metodoString: string): number {
-  switch (metodoString) {
-    case "MÉTODO A": return 1;
-    case "MÉTODO B": return 2;
-    case "MÉTODO C": return 3;
-    case "MÉTODO D": return 4;
-    default: return 3;
-  }
 }
 
 function calcularMetEst(tpMetodo: string, metodo: number): number {
@@ -465,7 +471,7 @@ async function calcularCamposMedicamentoSemSalvar(
   maximo: number;
   medianas: Medianas;
   tp_metodo: string;
-  metodo: string;
+  metodo: number;
   metEst: number;
   reposicao: number;
   analise_reposicao: AnaliseReposicao;
@@ -491,15 +497,13 @@ async function calcularCamposMedicamentoSemSalvar(
   };
   const tp_metodo = calcularTPMetodo(dadosCalculados, usar49Semanas);
   
-  const metodoString = calcularMetodo({
-    contagens,
+  const metodo = calcularMetodo({
     medianas,
     maximo,
     tp_metodo
   });
 
-  const metodoNumero = extrairNumeroMetodo(metodoString);
-  const metEst = calcularMetEst(String(tp_metodo), metodoNumero);
+  const metEst = calcularMetEst(String(tp_metodo), metodo);
   const estoque = await buscarEstoqueMedicamento(medicamento.nome);
   const reposicao = calcularReposicao(metEst, estoque);
   
@@ -516,7 +520,7 @@ async function calcularCamposMedicamentoSemSalvar(
     maximo,
     medianas,
     tp_metodo,
-    metodo: metodoString,
+    metodo,
     metEst,
     reposicao,
     analise_reposicao,
@@ -590,21 +594,6 @@ function compararCamposComMapeamento(
 }
 
 function normalizarValorParaComparacao(valor: any, campo: string): any {
-  // Converte string de método para número
-  if (campo === 'metodo' && typeof valor === 'string') {
-    if (valor === 'MÉTODO A') return 1;
-    if (valor === 'MÉTODO B') return 2;
-    if (valor === 'MÉTODO C') return 3;
-    if (valor === 'MÉTODO D') return 4;
-  }
-  
-  // Converte número para string de método (gabarito)
-  if (campo === 'Metodo' && typeof valor === 'number') {
-    if (valor === 1) return 'MÉTODO A';
-    if (valor === 2) return 'MÉTODO B';
-    if (valor === 3) return 'MÉTODO C';
-    if (valor === 4) return 'MÉTODO D';
-  }
   
   // Trata valores nulos
   if (valor === null || valor === undefined) {
