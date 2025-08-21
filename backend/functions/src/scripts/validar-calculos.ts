@@ -9,6 +9,7 @@ import {
   AnaliseReposicao
 } from './calculos/interfaces';
 import { db } from '../config/firebase';
+import { totalmem } from 'os';
 
 // Interfaces para cálculo de estoque
 interface ItemMovimentacao {
@@ -408,31 +409,33 @@ function calcularMetodo(dadosMedicamento: {
   medianas: Medianas;
   maximo: number;
   tp_metodo: string;
+  totalGeral: number;
 }): number {
 
   if (dadosMedicamento.tp_metodo === "3.INATIVOS") {
     return 0;
   }
   if (dadosMedicamento.tp_metodo === "5.ENTRANTES") {
-    return dadosMedicamento.maximo;;
+    return dadosMedicamento.maximo;
   }
   if (dadosMedicamento.tp_metodo === "4.RECENTES" || dadosMedicamento.tp_metodo === "1.ORDINÁRIOS") {
     const todasAsMedianas = Object.values(dadosMedicamento.medianas);
     return Math.max(...todasAsMedianas);
   }
   if (dadosMedicamento.tp_metodo === "2.INTERMITENTES") {
-    return dadosMedicamento.maximo / 4 ? Math.floor(dadosMedicamento.maximo / 4) : 1;
+    return dadosMedicamento.totalGeral / 52 ? Math.floor(dadosMedicamento.totalGeral / 52) : 1;
   }
-
 }
 
-function calcularMetEst(tpMetodo: string, metodo: number, total_geral: number): number {
+function calcularMetEst(tpMetodo: string, metodo: number, unidade: String, maximo: number): number {
   switch (tpMetodo) {
-    case "ORDINÁRIOS": return metodo * 16;
-    case "INTERMITENTES": return total_geral / 52 ? Math.floor(total_geral / 52) : 1;
-    case "INATIVOS": return 0;
-    case "ENTRANTES": return metodo * 16;
-    case "RECENTES": return metodo * 3;
+    case "1.ORDINÁRIOS": return metodo * 16;
+    case "2.INTERMITENTES":
+      if (unidade === 'CAF') return maximo * 3;
+      else return maximo;
+    case "3.INATIVOS": return 0;
+    case "5.ENTRANTES": return metodo * 16;
+    case "4.RECENTES": return metodo * 3;
     default: return metodo * 16;
   }
 }
@@ -441,7 +444,7 @@ function calcularReposicao(metEst: number, estoque: number): number {
   if (typeof metEst !== 'number' || typeof estoque !== 'number') {
     throw new Error('MetEst e estoque devem ser números válidos');
   }
-  return metEst - estoque;
+  return (metEst - estoque);
 }
 
 function converterMovimentacoesParaHistorico(movimentacoes: { [key: string]: number }): SemanaHistorico[] {
@@ -497,10 +500,11 @@ async function calcularCamposMedicamentoSemSalvar(
   const metodo = calcularMetodo({
     medianas,
     maximo,
-    tp_metodo
+    tp_metodo,
+    totalGeral
   });
 
-  const metEst = calcularMetEst(String(tp_metodo), metodo, totalGeral);
+  const metEst = calcularMetEst(tp_metodo, metodo, unidadeId, maximo);
   const estoque = await buscarEstoqueMedicamento(medicamento.nome);
   const reposicao = calcularReposicao(metEst, estoque);
   

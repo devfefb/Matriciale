@@ -1,55 +1,32 @@
 {
-  "data_validacao": "2025-08-21T19:57:05.318Z",
+  "data_validacao": "2025-08-21T20:51:53.515Z",
   "resumo": {
     "total_processados": 1052,
-    "perfeitos": 210,
-    "taxa_acerto_geral": 19.96197718631179,
-    "acerto_medio": 88.6017316017309
+    "perfeitos": 230,
+    "taxa_acerto_geral": 21.863117870722434,
+    "acerto_medio": 90.52380952380895
   },
   "campos_mais_problematicos": [
     {
       "campo": "reposicao",
-      "taxa_acerto": 32.666666666666664,
-      "erros": 707,
+      "taxa_acerto": 38.285714285714285,
+      "erros": 648,
       "total": 1050,
       "valores_mais_frequentes": [
         {
-          "valor": 32,
-          "quantidade": 25,
-          "percentual": 3.536067892503536
+          "valor": 180,
+          "quantidade": 9,
+          "percentual": 1.3888888888888888
         },
         {
-          "valor": 16,
-          "quantidade": 25,
-          "percentual": 3.536067892503536
+          "valor": 2,
+          "quantidade": 8,
+          "percentual": 1.2345679012345678
         },
         {
-          "valor": 0,
-          "quantidade": 20,
-          "percentual": 2.828854314002829
-        }
-      ]
-    },
-    {
-      "campo": "metEst",
-      "taxa_acerto": 42.285714285714285,
-      "erros": 606,
-      "total": 1050,
-      "valores_mais_frequentes": [
-        {
-          "valor": 0,
-          "quantidade": 55,
-          "percentual": 9.075907590759076
-        },
-        {
-          "valor": 16,
-          "quantidade": 53,
-          "percentual": 8.745874587458747
-        },
-        {
-          "valor": 32,
-          "quantidade": 50,
-          "percentual": 8.25082508250825
+          "valor": 15,
+          "quantidade": 6,
+          "percentual": 0.9259259259259258
         }
       ]
     },
@@ -77,25 +54,25 @@
       ]
     },
     {
-      "campo": "metodo",
-      "taxa_acerto": 76.38095238095238,
-      "erros": 248,
+      "campo": "metEst",
+      "taxa_acerto": 73.04761904761905,
+      "erros": 283,
       "total": 1050,
       "valores_mais_frequentes": [
         {
-          "valor": 2,
-          "quantidade": 32,
-          "percentual": 12.903225806451612
+          "valor": 1920,
+          "quantidade": 12,
+          "percentual": 4.240282685512367
         },
         {
-          "valor": 15,
-          "quantidade": 21,
-          "percentual": 8.46774193548387
+          "valor": 1440,
+          "quantidade": 11,
+          "percentual": 3.8869257950530036
         },
         {
-          "valor": 1,
-          "quantidade": 18,
-          "percentual": 7.258064516129033
+          "valor": 32,
+          "quantidade": 10,
+          "percentual": 3.53356890459364
         }
       ]
     },
@@ -142,6 +119,29 @@
           "valor": 60,
           "quantidade": 14,
           "percentual": 6.796116504854369
+        }
+      ]
+    },
+    {
+      "campo": "metodo",
+      "taxa_acerto": 82.28571428571428,
+      "erros": 186,
+      "total": 1050,
+      "valores_mais_frequentes": [
+        {
+          "valor": 0,
+          "quantidade": 63,
+          "percentual": 33.87096774193548
+        },
+        {
+          "valor": 1,
+          "quantidade": 17,
+          "percentual": 9.13978494623656
+        },
+        {
+          "valor": 9,
+          "quantidade": 9,
+          "percentual": 4.838709677419355
         }
       ]
     },
@@ -241,7 +241,7 @@
   "unidades_mais_problematicas": [
     {
       "unidade": "ESF3",
-      "acerto_medio": 81.19202226345097,
+      "acerto_medio": 83.23283858998148,
       "total_medicamentos": 196,
       "campos_com_erro": [
         "contagens.Cont52",
@@ -253,7 +253,7 @@
     },
     {
       "unidade": "Olavo",
-      "acerto_medio": 87.99903799903757,
+      "acerto_medio": 89.83886483886455,
       "total_medicamentos": 378,
       "campos_com_erro": [
         "metEst",
@@ -265,11 +265,10 @@
     },
     {
       "unidade": "CAF",
-      "acerto_medio": 92.13139801375084,
+      "acerto_medio": 94.06990068754747,
       "total_medicamentos": 476,
       "campos_com_erro": [
         "metodo",
-        "metEst",
         "reposicao",
         "contagens.Cont04",
         "contagens.Cont08",
@@ -283,6 +282,7 @@
         "medianas.Md16",
         "medianas.Md26",
         "medianas.Md52",
+        "metEst",
         "contagens.ContAno",
         "contagens.ContTt",
         "medianas.MdAno",
