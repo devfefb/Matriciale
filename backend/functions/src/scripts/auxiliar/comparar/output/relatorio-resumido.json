@@ -1,147 +1,55 @@
 {
-  "data_validacao": "2025-08-19T20:05:10.964Z",
+  "data_validacao": "2025-08-21T19:57:05.318Z",
   "resumo": {
     "total_processados": 1052,
-    "perfeitos": 72,
-    "taxa_acerto_geral": 6.844106463878327,
-    "acerto_medio": 76.0000000000001
+    "perfeitos": 210,
+    "taxa_acerto_geral": 19.96197718631179,
+    "acerto_medio": 88.6017316017309
   },
   "campos_mais_problematicos": [
     {
       "campo": "reposicao",
-      "taxa_acerto": 17.71428571428571,
-      "erros": 864,
+      "taxa_acerto": 32.666666666666664,
+      "erros": 707,
       "total": 1050,
       "valores_mais_frequentes": [
         {
-          "valor": 112,
-          "quantidade": 71,
-          "percentual": 8.217592592592593
+          "valor": 32,
+          "quantidade": 25,
+          "percentual": 3.536067892503536
         },
         {
           "valor": 16,
-          "quantidade": 43,
-          "percentual": 4.976851851851852
+          "quantidade": 25,
+          "percentual": 3.536067892503536
         },
         {
-          "valor": 32,
-          "quantidade": 37,
-          "percentual": 4.282407407407407
+          "valor": 0,
+          "quantidade": 20,
+          "percentual": 2.828854314002829
         }
       ]
     },
     {
       "campo": "metEst",
-      "taxa_acerto": 24.666666666666668,
-      "erros": 791,
+      "taxa_acerto": 42.285714285714285,
+      "erros": 606,
       "total": 1050,
       "valores_mais_frequentes": [
         {
-          "valor": 112,
-          "quantidade": 80,
-          "percentual": 10.11378002528445
+          "valor": 0,
+          "quantidade": 55,
+          "percentual": 9.075907590759076
         },
         {
           "valor": 16,
-          "quantidade": 74,
-          "percentual": 9.355246523388116
+          "quantidade": 53,
+          "percentual": 8.745874587458747
         },
         {
           "valor": 32,
-          "quantidade": 65,
-          "percentual": 8.217446270543615
-        }
-      ]
-    },
-    {
-      "campo": "metodo",
-      "taxa_acerto": 54.85714285714286,
-      "erros": 474,
-      "total": 1050,
-      "valores_mais_frequentes": [
-        {
-          "valor": 7,
-          "quantidade": 77,
-          "percentual": 16.244725738396625
-        },
-        {
-          "valor": 2,
-          "quantidade": 47,
-          "percentual": 9.915611814345992
-        },
-        {
-          "valor": 1,
-          "quantidade": 39,
-          "percentual": 8.227848101265822
-        }
-      ]
-    },
-    {
-      "campo": "medianas.Md16",
-      "taxa_acerto": 55.9047619047619,
-      "erros": 463,
-      "total": 1050,
-      "valores_mais_frequentes": [
-        {
-          "valor": 0,
-          "quantidade": 293,
-          "percentual": 63.282937365010795
-        },
-        {
-          "valor": 1,
-          "quantidade": 19,
-          "percentual": 4.103671706263499
-        },
-        {
-          "valor": 5,
-          "quantidade": 10,
-          "percentual": 2.159827213822894
-        }
-      ]
-    },
-    {
-      "campo": "medianas.Md12",
-      "taxa_acerto": 58.57142857142858,
-      "erros": 435,
-      "total": 1050,
-      "valores_mais_frequentes": [
-        {
-          "valor": 0,
-          "quantidade": 264,
-          "percentual": 60.689655172413794
-        },
-        {
-          "valor": 1,
-          "quantidade": 26,
-          "percentual": 5.977011494252873
-        },
-        {
-          "valor": 5,
-          "quantidade": 10,
-          "percentual": 2.2988505747126435
-        }
-      ]
-    },
-    {
-      "campo": "medianas.Md52",
-      "taxa_acerto": 58.666666666666664,
-      "erros": 434,
-      "total": 1050,
-      "valores_mais_frequentes": [
-        {
-          "valor": 1,
-          "quantidade": 53,
-          "percentual": 12.211981566820276
-        },
-        {
-          "valor": 2,
           "quantidade": 50,
-          "percentual": 11.52073732718894
-        },
-        {
-          "valor": 30,
-          "quantidade": 40,
-          "percentual": 9.216589861751153
+          "percentual": 8.25082508250825
         }
       ]
     },
@@ -169,71 +77,163 @@
       ]
     },
     {
-      "campo": "medianas.Md26",
-      "taxa_acerto": 60.76190476190476,
-      "erros": 412,
+      "campo": "metodo",
+      "taxa_acerto": 76.38095238095238,
+      "erros": 248,
       "total": 1050,
       "valores_mais_frequentes": [
         {
-          "valor": 30,
-          "quantidade": 63,
-          "percentual": 15.291262135922329
+          "valor": 2,
+          "quantidade": 32,
+          "percentual": 12.903225806451612
+        },
+        {
+          "valor": 15,
+          "quantidade": 21,
+          "percentual": 8.46774193548387
         },
         {
           "valor": 1,
-          "quantidade": 55,
-          "percentual": 13.349514563106796
-        },
-        {
-          "valor": 2,
-          "quantidade": 41,
-          "percentual": 9.951456310679612
+          "quantidade": 18,
+          "percentual": 7.258064516129033
         }
       ]
     },
     {
-      "campo": "medianas.Md08",
-      "taxa_acerto": 63.523809523809526,
-      "erros": 383,
+      "campo": "contagens.Cont52",
+      "taxa_acerto": 80.38095238095238,
+      "erros": 206,
       "total": 1050,
       "valores_mais_frequentes": [
         {
-          "valor": 0,
-          "quantidade": 227,
-          "percentual": 59.268929503916446
+          "valor": 49,
+          "quantidade": 17,
+          "percentual": 8.25242718446602
         },
         {
           "valor": 1,
-          "quantidade": 22,
-          "percentual": 5.7441253263707575
+          "quantidade": 12,
+          "percentual": 5.825242718446602
         },
         {
-          "valor": 30,
+          "valor": 45,
+          "quantidade": 10,
+          "percentual": 4.854368932038835
+        }
+      ]
+    },
+    {
+      "campo": "medianas.Md52",
+      "taxa_acerto": 80.38095238095238,
+      "erros": 206,
+      "total": 1050,
+      "valores_mais_frequentes": [
+        {
+          "valor": 2,
+          "quantidade": 28,
+          "percentual": 13.592233009708737
+        },
+        {
+          "valor": 1,
+          "quantidade": 18,
+          "percentual": 8.737864077669903
+        },
+        {
+          "valor": 60,
+          "quantidade": 14,
+          "percentual": 6.796116504854369
+        }
+      ]
+    },
+    {
+      "campo": "contagens.ContAno",
+      "taxa_acerto": 96.38095238095238,
+      "erros": 38,
+      "total": 1050,
+      "valores_mais_frequentes": [
+        {
+          "valor": 21,
+          "quantidade": 28,
+          "percentual": 73.68421052631578
+        },
+        {
+          "valor": 19,
+          "quantidade": 6,
+          "percentual": 15.789473684210526
+        },
+        {
+          "valor": 20,
+          "quantidade": 2,
+          "percentual": 5.263157894736842
+        }
+      ]
+    },
+    {
+      "campo": "contagens.ContTt",
+      "taxa_acerto": 96.38095238095238,
+      "erros": 38,
+      "total": 1050,
+      "valores_mais_frequentes": [
+        {
+          "valor": 89,
           "quantidade": 11,
-          "percentual": 2.8720626631853787
+          "percentual": 28.947368421052634
+        },
+        {
+          "valor": 88,
+          "quantidade": 7,
+          "percentual": 18.421052631578945
+        },
+        {
+          "valor": 85,
+          "quantidade": 3,
+          "percentual": 7.894736842105263
         }
       ]
     },
     {
       "campo": "medianas.Md04",
-      "taxa_acerto": 71.61904761904762,
-      "erros": 298,
+      "taxa_acerto": 97.42857142857143,
+      "erros": 27,
       "total": 1050,
       "valores_mais_frequentes": [
         {
-          "valor": 0,
-          "quantidade": 136,
-          "percentual": 45.63758389261745
+          "valor": 48,
+          "quantidade": 1,
+          "percentual": 3.7037037037037033
         },
         {
-          "valor": 1,
-          "quantidade": 20,
-          "percentual": 6.7114093959731544
+          "valor": 70,
+          "quantidade": 1,
+          "percentual": 3.7037037037037033
         },
         {
-          "valor": 15,
-          "quantidade": 15,
-          "percentual": 5.033557046979865
+          "valor": 7,
+          "quantidade": 1,
+          "percentual": 3.7037037037037033
+        }
+      ]
+    },
+    {
+      "campo": "medianas.Md16",
+      "taxa_acerto": 97.90476190476191,
+      "erros": 22,
+      "total": 1050,
+      "valores_mais_frequentes": [
+        {
+          "valor": 54,
+          "quantidade": 1,
+          "percentual": 4.545454545454546
+        },
+        {
+          "valor": 940,
+          "quantidade": 1,
+          "percentual": 4.545454545454546
+        },
+        {
+          "valor": 108,
+          "quantidade": 1,
+          "percentual": 4.545454545454546
         }
       ]
     }
@@ -241,67 +241,55 @@
   "unidades_mais_problematicas": [
     {
       "unidade": "ESF3",
-      "acerto_medio": 69.59647495361789,
+      "acerto_medio": 81.19202226345097,
       "total_medicamentos": 196,
       "campos_com_erro": [
         "contagens.Cont52",
         "medianas.Md52",
         "metEst",
         "reposicao",
-        "medianas.Md04",
-        "medianas.Md08",
-        "medianas.Md12",
-        "medianas.Md16",
-        "metodo",
-        "tp_metodo",
-        "medianas.Md26"
+        "metodo"
       ]
     },
     {
       "unidade": "Olavo",
-      "acerto_medio": 74.8436748436748,
+      "acerto_medio": 87.99903799903757,
       "total_medicamentos": 378,
       "campos_com_erro": [
-        "medianas.Md04",
-        "medianas.Md52",
-        "metodo",
         "metEst",
         "reposicao",
         "totalGeral",
-        "medianas.Md12",
-        "medianas.Md16",
-        "medianas.Md08",
-        "medianas.Md26",
+        "metodo",
         "tp_metodo"
       ]
     },
     {
       "unidade": "CAF",
-      "acerto_medio": 79.55500381970963,
+      "acerto_medio": 92.13139801375084,
       "total_medicamentos": 476,
       "campos_com_erro": [
-        "medianas.Md26",
-        "medianas.Md52",
-        "tp_metodo",
-        "medianas.Md08",
-        "medianas.Md12",
-        "medianas.Md16",
         "metodo",
         "metEst",
         "reposicao",
-        "medianas.Md04",
         "contagens.Cont04",
         "contagens.Cont08",
         "contagens.Cont12",
         "contagens.Cont16",
         "contagens.Cont26",
         "contagens.Cont52",
+        "medianas.Md04",
+        "medianas.Md08",
+        "medianas.Md12",
+        "medianas.Md16",
+        "medianas.Md26",
+        "medianas.Md52",
         "contagens.ContAno",
         "contagens.ContTt",
         "medianas.MdAno",
         "totalGeral",
         "medianas.MdTt",
-        "maximo"
+        "maximo",
+        "tp_metodo"
       ]
     }
   ],
@@ -326,50 +314,6 @@
         "metodo",
         "metEst",
         "reposicao"
-      ]
-    },
-    {
-      "medicamento": "ALBENDAZOL 40 MG/ML FRASCO 10 ML",
-      "unidade": "CAF",
-      "acerto": 31.818181818181817,
-      "campos_incorretos": [
-        "contagens.Cont04",
-        "contagens.ContAno",
-        "contagens.ContTt",
-        "medianas.Md04",
-        "medianas.Md08",
-        "medianas.Md12",
-        "medianas.Md16",
-        "medianas.Md26",
-        "medianas.Md52",
-        "medianas.MdAno",
-        "medianas.MdTt",
-        "metodo",
-        "metEst",
-        "reposicao",
-        "totalGeral"
-      ]
-    },
-    {
-      "medicamento": "CARBONATO DE CALCIO 1.250MG",
-      "unidade": "CAF",
-      "acerto": 31.818181818181817,
-      "campos_incorretos": [
-        "contagens.Cont04",
-        "contagens.Cont12",
-        "contagens.Cont52",
-        "contagens.ContAno",
-        "contagens.ContTt",
-        "medianas.Md04",
-        "medianas.Md08",
-        "medianas.Md12",
-        "medianas.Md16",
-        "medianas.Md26",
-        "medianas.MdAno",
-        "metodo",
-        "metEst",
-        "reposicao",
-        "totalGeral"
       ]
     },
     {
@@ -490,6 +434,25 @@
       ]
     },
     {
+      "medicamento": "ALBENDAZOL 40 MG/ML FRASCO 10 ML",
+      "unidade": "CAF",
+      "acerto": 45.45454545454545,
+      "campos_incorretos": [
+        "contagens.Cont04",
+        "contagens.ContAno",
+        "contagens.ContTt",
+        "medianas.Md04",
+        "medianas.Md08",
+        "medianas.Md26",
+        "medianas.MdAno",
+        "medianas.MdTt",
+        "metodo",
+        "metEst",
+        "reposicao",
+        "totalGeral"
+      ]
+    },
+    {
       "medicamento": "ACIDO FOLICO 5MG",
       "unidade": "CAF",
       "acerto": 50,
@@ -498,6 +461,24 @@
         "contagens.ContTt",
         "medianas.Md04",
         "medianas.Md08",
+        "medianas.Md16",
+        "medianas.Md26",
+        "medianas.MdAno",
+        "metodo",
+        "metEst",
+        "reposicao",
+        "totalGeral"
+      ]
+    },
+    {
+      "medicamento": "ANLODIPINO, BESILATO 5MG",
+      "unidade": "CAF",
+      "acerto": 50,
+      "campos_incorretos": [
+        "contagens.ContAno",
+        "contagens.ContTt",
+        "medianas.Md08",
+        "medianas.Md12",
         "medianas.Md16",
         "medianas.Md26",
         "medianas.MdAno",

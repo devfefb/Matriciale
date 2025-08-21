@@ -122,6 +122,7 @@ interface AnalisePadroes {
   }[];
 }
 
+
 // Cache global para estoque consolidado
 let estoqueConsolidadoCache: Map<string, EstoqueCalculado> | null = null;
 
@@ -325,25 +326,21 @@ function calcularMediana(numeros: number[]): number {
  * Mantém a opção de alternar entre 49 e 52 semanas.
  */
 function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[], usar49Semanas: boolean = false): Medianas {
-    // --- DATASET 1: Para medianas de CONSISTÊNCIA (inclui zeros) ---
-    // Usado para Md04, Md08, Md12, Md16.
+    
     const historicoValoresComZeros = historicoSemanas.map(s => s.value);
 
-    // --- DATASET 2: Para medianas de MAGNITUDE (FILTRA os zeros) ---
-    // Usado para Md26, Md52, MdAno, MdTt.
     const historicoValoresSemZeros = historicoValoresComZeros.filter(v => v > 0);
 
-    // --- Cálculos de CONSISTÊNCIA (usam o dataset COM ZEROS) ---
-    const md04 = calcularMediana(historicoValoresComZeros.slice(-4));
-    const md08 = calcularMediana(historicoValoresComZeros.slice(-8));
-    const md12 = calcularMediana(historicoValoresComZeros.slice(-12));
-    const md16 = calcularMediana(historicoValoresComZeros.slice(-16));
+    const md04 = calcularMediana(historicoValoresComZeros.slice(-4).filter(v => v > 0)); // Inclui zeros, mas ignora nulos
+    const md08 = calcularMediana(historicoValoresComZeros.slice(-8).filter(v => v > 0));
+    const md12 = calcularMediana(historicoValoresComZeros.slice(-12).filter(v => v > 0));
+    const md16 = calcularMediana(historicoValoresComZeros.slice(-16).filter(v => v > 0));
 
     // --- Cálculos de MAGNITUDE (usam o dataset SEM ZEROS) ---
     const semanasPrincipais = usar49Semanas ? 49 : 52;
     // O nome da propriedade no retorno continua Md52, mesmo que o cálculo possa usar 49 semanas.
-    const md52 = calcularMediana(historicoValoresSemZeros.slice(-semanasPrincipais));
-    const md26 = calcularMediana(historicoValoresSemZeros.slice(-26));
+    const md52 = calcularMediana(historicoValoresComZeros.slice(-semanasPrincipais).filter(v => v > 0));
+    const md26 = calcularMediana(historicoValoresComZeros.slice(-26).filter(v => v > 0));
     const mdTotal = calcularMediana(historicoValoresSemZeros);
 
     let mdAno = 0;
@@ -379,13 +376,13 @@ function calcularTPMetodo(dadosCalculados: DadosCalculados, usar49Semanas: boole
     }
   }
 
+  if (contagens.Cont16 === 0) {
+    return "3.INATIVOS";
+  }
+
   const periodo = Math.min(totalSemanasHistorico, usar49Semanas ? 49 : 52);
   if (periodo > 0 && (contagens.Cont52 / periodo) < 0.5) {
     return "2.INTERMITENTES";
-  }
-
-  if (contagens.Cont16 === 0) {
-    return "3.INATIVOS";
   }
 
   if (contagens.Cont04 > 0 && (contagens.Cont04 / 4) >= 0.5 && contagens.ContTt === contagens.Cont04) {
@@ -429,11 +426,11 @@ function calcularMetodo(dadosMedicamento: {
 
 }
 
-function calcularMetEst(tpMetodo: string, metodo: number): number {
+function calcularMetEst(tpMetodo: string, metodo: number, total_geral: number): number {
   switch (tpMetodo) {
     case "ORDINÁRIOS": return metodo * 16;
-    case "INTERMITENTES": return metodo * 3;
-    case "INATIVOS": return metodo * 16;
+    case "INTERMITENTES": return total_geral / 52 ? Math.floor(total_geral / 52) : 1;
+    case "INATIVOS": return 0;
     case "ENTRANTES": return metodo * 16;
     case "RECENTES": return metodo * 3;
     default: return metodo * 16;
@@ -503,7 +500,7 @@ async function calcularCamposMedicamentoSemSalvar(
     tp_metodo
   });
 
-  const metEst = calcularMetEst(String(tp_metodo), metodo);
+  const metEst = calcularMetEst(String(tp_metodo), metodo, totalGeral);
   const estoque = await buscarEstoqueMedicamento(medicamento.nome);
   const reposicao = calcularReposicao(metEst, estoque);
   
@@ -594,7 +591,6 @@ function compararCamposComMapeamento(
 }
 
 function normalizarValorParaComparacao(valor: any, campo: string): any {
-  
   // Trata valores nulos
   if (valor === null || valor === undefined) {
     return 0;
@@ -1091,6 +1087,9 @@ export async function validarCalculosComGabarito(): Promise<void> {
         campos_incorretos: med.campos_incorretos
       }))
     };
+
+    
+
     
     const caminhoRelatorioResumido = path.join(__dirname, './auxiliar/comparar/output/relatorio-resumido.json');
     fs.writeFileSync(caminhoRelatorioResumido, JSON.stringify(relatorioResumido, null, 2));
