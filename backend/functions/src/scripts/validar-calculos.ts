@@ -9,7 +9,6 @@ import {
   AnaliseReposicao
 } from './calculos/interfaces';
 import { db } from '../config/firebase';
-import { totalmem } from 'os';
 
 // Interfaces para cálculo de estoque
 interface ItemMovimentacao {
@@ -123,7 +122,6 @@ interface AnalisePadroes {
   }[];
 }
 
-
 // Cache global para estoque consolidado
 let estoqueConsolidadoCache: Map<string, EstoqueCalculado> | null = null;
 
@@ -148,6 +146,8 @@ function calcularEstoqueConsolidado(
   
   // Processa CAF (estoque próprio)
   for (const item of dadosCAF.itens) {
+    const estoqueESF3 = dadosESF3.itens.find(i => i.descricao_item === item.descricao_item);
+    const estoqueOlavo = dadosOlavo.itens.find(i => i.descricao_item === item.descricao_item);
     const estoqueItem: EstoqueCalculado = {
       descricao_item: item.descricao_item,
       estoque_proprio: item.qtd_periodo_final,
@@ -170,7 +170,7 @@ function calcularEstoqueConsolidado(
         estoque_proprio: 0,
         estoque_geral: item.qtd_periodo_final,
         unidades_contribuindo: ['ESF3']
-      };
+      };        
       estoqueConsolidado.set(item.descricao_item, estoqueItem);
     }
   }
@@ -230,7 +230,7 @@ async function buscarEstoqueMedicamento(nomeMedicamento: string): Promise<number
 }
 
 // --- FUNÇÕES DE CÁLCULO (copiadas do script original) ---
-function calcularContagensParaHistorico(historicoSemanas: SemanaHistorico[], usar49Semanas: boolean = false): Contagens {
+function calcularContagensParaHistorico(historicoSemanas: SemanaHistorico[]): Contagens {
   const contarUltimas = (n: number): number => {
     const ultimasNSemanas = historicoSemanas.slice(-n);
     return ultimasNSemanas.filter(s => s.value > 0).length;
@@ -242,8 +242,7 @@ function calcularContagensParaHistorico(historicoSemanas: SemanaHistorico[], usa
   const cont16 = contarUltimas(16);
   const cont26 = contarUltimas(26);
   
-  const semanasPrincipais = usar49Semanas ? 49 : 52;
-  const cont52 = contarUltimas(semanasPrincipais);
+  const cont52 = contarUltimas(52);
 
   const contTotal = historicoSemanas.filter(s => s.value > 0).length;
 
@@ -326,7 +325,7 @@ function calcularMediana(numeros: number[]): number {
  * Calcula todas as medianas com a lógica de negócio dupla e definitiva.
  * Mantém a opção de alternar entre 49 e 52 semanas.
  */
-function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[], usar49Semanas: boolean = false): Medianas {
+function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[]): Medianas {
     
     const historicoValoresComZeros = historicoSemanas.map(s => s.value);
 
@@ -338,9 +337,8 @@ function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[], usar
     const md16 = calcularMediana(historicoValoresComZeros.slice(-16).filter(v => v > 0));
 
     // --- Cálculos de MAGNITUDE (usam o dataset SEM ZEROS) ---
-    const semanasPrincipais = usar49Semanas ? 49 : 52;
     // O nome da propriedade no retorno continua Md52, mesmo que o cálculo possa usar 49 semanas.
-    const md52 = calcularMediana(historicoValoresComZeros.slice(-semanasPrincipais).filter(v => v > 0));
+    const md52 = calcularMediana(historicoValoresComZeros.slice(-52).filter(v => v > 0));
     const md26 = calcularMediana(historicoValoresComZeros.slice(-26).filter(v => v > 0));
     const mdTotal = calcularMediana(historicoValoresSemZeros);
 
@@ -367,7 +365,7 @@ function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[], usar
     };
 }
 
-function calcularTPMetodo(dadosCalculados: DadosCalculados, usar49Semanas: boolean = false): string {
+function calcularTPMetodo(dadosCalculados: DadosCalculados): string {
   const { contagens, semanas, totalSemanasHistorico } = dadosCalculados;
 
   if (contagens.ContTt === 1) {
@@ -381,7 +379,7 @@ function calcularTPMetodo(dadosCalculados: DadosCalculados, usar49Semanas: boole
     return "3.INATIVOS";
   }
 
-  const periodo = Math.min(totalSemanasHistorico, usar49Semanas ? 49 : 52);
+  const periodo = Math.min(totalSemanasHistorico);
   if (periodo > 0 && (contagens.Cont52 / periodo) < 0.5) {
     return "2.INTERMITENTES";
   }
@@ -429,13 +427,18 @@ function calcularMetodo(dadosMedicamento: {
 
 function calcularMetEst(tpMetodo: string, metodo: number, unidade: String, maximo: number): number {
   switch (tpMetodo) {
-    case "1.ORDINÁRIOS": return metodo * 16;
+    case "1.ORDINÁRIOS":
+      if (unidade === 'ESF3') return metodo * 4;
+      else if (unidade === 'Olavo') return metodo * 3;
+      else return metodo * 16;
     case "2.INTERMITENTES":
       if (unidade === 'CAF') return maximo * 3;
       else return maximo;
     case "3.INATIVOS": return 0;
-    case "5.ENTRANTES": return metodo * 16;
-    case "4.RECENTES": return metodo * 3;
+    case "5.ENTRANTES": 
+      if ('ESF3' === unidade) return metodo * 4;
+      return metodo * 16;
+    case "4.RECENTES": return maximo * 3;
     default: return metodo * 16;
   }
 }
@@ -476,6 +479,8 @@ async function calcularCamposMedicamentoSemSalvar(
   reposicao: number;
   analise_reposicao: AnaliseReposicao;
   totalGeral: number;
+  estoque: number;
+  ultimaSemana: string;
 }> {
   const historicoSemanas = converterMovimentacoesParaHistorico(medicamento.movimentacoes_semanais);
   const totalGeral = historicoSemanas.reduce((acc, curr) => acc + curr.value, 0);
@@ -483,19 +488,17 @@ async function calcularCamposMedicamentoSemSalvar(
   if (historicoSemanas.length === 0) {
     throw new Error(`Medicamento sem movimentações: ${medicamento.nome}`);
   }
-
-  const usar49Semanas = unidadeId === 'ESF3';
   
-  const contagens = calcularContagensParaHistorico(historicoSemanas, usar49Semanas);
+  const contagens = calcularContagensParaHistorico(historicoSemanas);
   const maximo = calcularMaximaMedicamento(historicoSemanas);
-  const medianas = calcularMedianasParaHistorico(historicoSemanas, usar49Semanas);
+  const medianas = calcularMedianasParaHistorico(historicoSemanas);
   
   const dadosCalculados: DadosCalculados = {
     contagens,
     semanas: historicoSemanas,
     totalSemanasHistorico: historicoSemanas.length
   };
-  const tp_metodo = calcularTPMetodo(dadosCalculados, usar49Semanas);
+  const tp_metodo = calcularTPMetodo(dadosCalculados);
   
   const metodo = calcularMetodo({
     medianas,
@@ -516,6 +519,9 @@ async function calcularCamposMedicamentoSemSalvar(
     percentual_cobertura: estoque > 0 ? ((estoque / metEst) * 100).toFixed(2) : '0'
   };
 
+  // Captura a última semana utilizada nos cálculos
+  const ultimaSemana = historicoSemanas.length > 0 ? historicoSemanas[historicoSemanas.length - 1].week : 'N/A';
+
   return {
     contagens,
     maximo,
@@ -525,7 +531,9 @@ async function calcularCamposMedicamentoSemSalvar(
     metEst,
     reposicao,
     analise_reposicao,
-    totalGeral
+    totalGeral,
+    estoque,
+    ultimaSemana
   };
 }
 
@@ -618,7 +626,7 @@ function analisarEstatisticasPorCampo(resultados: ResultadoValidacao[]): Estatis
     'contagens.Cont26', 'contagens.Cont52', 'contagens.ContAno', 'contagens.ContTt',
     'maximo', 'medianas.Md04', 'medianas.Md08', 'medianas.Md12', 'medianas.Md16',
     'medianas.Md26', 'medianas.Md52', 'medianas.MdAno', 'medianas.MdTt',
-    'tp_metodo', 'metodo', 'metEst', 'reposicao', 'totalGeral'
+    'tp_metodo', 'metodo', 'metEst', 'reposicao', 'totalGeral', 'estoque'
   ];
   
   todosCampos.forEach(campo => {
@@ -861,6 +869,10 @@ function gerarRelatorioCamposSistematicos(analisePadroes: AnalisePadroes): void 
     } else if (campo.campo === 'reposicao') {
       console.log(`     - Verificar cálculo: metEst - estoque`);
       console.log(`     - Confirmar valores de estoque carregados`);
+    } else if (campo.campo === 'estoque') {
+      console.log(`     - Verificar carregamento dos dados de estoque consolidado`);
+      console.log(`     - Confirmar se os arquivos JSON de estoque estão atualizados`);
+      console.log(`     - Verificar se o medicamento existe nos dados de estoque das unidades`);
     }
   }
 }
@@ -894,6 +906,10 @@ export async function validarCalculosComGabarito(): Promise<void> {
     let totalProcessados = 0;
     let totalSucessos = 0;
     
+    // Estrutura para armazenar informações sobre semanas
+    const semanasPorUnidade = new Map<string, Set<string>>();
+    const ultimaSemanaGeral = new Set<string>();
+    
     // Mapeamento de campos entre formato calculado e gabarito
     const mapeamentoCampos = [
       { calculado: 'contagens.Cont04', gabarito: 'Cont04' },
@@ -917,7 +933,8 @@ export async function validarCalculosComGabarito(): Promise<void> {
       { calculado: 'metodo', gabarito: 'Metodo' },
       { calculado: 'metEst', gabarito: 'MetEst' },
       { calculado: 'reposicao', gabarito: 'Reposição' },
-      { calculado: 'totalGeral', gabarito: 'Total Geral' }
+      { calculado: 'totalGeral', gabarito: 'Total Geral' },
+      { calculado: 'estoque', gabarito: 'Estoque' }
     ];
     
     for (const municipioDoc of municipiosSnapshot.docs) {
@@ -970,7 +987,14 @@ export async function validarCalculosComGabarito(): Promise<void> {
               totalSucessos++;
             }
             
-            console.log(`✅ ${medicamento.nome} (${unidadeDoc.id}): ${acerto.toFixed(1)}% de acerto`);
+            console.log(`✅ ${medicamento.nome} (${unidadeDoc.id}): ${acerto.toFixed(1)}% de acerto - Última semana: ${camposCalculados.ultimaSemana}`);
+            
+            // Armazena a última semana para cada medicamento
+            if (!semanasPorUnidade.has(unidadeDoc.id)) {
+              semanasPorUnidade.set(unidadeDoc.id, new Set());
+            }
+            semanasPorUnidade.get(unidadeDoc.id)!.add(camposCalculados.ultimaSemana);
+            ultimaSemanaGeral.add(camposCalculados.ultimaSemana);
             
           } catch (error) {
             console.error(`❌ Erro ao processar medicamento ${medicamentoDoc.id}:`, error);
@@ -1045,6 +1069,32 @@ export async function validarCalculosComGabarito(): Promise<void> {
       console.log(`   ${faixa.faixa_acerto}: ${faixa.quantidade} medicamentos (${faixa.percentual.toFixed(1)}%)`);
     }
     
+    // Exibe informações sobre as semanas utilizadas nos cálculos
+    console.log('\n📅 INFORMAÇÕES SOBRE SEMANAS UTILIZADAS NOS CÁLCULOS:');
+    console.log('=' .repeat(80));
+    
+    // Exibe resumo das semanas por unidade
+    for (const [unidade, semanas] of semanasPorUnidade) {
+      if (semanas.size > 0) {
+        const semanasOrdenadas = Array.from(semanas).sort();
+        const semanaMaisRecente = semanasOrdenadas[semanasOrdenadas.length - 1];
+        console.log(`\n🏥 Unidade: ${unidade}`);
+        console.log(`   Semana mais recente: ${semanaMaisRecente}`);
+        console.log(`   Total de semanas únicas: ${semanas.size}`);
+        console.log(`   Faixa de semanas: ${semanasOrdenadas[0]} a ${semanaMaisRecente}`);
+      }
+    }
+    
+    // Exibe a semana mais recente geral
+    if (ultimaSemanaGeral.size > 0) {
+      const todasSemanasOrdenadas = Array.from(ultimaSemanaGeral).sort();
+      const semanaMaisRecenteGeral = todasSemanasOrdenadas[todasSemanasOrdenadas.length - 1];
+      console.log(`\n🌍 RESUMO GERAL:`);
+      console.log(`   Semana mais recente em todo o sistema: ${semanaMaisRecenteGeral}`);
+      console.log(`   Total de semanas únicas no sistema: ${ultimaSemanaGeral.size}`);
+      console.log(`   Faixa geral de semanas: ${todasSemanasOrdenadas[0]} a ${semanaMaisRecenteGeral}`);
+    }
+    
     // Salva relatório detalhado
     const relatorio = {
       data_validacao: new Date().toISOString(),
@@ -1053,6 +1103,20 @@ export async function validarCalculosComGabarito(): Promise<void> {
         perfeitos: totalSucessos,
         taxa_acerto_geral: taxaAcertoGeral,
         acerto_medio: acertoMedio
+      },
+      informacoes_semanas: {
+        semana_mais_recente_geral: ultimaSemanaGeral.size > 0 ? Array.from(ultimaSemanaGeral).sort().pop() : 'N/A',
+        total_semanas_unicas: ultimaSemanaGeral.size,
+        semanas_por_unidade: Object.fromEntries(
+          Array.from(semanasPorUnidade.entries()).map(([unidade, semanas]) => [
+            unidade,
+            {
+              semana_mais_recente: Array.from(semanas).sort().pop() || 'N/A',
+              total_semanas_unicas: semanas.size,
+              semanas: Array.from(semanas).sort()
+            }
+          ])
+        )
       },
       resultados_detalhados: resultados,
       analise_padroes: analisePadroes
@@ -1070,6 +1134,19 @@ export async function validarCalculosComGabarito(): Promise<void> {
         perfeitos: totalSucessos,
         taxa_acerto_geral: taxaAcertoGeral,
         acerto_medio: acertoMedio
+      },
+      informacoes_semanas: {
+        semana_mais_recente_geral: ultimaSemanaGeral.size > 0 ? Array.from(ultimaSemanaGeral).sort().pop() : 'N/A',
+        total_semanas_unicas: ultimaSemanaGeral.size,
+        semanas_por_unidade: Object.fromEntries(
+          Array.from(semanasPorUnidade.entries()).map(([unidade, semanas]) => [
+            unidade,
+            {
+              semana_mais_recente: Array.from(semanas).sort().pop() || 'N/A',
+              total_semanas_unicas: semanas.size
+            }
+          ])
+        )
       },
       campos_mais_problematicos: analisePadroes.campos_mais_problematicos.slice(0, 10).map(campo => ({
         campo: campo.campo,
