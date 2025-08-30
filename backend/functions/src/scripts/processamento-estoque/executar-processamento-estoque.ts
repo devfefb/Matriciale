@@ -1,5 +1,5 @@
 /// <reference types="node" />
-import { processarEstoqueCAF } from './processamento-estoque/processar-estoque';
+import { processarEstoqueCAF } from './processar-estoque';
 
 /**
  * Script principal para executar o processamento de estoque da CAF

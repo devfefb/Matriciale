@@ -1,5 +1,5 @@
-import { validarCalculosComGabarito } from './calculos/validar-calculos';
-import { gerarComparacaoDetalhada } from './auxiliar/comparar/gerar-comparacao-detalhada';
+import { validarCalculosComGabarito } from '../../calculos/validar-calculos';
+import { gerarComparacaoDetalhada } from './gerar-comparacao-detalhada';
 
 async function executarValidacaoCompleta(): Promise<void> {
   try {
