@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { validarCalculosComGabarito } from '../../validar-calculos';
+import { validarCalculosComGabarito } from '../../calculos/validar-calculos';
 
 interface ComparacaoDetalhada {
   medicamento: string;
@@ -59,7 +59,7 @@ async function gerarComparacaoDetalhada(): Promise<void> {
     ];
     
     // Carrega o gabarito para obter valores detalhados
-    const caminhoGabarito = path.join(__dirname, './output/campos-calculados.json');
+    const caminhoGabarito = path.join(__dirname, './output/gabarito-campos-calculados.json');
     const gabaritoData = fs.readFileSync(caminhoGabarito, 'utf8');
     const gabarito = JSON.parse(gabaritoData);
     

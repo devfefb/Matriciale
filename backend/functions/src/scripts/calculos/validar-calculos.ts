@@ -7,8 +7,8 @@ import {
   MedicamentoCalculado,
   DadosCalculados,
   AnaliseReposicao
-} from './calculos/interfaces';
-import { db } from '../config/firebase';
+} from '../interfaces/interfaces-campos-calculados';
+import { db } from '../../config/firebase';
 
 // Interfaces para cálculo de estoque
 interface ItemMovimentacao {
@@ -210,6 +210,11 @@ async function carregarEstoqueConsolidado(): Promise<Map<string, EstoqueCalculad
   const dadosOlavo = carregarDadosUnidade(caminhoOlavo);
   
   estoqueConsolidadoCache = calcularEstoqueConsolidado(dadosCAF, dadosESF3, dadosOlavo);
+  
+  console.log('\n\n\n\n\n✅ Estoque consolidado carregado e calculado.', estoqueConsolidadoCache, + '\n\n\n\n');
+  // salvar o estoque consolidado em um arquivo para inspeção manual
+  const caminhoEstoqueConsolidado = path.join(__dirname, './/auxiliar/comparar/output/auxi/estoqueConsolidado.json');
+  fs.writeFileSync(caminhoEstoqueConsolidado, JSON.stringify(Array.from(estoqueConsolidadoCache.entries()), null, 2), 'utf8');
   
   return estoqueConsolidadoCache;
 }
@@ -500,6 +505,7 @@ async function calcularCamposMedicamentoSemSalvar(
   };
   const tp_metodo = calcularTPMetodo(dadosCalculados);
   
+  // erro começa aqui, provavelmente
   const metodo = calcularMetodo({
     medianas,
     maximo,
@@ -784,7 +790,7 @@ function analisarDistribuicaoErros(resultados: ResultadoValidacao[]): {
 }
 
 function gerarRelatorioDetalhado(resultados: ResultadoValidacao[]): AnalisePadroes {
-  console.log('📊 Gerando análise detalhada dos padrões de erro...');
+  // console.log('📊 Gerando análise detalhada dos padrões de erro...');
   
   const camposProblematicos = analisarEstatisticasPorCampo(resultados);
   const unidadesProblematicas = analisarUnidadesProblematicas(resultados);
@@ -800,22 +806,22 @@ function gerarRelatorioDetalhado(resultados: ResultadoValidacao[]): AnalisePadro
 }
 
 function gerarRelatorioCamposSistematicos(analisePadroes: AnalisePadroes): void {
-  console.log('\n🔧 ANÁLISE DE CAMPOS COM PROBLEMAS SISTEMÁTICOS:');
-  console.log('=' .repeat(80));
+  // console.log('\n🔧 ANÁLISE DE CAMPOS COM PROBLEMAS SISTEMÁTICOS:');
+  // console.log('=' .repeat(80));
   
   const camposCriticos = analisePadroes.campos_mais_problematicos.filter(campo => campo.taxa_acerto < 50);
   
   if (camposCriticos.length === 0) {
-    console.log('✅ Nenhum campo com problemas sistemáticos identificado (todos acima de 50% de acerto)');
+    // console.log('✅ Nenhum campo com problemas sistemáticos identificado (todos acima de 50% de acerto)');
     return;
   }
   
-  console.log(`⚠️  ${camposCriticos.length} campos com problemas sistemáticos (taxa de acerto < 50%):`);
+  // console.log(`⚠️  ${camposCriticos.length} campos com problemas sistemáticos (taxa de acerto < 50%):`);
   
   for (const campo of camposCriticos) {
-    console.log(`\n🚨 CAMPO CRÍTICO: ${campo.campo}`);
-    console.log(`   Taxa de acerto: ${campo.taxa_acerto.toFixed(2)}%`);
-    console.log(`   Total de erros: ${campo.erros}/${campo.total_verificacoes}`);
+    // console.log(`\n🚨 CAMPO CRÍTICO: ${campo.campo}`);
+    // console.log(`   Taxa de acerto: ${campo.taxa_acerto.toFixed(2)}%`);
+    // console.log(`   Total de erros: ${campo.erros}/${campo.total_verificacoes}`);
     
     // Analisa padrões nos erros
     const errosNumericos = campo.erros_detalhados.filter(e => 
@@ -827,8 +833,8 @@ function gerarRelatorioCamposSistematicos(analisePadroes: AnalisePadroes): void 
       const diferencaMedia = diferencas.reduce((a, b) => a + b, 0) / diferencas.length;
       const diferencaAbsolutaMedia = diferencas.reduce((a, b) => a + Math.abs(b), 0) / diferencas.length;
       
-      console.log(`   Diferença média: ${diferencaMedia.toFixed(2)}`);
-      console.log(`   Diferença absoluta média: ${diferencaAbsolutaMedia.toFixed(2)}`);
+      // console.log(`   Diferença média: ${diferencaMedia.toFixed(2)}`);
+      // console.log(`   Diferença absoluta média: ${diferencaAbsolutaMedia.toFixed(2)}`);
       
       // Identifica se há padrão de sempre ser maior ou menor
       const positivos = diferencas.filter(d => d > 0).length;
@@ -836,43 +842,43 @@ function gerarRelatorioCamposSistematicos(analisePadroes: AnalisePadroes): void 
       const zeros = diferencas.filter(d => d === 0).length;
       
       if (positivos > negativos * 2) {
-        console.log(`   🎯 PADRÃO: Valores calculados tendem a ser MAIORES que o gabarito (${positivos} vs ${negativos})`);
+        // console.log(`   🎯 PADRÃO: Valores calculados tendem a ser MAIORES que o gabarito (${positivos} vs ${negativos})`);
       } else if (negativos > positivos * 2) {
-        console.log(`   🎯 PADRÃO: Valores calculados tendem a ser MENORES que o gabarito (${negativos} vs ${positivos})`);
+        // console.log(`   🎯 PADRÃO: Valores calculados tendem a ser MENORES que o gabarito (${negativos} vs ${positivos})`);
       } else {
-        console.log(`   🎯 PADRÃO: Valores variam sem tendência clara (${positivos} positivos, ${negativos} negativos, ${zeros} zeros)`);
+        // console.log(`   🎯 PADRÃO: Valores variam sem tendência clara (${positivos} positivos, ${negativos} negativos, ${zeros} zeros)`);
       }
     }
     
     // Mostra exemplos específicos
-    console.log(`   Exemplos de erros:`);
+    // console.log(`   Exemplos de erros:`);
     campo.erros_detalhados.slice(0, 5).forEach(erro => {
       const diferenca = erro.diferenca !== undefined ? ` (dif: ${erro.diferenca})` : '';
       const percentual = erro.percentual_erro !== undefined ? ` (${erro.percentual_erro.toFixed(1)}% erro)` : '';
-      console.log(`     - ${erro.medicamento} (${erro.unidade}): calc=${erro.valor_calculado}, gab=${erro.valor_gabarito}${diferenca}${percentual}`);
+      // console.log(`     - ${erro.medicamento} (${erro.unidade}): calc=${erro.valor_calculado}, gab=${erro.valor_gabarito}${diferenca}${percentual}`);
     });
     
     // Sugestões de correção baseadas no campo
-    console.log(`   💡 SUGESTÕES DE CORREÇÃO:`);
+    // console.log(`   💡 SUGESTÕES DE CORREÇÃO:`);
     if (campo.campo.startsWith('contagens.')) {
-      console.log(`     - Verificar lógica de contagem de semanas com valor > 0`);
-      console.log(`     - Confirmar se está usando 49 ou 52 semanas para ESF3`);
+      // console.log(`     - Verificar lógica de contagem de semanas com valor > 0`);
+      // console.log(`     - Confirmar se está usando 49 ou 52 semanas para ESF3`);
     } else if (campo.campo.startsWith('medianas.')) {
-      console.log(`     - Verificar cálculo de mediana e arredondamento`);
-      console.log(`     - Confirmar seleção correta de semanas para cálculo`);
+      // console.log(`     - Verificar cálculo de mediana e arredondamento`);
+      // console.log(`     - Confirmar seleção correta de semanas para cálculo`);
     } else if (campo.campo === 'metodo') {
-      console.log(`     - Verificar mapeamento de string para número do método`);
-      console.log(`     - Confirmar lógica de seleção do método`);
+      // console.log(`     - Verificar mapeamento de string para número do método`);
+      // console.log(`     - Confirmar lógica de seleção do método`);
     } else if (campo.campo === 'metEst') {
-      console.log(`     - Verificar cálculo: método * multiplicador por tipo`);
-      console.log(`     - Confirmar valores dos multiplicadores`);
+      // console.log(`     - Verificar cálculo: método * multiplicador por tipo`);
+      // console.log(`     - Confirmar valores dos multiplicadores`);
     } else if (campo.campo === 'reposicao') {
-      console.log(`     - Verificar cálculo: metEst - estoque`);
-      console.log(`     - Confirmar valores de estoque carregados`);
+      // console.log(`     - Verificar cálculo: metEst - estoque`);
+      // console.log(`     - Confirmar valores de estoque carregados`);
     } else if (campo.campo === 'estoque') {
-      console.log(`     - Verificar carregamento dos dados de estoque consolidado`);
-      console.log(`     - Confirmar se os arquivos JSON de estoque estão atualizados`);
-      console.log(`     - Verificar se o medicamento existe nos dados de estoque das unidades`);
+      // console.log(`     - Verificar carregamento dos dados de estoque consolidado`);
+      // console.log(`     - Confirmar se os arquivos JSON de estoque estão atualizados`);
+      // console.log(`     - Verificar se o medicamento existe nos dados de estoque das unidades`);
     }
   }
 }
@@ -881,10 +887,10 @@ function gerarRelatorioCamposSistematicos(analisePadroes: AnalisePadroes): void 
 
 export async function validarCalculosComGabarito(): Promise<void> {
   try {
-    console.log('🔍 Iniciando validação dos cálculos com gabarito...');
+    // console.log('🔍 Iniciando validação dos cálculos com gabarito...');
     
     // Carrega o gabarito
-    const caminhoGabarito = path.join(__dirname, './auxiliar/comparar/output/campos-calculados.json');
+    const caminhoGabarito = path.join(__dirname, './auxiliar/comparar/output/gabarito-campos-calculados.json');
     if (!fs.existsSync(caminhoGabarito)) {
       throw new Error(`Gabarito não encontrado: ${caminhoGabarito}`);
     }
@@ -894,7 +900,7 @@ export async function validarCalculosComGabarito(): Promise<void> {
     
     // Conta total de medicamentos no gabarito
     const totalGabarito = Object.values(gabarito.unidade).reduce((acc, unidade) => acc + unidade.length, 0);
-    console.log(`📊 Gabarito carregado com ${totalGabarito} medicamentos`);
+    // console.log(`📊 Gabarito carregado com ${totalGabarito} medicamentos`);
     
     // Pré-carrega estoque
     await carregarEstoqueConsolidado();
@@ -987,7 +993,7 @@ export async function validarCalculosComGabarito(): Promise<void> {
               totalSucessos++;
             }
             
-            console.log(`✅ ${medicamento.nome} (${unidadeDoc.id}): ${acerto.toFixed(1)}% de acerto - Última semana: ${camposCalculados.ultimaSemana}`);
+            // console.log(`✅ ${medicamento.nome} (${unidadeDoc.id}): ${acerto.toFixed(1)}% de acerto - Última semana: ${camposCalculados.ultimaSemana}`);
             
             // Armazena a última semana para cada medicamento
             if (!semanasPorUnidade.has(unidadeDoc.id)) {
@@ -1008,12 +1014,12 @@ export async function validarCalculosComGabarito(): Promise<void> {
     const acertoMedio = resultados.length > 0 ? 
       resultados.reduce((acc, r) => acc + r.acerto, 0) / resultados.length : 0;
     
-    console.log('\n🎉 Validação concluída!');
-    console.log('📊 Estatísticas finais:');
-    console.log(`   📦 Total processados: ${totalProcessados}`);
-    console.log(`   ✅ Perfeitos (100%): ${totalSucessos}`);
-    console.log(`   📈 Taxa de acerto geral: ${taxaAcertoGeral.toFixed(2)}%`);
-    console.log(`   📊 Acerto médio: ${acertoMedio.toFixed(2)}%`);
+    // console.log('\n🎉 Validação concluída!');
+    // console.log('📊 Estatísticas finais:');
+    // console.log(`   📦 Total processados: ${totalProcessados}`);
+    // console.log(`   ✅ Perfeitos (100%): ${totalSucessos}`);
+    // console.log(`   📈 Taxa de acerto geral: ${taxaAcertoGeral.toFixed(2)}%`);
+    // console.log(`   📊 Acerto médio: ${acertoMedio.toFixed(2)}%`);
     
     // Gera análise detalhada dos padrões
     const analisePadroes = gerarRelatorioDetalhado(resultados);
@@ -1022,66 +1028,66 @@ export async function validarCalculosComGabarito(): Promise<void> {
     gerarRelatorioCamposSistematicos(analisePadroes);
     
     // Exibe resumo dos campos mais problemáticos
-    console.log('\n🔍 ANÁLISE DETALHADA DOS CAMPOS MAIS PROBLEMÁTICOS:');
-    console.log('=' .repeat(80));
+    // console.log('\n🔍 ANÁLISE DETALHADA DOS CAMPOS MAIS PROBLEMÁTICOS:');
+    // console.log('=' .repeat(80));
     
     const top5CamposProblematicos = analisePadroes.campos_mais_problematicos.slice(0, 5);
     for (const campo of top5CamposProblematicos) {
-      console.log(`\n📊 Campo: ${campo.campo}`);
-      console.log(`   Taxa de acerto: ${campo.taxa_acerto.toFixed(2)}%`);
-      console.log(`   Erros: ${campo.erros}/${campo.total_verificacoes}`);
+      // console.log(`\n📊 Campo: ${campo.campo}`);
+      // console.log(`   Taxa de acerto: ${campo.taxa_acerto.toFixed(2)}%`);
+      // console.log(`   Erros: ${campo.erros}/${campo.total_verificacoes}`);
       
       if (campo.valores_mais_frequentes.length > 0) {
-        console.log(`   Valores mais frequentes nos erros:`);
+        // console.log(`   Valores mais frequentes nos erros:`);
         campo.valores_mais_frequentes.slice(0, 3).forEach(valor => {
-          console.log(`     - ${valor.valor}: ${valor.quantidade}x (${valor.percentual.toFixed(1)}%)`);
+          // console.log(`     - ${valor.valor}: ${valor.quantidade}x (${valor.percentual.toFixed(1)}%)`);
         });
       }
       
       // Mostra alguns exemplos de erros
       if (campo.erros_detalhados.length > 0) {
-        console.log(`   Exemplos de erros:`);
+        // console.log(`   Exemplos de erros:`);
         campo.erros_detalhados.slice(0, 3).forEach(erro => {
           const diferenca = erro.diferenca !== undefined ? ` (dif: ${erro.diferenca})` : '';
           const percentual = erro.percentual_erro !== undefined ? ` (${erro.percentual_erro.toFixed(1)}% erro)` : '';
-          console.log(`     - ${erro.medicamento} (${erro.unidade}): calc=${erro.valor_calculado}, gab=${erro.valor_gabarito}${diferenca}${percentual}`);
+          // console.log(`     - ${erro.medicamento} (${erro.unidade}): calc=${erro.valor_calculado}, gab=${erro.valor_gabarito}${diferenca}${percentual}`);
         });
       }
     }
     
     // Exibe unidades mais problemáticas
-    console.log('\n🏥 UNIDADES MAIS PROBLEMÁTICAS:');
-    console.log('=' .repeat(80));
+    // console.log('\n🏥 UNIDADES MAIS PROBLEMÁTICAS:');
+    // console.log('=' .repeat(80));
     
     const top3UnidadesProblematicas = analisePadroes.unidades_mais_problematicas.slice(0, 3);
     for (const unidade of top3UnidadesProblematicas) {
-      console.log(`\n🏥 Unidade: ${unidade.unidade}`);
-      console.log(`   Acerto médio: ${unidade.acerto_medio.toFixed(2)}%`);
-      console.log(`   Medicamentos: ${unidade.total_medicamentos}`);
-      console.log(`   Campos com erro: ${unidade.campos_com_erro.join(', ')}`);
+      // console.log(`\n🏥 Unidade: ${unidade.unidade}`);
+      // console.log(`   Acerto médio: ${unidade.acerto_medio.toFixed(2)}%`);
+      // console.log(`   Medicamentos: ${unidade.total_medicamentos}`);
+      // console.log(`   Campos com erro: ${unidade.campos_com_erro.join(', ')}`);
     }
     
     // Exibe distribuição de erros
-    console.log('\n📈 DISTRIBUIÇÃO DOS ERROS:');
-    console.log('=' .repeat(80));
+    // console.log('\n📈 DISTRIBUIÇÃO DOS ERROS:');
+    // console.log('=' .repeat(80));
     
     for (const faixa of analisePadroes.distribuicao_erros) {
-      console.log(`   ${faixa.faixa_acerto}: ${faixa.quantidade} medicamentos (${faixa.percentual.toFixed(1)}%)`);
+      // console.log(`   ${faixa.faixa_acerto}: ${faixa.quantidade} medicamentos (${faixa.percentual.toFixed(1)}%)`);
     }
     
     // Exibe informações sobre as semanas utilizadas nos cálculos
-    console.log('\n📅 INFORMAÇÕES SOBRE SEMANAS UTILIZADAS NOS CÁLCULOS:');
-    console.log('=' .repeat(80));
+    // console.log('\n📅 INFORMAÇÕES SOBRE SEMANAS UTILIZADAS NOS CÁLCULOS:');
+    // console.log('=' .repeat(80));
     
     // Exibe resumo das semanas por unidade
     for (const [unidade, semanas] of semanasPorUnidade) {
       if (semanas.size > 0) {
         const semanasOrdenadas = Array.from(semanas).sort();
         const semanaMaisRecente = semanasOrdenadas[semanasOrdenadas.length - 1];
-        console.log(`\n🏥 Unidade: ${unidade}`);
-        console.log(`   Semana mais recente: ${semanaMaisRecente}`);
-        console.log(`   Total de semanas únicas: ${semanas.size}`);
-        console.log(`   Faixa de semanas: ${semanasOrdenadas[0]} a ${semanaMaisRecente}`);
+        // console.log(`\n🏥 Unidade: ${unidade}`);
+        // console.log(`   Semana mais recente: ${semanaMaisRecente}`);
+        // console.log(`   Total de semanas únicas: ${semanas.size}`);
+        // console.log(`   Faixa de semanas: ${semanasOrdenadas[0]} a ${semanaMaisRecente}`);
       }
     }
     
@@ -1089,10 +1095,10 @@ export async function validarCalculosComGabarito(): Promise<void> {
     if (ultimaSemanaGeral.size > 0) {
       const todasSemanasOrdenadas = Array.from(ultimaSemanaGeral).sort();
       const semanaMaisRecenteGeral = todasSemanasOrdenadas[todasSemanasOrdenadas.length - 1];
-      console.log(`\n🌍 RESUMO GERAL:`);
-      console.log(`   Semana mais recente em todo o sistema: ${semanaMaisRecenteGeral}`);
-      console.log(`   Total de semanas únicas no sistema: ${ultimaSemanaGeral.size}`);
-      console.log(`   Faixa geral de semanas: ${todasSemanasOrdenadas[0]} a ${semanaMaisRecenteGeral}`);
+      // console.log(`\n🌍 RESUMO GERAL:`);
+      // console.log(`   Semana mais recente em todo o sistema: ${semanaMaisRecenteGeral}`);
+      // console.log(`   Total de semanas únicas no sistema: ${ultimaSemanaGeral.size}`);
+      // console.log(`   Faixa geral de semanas: ${todasSemanasOrdenadas[0]} a ${semanaMaisRecenteGeral}`);
     }
     
     // Salva relatório detalhado
@@ -1124,7 +1130,7 @@ export async function validarCalculosComGabarito(): Promise<void> {
     
     const caminhoRelatorio = path.join(__dirname, './auxiliar/comparar/output/relatorio-validacao.json');
     fs.writeFileSync(caminhoRelatorio, JSON.stringify(relatorio, null, 2));
-    console.log(`\n📝 Relatório detalhado salvo em: ${caminhoRelatorio}`);
+    // console.log(`\n📝 Relatório detalhado salvo em: ${caminhoRelatorio}`);
     
     // Salva relatório resumido em formato mais legível
     const relatorioResumido = {
@@ -1174,7 +1180,7 @@ export async function validarCalculosComGabarito(): Promise<void> {
     
     const caminhoRelatorioResumido = path.join(__dirname, './auxiliar/comparar/output/relatorio-resumido.json');
     fs.writeFileSync(caminhoRelatorioResumido, JSON.stringify(relatorioResumido, null, 2));
-    console.log(`📝 Relatório resumido salvo em: ${caminhoRelatorioResumido}`);
+    // console.log(`📝 Relatório resumido salvo em: ${caminhoRelatorioResumido}`);
     
   } catch (error) {
     console.error('💥 Erro durante a validação:', error);
@@ -1186,7 +1192,7 @@ export async function validarCalculosComGabarito(): Promise<void> {
 if (require.main === module) {
   validarCalculosComGabarito()
     .then(() => {
-      console.log('\n✅ Validação executada com sucesso!');
+      // console.log('\n✅ Validação executada com sucesso!');
       process.exit(0);
     })
     .catch((error) => {

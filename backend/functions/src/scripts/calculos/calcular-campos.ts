@@ -8,7 +8,7 @@ import {
   MedicamentoCalculado,
   DadosCalculados,
   AnaliseReposicao
-} from './interfaces';
+} from '../interfaces/interfaces-campos-calculados';
 
 // Interfaces para cálculo de estoque
 interface ItemMovimentacao {
@@ -566,6 +566,7 @@ async function calcularCamposMedicamento(medicamentoRef: FirebaseFirestore.Docum
     };
 
     // Atualiza o documento com os campos calculados
+    // SALVA NO BANCO
     await medicamentoRef.update({
       contagens,
       maximo,

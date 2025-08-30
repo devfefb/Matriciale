@@ -107,7 +107,7 @@ export function extrairCamposCalculados(): { unidade: Record<UnidadeKey, Generic
 export function salvarResultadoEmJson(dados: { unidade: Record<UnidadeKey, GenericRow[]> }): string {
   const saidaDir = path.join(__dirname, 'output');
   ensureDirectoryExists(saidaDir);
-  const arquivoSaida = path.join(saidaDir, 'campos-calculados.json');
+  const arquivoSaida = path.join(saidaDir, 'gabarito-campos-calculados.json');
   fs.writeFileSync(arquivoSaida, JSON.stringify(dados, null, 2), 'utf8');
   return arquivoSaida;
 }

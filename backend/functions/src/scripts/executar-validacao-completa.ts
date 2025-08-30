@@ -1,4 +1,4 @@
-import { validarCalculosComGabarito } from './validar-calculos';
+import { validarCalculosComGabarito } from './calculos/validar-calculos';
 import { gerarComparacaoDetalhada } from './auxiliar/comparar/gerar-comparacao-detalhada';
 
 async function executarValidacaoCompleta(): Promise<void> {

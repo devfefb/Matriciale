@@ -1,3 +1,5 @@
+// Calcula o campo estoque das unidades. Atualmente incorreto e deve ser corrigido
+
 import * as admin from 'firebase-admin';
 import * as fs from 'fs';
 import * as path from 'path';

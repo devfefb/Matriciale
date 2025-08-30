@@ -3,7 +3,7 @@ import {
   MovimentacaoSemana, 
   DadosUnidade, 
   DadosPlanilha 
-} from '../interfaces';
+} from '../interfaces/interfaces-campos-banco';
 import * as XLSX from 'xlsx';
 import * as path from 'path';
 import * as fs from 'fs';
