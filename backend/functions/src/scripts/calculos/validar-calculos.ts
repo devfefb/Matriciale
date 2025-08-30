@@ -18,6 +18,10 @@ interface ItemMovimentacao {
   [key: string]: any;
 }
 
+type DadosTodasUnidades = {
+  [nomeUnidade: string]: DadosUnidade;
+};
+
 interface DadosUnidade {
   periodo_inicio: string;
   periodo_fim: string;
@@ -26,9 +30,7 @@ interface DadosUnidade {
 
 interface EstoqueCalculado {
   descricao_item: string;
-  estoque_proprio: number;
-  estoque_geral: number;
-  unidades_contribuindo: string[];
+  [campoEstoque: string]: string | number; // Permite 'estoque_NOME': numero
 }
 
 // Interface para o gabarito
@@ -137,99 +139,128 @@ function carregarDadosUnidade(caminhoArquivo: string): DadosUnidade {
   }
 }
 
-function calcularEstoqueConsolidado(
-  dadosCAF: DadosUnidade,
-  dadosESF3: DadosUnidade,
-  dadosOlavo: DadosUnidade
+/**
+ * Calcula o estoque consolidado de forma dinâmica para múltiplas unidades,
+ * aplicando regras de negócio específicas para a CAF e para as demais unidades.
+ *
+ * @param todasUnidades Um objeto onde cada chave é o nome de uma unidade e o valor
+ * são os dados de estoque dessa unidade.
+ * @returns Um Map onde a chave é a descrição do item e o valor é o objeto de estoque calculado.
+ */
+function calcularEstoqueDinamico(
+  todasUnidades: DadosTodasUnidades 
 ): Map<string, EstoqueCalculado> {
-  const estoqueConsolidado = new Map<string, EstoqueCalculado>();
-  
-  // Processa CAF (estoque próprio)
-  for (const item of dadosCAF.itens) {
-    const estoqueESF3 = dadosESF3.itens.find(i => i.descricao_item === item.descricao_item);
-    const estoqueOlavo = dadosOlavo.itens.find(i => i.descricao_item === item.descricao_item);
-    const estoqueItem: EstoqueCalculado = {
-      descricao_item: item.descricao_item,
-      estoque_proprio: item.qtd_periodo_final,
-      estoque_geral: item.qtd_periodo_final,
-      unidades_contribuindo: ['CAF']
-    };
-    estoqueConsolidado.set(item.descricao_item, estoqueItem);
-  }
-  
-  // Processa ESF3 (adiciona ao estoque geral)
-  for (const item of dadosESF3.itens) {
-    const estoqueExistente = estoqueConsolidado.get(item.descricao_item);
-    
-    if (estoqueExistente) {
-      estoqueExistente.estoque_geral += item.qtd_periodo_final;
-      estoqueExistente.unidades_contribuindo.push('ESF3');
-    } else {
-      const estoqueItem: EstoqueCalculado = {
-        descricao_item: item.descricao_item,
-        estoque_proprio: 0,
-        estoque_geral: item.qtd_periodo_final,
-        unidades_contribuindo: ['ESF3']
-      };        
-      estoqueConsolidado.set(item.descricao_item, estoqueItem);
+  // Mapa para agrupar todos os itens por sua descrição.
+  // A chave é a 'descricao_item', o valor é o objeto de resultado parcial.
+  const estoqueAgrupado = new Map<string, EstoqueCalculado>();
+
+  // 1. Itera sobre cada unidade para processar seus itens.
+  for (const nomeUnidade in todasUnidades) {
+    const dadosDaUnidade = todasUnidades[nomeUnidade];
+    const nomeCampoEstoque = `estoque_${nomeUnidade}`;
+
+    for (const item of dadosDaUnidade.itens) {
+      // Verifica se o item já foi adicionado ao mapa
+      if (!estoqueAgrupado.has(item.descricao_item)) {
+        // Se não existe, cria um novo objeto base
+        estoqueAgrupado.set(item.descricao_item, {
+          descricao_item: item.descricao_item,
+        });
+      }
+
+      const itemConsolidado = estoqueAgrupado.get(item.descricao_item)!;
+
+      // 2. Aplica a regra para unidades NÃO-CAF: valor direto.
+      // A regra da CAF será aplicada posteriormente, pois depende dos outros.
+      if (nomeUnidade.toUpperCase() !== 'CAF') {
+        itemConsolidado[nomeCampoEstoque] = item.qtd_periodo_final;
+      }
     }
   }
-  
-  // Processa Olavo (adiciona ao estoque geral)
-  for (const item of dadosOlavo.itens) {
-    const estoqueExistente = estoqueConsolidado.get(item.descricao_item);
-    
-    if (estoqueExistente) {
-      estoqueExistente.estoque_geral += item.qtd_periodo_final;
-      estoqueExistente.unidades_contribuindo.push('Olavo');
-    } else {
-      const estoqueItem: EstoqueCalculado = {
-        descricao_item: item.descricao_item,
-        estoque_proprio: 0,
-        estoque_geral: item.qtd_periodo_final,
-        unidades_contribuindo: ['Olavo']
-      };
-      estoqueConsolidado.set(item.descricao_item, estoqueItem);
+
+  // 3. Processamento especial para a CAF.
+  // Verifica se existe uma unidade CAF nos dados de entrada.
+  if (todasUnidades.CAF) {
+    const dadosCAF = todasUnidades.CAF;
+    const nomeCampoEstoqueCAF = 'estoque_CAF';
+
+    for (const itemCAF of dadosCAF.itens) {
+      // Pega o item correspondente que já foi processado (com os estoques das outras unidades)
+      const itemConsolidado = estoqueAgrupado.get(itemCAF.descricao_item);
+
+      if (itemConsolidado) {
+        // Inicia o cálculo do estoque da CAF com seu próprio valor base.
+        let estoqueCalculadoCAF = itemCAF.qtd_periodo_final;
+
+        // Soma os valores de estoque das outras unidades para o mesmo item.
+        for (const chave in itemConsolidado) {
+          // A condição verifica se a chave é de um campo de estoque (ex: 'estoque_ESF3')
+          // e não o próprio 'descricao_item'.
+          if (chave.startsWith('estoque_')) {
+            estoqueCalculadoCAF += itemConsolidado[chave] as number;
+          }
+        }
+
+        // Atribui o valor final calculado ao campo de estoque da CAF.
+        itemConsolidado[nomeCampoEstoqueCAF] = estoqueCalculadoCAF;
+      }
     }
   }
-  
-  return estoqueConsolidado;
+
+  return estoqueAgrupado;
 }
 
-async function carregarEstoqueConsolidado(): Promise<Map<string, EstoqueCalculado>> {
+async function calcularEstoquesUnidades(): Promise<Map<string, EstoqueCalculado>> {
   if (estoqueConsolidadoCache) {
     return estoqueConsolidadoCache;
   }
 
-  const caminhoCAF = path.join(__dirname, './dados/2025_22/movimentacoesCAF.json');
-  const caminhoESF3 = path.join(__dirname, './dados/2025_22/movimentacoesESF3.json');
-  const caminhoOlavo = path.join(__dirname, './dados/2025_22/movimentacoesOlavo.json');
+  const caminhoCAF = path.join(__dirname, '../dados/2025_22/movimentacoesCAF.json');
+  const caminhoESF3 = path.join(__dirname, '../dados/2025_22/movimentacoesESF3.json');
+  const caminhoOlavo = path.join(__dirname, '../dados/2025_22/movimentacoesOlavo.json');
   
   const dadosCAF = carregarDadosUnidade(caminhoCAF);
   const dadosESF3 = carregarDadosUnidade(caminhoESF3);
   const dadosOlavo = carregarDadosUnidade(caminhoOlavo);
   
-  estoqueConsolidadoCache = calcularEstoqueConsolidado(dadosCAF, dadosESF3, dadosOlavo);
+  estoqueConsolidadoCache = calcularEstoqueDinamico({
+    CAF: dadosCAF,
+    ESF3: dadosESF3,
+    Olavo: dadosOlavo
+  });
   
-  console.log('\n\n\n\n\n✅ Estoque consolidado carregado e calculado.', estoqueConsolidadoCache, + '\n\n\n\n');
   // salvar o estoque consolidado em um arquivo para inspeção manual
-  const caminhoEstoqueConsolidado = path.join(__dirname, './/auxiliar/comparar/output/auxi/estoqueConsolidado.json');
+  const caminhoEstoqueConsolidado = path.join(__dirname, './output_validacao/estoqueConsolidado.json');
   fs.writeFileSync(caminhoEstoqueConsolidado, JSON.stringify(Array.from(estoqueConsolidadoCache.entries()), null, 2), 'utf8');
   
   return estoqueConsolidadoCache;
 }
 
-async function buscarEstoqueMedicamento(nomeMedicamento: string): Promise<number> {
+async function buscarEstoqueMedicamento(
+  nomeMedicamento: string, 
+  unidadeId: string
+): Promise<number> { // <-- Retorna sempre um número para segurança
   try {
-    const estoqueConsolidado = await carregarEstoqueConsolidado();
+    const estoqueConsolidado = await calcularEstoquesUnidades();
     const estoqueItem = estoqueConsolidado.get(nomeMedicamento);
-    
+
+    console.log(`🔍 Buscando estoque para ${nomeMedicamento} na unidade ${unidadeId}:`, estoqueItem);
+
     if (estoqueItem) {
-      return estoqueItem.estoque_geral;
+      // Constrói o nome do campo dinamicamente, ex: 'estoque_CAF' ou 'estoque_ESF3'
+      const nomeCampoEstoque = `estoque_${unidadeId}`;
+
+      // Verifica se a propriedade existe no objeto e retorna seu valor.
+      // A conversão para Number() garante que o retorno seja sempre numérico.
+      if (nomeCampoEstoque in estoqueItem) {
+        return Number(estoqueItem[nomeCampoEstoque]);
+      }
     }
     
+    // Se o item ou o estoque específico da unidade não for encontrado, retorna 0.
     return 0;
   } catch (error) {
+    console.error(`Erro ao buscar estoque para ${nomeMedicamento} na unidade ${unidadeId}:`, error);
     return 0;
   }
 }
@@ -428,6 +459,8 @@ function calcularMetodo(dadosMedicamento: {
   if (dadosMedicamento.tp_metodo === "2.INTERMITENTES") {
     return dadosMedicamento.totalGeral / 52 ? Math.floor(dadosMedicamento.totalGeral / 52) : 1;
   }
+
+  return 0;
 }
 
 function calcularMetEst(tpMetodo: string, metodo: number, unidade: String, maximo: number): number {
@@ -514,7 +547,7 @@ async function calcularCamposMedicamentoSemSalvar(
   });
 
   const metEst = calcularMetEst(tp_metodo, metodo, unidadeId, maximo);
-  const estoque = await buscarEstoqueMedicamento(medicamento.nome);
+  const estoque = await buscarEstoqueMedicamento(medicamento.nome, unidadeId); // <-- Chamada corrigida
   const reposicao = calcularReposicao(metEst, estoque);
   
   const analise_reposicao: AnaliseReposicao = {
@@ -790,7 +823,7 @@ function analisarDistribuicaoErros(resultados: ResultadoValidacao[]): {
 }
 
 function gerarRelatorioDetalhado(resultados: ResultadoValidacao[]): AnalisePadroes {
-  // console.log('📊 Gerando análise detalhada dos padrões de erro...');
+  console.log('📊 Gerando análise detalhada dos padrões de erro...');
   
   const camposProblematicos = analisarEstatisticasPorCampo(resultados);
   const unidadesProblematicas = analisarUnidadesProblematicas(resultados);
@@ -806,22 +839,22 @@ function gerarRelatorioDetalhado(resultados: ResultadoValidacao[]): AnalisePadro
 }
 
 function gerarRelatorioCamposSistematicos(analisePadroes: AnalisePadroes): void {
-  // console.log('\n🔧 ANÁLISE DE CAMPOS COM PROBLEMAS SISTEMÁTICOS:');
-  // console.log('=' .repeat(80));
+  console.log('\n🔧 ANÁLISE DE CAMPOS COM PROBLEMAS SISTEMÁTICOS:');
+  console.log('=' .repeat(80));
   
   const camposCriticos = analisePadroes.campos_mais_problematicos.filter(campo => campo.taxa_acerto < 50);
   
   if (camposCriticos.length === 0) {
-    // console.log('✅ Nenhum campo com problemas sistemáticos identificado (todos acima de 50% de acerto)');
+    console.log('✅ Nenhum campo com problemas sistemáticos identificado (todos acima de 50% de acerto)');
     return;
   }
   
-  // console.log(`⚠️  ${camposCriticos.length} campos com problemas sistemáticos (taxa de acerto < 50%):`);
+  console.log(`⚠️  ${camposCriticos.length} campos com problemas sistemáticos (taxa de acerto < 50%):`);
   
   for (const campo of camposCriticos) {
-    // console.log(`\n🚨 CAMPO CRÍTICO: ${campo.campo}`);
-    // console.log(`   Taxa de acerto: ${campo.taxa_acerto.toFixed(2)}%`);
-    // console.log(`   Total de erros: ${campo.erros}/${campo.total_verificacoes}`);
+    console.log(`\n🚨 CAMPO CRÍTICO: ${campo.campo}`);
+    console.log(`   Taxa de acerto: ${campo.taxa_acerto.toFixed(2)}%`);
+    console.log(`   Total de erros: ${campo.erros}/${campo.total_verificacoes}`);
     
     // Analisa padrões nos erros
     const errosNumericos = campo.erros_detalhados.filter(e => 
@@ -833,8 +866,8 @@ function gerarRelatorioCamposSistematicos(analisePadroes: AnalisePadroes): void 
       const diferencaMedia = diferencas.reduce((a, b) => a + b, 0) / diferencas.length;
       const diferencaAbsolutaMedia = diferencas.reduce((a, b) => a + Math.abs(b), 0) / diferencas.length;
       
-      // console.log(`   Diferença média: ${diferencaMedia.toFixed(2)}`);
-      // console.log(`   Diferença absoluta média: ${diferencaAbsolutaMedia.toFixed(2)}`);
+      console.log(`   Diferença média: ${diferencaMedia.toFixed(2)}`);
+      console.log(`   Diferença absoluta média: ${diferencaAbsolutaMedia.toFixed(2)}`);
       
       // Identifica se há padrão de sempre ser maior ou menor
       const positivos = diferencas.filter(d => d > 0).length;
@@ -842,43 +875,43 @@ function gerarRelatorioCamposSistematicos(analisePadroes: AnalisePadroes): void 
       const zeros = diferencas.filter(d => d === 0).length;
       
       if (positivos > negativos * 2) {
-        // console.log(`   🎯 PADRÃO: Valores calculados tendem a ser MAIORES que o gabarito (${positivos} vs ${negativos})`);
+        console.log(`   🎯 PADRÃO: Valores calculados tendem a ser MAIORES que o gabarito (${positivos} vs ${negativos})`);
       } else if (negativos > positivos * 2) {
-        // console.log(`   🎯 PADRÃO: Valores calculados tendem a ser MENORES que o gabarito (${negativos} vs ${positivos})`);
+        console.log(`   🎯 PADRÃO: Valores calculados tendem a ser MENORES que o gabarito (${negativos} vs ${positivos})`);
       } else {
-        // console.log(`   🎯 PADRÃO: Valores variam sem tendência clara (${positivos} positivos, ${negativos} negativos, ${zeros} zeros)`);
+        console.log(`   🎯 PADRÃO: Valores variam sem tendência clara (${positivos} positivos, ${negativos} negativos, ${zeros} zeros)`);
       }
     }
     
     // Mostra exemplos específicos
-    // console.log(`   Exemplos de erros:`);
+    console.log(`   Exemplos de erros:`);
     campo.erros_detalhados.slice(0, 5).forEach(erro => {
       const diferenca = erro.diferenca !== undefined ? ` (dif: ${erro.diferenca})` : '';
       const percentual = erro.percentual_erro !== undefined ? ` (${erro.percentual_erro.toFixed(1)}% erro)` : '';
-      // console.log(`     - ${erro.medicamento} (${erro.unidade}): calc=${erro.valor_calculado}, gab=${erro.valor_gabarito}${diferenca}${percentual}`);
+      console.log(`     - ${erro.medicamento} (${erro.unidade}): calc=${erro.valor_calculado}, gab=${erro.valor_gabarito}${diferenca}${percentual}`);
     });
     
     // Sugestões de correção baseadas no campo
-    // console.log(`   💡 SUGESTÕES DE CORREÇÃO:`);
+    console.log(`   💡 SUGESTÕES DE CORREÇÃO:`);
     if (campo.campo.startsWith('contagens.')) {
-      // console.log(`     - Verificar lógica de contagem de semanas com valor > 0`);
-      // console.log(`     - Confirmar se está usando 49 ou 52 semanas para ESF3`);
+      console.log(`     - Verificar lógica de contagem de semanas com valor > 0`);
+      console.log(`     - Confirmar se está usando 49 ou 52 semanas para ESF3`);
     } else if (campo.campo.startsWith('medianas.')) {
-      // console.log(`     - Verificar cálculo de mediana e arredondamento`);
-      // console.log(`     - Confirmar seleção correta de semanas para cálculo`);
+      console.log(`     - Verificar cálculo de mediana e arredondamento`);
+      console.log(`     - Confirmar seleção correta de semanas para cálculo`);
     } else if (campo.campo === 'metodo') {
-      // console.log(`     - Verificar mapeamento de string para número do método`);
-      // console.log(`     - Confirmar lógica de seleção do método`);
+      console.log(`     - Verificar mapeamento de string para número do método`);
+      console.log(`     - Confirmar lógica de seleção do método`);
     } else if (campo.campo === 'metEst') {
-      // console.log(`     - Verificar cálculo: método * multiplicador por tipo`);
-      // console.log(`     - Confirmar valores dos multiplicadores`);
+      console.log(`     - Verificar cálculo: método * multiplicador por tipo`);
+      console.log(`     - Confirmar valores dos multiplicadores`);
     } else if (campo.campo === 'reposicao') {
-      // console.log(`     - Verificar cálculo: metEst - estoque`);
-      // console.log(`     - Confirmar valores de estoque carregados`);
+      console.log(`     - Verificar cálculo: metEst - estoque`);
+      console.log(`     - Confirmar valores de estoque carregados`);
     } else if (campo.campo === 'estoque') {
-      // console.log(`     - Verificar carregamento dos dados de estoque consolidado`);
-      // console.log(`     - Confirmar se os arquivos JSON de estoque estão atualizados`);
-      // console.log(`     - Verificar se o medicamento existe nos dados de estoque das unidades`);
+      console.log(`     - Verificar carregamento dos dados de estoque consolidado`);
+      console.log(`     - Confirmar se os arquivos JSON de estoque estão atualizados`);
+      console.log(`     - Verificar se o medicamento existe nos dados de estoque das unidades`);
     }
   }
 }
@@ -887,7 +920,7 @@ function gerarRelatorioCamposSistematicos(analisePadroes: AnalisePadroes): void 
 
 export async function validarCalculosComGabarito(): Promise<void> {
   try {
-    // console.log('🔍 Iniciando validação dos cálculos com gabarito...');
+    console.log('🔍 Iniciando validação dos cálculos com gabarito...');
     
     // Carrega o gabarito
     const caminhoGabarito = path.join(__dirname, '../testes/comparar/gabarito/gabarito-campos-calculados.json');
@@ -900,10 +933,7 @@ export async function validarCalculosComGabarito(): Promise<void> {
     
     // Conta total de medicamentos no gabarito
     const totalGabarito = Object.values(gabarito.unidade).reduce((acc, unidade) => acc + unidade.length, 0);
-    // console.log(`📊 Gabarito carregado com ${totalGabarito} medicamentos`);
-    
-    // Pré-carrega estoque
-    await carregarEstoqueConsolidado();
+    console.log(`📊 Gabarito carregado com ${totalGabarito} medicamentos`);
     
     // Busca dados do Firebase
     const municipiosSnapshot = await db.collection('municipio').get();
@@ -993,7 +1023,7 @@ export async function validarCalculosComGabarito(): Promise<void> {
               totalSucessos++;
             }
             
-            // console.log(`✅ ${medicamento.nome} (${unidadeDoc.id}): ${acerto.toFixed(1)}% de acerto - Última semana: ${camposCalculados.ultimaSemana}`);
+            console.log(`✅ ${medicamento.nome} (${unidadeDoc.id}): ${acerto.toFixed(1)}% de acerto - Última semana: ${camposCalculados.ultimaSemana}`);
             
             // Armazena a última semana para cada medicamento
             if (!semanasPorUnidade.has(unidadeDoc.id)) {
@@ -1014,12 +1044,12 @@ export async function validarCalculosComGabarito(): Promise<void> {
     const acertoMedio = resultados.length > 0 ? 
       resultados.reduce((acc, r) => acc + r.acerto, 0) / resultados.length : 0;
     
-    // console.log('\n🎉 Validação concluída!');
-    // console.log('📊 Estatísticas finais:');
-    // console.log(`   📦 Total processados: ${totalProcessados}`);
-    // console.log(`   ✅ Perfeitos (100%): ${totalSucessos}`);
-    // console.log(`   📈 Taxa de acerto geral: ${taxaAcertoGeral.toFixed(2)}%`);
-    // console.log(`   📊 Acerto médio: ${acertoMedio.toFixed(2)}%`);
+    console.log('\n🎉 Validação concluída!');
+    console.log('📊 Estatísticas finais:');
+    console.log(`   📦 Total processados: ${totalProcessados}`);
+    console.log(`   ✅ Perfeitos (100%): ${totalSucessos}`);
+    console.log(`   📈 Taxa de acerto geral: ${taxaAcertoGeral.toFixed(2)}%`);
+    console.log(`   📊 Acerto médio: ${acertoMedio.toFixed(2)}%`);
     
     // Gera análise detalhada dos padrões
     const analisePadroes = gerarRelatorioDetalhado(resultados);
@@ -1028,66 +1058,66 @@ export async function validarCalculosComGabarito(): Promise<void> {
     gerarRelatorioCamposSistematicos(analisePadroes);
     
     // Exibe resumo dos campos mais problemáticos
-    // console.log('\n🔍 ANÁLISE DETALHADA DOS CAMPOS MAIS PROBLEMÁTICOS:');
-    // console.log('=' .repeat(80));
+    console.log('\n🔍 ANÁLISE DETALHADA DOS CAMPOS MAIS PROBLEMÁTICOS:');
+    console.log('=' .repeat(80));
     
     const top5CamposProblematicos = analisePadroes.campos_mais_problematicos.slice(0, 5);
     for (const campo of top5CamposProblematicos) {
-      // console.log(`\n📊 Campo: ${campo.campo}`);
-      // console.log(`   Taxa de acerto: ${campo.taxa_acerto.toFixed(2)}%`);
-      // console.log(`   Erros: ${campo.erros}/${campo.total_verificacoes}`);
+      console.log(`\n📊 Campo: ${campo.campo}`);
+      console.log(`   Taxa de acerto: ${campo.taxa_acerto.toFixed(2)}%`);
+      console.log(`   Erros: ${campo.erros}/${campo.total_verificacoes}`);
       
       if (campo.valores_mais_frequentes.length > 0) {
-        // console.log(`   Valores mais frequentes nos erros:`);
+        console.log(`   Valores mais frequentes nos erros:`);
         campo.valores_mais_frequentes.slice(0, 3).forEach(valor => {
-          // console.log(`     - ${valor.valor}: ${valor.quantidade}x (${valor.percentual.toFixed(1)}%)`);
+          console.log(`     - ${valor.valor}: ${valor.quantidade}x (${valor.percentual.toFixed(1)}%)`);
         });
       }
       
       // Mostra alguns exemplos de erros
       if (campo.erros_detalhados.length > 0) {
-        // console.log(`   Exemplos de erros:`);
+        console.log(`   Exemplos de erros:`);
         campo.erros_detalhados.slice(0, 3).forEach(erro => {
           const diferenca = erro.diferenca !== undefined ? ` (dif: ${erro.diferenca})` : '';
           const percentual = erro.percentual_erro !== undefined ? ` (${erro.percentual_erro.toFixed(1)}% erro)` : '';
-          // console.log(`     - ${erro.medicamento} (${erro.unidade}): calc=${erro.valor_calculado}, gab=${erro.valor_gabarito}${diferenca}${percentual}`);
+          console.log(`     - ${erro.medicamento} (${erro.unidade}): calc=${erro.valor_calculado}, gab=${erro.valor_gabarito}${diferenca}${percentual}`);
         });
       }
     }
     
     // Exibe unidades mais problemáticas
-    // console.log('\n🏥 UNIDADES MAIS PROBLEMÁTICAS:');
-    // console.log('=' .repeat(80));
+    console.log('\n🏥 UNIDADES MAIS PROBLEMÁTICAS:');
+    console.log('=' .repeat(80));
     
     const top3UnidadesProblematicas = analisePadroes.unidades_mais_problematicas.slice(0, 3);
     for (const unidade of top3UnidadesProblematicas) {
-      // console.log(`\n🏥 Unidade: ${unidade.unidade}`);
-      // console.log(`   Acerto médio: ${unidade.acerto_medio.toFixed(2)}%`);
-      // console.log(`   Medicamentos: ${unidade.total_medicamentos}`);
-      // console.log(`   Campos com erro: ${unidade.campos_com_erro.join(', ')}`);
+      console.log(`\n🏥 Unidade: ${unidade.unidade}`);
+      console.log(`   Acerto médio: ${unidade.acerto_medio.toFixed(2)}%`);
+      console.log(`   Medicamentos: ${unidade.total_medicamentos}`);
+      console.log(`   Campos com erro: ${unidade.campos_com_erro.join(', ')}`);
     }
     
     // Exibe distribuição de erros
-    // console.log('\n📈 DISTRIBUIÇÃO DOS ERROS:');
-    // console.log('=' .repeat(80));
+    console.log('\n📈 DISTRIBUIÇÃO DOS ERROS:');
+    console.log('=' .repeat(80));
     
     for (const faixa of analisePadroes.distribuicao_erros) {
-      // console.log(`   ${faixa.faixa_acerto}: ${faixa.quantidade} medicamentos (${faixa.percentual.toFixed(1)}%)`);
+      console.log(`   ${faixa.faixa_acerto}: ${faixa.quantidade} medicamentos (${faixa.percentual.toFixed(1)}%)`);
     }
     
     // Exibe informações sobre as semanas utilizadas nos cálculos
-    // console.log('\n📅 INFORMAÇÕES SOBRE SEMANAS UTILIZADAS NOS CÁLCULOS:');
-    // console.log('=' .repeat(80));
+    console.log('\n📅 INFORMAÇÕES SOBRE SEMANAS UTILIZADAS NOS CÁLCULOS:');
+    console.log('=' .repeat(80));
     
     // Exibe resumo das semanas por unidade
     for (const [unidade, semanas] of semanasPorUnidade) {
       if (semanas.size > 0) {
         const semanasOrdenadas = Array.from(semanas).sort();
         const semanaMaisRecente = semanasOrdenadas[semanasOrdenadas.length - 1];
-        // console.log(`\n🏥 Unidade: ${unidade}`);
-        // console.log(`   Semana mais recente: ${semanaMaisRecente}`);
-        // console.log(`   Total de semanas únicas: ${semanas.size}`);
-        // console.log(`   Faixa de semanas: ${semanasOrdenadas[0]} a ${semanaMaisRecente}`);
+        console.log(`\n🏥 Unidade: ${unidade}`);
+        console.log(`   Semana mais recente: ${semanaMaisRecente}`);
+        console.log(`   Total de semanas únicas: ${semanas.size}`);
+        console.log(`   Faixa de semanas: ${semanasOrdenadas[0]} a ${semanaMaisRecente}`);
       }
     }
     
@@ -1095,10 +1125,10 @@ export async function validarCalculosComGabarito(): Promise<void> {
     if (ultimaSemanaGeral.size > 0) {
       const todasSemanasOrdenadas = Array.from(ultimaSemanaGeral).sort();
       const semanaMaisRecenteGeral = todasSemanasOrdenadas[todasSemanasOrdenadas.length - 1];
-      // console.log(`\n🌍 RESUMO GERAL:`);
-      // console.log(`   Semana mais recente em todo o sistema: ${semanaMaisRecenteGeral}`);
-      // console.log(`   Total de semanas únicas no sistema: ${ultimaSemanaGeral.size}`);
-      // console.log(`   Faixa geral de semanas: ${todasSemanasOrdenadas[0]} a ${semanaMaisRecenteGeral}`);
+      console.log(`\n🌍 RESUMO GERAL:`);
+      console.log(`   Semana mais recente em todo o sistema: ${semanaMaisRecenteGeral}`);
+      console.log(`   Total de semanas únicas no sistema: ${ultimaSemanaGeral.size}`);
+      console.log(`   Faixa geral de semanas: ${todasSemanasOrdenadas[0]} a ${semanaMaisRecenteGeral}`);
     }
     
     // Salva relatório detalhado
@@ -1128,9 +1158,9 @@ export async function validarCalculosComGabarito(): Promise<void> {
       analise_padroes: analisePadroes
     };
     
-    const caminhoRelatorio = path.join(__dirname, './auxiliar/comparar/output/relatorio-validacao.json');
+    const caminhoRelatorio = path.join(__dirname, './output_validacao/relatorio-validacao.json');
     fs.writeFileSync(caminhoRelatorio, JSON.stringify(relatorio, null, 2));
-    // console.log(`\n📝 Relatório detalhado salvo em: ${caminhoRelatorio}`);
+    console.log(`\n📝 Relatório detalhado salvo em: ${caminhoRelatorio}`);
     
     // Salva relatório resumido em formato mais legível
     const relatorioResumido = {
@@ -1178,9 +1208,9 @@ export async function validarCalculosComGabarito(): Promise<void> {
     
 
     
-    const caminhoRelatorioResumido = path.join(__dirname, './auxiliar/comparar/output/relatorio-resumido.json');
+    const caminhoRelatorioResumido = path.join(__dirname, './output_validacao/relatorio-resumido.json');
     fs.writeFileSync(caminhoRelatorioResumido, JSON.stringify(relatorioResumido, null, 2));
-    // console.log(`📝 Relatório resumido salvo em: ${caminhoRelatorioResumido}`);
+    console.log(`📝 Relatório resumido salvo em: ${caminhoRelatorioResumido}`);
     
   } catch (error) {
     console.error('💥 Erro durante a validação:', error);
@@ -1192,7 +1222,7 @@ export async function validarCalculosComGabarito(): Promise<void> {
 if (require.main === module) {
   validarCalculosComGabarito()
     .then(() => {
-      // console.log('\n✅ Validação executada com sucesso!');
+      console.log('\n✅ Validação executada com sucesso!');
       process.exit(0);
     })
     .catch((error) => {

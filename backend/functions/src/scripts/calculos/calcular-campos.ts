@@ -1,3 +1,5 @@
+// SALVA NO BANCO
+
 import { db } from '../../config/firebase';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -35,7 +37,7 @@ interface EstoqueCalculado {
 let estoqueConsolidadoCache: Map<string, EstoqueCalculado> | null = null;
 
 // Exporta funções de estoque para uso em outros módulos
-export { carregarEstoqueConsolidado, buscarEstoqueMedicamento };
+export { calcularEstoquesUnidades, buscarEstoqueMedicamento };
 
 // --- FUNÇÕES DE CÁLCULO DE ESTOQUE ---
 
@@ -125,7 +127,7 @@ function calcularEstoqueConsolidado(
 /**
  * Carrega e calcula o estoque consolidado (com cache)
  */
-async function carregarEstoqueConsolidado(): Promise<Map<string, EstoqueCalculado>> {
+async function calcularEstoquesUnidades(): Promise<Map<string, EstoqueCalculado>> {
   if (estoqueConsolidadoCache) {
     console.log('📦 Usando cache de estoque consolidado...');
     return estoqueConsolidadoCache;
@@ -169,7 +171,7 @@ async function carregarEstoqueConsolidado(): Promise<Map<string, EstoqueCalculad
  */
 async function buscarEstoqueMedicamento(nomeMedicamento: string): Promise<number> {
   try {
-    const estoqueConsolidado = await carregarEstoqueConsolidado();
+    const estoqueConsolidado = await calcularEstoquesUnidades();
     const estoqueItem = estoqueConsolidado.get(nomeMedicamento);
     
     if (estoqueItem) {
@@ -605,7 +607,7 @@ export async function calcularCamposTodosMedicamentos(): Promise<void> {
     
     // Pré-carrega o estoque consolidado
     console.log('📦 Pré-carregando dados de estoque...');
-    await carregarEstoqueConsolidado();
+    await calcularEstoquesUnidades();
     
     // Busca todos os municípios
     const municipiosSnapshot = await db.collection('municipio').get();

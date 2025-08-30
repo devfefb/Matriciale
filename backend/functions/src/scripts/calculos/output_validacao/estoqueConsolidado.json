@@ -1,0 +1,1919 @@
+[
+  [
+    "AAS - ÁCIDO ACETIL SALICILICO 100MG",
+    {
+      "descricao_item": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
+      "estoque_ESF3": 1140,
+      "estoque_Olavo": 1720,
+      "estoque_CAF": 14630
+    }
+  ],
+  [
+    "ACICLOVIR 200 MG CPR",
+    {
+      "descricao_item": "ACICLOVIR 200 MG CPR",
+      "estoque_ESF3": 75,
+      "estoque_Olavo": 760,
+      "estoque_CAF": 835
+    }
+  ],
+  [
+    "ACIDO ASCORBICO AMP 5 ML",
+    {
+      "descricao_item": "ACIDO ASCORBICO AMP 5 ML",
+      "estoque_CAF": 600
+    }
+  ],
+  [
+    "ACIDO FOLICO 5MG",
+    {
+      "descricao_item": "ACIDO FOLICO 5MG",
+      "estoque_ESF3": 780,
+      "estoque_Olavo": 800,
+      "estoque_CAF": 5080
+    }
+  ],
+  [
+    "ACIDO TRANEXAMICO 50 MG/ML -AMP (TRANSAMIN)",
+    {
+      "descricao_item": "ACIDO TRANEXAMICO 50 MG/ML -AMP (TRANSAMIN)",
+      "estoque_CAF": 201
+    }
+  ],
+  [
+    "ACIDO VALPROICO 250 MG",
+    {
+      "descricao_item": "ACIDO VALPROICO 250 MG",
+      "estoque_ESF3": 700,
+      "estoque_Olavo": 1050,
+      "estoque_CAF": 8750
+    }
+  ],
+  [
+    "AGUA DESTILADA AMPOLA 10 ML",
+    {
+      "descricao_item": "AGUA DESTILADA AMPOLA 10 ML",
+      "estoque_CAF": 200
+    }
+  ],
+  [
+    "ALBENDAZOL 40 MG/ML FRASCO 10 ML",
+    {
+      "descricao_item": "ALBENDAZOL 40 MG/ML FRASCO 10 ML",
+      "estoque_ESF3": 13,
+      "estoque_Olavo": 41,
+      "estoque_CAF": 155
+    }
+  ],
+  [
+    "ALBENDAZOL 400 MG",
+    {
+      "descricao_item": "ALBENDAZOL 400 MG",
+      "estoque_ESF3": 18,
+      "estoque_Olavo": 41,
+      "estoque_CAF": 359
+    }
+  ],
+  [
+    "ALOPURINOL  300MG",
+    {
+      "descricao_item": "ALOPURINOL  300MG",
+      "estoque_ESF3": 70,
+      "estoque_Olavo": 680,
+      "estoque_CAF": 4770
+    }
+  ],
+  [
+    "ALOPURINOL 100MG",
+    {
+      "descricao_item": "ALOPURINOL 100MG",
+      "estoque_Olavo": 225,
+      "estoque_CAF": 1860
+    }
+  ],
+  [
+    "AMBROXOL XAROPE ADULTO",
+    {
+      "descricao_item": "AMBROXOL XAROPE ADULTO",
+      "estoque_ESF3": 19,
+      "estoque_Olavo": 18,
+      "estoque_CAF": 393
+    }
+  ],
+  [
+    "AMBROXOL XAROPE INFANTIL",
+    {
+      "descricao_item": "AMBROXOL XAROPE INFANTIL",
+      "estoque_ESF3": 12,
+      "estoque_Olavo": 73,
+      "estoque_CAF": 220
+    }
+  ],
+  [
+    "AMIODARONA 50MG/ML - AMP",
+    {
+      "descricao_item": "AMIODARONA 50MG/ML - AMP",
+      "estoque_Olavo": 20,
+      "estoque_CAF": 100
+    }
+  ],
+  [
+    "AMITRIPTILINA, CLORIDRATO  25 MG",
+    {
+      "descricao_item": "AMITRIPTILINA, CLORIDRATO  25 MG",
+      "estoque_ESF3": 1420,
+      "estoque_Olavo": 2010,
+      "estoque_CAF": 17230
+    }
+  ],
+  [
+    "AMOXICILINA + CLAVULANATO 500/125 MCG",
+    {
+      "descricao_item": "AMOXICILINA + CLAVULANATO 500/125 MCG",
+      "estoque_ESF3": 66,
+      "estoque_Olavo": 636,
+      "estoque_CAF": 702
+    }
+  ],
+  [
+    "AMOXICILINA + CLAVULANATO SUSP 250 MG/5 ML",
+    {
+      "descricao_item": "AMOXICILINA + CLAVULANATO SUSP 250 MG/5 ML",
+      "estoque_ESF3": 12,
+      "estoque_Olavo": 41,
+      "estoque_CAF": 113
+    }
+  ],
+  [
+    "AMOXICILINA 250 MG/5ML - 150 ML",
+    {
+      "descricao_item": "AMOXICILINA 250 MG/5ML - 150 ML",
+      "estoque_Olavo": 23,
+      "estoque_CAF": 202
+    }
+  ],
+  [
+    "AMOXICILINA 500 MG - CAPSULA",
+    {
+      "descricao_item": "AMOXICILINA 500 MG - CAPSULA",
+      "estoque_ESF3": 159,
+      "estoque_Olavo": 959,
+      "estoque_CAF": 4982
+    }
+  ],
+  [
+    "ANESTESICO COLIRIO - OXINEST",
+    {
+      "descricao_item": "ANESTESICO COLIRIO - OXINEST",
+      "estoque_CAF": 9
+    }
+  ],
+  [
+    "ANLODIPINO, BESILATO 5MG",
+    {
+      "descricao_item": "ANLODIPINO, BESILATO 5MG",
+      "estoque_ESF3": 1350,
+      "estoque_Olavo": 1820,
+      "estoque_CAF": 11180
+    }
+  ],
+  [
+    "ARIPIPRAZOL 20MG/ML SUSP GTS",
+    {
+      "descricao_item": "ARIPIPRAZOL 20MG/ML SUSP GTS",
+      "estoque_Olavo": 2,
+      "estoque_CAF": 4
+    }
+  ],
+  [
+    "AZITROMICINA 500 MG",
+    {
+      "descricao_item": "AZITROMICINA 500 MG",
+      "estoque_ESF3": 408,
+      "estoque_Olavo": 265,
+      "estoque_CAF": 4878
+    }
+  ],
+  [
+    "AZITROMICINA SUSP. 200MG/5ML",
+    {
+      "descricao_item": "AZITROMICINA SUSP. 200MG/5ML",
+      "estoque_ESF3": 11,
+      "estoque_Olavo": 24,
+      "estoque_CAF": 364
+    }
+  ],
+  [
+    "BENZILPENICILINA 1.200.000 UI - PÓ P/ SUSP. INJ",
+    {
+      "descricao_item": "BENZILPENICILINA 1.200.000 UI - PÓ P/ SUSP. INJ",
+      "estoque_CAF": 304
+    }
+  ],
+  [
+    "BIPERIDENO, CLORIDRATO 2 MG",
+    {
+      "descricao_item": "BIPERIDENO, CLORIDRATO 2 MG",
+      "estoque_ESF3": 910,
+      "estoque_Olavo": 310,
+      "estoque_CAF": 3620
+    }
+  ],
+  [
+    "BISACODIL 5MG - DULCOLAX",
+    {
+      "descricao_item": "BISACODIL 5MG - DULCOLAX",
+      "estoque_ESF3": 52,
+      "estoque_Olavo": 59,
+      "estoque_CAF": 611
+    }
+  ],
+  [
+    "BROMOPRIDA 10MG CPR",
+    {
+      "descricao_item": "BROMOPRIDA 10MG CPR",
+      "estoque_ESF3": 330,
+      "estoque_Olavo": 1040,
+      "estoque_CAF": 6030
+    }
+  ],
+  [
+    "BROMOPRIDA 10MG/2ML - INJ",
+    {
+      "descricao_item": "BROMOPRIDA 10MG/2ML - INJ",
+      "estoque_CAF": 800
+    }
+  ],
+  [
+    "BROMOPRIDA GTS",
+    {
+      "descricao_item": "BROMOPRIDA GTS",
+      "estoque_Olavo": 50,
+      "estoque_CAF": 158
+    }
+  ],
+  [
+    "BUPROPIONA 150 MG - ASSISTENCIAL",
+    {
+      "descricao_item": "BUPROPIONA 150 MG - ASSISTENCIAL",
+      "estoque_Olavo": 30,
+      "estoque_CAF": 150
+    }
+  ],
+  [
+    "BUSCOPAM COMPOSTO CPR",
+    {
+      "descricao_item": "BUSCOPAM COMPOSTO CPR",
+      "estoque_ESF3": 720,
+      "estoque_Olavo": 1060,
+      "estoque_CAF": 2920
+    }
+  ],
+  [
+    "BUSCOPAM COMPOSTO INJETAVEL",
+    {
+      "descricao_item": "BUSCOPAM COMPOSTO INJETAVEL",
+      "estoque_CAF": 650
+    }
+  ],
+  [
+    "BUSCOPAM SIMPLES CP",
+    {
+      "descricao_item": "BUSCOPAM SIMPLES CP",
+      "estoque_ESF3": 200,
+      "estoque_Olavo": 260,
+      "estoque_CAF": 2200
+    }
+  ],
+  [
+    "BUSCOPAM SIMPLES INJETAVEL",
+    {
+      "descricao_item": "BUSCOPAM SIMPLES INJETAVEL",
+      "estoque_CAF": 170
+    }
+  ],
+  [
+    "CAPTOPRIL 25 MG",
+    {
+      "descricao_item": "CAPTOPRIL 25 MG",
+      "estoque_CAF": 1400
+    }
+  ],
+  [
+    "CARBAMAZEPINA 200 MG",
+    {
+      "descricao_item": "CARBAMAZEPINA 200 MG",
+      "estoque_ESF3": 1580,
+      "estoque_Olavo": 1600,
+      "estoque_CAF": 7080
+    }
+  ],
+  [
+    "CARBAMAZEPINA SUSP. 100 ML- 20 MG/ML",
+    {
+      "descricao_item": "CARBAMAZEPINA SUSP. 100 ML- 20 MG/ML",
+      "estoque_CAF": 60
+    }
+  ],
+  [
+    "CARBONATO DE CALCIO 1.250MG",
+    {
+      "descricao_item": "CARBONATO DE CALCIO 1.250MG",
+      "estoque_ESF3": 195,
+      "estoque_Olavo": 75,
+      "estoque_CAF": 540
+    }
+  ],
+  [
+    "CARBONATO DE CALCIO 1.250MG + VITAMINA D 400UI",
+    {
+      "descricao_item": "CARBONATO DE CALCIO 1.250MG + VITAMINA D 400UI",
+      "estoque_Olavo": 360,
+      "estoque_CAF": 1020
+    }
+  ],
+  [
+    "CARBONATO DE LITIO 300 MG",
+    {
+      "descricao_item": "CARBONATO DE LITIO 300 MG",
+      "estoque_ESF3": 700,
+      "estoque_Olavo": 830,
+      "estoque_CAF": 4530
+    }
+  ],
+  [
+    "CARVEDILOL 12,5 MG",
+    {
+      "descricao_item": "CARVEDILOL 12,5 MG",
+      "estoque_Olavo": 360,
+      "estoque_CAF": 1590
+    }
+  ],
+  [
+    "CARVEDILOL 25 MG",
+    {
+      "descricao_item": "CARVEDILOL 25 MG",
+      "estoque_Olavo": 390,
+      "estoque_CAF": 1320
+    }
+  ],
+  [
+    "CEFALEXINA 500 MG",
+    {
+      "descricao_item": "CEFALEXINA 500 MG",
+      "estoque_ESF3": 750,
+      "estoque_Olavo": 1220,
+      "estoque_CAF": 3470
+    }
+  ],
+  [
+    "CEFALEXINA SUSPENSÃO 250 MG/ 5 ML",
+    {
+      "descricao_item": "CEFALEXINA SUSPENSÃO 250 MG/ 5 ML",
+      "estoque_Olavo": 22,
+      "estoque_CAF": 113
+    }
+  ],
+  [
+    "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ IM",
+    {
+      "descricao_item": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ IM",
+      "estoque_ESF3": 24,
+      "estoque_Olavo": 6,
+      "estoque_CAF": 80
+    }
+  ],
+  [
+    "CEFTRIAXONA 500 MG INJ -IM",
+    {
+      "descricao_item": "CEFTRIAXONA 500 MG INJ -IM",
+      "estoque_Olavo": 3,
+      "estoque_CAF": 3
+    }
+  ],
+  [
+    "CERUMIN GOTAS",
+    {
+      "descricao_item": "CERUMIN GOTAS",
+      "estoque_CAF": 6
+    }
+  ],
+  [
+    "CETOCONAZOL + BETAMETASONA POMADA 30 GR",
+    {
+      "descricao_item": "CETOCONAZOL + BETAMETASONA POMADA 30 GR",
+      "estoque_ESF3": 21,
+      "estoque_Olavo": 15,
+      "estoque_CAF": 113
+    }
+  ],
+  [
+    "CETOCONAZOL 200 MG",
+    {
+      "descricao_item": "CETOCONAZOL 200 MG",
+      "estoque_ESF3": 100,
+      "estoque_Olavo": 140,
+      "estoque_CAF": 300
+    }
+  ],
+  [
+    "CETOPROFENO  50MG/ML IM (PROFENID)",
+    {
+      "descricao_item": "CETOPROFENO  50MG/ML IM (PROFENID)",
+      "estoque_CAF": 2900
+    }
+  ],
+  [
+    "CETOPROFENO 50 MG",
+    {
+      "descricao_item": "CETOPROFENO 50 MG",
+      "estoque_ESF3": 360,
+      "estoque_Olavo": 1302,
+      "estoque_CAF": 10614
+    }
+  ],
+  [
+    "CICLOBENZAPRINA 5MG",
+    {
+      "descricao_item": "CICLOBENZAPRINA 5MG",
+      "estoque_ESF3": 900,
+      "estoque_Olavo": 1500,
+      "estoque_CAF": 15330
+    }
+  ],
+  [
+    "CILOSTAZOL 100 MG",
+    {
+      "descricao_item": "CILOSTAZOL 100 MG",
+      "estoque_ESF3": 120,
+      "estoque_Olavo": 270,
+      "estoque_CAF": 690
+    }
+  ],
+  [
+    "CIMETIDINA 200MG COMPRIMIDO",
+    {
+      "descricao_item": "CIMETIDINA 200MG COMPRIMIDO",
+      "estoque_ESF3": 740,
+      "estoque_Olavo": 280,
+      "estoque_CAF": 2660
+    }
+  ],
+  [
+    "CINARIZINA 75MG",
+    {
+      "descricao_item": "CINARIZINA 75MG",
+      "estoque_ESF3": 360,
+      "estoque_Olavo": 500,
+      "estoque_CAF": 3460
+    }
+  ],
+  [
+    "CIPROFLOXACINO 500MG",
+    {
+      "descricao_item": "CIPROFLOXACINO 500MG",
+      "estoque_Olavo": 329,
+      "estoque_CAF": 2135
+    }
+  ],
+  [
+    "CLOMIPRAMINA, CLORIDRATO 25 MG",
+    {
+      "descricao_item": "CLOMIPRAMINA, CLORIDRATO 25 MG",
+      "estoque_ESF3": 620,
+      "estoque_Olavo": 700,
+      "estoque_CAF": 3760
+    }
+  ],
+  [
+    "CLONAZEPAM 2,5 MG/ ML - GOTAS",
+    {
+      "descricao_item": "CLONAZEPAM 2,5 MG/ ML - GOTAS",
+      "estoque_ESF3": 32,
+      "estoque_Olavo": 36,
+      "estoque_CAF": 298
+    }
+  ],
+  [
+    "CLONAZEPAM 2MG",
+    {
+      "descricao_item": "CLONAZEPAM 2MG",
+      "estoque_ESF3": 1960,
+      "estoque_Olavo": 2799,
+      "estoque_CAF": 25399
+    }
+  ],
+  [
+    "CLORPROMAZINA 25MG/5ML INJ",
+    {
+      "descricao_item": "CLORPROMAZINA 25MG/5ML INJ",
+      "estoque_Olavo": 30,
+      "estoque_CAF": 69
+    }
+  ],
+  [
+    "CLORPROMAZINA, CLORIDRATO 100MG",
+    {
+      "descricao_item": "CLORPROMAZINA, CLORIDRATO 100MG",
+      "estoque_ESF3": 490,
+      "estoque_Olavo": 220,
+      "estoque_CAF": 910
+    }
+  ],
+  [
+    "CLORPROMAZINA, CLORIDRATO 25MG",
+    {
+      "descricao_item": "CLORPROMAZINA, CLORIDRATO 25MG",
+      "estoque_ESF3": 260,
+      "estoque_Olavo": 200,
+      "estoque_CAF": 2060
+    }
+  ],
+  [
+    "COMPLEXO B INJ",
+    {
+      "descricao_item": "COMPLEXO B INJ",
+      "estoque_CAF": 1000
+    }
+  ],
+  [
+    "DELTAMETRINA 0,2MG/ML",
+    {
+      "descricao_item": "DELTAMETRINA 0,2MG/ML",
+      "estoque_ESF3": 10,
+      "estoque_Olavo": 6,
+      "estoque_CAF": 36
+    }
+  ],
+  [
+    "DERMACERIUM (SULFADIAZINA PRATA + CERIO)",
+    {
+      "descricao_item": "DERMACERIUM (SULFADIAZINA PRATA + CERIO)",
+      "estoque_CAF": 38
+    }
+  ],
+  [
+    "DERSANI 200ML (ACIDOS GRAXOS ESSENCIAIS)",
+    {
+      "descricao_item": "DERSANI 200ML (ACIDOS GRAXOS ESSENCIAIS)",
+      "estoque_CAF": 46
+    }
+  ],
+  [
+    "DEXAMETASONA 0.1% CREME 10 GR",
+    {
+      "descricao_item": "DEXAMETASONA 0.1% CREME 10 GR",
+      "estoque_ESF3": 43,
+      "estoque_Olavo": 48,
+      "estoque_CAF": 680
+    }
+  ],
+  [
+    "DEXAMETASONA 2MG/ML- AMP",
+    {
+      "descricao_item": "DEXAMETASONA 2MG/ML- AMP",
+      "estoque_CAF": 850
+    }
+  ],
+  [
+    "DEXAMETASONA 4 MG",
+    {
+      "descricao_item": "DEXAMETASONA 4 MG",
+      "estoque_ESF3": 330,
+      "estoque_CAF": 2930
+    }
+  ],
+  [
+    "DEXAMETASONA 4 MG/ML - AMPOLA",
+    {
+      "descricao_item": "DEXAMETASONA 4 MG/ML - AMPOLA",
+      "estoque_CAF": 20
+    }
+  ],
+  [
+    "DEXCLORFENIRAMINA + BETAMETASONA SUSP ORAL 120",
+    {
+      "descricao_item": "DEXCLORFENIRAMINA + BETAMETASONA SUSP ORAL 120",
+      "estoque_ESF3": 17,
+      "estoque_Olavo": 35,
+      "estoque_CAF": 52
+    }
+  ],
+  [
+    "DEXCLORFENIRAMINA, MALEATO  2MG/5ML - SUSPENSÃO",
+    {
+      "descricao_item": "DEXCLORFENIRAMINA, MALEATO  2MG/5ML - SUSPENSÃO",
+      "estoque_ESF3": 5,
+      "estoque_Olavo": 18,
+      "estoque_CAF": 68
+    }
+  ],
+  [
+    "DIAZEPAM 10 MG",
+    {
+      "descricao_item": "DIAZEPAM 10 MG",
+      "estoque_ESF3": 860,
+      "estoque_Olavo": 1525,
+      "estoque_CAF": 7365
+    }
+  ],
+  [
+    "DIAZEPAM 10 MG/ 2ML - AMP",
+    {
+      "descricao_item": "DIAZEPAM 10 MG/ 2ML - AMP",
+      "estoque_Olavo": 48,
+      "estoque_CAF": 89
+    }
+  ],
+  [
+    "DICLOFENACO 50 MG",
+    {
+      "descricao_item": "DICLOFENACO 50 MG",
+      "estoque_ESF3": 200,
+      "estoque_Olavo": 480,
+      "estoque_CAF": 2920
+    }
+  ],
+  [
+    "DIOSMINA + HESPERIDINA 450/50 MG",
+    {
+      "descricao_item": "DIOSMINA + HESPERIDINA 450/50 MG",
+      "estoque_ESF3": 1560,
+      "estoque_Olavo": 3360,
+      "estoque_CAF": 20760
+    }
+  ],
+  [
+    "DIPIRONA 500 MG/2 ML - AMP",
+    {
+      "descricao_item": "DIPIRONA 500 MG/2 ML - AMP",
+      "estoque_CAF": 3600
+    }
+  ],
+  [
+    "DIPIRONA SÓDICA COMPRIMIDO 500MG",
+    {
+      "descricao_item": "DIPIRONA SÓDICA COMPRIMIDO 500MG",
+      "estoque_ESF3": 1780,
+      "estoque_Olavo": 4190,
+      "estoque_CAF": 43940
+    }
+  ],
+  [
+    "DIPIRONA SÓDICA GOTAS 500 MG / ML 10 ML",
+    {
+      "descricao_item": "DIPIRONA SÓDICA GOTAS 500 MG / ML 10 ML",
+      "estoque_ESF3": 132,
+      "estoque_Olavo": 184,
+      "estoque_CAF": 1439
+    }
+  ],
+  [
+    "DIPROSPAN AMP 2 ML",
+    {
+      "descricao_item": "DIPROSPAN AMP 2 ML",
+      "estoque_CAF": 147
+    }
+  ],
+  [
+    "DOXAZOSINA 2 MG",
+    {
+      "descricao_item": "DOXAZOSINA 2 MG",
+      "estoque_ESF3": 510,
+      "estoque_Olavo": 570,
+      "estoque_CAF": 3180
+    }
+  ],
+  [
+    "DOXAZOSINA MESILATO 4MG",
+    {
+      "descricao_item": "DOXAZOSINA MESILATO 4MG",
+      "estoque_ESF3": 210,
+      "estoque_CAF": 3240
+    }
+  ],
+  [
+    "DROPROPIZINA 1,5 MG/ML -XAROPE PEDIATRICO",
+    {
+      "descricao_item": "DROPROPIZINA 1,5 MG/ML -XAROPE PEDIATRICO",
+      "estoque_ESF3": 8,
+      "estoque_Olavo": 20,
+      "estoque_CAF": 62
+    }
+  ],
+  [
+    "DROPROPIZINA 3 MG/ML - XAROPE ADULTO",
+    {
+      "descricao_item": "DROPROPIZINA 3 MG/ML - XAROPE ADULTO",
+      "estoque_ESF3": 3,
+      "estoque_Olavo": 2,
+      "estoque_CAF": 5
+    }
+  ],
+  [
+    "DULOXETINA, CLORIDRATO 60MG",
+    {
+      "descricao_item": "DULOXETINA, CLORIDRATO 60MG",
+      "estoque_Olavo": 0,
+      "estoque_CAF": 120
+    }
+  ],
+  [
+    "ENALAPRIL 10MG",
+    {
+      "descricao_item": "ENALAPRIL 10MG",
+      "estoque_CAF": 460
+    }
+  ],
+  [
+    "ENOXAPARINA SÓDICA 40 MG/0,4ML - CLEXANE",
+    {
+      "descricao_item": "ENOXAPARINA SÓDICA 40 MG/0,4ML - CLEXANE",
+      "estoque_Olavo": 83,
+      "estoque_CAF": 243
+    }
+  ],
+  [
+    "ENSURE LATA 400G",
+    {
+      "descricao_item": "ENSURE LATA 400G",
+      "estoque_Olavo": 10,
+      "estoque_CAF": 40
+    }
+  ],
+  [
+    "EPINEFRINA 1MG/ML",
+    {
+      "descricao_item": "EPINEFRINA 1MG/ML",
+      "estoque_Olavo": 28,
+      "estoque_CAF": 106
+    }
+  ],
+  [
+    "ESPIRONOLACTONA 25 MG",
+    {
+      "descricao_item": "ESPIRONOLACTONA 25 MG",
+      "estoque_ESF3": 600,
+      "estoque_Olavo": 450,
+      "estoque_CAF": 4950
+    }
+  ],
+  [
+    "ESTRIOL 1MG/G - CR VAGINAL 50 GR",
+    {
+      "descricao_item": "ESTRIOL 1MG/G - CR VAGINAL 50 GR",
+      "estoque_Olavo": 0,
+      "estoque_CAF": 5
+    }
+  ],
+  [
+    "FENITOINA 100 MG",
+    {
+      "descricao_item": "FENITOINA 100 MG",
+      "estoque_ESF3": 580,
+      "estoque_Olavo": 480,
+      "estoque_CAF": 4760
+    }
+  ],
+  [
+    "FENOBARBITAL 100 MG",
+    {
+      "descricao_item": "FENOBARBITAL 100 MG",
+      "estoque_ESF3": 600,
+      "estoque_Olavo": 540,
+      "estoque_CAF": 3740
+    }
+  ],
+  [
+    "FENOBARBITAL 40 MG/ML - GOTAS",
+    {
+      "descricao_item": "FENOBARBITAL 40 MG/ML - GOTAS",
+      "estoque_ESF3": 6,
+      "estoque_CAF": 13
+    }
+  ],
+  [
+    "FINASTERIDA 5 MG",
+    {
+      "descricao_item": "FINASTERIDA 5 MG",
+      "estoque_ESF3": 420,
+      "estoque_Olavo": 465,
+      "estoque_CAF": 2145
+    }
+  ],
+  [
+    "FLUCONAZOL 150 MG",
+    {
+      "descricao_item": "FLUCONAZOL 150 MG",
+      "estoque_ESF3": 41,
+      "estoque_Olavo": 40,
+      "estoque_CAF": 575
+    }
+  ],
+  [
+    "FLUOXETINA, CLORIDRATO 20 MG",
+    {
+      "descricao_item": "FLUOXETINA, CLORIDRATO 20 MG",
+      "estoque_ESF3": 662,
+      "estoque_Olavo": 1560,
+      "estoque_CAF": 7922
+    }
+  ],
+  [
+    "FRALDA DESC GERIATRICA - G",
+    {
+      "descricao_item": "FRALDA DESC GERIATRICA - G",
+      "estoque_Olavo": 174,
+      "estoque_CAF": 674
+    }
+  ],
+  [
+    "FRALDA DESC GERIATRICA - XG",
+    {
+      "descricao_item": "FRALDA DESC GERIATRICA - XG",
+      "estoque_Olavo": 230,
+      "estoque_CAF": 874
+    }
+  ],
+  [
+    "FRALDA DESC GERIATRICA - XXG",
+    {
+      "descricao_item": "FRALDA DESC GERIATRICA - XXG",
+      "estoque_Olavo": 90,
+      "estoque_CAF": 90
+    }
+  ],
+  [
+    "FUROSEMIDA 40MG",
+    {
+      "descricao_item": "FUROSEMIDA 40MG",
+      "estoque_ESF3": 579,
+      "estoque_Olavo": 1520,
+      "estoque_CAF": 8019
+    }
+  ],
+  [
+    "GLICLAZIDA 30 MG",
+    {
+      "descricao_item": "GLICLAZIDA 30 MG",
+      "estoque_ESF3": 630,
+      "estoque_Olavo": 585,
+      "estoque_CAF": 6315
+    }
+  ],
+  [
+    "GLICLAZIDA 60 MG",
+    {
+      "descricao_item": "GLICLAZIDA 60 MG",
+      "estoque_ESF3": 340,
+      "estoque_Olavo": 630,
+      "estoque_CAF": 3550
+    }
+  ],
+  [
+    "HALOPERIDOL,DECANOATO 70,52MG/ML",
+    {
+      "descricao_item": "HALOPERIDOL,DECANOATO 70,52MG/ML",
+      "estoque_ESF3": 13,
+      "estoque_Olavo": 17,
+      "estoque_CAF": 125
+    }
+  ],
+  [
+    "HIDRALAZINA 25MG, CLORIDRATO DE",
+    {
+      "descricao_item": "HIDRALAZINA 25MG, CLORIDRATO DE",
+      "estoque_ESF3": 300,
+      "estoque_Olavo": 700,
+      "estoque_CAF": 1000
+    }
+  ],
+  [
+    "HIDROCORTISONA, SUCCINATO 100 MG - PÓ P/ SOL. INJ",
+    {
+      "descricao_item": "HIDROCORTISONA, SUCCINATO 100 MG - PÓ P/ SOL. INJ",
+      "estoque_CAF": 135
+    }
+  ],
+  [
+    "HIDROCORTISONA, SUCCINATO 500 MG - PÓ P/ SOL. INJ",
+    {
+      "descricao_item": "HIDROCORTISONA, SUCCINATO 500 MG - PÓ P/ SOL. INJ",
+      "estoque_CAF": 85
+    }
+  ],
+  [
+    "HIDROXIDO DE ALUMINIO 6.2% SUSP",
+    {
+      "descricao_item": "HIDROXIDO DE ALUMINIO 6.2% SUSP",
+      "estoque_Olavo": 14,
+      "estoque_CAF": 146
+    }
+  ],
+  [
+    "IBUPROFENO 100MG/ML -  GOTAS",
+    {
+      "descricao_item": "IBUPROFENO 100MG/ML -  GOTAS",
+      "estoque_ESF3": 18,
+      "estoque_Olavo": 55,
+      "estoque_CAF": 239
+    }
+  ],
+  [
+    "IBUPROFENO 300 MG",
+    {
+      "descricao_item": "IBUPROFENO 300 MG",
+      "estoque_ESF3": 170,
+      "estoque_Olavo": 1040,
+      "estoque_CAF": 1640
+    }
+  ],
+  [
+    "IBUPROFENO 50MG/ML - GOTAS",
+    {
+      "descricao_item": "IBUPROFENO 50MG/ML - GOTAS",
+      "estoque_Olavo": 20,
+      "estoque_CAF": 270
+    }
+  ],
+  [
+    "IMIPRAMINA 25 MG",
+    {
+      "descricao_item": "IMIPRAMINA 25 MG",
+      "estoque_ESF3": 330,
+      "estoque_Olavo": 140,
+      "estoque_CAF": 1270
+    }
+  ],
+  [
+    "INSULINA HUMANA REGULAR 100 UI/ML - CANETA",
+    {
+      "descricao_item": "INSULINA HUMANA REGULAR 100 UI/ML - CANETA",
+      "estoque_ESF3": 24,
+      "estoque_Olavo": 26,
+      "estoque_CAF": 60
+    }
+  ],
+  [
+    "INSULINA TRESIBA FLEX PEN",
+    {
+      "descricao_item": "INSULINA TRESIBA FLEX PEN",
+      "estoque_CAF": 0
+    }
+  ],
+  [
+    "IPRATROPIO,BROMETO 0,25 MG/ML SOLUÇÃO PARA INALAÇÃO 20 ML",
+    {
+      "descricao_item": "IPRATROPIO,BROMETO 0,25 MG/ML SOLUÇÃO PARA INALAÇÃO 20 ML",
+      "estoque_CAF": 30
+    }
+  ],
+  [
+    "ITRACONAZOL 100 MG",
+    {
+      "descricao_item": "ITRACONAZOL 100 MG",
+      "estoque_ESF3": 90,
+      "estoque_Olavo": 180,
+      "estoque_CAF": 270
+    }
+  ],
+  [
+    "KOLLAGENASE POMADA",
+    {
+      "descricao_item": "KOLLAGENASE POMADA",
+      "estoque_CAF": 86
+    }
+  ],
+  [
+    "LACTULOSE XAROPE 120 ML",
+    {
+      "descricao_item": "LACTULOSE XAROPE 120 ML",
+      "estoque_Olavo": 20,
+      "estoque_CAF": 206
+    }
+  ],
+  [
+    "LEITE NAN COMFOR 1 - LATA 800 G",
+    {
+      "descricao_item": "LEITE NAN COMFOR 1 - LATA 800 G",
+      "estoque_Olavo": 4,
+      "estoque_CAF": 13
+    }
+  ],
+  [
+    "LEITE NAN SUPREME 1- 800G",
+    {
+      "descricao_item": "LEITE NAN SUPREME 1- 800G",
+      "estoque_Olavo": 0,
+      "estoque_CAF": 2
+    }
+  ],
+  [
+    "LEVETIRACETAM 500MG - ILUDRAL",
+    {
+      "descricao_item": "LEVETIRACETAM 500MG - ILUDRAL",
+      "estoque_Olavo": 60,
+      "estoque_CAF": 60
+    }
+  ],
+  [
+    "LEVODOPA + BENSERAZIDA 100/25MG - PROLOPA BD",
+    {
+      "descricao_item": "LEVODOPA + BENSERAZIDA 100/25MG - PROLOPA BD",
+      "estoque_ESF3": 60,
+      "estoque_CAF": 60
+    }
+  ],
+  [
+    "LEVODOPA + BENSERAZIDA 200/50MG - PROLOPA",
+    {
+      "descricao_item": "LEVODOPA + BENSERAZIDA 200/50MG - PROLOPA",
+      "estoque_ESF3": 150,
+      "estoque_Olavo": 510,
+      "estoque_CAF": 3600
+    }
+  ],
+  [
+    "LEVOFLOXACINO 500 MG",
+    {
+      "descricao_item": "LEVOFLOXACINO 500 MG",
+      "estoque_Olavo": 129,
+      "estoque_CAF": 729
+    }
+  ],
+  [
+    "LEVONORGESTREL 0,15MG+ETINILESTRADIOL 0,03MG- CICLO 21",
+    {
+      "descricao_item": "LEVONORGESTREL 0,15MG+ETINILESTRADIOL 0,03MG- CICLO 21",
+      "estoque_ESF3": 273,
+      "estoque_Olavo": 167,
+      "estoque_CAF": 2960
+    }
+  ],
+  [
+    "LEVOTIROXINA SÓDICA 100MCG",
+    {
+      "descricao_item": "LEVOTIROXINA SÓDICA 100MCG",
+      "estoque_ESF3": 490,
+      "estoque_Olavo": 765,
+      "estoque_CAF": 5475
+    }
+  ],
+  [
+    "LEVOTIROXINA SODICA 25 MG",
+    {
+      "descricao_item": "LEVOTIROXINA SODICA 25 MG",
+      "estoque_ESF3": 610,
+      "estoque_Olavo": 870,
+      "estoque_CAF": 6310
+    }
+  ],
+  [
+    "LEVOTIROXINA SODICA 50MCG",
+    {
+      "descricao_item": "LEVOTIROXINA SODICA 50MCG",
+      "estoque_ESF3": 990,
+      "estoque_Olavo": 1545,
+      "estoque_CAF": 11465
+    }
+  ],
+  [
+    "LIDOCAINA 2% - S/ VASO - SOL. INJETAVEL 20ML",
+    {
+      "descricao_item": "LIDOCAINA 2% - S/ VASO - SOL. INJETAVEL 20ML",
+      "estoque_CAF": 31
+    }
+  ],
+  [
+    "LOPERAMIDA 2 MG",
+    {
+      "descricao_item": "LOPERAMIDA 2 MG",
+      "estoque_Olavo": 260,
+      "estoque_CAF": 460
+    }
+  ],
+  [
+    "LORATADINA 1 MG/ML - XAROPE",
+    {
+      "descricao_item": "LORATADINA 1 MG/ML - XAROPE",
+      "estoque_ESF3": 10,
+      "estoque_Olavo": 48,
+      "estoque_CAF": 585
+    }
+  ],
+  [
+    "LORATADINA 10 MG",
+    {
+      "descricao_item": "LORATADINA 10 MG",
+      "estoque_ESF3": 207,
+      "estoque_Olavo": 1644,
+      "estoque_CAF": 4632
+    }
+  ],
+  [
+    "LOSARTANA POTASSICA 50MG",
+    {
+      "descricao_item": "LOSARTANA POTASSICA 50MG",
+      "estoque_CAF": 60
+    }
+  ],
+  [
+    "MEDROXIPROGESTERONA, ACETATO 150MG/ML (DEPOPROVERA)",
+    {
+      "descricao_item": "MEDROXIPROGESTERONA, ACETATO 150MG/ML (DEPOPROVERA)",
+      "estoque_ESF3": 15,
+      "estoque_Olavo": 17,
+      "estoque_CAF": 131
+    }
+  ],
+  [
+    "METILDOPA 250 MG",
+    {
+      "descricao_item": "METILDOPA 250 MG",
+      "estoque_ESF3": 680,
+      "estoque_Olavo": 1250,
+      "estoque_CAF": 8660
+    }
+  ],
+  [
+    "METILFENIDATO 10 MG",
+    {
+      "descricao_item": "METILFENIDATO 10 MG",
+      "estoque_ESF3": 0,
+      "estoque_Olavo": 120,
+      "estoque_CAF": 705
+    }
+  ],
+  [
+    "METOPROLOL 25 MG",
+    {
+      "descricao_item": "METOPROLOL 25 MG",
+      "estoque_ESF3": 180,
+      "estoque_Olavo": 450,
+      "estoque_CAF": 1410
+    }
+  ],
+  [
+    "METRONIDAZOL 100 MG/G - GEL VAGINAL",
+    {
+      "descricao_item": "METRONIDAZOL 100 MG/G - GEL VAGINAL",
+      "estoque_ESF3": 19,
+      "estoque_Olavo": 10,
+      "estoque_CAF": 169
+    }
+  ],
+  [
+    "METRONIDAZOL 250 MG",
+    {
+      "descricao_item": "METRONIDAZOL 250 MG",
+      "estoque_Olavo": 740,
+      "estoque_CAF": 3740
+    }
+  ],
+  [
+    "MICONAZOL, NITRATO 0,02 MG/G -  80 G CREME VAGINAL",
+    {
+      "descricao_item": "MICONAZOL, NITRATO 0,02 MG/G -  80 G CREME VAGINAL",
+      "estoque_ESF3": 6,
+      "estoque_Olavo": 6,
+      "estoque_CAF": 17
+    }
+  ],
+  [
+    "MIDAZOLAM, CLORIDRATO 5MG/ML 10ML",
+    {
+      "descricao_item": "MIDAZOLAM, CLORIDRATO 5MG/ML 10ML",
+      "estoque_Olavo": 23,
+      "estoque_CAF": 100
+    }
+  ],
+  [
+    "MIRTAZAPINA 15MG",
+    {
+      "descricao_item": "MIRTAZAPINA 15MG",
+      "estoque_CAF": 150
+    }
+  ],
+  [
+    "MORFINA 10MG/ML INJ",
+    {
+      "descricao_item": "MORFINA 10MG/ML INJ",
+      "estoque_Olavo": 9,
+      "estoque_CAF": 57
+    }
+  ],
+  [
+    "MORFINA 1MG/ML INJ",
+    {
+      "descricao_item": "MORFINA 1MG/ML INJ",
+      "estoque_Olavo": 38,
+      "estoque_CAF": 183
+    }
+  ],
+  [
+    "NALOXONA, CLORIDRATO DE  0,4 MG/ 1 ML",
+    {
+      "descricao_item": "NALOXONA, CLORIDRATO DE  0,4 MG/ 1 ML",
+      "estoque_Olavo": 20,
+      "estoque_CAF": 20
+    }
+  ],
+  [
+    "NEOMICINA + BACITRACINA POMADA",
+    {
+      "descricao_item": "NEOMICINA + BACITRACINA POMADA",
+      "estoque_Olavo": 55,
+      "estoque_CAF": 430
+    }
+  ],
+  [
+    "NIFEDIPINA 20MG",
+    {
+      "descricao_item": "NIFEDIPINA 20MG",
+      "estoque_ESF3": 600,
+      "estoque_Olavo": 1110,
+      "estoque_CAF": 1710
+    }
+  ],
+  [
+    "NIMESULIDA 100 MG  CP",
+    {
+      "descricao_item": "NIMESULIDA 100 MG  CP",
+      "estoque_ESF3": 660,
+      "estoque_Olavo": 1296,
+      "estoque_CAF": 5160
+    }
+  ],
+  [
+    "NIMESULIDA GTS",
+    {
+      "descricao_item": "NIMESULIDA GTS",
+      "estoque_Olavo": 17,
+      "estoque_CAF": 47
+    }
+  ],
+  [
+    "NISTATINA POMADA VAG.",
+    {
+      "descricao_item": "NISTATINA POMADA VAG.",
+      "estoque_ESF3": 5,
+      "estoque_Olavo": 14,
+      "estoque_CAF": 89
+    }
+  ],
+  [
+    "NITROFURANTOINA 100MG CAPSULA",
+    {
+      "descricao_item": "NITROFURANTOINA 100MG CAPSULA",
+      "estoque_ESF3": 154,
+      "estoque_Olavo": 518,
+      "estoque_CAF": 4732
+    }
+  ],
+  [
+    "NORETISTERONA + ESTRADIOL 50 + 5 MG/ML  (MESIGYNA) INJETAVEL",
+    {
+      "descricao_item": "NORETISTERONA + ESTRADIOL 50 + 5 MG/ML  (MESIGYNA) INJETAVEL",
+      "estoque_ESF3": 24,
+      "estoque_Olavo": 19,
+      "estoque_CAF": 183
+    }
+  ],
+  [
+    "NORFLOXACINO 400MG",
+    {
+      "descricao_item": "NORFLOXACINO 400MG",
+      "estoque_Olavo": 112,
+      "estoque_CAF": 112
+    }
+  ],
+  [
+    "NORIPURUM INJ",
+    {
+      "descricao_item": "NORIPURUM INJ",
+      "estoque_ESF3": 22,
+      "estoque_Olavo": 57,
+      "estoque_CAF": 124
+    }
+  ],
+  [
+    "NORTRIPTILINA, CLORIDRATO 25 MG",
+    {
+      "descricao_item": "NORTRIPTILINA, CLORIDRATO 25 MG",
+      "estoque_Olavo": 520,
+      "estoque_CAF": 3220
+    }
+  ],
+  [
+    "OMEPRAZOL 20MG",
+    {
+      "descricao_item": "OMEPRAZOL 20MG",
+      "estoque_ESF3": 1400,
+      "estoque_Olavo": 2369,
+      "estoque_CAF": 9294
+    }
+  ],
+  [
+    "OMEPRAZOL SODICO PO INJETAVEL",
+    {
+      "descricao_item": "OMEPRAZOL SODICO PO INJETAVEL",
+      "estoque_Olavo": 7,
+      "estoque_CAF": 61
+    }
+  ],
+  [
+    "ONDANSETRONA 4 MG",
+    {
+      "descricao_item": "ONDANSETRONA 4 MG",
+      "estoque_ESF3": 70,
+      "estoque_CAF": 1140
+    }
+  ],
+  [
+    "ONDANSETRONA 4 MG/ 2 ML INJ",
+    {
+      "descricao_item": "ONDANSETRONA 4 MG/ 2 ML INJ",
+      "estoque_CAF": 1985
+    }
+  ],
+  [
+    "OXCARBAZEPINA 300 MG",
+    {
+      "descricao_item": "OXCARBAZEPINA 300 MG",
+      "estoque_ESF3": 240,
+      "estoque_Olavo": 270,
+      "estoque_CAF": 2490
+    }
+  ],
+  [
+    "PARACETAMOL + CODEINA 500/30 MG",
+    {
+      "descricao_item": "PARACETAMOL + CODEINA 500/30 MG",
+      "estoque_ESF3": 0,
+      "estoque_Olavo": 594,
+      "estoque_CAF": 2898
+    }
+  ],
+  [
+    "PARACETAMOL 200 MG/ ML -  FRASCO 15 ML GOTAS",
+    {
+      "descricao_item": "PARACETAMOL 200 MG/ ML -  FRASCO 15 ML GOTAS",
+      "estoque_Olavo": 67,
+      "estoque_CAF": 295
+    }
+  ],
+  [
+    "PARACETAMOL 750 MG",
+    {
+      "descricao_item": "PARACETAMOL 750 MG",
+      "estoque_ESF3": 470,
+      "estoque_Olavo": 430,
+      "estoque_CAF": 3930
+    }
+  ],
+  [
+    "PENTOXIFILINA 400 MG",
+    {
+      "descricao_item": "PENTOXIFILINA 400 MG",
+      "estoque_ESF3": 180,
+      "estoque_Olavo": 150,
+      "estoque_CAF": 1110
+    }
+  ],
+  [
+    "PERMETRINA 5% LOÇÃO",
+    {
+      "descricao_item": "PERMETRINA 5% LOÇÃO",
+      "estoque_ESF3": 6,
+      "estoque_CAF": 31
+    }
+  ],
+  [
+    "POMADA PARA ASSADURA ( NIST+ OX ZINCO) PMD",
+    {
+      "descricao_item": "POMADA PARA ASSADURA ( NIST+ OX ZINCO) PMD",
+      "estoque_ESF3": 9,
+      "estoque_Olavo": 23,
+      "estoque_CAF": 117
+    }
+  ],
+  [
+    "PREDNISOLONA 3MG/ML, FOSFATO SODICO DE",
+    {
+      "descricao_item": "PREDNISOLONA 3MG/ML, FOSFATO SODICO DE",
+      "estoque_ESF3": 20,
+      "estoque_Olavo": 49,
+      "estoque_CAF": 419
+    }
+  ],
+  [
+    "PREDNISONA 20 MG",
+    {
+      "descricao_item": "PREDNISONA 20 MG",
+      "estoque_ESF3": 670,
+      "estoque_Olavo": 2068,
+      "estoque_CAF": 10758
+    }
+  ],
+  [
+    "PREDNISONA 5 MG - CP",
+    {
+      "descricao_item": "PREDNISONA 5 MG - CP",
+      "estoque_Olavo": 540,
+      "estoque_CAF": 1040
+    }
+  ],
+  [
+    "PREGABALINA 75MG - LYRICA",
+    {
+      "descricao_item": "PREGABALINA 75MG - LYRICA",
+      "estoque_Olavo": 395,
+      "estoque_CAF": 2115
+    }
+  ],
+  [
+    "PROMETAZINA 50 MG/ 2ML",
+    {
+      "descricao_item": "PROMETAZINA 50 MG/ 2ML",
+      "estoque_Olavo": 39,
+      "estoque_CAF": 166
+    }
+  ],
+  [
+    "PROPRANOLOL 40MG",
+    {
+      "descricao_item": "PROPRANOLOL 40MG",
+      "estoque_ESF3": 1000,
+      "estoque_Olavo": 580,
+      "estoque_CAF": 3040
+    }
+  ],
+  [
+    "RIFOCINA SPRAY",
+    {
+      "descricao_item": "RIFOCINA SPRAY",
+      "estoque_CAF": 44
+    }
+  ],
+  [
+    "RIVAROXABANA 10 MG (XARELTO)",
+    {
+      "descricao_item": "RIVAROXABANA 10 MG (XARELTO)",
+      "estoque_Olavo": 30,
+      "estoque_CAF": 120
+    }
+  ],
+  [
+    "SAIS P/REIDRATAÇÃO ORAL",
+    {
+      "descricao_item": "SAIS P/REIDRATAÇÃO ORAL",
+      "estoque_ESF3": 54,
+      "estoque_Olavo": 267,
+      "estoque_CAF": 2910
+    }
+  ],
+  [
+    "SALBUTAMOL, SULFATO 100 MCG/ DOSE -  AEROSOL",
+    {
+      "descricao_item": "SALBUTAMOL, SULFATO 100 MCG/ DOSE -  AEROSOL",
+      "estoque_ESF3": 6,
+      "estoque_Olavo": 4,
+      "estoque_CAF": 21
+    }
+  ],
+  [
+    "SERTRALINA 50MG",
+    {
+      "descricao_item": "SERTRALINA 50MG",
+      "estoque_ESF3": 4530,
+      "estoque_Olavo": 3030,
+      "estoque_CAF": 18960
+    }
+  ],
+  [
+    "SIMETICONA GTS",
+    {
+      "descricao_item": "SIMETICONA GTS",
+      "estoque_ESF3": 17,
+      "estoque_Olavo": 46,
+      "estoque_CAF": 182
+    }
+  ],
+  [
+    "SINVASTATINA 20MG",
+    {
+      "descricao_item": "SINVASTATINA 20MG",
+      "estoque_CAF": 400
+    }
+  ],
+  [
+    "SORO NASAL INFANTIL/ADULTO -30 ML",
+    {
+      "descricao_item": "SORO NASAL INFANTIL/ADULTO -30 ML",
+      "estoque_ESF3": 5,
+      "estoque_Olavo": 9,
+      "estoque_CAF": 79
+    }
+  ],
+  [
+    "SULFADIAZINA DE PRATA 0,01",
+    {
+      "descricao_item": "SULFADIAZINA DE PRATA 0,01",
+      "estoque_CAF": 55
+    }
+  ],
+  [
+    "SULFATO DE MAGNESIO 10%",
+    {
+      "descricao_item": "SULFATO DE MAGNESIO 10%",
+      "estoque_Olavo": 10,
+      "estoque_CAF": 10
+    }
+  ],
+  [
+    "SULFATO FERROSO 40 MG",
+    {
+      "descricao_item": "SULFATO FERROSO 40 MG",
+      "estoque_ESF3": 805,
+      "estoque_Olavo": 830,
+      "estoque_CAF": 3435
+    }
+  ],
+  [
+    "SUPLEMENTO VITAMINICO A-Z",
+    {
+      "descricao_item": "SUPLEMENTO VITAMINICO A-Z",
+      "estoque_ESF3": 665,
+      "estoque_Olavo": 750,
+      "estoque_CAF": 3695
+    }
+  ],
+  [
+    "SUPLEMENTO VITAMINICO A-Z LIQUIDO",
+    {
+      "descricao_item": "SUPLEMENTO VITAMINICO A-Z LIQUIDO",
+      "estoque_Olavo": 5,
+      "estoque_CAF": 10
+    }
+  ],
+  [
+    "TESTE RAPIDO DE GRAVIDEZ",
+    {
+      "descricao_item": "TESTE RAPIDO DE GRAVIDEZ",
+      "estoque_Olavo": 10,
+      "estoque_CAF": 72
+    }
+  ],
+  [
+    "TIBOLONA 1,25MG",
+    {
+      "descricao_item": "TIBOLONA 1,25MG",
+      "estoque_ESF3": 35,
+      "estoque_Olavo": 333,
+      "estoque_CAF": 728
+    }
+  ],
+  [
+    "TOBRAMICINA 0,3 % COLIRIO - FRASCO 5 ML",
+    {
+      "descricao_item": "TOBRAMICINA 0,3 % COLIRIO - FRASCO 5 ML",
+      "estoque_Olavo": 19,
+      "estoque_CAF": 68
+    }
+  ],
+  [
+    "TORVAL CR 500MG",
+    {
+      "descricao_item": "TORVAL CR 500MG",
+      "estoque_Olavo": 60,
+      "estoque_CAF": 60
+    }
+  ],
+  [
+    "TRAMADOL 50MG/ML(TRAMAL)- AMP",
+    {
+      "descricao_item": "TRAMADOL 50MG/ML(TRAMAL)- AMP",
+      "estoque_Olavo": 32,
+      "estoque_CAF": 187
+    }
+  ],
+  [
+    "VALPROATO DE SÓDIO 50 MG/ML - XPE",
+    {
+      "descricao_item": "VALPROATO DE SÓDIO 50 MG/ML - XPE",
+      "estoque_Olavo": 35,
+      "estoque_CAF": 185
+    }
+  ],
+  [
+    "VARFARINA SODICA 5MG - MAREVAN",
+    {
+      "descricao_item": "VARFARINA SODICA 5MG - MAREVAN",
+      "estoque_ESF3": 180,
+      "estoque_Olavo": 210,
+      "estoque_CAF": 1440
+    }
+  ],
+  [
+    "VITAMINA D3 7.000 UI",
+    {
+      "descricao_item": "VITAMINA D3 7.000 UI",
+      "estoque_ESF3": 266,
+      "estoque_Olavo": 585,
+      "estoque_CAF": 4001
+    }
+  ],
+  [
+    "ACICLOVIR 5 % CREME 10 G",
+    {
+      "descricao_item": "ACICLOVIR 5 % CREME 10 G",
+      "estoque_ESF3": 4,
+      "estoque_Olavo": 12
+    }
+  ],
+  [
+    "AGULHA PARA CANETA DE INSULINA 4MM",
+    {
+      "descricao_item": "AGULHA PARA CANETA DE INSULINA 4MM",
+      "estoque_ESF3": 575,
+      "estoque_Olavo": 1910
+    }
+  ],
+  [
+    "AMIODARONA, CLORIDRATO  200 MG",
+    {
+      "descricao_item": "AMIODARONA, CLORIDRATO  200 MG",
+      "estoque_ESF3": 310,
+      "estoque_Olavo": 470
+    }
+  ],
+  [
+    "CARVEDILOL 6,25 MG",
+    {
+      "descricao_item": "CARVEDILOL 6,25 MG",
+      "estoque_ESF3": 90,
+      "estoque_Olavo": 360
+    }
+  ],
+  [
+    "DIGOXINA 0.25 MG",
+    {
+      "descricao_item": "DIGOXINA 0.25 MG",
+      "estoque_ESF3": 180
+    }
+  ],
+  [
+    "DRAMIN  GOTAS",
+    {
+      "descricao_item": "DRAMIN  GOTAS",
+      "estoque_ESF3": 12,
+      "estoque_Olavo": 30
+    }
+  ],
+  [
+    "FOSFATO OSELTAMIVIR 75 MG - TAMIFLU",
+    {
+      "descricao_item": "FOSFATO OSELTAMIVIR 75 MG - TAMIFLU",
+      "estoque_ESF3": 0,
+      "estoque_Olavo": 50
+    }
+  ],
+  [
+    "INSULINA HUMANA NPH 100 UI/ML - CANETA",
+    {
+      "descricao_item": "INSULINA HUMANA NPH 100 UI/ML - CANETA",
+      "estoque_ESF3": 49,
+      "estoque_Olavo": 203
+    }
+  ],
+  [
+    "IVERMECTINA 6 MG",
+    {
+      "descricao_item": "IVERMECTINA 6 MG",
+      "estoque_ESF3": 73,
+      "estoque_Olavo": 28
+    }
+  ],
+  [
+    "LEVOMEPROMAZINA 100 MG",
+    {
+      "descricao_item": "LEVOMEPROMAZINA 100 MG",
+      "estoque_ESF3": 140,
+      "estoque_Olavo": 240
+    }
+  ],
+  [
+    "NITRAZEPAN 5 MG",
+    {
+      "descricao_item": "NITRAZEPAN 5 MG",
+      "estoque_ESF3": 40
+    }
+  ],
+  [
+    "PARACETAMOL 500 MG - COMP",
+    {
+      "descricao_item": "PARACETAMOL 500 MG - COMP",
+      "estoque_ESF3": 270,
+      "estoque_Olavo": 580
+    }
+  ],
+  [
+    "PROMETAZINA 25 MG",
+    {
+      "descricao_item": "PROMETAZINA 25 MG",
+      "estoque_ESF3": 440,
+      "estoque_Olavo": 325
+    }
+  ],
+  [
+    "SULFAMET. +TRIMETOPRIMA  400 + 80MG",
+    {
+      "descricao_item": "SULFAMET. +TRIMETOPRIMA  400 + 80MG",
+      "estoque_ESF3": 250,
+      "estoque_Olavo": 130
+    }
+  ],
+  [
+    "SULFATO FERROSO 25 MG/ML - GOTAS",
+    {
+      "descricao_item": "SULFATO FERROSO 25 MG/ML - GOTAS",
+      "estoque_ESF3": 5,
+      "estoque_Olavo": 9
+    }
+  ],
+  [
+    "TIAMINA 300 MG - CP",
+    {
+      "descricao_item": "TIAMINA 300 MG - CP",
+      "estoque_ESF3": 470
+    }
+  ],
+  [
+    "ADESIVO NICOTINA 14 MG",
+    {
+      "descricao_item": "ADESIVO NICOTINA 14 MG",
+      "estoque_Olavo": 9261
+    }
+  ],
+  [
+    "ADESIVO NICOTINA 21 MG",
+    {
+      "descricao_item": "ADESIVO NICOTINA 21 MG",
+      "estoque_Olavo": 9135
+    }
+  ],
+  [
+    "ATROPINA, SULFATO 0,50MG/ML",
+    {
+      "descricao_item": "ATROPINA, SULFATO 0,50MG/ML",
+      "estoque_Olavo": 41
+    }
+  ],
+  [
+    "BUPROPIONA 150 MG - TABAGISMO",
+    {
+      "descricao_item": "BUPROPIONA 150 MG - TABAGISMO",
+      "estoque_Olavo": 10540
+    }
+  ],
+  [
+    "BUSCOPAM SIMPLES GOTAS",
+    {
+      "descricao_item": "BUSCOPAM SIMPLES GOTAS",
+      "estoque_Olavo": 15
+    }
+  ],
+  [
+    "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ EV",
+    {
+      "descricao_item": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ EV",
+      "estoque_Olavo": 138
+    }
+  ],
+  [
+    "CETOPROFENO 100 MG - EV",
+    {
+      "descricao_item": "CETOPROFENO 100 MG - EV",
+      "estoque_Olavo": 29
+    }
+  ],
+  [
+    "CLONIDINA, CLORIDRATO DE 150MCG/ML",
+    {
+      "descricao_item": "CLONIDINA, CLORIDRATO DE 150MCG/ML",
+      "estoque_Olavo": 26
+    }
+  ],
+  [
+    "COMPLEXO B CP",
+    {
+      "descricao_item": "COMPLEXO B CP",
+      "estoque_Olavo": 450
+    }
+  ],
+  [
+    "CUTISANOL BABY 120G",
+    {
+      "descricao_item": "CUTISANOL BABY 120G",
+      "estoque_Olavo": 25
+    }
+  ],
+  [
+    "ETOMIDATO 2 MG/ML - AMP",
+    {
+      "descricao_item": "ETOMIDATO 2 MG/ML - AMP",
+      "estoque_Olavo": 14
+    }
+  ],
+  [
+    "FENITOINA 50 MG / ML- AMPOLA",
+    {
+      "descricao_item": "FENITOINA 50 MG / ML- AMPOLA",
+      "estoque_Olavo": 38
+    }
+  ],
+  [
+    "FENTANILA,CITRATO 78,5MCG/5ML EQUIVALENTE A 50MCG",
+    {
+      "descricao_item": "FENTANILA,CITRATO 78,5MCG/5ML EQUIVALENTE A 50MCG",
+      "estoque_Olavo": 6
+    }
+  ],
+  [
+    "FLUMAZENIL 0,1 MG/ 5 ML SOL INJ.",
+    {
+      "descricao_item": "FLUMAZENIL 0,1 MG/ 5 ML SOL INJ.",
+      "estoque_Olavo": 24
+    }
+  ],
+  [
+    "GOMA NICOTINA 2 MG (NICORETTE)",
+    {
+      "descricao_item": "GOMA NICOTINA 2 MG (NICORETTE)",
+      "estoque_Olavo": 1500
+    }
+  ],
+  [
+    "GUACO XAROPE - MIKANIA GLOMERATA 117,5MG/ML",
+    {
+      "descricao_item": "GUACO XAROPE - MIKANIA GLOMERATA 117,5MG/ML",
+      "estoque_Olavo": 17
+    }
+  ],
+  [
+    "HALOPERIDOL 5MG",
+    {
+      "descricao_item": "HALOPERIDOL 5MG",
+      "estoque_Olavo": 380
+    }
+  ],
+  [
+    "INSULINA HUMANA NPH 100 UI/ML - FRASCO 10 ML",
+    {
+      "descricao_item": "INSULINA HUMANA NPH 100 UI/ML - FRASCO 10 ML",
+      "estoque_Olavo": 41
+    }
+  ],
+  [
+    "METOCLOPRAMIDA 10 MG",
+    {
+      "descricao_item": "METOCLOPRAMIDA 10 MG",
+      "estoque_Olavo": 280
+    }
+  ],
+  [
+    "METOPROLOL 50 MG",
+    {
+      "descricao_item": "METOPROLOL 50 MG",
+      "estoque_Olavo": 330
+    }
+  ],
+  [
+    "NITROPRUSSETO DE SÓDIO 25 MG/ML - NITROP",
+    {
+      "descricao_item": "NITROPRUSSETO DE SÓDIO 25 MG/ML - NITROP",
+      "estoque_Olavo": 19
+    }
+  ],
+  [
+    "SORO MANITOL 250ML",
+    {
+      "descricao_item": "SORO MANITOL 250ML",
+      "estoque_Olavo": 2
+    }
+  ],
+  [
+    "SUXAMETONIO 100MG SUSP INJ",
+    {
+      "descricao_item": "SUXAMETONIO 100MG SUSP INJ",
+      "estoque_Olavo": 12
+    }
+  ],
+  [
+    "TESTE DE TROPONINA CARDIACA",
+    {
+      "descricao_item": "TESTE DE TROPONINA CARDIACA",
+      "estoque_Olavo": 18
+    }
+  ]
+]

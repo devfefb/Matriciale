@@ -21,7 +21,7 @@ async function gerarComparacaoDetalhada(): Promise<void> {
     console.log('🔍 Gerando comparação detalhada lado a lado...');
     
     // Carrega o relatório de validação
-    const caminhoRelatorio = path.join(__dirname, './output/relatorio-validacao.json');
+    const caminhoRelatorio = path.join(__dirname, '../../calculos/output_validacao/relatorio-validacao.json');
     if (!fs.existsSync(caminhoRelatorio)) {
       console.log('⚠️ Relatório de validação não encontrado. Executando validação primeiro...');
       await validarCalculosComGabarito();
@@ -59,7 +59,7 @@ async function gerarComparacaoDetalhada(): Promise<void> {
     ];
     
     // Carrega o gabarito para obter valores detalhados
-    const caminhoGabarito = path.join(__dirname, './output/gabarito-campos-calculados.json');
+    const caminhoGabarito = path.join(__dirname, './gabarito/gabarito-campos-calculados.json');
     const gabaritoData = fs.readFileSync(caminhoGabarito, 'utf8');
     const gabarito = JSON.parse(gabaritoData);
     
@@ -134,7 +134,7 @@ async function gerarComparacaoDetalhada(): Promise<void> {
       }))
     };
     
-    const caminhoComparacao = path.join(__dirname, './output/comparacao-detalhada.json');
+    const caminhoComparacao = path.join(__dirname, '../../calculos/output_validacao/comparacao-detalhada.json');
     fs.writeFileSync(caminhoComparacao, JSON.stringify(relatorioDetalhado, null, 2));
     
     // Gera relatório em formato CSV para análise em Excel
@@ -156,7 +156,7 @@ async function gerarComparacaoDetalhada(): Promise<void> {
       csvContent += '\n';
     }
     
-    const caminhoCSV = path.join(__dirname, './output/comparacao-detalhada.csv');
+    const caminhoCSV = path.join(__dirname, '../../calculos/output_validacao/comparacao-detalhada.csv');
     fs.writeFileSync(caminhoCSV, csvContent);
     
     console.log('✅ Comparação detalhada gerada com sucesso!');
