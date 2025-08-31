@@ -287,3 +287,253 @@ Cada pasta contém seu próprio README com:
 ## 📝 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Prompts para Cursor AI - Sistema de Gestão de Estoque Farmacêutico
+
+## PROMPT 1: FASE 1 - Integração e Generalização do Ambiente de Teste Local
+
+### Contexto do Sistema
+Você está trabalhando em um sistema de gestão de estoque farmacêutico que possui dois fluxos principais:
+1. **Fluxo Semanal**: Upload de planilhas de movimentação e balancete por unidade
+2. **Fluxo de Onboarding**: Upload de planilha massiva com histórico completo de novo município
+
+### Estado Atual do Código
+- ✅ **JÁ IMPLEMENTADO**: Lógica de recálculo completa e validada em `backend/scripts/testes/validar-calculos.ts`
+- ✅ **JÁ IMPLEMENTADO**: Scripts de extração no frontend (`frontend/extraction/script.cjs` e `frontend/extraction/data/extracao_estoques/script_extracao.cjs`)
+- ✅ **JÁ IMPLEMENTADO**: Motor de onboarding em `backend/scripts/inserir_semanas/`
+- ❌ **NÃO IMPLEMENTADO**: Interfaces drag & drop para upload
+- ❌ **NÃO IMPLEMENTADO**: Generalização para remover referências fixas a nomes de unidades/municípios
+- ❌ **NÃO IMPLEMENTADO**: Orquestração automatizada do fluxo de teste local
+
+### Objetivos da Fase 1
+Transformar o processo de teste manual atual em um fluxo automatizado e robusto para ambiente local.
+
+### Tarefas Específicas
+
+#### 1. Implementar Interfaces Drag & Drop
+- Criar dois componentes de frontend distintos:
+  - Interface para **Fluxo Semanal**: Upload de múltiplas planilhas (movimentação + balancete) por unidade
+  - Interface para **Fluxo de Onboarding**: Upload de uma única planilha massiva histórica
+- Integrar com os scripts de extração existentes (`script.cjs` e `script_extracao.cjs`)
+- Implementar feedback visual de progresso e validação de arquivos
+
+#### 2. Generalizar o Código (Tornar Agnóstico)
+- **Frontend**: Refatorar `script.cjs` e `script_extracao.cjs` para:
+  - Extrair dinamicamente nome da unidade/município a partir dos nomes dos arquivos
+  - Eliminar qualquer referência hardcoded a nomes específicos (ex: CAF, Olavo, ESF3)
+  - Implementar parsing inteligente dos nomes de arquivo para identificar unidade e tipo de dados
+
+- **Backend**: Revisar e refatorar `validar-calculos.ts` e scripts relacionados para:
+  - Aceitar parâmetros dinâmicos de unidade/município
+  - Remover dependências de nomes fixos de entidades
+
+#### 3. Orquestrar Fluxo de Teste Local
+Implementar sistema de pastas e observação automática:
+
+```
+projeto/
+├── test-input/          # Pasta observada pelo backend
+├── test-output/         # Resultados dos cálculos
+├── test-gabaritos/      # Arquivos de referência para validação
+```
+
+- **Frontend**: Após extração, salvar JSON em `test-input/`
+- **Backend**: Implementar observador de pasta (`fs.watch` ou similar) que:
+  - Detecta novos arquivos JSON em `test-input/`
+  - Dispara `validar-calculos.ts` automaticamente
+  - Salva resultado em `test-output/`
+  - Remove arquivo processado de `test-input/`
+
+#### 4. Sistema de Validação Consolidado
+- Implementar comparação automática entre saída gerada e gabarito esperado
+- Criar interface para visualizar diferenças e aprovar/rejeitar resultados
+- Sistema de versionamento de gabaritos para diferentes cenários de teste
+
+### Estrutura Esperada Pós-Implementação
+```
+frontend/
+├── components/
+│   ├── UploadSemanal.vue/jsx     # Interface drag&drop fluxo semanal
+│   └── UploadOnboarding.vue/jsx  # Interface drag&drop onboarding
+├── extraction/
+│   ├── script.cjs                # [REFATORADO] Agnóstico a unidades
+│   └── data/extracao_estoques/
+│       └── script_extracao.cjs   # [REFATORADO] Agnóstico a municípios
+
+backend/
+├── scripts/
+│   ├── testes/
+│   │   ├── validar-calculos.ts   # [EXISTENTE] Motor de cálculo
+│   │   └── file-watcher.ts       # [NOVO] Observador de pasta test-input
+│   └── inserir_semanas/          # [EXISTENTE] Motor onboarding
+├── test-input/                   # [NOVA] Pasta monitorada
+├── test-output/                  # [NOVA] Resultados
+└── test-gabaritos/               # [NOVA] Arquivos de referência
+```
+
+### Critérios de Sucesso
+- [ ] Upload via drag&drop funcional para ambos os fluxos
+- [ ] Sistema funciona com qualquer nome de unidade/município extraído do arquivo
+- [ ] Fluxo completamente automatizado: upload → extração → processamento → resultado
+- [ ] Validação automática contra gabaritos com interface de comparação
+- [ ] Zero intervenção manual necessária no processo de teste
+
+---
+
+## PROMPT 2: FASE 2 - Transição para Ambiente de Produção
+
+### Contexto da Fase 2
+Com a Fase 1 concluída, você possui um ambiente de teste local totalmente funcional e automatizado. Agora o objetivo é adaptar este fluxo para operar em produção na nuvem, mantendo a mesma lógica de cálculo mas alterando apenas as camadas de entrada e saída de dados.
+
+### Estado Atual (Pós-Fase 1)
+- ✅ **IMPLEMENTADO NA FASE 1**: Sistema de teste local automatizado
+- ✅ **IMPLEMENTADO NA FASE 1**: Interfaces drag & drop funcionais
+- ✅ **IMPLEMENTADO NA FASE 1**: Código generalizado (agnóstico a unidades/municípios)
+- ✅ **JÁ EXISTIA**: Estrutura MVC atual
+- ❌ **NÃO IMPLEMENTADO**: Rota para envio de JSONs para cloud storage
+- ❌ **NÃO IMPLEMENTADO**: Integração com cloud storage para processamento
+- ❌ **NÃO IMPLEMENTADO**: Sistema de eventos do storage para disparar backend
+- ❌ **NÃO IMPLEMENTADO**: Persistência no banco de dados (modo production)
+
+### Objetivos da Fase 2
+Migrar o fluxo local para produção na nuvem, utilizando a mesma lógica de cálculo com diferentes camadas de I/O.
+
+### Arquitetura Alvo
+```
+PRODUÇÃO:
+Frontend → Cloud Storage → Event Trigger → Backend → Database
+   ↓            ↓              ↓            ↓         ↓
+Upload     JSON Storage    Auto-trigger   Cálculo   Persistência
+
+TESTE (Fase 1):
+Frontend → Local Folder → File Watcher → Backend → Local File
+   ↓            ↓              ↓           ↓         ↓
+Upload     test-input/    Observador    Cálculo   test-output/
+```
+
+### Tarefas Específicas
+
+#### 1. Integrar com Cloud Storage
+- **Frontend**: Modificar componentes de upload para:
+  - Detectar modo de operação (test vs production) via variável de ambiente
+  - **Modo Production**: Enviar JSON extraído diretamente para bucket cloud storage
+  - **Modo Test**: Manter comportamento da Fase 1 (salvar em pasta local)
+  - Utilizar rota MVC existente para upload para storage
+
+- **Backend**: Implementar trigger de eventos do storage:
+  - Configurar listener para eventos de criação de arquivo no bucket
+  - Mapear eventos para disparar o mesmo motor de cálculo (`validar-calculos.ts`)
+  - Implementar download automático do JSON do storage para processamento
+
+#### 2. Sistema de Modo de Operação
+Implementar chave seletora já mencionada no documento:
+
+```typescript
+enum OperationMode {
+  TEST = 'test',
+  PRODUCTION = 'production'
+}
+
+// Controle via variável de ambiente
+const MODE = process.env.OPERATION_MODE || OperationMode.TEST;
+```
+
+#### 3. Integrar com Banco de Dados
+- **Refatorar `validar-calculos.ts`** para suportar duplo modo:
+  - **Modo Test**: Salvar resultado como arquivo em `test-output/` (comportamento atual)
+  - **Modo Production**: Persistir dados calculados diretamente nas tabelas do banco
+
+- **Implementar camada de persistência**:
+  - Mapear estrutura do JSON calculado para schema do banco
+  - Implementar transações para garantir consistência
+  - Atualizar campos: `qtd_saidas_periodo`, `qtd_periodo_final`, medianas (Md04, etc.), Máximo, Metodo, MetEst, Reposição, contadores
+
+#### 4. Orquestração Completa do Fluxo de Produção
+Implementar ciclo completo automatizado:
+
+1. **Upload**: Administrador faz upload via interface drag&drop
+2. **Extração**: Frontend extrai dados e gera JSON
+3. **Storage**: JSON enviado para cloud storage via rota MVC
+4. **Trigger**: Evento de storage dispara processamento backend
+5. **Processamento**: Backend executa `validar-calculos.ts` em modo production
+6. **Persistência**: Dados calculados salvos no banco de dados
+7. **Limpeza**: Arquivo temporário removido do storage
+
+#### 5. Tratamento de Erros e Monitoramento
+- Implementar logs detalhados para rastreamento do fluxo
+- Sistema de retry para falhas temporárias
+- Notificações de erro para administrador
+- Métricas de performance e uso
+
+### Estrutura de Código (Adições/Modificações)
+
+```
+backend/
+├── scripts/
+│   ├── calculos/                    # [NOVA] Ambiente de produção
+│   │   ├── production-processor.ts  # [NOVO] Orquestrador produção
+│   │   └── database-adapter.ts      # [NOVO] Camada persistência BD
+│   ├── testes/
+│   │   └── validar-calculos.ts      # [REFATORADO] Suporte duplo modo
+│   └── shared/
+│       ├── operation-mode.ts        # [NOVO] Enum e controle de modo
+│       └── storage-events.ts        # [NOVO] Listeners cloud storage
+├── controllers/                     # [EXISTENTE] Estrutura MVC
+├── models/                          # [EXISTENTE] 
+└── routes/                          # [EXISTENTE] Rota storage já existe
+
+frontend/
+├── components/
+│   ├── UploadSemanal.vue/jsx        # [REFATORADO] Suporte duplo modo
+│   └── UploadOnboarding.vue/jsx     # [REFATORADO] Suporte duplo modo
+└── config/
+    └── environment.ts               # [NOVO] Configuração modo operação
+```
+
+### Integração com Estrutura MVC Existente
+- **Controllers**: Utilizar controller existente para upload, adicionar controller para processamento
+- **Models**: Mapear para entidades do banco (medicamentos, movimentações, estoques)
+- **Routes**: Usar rota existente para storage, adicionar rotas para status e monitoramento
+
+### Critérios de Sucesso
+- [ ] Sistema funciona identicamente em modo test (local) e production (nuvem)
+- [ ] Upload → storage → trigger → processamento → banco funcionando automaticamente
+- [ ] Zero modificação necessária na lógica de cálculo (`validar-calculos.ts`)
+- [ ] Dados persistidos corretamente no banco de dados
+- [ ] Limpeza automática de arquivos temporários
+- [ ] Logs e monitoramento implementados
+- [ ] Fluxo completo testado end-to-end em ambiente de produção
+
+### Validação Final
+- Testar ambos os fluxos (Semanal e Onboarding) em produção
+- Verificar consistência de dados entre modo test e production
+- Confirmar performance adequada para volumes esperados (ex: JSON 10.7 MB)
+- Validar tratamento de erros e recuperação

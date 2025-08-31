@@ -1,0 +1,55 @@
+.file-converter-container {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.drop-zone {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.drop-zone.active {
+    background-color: #f0f0f0;
+    border-color: #007bff;
+}
+
+.browse-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.browse-btn:hover {
+    background-color: #0056b3;
+}
+
+.output-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.json-output {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+} 

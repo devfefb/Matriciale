@@ -1,12 +1,9 @@
-import { db } from '../../config/firebase';
-import { 
-  MovimentacaoSemana, 
-  DadosUnidade, 
-  DadosPlanilha 
-} from '../interfaces/interfaces-campos-banco';
+
 import * as XLSX from 'xlsx';
 import * as path from 'path';
 import * as fs from 'fs';
+import { DadosPlanilha, DadosUnidade, MovimentacaoSemana } from '@/scripts/interfaces/interfaces-campos-banco';
+import { db } from '@/config/firebase';
 
 // --- CONFIGURAÇÕES ---
 const SEMANA_ALVO = '2025_22';

@@ -1,7 +1,7 @@
 // Insere a semana 22 apenas para fins de teste
 
 import { inserirMovimentacoesSemanais } from './inserir-semana';
-import { verificarVariaveisAmbiente } from '../utils/utils';
+import { verificarVariaveisAmbiente } from '../../utils/utils';
 
 console.log('📊 Script de Inserção de Movimentações Semanais');
 console.log('==============================================\n');
