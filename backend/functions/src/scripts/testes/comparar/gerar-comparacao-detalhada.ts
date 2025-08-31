@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { validarCalculosComGabarito } from '../../calculos/validar-calculos';
+import { validarCalculosComGabarito } from './validar-calculos';
 
 interface ComparacaoDetalhada {
   medicamento: string;

@@ -1,32 +1,32 @@
-{
-  "periodo_inicio": "26/05/2025",
-  "periodo_fim": "01/06/2025",
-  "itens": [
-    {
-      "cod_sistemico_item": "325023001",
-      "descricao_item": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-      "tipo_unid_item": "CP",
-      "qtd_periodo_inicial": 1760,
-      "valor_item_periodo_inicial": 69.3999669468585,
-      "qtd_entradas_periodo": 500,
-      "valor_entradas_periodo": 19.55,
-      "qtd_saidas_periodo": 540,
-      "valor_saidas_periodo": 21.1313085793384,
-      "qtd_periodo_final": 1720,
-      "valor_unitario_periodo_final": 0.0394294525392559,
-      "valor_item_periodo_final": 67.8186583675202,
-      "movimentacoes": [
-        {
-          "data_movimentacao": "25/05/2025",
-          "historico": "SALDO ANTERIOR",
-          "documento": null,
-          "requisicao": "",
-          "entradas": null,
-          "saidas": 0,
-          "estoque": 1760,
-          "observacao": ""
-        },
-        {
+  {
+    "periodo_inicio": "26/05/2025",
+    "periodo_fim": "01/06/2025",
+    "itens": [
+      {
+        "cod_sistemico_item": "325023001",
+        "descricao_item": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
+        "tipo_unid_item": "CP",
+        "qtd_periodo_inicial": 1760,
+        "valor_item_periodo_inicial": 69.3999669468585,
+        "qtd_entradas_periodo": 500,
+        "valor_entradas_periodo": 19.55,
+        "qtd_saidas_periodo": 540,
+        "valor_saidas_periodo": 21.1313085793384,
+        "qtd_periodo_final": 1720,
+        "valor_unitario_periodo_final": 0.0394294525392559,
+        "valor_item_periodo_final": 67.8186583675202,
+        "movimentacoes": [
+          {
+            "data_movimentacao": "25/05/2025",
+            "historico": "SALDO ANTERIOR",
+            "documento": null,
+            "requisicao": "",
+            "entradas": null,
+            "saidas": 0,
+            "estoque": 1760,
+            "observacao": ""
+          },
+          {
           "data_movimentacao": "26/05/2025",
           "historico": "REINALDO RUBENS RORATO",
           "documento": null,

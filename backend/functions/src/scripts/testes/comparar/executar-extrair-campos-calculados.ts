@@ -1,4 +1,4 @@
-import { extrairCamposCalculados, salvarResultadoEmJson } from './extrair-campos-calculados';
+import { extrairCamposCalculados, salvarResultadoEmJson } from './gabarito/extrair-campos-calculados';
 
 async function main(): Promise<void> {
   try {
