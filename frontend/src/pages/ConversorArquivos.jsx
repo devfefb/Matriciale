@@ -1,7 +1,7 @@
 import React from 'react';
-import FileConverter from '../components/FileConverter/FileConverter';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
+import UploadSemanal from '../components/FileConverter/UploadSemanal';
 
 const ConversorArquivos = () => {
   return (
@@ -11,7 +11,7 @@ const ConversorArquivos = () => {
         display: "flex",
       }}>
         <Sidebar />
-        <FileConverter />
+        <UploadSemanal />
       </div>
     </div>
   );

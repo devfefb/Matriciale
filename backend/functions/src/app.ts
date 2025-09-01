@@ -6,8 +6,26 @@ import { errorMiddleware } from './middlewares/error';
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+  origin: 'http://localhost:3000', // Permitir apenas o frontend
+  credentials: true
+}));
+
+// Middleware para JSON
+app.use(express.json({ limit: '50mb' }));
+
+// Middleware para URL encoded (formulários)
+app.use(express.urlencoded({ 
+  extended: true, 
+  limit: '50mb' 
+}));
+
+// Log de todas as requisições para debug
+app.use((req, res, next) => {
+  console.log(`📨 [${new Date().toISOString()}] ${req.method} ${req.url}`);
+  console.log('📋 Headers:', req.headers);
+  next();
+});
 
 // Rota de teste
 app.get('/', (req, res) => {

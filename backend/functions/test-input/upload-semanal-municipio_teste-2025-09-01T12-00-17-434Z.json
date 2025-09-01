@@ -1,0 +1,6106 @@
+{
+  "tipo": "semanal",
+  "municipio": "municipio_teste",
+  "data_processamento": "2025-09-01T12:00:17.020Z",
+  "unidades": {
+    "06": {
+      "unidade": "06",
+      "arquivos_processados": [
+        "balancete",
+        "movimentacao"
+      ],
+      "balancete": {
+        "arquivo": "Balancete CAF 01-06.xlsx",
+        "linhas_processadas": 368,
+        "itens": [
+          {
+            "id": 1,
+            "descricao_item": "325.024.001",
+            "saldo_anterior": "ACETILCISTEINA 600 MG - FLUIMUCIL",
+            "entradas": 0,
+            "saidas": "EV",
+            "saldo_atual": 11
+          },
+          {
+            "id": 2,
+            "descricao_item": "325.025.001",
+            "saldo_anterior": "ACICLOVIR 200 MG CPR",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 500
+          },
+          {
+            "id": 3,
+            "descricao_item": "325.025.002",
+            "saldo_anterior": "ACICLOVIR 5 % CREME 10 G",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 30
+          },
+          {
+            "id": 4,
+            "descricao_item": "325.004.004",
+            "saldo_anterior": "ACIDO ASCORBICO AMP 5 ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 700
+          },
+          {
+            "id": 5,
+            "descricao_item": "325.026.001",
+            "saldo_anterior": "ACIDO FOLICO 5MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 4000
+          },
+          {
+            "id": 6,
+            "descricao_item": "325.027.001",
+            "saldo_anterior": "ACIDO TRANEXÂMICO 250MG - TRANSAMIN",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 156
+          },
+          {
+            "id": 7,
+            "descricao_item": "325.027.002",
+            "saldo_anterior": "ACIDO TRANEXAMICO 50 MG/ML -AMP (TRANSAMIN)",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 225
+          },
+          {
+            "id": 8,
+            "descricao_item": "325.028.001",
+            "saldo_anterior": "ACIDO VALPROICO 250 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 7600
+          },
+          {
+            "id": 9,
+            "descricao_item": "325.028.002",
+            "saldo_anterior": "ACIDO VALPROICO 500MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 10,
+            "descricao_item": "325.029.001",
+            "saldo_anterior": "ADENOSINA 3MG/2ML - AMP",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 11,
+            "descricao_item": "300.001.004",
+            "saldo_anterior": "ADESIVO NICOTINA 21 MG",
+            "entradas": 0,
+            "saidas": 0,
+            "saldo_atual": 0
+          },
+          {
+            "id": 12,
+            "descricao_item": "325.030.001",
+            "saldo_anterior": "AGUA DESTILADA AMPOLA 10 ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 13,
+            "descricao_item": "321.003.001",
+            "saldo_anterior": "AGULHA PARA CANETA DE INSULINA 4MM",
+            "entradas": 0,
+            "saidas": 0,
+            "saldo_atual": 4000
+          },
+          {
+            "id": 14,
+            "descricao_item": "321.001.392",
+            "saldo_anterior": "AGULHA PARA CANETA DE INSULINA 6MM",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 300
+          },
+          {
+            "id": 15,
+            "descricao_item": "325.031.001",
+            "saldo_anterior": "ALBENDAZOL 40 MG/ML FRASCO 10 ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 131
+          },
+          {
+            "id": 16,
+            "descricao_item": "325.031.002",
+            "saldo_anterior": "ALBENDAZOL 400 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 320
+          },
+          {
+            "id": 17,
+            "descricao_item": "020.001.001",
+            "saldo_anterior": "ALBUMINA 20% FRASCO 50 ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 13
+          },
+          {
+            "id": 18,
+            "descricao_item": "325.018.001",
+            "saldo_anterior": "ALGESTONA ACETOFENIDA 150MG/ML + ENANTATO DE ESTRADIOL 10MG/ML INJ",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 7
+          },
+          {
+            "id": 19,
+            "descricao_item": "325.032.001",
+            "saldo_anterior": "ALOPURINOL  300MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 20,
+            "descricao_item": "325.032.002",
+            "saldo_anterior": "ALOPURINOL 100MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1725
+          },
+          {
+            "id": 21,
+            "descricao_item": "325.021.002",
+            "saldo_anterior": "AMBROXOL XAROPE ADULTO",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 419
+          },
+          {
+            "id": 22,
+            "descricao_item": "325.021.003",
+            "saldo_anterior": "AMBROXOL XAROPE INFANTIL",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 208
+          },
+          {
+            "id": 23,
+            "descricao_item": "325.033.001",
+            "saldo_anterior": "AMINOFILINA 100 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 200
+          },
+          {
+            "id": 24,
+            "descricao_item": "325.033.002",
+            "saldo_anterior": "AMINOFILINA 24 MG/ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 54
+          },
+          {
+            "id": 25,
+            "descricao_item": "325.029.002",
+            "saldo_anterior": "AMIODARONA 50MG/ML - AMP",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 100
+          },
+          {
+            "id": 26,
+            "descricao_item": "325.029.003",
+            "saldo_anterior": "AMIODARONA, CLORIDRATO  200 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 2450
+          },
+          {
+            "id": 27,
+            "descricao_item": "325.001.004",
+            "saldo_anterior": "AMITRIPTILINA, CLORIDRATO  25 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 14600
+          },
+          {
+            "id": 28,
+            "descricao_item": "325.016.005",
+            "saldo_anterior": "AMOXICILINA + CLAVULANATO 500/125 MCG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 198
+          },
+          {
+            "id": 29,
+            "descricao_item": "325.016.006",
+            "saldo_anterior": "AMOXICILINA + CLAVULANATO SUSP 250 MG/5 ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 23
+          },
+          {
+            "id": 30,
+            "descricao_item": "325.016.007",
+            "saldo_anterior": "AMOXICILINA 250 MG/5ML - 150 ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 189
+          },
+          {
+            "id": 31,
+            "descricao_item": "325.016.008",
+            "saldo_anterior": "AMOXICILINA 500 MG - CAPSULA",
+            "entradas": 0,
+            "saidas": "CAP",
+            "saldo_atual": 4494
+          },
+          {
+            "id": 32,
+            "descricao_item": "325.034.001",
+            "saldo_anterior": "ANESTESICO COLIRIO",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 0
+          },
+          {
+            "id": 33,
+            "descricao_item": "325.034.002",
+            "saldo_anterior": "ANESTESICO COLIRIO - OXINEST",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 0
+          },
+          {
+            "id": 34,
+            "descricao_item": "325.035.001",
+            "saldo_anterior": "ANLODIPINO, BESILATO 5MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 9010
+          },
+          {
+            "id": 35,
+            "descricao_item": "325.022.002",
+            "saldo_anterior": "APIXABANA 2,5MG - XAKILIS",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 10
+          },
+          {
+            "id": 36,
+            "descricao_item": "228.001.011",
+            "saldo_anterior": "ARIPIPRAZOL 20MG/ML SUSP GTS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 4
+          },
+          {
+            "id": 37,
+            "descricao_item": "325.035.002",
+            "saldo_anterior": "ATENOLOL 25MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 240
+          },
+          {
+            "id": 38,
+            "descricao_item": "325.037.001",
+            "saldo_anterior": "ATROPINA, SULFATO 0,50MG/ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 59
+          },
+          {
+            "id": 39,
+            "descricao_item": "325.016.010",
+            "saldo_anterior": "AZITROMICINA 500 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 2630
+          },
+          {
+            "id": 40,
+            "descricao_item": "325.016.009",
+            "saldo_anterior": "AZITROMICINA SUSP. 200MG/5ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 149
+          },
+          {
+            "id": 41,
+            "descricao_item": "325.016.011",
+            "saldo_anterior": "BENZILPENICILINA 1.200.000 UI - PÓ P/ SUSP. INJ",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 324
+          },
+          {
+            "id": 42,
+            "descricao_item": "325.038.001",
+            "saldo_anterior": "BIPERIDENO, CLORIDRATO 2 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 2800
+          },
+          {
+            "id": 43,
+            "descricao_item": "325.039.001",
+            "saldo_anterior": "BISACODIL 5MG - DULCOLAX",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 600
+          },
+          {
+            "id": 44,
+            "descricao_item": "325.023.002",
+            "saldo_anterior": "BISSULFATO DE CLOPIDOGREL 75 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 292
+          },
+          {
+            "id": 45,
+            "descricao_item": "325.040.001",
+            "saldo_anterior": "BROMOPRIDA 10MG CPR",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 5680
+          },
+          {
+            "id": 46,
+            "descricao_item": "325.040.002",
+            "saldo_anterior": "BROMOPRIDA 10MG/2ML - INJ",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 850
+          },
+          {
+            "id": 47,
+            "descricao_item": "325.040.003",
+            "saldo_anterior": "BROMOPRIDA GTS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 138
+          },
+          {
+            "id": 48,
+            "descricao_item": "325.001.005",
+            "saldo_anterior": "BUPROPIONA 150 MG - ASSISTENCIAL",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 180
+          },
+          {
+            "id": 49,
+            "descricao_item": "005.000.063",
+            "saldo_anterior": "BUPROPIONA 150 MG - TABAGISMO",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 50,
+            "descricao_item": "325.042.002",
+            "saldo_anterior": "BUSCOPAM COMPOSTO CPR",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1640
+          },
+          {
+            "id": 51,
+            "descricao_item": "325.042.001",
+            "saldo_anterior": "BUSCOPAM COMPOSTO INJETAVEL",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 700
+          },
+          {
+            "id": 52,
+            "descricao_item": "325.042.003",
+            "saldo_anterior": "BUSCOPAM SIMPLES CP",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1840
+          },
+          {
+            "id": 53,
+            "descricao_item": "325.042.004",
+            "saldo_anterior": "BUSCOPAM SIMPLES GOTAS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 244
+          },
+          {
+            "id": 54,
+            "descricao_item": "325.042.005",
+            "saldo_anterior": "BUSCOPAM SIMPLES INJETAVEL",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 270
+          },
+          {
+            "id": 55,
+            "descricao_item": "321.003.002",
+            "saldo_anterior": "CANETA PARA APLICAÇÃO DE INSULINAS HUMANAS - REUTILIZAVEL",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 0
+          },
+          {
+            "id": 56,
+            "descricao_item": "325.045.001",
+            "saldo_anterior": "CAPTOPRIL 25 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1500
+          },
+          {
+            "id": 57,
+            "descricao_item": "325.028.003",
+            "saldo_anterior": "CARBAMAZEPINA 200 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 5100
+          },
+          {
+            "id": 58,
+            "descricao_item": "005.000.066",
+            "saldo_anterior": "CARBAMAZEPINA SUSP. 100 ML- 20 MG/ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 30
+          },
+          {
+            "id": 59,
+            "descricao_item": "002.000.068",
+            "saldo_anterior": "CARBONATO DE CALCIO 1.250MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 390
+          },
+          {
+            "id": 60,
+            "descricao_item": "230.001.019",
+            "saldo_anterior": "CARBONATO DE CALCIO 1.250MG + VITAMINA D 400UI",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1080
+          },
+          {
+            "id": 61,
+            "descricao_item": "005.000.024",
+            "saldo_anterior": "CARBONATO DE LITIO 300 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 3600
+          },
+          {
+            "id": 62,
+            "descricao_item": "005.000.017",
+            "saldo_anterior": "CARBONATO LITIO CR 450MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 63,
+            "descricao_item": "021.001.097",
+            "saldo_anterior": "CARVAO ATIVADO EM PO",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 0
+          },
+          {
+            "id": 64,
+            "descricao_item": "021.001.024",
+            "saldo_anterior": "CARVEDILOL 12,5 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1290
+          },
+          {
+            "id": 65,
+            "descricao_item": "303.007.002",
+            "saldo_anterior": "CARVEDILOL 25 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1110
+          },
+          {
+            "id": 66,
+            "descricao_item": "303.002.004",
+            "saldo_anterior": "CARVEDILOL 6,25 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 450
+          },
+          {
+            "id": 67,
+            "descricao_item": "002.000.010",
+            "saldo_anterior": "CEFALEXINA 500 MG",
+            "entradas": 0,
+            "saidas": "CAP",
+            "saldo_atual": 2500
+          },
+          {
+            "id": 68,
+            "descricao_item": "002.000.011",
+            "saldo_anterior": "CEFALEXINA SUSPENSÃO 250 MG/ 5 ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 85
+          },
+          {
+            "id": 69,
+            "descricao_item": "022.001.012",
+            "saldo_anterior": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ EV",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 100
+          },
+          {
+            "id": 70,
+            "descricao_item": "002.000.138",
+            "saldo_anterior": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ IM",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 250
+          },
+          {
+            "id": 71,
+            "descricao_item": "002.000.137",
+            "saldo_anterior": "CEFTRIAXONA 500 MG INJ -IM",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 72,
+            "descricao_item": "021.004.006",
+            "saldo_anterior": "CERUMIN GOTAS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 8
+          },
+          {
+            "id": 73,
+            "descricao_item": "021.001.096",
+            "saldo_anterior": "CETAPHIL LOCAO HIDRATANTE",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 0
+          },
+          {
+            "id": 74,
+            "descricao_item": "002.000.134",
+            "saldo_anterior": "CETOCONAZOL + BETAMETASONA POMADA 30 GR",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 90
+          },
+          {
+            "id": 75,
+            "descricao_item": "301.004.002",
+            "saldo_anterior": "CETOCONAZOL 200 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 300
+          },
+          {
+            "id": 76,
+            "descricao_item": "002.000.106",
+            "saldo_anterior": "CETOPROFENO  50MG/ML IM (PROFENID)",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 3000
+          },
+          {
+            "id": 77,
+            "descricao_item": "002.000.122",
+            "saldo_anterior": "CETOPROFENO 100 MG - EV",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 509
+          },
+          {
+            "id": 78,
+            "descricao_item": "002.000.082",
+            "saldo_anterior": "CETOPROFENO 50 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 9672
+          },
+          {
+            "id": 79,
+            "descricao_item": "302.008.001",
+            "saldo_anterior": "CICLOBENZAPRINA 5MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 14070
+          },
+          {
+            "id": 80,
+            "descricao_item": "008.001.001",
+            "saldo_anterior": "CILOSTAZOL 100 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 420
+          },
+          {
+            "id": 81,
+            "descricao_item": "325.003.001",
+            "saldo_anterior": "CIMEGRIPE GTS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 5
+          },
+          {
+            "id": 82,
+            "descricao_item": "002.000.111",
+            "saldo_anterior": "CIMETIDINA 150MG/ML IM",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 300
+          },
+          {
+            "id": 83,
+            "descricao_item": "002.000.012",
+            "saldo_anterior": "CIMETIDINA 200MG COMPRIMIDO",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1240
+          },
+          {
+            "id": 84,
+            "descricao_item": "005.000.100",
+            "saldo_anterior": "CINARIZINA 75MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 3070
+          },
+          {
+            "id": 85,
+            "descricao_item": "321.003.003",
+            "saldo_anterior": "CINTA POS OPERATORIA COMPLETA",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 0
+          },
+          {
+            "id": 86,
+            "descricao_item": "315.001.003",
+            "saldo_anterior": "CIPROFLOXACINO + DEXAMETASONA COLIRIO",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 1
+          },
+          {
+            "id": 87,
+            "descricao_item": "002.000.045",
+            "saldo_anterior": "CIPROFLOXACINO 500MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1974
+          },
+          {
+            "id": 88,
+            "descricao_item": "022.001.009",
+            "saldo_anterior": "CLARITROMICINA 500 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 690
+          },
+          {
+            "id": 89,
+            "descricao_item": "005.000.020",
+            "saldo_anterior": "CLOMIPRAMINA, CLORIDRATO 25 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1760
+          },
+          {
+            "id": 90,
+            "descricao_item": "005.000.022",
+            "saldo_anterior": "CLONAZEPAM 2,5 MG/ ML - GOTAS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 270
+          },
+          {
+            "id": 91,
+            "descricao_item": "005.000.015",
+            "saldo_anterior": "CLONAZEPAM 2MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 21600
+          },
+          {
+            "id": 92,
+            "descricao_item": "005.000.093",
+            "saldo_anterior": "CLONIDINA, CLORIDRATO DE 150MCG/ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 23
+          },
+          {
+            "id": 93,
+            "descricao_item": "002.000.109",
+            "saldo_anterior": "CLORETO DE POTASSIO 19,1% - 10 ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 10
+          },
+          {
+            "id": 94,
+            "descricao_item": "015.002.001",
+            "saldo_anterior": "CLORETO DE POTASSIO 600MG- SLOW-K",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 20
+          },
+          {
+            "id": 95,
+            "descricao_item": "002.000.108",
+            "saldo_anterior": "CLORETO DE SODIO 20% - 10 ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 10
+          },
+          {
+            "id": 96,
+            "descricao_item": "005.000.044",
+            "saldo_anterior": "CLORPROMAZINA 25MG/5ML INJ",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 45
+          },
+          {
+            "id": 97,
+            "descricao_item": "005.000.014",
+            "saldo_anterior": "CLORPROMAZINA, CLORIDRATO 100MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 98,
+            "descricao_item": "005.000.004",
+            "saldo_anterior": "CLORPROMAZINA, CLORIDRATO 25MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1400
+          },
+          {
+            "id": 99,
+            "descricao_item": "329.001.001",
+            "saldo_anterior": "COLAGENO TIPO II + VITAMINAS",
+            "entradas": 0,
+            "saidas": "CAP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 100,
+            "descricao_item": "324.001.001",
+            "saldo_anterior": "COLCHICINA0,5MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 60
+          },
+          {
+            "id": 101,
+            "descricao_item": "302.008.003",
+            "saldo_anterior": "COLTRAX INJ (TIOCOLCHICOSIDEO)",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 30
+          },
+          {
+            "id": 102,
+            "descricao_item": "021.001.025",
+            "saldo_anterior": "COMPLEXO B CP",
+            "entradas": 0,
+            "saidas": 0,
+            "saldo_atual": 1530
+          },
+          {
+            "id": 103,
+            "descricao_item": "002.000.114",
+            "saldo_anterior": "COMPLEXO B INJ",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 1100
+          },
+          {
+            "id": 104,
+            "descricao_item": "311.002.003",
+            "saldo_anterior": "CREATINA PROBIOTICA PURA",
+            "entradas": 0,
+            "saidas": 0,
+            "saldo_atual": 1
+          },
+          {
+            "id": 105,
+            "descricao_item": "325.050.001",
+            "saldo_anterior": "CUTISANOL BABY 120G",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 60
+          },
+          {
+            "id": 106,
+            "descricao_item": "011.001.004",
+            "saldo_anterior": "DECONGEX PLUS GOTAS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 10
+          },
+          {
+            "id": 107,
+            "descricao_item": "021.001.071",
+            "saldo_anterior": "DELTAMETRINA 0,2MG/ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 30
+          },
+          {
+            "id": 108,
+            "descricao_item": "002.000.135",
+            "saldo_anterior": "DERMACERIUM (SULFADIAZINA PRATA + CERIO)",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 39
+          },
+          {
+            "id": 109,
+            "descricao_item": "313.001.002",
+            "saldo_anterior": "DERSANI 200ML (ACIDOS GRAXOS ESSENCIAIS)",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 47
+          },
+          {
+            "id": 110,
+            "descricao_item": "021.001.057",
+            "saldo_anterior": "DESLANOSIDEO 0,2 MG/ML- AMP",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 56
+          },
+          {
+            "id": 111,
+            "descricao_item": "022.001.006",
+            "saldo_anterior": "DESPACILINA - BENZILPENICILINA PROCAINA 300.000UI + BENZILPENICILINA OTASSICA 100.000UI",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 112,
+            "descricao_item": "021.002.001",
+            "saldo_anterior": "DESVENLAFAXINA 100 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 30
+          },
+          {
+            "id": 113,
+            "descricao_item": "325.001.002",
+            "saldo_anterior": "DESVENLAFAXINA 50MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 90
+          },
+          {
+            "id": 114,
+            "descricao_item": "002.000.013",
+            "saldo_anterior": "DEXAMETASONA 0.1% CREME 10 GR",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 595
+          },
+          {
+            "id": 115,
+            "descricao_item": "002.000.105",
+            "saldo_anterior": "DEXAMETASONA 2MG/ML- AMP",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 900
+          },
+          {
+            "id": 116,
+            "descricao_item": "305.002.004",
+            "saldo_anterior": "DEXAMETASONA 4 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 800
+          },
+          {
+            "id": 117,
+            "descricao_item": "002.000.113",
+            "saldo_anterior": "DEXAMETASONA 4 MG/ML - AMPOLA",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 220
+          },
+          {
+            "id": 118,
+            "descricao_item": "002.000.127",
+            "saldo_anterior": "DEXCLORFENIRAMINA + BETAMETASONA SUSP ORAL 120",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 0
+          },
+          {
+            "id": 119,
+            "descricao_item": "007.000.004",
+            "saldo_anterior": "DEXCLORFENIRAMINA, MALEATO  2MG/5ML - SUSPENSÃO",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 72
+          },
+          {
+            "id": 120,
+            "descricao_item": "005.000.001",
+            "saldo_anterior": "DIAZEPAM 10 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 6700
+          },
+          {
+            "id": 121,
+            "descricao_item": "005.000.045",
+            "saldo_anterior": "DIAZEPAM 10 MG/ 2ML - AMP",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 45
+          },
+          {
+            "id": 122,
+            "descricao_item": "002.000.014",
+            "saldo_anterior": "DICLOFENACO 50 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 2480
+          },
+          {
+            "id": 123,
+            "descricao_item": "005.000.091",
+            "saldo_anterior": "DIFENIDRAMINA 50 MG/ML - AMP",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 12
+          },
+          {
+            "id": 124,
+            "descricao_item": "001.000.003",
+            "saldo_anterior": "DIGOXINA 0.25 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1650
+          },
+          {
+            "id": 125,
+            "descricao_item": "021.001.030",
+            "saldo_anterior": "DIOSMINA + HESPERIDINA 450/50 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 13740
+          },
+          {
+            "id": 126,
+            "descricao_item": "002.000.083",
+            "saldo_anterior": "DIPIRONA 500 MG/2 ML - AMP",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 4000
+          },
+          {
+            "id": 127,
+            "descricao_item": "323.001.001",
+            "saldo_anterior": "DIPIRONA SÓDICA COMPRIMIDO 500MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 43550
+          },
+          {
+            "id": 128,
+            "descricao_item": "002.000.015",
+            "saldo_anterior": "DIPIRONA SÓDICA GOTAS 500 MG / ML 10 ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 1431
+          },
+          {
+            "id": 129,
+            "descricao_item": "002.000.116",
+            "saldo_anterior": "DIPROSPAN AMP 2 ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 187
+          },
+          {
+            "id": 130,
+            "descricao_item": "009.000.009",
+            "saldo_anterior": "DISPOSITIVO INTRA-UTERINO - DIU",
+            "entradas": 0,
+            "saidas": 0,
+            "saldo_atual": 92
+          },
+          {
+            "id": 131,
+            "descricao_item": "008.001.009",
+            "saldo_anterior": "DOBUTAMINA 12,5MG/ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 20
+          },
+          {
+            "id": 132,
+            "descricao_item": "021.001.073",
+            "saldo_anterior": "DOMPERIDONA 10 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 300
+          },
+          {
+            "id": 133,
+            "descricao_item": "002.000.084",
+            "saldo_anterior": "DOPAMINA 5 MG/ ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 43
+          },
+          {
+            "id": 134,
+            "descricao_item": "307.001.001",
+            "saldo_anterior": "DOXAZOSINA 2 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 2550
+          },
+          {
+            "id": 135,
+            "descricao_item": "021.001.094",
+            "saldo_anterior": "DOXAZOSINA MESILATO 4MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1830
+          },
+          {
+            "id": 136,
+            "descricao_item": "011.001.002",
+            "saldo_anterior": "DRAMIN  GOTAS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 169
+          },
+          {
+            "id": 137,
+            "descricao_item": "002.000.086",
+            "saldo_anterior": "DRAMIN B6 DL EV",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 1100
+          },
+          {
+            "id": 138,
+            "descricao_item": "002.000.144",
+            "saldo_anterior": "DROPROPIZINA 1,5 MG/ML -XAROPE PEDIATRICO",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 47
+          },
+          {
+            "id": 139,
+            "descricao_item": "021.001.061",
+            "saldo_anterior": "DROPROPIZINA 3 MG/ML - XAROPE ADULTO",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 9
+          },
+          {
+            "id": 140,
+            "descricao_item": "228.001.004",
+            "saldo_anterior": "DULOXETINA, CLORIDRATO 60MG",
+            "entradas": 0,
+            "saidas": "CAP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 141,
+            "descricao_item": "001.000.016",
+            "saldo_anterior": "ENALAPRIL 10MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 500
+          },
+          {
+            "id": 142,
+            "descricao_item": "304.001.003",
+            "saldo_anterior": "ENOXAPARINA SÓDICA 40 MG/0,4ML - CLEXANE",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 210
+          },
+          {
+            "id": 143,
+            "descricao_item": "230.001.003",
+            "saldo_anterior": "ENSURE LATA 400G",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 40
+          },
+          {
+            "id": 144,
+            "descricao_item": "002.000.087",
+            "saldo_anterior": "EPINEFRINA 1MG/ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 87
+          },
+          {
+            "id": 145,
+            "descricao_item": "002.000.098",
+            "saldo_anterior": "EPITEZAN POMADA OFTALMICA 3,5 GR",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 10
+          },
+          {
+            "id": 146,
+            "descricao_item": "325.001.003",
+            "saldo_anterior": "ESCITALOPRAM 20MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 30
+          },
+          {
+            "id": 147,
+            "descricao_item": "325.048.001",
+            "saldo_anterior": "ESOMEPRAZOL 40MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 148,
+            "descricao_item": "303.003.001",
+            "saldo_anterior": "ESPIRONOLACTONA 25 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 4170
+          },
+          {
+            "id": 149,
+            "descricao_item": "009.000.008",
+            "saldo_anterior": "ESTRIOL 1MG/G - CR VAGINAL 50 GR",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 0
+          },
+          {
+            "id": 150,
+            "descricao_item": "001.000.021",
+            "saldo_anterior": "ETILEFRINA 10 MG/ML - AMP",
+            "entradas": 0,
+            "saidas": 0,
+            "saldo_atual": 0
+          },
+          {
+            "id": 151,
+            "descricao_item": "005.000.090",
+            "saldo_anterior": "ETOMIDATO 2 MG/ML - AMP",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 23
+          },
+          {
+            "id": 152,
+            "descricao_item": "325.011.001",
+            "saldo_anterior": "FENAZOPIRIDA 200MG - PYRIDIUM",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 9
+          },
+          {
+            "id": 153,
+            "descricao_item": "005.000.002",
+            "saldo_anterior": "FENITOINA 100 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 4000
+          },
+          {
+            "id": 154,
+            "descricao_item": "005.000.047",
+            "saldo_anterior": "FENITOINA 50 MG / ML- AMPOLA",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 132
+          },
+          {
+            "id": 155,
+            "descricao_item": "005.000.003",
+            "saldo_anterior": "FENOBARBITAL 100 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 3200
+          },
+          {
+            "id": 156,
+            "descricao_item": "005.000.046",
+            "saldo_anterior": "FENOBARBITAL 200 MG/ ML - AMPOLA",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 17
+          },
+          {
+            "id": 157,
+            "descricao_item": "005.000.032",
+            "saldo_anterior": "FENOBARBITAL 40 MG/ML - GOTAS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 10
+          },
+          {
+            "id": 158,
+            "descricao_item": "005.000.056",
+            "saldo_anterior": "FENTANILA,CITRATO 78,5MCG/5ML EQUIVALENTE A 50MCG",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 64
+          },
+          {
+            "id": 159,
+            "descricao_item": "307.001.002",
+            "saldo_anterior": "FINASTERIDA 5 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1500
+          },
+          {
+            "id": 160,
+            "descricao_item": "002.000.092",
+            "saldo_anterior": "FITOMENADIONA 10MG/ML INJ",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 50
+          },
+          {
+            "id": 161,
+            "descricao_item": "002.000.060",
+            "saldo_anterior": "FLUCONAZOL 150 MG",
+            "entradas": 0,
+            "saidas": "CAP",
+            "saldo_atual": 514
+          },
+          {
+            "id": 162,
+            "descricao_item": "005.000.060",
+            "saldo_anterior": "FLUMAZENIL 0,1 MG/ 5 ML SOL INJ.",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 19
+          },
+          {
+            "id": 163,
+            "descricao_item": "005.000.013",
+            "saldo_anterior": "FLUOXETINA, CLORIDRATO 20 MG",
+            "entradas": 0,
+            "saidas": "CAP",
+            "saldo_atual": 6840
+          },
+          {
+            "id": 164,
+            "descricao_item": "325.005.001",
+            "saldo_anterior": "FORXIGA 10MG (DAPAGLIFLOZINA)",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 165,
+            "descricao_item": "301.002.004",
+            "saldo_anterior": "FOSFATO OSELTAMIVIR 30MG - TAMIFLU",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 166,
+            "descricao_item": "301.002.005",
+            "saldo_anterior": "FOSFATO OSELTAMIVIR 75 MG - TAMIFLU",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 167,
+            "descricao_item": "021.001.066",
+            "saldo_anterior": "FRALDA DESC GERIATRICA - G",
+            "entradas": 0,
+            "saidas": 0,
+            "saldo_atual": 700
+          },
+          {
+            "id": 168,
+            "descricao_item": "021.001.068",
+            "saldo_anterior": "FRALDA DESC GERIATRICA - M",
+            "entradas": 0,
+            "saidas": 0,
+            "saldo_atual": 1000
+          },
+          {
+            "id": 169,
+            "descricao_item": "021.001.069",
+            "saldo_anterior": "FRALDA DESC GERIATRICA - P",
+            "entradas": 0,
+            "saidas": 0,
+            "saldo_atual": 350
+          },
+          {
+            "id": 170,
+            "descricao_item": "320.002.004",
+            "saldo_anterior": "FRALDA DESC GERIATRICA - XG",
+            "entradas": 0,
+            "saidas": 0,
+            "saldo_atual": 736
+          },
+          {
+            "id": 171,
+            "descricao_item": "021.001.106",
+            "saldo_anterior": "FRALDA DESC GERIATRICA - XXG",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 90
+          },
+          {
+            "id": 172,
+            "descricao_item": "002.000.088",
+            "saldo_anterior": "FUROSEMIDA 10 MG/ ML- AMPOLA",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 215
+          },
+          {
+            "id": 173,
+            "descricao_item": "002.000.019",
+            "saldo_anterior": "FUROSEMIDA 40MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 6960
+          },
+          {
+            "id": 174,
+            "descricao_item": "022.001.001",
+            "saldo_anterior": "GENTAMICINA 80 MG INJ- AMPOLA",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 350
+          },
+          {
+            "id": 175,
+            "descricao_item": "003.000.001",
+            "saldo_anterior": "GLIBENCLAMIDA 5 MG.",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 300
+          },
+          {
+            "id": 176,
+            "descricao_item": "023.001.001",
+            "saldo_anterior": "GLICLAZIDA 30 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 5340
+          },
+          {
+            "id": 177,
+            "descricao_item": "003.000.016",
+            "saldo_anterior": "GLICLAZIDA 60 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 2910
+          },
+          {
+            "id": 178,
+            "descricao_item": "001.001.001",
+            "saldo_anterior": "GLICONATO DE CALCIO 10% - AMP",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 179,
+            "descricao_item": "002.000.143",
+            "saldo_anterior": "GLICOSE 25% - 10 ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 100
+          },
+          {
+            "id": 180,
+            "descricao_item": "002.000.103",
+            "saldo_anterior": "GLICOSE 50 % - 10 ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 205
+          },
+          {
+            "id": 181,
+            "descricao_item": "311.002.005",
+            "saldo_anterior": "GLUCERNA 400G",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 6
+          },
+          {
+            "id": 182,
+            "descricao_item": "325.021.001",
+            "saldo_anterior": "GUACO XAROPE - MIKANIA GLOMERATA 117,5MG/ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 30
+          },
+          {
+            "id": 183,
+            "descricao_item": "005.000.030",
+            "saldo_anterior": "HALOPERIDOL 2 MG/ 10 ML - GOTAS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 0
+          },
+          {
+            "id": 184,
+            "descricao_item": "005.000.036",
+            "saldo_anterior": "HALOPERIDOL 5 MG /ML - AMPOLA",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 85
+          },
+          {
+            "id": 185,
+            "descricao_item": "005.000.006",
+            "saldo_anterior": "HALOPERIDOL 5MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 3000
+          },
+          {
+            "id": 186,
+            "descricao_item": "005.000.048",
+            "saldo_anterior": "HALOPERIDOL,DECANOATO 70,52MG/ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 107
+          },
+          {
+            "id": 187,
+            "descricao_item": "325.022.001",
+            "saldo_anterior": "HEPARINA 25.000UI/5ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 2
+          },
+          {
+            "id": 188,
+            "descricao_item": "021.001.053",
+            "saldo_anterior": "HEPARINA SÓDICA 5.000 UI",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 50
+          },
+          {
+            "id": 189,
+            "descricao_item": "001.000.015",
+            "saldo_anterior": "HIDRALAZINA 20 MG/ML - AMPOLAS",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 26
+          },
+          {
+            "id": 190,
+            "descricao_item": "001.000.025",
+            "saldo_anterior": "HIDRALAZINA 25MG, CLORIDRATO DE",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 191,
+            "descricao_item": "001.000.004",
+            "saldo_anterior": "HIDROCLOROTIAZIADA 25MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 800
+          },
+          {
+            "id": 192,
+            "descricao_item": "002.000.090",
+            "saldo_anterior": "HIDROCORTISONA, SUCCINATO 100 MG - PÓ P/ SOL. INJ",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 145
+          },
+          {
+            "id": 193,
+            "descricao_item": "002.000.091",
+            "saldo_anterior": "HIDROCORTISONA, SUCCINATO 500 MG - PÓ P/ SOL. INJ",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 95
+          },
+          {
+            "id": 194,
+            "descricao_item": "021.001.013",
+            "saldo_anterior": "HIDROGEL COM ALGINATO - SAF GEL 85 GR",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 51
+          },
+          {
+            "id": 195,
+            "descricao_item": "002.000.020",
+            "saldo_anterior": "HIDROXIDO DE ALUMINIO 6.2% SUSP",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 142
+          },
+          {
+            "id": 196,
+            "descricao_item": "002.000.130",
+            "saldo_anterior": "IBUPROFENO 100MG/ML -  GOTAS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 218
+          },
+          {
+            "id": 197,
+            "descricao_item": "021.001.012",
+            "saldo_anterior": "IBUPROFENO 300 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1250
+          },
+          {
+            "id": 198,
+            "descricao_item": "050.001.005",
+            "saldo_anterior": "IBUPROFENO 50MG/ML - GOTAS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 160
+          },
+          {
+            "id": 199,
+            "descricao_item": "005.000.011",
+            "saldo_anterior": "IMIPRAMINA 25 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1000
+          },
+          {
+            "id": 200,
+            "descricao_item": "325.004.002",
+            "saldo_anterior": "INELATTE 800DKM",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 60
+          },
+          {
+            "id": 201,
+            "descricao_item": "003.000.006",
+            "saldo_anterior": "INSULINA HUMANA NPH 100 UI/ML - CANETA",
+            "entradas": 0,
+            "saidas": "TUBET",
+            "saldo_atual": 0
+          },
+          {
+            "id": 202,
+            "descricao_item": "003.000.004",
+            "saldo_anterior": "INSULINA HUMANA NPH 100 UI/ML - FRASCO 10 ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 35
+          },
+          {
+            "id": 203,
+            "descricao_item": "003.000.005",
+            "saldo_anterior": "INSULINA HUMANA REGULAR 100 UI/ ML - FRASCO 10 ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 8
+          },
+          {
+            "id": 204,
+            "descricao_item": "003.000.007",
+            "saldo_anterior": "INSULINA HUMANA REGULAR 100 UI/ML - CANETA",
+            "entradas": 0,
+            "saidas": "TUBET",
+            "saldo_atual": 20
+          },
+          {
+            "id": 205,
+            "descricao_item": "023.001.002",
+            "saldo_anterior": "INSULINA NOVORRAPID FLEX PEN",
+            "entradas": 0,
+            "saidas": 0,
+            "saldo_atual": 5
+          },
+          {
+            "id": 206,
+            "descricao_item": "023.001.003",
+            "saldo_anterior": "INSULINA TRESIBA FLEX PEN",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 5
+          },
+          {
+            "id": 207,
+            "descricao_item": "002.000.096",
+            "saldo_anterior": "IPRATROPIO,BROMETO 0,25 MG/ML SOLUÇÃO PARA INALAÇÃO 20 ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 35
+          },
+          {
+            "id": 208,
+            "descricao_item": "001.001.004",
+            "saldo_anterior": "ISOSSORBIDA, DINITRATO 20 MG - SUB LINGUAL",
+            "entradas": 0,
+            "saidas": 0,
+            "saldo_atual": 30
+          },
+          {
+            "id": 209,
+            "descricao_item": "002.000.119",
+            "saldo_anterior": "ISOSSORBIDA, DINITRATO 5 MG - SUB LINGUAL",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 210
+          },
+          {
+            "id": 210,
+            "descricao_item": "301.004.001",
+            "saldo_anterior": "ITRACONAZOL 100 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 20
+          },
+          {
+            "id": 211,
+            "descricao_item": "021.001.060",
+            "saldo_anterior": "IVERMECTINA 6 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 144
+          },
+          {
+            "id": 212,
+            "descricao_item": "002.000.115",
+            "saldo_anterior": "KOLLAGENASE POMADA",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 88
+          },
+          {
+            "id": 213,
+            "descricao_item": "021.001.035",
+            "saldo_anterior": "LACTULOSE XAROPE 120 ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 98
+          },
+          {
+            "id": 214,
+            "descricao_item": "311.001.022",
+            "saldo_anterior": "LEITE APTAMIL AR 800G",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 0
+          },
+          {
+            "id": 215,
+            "descricao_item": "311.001.012",
+            "saldo_anterior": "LEITE APTAMIL PREMIUM 1 - LATA 800G",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 2
+          },
+          {
+            "id": 216,
+            "descricao_item": "311.001.029",
+            "saldo_anterior": "LEITE APTAMIL PRO EXPERT SOJA",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 0
+          },
+          {
+            "id": 217,
+            "descricao_item": "311.001.004",
+            "saldo_anterior": "LEITE NAN COMFOR 1 - LATA 800 G",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 0
+          },
+          {
+            "id": 218,
+            "descricao_item": "311.001.005",
+            "saldo_anterior": "LEITE NAN COMFOR 2 - LATA 800 G",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 0
+          },
+          {
+            "id": 219,
+            "descricao_item": "311.001.015",
+            "saldo_anterior": "LEITE NAN ESPESSAR- LATA 800 G",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 8
+          },
+          {
+            "id": 220,
+            "descricao_item": "311.001.006",
+            "saldo_anterior": "LEITE NAN SUPREME 1- 800G",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 0
+          },
+          {
+            "id": 221,
+            "descricao_item": "311.001.011",
+            "saldo_anterior": "LEITE NESTOGENO 1 - LATA 800G",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 1
+          },
+          {
+            "id": 222,
+            "descricao_item": "311.001.023",
+            "saldo_anterior": "LEITE NINHO FASE I",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 6
+          },
+          {
+            "id": 223,
+            "descricao_item": "325.028.004",
+            "saldo_anterior": "LEVETIRACETAM 500MG - ILUDRAL",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 224,
+            "descricao_item": "327.001.002",
+            "saldo_anterior": "LEVODOPA + BENSERAZIDA 100/25MG - PROLOPA BD",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 225,
+            "descricao_item": "327.001.001",
+            "saldo_anterior": "LEVODOPA + BENSERAZIDA 200/50MG - PROLOPA",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 2310
+          },
+          {
+            "id": 226,
+            "descricao_item": "022.001.002",
+            "saldo_anterior": "LEVOFLOXACINO 500 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 800
+          },
+          {
+            "id": 227,
+            "descricao_item": "005.000.037",
+            "saldo_anterior": "LEVOMEPROMAZINA 100 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1200
+          },
+          {
+            "id": 228,
+            "descricao_item": "005.000.009",
+            "saldo_anterior": "LEVOMEPROMAZINA 25MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 200
+          },
+          {
+            "id": 229,
+            "descricao_item": "308.001.002",
+            "saldo_anterior": "LEVONORGESTREL 0,15MG+ETINILESTRADIOL 0,03MG- CICLO 21",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 2730
+          },
+          {
+            "id": 230,
+            "descricao_item": "009.000.001",
+            "saldo_anterior": "LEVONORGESTREL 0,75 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 40
+          },
+          {
+            "id": 231,
+            "descricao_item": "021.001.032",
+            "saldo_anterior": "LEVOTIROXINA SÓDICA 100MCG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 4640
+          },
+          {
+            "id": 232,
+            "descricao_item": "009.000.011",
+            "saldo_anterior": "LEVOTIROXINA SODICA 25 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 5100
+          },
+          {
+            "id": 233,
+            "descricao_item": "021.001.033",
+            "saldo_anterior": "LEVOTIROXINA SODICA 50MCG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 8500
+          },
+          {
+            "id": 234,
+            "descricao_item": "005.000.053",
+            "saldo_anterior": "LIDOCAINA 2% - S/ VASO - SOL. INJETAVEL 20ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 35
+          },
+          {
+            "id": 235,
+            "descricao_item": "002.000.100",
+            "saldo_anterior": "LIDOCAINA 2% GELEIA - 30 GR",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 32
+          },
+          {
+            "id": 236,
+            "descricao_item": "002.000.117",
+            "saldo_anterior": "LIDOCAINA+EPINEFRINA INJETAVEL",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 25
+          },
+          {
+            "id": 237,
+            "descricao_item": "325.012.001",
+            "saldo_anterior": "LISDEXANFETAMINA, DIMESILATO DE 30MG - VENVANSE",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 238,
+            "descricao_item": "021.001.072",
+            "saldo_anterior": "LOPERAMIDA 2 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 400
+          },
+          {
+            "id": 239,
+            "descricao_item": "010.001.003",
+            "saldo_anterior": "LORATADINA 1 MG/ML - XAROPE",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 529
+          },
+          {
+            "id": 240,
+            "descricao_item": "010.001.004",
+            "saldo_anterior": "LORATADINA 10 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 4152
+          },
+          {
+            "id": 241,
+            "descricao_item": "002.000.067",
+            "saldo_anterior": "LOSARTANA POTASSICA 50MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 75
+          },
+          {
+            "id": 242,
+            "descricao_item": "330.001.002",
+            "saldo_anterior": "MEDROXIPROGESTERONA, ACETATO + CIPIONATO DE ESTRADIOL (CYCLOFEMINA)",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 243,
+            "descricao_item": "009.000.005",
+            "saldo_anterior": "MEDROXIPROGESTERONA, ACETATO 150MG/ML (DEPOPROVERA)",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 109
+          },
+          {
+            "id": 244,
+            "descricao_item": "325.016.004",
+            "saldo_anterior": "MEROPENEM TRI-HIDRATADO 1G IV",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 42
+          },
+          {
+            "id": 245,
+            "descricao_item": "003.000.017",
+            "saldo_anterior": "METFORMINA, CLORIDRATO 500MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 540
+          },
+          {
+            "id": 246,
+            "descricao_item": "003.000.002",
+            "saldo_anterior": "METFORMINA, CLORIDRATO 850MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1400
+          },
+          {
+            "id": 247,
+            "descricao_item": "230.001.012",
+            "saldo_anterior": "METILCOBALAMINA 1.000MCG - DOZEMAST - MECOBE",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 60
+          },
+          {
+            "id": 248,
+            "descricao_item": "001.000.006",
+            "saldo_anterior": "METILDOPA 250 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 7690
+          },
+          {
+            "id": 249,
+            "descricao_item": "011.001.006",
+            "saldo_anterior": "METILFENIDATO 10 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 660
+          },
+          {
+            "id": 250,
+            "descricao_item": "002.000.023",
+            "saldo_anterior": "METOCLOPRAMIDA 10 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1520
+          },
+          {
+            "id": 251,
+            "descricao_item": "002.000.093",
+            "saldo_anterior": "METOCLOPRAMIDA 10 MG/ 2ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 100
+          },
+          {
+            "id": 252,
+            "descricao_item": "008.001.006",
+            "saldo_anterior": "METOPROLOL 1 MG/ML - AMPOLA",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 34
+          },
+          {
+            "id": 253,
+            "descricao_item": "008.001.007",
+            "saldo_anterior": "METOPROLOL 100 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 960
+          },
+          {
+            "id": 254,
+            "descricao_item": "008.001.008",
+            "saldo_anterior": "METOPROLOL 25 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 660
+          },
+          {
+            "id": 255,
+            "descricao_item": "008.001.005",
+            "saldo_anterior": "METOPROLOL 50 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1440
+          },
+          {
+            "id": 256,
+            "descricao_item": "002.000.024",
+            "saldo_anterior": "METRONIDAZOL 100 MG/G - GEL VAGINAL",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 145
+          },
+          {
+            "id": 257,
+            "descricao_item": "002.000.025",
+            "saldo_anterior": "METRONIDAZOL 250 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 3600
+          },
+          {
+            "id": 258,
+            "descricao_item": "002.000.026",
+            "saldo_anterior": "METRONIDAZOL 40 MG/ML -  SUSPENSÃO ORAL",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 45
+          },
+          {
+            "id": 259,
+            "descricao_item": "002.000.059",
+            "saldo_anterior": "MICONAZOL, NITRATO 0,02 MG/G -  80 G CREME VAGINAL",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 10
+          },
+          {
+            "id": 260,
+            "descricao_item": "005.000.102",
+            "saldo_anterior": "MIDAZOLAM, CLORIDRATO 5MG/ML 10ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 100
+          },
+          {
+            "id": 261,
+            "descricao_item": "228.001.001",
+            "saldo_anterior": "MIRTAZAPINA 15MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 30
+          },
+          {
+            "id": 262,
+            "descricao_item": "005.000.049",
+            "saldo_anterior": "MORFINA 10MG/ML INJ",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 51
+          },
+          {
+            "id": 263,
+            "descricao_item": "005.000.098",
+            "saldo_anterior": "MORFINA 1MG/ML INJ",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 160
+          },
+          {
+            "id": 264,
+            "descricao_item": "005.000.059",
+            "saldo_anterior": "NALOXONA, CLORIDRATO DE  0,4 MG/ 1 ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 20
+          },
+          {
+            "id": 265,
+            "descricao_item": "021.001.023",
+            "saldo_anterior": "NALTREXONA 50 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 150
+          },
+          {
+            "id": 266,
+            "descricao_item": "311.002.002",
+            "saldo_anterior": "NEOCATE LCP",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 0
+          },
+          {
+            "id": 267,
+            "descricao_item": "002.000.027",
+            "saldo_anterior": "NEOMICINA + BACITRACINA POMADA",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 407
+          },
+          {
+            "id": 268,
+            "descricao_item": "001.000.008",
+            "saldo_anterior": "NIFEDIPINA 20MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1140
+          },
+          {
+            "id": 269,
+            "descricao_item": "002.000.058",
+            "saldo_anterior": "NIMESULIDA 100 MG  CP",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 3828
+          },
+          {
+            "id": 270,
+            "descricao_item": "002.000.039",
+            "saldo_anterior": "NIMESULIDA GTS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 40
+          },
+          {
+            "id": 271,
+            "descricao_item": "021.001.058",
+            "saldo_anterior": "NISTATINA 100.000 SUSP FRASCO 60 ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 20
+          },
+          {
+            "id": 272,
+            "descricao_item": "002.000.028",
+            "saldo_anterior": "NISTATINA POMADA VAG.",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 75
+          },
+          {
+            "id": 273,
+            "descricao_item": "005.000.025",
+            "saldo_anterior": "NITRAZEPAN 5 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 274,
+            "descricao_item": "002.000.073",
+            "saldo_anterior": "NITROFURANTOINA 100MG CAPSULA",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 4256
+          },
+          {
+            "id": 275,
+            "descricao_item": "005.000.061",
+            "saldo_anterior": "NITROGLICERINA 5 MG/ML - TRIDIL",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 20
+          },
+          {
+            "id": 276,
+            "descricao_item": "005.000.062",
+            "saldo_anterior": "NITROPRUSSETO DE SÓDIO 25 MG/ML - NITROP",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 16
+          },
+          {
+            "id": 277,
+            "descricao_item": "005.000.079",
+            "saldo_anterior": "NOREPINEFRINA 2MG/4ML - AMP",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 45
+          },
+          {
+            "id": 278,
+            "descricao_item": "002.000.048",
+            "saldo_anterior": "NORETISTERONA + ESTRADIOL 50 + 5 MG/ML  (MESIGYNA) INJETAVEL",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 155
+          },
+          {
+            "id": 279,
+            "descricao_item": "002.000.047",
+            "saldo_anterior": "NORETISTERONA 0,35MG CAIXA COM 35 CPR",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1400
+          },
+          {
+            "id": 280,
+            "descricao_item": "002.000.140",
+            "saldo_anterior": "NORFLOXACINO 400MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 56
+          },
+          {
+            "id": 281,
+            "descricao_item": "304.002.002",
+            "saldo_anterior": "NORIPURUM INJ",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 115
+          },
+          {
+            "id": 282,
+            "descricao_item": "005.000.028",
+            "saldo_anterior": "NORTRIPTILINA, CLORIDRATO 25 MG",
+            "entradas": 0,
+            "saidas": "CAP",
+            "saldo_atual": 3180
+          },
+          {
+            "id": 283,
+            "descricao_item": "311.001.021",
+            "saldo_anterior": "NUTREN SENIOR",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 0
+          },
+          {
+            "id": 284,
+            "descricao_item": "002.000.141",
+            "saldo_anterior": "OLEO MINERAL 100 ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 74
+          },
+          {
+            "id": 285,
+            "descricao_item": "012.001.001",
+            "saldo_anterior": "OMEPRAZOL 20MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 6815
+          },
+          {
+            "id": 286,
+            "descricao_item": "001.001.007",
+            "saldo_anterior": "OMEPRAZOL SODICO PO INJETAVEL",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 57
+          },
+          {
+            "id": 287,
+            "descricao_item": "306.001.002",
+            "saldo_anterior": "ONDANSETRONA 4 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1120
+          },
+          {
+            "id": 288,
+            "descricao_item": "306.001.003",
+            "saldo_anterior": "ONDANSETRONA 4 MG/ 2 ML INJ",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 2035
+          },
+          {
+            "id": 289,
+            "descricao_item": "012.001.002",
+            "saldo_anterior": "ONDANSETRONA 8 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 600
+          },
+          {
+            "id": 290,
+            "descricao_item": "325.016.003",
+            "saldo_anterior": "OTOSPORIN GOTAS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 0
+          },
+          {
+            "id": 291,
+            "descricao_item": "005.000.080",
+            "saldo_anterior": "OXCARBAMAZEPINA 60 MG/ML SUSP ORAL",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 20
+          },
+          {
+            "id": 292,
+            "descricao_item": "302.004.003",
+            "saldo_anterior": "OXCARBAZEPINA 300 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 2160
+          },
+          {
+            "id": 293,
+            "descricao_item": "002.000.094",
+            "saldo_anterior": "OXITOCINA 5UI/ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 294,
+            "descricao_item": "012.001.004",
+            "saldo_anterior": "PANTOPRAZOL 20 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 28
+          },
+          {
+            "id": 295,
+            "descricao_item": "021.001.074",
+            "saldo_anterior": "PANTOPRAZOL 40 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 116
+          },
+          {
+            "id": 296,
+            "descricao_item": "030.001.007",
+            "saldo_anterior": "PARACETAMOL + CODEINA 500/30 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 2496
+          },
+          {
+            "id": 297,
+            "descricao_item": "002.000.043",
+            "saldo_anterior": "PARACETAMOL 200 MG/ ML -  FRASCO 15 ML GOTAS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 276
+          },
+          {
+            "id": 298,
+            "descricao_item": "002.000.031",
+            "saldo_anterior": "PARACETAMOL 500 MG - COMP",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 3100
+          },
+          {
+            "id": 299,
+            "descricao_item": "021.001.063",
+            "saldo_anterior": "PARACETAMOL 750 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 3530
+          },
+          {
+            "id": 300,
+            "descricao_item": "005.000.064",
+            "saldo_anterior": "PAROXETINA 20 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 400
+          },
+          {
+            "id": 301,
+            "descricao_item": "303.006.004",
+            "saldo_anterior": "PENTOXIFILINA 400 MG",
+            "entradas": 0,
+            "saidas": 0,
+            "saldo_atual": 870
+          },
+          {
+            "id": 302,
+            "descricao_item": "011.001.001",
+            "saldo_anterior": "PERMANGANTO DE POTASSIO 100 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 400
+          },
+          {
+            "id": 303,
+            "descricao_item": "325.014.001",
+            "saldo_anterior": "PERMETRINA 5% LOÇÃO",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 30
+          },
+          {
+            "id": 304,
+            "descricao_item": "005.000.050",
+            "saldo_anterior": "PETIDINA 50MG/ML(DOLANTINA)",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 305,
+            "descricao_item": "002.000.132",
+            "saldo_anterior": "PHOSFOENEMA 130ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 34
+          },
+          {
+            "id": 306,
+            "descricao_item": "002.000.032",
+            "saldo_anterior": "POLIVITAMINICO GTS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 0
+          },
+          {
+            "id": 307,
+            "descricao_item": "313.001.001",
+            "saldo_anterior": "POMADA PARA ASSADURA ( NIST+ OX ZINCO) PMD",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 110
+          },
+          {
+            "id": 308,
+            "descricao_item": "010.001.002",
+            "saldo_anterior": "PREDNISOLONA 3MG/ML, FOSFATO SODICO DE",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 104
+          },
+          {
+            "id": 309,
+            "descricao_item": "308.002.001",
+            "saldo_anterior": "PREDNISONA 20 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 6060
+          },
+          {
+            "id": 310,
+            "descricao_item": "007.000.001",
+            "saldo_anterior": "PREDNISONA 5 MG - CP",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1000
+          },
+          {
+            "id": 311,
+            "descricao_item": "325.010.001",
+            "saldo_anterior": "PREGABALINA 100MG - PREBICTAL",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 30
+          },
+          {
+            "id": 312,
+            "descricao_item": "302.004.001",
+            "saldo_anterior": "PREGABALINA 75MG - LYRICA",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1900
+          },
+          {
+            "id": 313,
+            "descricao_item": "005.000.007",
+            "saldo_anterior": "PROMETAZINA 25 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 3400
+          },
+          {
+            "id": 314,
+            "descricao_item": "005.000.051",
+            "saldo_anterior": "PROMETAZINA 50 MG/ 2ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 146
+          },
+          {
+            "id": 315,
+            "descricao_item": "021.001.067",
+            "saldo_anterior": "PROPOFOL 10 MG/ML -AMP",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 316,
+            "descricao_item": "001.000.011",
+            "saldo_anterior": "PROPRANOLOL 40MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1000
+          },
+          {
+            "id": 317,
+            "descricao_item": "325.009.001",
+            "saldo_anterior": "QUETIAPINA 100MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 30
+          },
+          {
+            "id": 318,
+            "descricao_item": "325.009.002",
+            "saldo_anterior": "QUETIAPINA 25 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 30
+          },
+          {
+            "id": 319,
+            "descricao_item": "002.000.099",
+            "saldo_anterior": "RIFOCINA SPRAY",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 45
+          },
+          {
+            "id": 320,
+            "descricao_item": "228.001.007",
+            "saldo_anterior": "RISPERIDONA 1 MG/ML SOLUÇÃO",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 20
+          },
+          {
+            "id": 321,
+            "descricao_item": "055.001.002",
+            "saldo_anterior": "RIVAROXABANA 10 MG (XARELTO)",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 120
+          },
+          {
+            "id": 322,
+            "descricao_item": "055.001.001",
+            "saldo_anterior": "RIVAROXABANA 20MG (XARELTO)",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 60
+          },
+          {
+            "id": 323,
+            "descricao_item": "302.008.002",
+            "saldo_anterior": "ROCURÔNIO 50 MG/ 5 ML - IV",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 324,
+            "descricao_item": "002.000.033",
+            "saldo_anterior": "SAIS P/REIDRATAÇÃO ORAL",
+            "entradas": 0,
+            "saidas": "EV",
+            "saldo_atual": 2589
+          },
+          {
+            "id": 325,
+            "descricao_item": "305.002.007",
+            "saldo_anterior": "SALBUTAMOL GOTAS",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 1
+          },
+          {
+            "id": 326,
+            "descricao_item": "007.000.002",
+            "saldo_anterior": "SALBUTAMOL, SULFATO 100 MCG/ DOSE -  AEROSOL",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 13
+          },
+          {
+            "id": 327,
+            "descricao_item": "005.000.033",
+            "saldo_anterior": "SERTRALINA 50MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 13200
+          },
+          {
+            "id": 328,
+            "descricao_item": "325.047.001",
+            "saldo_anterior": "SILYBUM MARIANUM 300MG (FORFIG)",
+            "entradas": 0,
+            "saidas": "CAP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 329,
+            "descricao_item": "002.000.056",
+            "saldo_anterior": "SIMETICONA GTS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 162
+          },
+          {
+            "id": 330,
+            "descricao_item": "222.001.002",
+            "saldo_anterior": "SINVASTATINA 10MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 331,
+            "descricao_item": "222.001.001",
+            "saldo_anterior": "SINVASTATINA 20MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 332,
+            "descricao_item": "321.001.222",
+            "saldo_anterior": "SORO FISIOLOGICO 250 ML",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 0
+          },
+          {
+            "id": 333,
+            "descricao_item": "321.001.230",
+            "saldo_anterior": "SORO MANITOL 250ML",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 0
+          },
+          {
+            "id": 334,
+            "descricao_item": "021.001.095",
+            "saldo_anterior": "SORO NASAL INFANTIL/ADULTO -30 ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 75
+          },
+          {
+            "id": 335,
+            "descricao_item": "009.000.002",
+            "saldo_anterior": "SULFADIAZINA DE PRATA 0,01",
+            "entradas": 0,
+            "saidas": "TB",
+            "saldo_atual": 57
+          },
+          {
+            "id": 336,
+            "descricao_item": "002.000.036",
+            "saldo_anterior": "SULFAM. + TRIMETROP. 40 + 8 MG/ML - SUSPENSÃO ORAL 100 ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 35
+          },
+          {
+            "id": 337,
+            "descricao_item": "002.000.035",
+            "saldo_anterior": "SULFAMET. +TRIMETOPRIMA  400 + 80MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1040
+          },
+          {
+            "id": 338,
+            "descricao_item": "008.001.003",
+            "saldo_anterior": "SULFATO DE MAGNESIO 10%",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 339,
+            "descricao_item": "002.000.037",
+            "saldo_anterior": "SULFATO FERROSO 25 MG/ML - GOTAS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 175
+          },
+          {
+            "id": 340,
+            "descricao_item": "002.000.046",
+            "saldo_anterior": "SULFATO FERROSO 40 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 2400
+          },
+          {
+            "id": 341,
+            "descricao_item": "002.000.038",
+            "saldo_anterior": "SUPLEMENTO VITAMINICO A-Z",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 2640
+          },
+          {
+            "id": 342,
+            "descricao_item": "325.004.005",
+            "saldo_anterior": "SUPLEMENTO VITAMINICO A-Z LIQUIDO",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 10
+          },
+          {
+            "id": 343,
+            "descricao_item": "230.001.018",
+            "saldo_anterior": "SUSTAGEN ADULTOS+",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 14
+          },
+          {
+            "id": 344,
+            "descricao_item": "311.002.008",
+            "saldo_anterior": "SUSTAGEN SENIOR",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 0
+          },
+          {
+            "id": 345,
+            "descricao_item": "005.000.055",
+            "saldo_anterior": "SUXAMETONIO 100MG SUSP INJ",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 62
+          },
+          {
+            "id": 346,
+            "descricao_item": "321.001.457",
+            "saldo_anterior": "TALA METALICA",
+            "entradas": 0,
+            "saidas": 0,
+            "saldo_atual": 0
+          },
+          {
+            "id": 347,
+            "descricao_item": "331.001.001",
+            "saldo_anterior": "TAPENTADOL - PALEXIS LP 50MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 30
+          },
+          {
+            "id": 348,
+            "descricao_item": "002.000.095",
+            "saldo_anterior": "TERBUTALINA 0,5MG/ML",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 84
+          },
+          {
+            "id": 349,
+            "descricao_item": "008.001.010",
+            "saldo_anterior": "TESTE DE TROPONINA CARDIACA",
+            "entradas": 0,
+            "saidas": "EV",
+            "saldo_atual": 100
+          },
+          {
+            "id": 350,
+            "descricao_item": "321.002.001",
+            "saldo_anterior": "TESTE RAPIDO COMBO (COVID-19/ INFLUENZA A/B)",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 120
+          },
+          {
+            "id": 351,
+            "descricao_item": "001.001.006",
+            "saldo_anterior": "TESTE RAPIDO DE GRAVIDEZ",
+            "entradas": 0,
+            "saidas": "EV",
+            "saldo_atual": 64
+          },
+          {
+            "id": 352,
+            "descricao_item": "308.003.001",
+            "saldo_anterior": "TIAMAZOL 5MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 600
+          },
+          {
+            "id": 353,
+            "descricao_item": "006.000.002",
+            "saldo_anterior": "TIAMINA 300 MG - CP",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 3600
+          },
+          {
+            "id": 354,
+            "descricao_item": "308.001.001",
+            "saldo_anterior": "TIBOLONA 1,25MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 420
+          },
+          {
+            "id": 355,
+            "descricao_item": "315.001.002",
+            "saldo_anterior": "TOBRAMICINA 0,3 % COLIRIO - FRASCO 5 ML",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 59
+          },
+          {
+            "id": 356,
+            "descricao_item": "325.028.005",
+            "saldo_anterior": "TORVAL CR 500MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 0
+          },
+          {
+            "id": 357,
+            "descricao_item": "021.001.090",
+            "saldo_anterior": "TRAMADOL 50MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 480
+          },
+          {
+            "id": 358,
+            "descricao_item": "005.000.052",
+            "saldo_anterior": "TRAMADOL 50MG/ML(TRAMAL)- AMP",
+            "entradas": 0,
+            "saidas": "AMP",
+            "saldo_atual": 185
+          },
+          {
+            "id": 359,
+            "descricao_item": "325.001.001",
+            "saldo_anterior": "TRAZODONA, CLORIDRATO 50MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 60
+          },
+          {
+            "id": 360,
+            "descricao_item": "005.000.021",
+            "saldo_anterior": "VALPROATO DE SÓDIO 50 MG/ML - XPE",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 170
+          },
+          {
+            "id": 361,
+            "descricao_item": "304.001.004",
+            "saldo_anterior": "VARFARINA SODICA 5MG - MAREVAN",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1350
+          },
+          {
+            "id": 362,
+            "descricao_item": "005.000.068",
+            "saldo_anterior": "VENLAFAXINA 75 MG",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 750
+          },
+          {
+            "id": 363,
+            "descricao_item": "325.016.002",
+            "saldo_anterior": "VIGADEXA COL - MOXIFLOXACINO + DEXAMETASONA",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 0
+          },
+          {
+            "id": 364,
+            "descricao_item": "311.001.002",
+            "saldo_anterior": "VITAMINA D 200 UI - GOTAS",
+            "entradas": 0,
+            "saidas": "FR",
+            "saldo_atual": 0
+          },
+          {
+            "id": 365,
+            "descricao_item": "230.001.017",
+            "saldo_anterior": "VITAMINA D 2000UI",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 80
+          },
+          {
+            "id": 366,
+            "descricao_item": "230.001.001",
+            "saldo_anterior": "VITAMINA D3 7.000 UI",
+            "entradas": 0,
+            "saidas": "CP",
+            "saldo_atual": 1110
+          },
+          {
+            "id": 367,
+            "descricao_item": "311.002.004",
+            "saldo_anterior": "WHEY PROTEIN ISOLADO",
+            "entradas": 0,
+            "saidas": "UN",
+            "saldo_atual": 0
+          }
+        ]
+      },
+      "movimentacao": {
+        "arquivo": "MovimentaÃ§Ã£o CAF 01-06.xlsx",
+        "linhas_processadas": 525,
+        "itens": [
+          {
+            "id": 1,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 2,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 3,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 4,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 5,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 6,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 7,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 8,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 9,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 10,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 11,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 12,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 13,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 14,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 15,
+            "descricao_item": 45804,
+            "quantidade": "PREFEITURA MUNICIPAL DE PIRANGI",
+            "valor": "1543"
+          },
+          {
+            "id": 16,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 17,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 18,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 19,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 20,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 21,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 22,
+            "descricao_item": 45804,
+            "quantidade": "PREFEITURA MUNICIPAL DE PIRANGI",
+            "valor": "1543"
+          },
+          {
+            "id": 23,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 24,
+            "descricao_item": 45805,
+            "quantidade": "P & P DISTRIBUIDORA DE MEDICAMENTOS LTDA",
+            "valor": "2522"
+          },
+          {
+            "id": 25,
+            "descricao_item": 45805,
+            "quantidade": "P & P DISTRIBUIDORA DE MEDICAMENTOS LTDA",
+            "valor": "2523"
+          },
+          {
+            "id": 26,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 27,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 28,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 29,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 30,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 31,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 32,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 33,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 34,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 35,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 36,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 37,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 38,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 39,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 40,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 41,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 42,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 43,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 44,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 45,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813198"
+          },
+          {
+            "id": 46,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813198"
+          },
+          {
+            "id": 47,
+            "descricao_item": 45807,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 48,
+            "descricao_item": 45807,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 49,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 50,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 51,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 52,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 53,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 54,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 55,
+            "descricao_item": 45806,
+            "quantidade": "PRODONLIFE",
+            "valor": "33407"
+          },
+          {
+            "id": 56,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 57,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 58,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 59,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 60,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 61,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 62,
+            "descricao_item": 45803,
+            "quantidade": "SOMA SP HOSPITALAR",
+            "valor": "320927"
+          },
+          {
+            "id": 63,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 64,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813178"
+          },
+          {
+            "id": 65,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 66,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 67,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 68,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813178"
+          },
+          {
+            "id": 69,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813198"
+          },
+          {
+            "id": 70,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 71,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 72,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 73,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 74,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 75,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 76,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 77,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 78,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 79,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 80,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 81,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 82,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 83,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 84,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 85,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 86,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 87,
+            "descricao_item": 45807,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 88,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 89,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 90,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 91,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 92,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 93,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 94,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 95,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 96,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 97,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 98,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 99,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 100,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 101,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 102,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813178"
+          },
+          {
+            "id": 103,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813198"
+          },
+          {
+            "id": 104,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 105,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 106,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 107,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 108,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 109,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 110,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 111,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 112,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 113,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 114,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 115,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 116,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 117,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 118,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 119,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813178"
+          },
+          {
+            "id": 120,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 121,
+            "descricao_item": 45803,
+            "quantidade": "PREFEITURA MUNICIPAL DE PARAISO",
+            "valor": "2665"
+          },
+          {
+            "id": 122,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 123,
+            "descricao_item": 45804,
+            "quantidade": "EMPRESTIMO PARA MUNICIPIO MEDICAMENTO EMPREST",
+            "valor": 0
+          },
+          {
+            "id": 124,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 125,
+            "descricao_item": 45804,
+            "quantidade": "PREFEITURA MUNICIPAL DE PIRANGI",
+            "valor": "1543"
+          },
+          {
+            "id": 126,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 127,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 128,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 129,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 130,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 131,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 132,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 133,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 134,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 135,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 136,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 137,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 138,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 139,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 140,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 141,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 142,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 143,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 144,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 145,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 146,
+            "descricao_item": 45805,
+            "quantidade": "DIMEVA DISTRIBUIDORA E IMPORTADORA LTDA",
+            "valor": "108864"
+          },
+          {
+            "id": 147,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 148,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 149,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 150,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 151,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 152,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 153,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 154,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 155,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 156,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 157,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813198"
+          },
+          {
+            "id": 158,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 159,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 160,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 161,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 162,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 163,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 164,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 165,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 166,
+            "descricao_item": 45803,
+            "quantidade": "PREFEITURA MUNICIPAL DE PARAISO",
+            "valor": "2620"
+          },
+          {
+            "id": 167,
+            "descricao_item": 45803,
+            "quantidade": "PREFEITURA MUNICIPAL DE PARAISO",
+            "valor": "2620"
+          },
+          {
+            "id": 168,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 169,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 170,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 171,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813178"
+          },
+          {
+            "id": 172,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 173,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 174,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 175,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 176,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 177,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 178,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 179,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 180,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 181,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 182,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 183,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 184,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 185,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 186,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813178"
+          },
+          {
+            "id": 187,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813178"
+          },
+          {
+            "id": 188,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813198"
+          },
+          {
+            "id": 189,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 190,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 191,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 192,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 193,
+            "descricao_item": 45804,
+            "quantidade": "PREFEITURA MUNICIPAL DE PIRANGI",
+            "valor": "1543"
+          },
+          {
+            "id": 194,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 195,
+            "descricao_item": 45805,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 196,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 197,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 198,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 199,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 200,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 201,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 202,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 203,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 204,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 205,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 206,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 207,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 208,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 209,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 210,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 211,
+            "descricao_item": 45805,
+            "quantidade": "DIMEVA DISTRIBUIDORA E IMPORTADORA LTDA",
+            "valor": "108864"
+          },
+          {
+            "id": 212,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 213,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 214,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 215,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 216,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 217,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 218,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 219,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 220,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 221,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 222,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 223,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 224,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 225,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 226,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 227,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 228,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 229,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 230,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 231,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 232,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 233,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813198"
+          },
+          {
+            "id": 234,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 235,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 236,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 237,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 238,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 239,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 240,
+            "descricao_item": 45807,
+            "quantidade": "PREFEITURA MUNICIPAL DE PARAISO",
+            "valor": "2712"
+          },
+          {
+            "id": 241,
+            "descricao_item": 45807,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 242,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 243,
+            "descricao_item": 45805,
+            "quantidade": "R.A.P. APARECIDA COMERCIO DE MEDICAMENTOS LTD",
+            "valor": "175218"
+          },
+          {
+            "id": 244,
+            "descricao_item": 45807,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 245,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 246,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 247,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 248,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 249,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 250,
+            "descricao_item": 45805,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 251,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 252,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 253,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 254,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 255,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 256,
+            "descricao_item": 45803,
+            "quantidade": "SOMA SP HOSPITALAR",
+            "valor": "320927"
+          },
+          {
+            "id": 257,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 258,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 259,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 260,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 261,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 262,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 263,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 264,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 265,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 266,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 267,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 268,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 269,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 270,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 271,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 272,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 273,
+            "descricao_item": 45805,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 274,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 275,
+            "descricao_item": 45805,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 276,
+            "descricao_item": 45805,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 277,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 278,
+            "descricao_item": 45805,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 279,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 280,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 281,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 282,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 283,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 284,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 285,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 286,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 287,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 288,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 289,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813178"
+          },
+          {
+            "id": 290,
+            "descricao_item": 45807,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 291,
+            "descricao_item": 45807,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 292,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 293,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 294,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 295,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 296,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 297,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 298,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 299,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 300,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 301,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 302,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 303,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 304,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 305,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 306,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 307,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 308,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 309,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813198"
+          },
+          {
+            "id": 310,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 311,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 312,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 313,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 314,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 315,
+            "descricao_item": 45804,
+            "quantidade": "TRANFERENCIA ENTRE MUNICIPIOS DEVOLUÇÃO PARA",
+            "valor": 0
+          },
+          {
+            "id": 316,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 317,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 318,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 319,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 320,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 321,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 322,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 323,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 324,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 325,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813178"
+          },
+          {
+            "id": 326,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813198"
+          },
+          {
+            "id": 327,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813198"
+          },
+          {
+            "id": 328,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 329,
+            "descricao_item": 45803,
+            "quantidade": "SOMEDICA HOSPITALAR",
+            "valor": "5771"
+          },
+          {
+            "id": 330,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 331,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 332,
+            "descricao_item": 45803,
+            "quantidade": "SOMEDICA HOSPITALAR",
+            "valor": "5771"
+          },
+          {
+            "id": 333,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 334,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 335,
+            "descricao_item": 45803,
+            "quantidade": "TACIO DE OLIVEIRA DUSSO E CIA LTDA",
+            "valor": "104"
+          },
+          {
+            "id": 336,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 337,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 338,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813198"
+          },
+          {
+            "id": 339,
+            "descricao_item": 45807,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 340,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 341,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 342,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813178"
+          },
+          {
+            "id": 343,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813198"
+          },
+          {
+            "id": 344,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 345,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 346,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 347,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 348,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 349,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 350,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 351,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 352,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 353,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 354,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 355,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813198"
+          },
+          {
+            "id": 356,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 357,
+            "descricao_item": 45803,
+            "quantidade": "PROGRAMA SAUDE DA FAMILIA III",
+            "valor": 0
+          },
+          {
+            "id": 358,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 359,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 360,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 361,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 362,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 363,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 364,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 365,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 366,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 367,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 368,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813178"
+          },
+          {
+            "id": 369,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 370,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 371,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 372,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 373,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 374,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 375,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 376,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 377,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 378,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 379,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 380,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813178"
+          },
+          {
+            "id": 381,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813198"
+          },
+          {
+            "id": 382,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 383,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 384,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 385,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 386,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 387,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 388,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 389,
+            "descricao_item": 45807,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 390,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 391,
+            "descricao_item": 45803,
+            "quantidade": "CIRURGICA OLIMPIO EIRELI EPP",
+            "valor": "188026"
+          },
+          {
+            "id": 392,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 393,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 394,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 395,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 396,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 397,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 398,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 399,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 400,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 401,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 402,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 403,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 404,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 405,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 406,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 407,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 408,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 409,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 410,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 411,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 412,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 413,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 414,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 415,
+            "descricao_item": 45803,
+            "quantidade": "DOAÇÃO",
+            "valor": 0
+          },
+          {
+            "id": 416,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 417,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 418,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 419,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 420,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 421,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 422,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 423,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 424,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 425,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 426,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 427,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 428,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 429,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 430,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 431,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 432,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 433,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 434,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 435,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 436,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 437,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 438,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 439,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 440,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 441,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 442,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 443,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 444,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 445,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 446,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 447,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 448,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 449,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 450,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 451,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 452,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 453,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 454,
+            "descricao_item": 45803,
+            "quantidade": "SOMA SP HOSPITALAR",
+            "valor": "320927"
+          },
+          {
+            "id": 455,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 456,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 457,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 458,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 459,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 460,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 461,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 462,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813178"
+          },
+          {
+            "id": 463,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 464,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 465,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 466,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 467,
+            "descricao_item": 45805,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 468,
+            "descricao_item": 45807,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 469,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 470,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 471,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 472,
+            "descricao_item": 45803,
+            "quantidade": "SOMA SP HOSPITALAR",
+            "valor": "320917"
+          },
+          {
+            "id": 473,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 474,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 475,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 476,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 477,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 478,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 479,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 480,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 481,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813178"
+          },
+          {
+            "id": 482,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 483,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 484,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 485,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 486,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 487,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 488,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 489,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 490,
+            "descricao_item": 45807,
+            "quantidade": "SECRETARIA DE ESTADO DA SAÚDE",
+            "valor": "2813178"
+          },
+          {
+            "id": 491,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 492,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 493,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 494,
+            "descricao_item": 45806,
+            "quantidade": "UBS III OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 495,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 496,
+            "descricao_item": 45807,
+            "quantidade": "PREFEITURA MUNICIPAL DE PARAISO",
+            "valor": "2773"
+          },
+          {
+            "id": 497,
+            "descricao_item": 45807,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 498,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 499,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 500,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 501,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 502,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 503,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 504,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 505,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 506,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 507,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 508,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 509,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 510,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 511,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 512,
+            "descricao_item": 45803,
+            "quantidade": "TACIO DE OLIVEIRA DUSSO E CIA LTDA",
+            "valor": "104"
+          },
+          {
+            "id": 513,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 514,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 515,
+            "descricao_item": 45806,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 516,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 517,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 518,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 519,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 520,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          },
+          {
+            "id": 521,
+            "descricao_item": 45802,
+            "quantidade": "SALDO ANTERIOR",
+            "valor": 0
+          },
+          {
+            "id": 522,
+            "descricao_item": 45803,
+            "quantidade": "INOVAMED COMERCIO DE MEDICAMENTOS",
+            "valor": "29848"
+          },
+          {
+            "id": 523,
+            "descricao_item": 45803,
+            "quantidade": "FARMACIA ESF III",
+            "valor": 0
+          },
+          {
+            "id": 524,
+            "descricao_item": 45804,
+            "quantidade": "FARMACIA OLAVO DOMINGUES",
+            "valor": 0
+          }
+        ]
+      }
+    }
+  }
+}

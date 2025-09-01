@@ -6,6 +6,11 @@ import { config } from 'dotenv';
 // Carrega as variáveis de ambiente, se ainda não estiverem carregadas pelo app.ts
 config();
 
+// Configurações específicas para desenvolvimento local
+process.env.NODE_ENV = 'development';
+process.env.DISABLE_AUTH = 'true';
+console.log('🔧 [DEV] Modo desenvolvimento ativado - Autenticação desabilitada');
+
 const PORT = parseInt(process.env.PORT || '3001', 10);
 
 // Inicia o servidor apenas para desenvolvimento local

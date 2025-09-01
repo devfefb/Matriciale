@@ -10,6 +10,16 @@ const router = Router();
 router.use('/users', usersRouter); // assim como esse exemplo, onde as rotas de usuários estão em um arquivo separado, e apenas usamos 'router.use' para importar as rotas
 router.use('/upload', uploadRoutes); // rotas para upload de planilhas
 
+// Rota de teste sem autenticação
+router.get('/test', (req, res) => {
+  console.log('🧪 [TEST] Rota de teste chamada sem autenticação');
+  res.json({
+    status: 'success',
+    message: 'Rota de teste funcionando',
+    timestamp: new Date().toISOString()
+  });
+});
+
 // Rota de registro
 router.post('/register', async (req, res) => {
   try {
