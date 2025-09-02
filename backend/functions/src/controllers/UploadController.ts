@@ -3,7 +3,9 @@ import multer from 'multer';
 import * as fs from 'fs';
 import * as path from 'path';
 import { UploadService } from '../services/UploadService';
+import { FileStorageService } from '../services/FileStorageService';
 import { UploadRequest, ProcessingOptions } from '../interfaces/Upload';
+import { db } from '../config/firebase';
 
 export class UploadController {
   private uploadService: UploadService;
@@ -300,7 +302,7 @@ export class UploadController {
   }
 
   /**
-   * Endpoint para upload semanal (múltiplos arquivos)
+   * Endpoint para upload semanal (dados JSON otimizado)
    */
   async uploadSemanal(req: Request, res: Response) {
     console.log('🚀 [UPLOAD SEMANAL] Endpoint chamado!');
@@ -309,69 +311,146 @@ export class UploadController {
     console.log('⚡ [UPLOAD SEMANAL] Method:', req.method);
     
     try {
-      const files = req.files as Express.Multer.File[];
-      console.log('📁 [UPLOAD SEMANAL] Files recebidos:', files ? files.length : 'undefined');
+      // Nova estrutura otimizada: recebemos metadados + array de arquivos JSON
+      const { 
+        tipo, 
+        municipio, 
+        data_processamento, 
+        arquivos // Array de { nome_arquivo, content: object }
+      } = req.body;
+      
+      console.log('📊 [UPLOAD SEMANAL] Dados recebidos:', {
+        tipo,
+        municipio,
+        data_processamento,
+        total_arquivos: arquivos ? arquivos.length : 0,
+        arquivos_nomes: arquivos ? arquivos.map((a: any) => a.nome_arquivo) : []
+      });
 
-      if (!files || files.length === 0) {
-        console.log('❌ [UPLOAD SEMANAL] Nenhum arquivo enviado');
+      if (!arquivos || !Array.isArray(arquivos) || arquivos.length === 0) {
+        console.log('❌ [UPLOAD SEMANAL] Nenhum arquivo processado enviado');
         return res.status(400).json({
           status: 'error',
-          message: 'Nenhum arquivo foi enviado'
+          message: 'Nenhum arquivo processado foi enviado'
         });
       }
 
-      const { municipio = 'municipio_teste' } = req.body;
-
-      console.log('🔄 [UPLOAD SEMANAL] Iniciando processamento...');
-      console.log(`📁 Município: ${municipio}`);
-      console.log(`📦 Arquivos recebidos: ${files.length}`);
-
-      // Agrupar arquivos por unidade e tipo
-      const arquivosPorUnidade: { [unidade: string]: { [tipo: string]: Express.Multer.File } } = {};
-
-      files.forEach(file => {
-        const unidade = this.extrairNomeUnidade(file.originalname);
-        const tipo = this.determinarTipoArquivo(file.originalname);
-
-        console.log(`📄 Arquivo: ${file.originalname} → Unidade: ${unidade}, Tipo: ${tipo}`);
-
-        if (!arquivosPorUnidade[unidade]) {
-          arquivosPorUnidade[unidade] = {};
-        }
-        arquivosPorUnidade[unidade][tipo] = file;
-      });
-
-      // Processar dados usando scripts de extração generalizados
-      const dadosProcessados = await this.processarUploadSemanal(arquivosPorUnidade, municipio);
-
-      // Salvar em test-input para file-watcher processar
-      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-      const nomeArquivo = `upload-semanal-${municipio}-${timestamp}.json`;
-      const caminhoTestInput = path.resolve(process.cwd(), 'test-input', nomeArquivo);
-
-      // Garantir que diretório existe
-      const diretorioTestInput = path.dirname(caminhoTestInput);
-      if (!fs.existsSync(diretorioTestInput)) {
-        fs.mkdirSync(diretorioTestInput, { recursive: true });
+      if (!municipio) {
+        return res.status(400).json({
+          status: 'error',
+          message: 'Nome do município é obrigatório'
+        });
       }
 
-      fs.writeFileSync(caminhoTestInput, JSON.stringify(dadosProcessados, null, 2));
+      console.log('🔄 [UPLOAD SEMANAL] Iniciando processamento dos arquivos JSON...');
+      
+      const resultados: any[] = [];
+      const arquivosSalvos: string[] = [];
+      
+      // Processar cada arquivo
+      for (const arquivo of arquivos) {
+        const { nome_arquivo, content } = arquivo;
+        
+        if (!nome_arquivo || !content) {
+          console.log(`❌ [UPLOAD SEMANAL] Arquivo inválido:`, arquivo);
+          continue;
+        }
 
-      console.log(`💾 [UPLOAD SEMANAL] Dados salvos em: ${caminhoTestInput}`);
-      console.log('👁️ [UPLOAD SEMANAL] File-watcher detectará e processará automaticamente');
+        console.log(`⚙️ [UPLOAD SEMANAL] Processando arquivo: ${nome_arquivo}`);
+        
+        // Validar conteúdo do inventoryData
+        if (!content.periodo_inicio || !content.periodo_fim || !content.itens) {
+          console.log(`❌ [UPLOAD SEMANAL] Formato inválido do inventoryData: ${nome_arquivo}`);
+          continue;
+        }
 
-      return res.status(200).json({
+        console.log(`📅 [UPLOAD SEMANAL] Período: ${content.periodo_inicio} a ${content.periodo_fim}`);
+        console.log(`📦 [UPLOAD SEMANAL] Itens: ${content.itens.length}`);
+        
+        // Criar buffer do JSON
+        const buffer = FileStorageService.criarBufferJSON(content);
+        
+        // Validar JSON
+        const validacao = FileStorageService.validarJSON(buffer);
+        if (!validacao.valido) {
+          console.log(`❌ [UPLOAD SEMANAL] JSON inválido em ${nome_arquivo}: ${validacao.erro}`);
+          continue;
+        }
+
+        // Extrair nome da unidade do arquivo
+        const nomeUnidade = this.extrairNomeUnidadeDoArquivo(nome_arquivo);
+        
+        // Gerar nome de arquivo único
+        const nomeArquivoFinal = FileStorageService.gerarNomeArquivo(
+          municipio, 
+          nomeUnidade, 
+          'semanal'
+        );
+
+        // Salvar arquivo usando FileStorageService (condicional baseado em NODE_ENV)
+        const resultadoSalvamento = await FileStorageService.salvarArquivoJSON(
+          buffer,
+          nomeArquivoFinal,
+          {
+            municipio,
+            unidade: nomeUnidade,
+            periodo_inicio: content.periodo_inicio,
+            periodo_fim: content.periodo_fim,
+            total_itens: content.itens.length,
+            arquivo_original: nome_arquivo
+          }
+        );
+
+        if (resultadoSalvamento.success) {
+          console.log(`✅ [UPLOAD SEMANAL] Arquivo salvo: ${resultadoSalvamento.path}`);
+          
+          resultados.push({
+            unidade: nomeUnidade,
+            arquivo_original: nome_arquivo,
+            arquivo_salvo: resultadoSalvamento.path,
+            url: resultadoSalvamento.url,
+            periodo: `${content.periodo_inicio} a ${content.periodo_fim}`,
+            total_itens: content.itens.length
+          });
+
+          arquivosSalvos.push(nomeArquivoFinal);
+
+          // Salvar metadados no Firestore
+          await this.salvarMetadadosFirestore(
+            municipio,
+            nomeUnidade,
+            {
+              arquivo_path: resultadoSalvamento.path,
+              arquivo_url: resultadoSalvamento.url,
+              periodo_inicio: content.periodo_inicio,
+              periodo_fim: content.periodo_fim,
+              total_itens: content.itens.length,
+              data_upload: new Date(),
+              status: 'processado'
+            }
+          );
+
+        } else {
+          console.log(`❌ [UPLOAD SEMANAL] Falha ao salvar: ${resultadoSalvamento.error}`);
+        }
+      }
+
+      const response = {
         status: 'success',
-        message: 'Upload semanal processado com sucesso',
+        message: `Upload semanal processado com sucesso - ${resultados.length} arquivo(s) salvos`,
         data: {
           municipio,
-          arquivo_gerado: nomeArquivo,
-          caminho: caminhoTestInput,
-          unidades_processadas: Object.keys(dadosProcessados.unidades || {}),
-          total_unidades: Object.keys(arquivosPorUnidade).length,
+          arquivos_processados: resultados.length,
+          arquivos_gerados: arquivosSalvos,
+          environment: process.env.NODE_ENV || 'development',
+          storage_type: process.env.NODE_ENV === 'production' ? 'firebase_storage' : 'local_filesystem',
+          resultados,
           timestamp: new Date().toISOString()
         }
-      });
+      };
+
+      console.log('✅ [UPLOAD SEMANAL] Processamento concluído:', response.data);
+      return res.status(200).json(response);
 
     } catch (error: any) {
       console.error('❌ [UPLOAD SEMANAL] Erro completo:', error);
@@ -472,6 +551,80 @@ export class UploadController {
     }
     
     return nomeBase.replace(/[^A-Za-z0-9]/g, '').toUpperCase() || 'DESCONHECIDO';
+  }
+
+  /**
+   * Extrai nome da unidade do arquivo de inventoryData
+   */
+  private extrairNomeUnidadeDoArquivo(nomeArquivo: string): string {
+    // Padrões específicos para arquivos inventoryData
+    const patterns = [
+      /inventoryData([A-Za-z0-9]+)\.json$/i,
+      /inventory[-_]?([A-Za-z0-9]+)\.json$/i,
+      /([A-Za-z0-9]+)[-_]?inventory\.json$/i,
+      /([A-Za-z0-9]+)\.json$/i
+    ];
+    
+    for (const pattern of patterns) {
+      const match = nomeArquivo.match(pattern);
+      if (match && match[1] && match[1].length >= 2) {
+        return match[1].toUpperCase().trim();
+      }
+    }
+    
+    // Fallback: usar nome base sem extensão
+    return nomeArquivo.replace(/\.(json|xlsx|xls|csv)$/i, '').toUpperCase() || 'DESCONHECIDO';
+  }
+
+  /**
+   * Salva metadados do upload no Firestore
+   */
+  private async salvarMetadadosFirestore(
+    municipio: string,
+    unidade: string,
+    metadados: any
+  ): Promise<void> {
+    try {
+      const municipioRef = db.collection('municipio').doc(municipio);
+      const unidadeRef = municipioRef.collection('unidades').doc(unidade);
+      
+      // Verificar se município existe
+      const municipioDoc = await municipioRef.get();
+      if (!municipioDoc.exists) {
+        console.log(`📍 [FIRESTORE] Criando município: ${municipio}`);
+        await municipioRef.set({
+          nome: municipio,
+          data_criacao: new Date(),
+          status: 'ativo'
+        });
+      }
+
+      // Verificar se unidade existe
+      const unidadeDoc = await unidadeRef.get();
+      if (!unidadeDoc.exists) {
+        console.log(`🏥 [FIRESTORE] Criando unidade: ${unidade}`);
+        await unidadeRef.set({
+          nome: unidade,
+          municipio: municipio,
+          data_criacao: new Date(),
+          status: 'ativo'
+        });
+      }
+
+      // Salvar dados do upload na subcoleção de uploads
+      const uploadRef = unidadeRef.collection('uploads').doc();
+      await uploadRef.set({
+        ...metadados,
+        id: uploadRef.id,
+        data_upload: new Date()
+      });
+
+      console.log(`✅ [FIRESTORE] Metadados salvos: ${municipio}/${unidade}/${uploadRef.id}`);
+
+    } catch (error) {
+      console.error('❌ [FIRESTORE] Erro ao salvar metadados:', error);
+      // Não lançar erro para não interromper o upload
+    }
   }
 
   /**
