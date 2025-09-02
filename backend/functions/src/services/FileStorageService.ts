@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { getStorage } from 'firebase-admin/storage';
+import { bucket } from '../config/firebase';
 
 export interface StorageResult {
   success: boolean;
@@ -48,7 +49,11 @@ export class FileStorageService {
     console.log(`☁️ [STORAGE] Salvando no Firebase Storage: ${nomeArquivo}`);
     
     try {
-      const bucket = getStorage().bucket();
+      // Verificar se o bucket está disponível
+      if (!bucket) {
+        throw new Error('Firebase Storage bucket não está configurado. Verifique a variável STORAGE_BUCKET_URL.');
+      }
+
       const arquivo = bucket.file(`uploads/semanal/${nomeArquivo}`);
       
       // Metadados do arquivo

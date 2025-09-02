@@ -7,9 +7,9 @@ import { errorMiddleware } from './middlewares/error';
 const app = express();
 
 // CORS configuração condicional para desenvolvimento e produção
-const corsOrigins = process.env.NODE_ENV !== 'development' 
-  ? ['http://localhost:3000', 'http://localhost:5173'] // Configurar domínios de produção
-  : ['https://your-domain.com']; // Vite + React dev servers
+const corsOrigins = process.env.NODE_ENV === 'development' 
+  ? ['http://localhost:3000', 'http://localhost:5173'] // Vite + React dev servers
+  : ['https://your-domain.com']; // Configurar domínios de produção
 
 app.use(cors({
   origin: corsOrigins,

@@ -137,6 +137,7 @@ async function testarEndpoint() {
     
     const healthData = await healthResponse.json();
     console.log('✅ [TESTE] Servidor funcionando:', healthData);
+    console.log(`🌍 [TESTE] Ambiente detectado: ${healthData.environment}`);
     
     // Testar endpoint de upload semanal
     console.log('📤 [TESTE] Enviando dados de teste...');

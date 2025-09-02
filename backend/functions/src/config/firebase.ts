@@ -9,7 +9,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 // Define a URL do seu bucket a partir das variáveis de ambiente.
-const STORAGE_BUCKET_URL = ''; // TODO: configurar quando tiver um bucket ativo
+const STORAGE_BUCKET_URL = process.env.STORAGE_BUCKET_URL || ''; // TODO: configurar quando tiver um bucket ativo
 
 if (!admin.apps.length) {
   const isDevelopment = process.env.NODE_ENV === 'development';
@@ -22,13 +22,23 @@ if (!admin.apps.length) {
       
       // O caminho aponta para duas pastas acima e depois para o arquivo.
       // Ajuste se a estrutura do seu projeto for diferente.
-      const serviceAccountPath = path.resolve(__dirname, '../../serviceAccountKey.json');
+      const serviceAccountPath = path.resolve(__dirname, '../../src/config/credentials/serviceAccountKey.json');
       const serviceAccount = require(serviceAccountPath);
 
-      admin.initializeApp({
+      // Em desenvolvimento, não inicializar o Storage se não tiver bucket configurado
+      const initConfig: any = {
         credential: admin.credential.cert(serviceAccount),
-        storageBucket: STORAGE_BUCKET_URL,
-      });
+      };
+
+      // Só adicionar storageBucket se estiver definido
+      if (STORAGE_BUCKET_URL) {
+        initConfig.storageBucket = STORAGE_BUCKET_URL;
+        console.log('🪣 Storage bucket configurado para desenvolvimento:', STORAGE_BUCKET_URL);
+      } else {
+        console.log('⚠️ Storage bucket não configurado para desenvolvimento (modo local file system)');
+      }
+
+      admin.initializeApp(initConfig);
       console.log('🔥 Firebase Admin inicializado com Service Account (Local).');
 
     } else {
@@ -59,10 +69,23 @@ export const db = getFirestore();
 export const auth = getAuth();
 export const storage = getStorage();
 
-// Exporta a instância principal do bucket para facilitar o acesso
-export const bucket = storage.bucket();
+// Exporta a instância principal do bucket para facilitar o acesso (apenas se configurado)
+let bucket: any = null;
+try {
+  if (STORAGE_BUCKET_URL) {
+    bucket = storage.bucket();
+    console.log(`✅ Storage bucket inicializado: ${bucket.name}`);
+  } else {
+    console.log('⚠️ Storage bucket não inicializado (modo desenvolvimento local)');
+  }
+} catch (error) {
+  console.log('⚠️ Storage bucket não pôde ser inicializado:', (error as Error).message);
+  bucket = null;
+}
+
+export { bucket };
 
 // Exporta o namespace 'admin' para acesso a funcionalidades que não estão nos módulos (ex: admin.firestore.Timestamp)
 export { admin };
 
-console.log(`✅ Serviços Firebase prontos. Bucket: ${bucket.name}`);
+console.log(`✅ Serviços Firebase prontos. NODE_ENV: ${process.env.NODE_ENV}`);
