@@ -924,7 +924,7 @@ export async function validarCalculosComGabarito(): Promise<void> {
     console.log('🔍 Iniciando validação dos cálculos com gabarito...');
     
     // Carrega o gabarito
-    const caminhoGabarito = path.join(__dirname, '../testes/comparar/gabarito/gabarito-campos-calculados.json');
+    const caminhoGabarito = path.join(__dirname, '../testes/gabarito/gabarito-campos-calculados.json');
     if (!fs.existsSync(caminhoGabarito)) {
       throw new Error(`Gabarito não encontrado: ${caminhoGabarito}`);
     }
