@@ -12,7 +12,7 @@
     "preencher-nulos": "ts-node src/scripts/auxiliar/executar-preencher-nulos.ts",
     "extrair-campos-calculados": "ts-node src/scripts/auxiliar/executar-extrair-campos-calculados.ts",
     "calcular-estoques": "ts-node src/scripts/executar-processamento-estoque.ts",
-    "validar-calculos": "ts-node src/scripts/testes/comparar/executar-validacao-completa.ts"
+    "validar-calculos": "ts-node src/scripts/testes/executar-validacao-completa.ts"
   },
   "engines": {
     "node": "20"
