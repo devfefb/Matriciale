@@ -174,24 +174,74 @@ const UploadSemanal = () => {
         throw new Error('Nenhuma unidade possui ambos os arquivos (balancete + movimentação)');
       }
 
-      setProgress(20);
-      console.log(`📦 Processando ${unidadesCompletas.length} unidades completas...`);
+      setProgress(10);
+      console.log(`📦 Processando ${unidadesCompletas.length} unidades completas seguindo script.cjs...`);
       
-      // Enviar para o backend para processamento
-      setProgress(50);
-      const dadosBackend = await salvarResultados(resultados);
+      // Processar cada unidade completa seguindo exatamente o script.cjs
+      const inventoryDataPorUnidade = {};
+      
+      for (let i = 0; i < unidadesCompletas.length; i++) {
+        const unidade = unidadesCompletas[i];
+        const arquivosUnidade = files[unidade];
+        
+        setProgress(10 + (i / unidadesCompletas.length) * 70);
+        console.log(`⚙️ Processando unidade: ${unidade}`);
+        
+        try {
+          // 1. Processar planilha balancete (encontrar itens movimentados)
+          console.log('📋 Processando planilha balancete...');
+          const itens = await processarArquivoBalancete(arquivosUnidade.balancete, unidade);
+          console.log(`✅ ${itens.length} itens movimentados encontrados no balancete`);
+          
+          // 2. Processar planilha movimentação (período + movimentações)
+          console.log('📊 Processando planilha movimentacao...');
+          const resultado = await processarArquivoMovimentacao(arquivosUnidade.movimentacao, unidade, itens);
+          
+          // 3. Montar objeto final inventoryData exatamente como script.cjs
+          const inventoryData = {
+            periodo_inicio: resultado.periodo.periodo_inicio,
+            periodo_fim: resultado.periodo.periodo_fim,
+            itens: resultado.itens
+          };
+          
+          console.log(`📅 Período de apuração: ${inventoryData.periodo_inicio} a ${inventoryData.periodo_fim}`);
+          console.log(`📦 Total de itens processados: ${inventoryData.itens.length}`);
+          
+          inventoryDataPorUnidade[unidade] = inventoryData;
+          
+        } catch (error) {
+          console.error(`❌ Erro ao processar unidade ${unidade}:`, error);
+          throw new Error(`Erro na unidade ${unidade}: ${error.message}`);
+        }
+      }
       
       setProgress(80);
+      console.log('📤 Enviando inventoryData para backend...');
+      
+      // Enviar dados processados para o backend
+      const dadosBackend = await salvarResultados(inventoryDataPorUnidade);
+      
+      setProgress(90);
       
       // Estruturar dados de resposta
       const resultadosFinais = {
         status: 'sucesso',
         municipio: dadosBackend.municipio || 'municipio_teste',
-        arquivo_gerado: dadosBackend.arquivo_gerado,
-        unidades_processadas: dadosBackend.unidades_processadas || unidadesCompletas,
-        total_unidades: dadosBackend.total_unidades || unidadesCompletas.length,
+        arquivos_gerados: dadosBackend.arquivos_gerados || [],
+        unidades_processadas: dadosBackend.unidades_processadas || Object.keys(inventoryDataPorUnidade),
+        total_unidades: dadosBackend.total_unidades || Object.keys(inventoryDataPorUnidade).length,
         data_processamento: dadosBackend.timestamp || new Date().toISOString(),
-        caminho_arquivo: dadosBackend.caminho
+        caminho_diretorio: dadosBackend.caminho,
+        resumo_por_unidade: dadosBackend.resumo_por_unidade || Object.fromEntries(
+          Object.entries(inventoryDataPorUnidade).map(([unidade, data]) => [
+            unidade,
+            {
+              periodo: `${data.periodo_inicio} a ${data.periodo_fim}`,
+              total_itens: data.itens.length
+            }
+          ])
+        ),
+        formato_script_cjs: true
       };
       
       setProgress(100);
@@ -205,31 +255,7 @@ const UploadSemanal = () => {
     }
   }, [files, podeProcessar, verificarArquivosCompletos]);
 
-  // Função para processar arquivo de movimentação
-  const processarArquivoMovimentacao = useCallback(async (arquivo, unidade) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      
-      reader.onload = (e) => {
-        try {
-          const workbook = XLSX.read(e.target.result, { type: 'binary' });
-          const worksheet = workbook.Sheets[workbook.SheetNames[0]];
-          const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-          
-          const dadosProcessados = processarDadosMovimentacao(jsonData, unidade);
-          resolve(dadosProcessados);
-          
-        } catch (error) {
-          reject(new Error(`Erro ao processar movimentação: ${error.message}`));
-        }
-      };
-      
-      reader.onerror = () => reject(new Error('Erro ao ler arquivo de movimentação'));
-      reader.readAsBinaryString(arquivo);
-    });
-  }, []);
-
-  // Função para processar arquivo de balancete
+  // Função para processar arquivo de balancete - CONFORME script.cjs
   const processarArquivoBalancete = useCallback(async (arquivo, unidade) => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
@@ -238,10 +264,52 @@ const UploadSemanal = () => {
         try {
           const workbook = XLSX.read(e.target.result, { type: 'binary' });
           const worksheet = workbook.Sheets[workbook.SheetNames[0]];
-          const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
           
-          const dadosProcessados = processarDadosBalancete(jsonData, unidade);
-          resolve(dadosProcessados);
+          // Processar conforme balanceteUtils.cjs
+          const itensMovimentados = [];
+          const range = XLSX.utils.decode_range(worksheet['!ref']);
+          
+          // Pula o cabeçalho (primeira linha)
+          for (let rowNum = range.s.r + 1; rowNum <= range.e.r; rowNum++) {
+            const cellA = worksheet[XLSX.utils.encode_cell({ r: rowNum, c: 0 })]; // Coluna A (1)
+            
+            // Verifica se a linha tem dados
+            if (!cellA || !cellA.v) continue;
+            
+            // Extrai valores das colunas seguindo a estrutura do script.cjs
+            const getCell = (col) => {
+              const cell = worksheet[XLSX.utils.encode_cell({ r: rowNum, c: col })];
+              return cell ? cell.v : null;
+            };
+            
+            const qtdEntradas = parseFloat(getCell(6)) || 0; // 7ª coluna (índice 6)
+            const qtdSaidas = parseFloat(getCell(8)) || 0;   // 9ª coluna (índice 8)
+            
+            // Verifica se o item teve movimentação
+            if (qtdEntradas > 0 || qtdSaidas > 0) {
+              const item = {
+                cod_sistemico_item: getCell(0)?.toString() || '',
+                descricao_item: getCell(1)?.toString() || '',
+                // 3ª coluna é ignorada (em branco)
+                tipo_unid_item: getCell(3)?.toString() || '',
+                qtd_periodo_inicial: parseFloat(getCell(4)) || 0,
+                valor_item_periodo_inicial: parseFloat(getCell(5)) || 0,
+                qtd_entradas_periodo: qtdEntradas,
+                valor_entradas_periodo: parseFloat(getCell(7)) || 0,
+                qtd_saidas_periodo: qtdSaidas,
+                valor_saidas_periodo: parseFloat(getCell(9)) || 0,
+                qtd_periodo_final: parseFloat(getCell(10)) || 0,
+                valor_unitario_periodo_final: parseFloat(getCell(11)) || 0,
+                valor_item_periodo_final: parseFloat(getCell(12)) || 0,
+                movimentacoes: [] // Será preenchido pelo processamento de movimentação
+              };
+              
+              itensMovimentados.push(item);
+            }
+          }
+          
+          console.log(`📊 [BALANCETE] ${itensMovimentados.length} itens movimentados encontrados para ${unidade}`);
+          resolve(itensMovimentados);
           
         } catch (error) {
           reject(new Error(`Erro ao processar balancete: ${error.message}`));
@@ -253,38 +321,148 @@ const UploadSemanal = () => {
     });
   }, []);
 
-  // Funções de processamento de dados
-  const processarDadosMovimentacao = useCallback((dados, unidade) => {
-    return {
-      unidade,
-      tipo: 'movimentacao',
-      periodo_inicio: '2025-01-01',
-      periodo_fim: '2025-01-31',
-      itens: dados.slice(1).map((linha, index) => ({
-        id: index + 1,
-        descricao_item: linha[0] || '',
-        quantidade: linha[1] || 0,
-        valor: linha[2] || 0
-      }))
-    };
+  // Função para processar arquivo de movimentação - CONFORME script.cjs
+  const processarArquivoMovimentacao = useCallback(async (arquivo, unidade, itens) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      
+      reader.onload = (e) => {
+        try {
+          const workbook = XLSX.read(e.target.result, { type: 'binary' });
+          const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+          
+          let periodo = null;
+          let indiceItemAtual = 0;
+          const range = XLSX.utils.decode_range(worksheet['!ref']);
+          
+          // Função para extrair data da movimentação
+          const extrairDataMovimentacao = (cellValue) => {
+            if (cellValue instanceof Date) {
+              // Adiciona um dia para compensar o problema do ExcelJS
+              const dataCorrigida = new Date(cellValue);
+              dataCorrigida.setDate(dataCorrigida.getDate() + 1);
+              
+              const dia = String(dataCorrigida.getDate()).padStart(2, '0');
+              const mes = String(dataCorrigida.getMonth() + 1).padStart(2, '0');
+              const ano = dataCorrigida.getFullYear();
+              return `${dia}/${mes}/${ano}`;
+            }
+            return String(cellValue || '');
+          };
+          
+          // Função para calcular período
+          const calcularPeriodo = (dataSaldoAnterior) => {
+            const [dia, mes, ano] = dataSaldoAnterior.split('/');
+            const periodoInicio = new Date(ano, mes - 1, parseInt(dia) + 1);
+            const periodoFim = new Date(periodoInicio);
+            periodoFim.setDate(periodoFim.getDate() + 6);
+            
+            const formatarData = (data) => {
+              const d = String(data.getDate()).padStart(2, '0');
+              const m = String(data.getMonth() + 1).padStart(2, '0');
+              const a = data.getFullYear();
+              return `${d}/${m}/${a}`;
+            };
+            
+            return {
+              periodo_inicio: formatarData(periodoInicio),
+              periodo_fim: formatarData(periodoFim)
+            };
+          };
+          
+          // Função para mapear linha de movimentação
+          const mapearLinhaMovimentacao = (rowNum) => {
+            const getCell = (col) => {
+              const cell = worksheet[XLSX.utils.encode_cell({ r: rowNum, c: col })];
+              return cell ? cell.v : null;
+            };
+            
+            const dataCell = getCell(0);
+            const dataMovimentacao = dataCell ? extrairDataMovimentacao(dataCell) : '';
+            
+            return {
+              data_movimentacao: dataMovimentacao,
+              historico: getCell(1)?.toString() || '',
+              documento: getCell(2) || null,
+              requisicao: getCell(3)?.toString() || '',
+              entradas: parseFloat(getCell(4)) || null,
+              saidas: parseFloat(getCell(5)) || 0,
+              estoque: parseFloat(getCell(6)) || 0,
+              observacao: getCell(7)?.toString() || ''
+            };
+          };
+          
+          // Pula o cabeçalho (primeira linha)
+          for (let rowNum = range.s.r + 1; rowNum <= range.e.r && indiceItemAtual < itens.length; rowNum++) {
+            const cellA = worksheet[XLSX.utils.encode_cell({ r: rowNum, c: 0 })];
+            const cellB = worksheet[XLSX.utils.encode_cell({ r: rowNum, c: 1 })];
+            
+            // Verifica se a linha tem dados
+            if (!cellA || !cellA.v) continue;
+            
+            const historico = cellB?.v?.toString() || '';
+            
+            // Se encontrou "SALDO ANTERIOR", processa o período e avança para o próximo item
+            if (historico === 'SALDO ANTERIOR') {
+              // Extrai período apenas na primeira ocorrência
+              if (!periodo) {
+                const dataSaldoAnterior = extrairDataMovimentacao(cellA.v);
+                periodo = calcularPeriodo(dataSaldoAnterior);
+              }
+              
+              // Processa a linha do saldo anterior
+              const movimentacao = mapearLinhaMovimentacao(rowNum);
+              itens[indiceItemAtual].movimentacoes.push(movimentacao);
+              
+              // Processa as próximas linhas até encontrar outro "SALDO ANTERIOR" ou fim
+              rowNum++;
+              while (rowNum <= range.e.r) {
+                const proximaCellA = worksheet[XLSX.utils.encode_cell({ r: rowNum, c: 0 })];
+                const proximaCellB = worksheet[XLSX.utils.encode_cell({ r: rowNum, c: 1 })];
+                
+                if (!proximaCellA || !proximaCellA.v) {
+                  rowNum++;
+                  continue;
+                }
+                
+                const proximoHistorico = proximaCellB?.v?.toString() || '';
+                
+                // Se encontrou outro "SALDO ANTERIOR", para de processar este item
+                if (proximoHistorico === 'SALDO ANTERIOR') {
+                  rowNum--; // Volta uma linha para processar no próximo loop
+                  break;
+                }
+                
+                // Adiciona a movimentação ao item atual
+                const movimentacaoItem = mapearLinhaMovimentacao(rowNum);
+                itens[indiceItemAtual].movimentacoes.push(movimentacaoItem);
+                
+                rowNum++;
+              }
+              
+              // Avança para o próximo item
+              indiceItemAtual++;
+            }
+          }
+          
+          console.log(`📈 [MOVIMENTAÇÃO] Processado período ${periodo?.periodo_inicio} a ${periodo?.periodo_fim} para ${unidade}`);
+          
+          resolve({
+            periodo,
+            itens
+          });
+          
+        } catch (error) {
+          reject(new Error(`Erro ao processar movimentação: ${error.message}`));
+        }
+      };
+      
+      reader.onerror = () => reject(new Error('Erro ao ler arquivo de movimentação'));
+      reader.readAsBinaryString(arquivo);
+    });
   }, []);
 
-  const processarDadosBalancete = useCallback((dados, unidade) => {
-    return {
-      unidade,
-      tipo: 'balancete',
-      periodo_inicio: '2025-01-01',
-      periodo_fim: '2025-01-31',
-      itens: dados.slice(1).map((linha, index) => ({
-        id: index + 1,
-        descricao_item: linha[0] || '',
-        saldo_anterior: linha[1] || 0,
-        entradas: linha[2] || 0,
-        saidas: linha[3] || 0,
-        saldo_atual: linha[4] || 0
-      }))
-    };
-  }, []);
+
 
      // Função para testar conectividade com backend
    const testarConectividade = useCallback(async () => {
@@ -321,8 +499,8 @@ const UploadSemanal = () => {
      }
    }, []);
 
-   // Função para salvar resultados no backend
-   const salvarResultados = useCallback(async (resultados) => {
+   // Função para salvar resultados no backend (nova estrutura otimizada)
+   const salvarResultados = useCallback(async (inventoryDataPorUnidade) => {
      try {
        // Primeiro testar conectividade
        const conectado = await testarConectividade();
@@ -330,29 +508,38 @@ const UploadSemanal = () => {
          throw new Error('Backend não está acessível. Verifique se o servidor está rodando.');
        }
 
-       console.log('📤 Enviando dados para o backend...');
+       console.log('📤 Enviando inventoryData para o backend (estrutura otimizada)...');
        
-       // Preparar FormData com os arquivos
-       const formData = new FormData();
-       formData.append('municipio', 'municipio_teste'); // Pode ser configurado dinamicamente
+       // Preparar dados na nova estrutura otimizada
+       const arquivos = Object.entries(inventoryDataPorUnidade).map(([unidade, inventoryData]) => ({
+         nome_arquivo: `inventoryData${unidade}.json`,
+         content: inventoryData
+       }));
+
+       const dadosParaEnvio = {
+         tipo: 'semanal',
+         municipio: 'municipio_teste', // Pode ser configurado dinamicamente
+         data_processamento: new Date().toISOString(),
+         arquivos: arquivos
+       };
        
-       // Adicionar arquivos ao FormData
-       Object.entries(files).forEach(([unidade, arquivos]) => {
-         if (arquivos.balancete) {
-           formData.append('arquivos', arquivos.balancete);
-         }
-         if (arquivos.movimentacao) {
-           formData.append('arquivos', arquivos.movimentacao);
-         }
+       console.log('📋 Dados preparados (estrutura otimizada):', {
+         tipo: dadosParaEnvio.tipo,
+         municipio: dadosParaEnvio.municipio,
+         total_arquivos: dadosParaEnvio.arquivos.length,
+         arquivos_nomes: dadosParaEnvio.arquivos.map(a => a.nome_arquivo),
+         tamanho_total_mb: (JSON.stringify(dadosParaEnvio).length / 1024 / 1024).toFixed(2)
        });
        
-       // Fazer requisição para o backend
+       // Fazer requisição para o backend enviando JSON otimizado
        console.log('🌐 Fazendo requisição para: /api/upload/semanal');
        
        const response = await fetch('/api/upload/semanal', {
          method: 'POST',
-         body: formData,
-         // Não definir Content-Type - deixar o browser definir para FormData
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify(dadosParaEnvio)
        });
        
        console.log('📡 Resposta recebida:', {
@@ -388,7 +575,7 @@ const UploadSemanal = () => {
        console.error('❌ Erro ao salvar no backend:', error);
        throw new Error(`Falha ao comunicar com o backend: ${error.message}`);
      }
-   }, [files]);
+   }, []);
 
   const limparArquivos = useCallback(() => {
     setFiles({});
@@ -744,26 +931,80 @@ const UploadSemanal = () => {
             </p>
           </div>
                      <div style={{ marginTop: '15px' }}>
-             <h3>Resumo:</h3>
-             <div style={{ padding: '10px', backgroundColor: '#f8f9fa', borderRadius: '5px' }}>
+             <h3>Resumo do Processamento:</h3>
+             <div style={{ padding: '15px', backgroundColor: '#e8f5e8', borderRadius: '8px', border: '1px solid #28a745' }}>
                <p><strong>🏛️ Município:</strong> {processedData.municipio}</p>
-               <p><strong>📁 Arquivo Gerado:</strong> {processedData.arquivo_gerado}</p>
-               <p><strong>📊 Unidades Processadas:</strong> {processedData.total_unidades}</p>
+               <p><strong>📊 Arquivos Processados:</strong> {processedData.arquivos_processados}</p>
                <p><strong>🕒 Data/Hora:</strong> {new Date(processedData.data_processamento).toLocaleString('pt-BR')}</p>
-               {processedData.caminho_arquivo && (
-                 <p><strong>💾 Caminho:</strong> <code style={{ fontSize: '12px', backgroundColor: '#e9ecef', padding: '2px 4px', borderRadius: '3px' }}>{processedData.caminho_arquivo}</code></p>
+               
+               {/* Informações sobre o ambiente e storage */}
+               <div style={{ marginTop: '10px', padding: '10px', backgroundColor: '#f8f9fa', borderRadius: '5px', border: '1px solid #dee2e6' }}>
+                 <p><strong>🌍 Ambiente:</strong> <span style={{ color: '#007bff', fontWeight: 'bold' }}>{processedData.environment}</span></p>
+                 <p><strong>💾 Storage:</strong> <span style={{ color: '#6f42c1', fontWeight: 'bold' }}>{processedData.storage_type}</span></p>
+               </div>
+
+               {processedData.arquivos_gerados && processedData.arquivos_gerados.length > 0 && (
+                 <div style={{ marginTop: '10px' }}>
+                   <p><strong>📁 Arquivos Gerados:</strong></p>
+                   <ul style={{ fontSize: '14px', color: '#666' }}>
+                     {processedData.arquivos_gerados.map((arquivo, index) => (
+                       <li key={index}><code>{arquivo}</code></li>
+                     ))}
+                   </ul>
+                 </div>
+               )}
+               
+               {/* Mostrar resultados detalhados por unidade */}
+               {processedData.resultados && processedData.resultados.length > 0 && (
+                 <div style={{ marginTop: '15px' }}>
+                   <h4>Detalhes por Arquivo:</h4>
+                   <div style={{ display: 'grid', gap: '10px' }}>
+                     {processedData.resultados.map((resultado, index) => (
+                       <div key={index} style={{ 
+                         padding: '10px', 
+                         backgroundColor: '#f8f9fa', 
+                         borderRadius: '5px',
+                         border: '1px solid #dee2e6'
+                       }}>
+                         <h5 style={{ margin: '0 0 5px 0', color: '#495057' }}>{resultado.unidade}</h5>
+                         <p style={{ margin: '0', fontSize: '14px', color: '#6c757d' }}>
+                           📅 {resultado.periodo} • 📦 {resultado.total_itens} itens
+                         </p>
+                         <p style={{ margin: '5px 0 0 0', fontSize: '12px', color: '#868e96' }}>
+                           💾 {resultado.arquivo_salvo}
+                         </p>
+                         {resultado.url && processedData.environment === 'production' && (
+                           <p style={{ margin: '5px 0 0 0', fontSize: '12px' }}>
+                             <a href={resultado.url} target="_blank" rel="noopener noreferrer" style={{ color: '#007bff' }}>
+                               🔗 Ver arquivo no Storage
+                             </a>
+                           </p>
+                         )}
+                       </div>
+                     ))}
+                   </div>
+                 </div>
                )}
              </div>
-             {processedData.unidades_processadas && processedData.unidades_processadas.length > 0 && (
-               <div style={{ marginTop: '10px' }}>
-                 <h4>Unidades:</h4>
-                 <ul>
-                   {processedData.unidades_processadas.map((unidade, index) => (
-                     <li key={index}>
-                       <strong>{unidade}</strong> ✓
-                     </li>
+             
+             {processedData.resumo_por_unidade && Object.keys(processedData.resumo_por_unidade).length > 0 && (
+               <div style={{ marginTop: '15px' }}>
+                 <h4>Detalhes por Unidade:</h4>
+                 <div style={{ display: 'grid', gap: '10px' }}>
+                   {Object.entries(processedData.resumo_por_unidade).map(([unidade, dados]) => (
+                     <div key={unidade} style={{ 
+                       padding: '10px', 
+                       backgroundColor: '#f8f9fa', 
+                       borderRadius: '5px',
+                       border: '1px solid #dee2e6'
+                     }}>
+                       <h5 style={{ margin: '0 0 5px 0', color: '#495057' }}>{unidade}</h5>
+                       <p style={{ margin: '0', fontSize: '14px', color: '#6c757d' }}>
+                         📅 {dados.periodo} • 📦 {dados.total_itens} itens
+                       </p>
+                     </div>
                    ))}
-                 </ul>
+                 </div>
                </div>
              )}
            </div>

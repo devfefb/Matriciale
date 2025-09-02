@@ -67,10 +67,9 @@ router.get(
   uploadController.getUploadStats.bind(uploadController)
 );
 
-// Upload semanal (múltiplos arquivos)
+// Upload semanal (dados JSON processados)
 router.post(
   '/semanal',
-  uploadController.getMultipleUploadMiddleware(),
   uploadController.uploadSemanal.bind(uploadController)
 );
 

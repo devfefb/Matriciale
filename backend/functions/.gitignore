@@ -9,6 +9,9 @@ yarn-error.log*
 .env.local
 .env.*.local
 
+# Credentials
+/src/config/credentials/*
+
 # Build
 /dist
 /build
