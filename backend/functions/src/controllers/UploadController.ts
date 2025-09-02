@@ -387,6 +387,8 @@ export class UploadController {
           'semanal'
         );
 
+        console.log(`📋 [UPLOAD SEMANAL] Arquivo: ${nome_arquivo} → Unidade: ${nomeUnidade} → Arquivo final: ${nomeArquivoFinal}`);
+
         // Salvar arquivo usando FileStorageService (condicional baseado em NODE_ENV)
         const resultadoSalvamento = await FileStorageService.salvarArquivoJSON(
           buffer,
@@ -557,23 +559,29 @@ export class UploadController {
    * Extrai nome da unidade do arquivo de inventoryData
    */
   private extrairNomeUnidadeDoArquivo(nomeArquivo: string): string {
+    console.log(`🔍 [EXTRAÇÃO] Extraindo unidade de: ${nomeArquivo}`);
+    
     // Padrões específicos para arquivos inventoryData
     const patterns = [
-      /inventoryData([A-Za-z0-9]+)\.json$/i,
-      /inventory[-_]?([A-Za-z0-9]+)\.json$/i,
-      /([A-Za-z0-9]+)[-_]?inventory\.json$/i,
-      /([A-Za-z0-9]+)\.json$/i
+      /inventoryData([A-Za-z0-9]+)\.json$/i,  // inventoryDataCAF.json
+      /inventory[-_]?([A-Za-z0-9]+)\.json$/i, // inventory_CAF.json
+      /([A-Za-z0-9]+)[-_]?inventory\.json$/i, // CAF_inventory.json
+      /([A-Za-z0-9]+)\.json$/i                // CAF.json
     ];
     
     for (const pattern of patterns) {
       const match = nomeArquivo.match(pattern);
-      if (match && match[1] && match[1].length >= 2) {
-        return match[1].toUpperCase().trim();
+      if (match && match[1] && match[1].length >= 1) {
+        const unidade = match[1].toUpperCase().trim();
+        console.log(`✅ [EXTRAÇÃO] Unidade encontrada: ${unidade}`);
+        return unidade;
       }
     }
     
     // Fallback: usar nome base sem extensão
-    return nomeArquivo.replace(/\.(json|xlsx|xls|csv)$/i, '').toUpperCase() || 'DESCONHECIDO';
+    const fallback = nomeArquivo.replace(/\.(json|xlsx|xls|csv)$/i, '').toUpperCase() || 'DESCONHECIDO';
+    console.log(`⚠️ [EXTRAÇÃO] Usando fallback: ${fallback}`);
+    return fallback;
   }
 
   /**

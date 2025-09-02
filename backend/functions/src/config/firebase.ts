@@ -21,7 +21,6 @@ if (!admin.apps.length) {
       console.log('🔧 Inicializando Firebase em modo de Desenvolvimento...');
       
       // O caminho aponta para duas pastas acima e depois para o arquivo.
-      // Ajuste se a estrutura do seu projeto for diferente.
       const serviceAccountPath = path.resolve(__dirname, '../../src/config/credentials/serviceAccountKey.json');
       const serviceAccount = require(serviceAccountPath);
 

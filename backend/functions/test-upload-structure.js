@@ -7,7 +7,7 @@
 // Dados de teste que simulam o que o frontend enviaria
 const dadosTesteSemanal = {
   tipo: 'semanal',
-  municipio: 'municipio_teste',
+  municipio: 'Palmares',
   data_processamento: new Date().toISOString(),
   arquivos: [
     {
