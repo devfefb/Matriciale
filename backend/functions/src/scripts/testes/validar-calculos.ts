@@ -216,9 +216,10 @@ async function calcularEstoquesUnidades(): Promise<Map<string, EstoqueCalculado>
     return estoqueConsolidadoCache;
   }
 
-  const caminhoCAF = path.join(__dirname, '../dados/2025_22/movimentacoesCAF.json');
-  const caminhoESF3 = path.join(__dirname, '../dados/2025_22/movimentacoesESF3.json');
-  const caminhoOlavo = path.join(__dirname, '../dados/2025_22/movimentacoesOlavo.json');
+  // TODO: nomes devem ser dinamicos, e nao hard-coded. existira um padrao de reconhecimento dos nomes
+  const caminhoCAF = path.join(__dirname, '../../../uploads/inventoryData_Palmares_CAF_2025-09-02T13-53-57-750Z.json');
+  const caminhoESF3 = path.join(__dirname, '../../../uploads/inventoryData_Palmares_ESF3_2025-09-02T13-58-17-049Z.json');
+  const caminhoOlavo = path.join(__dirname, '../../../uploads/inventoryData_Palmares_OLAVO_2025-09-02T13-58-34-943Z.json');
   
   const dadosCAF = carregarDadosUnidade(caminhoCAF);
   const dadosESF3 = carregarDadosUnidade(caminhoESF3);
