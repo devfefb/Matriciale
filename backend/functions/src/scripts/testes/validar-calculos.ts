@@ -402,25 +402,21 @@ function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[]): Med
     };
 }
 
+
 function calcularTPMetodo(dadosCalculados: DadosCalculados): string {
-  const { contagens, semanas, totalSemanasHistorico } = dadosCalculados;
+  const { contagens, semanas } = dadosCalculados;
 
-  if (contagens.ContTt === 1) {
-    const ultimaSemanaHistorico = semanas[semanas.length - 1];
-    if (ultimaSemanaHistorico && ultimaSemanaHistorico.value > 0) {
-      return "5.ENTRANTES";
-    }
+  const ultimaSemanaHistorico = semanas[semanas.length - 1];
+  //=SE(E(DD2=1;DI2=1;CO2<>"");"5.ENTRANTES";
+  if (contagens.Cont04 === 1 && contagens.Cont52 === 1 && ultimaSemanaHistorico && ultimaSemanaHistorico.value > 0) {
+    return "5.ENTRANTES";
   }
 
-  if (contagens.Cont16 === 0) {
-    return "3.INATIVOS";
-  }
-
-  const periodo = Math.min(totalSemanasHistorico);
-  if (periodo > 0 && (contagens.Cont52 / periodo) < 0.5) {
-    return "2.INTERMITENTES";
-  }
-
+  //SE(E(DD2<>0;DD2/DIREITA($DD$1;1)>=0,5;DI2=DD2);"4.RECENTES";
+  //SE(E(DE2<>0;DE2/DIREITA($DE$1;1)>=0,5;DI2=DE2);"4.RECENTES";
+  //SE(E(DF2<>0;DF2/DIREITA($DF$1;2)>=0,5;DI2=DF2);"4.RECENTES";
+  //SE(E(DG2<>0;DG2/DIREITA($DG$1;2)>=0,5;DI2=DG2);"4.RECENTES";
+  //SE(E(DH2<>0;DH2/DIREITA($DH$1;2)>=0,5;DI2=DH2);"4.RECENTES";
   if (contagens.Cont04 > 0 && (contagens.Cont04 / 4) >= 0.5 && contagens.ContTt === contagens.Cont04) {
     return "4.RECENTES";
   }
@@ -436,12 +432,37 @@ function calcularTPMetodo(dadosCalculados: DadosCalculados): string {
   if (contagens.Cont26 > 0 && (contagens.Cont26 / 26) >= 0.5 && contagens.ContTt === contagens.Cont26) {
     return "4.RECENTES";
   }
-  
+
+  //SE(E(DD2=0;DE2=0;DF2=0;DG2=0);"3.INATIVOS";
+  if (contagens.Cont16 === 0) {
+    return "3.INATIVOS";
+  }
+
+  //SE(DI2/DIREITA($DI$1;2)<0,5;"2.INTERMITENTES";
+  const periodo = Math.min(semanas.length, 52);
+  if (periodo > 0 && (contagens.Cont52 / periodo) < 0.5) {
+    return "2.INTERMITENTES";
+  }
+
+  //"1.ORDINÁRIOS"))))))))
   return "1.ORDINÁRIOS";
 }
 
+/*
+  5.ENTRANTES =SE(E(DD2=1;DI2=1;CO2<>"");CO2;
+  4.RECENTES SE(E(DD2<>0;DD2/DIREITA($DD$1;1)>=0,5;DI2=DD2);MÁXIMO(CQ2:CX2);
+  4.RECENTES SE(E(DE2<>0;DE2/DIREITA($DE$1;1)>=0,5;DI2=DE2);MÁXIMO(CQ2:CX2);
+  4.RECENTES SE(E(DF2<>0;DF2/DIREITA($DF$1;2)>=0,5;DI2=DF2);MÁXIMO(CQ2:CX2);
+  4.RECENTES SE(E(DG2<>0;DG2/DIREITA($DG$1;2)>=0,5;DI2=DG2);MÁXIMO(CQ2:CX2);
+  4.RECENTES SE(E(DH2<>0;DH2/DIREITA($DH$1;2)>=0,5;DI2=DH2);MÁXIMO(CQ2:CX2);
+  3.INATIVOS SE(E(DD2=0;DE2=0;DF2=0;DG2=0);0;
+  2.INTERMITENTES SE(DI2/DIREITA($DI$1;2)<0,5;ARRED(CP2/DIREITA($DI$1;2);0);
+  1.ORDINÁRIOS MÁXIMO(CQ2:CX2)))))))))
+*/
 function calcularMetodo(dadosMedicamento: {
+  historicoSemanas: SemanaHistorico[];
   medianas: Medianas;
+  contagens: Contagens;
   maximo: number;
   tp_metodo: string;
   totalGeral: number;
@@ -451,14 +472,16 @@ function calcularMetodo(dadosMedicamento: {
     return 0;
   }
   if (dadosMedicamento.tp_metodo === "5.ENTRANTES") {
-    return dadosMedicamento.maximo;
+    return dadosMedicamento.historicoSemanas[dadosMedicamento.historicoSemanas.length - 1].value;
   }
   if (dadosMedicamento.tp_metodo === "4.RECENTES" || dadosMedicamento.tp_metodo === "1.ORDINÁRIOS") {
     const todasAsMedianas = Object.values(dadosMedicamento.medianas);
     return Math.max(...todasAsMedianas);
   }
+
+  //SE(DI2/DIREITA($DI$1;2)<0,5;ARRED(CP2/DIREITA($DI$1;2);0);
   if (dadosMedicamento.tp_metodo === "2.INTERMITENTES") {
-    return dadosMedicamento.totalGeral / 52 ? Math.floor(dadosMedicamento.totalGeral / 52) : 1;
+    return Math.round(dadosMedicamento.totalGeral / 52);
   }
 
   return 0;
@@ -541,7 +564,9 @@ async function calcularCamposMedicamentoSemSalvar(
   
   // erro começa aqui, provavelmente
   const metodo = calcularMetodo({
+    historicoSemanas,
     medianas,
+    contagens,
     maximo,
     tp_metodo,
     totalGeral
@@ -941,6 +966,7 @@ export async function validarCalculosComGabarito(): Promise<void> {
     
     const resultados: ResultadoValidacao[] = [];
     let totalProcessados = 0;
+    let totalIgnoradosSemanaFaltando = 0;
     let totalSucessos = 0;
     
     // Estrutura para armazenar informações sobre semanas
@@ -1001,6 +1027,15 @@ export async function validarCalculosComGabarito(): Promise<void> {
               console.warn(`⚠️ Medicamento não encontrado no gabarito: ${medicamento.nome} (${unidadeDoc.id})`);
               continue;
             }
+
+            // Ignora medicamentos que não possuem a última semana requerida (2025_22)
+            const semanaRequerida = '2025_22';
+            const possuiSemanaRequerida = medicamento && medicamento.movimentacoes_semanais && Object.prototype.hasOwnProperty.call(medicamento.movimentacoes_semanais, semanaRequerida);
+            if (!possuiSemanaRequerida) {
+              totalIgnoradosSemanaFaltando++;
+              console.warn(`⏭️  Ignorando ${medicamento.nome} (${unidadeDoc.id}) por ausência da semana ${semanaRequerida}`);
+              continue;
+            }
             
             // Calcula campos
             const camposCalculados = await calcularCamposMedicamentoSemSalvar(medicamento, unidadeDoc.id);
@@ -1050,6 +1085,7 @@ export async function validarCalculosComGabarito(): Promise<void> {
     console.log(`   📦 Total processados: ${totalProcessados}`);
     console.log(`   ✅ Perfeitos (100%): ${totalSucessos}`);
     console.log(`   📈 Taxa de acerto geral: ${taxaAcertoGeral.toFixed(2)}%`);
+    console.log(`   ⏭️ Ignorados por falta da semana 2025_22: ${totalIgnoradosSemanaFaltando}`);
     console.log(`   📊 Acerto médio: ${acertoMedio.toFixed(2)}%`);
     
     // Gera análise detalhada dos padrões
@@ -1139,7 +1175,8 @@ export async function validarCalculosComGabarito(): Promise<void> {
         total_processados: totalProcessados,
         perfeitos: totalSucessos,
         taxa_acerto_geral: taxaAcertoGeral,
-        acerto_medio: acertoMedio
+        acerto_medio: acertoMedio,
+        ignorados_semana_2025_22: totalIgnoradosSemanaFaltando
       },
       informacoes_semanas: {
         semana_mais_recente_geral: ultimaSemanaGeral.size > 0 ? Array.from(ultimaSemanaGeral).sort().pop() : 'N/A',
@@ -1170,7 +1207,8 @@ export async function validarCalculosComGabarito(): Promise<void> {
         total_processados: totalProcessados,
         perfeitos: totalSucessos,
         taxa_acerto_geral: taxaAcertoGeral,
-        acerto_medio: acertoMedio
+        acerto_medio: acertoMedio,
+        ignorados_semana_2025_22: totalIgnoradosSemanaFaltando
       },
       informacoes_semanas: {
         semana_mais_recente_geral: ultimaSemanaGeral.size > 0 ? Array.from(ultimaSemanaGeral).sort().pop() : 'N/A',
