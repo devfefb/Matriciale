@@ -5,6 +5,12 @@
     "serve": "npm run build && node dist/local-dev.js",
     "start": "npm run serve",
     "deploy": "firebase deploy --only functions",
+    
+    "emulator": "powershell -ExecutionPolicy Bypass -File ./scripts/start-emulator.ps1",
+    "emulator:start": "npm run emulator",
+    "emulator:test": "powershell -ExecutionPolicy Bypass -File ./scripts/test-emulator.ps1",
+    "emulator:ui": "start http://localhost:4000",
+    
     "inserir-dados": "ts-node src/scripts/executar-insercao.ts",
     "validar-dados": "ts-node src/scripts/executar-validacao.ts",
     "calcular-campos": "ts-node src/scripts/calculos/executar-calculos.ts",
@@ -12,7 +18,9 @@
     "preencher-nulos": "ts-node src/scripts/auxiliar/executar-preencher-nulos.ts",
     "extrair-campos-calculados": "ts-node src/scripts/auxiliar/executar-extrair-campos-calculados.ts",
     "calcular-estoques": "ts-node src/scripts/executar-processamento-estoque.ts",
-    "validar-calculos": "ts-node src/scripts/testes/executar-validacao-completa.ts"
+    "validar-calculos": "ts-node src/scripts/testes/executar-validacao-completa.ts",
+
+    "script-deletar-medicamentos": "ts-node src/scripts/testes/script.ts"
   },
   "engines": {
     "node": "20"

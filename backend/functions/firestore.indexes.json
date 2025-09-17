@@ -1,0 +1,55 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "medicamentos_unidade",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "municipio",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "unidade",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "data_ultima_atualizacao",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "medicamentos_unidade",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "nome",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "classificacao",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "unidades",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "municipio",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "tipo",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "ultima_atualizacao",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

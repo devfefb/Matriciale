@@ -144,6 +144,249 @@ const UploadSemanal = () => {
     });
   }, [extrairNomeUnidade, determinarTipoArquivo]);
 
+  // Nova função para aplicar classificação de movimentações
+  const aplicarClassificacaoMovimentacoes = useCallback(async (resultado, nomeUnidade) => {
+    console.log(`🔄 [CLASSIFICAÇÃO] Iniciando classificação para unidade: ${nomeUnidade}`);
+    
+    // Identificar tipo da unidade
+    const unidadeInfo = identificarTipoUnidade(nomeUnidade);
+    console.log(`🏥 [CLASSIFICAÇÃO] Tipo identificado: ${unidadeInfo.tipo} (CAF: ${unidadeInfo.esCAF})`);
+    
+    const itensClassificados = [];
+    let totalMovimentacaoSemanal = 0;
+    const estatisticasTipos = {};
+    
+    for (const item of resultado.itens) {
+      console.log(`📦 [CLASSIFICAÇÃO] Processando item: ${item.descricao_item}`);
+      
+      // Classificar cada movimentação do item
+      const movimentacoesClassificadas = item.movimentacoes.map(mov => classificarMovimentacao(mov));
+      
+      // Calcular movimentação semanal baseada no tipo da unidade
+      const movimentacaoSemanal = calcularMovimentacaoSemanal(movimentacoesClassificadas, unidadeInfo);
+      
+      totalMovimentacaoSemanal += movimentacaoSemanal;
+      
+      // Contabilizar estatísticas
+      movimentacoesClassificadas.forEach(mov => {
+        estatisticasTipos[mov.tipo_mov] = (estatisticasTipos[mov.tipo_mov] || 0) + 1;
+      });
+      
+      // Item enriquecido com classificações
+      const itemClassificado = {
+        ...item,
+        movimentacoes: movimentacoesClassificadas,
+        movimentacao_semanal_calculada: movimentacaoSemanal,
+        total_movimentacoes: movimentacoesClassificadas.length
+      };
+      
+      itensClassificados.push(itemClassificado);
+      
+      console.log(`✅ [CLASSIFICAÇÃO] ${item.descricao_item} → Mov. semanal: ${movimentacaoSemanal}`);
+    }
+    
+    const estatisticas = {
+      total_itens: itensClassificados.length,
+      total_movimentacoes: itensClassificados.reduce((acc, item) => acc + item.movimentacoes.length, 0),
+      tipos_movimentacao: estatisticasTipos,
+      movimentacao_total_semanal: totalMovimentacaoSemanal,
+      unidade_tipo: unidadeInfo.tipo
+    };
+    
+    console.log(`📊 [CLASSIFICAÇÃO] Estatísticas finais:`, estatisticas);
+    
+    return {
+      ...resultado,
+      itens: itensClassificados,
+      unidade_info: unidadeInfo,
+      estatisticas
+    };
+  }, []);
+
+  // Função para identificar o tipo da unidade
+  const identificarTipoUnidade = useCallback((nomeUnidade) => {
+    const nome = nomeUnidade.toUpperCase().trim();
+    
+    if (nome === 'CAF' || nome.includes('CENTRAL')) {
+      return {
+        nome: nomeUnidade,
+        tipo: 'CAF',
+        esCAF: true
+      };
+    }
+
+    if (nome.includes('FARMACIA')) {
+      return {
+        nome: nomeUnidade,
+        tipo: 'FARMACIA',
+        esCAF: false
+      };
+    }
+
+    if (nome.includes('UBS') || nome.includes('PSF') || nome.includes('ESF')) {
+      return {
+        nome: nomeUnidade,
+        tipo: 'UBS',
+        esCAF: false
+      };
+    }
+
+    if (nome.includes('OLAVO') || nome.includes('CONSULTORIO')) {
+      return {
+        nome: nomeUnidade,
+        tipo: 'CONSULTORIO',
+        esCAF: false
+      };
+    }
+
+    return {
+      nome: nomeUnidade,
+      tipo: 'OUTROS',
+      esCAF: false
+    };
+  }, []);
+
+  // Função para classificar uma movimentação individual
+  const classificarMovimentacao = useCallback((movimentacao) => {
+    const historico = (movimentacao.historico || '').toUpperCase().trim();
+    const entradas = parseFloat(movimentacao.entradas) || 0;
+    const saidas = parseFloat(movimentacao.saidas) || 0;
+    
+    // 1. Determinar TP (primeiro nível)
+    let tp;
+    if (historico.includes('SALDO ANTERIOR')) {
+      tp = 'A';
+    } else if (entradas > 0) {
+      tp = 'E';
+    } else if (saidas > 0) {
+      tp = 'S';
+    } else {
+      tp = 'A';
+    }
+
+    // 2. Determinar TIPO (segundo nível)
+    let tipo_mov;
+    switch (tp) {
+      case 'A':
+        tipo_mov = 'AA';
+        break;
+      case 'E':
+        tipo_mov = classificarEntrada(historico, movimentacao.documento);
+        break;
+      case 'S':
+        tipo_mov = classificarSaida(historico);
+        break;
+      default:
+        tipo_mov = 'AA';
+    }
+
+    // 3. Calcular QTDMOV
+    let qtdmov;
+    if (tp === 'E') {
+      qtdmov = entradas; // Positivo
+    } else if (tp === 'S') {
+      qtdmov = -saidas; // Negativo
+    } else {
+      qtdmov = 0;
+    }
+
+    return {
+      ...movimentacao,
+      tp,
+      tipo_mov,
+      qtdmov
+    };
+  }, []);
+
+  // Função para classificar entradas
+  const classificarEntrada = useCallback((historico, documento) => {
+    if (historico.includes('DOAÇÃO') || historico.includes('DOACAO')) {
+      return 'ED';
+    }
+    if (historico.includes('TRANSFERENCIA ENTRE MUNICIPIOS') || historico.includes('EMPRESTIMO')) {
+      return 'EP';
+    }
+    if (historico.includes('CAF') || historico.includes('FARMACIA CENTRAL')) {
+      return 'ET';
+    }
+    if (historico.includes('UBS') || historico.includes('PSF') || historico.includes('PRONTO ATENDIMENTO')) {
+      return 'EU';
+    }
+    if (historico.includes('ACERTO') || historico.includes('AJUSTE') || historico.includes('QUEBRA')) {
+      return 'EX';
+    }
+    return 'EA'; // Padrão: compra
+  }, []);
+
+  // Função para classificar saídas
+  const classificarSaida = useCallback((historico) => {
+    if (historico.includes('DOAÇÃO') || historico.includes('DOACAO')) {
+      return 'SD';
+    }
+    if (historico.includes('CAF') || historico.includes('FARMACIA')) {
+      return 'ST';
+    }
+    if (historico.includes('UBS') || historico.includes('PSF') || historico.includes('PRONTO ATENDIMENTO')) {
+      return 'SU'; // CRÍTICO para cálculo!
+    }
+    if (historico.includes('VENCIDO') || historico.includes('VALIDADE')) {
+      return 'SV';
+    }
+    if (historico.includes('ACERTO') || historico.includes('AJUSTE') || historico.includes('QUEBRA')) {
+      return 'SX';
+    }
+    return 'SA'; // Padrão: dispensação para pacientes (MAIS IMPORTANTE!)
+  }, []);
+
+  // Função para calcular movimentação semanal por tipo de unidade
+  const calcularMovimentacaoSemanal = useCallback((movimentacoes, unidadeInfo) => {
+    if (unidadeInfo.esCAF) {
+      return calcularMovimentacaoCAF(movimentacoes);
+    } else {
+      return calcularMovimentacaoFarmacia(movimentacoes);
+    }
+  }, []);
+
+  // Lógica específica para CAF
+  const calcularMovimentacaoCAF = useCallback((movimentacoes) => {
+    console.log(`🏭 [CAF] Aplicando lógica específica da CAF`);
+    
+    let total = 0;
+    for (const mov of movimentacoes) {
+      // 1. Verificar se saida tem valor
+      if (!mov.saidas || mov.saidas === 0) continue;
+      
+      // 2. Verificar se observacao não está vazia
+      if (!mov.observacao || mov.observacao.trim() === '') continue;
+      
+      // 3. Verificar se historico NÃO contém "farmacia"
+      if (mov.historico.toLowerCase().includes('farmacia')) continue;
+      
+      // Se passou todos os filtros, somar
+      total += mov.saidas;
+      console.log(`✅ [CAF] Considerando: ${mov.saidas} - ${mov.historico}`);
+    }
+    
+    console.log(`🏭 [CAF] Total movimentação: ${total}`);
+    return total;
+  }, []);
+
+  // Lógica para farmácias: apenas SA + SU
+  const calcularMovimentacaoFarmacia = useCallback((movimentacoes) => {
+    console.log(`🏥 [FARMACIA] Aplicando lógica SA + SU`);
+    
+    let total = 0;
+    for (const mov of movimentacoes) {
+      if (mov.tipo_mov === 'SA' || mov.tipo_mov === 'SU') {
+        total += Math.abs(mov.qtdmov);
+        console.log(`✅ [FARMACIA] ${mov.tipo_mov}: ${Math.abs(mov.qtdmov)} - ${mov.historico}`);
+      }
+    }
+    
+    console.log(`🏥 [FARMACIA] Total movimentação: ${total}`);
+    return total;
+  }, []);
+
   // Função para verificar se uma unidade tem ambos os arquivos
   const verificarArquivosCompletos = useCallback((arquivosUnidade) => {
     return arquivosUnidade && arquivosUnidade.balancete && arquivosUnidade.movimentacao;
@@ -204,12 +447,19 @@ const UploadSemanal = () => {
           console.log('📊 Processando planilha movimentacao...');
           const resultado = await processarArquivoMovimentacao(arquivosUnidade.movimentacao, unidade, itens);
           
-          // 3. Montar objeto final inventoryData exatamente como script.cjs + campo unidade
+          // 3. NOVA ETAPA: Aplicar classificação e cálculo de movimentação semanal
+          console.log('🔄 Aplicando classificação de movimentações e lógica específica da unidade...');
+          const resultadoClassificado = await aplicarClassificacaoMovimentacoes(resultado, unidade);
+          
+          // 4. Montar objeto final inventoryData com classificações aplicadas
           const inventoryData = {
-            periodo_inicio: resultado.periodo.periodo_inicio,
-            periodo_fim: resultado.periodo.periodo_fim,
-            unidade: resultado.unidade || unidade, // Campo explícito da unidade
-            itens: resultado.itens
+            periodo_inicio: resultadoClassificado.periodo.periodo_inicio,
+            periodo_fim: resultadoClassificado.periodo.periodo_fim,
+            unidade: resultadoClassificado.unidade || unidade,
+            unidade_info: resultadoClassificado.unidade_info, // Nova informação sobre tipo da unidade
+            itens: resultadoClassificado.itens,
+            estatisticas_classificacao: resultadoClassificado.estatisticas, // Estatísticas de classificação
+            versao_processamento: '2.0.0' // Marca que usa nova lógica
           };
           
           console.log(`📅 Período de apuração: ${inventoryData.periodo_inicio} a ${inventoryData.periodo_fim}`);
