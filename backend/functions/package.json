@@ -21,6 +21,7 @@
     "validar-calculos": "ts-node src/scripts/testes/executar-validacao-completa.ts",
 
     "download-storage": "ts-node src/scripts/utils/executar-download.ts",
+    "adicionar-cod-item": "ts-node src/scripts/utils/executar-adicionar-cod-item.ts",
     "script-deletar-medicamentos": "ts-node src/scripts/testes/script.ts"
   },
   "engines": {
