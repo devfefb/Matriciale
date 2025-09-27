@@ -4,6 +4,7 @@ import { CloudStorageService } from '../services/CloudStorageService';
 import { db } from '../config/firebase';
 // import { validarCalculosComGabarito } from '../scripts/testes/validar-calculos'; // DESATIVADO - Usar executar-calculos
 import { executarCalculosParaMunicipio, executarCalculosParaUnidade } from '../scripts/testes/executar-calculos';
+import { validarCalculosComGabarito } from '../scripts/testes/validar-calculos';
 
 export class UploadController {
   private classifierService: MovimentacaoClassifierService;
@@ -540,6 +541,163 @@ export class UploadController {
       return res.status(500).json({
         status: 'error',
         message: 'Erro ao buscar status',
+        details: error.message
+      });
+    }
+  }
+
+  /**
+   * NOVO - Verificar completude dos JSONs no storage (bucket/local)
+   * Garante que TODAS as unidades cadastradas possuem um arquivo JSON presente no storage
+   */
+  async checkCompleteness(req: Request, res: Response) {
+    console.log('📦 [CHECK COMPLETENESS] Endpoint chamado');
+    try {
+      const { municipio } = req.query;
+
+      if (!municipio) {
+        return res.status(400).json({
+          status: 'error',
+          message: 'Município é obrigatório'
+        });
+      }
+
+      console.log(`📍 [CHECK COMPLETENESS] Município: ${municipio}`);
+
+      // 1) Buscar unidades cadastradas no Firestore
+      const municipioRef = db.collection('municipio').doc(String(municipio));
+      const unidadesSnapshot = await municipioRef.collection('unidades').get();
+      const expectedUnits = unidadesSnapshot.docs.map(doc => doc.id);
+
+      console.log(`🏥 [CHECK COMPLETENESS] Unidades esperadas (${expectedUnits.length}):`, expectedUnits);
+
+      if (expectedUnits.length === 0) {
+        return res.status(200).json({
+          status: 'success',
+          data: {
+            municipio,
+            complete: false,
+            expected_units: [],
+            units_with_files: [],
+            missing_units: [],
+            arquivos_storage: 0,
+            message: 'Nenhuma unidade cadastrada encontrada no município'
+          }
+        });
+      }
+
+      // 2) Verificar arquivos por unidade respeitando o caminho inventoryData
+      const isCloud = CloudStorageService.isConfigured();
+      console.log(`☁️ [CHECK COMPLETENESS] CloudStorage habilitado? ${isCloud}`);
+
+      const unitsWithFiles: string[] = [];
+      let totalArquivosVistos = 0;
+
+      if (isCloud) {
+        // CLOUD: usar lista do bucket e filtrar pelo prefixo específico de inventoryData
+        const { arquivos } = await this.cloudStorageService.listarArquivosPendentes(String(municipio));
+        totalArquivosVistos = arquivos.length;
+        console.log(`📂 [CHECK COMPLETENESS] Arquivos no bucket para ${municipio}: ${arquivos.length}`);
+        console.log(`🧾 [CHECK COMPLETENESS] Amostra de caminhos (até 10):`, arquivos.slice(0, 10).map(a => a.path));
+
+        for (const unidade of expectedUnits) {
+          const prefixCloud = `uploads/${municipio}/${unidade}/inventoryData/`;
+          const prefixCloudLower = prefixCloud.toLowerCase();
+          console.log(`🔧 [CHECK COMPLETENESS] Unidade ${unidade} → prefixo (orig): '${prefixCloud}', (lower): '${prefixCloudLower}'`);
+          const matches = arquivos
+            .filter((a: any) => typeof a.path === 'string' && a.path.toLowerCase().startsWith(prefixCloudLower))
+            .filter((a: any) => a.path.toLowerCase().endsWith('.json'))
+            .map((a: any) => a.path);
+          const hasJson = matches.length > 0;
+          console.log(`🔎 [CHECK COMPLETENESS] Unidade ${unidade} → prefixo '${prefixCloud}' → encontrados: ${matches.length}`);
+          if (matches.length > 0) {
+            console.log(`   ↳ Primeiros arquivos:`, matches.slice(0, 5));
+          }
+          if (hasJson) {
+            unitsWithFiles.push(unidade);
+          }
+        }
+      } else {
+        // LOCAL: verificar diretamente o filesystem no caminho inventoryData
+        const fs = require('fs');
+        const path = require('path');
+        for (const unidade of expectedUnits) {
+          const dirInventory = path.join(
+            __dirname,
+            '../../../storage/uploads',
+            String(municipio),
+            unidade,
+            'inventoryData'
+          );
+          let hasJson = false;
+          const exists = fs.existsSync(dirInventory) && fs.statSync(dirInventory).isDirectory();
+          console.log(`🗂️ [CHECK COMPLETENESS][LOCAL] Unidade ${unidade} → ${dirInventory} (existe? ${exists})`);
+          if (exists) {
+            const files = fs.readdirSync(dirInventory);
+            totalArquivosVistos += files.length;
+            const jsons = files.filter((f: string) => f.toLowerCase().endsWith('.json'));
+            hasJson = jsons.length > 0;
+            console.log(`   ↳ Arquivos: ${files.length} | JSONs: ${jsons.length} | Amostra:`, jsons.slice(0, 5));
+          }
+          if (hasJson) {
+            unitsWithFiles.push(unidade);
+          }
+        }
+      }
+
+      // 3) Encontrar unidades faltantes
+      const expectedUpper = expectedUnits.map(u => u.toString());
+      const presentUpper = new Set(unitsWithFiles.map(u => u.toString()));
+      const missingUnits = expectedUpper.filter(u => !presentUpper.has(u));
+
+      const complete = missingUnits.length === 0 && expectedUpper.length > 0;
+
+      console.log(`✅ [CHECK COMPLETENESS] Resultado → complete=${complete} | com arquivos (${unitsWithFiles.length}):`, unitsWithFiles);
+      if (!complete) {
+        console.log(`⚠️ [CHECK COMPLETENESS] Unidades faltantes (${missingUnits.length}):`, missingUnits);
+      }
+
+      return res.status(200).json({
+        status: 'success',
+        data: {
+          municipio,
+          complete,
+          expected_units: expectedUpper,
+          units_with_files: unitsWithFiles,
+          missing_units: missingUnits,
+          arquivos_storage: totalArquivosVistos,
+          caminho_padrao: 'uploads/{municipio}/{unidade}/inventoryData/*.json',
+          timestamp: new Date().toISOString()
+        }
+      });
+    } catch (error: any) {
+      console.error('❌ [CHECK COMPLETENESS] Erro:', error);
+      return res.status(500).json({
+        status: 'error',
+        message: 'Erro ao verificar completude',
+        details: error.message
+      });
+    }
+  }
+
+  /**
+   * NOVO - Disparar validação com gabarito (somente leitura, não altera banco)
+   */
+  async validarCalculos(req: Request, res: Response) {
+    console.log('🧪 [VALIDAR CALCULOS] Endpoint chamado');
+    try {
+      const resultado = await validarCalculosComGabarito();
+      return res.status(200).json({
+        status: 'success',
+        message: 'Validação executada com sucesso',
+        data: resultado,
+        timestamp: new Date().toISOString()
+      });
+    } catch (error: any) {
+      console.error('❌ [VALIDAR CALCULOS] Erro:', error);
+      return res.status(500).json({
+        status: 'error',
+        message: 'Erro ao validar cálculos',
         details: error.message
       });
     }

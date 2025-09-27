@@ -945,14 +945,24 @@ function gerarRelatorioCamposSistematicos(analisePadroes: AnalisePadroes): void 
 
 // --- FUNÇÃO PRINCIPAL DE VALIDAÇÃO ---
 
-export async function validarCalculosComGabarito(): Promise<void> {
+export async function validarCalculosComGabarito(): Promise<any> {
   try {
     console.log('🔍 Iniciando validação dos cálculos com gabarito...');
     
-    // Carrega o gabarito
-    const caminhoGabarito = path.join(__dirname, '../testes/gabarito/gabarito-campos-calculados.json');
-    if (!fs.existsSync(caminhoGabarito)) {
-      throw new Error(`Gabarito não encontrado: ${caminhoGabarito}`);
+    // Carrega o gabarito (resolve caminho com fallback: dist → src → CWD)
+    const candidatosGabarito = [
+      path.join(__dirname, '../testes/gabarito/gabarito-campos-calculados.json'),
+      path.join(__dirname, '../../../src/scripts/testes/gabarito/gabarito-campos-calculados.json'),
+      path.join(process.cwd(), 'backend/functions/src/scripts/testes/gabarito/gabarito-campos-calculados.json'),
+      path.join(process.cwd(), 'functions/src/scripts/testes/gabarito/gabarito-campos-calculados.json')
+    ];
+    const caminhoGabarito = candidatosGabarito.find(p => {
+      const existe = fs.existsSync(p);
+      console.log(`🔎 [GABARITO] Candidate: ${p} (existe? ${existe})`);
+      return existe;
+    });
+    if (!caminhoGabarito) {
+      throw new Error(`Gabarito não encontrado em nenhum dos caminhos candidatos.`);
     }
     
     const gabaritoData = fs.readFileSync(caminhoGabarito, 'utf8');
@@ -1251,6 +1261,8 @@ export async function validarCalculosComGabarito(): Promise<void> {
     const caminhoRelatorioResumido = path.join(__dirname, './output_validacao/relatorio-resumido.json');
     fs.writeFileSync(caminhoRelatorioResumido, JSON.stringify(relatorioResumido, null, 2));
     console.log(`📝 Relatório resumido salvo em: ${caminhoRelatorioResumido}`);
+
+    return relatorioResumido;
     
   } catch (error) {
     console.error('💥 Erro durante a validação:', error);

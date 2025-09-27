@@ -45,6 +45,12 @@ router.post('/local-direct/:municipio/:unidade/:uploadId', uploadController.uplo
  */
 router.get('/status', uploadController.statusProcessamento.bind(uploadController));
 
+// NOVO - Check completeness (todas as unidades com JSON no storage?)
+router.get('/check-completeness', uploadController.checkCompleteness.bind(uploadController));
+
+// NOVO - Validar cálculos com gabarito (somente leitura)
+router.post('/validar-calculos', uploadController.validarCalculos.bind(uploadController));
+
 /**
  * Health Check
  */

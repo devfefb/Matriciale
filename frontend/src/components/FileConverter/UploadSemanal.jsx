@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback } from 'react';
 import * as XLSX from 'xlsx';
+import api from '../../services/api';
 
 const UploadSemanal = () => {
   const [isDragActive, setIsDragActive] = useState(false);
@@ -8,6 +9,9 @@ const UploadSemanal = () => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState(null);
   const [progress, setProgress] = useState(0);
+  const [calcLoading, setCalcLoading] = useState(false);
+  const [calcError, setCalcError] = useState(null);
+  const [calcResult, setCalcResult] = useState(null);
   const fileInputRef = useRef(null);
 
   // Função melhorada para extrair nome da unidade do arquivo
@@ -1183,6 +1187,36 @@ const UploadSemanal = () => {
     }
   };
 
+  // Botão "Calcular" - verifica completude no bucket e executa validação com gabarito
+  const handleCalcular = useCallback(async () => {
+    const municipio = 'Palmares';
+    setCalcError(null);
+    setCalcResult(null);
+    setCalcLoading(true);
+    try {
+      // 1) Verificar completude
+      const resp = await api.get('/upload/check-completeness', { params: { municipio } });
+      const data = resp?.data?.data;
+      if (!data) {
+        throw new Error('Resposta inválida do endpoint de completude');
+      }
+      if (!data.complete) {
+        const faltando = (data.missing_units || []).join(', ');
+        const msg = `Ainda faltam unidades com JSON no storage para ${municipio}. Faltando: ${faltando || 'desconhecidas'}.`;
+        setCalcError(msg);
+        return;
+      }
+
+      // 2) Executar validação com gabarito (não altera banco)
+      const validar = await api.post('/upload/validar-calculos');
+      setCalcResult(validar?.data?.data || null);
+    } catch (e) {
+      setCalcError(e?.response?.data?.message || e.message || 'Erro ao executar cálculo');
+    } finally {
+      setCalcLoading(false);
+    }
+  }, []);
+
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>Upload Semanal - Movimentação e Balancete</h1>
@@ -1332,6 +1366,40 @@ const UploadSemanal = () => {
           </div>
         </div>
       )}
+
+      {/* Botão Calcular global (bucket) */}
+      <div style={{ marginTop: '20px', padding: '16px', border: '1px solid #e9ecef', borderRadius: '8px', background: '#fff' }}>
+        <h3 style={{ marginTop: 0 }}>Cálculo Global (Bucket)</h3>
+        <p style={{ color: '#6c757d', marginTop: '6px' }}>
+          Verifica se todas as unidades possuem JSON no bucket. Se completo, roda a validação com gabarito e não altera o banco.
+        </p>
+        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+          <button 
+            style={{ ...styles.processBtn, backgroundColor: '#17a2b8' }}
+            onClick={handleCalcular}
+            disabled={calcLoading}
+          >
+            {calcLoading ? 'Validando...' : 'Calcular (Bucket)'}
+          </button>
+          {calcError && (
+            <span style={{ color: '#dc3545' }}>{calcError}</span>
+          )}
+        </div>
+
+        {calcResult && (
+          <div style={{ marginTop: '12px', padding: '12px', background: '#e8f5e8', border: '1px solid #28a745', borderRadius: '8px' }}>
+            <div style={{ fontWeight: 'bold', color: '#155724' }}>Validação executada</div>
+            <div style={{ fontSize: '14px', color: '#155724' }}>
+              Data: {new Date(calcResult?.data_validacao || Date.now()).toLocaleString('pt-BR')}
+            </div>
+            <div style={{ marginTop: '6px', fontSize: '14px' }}>
+              <div><strong>Perfeitos (100%):</strong> {calcResult?.resumo?.perfeitos ?? calcResult?.estatisticas?.perfeitos ?? 0}</div>
+              <div><strong>Taxa de acerto geral:</strong> {(calcResult?.resumo?.taxa_acerto_geral ?? calcResult?.estatisticas?.taxa_acerto_geral ?? 0).toFixed ? (calcResult?.resumo?.taxa_acerto_geral ?? calcResult?.estatisticas?.taxa_acerto_geral).toFixed(2) : (calcResult?.resumo?.taxa_acerto_geral ?? calcResult?.estatisticas?.taxa_acerto_geral)}</div>
+              <div><strong>Ignorados semana 2025_22:</strong> {calcResult?.resumo?.ignorados_semana_2025_22 ?? calcResult?.estatisticas?.ignorados_semana_2025_22 ?? 0}</div>
+            </div>
+          </div>
+        )}
+      </div>
 
       {isProcessing && (
         <div style={styles.progressContainer}>

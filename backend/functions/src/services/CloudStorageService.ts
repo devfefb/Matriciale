@@ -239,9 +239,9 @@ export class CloudStorageService {
       // Prefixo para filtrar arquivos
       const prefix = municipio ? `uploads/${municipio}/` : 'uploads/';
       
+      // IMPORTANTE: não usar delimiter para permitir retorno de subpastas como 'inventoryData/'
       const [files] = await bucket.getFiles({
-        prefix: prefix,
-        delimiter: '/',
+        prefix: prefix
       });
       
       const arquivos = [];
