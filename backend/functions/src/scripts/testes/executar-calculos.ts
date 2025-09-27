@@ -604,73 +604,140 @@ async function salvarCamposCalculadosNoFirestore(
   medicamentoId: string,
   camposCalculados: any,
   novaMovimentacao: { anoSemana: string; valor: number }
-): Promise<{ sucesso: boolean; erro?: string }> {
+): Promise<{ sucesso: boolean; erro?: string; arquivo_json?: string }> {
   try {
-    console.log(`💾 [FIRESTORE] Salvando campos calculados: ${municipio}/${unidadeId}/${medicamentoId}`);
+    const isDevelopment = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV;
     
-    const medicamentoRef = db
-      .collection('municipio')
-      .doc(municipio)
-      .collection('unidades')
-      .doc(unidadeId)
-      .collection('medicamentos_unidade')
-      .doc(medicamentoId);
+    if (isDevelopment) {
+      // MODO DESENVOLVIMENTO: Salvar em JSON local
+      console.log(`💾 [DEV JSON] Salvando campos calculados em JSON: ${municipio}/${unidadeId}/${medicamentoId}`);
+      
+      // Preparar dados com movimentação atualizada (simulada)
+      const movimentacoesSimuladas = {
+        [`${novaMovimentacao.anoSemana}`]: novaMovimentacao.valor
+      };
+      
+      const dadosCalculados = {
+        // Dados básicos do medicamento
+        nome: camposCalculados.nome,
+        cod_item: medicamentoId,
+        
+        // CAMPO PRINCIPAL: Movimentações semanais com nova lógica
+        movimentacoes_semanais: movimentacoesSimuladas,
+        
+        // Campos calculados principais
+        contagens: camposCalculados.contagens,
+        maximo: camposCalculados.maximo,
+        medianas: camposCalculados.medianas,
+        tp_metodo: camposCalculados.tp_metodo,
+        metodo: camposCalculados.metodo,
+        metEst: camposCalculados.metEst,
+        reposicao: camposCalculados.reposicao,
+        analise_reposicao: camposCalculados.analise_reposicao,
+        totalGeral: camposCalculados.totalGeral,
+        estoque: camposCalculados.estoque,
+        
+        // Metadados de cálculo
+        ultima_atualizacao_calculos: new Date().toISOString(),
+        versao_calculo: '2.0.0',
+        ultima_semana_calculo: camposCalculados.ultimaSemana,
+        
+        // Status do medicamento
+        status_calculo: 'CALCULADO',
+        
+        // Metadados da unidade
+        unidade: unidadeId,
+        municipio: municipio
+      };
+      
+      // Criar diretório se não existir
+      const outputDir = path.join(__dirname, '../../../output_calculos_dev');
+      if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+      }
+      
+      // Salvar em arquivo JSON
+      const nomeArquivo = `${municipio}_${unidadeId}_${medicamentoId}_${Date.now()}.json`;
+      const caminhoArquivo = path.join(outputDir, nomeArquivo);
+      
+      fs.writeFileSync(caminhoArquivo, JSON.stringify(dadosCalculados, null, 2), 'utf8');
+      
+      console.log(`✅ [DEV JSON] Campos calculados salvos em: ${caminhoArquivo}`);
+      console.log(`📅 [DEV JSON] Movimentação ${novaMovimentacao.anoSemana}: ${novaMovimentacao.valor}`);
+      
+      return { 
+        sucesso: true, 
+        arquivo_json: caminhoArquivo 
+      };
+      
+    } else {
+      // MODO PRODUÇÃO: Salvar no Firestore
+      console.log(`💾 [FIRESTORE] Salvando campos calculados: ${municipio}/${unidadeId}/${medicamentoId}`);
+      
+      const medicamentoRef = db
+        .collection('municipio')
+        .doc(municipio)
+        .collection('unidades')
+        .doc(unidadeId)
+        .collection('medicamentos_unidade')
+        .doc(medicamentoId);
 
-    // Buscar documento atual para obter movimentações existentes
-    const medicamentoDoc = await medicamentoRef.get();
-    const dadosAtuais = medicamentoDoc.exists ? medicamentoDoc.data() : {};
-    
-    // Aplicar nova lógica de movimentação semanal
-    const movimentacoesAtuais = dadosAtuais?.movimentacoes_semanais || {};
-    const movimentacoesAtualizadas = atualizarMovimentacaoSemanal(
-      movimentacoesAtuais,
-      novaMovimentacao.anoSemana,
-      novaMovimentacao.valor
-    );
+      // Buscar documento atual para obter movimentações existentes
+      const medicamentoDoc = await medicamentoRef.get();
+      const dadosAtuais = medicamentoDoc.exists ? medicamentoDoc.data() : {};
+      
+      // Aplicar nova lógica de movimentação semanal
+      const movimentacoesAtuais = dadosAtuais?.movimentacoes_semanais || {};
+      const movimentacoesAtualizadas = atualizarMovimentacaoSemanal(
+        movimentacoesAtuais,
+        novaMovimentacao.anoSemana,
+        novaMovimentacao.valor
+      );
 
-    // Preparar dados para salvar
-    const dadosParaSalvar = {
-      // Dados básicos do medicamento (se não existir ainda)
-      nome: camposCalculados.nome || dadosAtuais.nome,
-      cod_item: medicamentoId,
-      
-      // CAMPO PRINCIPAL: Movimentações semanais com nova lógica
-      movimentacoes_semanais: movimentacoesAtualizadas,
-      
-      // Campos calculados principais
-      contagens: camposCalculados.contagens,
-      maximo: camposCalculados.maximo,
-      medianas: camposCalculados.medianas,
-      tp_metodo: camposCalculados.tp_metodo,
-      metodo: camposCalculados.metodo,
-      metEst: camposCalculados.metEst,
-      reposicao: camposCalculados.reposicao,
-      analise_reposicao: camposCalculados.analise_reposicao,
-      totalGeral: camposCalculados.totalGeral,
-      estoque: camposCalculados.estoque,
-      
-      // Metadados de cálculo
-      ultima_atualizacao_calculos: new Date(),
-      versao_calculo: '2.0.0',
-      ultima_semana_calculo: camposCalculados.ultimaSemana,
-      
-      // Status do medicamento
-      status_calculo: 'CALCULADO',
-      
-      // Metadados da unidade
-      unidade: unidadeId,
-      municipio: municipio
-    };
+      // Preparar dados para salvar
+      const dadosParaSalvar = {
+        // Dados básicos do medicamento (se não existir ainda)
+        nome: camposCalculados.nome || dadosAtuais.nome,
+        cod_item: medicamentoId,
+        
+        // CAMPO PRINCIPAL: Movimentações semanais com nova lógica
+        movimentacoes_semanais: movimentacoesAtualizadas,
+        
+        // Campos calculados principais
+        contagens: camposCalculados.contagens,
+        maximo: camposCalculados.maximo,
+        medianas: camposCalculados.medianas,
+        tp_metodo: camposCalculados.tp_metodo,
+        metodo: camposCalculados.metodo,
+        metEst: camposCalculados.metEst,
+        reposicao: camposCalculados.reposicao,
+        analise_reposicao: camposCalculados.analise_reposicao,
+        totalGeral: camposCalculados.totalGeral,
+        estoque: camposCalculados.estoque,
+        
+        // Metadados de cálculo
+        ultima_atualizacao_calculos: new Date(),
+        versao_calculo: '2.0.0',
+        ultima_semana_calculo: camposCalculados.ultimaSemana,
+        
+        // Status do medicamento
+        status_calculo: 'CALCULADO',
+        
+        // Metadados da unidade
+        unidade: unidadeId,
+        municipio: municipio
+      };
 
-    await medicamentoRef.set(dadosParaSalvar, { merge: true });
-    
-    console.log(`✅ [FIRESTORE] Campos calculados salvos para ${medicamentoId}`);
-    console.log(`📅 [FIRESTORE] Movimentação ${novaMovimentacao.anoSemana}: ${novaMovimentacao.valor}`);
-    
-    return { sucesso: true };
+      await medicamentoRef.set(dadosParaSalvar, { merge: true });
+      
+      console.log(`✅ [FIRESTORE] Campos calculados salvos para ${medicamentoId}`);
+      console.log(`📅 [FIRESTORE] Movimentação ${novaMovimentacao.anoSemana}: ${novaMovimentacao.valor}`);
+      
+      return { sucesso: true };
+    }
     
   } catch (error) {
-    console.error(`❌ [FIRESTORE] Erro ao salvar campos calculados:`, error);
+    console.error(`❌ [SALVAR] Erro ao salvar campos calculados:`, error);
     return {
       sucesso: false,
       erro: error instanceof Error ? error.message : 'Erro desconhecido'
@@ -816,6 +883,7 @@ export async function executarCalculosParaMunicipio(municipio: string): Promise<
   total_sucesso: number;
   total_erros: number;
   resultados: ResultadoCalculos[];
+  arquivos_gerados?: string[];
   erro?: string;
 }> {
   try {
@@ -825,6 +893,7 @@ export async function executarCalculosParaMunicipio(municipio: string): Promise<
     estoqueConsolidadoCache = null;
     
     const resultados: ResultadoCalculos[] = [];
+    const arquivosGerados: string[] = [];
     let totalProcessados = 0;
     let totalSucesso = 0;
     let totalErros = 0;
@@ -880,6 +949,12 @@ export async function executarCalculosParaMunicipio(municipio: string): Promise<
           
           if (resultadoSalvamento.sucesso) {
             totalSucesso++;
+            
+            // Se foi gerado arquivo JSON, adicionar à lista
+            if (resultadoSalvamento.arquivo_json) {
+              arquivosGerados.push(resultadoSalvamento.arquivo_json);
+            }
+            
             console.log(`✅ [CÁLCULOS] ${medicamento.nome} (${unidadeDoc.id}): Sucesso - TP: ${camposCalculados.tp_metodo}, Reposição: ${camposCalculados.reposicao}`);
             
             resultados.push({
@@ -922,13 +997,15 @@ export async function executarCalculosParaMunicipio(municipio: string): Promise<
     console.log(`   ✅ Sucessos: ${totalSucesso}`);
     console.log(`   ❌ Erros: ${totalErros}`);
     console.log(`   📊 Taxa de sucesso: ${totalProcessados > 0 ? ((totalSucesso / totalProcessados) * 100).toFixed(2) : 0}%`);
+    console.log(`   📁 Arquivos JSON gerados: ${arquivosGerados.length}`);
     
     return {
       sucesso: true,
       total_processados: totalProcessados,
       total_sucesso: totalSucesso,
       total_erros: totalErros,
-      resultados
+      resultados,
+      arquivos_gerados: arquivosGerados
     };
     
   } catch (error) {

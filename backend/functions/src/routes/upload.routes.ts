@@ -36,6 +36,11 @@ router.post('/processar-cloud-storage', uploadController.processarArquivoCloudSt
 router.post('/executar-calculos', uploadController.executarCalculos.bind(uploadController));
 
 /**
+ * NOVO - Upload direto local (desenvolvimento)
+ */
+router.post('/local-direct/:municipio/:unidade/:uploadId', uploadController.uploadLocalDirect.bind(uploadController));
+
+/**
  * NOVO - Status do processamento
  */
 router.get('/status', uploadController.statusProcessamento.bind(uploadController));

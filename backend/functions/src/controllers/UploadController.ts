@@ -2,8 +2,8 @@ import { Request, Response } from 'express';
 import { MovimentacaoClassifierService } from '../services/MovimentacaoClassifierService';
 import { CloudStorageService } from '../services/CloudStorageService';
 import { db } from '../config/firebase';
-import { validarCalculosComGabarito } from '../scripts/testes/validar-calculos';
-// import { executarCalculosParaMunicipio, executarCalculosParaUnidade } from '../scripts/testes/executar-calculos'; // DESATIVADO TEMPORARIAMENTE
+// import { validarCalculosComGabarito } from '../scripts/testes/validar-calculos'; // DESATIVADO - Usar executar-calculos
+import { executarCalculosParaMunicipio, executarCalculosParaUnidade } from '../scripts/testes/executar-calculos';
 
 export class UploadController {
   private classifierService: MovimentacaoClassifierService;
@@ -15,11 +15,16 @@ export class UploadController {
   }
 
   /**
-   * ENDPOINT PRINCIPAL - Upload Semanal (dados JSON processados)
-   * NOVO FLUXO: recebe dados do frontend → salva no storage → processa em background
+   * ⚠️ DEPRECIADO - Upload Semanal (dados JSON processados)
+   * 
+   * ESTE ENDPOINT SERÁ REMOVIDO EM BREVE!
+   * Use: POST /solicitar-signed-urls + upload direto ao storage
+   * 
+   * Problema: JSON no corpo da requisição não é adequado para Cloud Functions serverless
+   * Solução: Usar signed URLs para upload direto ao storage
    */
   async uploadSemanal(req: Request, res: Response) {
-    console.log('🚀 [UPLOAD SEMANAL] Endpoint chamado!');
+    console.log('⚠️ [UPLOAD SEMANAL DEPRECIADO] Endpoint chamado - USE SIGNED URLs!');
     
     try {
       const { 
@@ -126,7 +131,7 @@ export class UploadController {
       
       const response = {
         status: 'success',
-        message: `Upload semanal iniciado - ${resultados.length} arquivo(s) salvos no storage`,
+        message: `⚠️ DEPRECIADO: Upload semanal iniciado - ${resultados.length} arquivo(s) salvos no storage`,
         data: {
           municipio,
           arquivos_processados: resultados.length,
@@ -135,7 +140,9 @@ export class UploadController {
           storage_type: CloudStorageService.isConfigured() ? 'cloud_storage' : 'local_storage',
           resultados,
           processamento_status: 'EM_BACKGROUND',
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
+          WARNING: 'ESTE ENDPOINT SERÁ REMOVIDO! Use POST /solicitar-signed-urls + upload direto ao storage',
+          metodo_recomendado: 'SIGNED_URLS_STORAGE_DIRETO'
         }
       };
 
@@ -155,7 +162,9 @@ export class UploadController {
   }
 
   /**
-   * FLUXO DE PRODUÇÃO - Solicitar URLs assinadas para Cloud Storage
+   * NOVO FLUXO - Solicitar URLs assinadas (funciona em dev e produção)
+   * Em desenvolvimento: retorna URLs para upload local
+   * Em produção: retorna URLs do Cloud Storage
    */
   async solicitarSignedUrls(req: Request, res: Response) {
     console.log('🔗 [SIGNED URLS] Endpoint chamado');
@@ -177,26 +186,54 @@ export class UploadController {
         });
       }
       
-      // Verificar se Cloud Storage está configurado
-      if (!CloudStorageService.isConfigured()) {
-        return res.status(503).json({
-          status: 'error',
-          message: 'Cloud Storage não está configurado. Sistema em modo desenvolvimento.',
-          ambiente: 'desenvolvimento'
+      console.log(`🔗 [SIGNED URLS] Gerando URLs para ${arquivos.length} arquivo(s) do município ${municipio}`);
+      
+      if (CloudStorageService.isConfigured()) {
+        // PRODUÇÃO: usar Cloud Storage
+        console.log('☁️ [SIGNED URLS] Modo produção - gerando URLs do Cloud Storage');
+        const urlsAssinadas = await this.cloudStorageService.gerarMultiplasSignedUrls(arquivos);
+        
+        return res.status(200).json({
+          status: 'success',
+          message: 'URLs assinadas geradas com sucesso (Cloud Storage)',
+          data: {
+            municipio,
+            total_arquivos: urlsAssinadas.length,
+            urls: urlsAssinadas,
+            environment: 'production',
+            storage_type: 'cloud_storage'
+          }
+        });
+        
+      } else {
+        // DESENVOLVIMENTO: simular URLs locais
+        console.log('💾 [SIGNED URLS] Modo desenvolvimento - gerando URLs locais');
+        const urlsLocais = arquivos.map((arquivo: any, index: number) => {
+          const uploadId = `local_${Date.now()}_${index}`;
+          const nomeUnidade = this.extrairNomeUnidadeDoArquivo(arquivo.nome_arquivo);
+          
+            return {
+            nome_arquivo: arquivo.nome_arquivo,
+            upload_url: `/api/upload/local-direct/${municipio}/${nomeUnidade}/${uploadId}`,
+            arquivo_path: `storage/uploads/${municipio}/${nomeUnidade}/${uploadId}_${arquivo.nome_arquivo}`,
+            upload_id: uploadId,
+            expires_at: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(), // 1 ano
+            tipo_storage: 'local'
+            };
+        });
+        
+        return res.status(200).json({
+          status: 'success',
+          message: 'URLs locais geradas com sucesso (Desenvolvimento)',
+          data: {
+            municipio,
+            total_arquivos: urlsLocais.length,
+            urls: urlsLocais,
+            environment: 'development',
+            storage_type: 'local_storage'
+          }
         });
       }
-      
-      const urlsAssinadas = await this.cloudStorageService.gerarMultiplasSignedUrls(arquivos);
-      
-      return res.status(200).json({
-        status: 'success',
-        message: 'URLs assinadas geradas com sucesso',
-        data: {
-          municipio,
-          total_arquivos: urlsAssinadas.length,
-          urls: urlsAssinadas
-        }
-      });
       
     } catch (error: any) {
       console.error('❌ [SIGNED URLS] Erro:', error);
@@ -266,6 +303,84 @@ export class UploadController {
   }
 
   /**
+   * NOVO ENDPOINT - Upload direto local (desenvolvimento)
+   * Recebe dados JSON diretamente e salva no storage local
+   */
+  async uploadLocalDirect(req: Request, res: Response) {
+    console.log('📁 [UPLOAD LOCAL] Endpoint chamado');
+    
+    try {
+      const { municipio, unidade, uploadId } = req.params;
+      const inventoryData = req.body;
+      
+      console.log(`📁 [UPLOAD LOCAL] Upload direto para: ${municipio}/${unidade}/${uploadId}`);
+      
+      if (!inventoryData || typeof inventoryData !== 'object') {
+        return res.status(400).json({
+          status: 'error',
+          message: 'Dados do inventoryData são obrigatórios'
+        });
+      }
+      
+      // Validar estrutura básica
+      if (!inventoryData.periodo_inicio || !inventoryData.periodo_fim || !inventoryData.itens) {
+        return res.status(400).json({
+          status: 'error',
+          message: 'Estrutura do inventoryData inválida (faltam periodo_inicio, periodo_fim ou itens)'
+        });
+      }
+      
+      // Salvar arquivo localmente
+      const nomeArquivo = `${uploadId}_inventoryData${unidade}.json`;
+      const resultadoSalvamento = await this.salvarArquivoNoStorage(
+        inventoryData,
+        municipio,
+        unidade,
+        nomeArquivo
+      );
+      
+      if (!resultadoSalvamento.sucesso) {
+        throw new Error(resultadoSalvamento.erro);
+      }
+      
+      console.log(`✅ [UPLOAD LOCAL] Arquivo salvo: ${resultadoSalvamento.arquivo_path}`);
+      
+      // Triggerar processamento em background (simula Cloud Function trigger)
+      console.log(`🚀 [STORAGE TRIGGER] Simulando trigger de Cloud Function para: ${resultadoSalvamento.arquivo_path}`);
+      this.processarArquivosDoStorageEmBackground(municipio, [resultadoSalvamento.arquivo_path!])
+        .then((resultado) => {
+          console.log(`✅ [STORAGE TRIGGER] Processamento automático concluído:`, resultado);
+        })
+        .catch((error) => {
+          console.error(`❌ [STORAGE TRIGGER] Erro no processamento automático:`, error);
+        });
+      
+      return res.status(200).json({
+        status: 'success',
+        message: 'Upload local realizado com sucesso',
+        data: {
+          municipio,
+          unidade,
+          upload_id: uploadId,
+          arquivo_path: resultadoSalvamento.arquivo_path,
+          periodo: `${inventoryData.periodo_inicio} a ${inventoryData.periodo_fim}`,
+          total_itens: inventoryData.itens.length,
+          processamento_status: 'EM_BACKGROUND',
+          timestamp: new Date().toISOString()
+        }
+      });
+      
+    } catch (error: any) {
+      console.error('❌ [UPLOAD LOCAL] Erro:', error);
+      return res.status(500).json({
+        status: 'error',
+        message: 'Erro no upload local',
+        details: error.message
+      });
+    }
+  }
+
+  /**
    * ENDPOINT DE HEALTH CHECK
    */
   async healthCheck(req: Request, res: Response) {
@@ -276,12 +391,19 @@ export class UploadController {
       timestamp: new Date().toISOString(),
       environment: process.env.NODE_ENV || 'development',
       endpoints: [
-        'POST /api/upload/semanal - Upload principal (novo fluxo: storage → processamento)',
-        'POST /api/upload/executar-calculos - Executar cálculos manualmente',
-        'GET /api/upload/status - Status do processamento',
-        'POST /api/upload/solicitar-signed-urls - URLs assinadas (produção)',
-        'POST /api/upload/processar-cloud-storage - Processar Cloud Storage (produção)',
-        'GET /api/upload/health - Health check'
+        '🚀 POST /api/upload/solicitar-signed-urls - NOVO: Gerar URLs para upload direto (RECOMENDADO)',
+        '📁 POST /api/upload/local-direct/:municipio/:unidade/:uploadId - NOVO: Upload direto local',
+        '⚠️ POST /api/upload/semanal - DEPRECIADO: Upload com JSON no corpo (SERÁ REMOVIDO)',
+        '🔢 POST /api/upload/executar-calculos - Executar cálculos manualmente',
+        '📊 GET /api/upload/status - Status do processamento',
+        '☁️ POST /api/upload/processar-cloud-storage - Processar Cloud Storage (produção)',
+        '💚 GET /api/upload/health - Health check'
+      ],
+      fluxo_recomendado: [
+        '1. POST /solicitar-signed-urls → Obter URLs de upload',
+        '2. PUT signed_url → Enviar JSON diretamente para storage',
+        '3. Trigger automático → Processamento em background',
+        '4. POST /executar-calculos → Executar cálculos (opcional)'
       ]
     });
   }
@@ -305,53 +427,46 @@ export class UploadController {
       
       console.log(`📋 [CALCULOS] Executando cálculos para ${municipio}${unidade ? `/${unidade}` : ''}`);
       
-      // TEMPORARIAMENTE DESATIVADO: Execução manual também desabilitada
-      console.log(`⚠️ [CALCULOS] ATENÇÃO: Execução de cálculos DESATIVADA temporariamente`);
-      console.log(`📋 [CALCULOS] Executando apenas validação para gerar arquivos locais...`);
+      // Executar cálculos reais (em dev salva JSON, em prod salva no banco)
+      console.log(`🔢 [CALCULOS] Executando cálculos para ${municipio}${unidade ? `/${unidade}` : ''}...`);
       
+      let resultado;
       try {
-        await validarCalculosComGabarito();
+        if (unidade) {
+          // Executar para unidade específica
+          resultado = await executarCalculosParaUnidade(municipio, unidade);
+        } else {
+          // Executar para município inteiro
+          resultado = await executarCalculosParaMunicipio(municipio);
+        }
         
-        // Simular resultado para manter compatibilidade
-        const resultado = {
-          sucesso: true,
-          total_processados: 0,
-          total_sucesso: 0,
-          total_erros: 0
-        };
-        
-        console.log(`✅ [CALCULOS] Validação concluída - verifique pasta output_validacao/`);
+        console.log(`✅ [CALCULOS] Cálculos concluídos:`, resultado);
       
-        // Continue com o código existente...
       } catch (error) {
-        console.error(`❌ [CALCULOS] Erro na validação:`, error);
+        console.error(`❌ [CALCULOS] Erro nos cálculos:`, error);
         return res.status(500).json({
           status: 'error',
-          message: 'Erro na validação',
+          message: 'Erro nos cálculos',
           details: error instanceof Error ? error.message : 'Erro desconhecido'
         });
       }
       
-      // SIMULAÇÃO - manter estrutura de resposta
-      const resultado = {
-        sucesso: true,
-        total_processados: 0,
-        total_sucesso: 0,
-        total_erros: 0
-      };
-      
-      // Sempre retornar sucesso já que estamos apenas fazendo validação
+      // Retornar resultado real dos cálculos
       return res.status(200).json({
         status: 'success',
-        message: 'Validação executada com sucesso (banco não modificado)',
+        message: 'Cálculos executados com sucesso',
         data: {
           municipio,
           unidade: unidade || 'TODAS',
-          total_processados: 0,
-          total_sucesso: 0,
-          total_erros: 0,
-          taxa_sucesso: 0,
-          observacao: 'Modo desenvolvimento - apenas validação gerada em output_validacao/',
+          total_processados: resultado.total_processados || 0,
+          total_sucesso: resultado.total_sucesso || 0,
+          total_erros: resultado.total_erros || 0,
+          taxa_sucesso: resultado.total_processados > 0 ? 
+            Math.round((resultado.total_sucesso / resultado.total_processados) * 100) : 100,
+          observacao: process.env.NODE_ENV === 'development' ? 
+            'Modo desenvolvimento - cálculos salvos em JSON local' : 
+            'Modo produção - cálculos salvos no banco',
+          arquivos_gerados: resultado.arquivos_gerados || [],
           timestamp: new Date().toISOString()
         }
       });
@@ -709,16 +824,15 @@ export class UploadController {
         }
       }
       
-      // TEMPORARIAMENTE DESATIVADO: Não executar cálculos automáticos
-      // Em vez disso, executar apenas validação para gerar arquivos locais
-      console.log(`📋 [BACKGROUND] Executando VALIDAÇÃO para ${municipio} (sem modificar banco)...`);
+      // Executar cálculos para o município (em desenvolvimento salva JSON, em produção salva no banco)
+      console.log(`📋 [BACKGROUND] Executando CÁLCULOS para ${municipio}...`);
       
       try {
-        // Executar validação que gera arquivos locais sem tocar no banco
-        await validarCalculosComGabarito();
-        console.log(`✅ [BACKGROUND] Validação concluída - arquivos gerados em output_validacao/`);
+        // Executar cálculos - em development mode salva em JSON, em production salva no banco
+        const resultadoCalculos = await executarCalculosParaMunicipio(municipio);
+        console.log(`✅ [BACKGROUND] Cálculos concluídos:`, resultadoCalculos);
       } catch (error) {
-        console.warn(`⚠️ [BACKGROUND] Erro na validação (não crítico):`, error);
+        console.warn(`⚠️ [BACKGROUND] Erro nos cálculos (não crítico):`, error);
       }
       
       console.log(`✅ [BACKGROUND] Processamento completo concluído para ${municipio}`);
@@ -731,9 +845,9 @@ export class UploadController {
         resultados: [
           ...resultados,
           {
-            tipo: 'VALIDACAO_EXECUTADA',
-            status: 'BANCO_NAO_MODIFICADO',
-            observacao: 'Apenas JSON salvo no storage e validacao gerada localmente'
+            tipo: 'CALCULOS_EXECUTADOS',
+            status: 'BANCO_NAO_MODIFICADO_EM_DEV',
+            observacao: 'JSON salvo no storage e cálculos executados (em dev salva JSON, em prod salva no banco)'
           }
         ]
       };

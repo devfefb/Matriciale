@@ -20,6 +20,7 @@
     "calcular-estoques": "ts-node src/scripts/executar-processamento-estoque.ts",
     "validar-calculos": "ts-node src/scripts/testes/executar-validacao-completa.ts",
 
+    "download-storage": "ts-node src/scripts/utils/executar-download.ts",
     "script-deletar-medicamentos": "ts-node src/scripts/testes/script.ts"
   },
   "engines": {

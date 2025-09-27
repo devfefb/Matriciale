@@ -853,83 +853,163 @@ const UploadSemanal = () => {
      }
    }, []);
 
-   // Função para salvar resultados no backend (nova estrutura otimizada)
-   const salvarResultados = useCallback(async (inventoryDataPorUnidade) => {
-     try {
-       // Primeiro testar conectividade
-       const conectado = await testarConectividade();
-       if (!conectado) {
-         throw new Error('Backend não está acessível. Verifique se o servidor está rodando.');
-       }
+  // NOVO: Função para upload direto via Storage (sem JSON no corpo da requisição)
+  const salvarResultados = useCallback(async (inventoryDataPorUnidade) => {
+    try {
+      // Primeiro testar conectividade
+      const conectado = await testarConectividade();
+      if (!conectado) {
+        throw new Error('Backend não está acessível. Verifique se o servidor está rodando.');
+      }
 
-       console.log('📤 Enviando inventoryData para o backend (estrutura otimizada)...');
-       
-       // Preparar dados na nova estrutura otimizada
-       const arquivos = Object.entries(inventoryDataPorUnidade).map(([unidade, inventoryData]) => ({
-         nome_arquivo: `inventoryData${unidade}.json`,
-         content: inventoryData
-       }));
+      console.log('🔗 NOVO FLUXO: Solicitando signed URLs para upload direto ao storage...');
+      
+      // Preparar lista de arquivos para solicitar signed URLs
+      const arquivosParaUpload = Object.entries(inventoryDataPorUnidade).map(([unidade, inventoryData]) => ({
+        nome_arquivo: `inventoryData${unidade}.json`,
+        municipio: 'Palmares',
+        unidade: unidade,
+        tipo_arquivo: 'inventoryData',
+        tamanho_estimado: JSON.stringify(inventoryData).length
+      }));
 
-       const dadosParaEnvio = {
-         tipo: 'semanal',
-         municipio: 'Palmares', // Nome correto do município
-         data_processamento: new Date().toISOString(),
-         arquivos: arquivos
-       };
-       
-       console.log('📋 Dados preparados (estrutura otimizada):', {
-         tipo: dadosParaEnvio.tipo,
-         municipio: dadosParaEnvio.municipio,
-         total_arquivos: dadosParaEnvio.arquivos.length,
-         arquivos_nomes: dadosParaEnvio.arquivos.map(a => a.nome_arquivo),
-         tamanho_total_mb: (JSON.stringify(dadosParaEnvio).length / 1024 / 1024).toFixed(2)
-       });
-       
-       // Fazer requisição para o backend enviando JSON otimizado
-       console.log('🌐 Fazendo requisição para: /api/upload/semanal');
-       
-       const response = await fetch('/api/upload/semanal', {
-         method: 'POST',
-         headers: {
-           'Content-Type': 'application/json',
-         },
-         body: JSON.stringify(dadosParaEnvio)
-       });
-       
-       console.log('📡 Resposta recebida:', {
-         status: response.status,
-         statusText: response.statusText,
-         headers: Object.fromEntries(response.headers.entries())
-       });
-       
-       // Verificar se a resposta tem conteúdo
-       const responseText = await response.text();
-       console.log('📄 Conteúdo da resposta:', responseText);
-       
-       if (!responseText) {
-         throw new Error('Resposta vazia do servidor');
-       }
-       
-       let result;
-       try {
-         result = JSON.parse(responseText);
-       } catch (parseError) {
-         console.error('❌ Erro ao fazer parse do JSON:', parseError);
-         throw new Error(`Resposta inválida do servidor: ${responseText.substring(0, 200)}...`);
-       }
-       
-       if (response.ok && result.status === 'success') {
-         console.log('✅ Dados salvos com sucesso no backend:', result.data);
-         return result.data;
-       } else {
-         throw new Error(result.message || `Erro HTTP ${response.status}: ${response.statusText}`);
-       }
-       
-     } catch (error) {
-       console.error('❌ Erro ao salvar no backend:', error);
-       throw new Error(`Falha ao comunicar com o backend: ${error.message}`);
-     }
-   }, []);
+      console.log('📋 Solicitando signed URLs para:', {
+        total_arquivos: arquivosParaUpload.length,
+        arquivos: arquivosParaUpload.map(a => `${a.unidade}/${a.nome_arquivo}`),
+        tamanho_total_mb: (arquivosParaUpload.reduce((acc, a) => acc + a.tamanho_estimado, 0) / 1024 / 1024).toFixed(2)
+      });
+      
+      // Solicitar signed URLs
+      console.log('🌐 Fazendo requisição para: /api/upload/solicitar-signed-urls');
+      
+      const signedUrlsResponse = await fetch('/api/upload/solicitar-signed-urls', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          municipio: 'Palmares',
+          arquivos: arquivosParaUpload
+        })
+      });
+      
+      if (!signedUrlsResponse.ok) {
+        const errorText = await signedUrlsResponse.text();
+        throw new Error(`Erro ao solicitar signed URLs: ${signedUrlsResponse.status} - ${errorText}`);
+      }
+      
+      const signedUrlsResult = await signedUrlsResponse.json();
+      console.log('✅ Signed URLs recebidas:', signedUrlsResult);
+      
+      if (signedUrlsResult.status !== 'success') {
+        throw new Error(signedUrlsResult.message || 'Erro ao gerar signed URLs');
+      }
+      
+      const urls = signedUrlsResult.data.urls;
+      const environment = signedUrlsResult.data.environment;
+      const storageType = signedUrlsResult.data.storage_type;
+      
+      console.log(`🔗 Enviando ${urls.length} arquivo(s) para ${storageType} (${environment})`);
+      
+      // Fazer upload de cada arquivo usando as signed URLs
+      const resultadosUpload = [];
+      
+      for (let i = 0; i < urls.length; i++) {
+        const url = urls[i];
+        const unidade = Object.keys(inventoryDataPorUnidade)[i];
+        const inventoryData = inventoryDataPorUnidade[unidade];
+        
+        console.log(`📤 Enviando ${url.nome_arquivo} para ${url.upload_url}`);
+        console.log(`🔍 Storage Type: ${storageType}`);
+        console.log(`🔍 URL tipo: ${typeof url.upload_url}, URL: ${url.upload_url}`);
+        
+        try {
+          let uploadResponse;
+          
+          if (storageType === 'local_storage') {
+            // Upload local: usar URL local com JSON no corpo
+            uploadResponse = await fetch(url.upload_url, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(inventoryData)
+            });
+          } else {
+            // Upload cloud: usar signed URL diretamente
+            uploadResponse = await fetch(url.upload_url, {
+              method: 'PUT',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(inventoryData)
+            });
+          }
+          
+          if (uploadResponse.ok) {
+            console.log(`✅ Upload concluído: ${url.nome_arquivo}`);
+            
+            if (storageType === 'local_storage') {
+              // Para local, pegar resposta do endpoint local
+              const localResult = await uploadResponse.json();
+              resultadosUpload.push({
+                unidade: unidade,
+                arquivo_original: url.nome_arquivo,
+                arquivo_storage: localResult.data?.arquivo_path || url.arquivo_path,
+                periodo: `${inventoryData.periodo_inicio} a ${inventoryData.periodo_fim}`,
+                total_itens: inventoryData.itens.length,
+                status: 'SALVO_STORAGE',
+                upload_id: localResult.data?.upload_id || url.upload_id
+              });
+            } else {
+              // Para cloud, usar dados da signed URL
+              resultadosUpload.push({
+                unidade: unidade,
+                arquivo_original: url.nome_arquivo,
+                arquivo_storage: url.arquivo_path,
+                periodo: `${inventoryData.periodo_inicio} a ${inventoryData.periodo_fim}`,
+                total_itens: inventoryData.itens.length,
+                status: 'SALVO_STORAGE',
+                upload_id: url.upload_id
+              });
+            }
+          } else {
+            const errorText = await uploadResponse.text();
+            throw new Error(`Erro no upload de ${url.nome_arquivo}: ${uploadResponse.status} - ${errorText}`);
+          }
+          
+        } catch (uploadError) {
+          console.error(`❌ Erro no upload de ${url.nome_arquivo}:`, uploadError);
+          console.error(`❌ Detalhes do erro:`, {
+            name: uploadError.name,
+            message: uploadError.message,
+            stack: uploadError.stack,
+            cause: uploadError.cause
+          });
+          throw new Error(`Falha no upload de ${url.nome_arquivo}: ${uploadError.message}`);
+        }
+      }
+      
+      console.log('🎉 Todos os uploads concluídos via storage!');
+      
+      // Retornar dados no formato esperado
+      return {
+        municipio: 'Palmares',
+        arquivos_processados: resultadosUpload.length,
+        arquivos_salvos_storage: resultadosUpload.length,
+        environment: environment,
+        storage_type: storageType,
+        resultados: resultadosUpload,
+        processamento_status: 'EM_BACKGROUND',
+        timestamp: new Date().toISOString(),
+        metodo_upload: 'SIGNED_URLS_STORAGE_DIRETO'
+      };
+      
+    } catch (error) {
+      console.error('❌ Erro no novo fluxo de storage:', error);
+      throw new Error(`Falha no upload via storage: ${error.message}`);
+    }
+  }, []);
 
   const limparArquivos = useCallback(() => {
     setFiles({});

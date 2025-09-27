@@ -79,6 +79,7 @@ export class CloudStorageService {
       });
       
       console.log(`✅ [SIGNED URL] URL gerada: ${arquivoPath} (expira em 30min)`);
+      console.log(`🔗 [SIGNED URL] URL completa: ${signedUrl}`);
       
       return {
         upload_url: signedUrl,
