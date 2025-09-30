@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import express from 'express';
 import { UploadController } from '../controllers/UploadController';
 
 const router = Router();
@@ -39,6 +40,13 @@ router.post('/executar-calculos', uploadController.executarCalculos.bind(uploadC
  * NOVO - Upload direto local (desenvolvimento)
  */
 router.post('/local-direct/:municipio/:unidade/:uploadId', uploadController.uploadLocalDirect.bind(uploadController));
+// Upload local de anexos (binário)
+router.post(
+  '/local-direct-attachment/:municipio/:unidade/:uploadId',
+  // Parser específico para binários (anexos)
+  express.raw({ type: '*/*', limit: '200mb' }),
+  uploadController.uploadLocalDirectAttachment.bind(uploadController)
+);
 
 /**
  * NOVO - Status do processamento
@@ -47,6 +55,9 @@ router.get('/status', uploadController.statusProcessamento.bind(uploadController
 
 // NOVO - Check completeness (todas as unidades com JSON no storage?)
 router.get('/check-completeness', uploadController.checkCompleteness.bind(uploadController));
+
+// NOVO - Listar documentos anexados
+router.get('/documentos', uploadController.listarDocumentos.bind(uploadController));
 
 // NOVO - Validar cálculos com gabarito (somente leitura)
 router.post('/validar-calculos', uploadController.validarCalculos.bind(uploadController));

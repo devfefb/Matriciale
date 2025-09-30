@@ -13,6 +13,7 @@ import Calendar from '../components/Tela_Principal/Calendar/Calendar';
 import RelatorioImpressao from '../components/Relatorio/RelatorioImpressao';
 import Pacientes from '../pages/pacientes/Pacientes';
 import VisualizarPacientes from '../components/Pacientes/VisualizarPacientes';
+import Historico from '../pages/Historico';
 
 function PrivateRoute({ children }) {
   const { user } = useAuth();
@@ -69,6 +70,7 @@ export default function AppRoutes() {
         element={<Navigate to={user ? "/dashboard" : "/login"} />} 
       />
       <Route path="/relatorio" element={<Relatorio/>}/>
+      <Route path="/documentos" element={<Historico />}/>
       <Route path="/gerenciamento" element={<Gerenciamento/>}/>
       <Route path="/medicine/:codigo/:nome" element={<MedicineInfoTable/>}/>
       <Route path="/users/pacientes/:id/:nome" element={<VisualizarPacientes />} />

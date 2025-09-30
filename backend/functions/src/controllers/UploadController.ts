@@ -215,8 +215,10 @@ export class UploadController {
           
             return {
             nome_arquivo: arquivo.nome_arquivo,
-            upload_url: `/api/upload/local-direct/${municipio}/${nomeUnidade}/${uploadId}`,
-            arquivo_path: `storage/uploads/${municipio}/${nomeUnidade}/${uploadId}_${arquivo.nome_arquivo}`,
+            upload_url: arquivo.tipo_arquivo === 'attachments'
+              ? `/api/upload/local-direct-attachment/${municipio}/${nomeUnidade}/${uploadId}`
+              : `/api/upload/local-direct/${municipio}/${nomeUnidade}/${uploadId}`,
+            arquivo_path: `storage/uploads/${municipio}/${nomeUnidade}/${arquivo.tipo_arquivo === 'attachments' ? 'attachments' : 'inventoryData'}/${uploadId}_${arquivo.nome_arquivo}`,
             upload_id: uploadId,
             expires_at: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(), // 1 ano
             tipo_storage: 'local'
@@ -378,6 +380,128 @@ export class UploadController {
         message: 'Erro no upload local',
         details: error.message
       });
+    }
+  }
+
+  /**
+   * NOVO ENDPOINT - Upload direto local de anexo (desenvolvimento)
+   * Recebe arquivo binário e salva em storage local na pasta attachments
+   */
+  async uploadLocalDirectAttachment(req: Request, res: Response) {
+    console.log('📎 [UPLOAD LOCAL ATTACHMENT] Endpoint chamado');
+    console.log('📎 [UPLOAD LOCAL ATTACHMENT] Headers:', {
+      'content-type': req.headers['content-type'],
+      'x-filename': req.headers['x-filename'],
+      'content-length': req.headers['content-length']
+    });
+    
+    try {
+      const { municipio, unidade, uploadId } = req.params;
+      const nomeArquivo = req.headers['x-filename'] as string || `${uploadId}_attachment`;
+      const tipo = req.headers['content-type'] as string || 'application/octet-stream';
+
+      console.log(`📎 [UPLOAD LOCAL ATTACHMENT] Params: municipio=${municipio}, unidade=${unidade}, uploadId=${uploadId}`);
+      console.log(`📎 [UPLOAD LOCAL ATTACHMENT] Arquivo: ${nomeArquivo}, tipo: ${tipo}`);
+
+      // O express.raw middleware coloca os dados em req.body como Buffer
+      let raw: Buffer | undefined;
+      
+      if (Buffer.isBuffer(req.body)) {
+        raw = req.body;
+        console.log(`📎 [UPLOAD LOCAL ATTACHMENT] Body é Buffer (${raw.length} bytes)`);
+      } else if ((req as any).rawBody) {
+        raw = (req as any).rawBody;
+        console.log(`📎 [UPLOAD LOCAL ATTACHMENT] Usando rawBody (${raw.length} bytes)`);
+      } else {
+        console.error('❌ [UPLOAD LOCAL ATTACHMENT] Body não é Buffer:', typeof req.body);
+        console.error('❌ [UPLOAD LOCAL ATTACHMENT] Body content:', req.body);
+        return res.status(400).json({ 
+          status: 'error', 
+          message: 'Corpo binário é obrigatório',
+          debug: {
+            bodyType: typeof req.body,
+            isBuffer: Buffer.isBuffer(req.body),
+            hasRawBody: !!(req as any).rawBody
+          }
+        });
+      }
+
+      if (!raw || raw.length === 0) {
+        console.error('❌ [UPLOAD LOCAL ATTACHMENT] Buffer vazio ou undefined');
+        return res.status(400).json({ 
+          status: 'error', 
+          message: 'Arquivo vazio ou dados inválidos',
+          debug: {
+            hasBuffer: !!raw,
+            bufferLength: raw?.length || 0
+          }
+        });
+      }
+
+      const fs = require('fs');
+      const path = require('path');
+
+      const dirBase = path.join(__dirname, '../../../storage/uploads', municipio, unidade, 'attachments');
+      console.log(`📁 [UPLOAD LOCAL ATTACHMENT] Criando diretório: ${dirBase}`);
+      
+      if (!fs.existsSync(dirBase)) {
+        fs.mkdirSync(dirBase, { recursive: true });
+        console.log(`✅ [UPLOAD LOCAL ATTACHMENT] Diretório criado: ${dirBase}`);
+      }
+
+      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+      const nomeArquivoLimpo = nomeArquivo.replace(/[^a-zA-Z0-9._-]/g, '_');
+      const nomeFinal = `${timestamp}_${nomeArquivoLimpo}`;
+      const caminhoCompleto = path.join(dirBase, nomeFinal);
+
+      console.log(`💾 [UPLOAD LOCAL ATTACHMENT] Salvando em: ${caminhoCompleto}`);
+      fs.writeFileSync(caminhoCompleto, raw);
+      console.log(`✅ [UPLOAD LOCAL ATTACHMENT] Arquivo salvo com sucesso (${raw.length} bytes)`);
+
+      const arquivoPath = `storage/uploads/${municipio}/${unidade}/attachments/${nomeFinal}`;
+      console.log(`📄 [UPLOAD LOCAL ATTACHMENT] Path relativo: ${arquivoPath}`);
+
+      return res.status(200).json({
+        status: 'success',
+        message: 'Anexo salvo com sucesso',
+        data: {
+          municipio,
+          unidade,
+          upload_id: uploadId,
+          arquivo_path: arquivoPath,
+          arquivo_nome: nomeFinal,
+          content_type: tipo,
+          tamanho_bytes: raw.length,
+          tamanho_kb: (raw.length / 1024).toFixed(2),
+          timestamp: new Date().toISOString()
+        }
+      });
+    } catch (error: any) {
+      console.error('❌ [UPLOAD LOCAL ATTACHMENT] Erro:', error);
+      console.error('❌ [UPLOAD LOCAL ATTACHMENT] Stack:', error.stack);
+      return res.status(500).json({ 
+        status: 'error', 
+        message: 'Erro no upload local de anexo', 
+        details: error.message,
+        stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+      });
+    }
+  }
+
+  /**
+   * NOVO - Listar documentos anexados (attachments)
+   */
+  async listarDocumentos(req: Request, res: Response) {
+    try {
+      const { municipio } = req.query;
+      const { arquivos, total } = await this.cloudStorageService.listarDocumentos(municipio as string | undefined);
+      return res.status(200).json({
+        status: 'success',
+        data: { arquivos, total, municipio: municipio || null, timestamp: new Date().toISOString() }
+      });
+    } catch (error: any) {
+      console.error('❌ [LISTAR DOCUMENTOS] Erro:', error);
+      return res.status(500).json({ status: 'error', message: 'Erro ao listar documentos', details: error.message });
     }
   }
 

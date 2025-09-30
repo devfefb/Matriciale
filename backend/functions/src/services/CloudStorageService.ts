@@ -10,7 +10,7 @@ export interface SignedUrlRequest {
   nome_arquivo: string;
   municipio: string;
   unidade: string;
-  tipo_arquivo: 'inventoryData' | 'onboarding';
+  tipo_arquivo: 'inventoryData' | 'onboarding' | 'attachments';
   tamanho_estimado?: number;
 }
 
@@ -68,11 +68,13 @@ export class CloudStorageService {
       const expiresAt = new Date();
       expiresAt.setMinutes(expiresAt.getMinutes() + 30); // 30 minutos para upload
       
+      const conteudoTipo = request.tipo_arquivo === 'inventoryData' ? 'application/json' : 'application/octet-stream';
+
       const [signedUrl] = await file.getSignedUrl({
         version: 'v4',
         action: 'write',
         expires: expiresAt,
-        contentType: 'application/json',
+        contentType: conteudoTipo,
         metadata: {
           metadata: metadata
         }
@@ -389,6 +391,133 @@ export class CloudStorageService {
     const nomeArquivoLimpo = request.nome_arquivo.replace(/[^a-zA-Z0-9.-]/g, '_');
     
     return `uploads/${request.municipio}/${request.unidade}/${request.tipo_arquivo}/${timestamp}_${uploadId}_${nomeArquivoLimpo}`;
+  }
+
+  /**
+   * Lista documentos anexados (attachments) no Cloud Storage ou local
+   */
+  async listarDocumentos(municipio?: string): Promise<{
+    arquivos: Array<{
+      path: string;
+      nome: string;
+      municipio: string;
+      unidade: string;
+      data_upload: string;
+      tamanho: number;
+    }>;
+    total: number;
+  }> {
+    try {
+      if (!bucket) {
+        return await this.listarDocumentosLocais(municipio);
+      }
+
+      const prefix = municipio ? `uploads/${municipio}/` : 'uploads/';
+      const [files] = await bucket.getFiles({ prefix });
+
+      const arquivos: any[] = [];
+      for (const file of files) {
+        if (!file.name.includes('/attachments/')) continue;
+        try {
+          const [metadata] = await file.getMetadata();
+          const metadataCustom = metadata.metadata || {};
+          arquivos.push({
+            path: file.name,
+            nome: file.name.split('/').pop() || '',
+            municipio: metadataCustom.municipio || 'Desconhecido',
+            unidade: metadataCustom.unidade || 'Desconhecida',
+            data_upload: metadataCustom.data_upload || metadata.timeCreated,
+            tamanho: parseInt(metadata.size) || 0
+          });
+        } catch (_) {
+          // ignore single file errors
+        }
+      }
+
+      return {
+        arquivos: arquivos.sort((a, b) => new Date(b.data_upload).getTime() - new Date(a.data_upload).getTime()),
+        total: arquivos.length
+      };
+    } catch (error) {
+      console.error('❌ [STORAGE] Erro ao listar documentos:', error);
+      return { arquivos: [], total: 0 };
+    }
+  }
+
+  /**
+   * Lista documentos anexados no armazenamento local
+   */
+  private async listarDocumentosLocais(municipio?: string): Promise<{
+    arquivos: Array<{
+      path: string;
+      nome: string;
+      municipio: string;
+      unidade: string;
+      data_upload: string;
+      tamanho: number;
+    }>;
+    total: number;
+  }> {
+    try {
+      const fs = require('fs');
+      const path = require('path');
+
+      const dirBase = path.join(__dirname, '../../../storage/uploads');
+      console.log(`📁 [LISTAR DOCS LOCAIS] Dir base: ${dirBase}`);
+      console.log(`📁 [LISTAR DOCS LOCAIS] Município filtro: ${municipio || 'TODOS'}`);
+      
+      if (!fs.existsSync(dirBase)) {
+        console.log(`⚠️ [LISTAR DOCS LOCAIS] Diretório base não existe: ${dirBase}`);
+        return { arquivos: [], total: 0 };
+      }
+
+      const arquivos: any[] = [];
+      const municipios = municipio ? [municipio] : fs.readdirSync(dirBase).filter((item: string) => fs.statSync(path.join(dirBase, item)).isDirectory());
+      console.log(`📁 [LISTAR DOCS LOCAIS] Municípios a processar: ${municipios.join(', ')}`);
+
+      for (const mun of municipios) {
+        const dirMunicipio = path.join(dirBase, mun);
+        if (!fs.existsSync(dirMunicipio)) continue;
+
+        const unidades = fs.readdirSync(dirMunicipio).filter((item: string) => fs.statSync(path.join(dirMunicipio, item)).isDirectory());
+        console.log(`📁 [LISTAR DOCS LOCAIS] Município ${mun} - Unidades: ${unidades.join(', ')}`);
+        
+        for (const unidade of unidades) {
+          const dirAttachments = path.join(dirMunicipio, unidade, 'attachments');
+          if (!fs.existsSync(dirAttachments)) {
+            console.log(`⚠️ [LISTAR DOCS LOCAIS] ${mun}/${unidade} - Pasta attachments não existe`);
+            continue;
+          }
+
+          const files = fs.readdirSync(dirAttachments).filter((item: string) => fs.statSync(path.join(dirAttachments, item)).isFile());
+          console.log(`📎 [LISTAR DOCS LOCAIS] ${mun}/${unidade}/attachments - ${files.length} arquivo(s)`);
+          
+          for (const fileName of files) {
+            const caminhoArquivo = path.join(dirAttachments, fileName);
+            const stats = fs.statSync(caminhoArquivo);
+            arquivos.push({
+              path: `storage/uploads/${mun}/${unidade}/attachments/${fileName}`,
+              nome: fileName,
+              municipio: mun,
+              unidade: unidade,
+              data_upload: stats.mtime.toISOString(),
+              tamanho: stats.size
+            });
+            console.log(`   ✅ ${fileName} (${(stats.size / 1024).toFixed(2)} KB)`);
+          }
+        }
+      }
+
+      console.log(`📊 [LISTAR DOCS LOCAIS] Total de documentos encontrados: ${arquivos.length}`);
+      
+      return {
+        arquivos: arquivos.sort((a, b) => new Date(b.data_upload).getTime() - new Date(a.data_upload).getTime()),
+        total: arquivos.length
+      };
+    } catch (error) {
+      console.error('❌ [STORAGE LOCAL] Erro ao listar documentos locais:', error);
+      return { arquivos: [], total: 0 };
+    }
   }
   
   /**

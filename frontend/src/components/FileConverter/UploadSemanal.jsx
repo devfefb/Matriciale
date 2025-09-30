@@ -868,7 +868,7 @@ const UploadSemanal = () => {
 
       console.log('🔗 NOVO FLUXO: Solicitando signed URLs para upload direto ao storage...');
       
-      // Preparar lista de arquivos para solicitar signed URLs
+      // Preparar lista de arquivos para solicitar signed URLs (dados processados JSON)
       const arquivosParaUpload = Object.entries(inventoryDataPorUnidade).map(([unidade, inventoryData]) => ({
         nome_arquivo: `inventoryData${unidade}.json`,
         municipio: 'Palmares',
@@ -994,7 +994,166 @@ const UploadSemanal = () => {
         }
       }
       
-      console.log('🎉 Todos os uploads concluídos via storage!');
+      console.log('🎉 Uploads de dados processados concluídos via storage!');
+
+      // ===================== NOVO: Upload dos anexos originais =====================
+      console.log('📎 [ANEXOS] Iniciando upload dos documentos originais...');
+      try {
+        const unidades = Object.keys(inventoryDataPorUnidade);
+        const anexosRequests = [];
+        
+        // Mapear arquivos para requests
+        for (const unidade of unidades) {
+          const arquivosUnidade = files[unidade];
+          if (!arquivosUnidade) continue;
+          
+          if (arquivosUnidade.balancete) {
+            anexosRequests.push({
+              nome_arquivo: arquivosUnidade.balancete.name,
+              municipio: 'Palmares',
+              unidade,
+              tipo_arquivo: 'attachments',
+              tamanho_estimado: arquivosUnidade.balancete.size
+            });
+          }
+          if (arquivosUnidade.movimentacao) {
+            anexosRequests.push({
+              nome_arquivo: arquivosUnidade.movimentacao.name,
+              municipio: 'Palmares',
+              unidade,
+              tipo_arquivo: 'attachments',
+              tamanho_estimado: arquivosUnidade.movimentacao.size
+            });
+          }
+        }
+
+        if (anexosRequests.length === 0) {
+          console.log('📎 [ANEXOS] Nenhum anexo para enviar');
+        } else {
+          console.log(`📎 [ANEXOS] Solicitando signed URLs para ${anexosRequests.length} anexos:`, anexosRequests.map(a => `${a.unidade}/${a.nome_arquivo}`));
+          
+          const signedAnexosResp = await fetch('/api/upload/solicitar-signed-urls', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ municipio: 'Palmares', arquivos: anexosRequests })
+          });
+          
+          if (!signedAnexosResp.ok) {
+            const errorText = await signedAnexosResp.text();
+            const errorMsg = `Erro ao solicitar URLs de anexos: ${signedAnexosResp.status} - ${errorText}`;
+            console.error('❌ [ANEXOS]', errorMsg);
+            throw new Error(errorMsg);
+          }
+          
+          const signedAnexos = await signedAnexosResp.json();
+          console.log('📎 [ANEXOS] Resposta signed URLs:', signedAnexos);
+          
+          if (signedAnexos.status !== 'success') {
+            const errorMsg = signedAnexos.message || 'Erro ao gerar signed URLs para anexos';
+            console.error('❌ [ANEXOS]', errorMsg);
+            throw new Error(errorMsg);
+          }
+
+          const anexosUrls = signedAnexos.data.urls;
+          console.log(`📎 [ANEXOS] Recebidas ${anexosUrls.length} URLs. Iniciando uploads...`);
+
+          const anexosEnviados = [];
+          const anexosFalhados = [];
+
+          for (let i = 0; i < anexosUrls.length; i++) {
+            const urlInfo = anexosUrls[i];
+            const requestInfo = anexosRequests[i];
+            const unidade = requestInfo.unidade;
+            const fileName = requestInfo.nome_arquivo;
+            const arquivosUnidade = files[unidade] || {};
+            
+            // Encontrar o File correspondente
+            const fileToSend = [arquivosUnidade.balancete, arquivosUnidade.movimentacao]
+              .find(f => f && f.name === fileName);
+            
+            if (!fileToSend) {
+              console.warn(`⚠️ [ANEXOS] Arquivo não encontrado: ${fileName}`);
+              anexosFalhados.push({ arquivo: fileName, erro: 'Arquivo não encontrado' });
+              continue;
+            }
+
+            console.log(`📤 [ANEXOS] Enviando ${fileToSend.name} (${(fileToSend.size / 1024).toFixed(2)} KB) para ${urlInfo.upload_url}`);
+
+            try {
+              let uploadResp;
+              
+              if (storageType === 'local_storage') {
+                console.log(`📁 [ANEXOS] Modo local - POST com raw body`);
+                uploadResp = await fetch(urlInfo.upload_url, {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/octet-stream', // Usar sempre octet-stream para anexos
+                    'x-filename': fileToSend.name
+                  },
+                  body: fileToSend
+                });
+              } else {
+                console.log(`☁️ [ANEXOS] Modo cloud - PUT com signed URL`);
+                uploadResp = await fetch(urlInfo.upload_url, {
+                  method: 'PUT',
+                  headers: {
+                    'Content-Type': 'application/octet-stream'
+                  },
+                  body: fileToSend
+                });
+              }
+              
+              if (!uploadResp.ok) {
+                const errorText = await uploadResp.text();
+                const errorMsg = `Falha upload ${fileToSend.name}: ${uploadResp.status} - ${errorText}`;
+                console.error(`❌ [ANEXOS]`, errorMsg);
+                anexosFalhados.push({ arquivo: fileToSend.name, erro: errorMsg });
+              } else {
+                console.log(`✅ [ANEXOS] Anexo enviado com sucesso: ${fileToSend.name}`);
+                
+                // Tentar ler resposta se houver
+                try {
+                  const respData = await uploadResp.json();
+                  console.log(`📄 [ANEXOS] Resposta do servidor:`, respData);
+                  anexosEnviados.push({ 
+                    arquivo: fileToSend.name, 
+                    unidade, 
+                    arquivo_path: respData.data?.arquivo_path 
+                  });
+                } catch {
+                  // Resposta vazia ou não-JSON (normal para signed URLs)
+                  anexosEnviados.push({ arquivo: fileToSend.name, unidade });
+                }
+              }
+            } catch (uploadError) {
+              const errorMsg = uploadError instanceof Error ? uploadError.message : 'Erro desconhecido';
+              console.error(`❌ [ANEXOS] Erro no upload de ${fileToSend.name}:`, uploadError);
+              anexosFalhados.push({ arquivo: fileToSend.name, erro: errorMsg });
+            }
+          }
+
+          // Resumo final
+          console.log(`📊 [ANEXOS] Resumo do upload de anexos:`);
+          console.log(`   ✅ Enviados com sucesso: ${anexosEnviados.length}`);
+          console.log(`   ❌ Falhados: ${anexosFalhados.length}`);
+          
+          if (anexosEnviados.length > 0) {
+            console.log(`   📁 Anexos enviados:`, anexosEnviados);
+          }
+          
+          if (anexosFalhados.length > 0) {
+            console.error(`   ⚠️ Anexos falhados:`, anexosFalhados);
+            // Exibir aviso ao usuário mas não bloquear o fluxo
+            const errosMsg = anexosFalhados.map(f => `${f.arquivo}: ${f.erro}`).join('\n');
+            console.warn(`⚠️ [ANEXOS] Alguns anexos não foram enviados:\n${errosMsg}`);
+          }
+        }
+      } catch (anexosError) {
+        const errorMsg = anexosError instanceof Error ? anexosError.message : 'Erro desconhecido';
+        console.error('❌ [ANEXOS] Erro geral no upload de anexos:', anexosError);
+        // Não bloqueia o processamento principal, mas registra o erro
+        console.warn(`⚠️ [ANEXOS] Upload de anexos falhou, mas processamento principal continua. Erro: ${errorMsg}`);
+      }
       
       // Retornar dados no formato esperado
       return {
