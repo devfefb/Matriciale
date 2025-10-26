@@ -59,6 +59,9 @@ router.get('/check-completeness', uploadController.checkCompleteness.bind(upload
 // NOVO - Listar documentos anexados
 router.get('/documentos', uploadController.listarDocumentos.bind(uploadController));
 
+// NOVO - Download de documento
+router.get('/documentos/download', uploadController.downloadDocumento.bind(uploadController));
+
 // NOVO - Validar cálculos com gabarito (somente leitura)
 router.post('/validar-calculos', uploadController.validarCalculos.bind(uploadController));
 

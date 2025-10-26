@@ -95,6 +95,35 @@ export class CloudStorageService {
       throw new Error(`Falha ao gerar URL assinada: ${error instanceof Error ? error.message : 'Erro desconhecido'}`);
     }
   }
+
+  /**
+   * Gera URL assinada para download de arquivo
+   */
+  async gerarUrlDownload(arquivoPath: string): Promise<string> {
+    try {
+      console.log(`📥 [DOWNLOAD URL] Gerando URL para: ${arquivoPath}`);
+      
+      if (!bucket) {
+        throw new Error('Cloud Storage não está configurado');
+      }
+
+      const file = bucket.file(arquivoPath);
+      const expiresAt = new Date();
+      expiresAt.setMinutes(expiresAt.getMinutes() + 15); // 15 minutos para download
+
+      const [signedUrl] = await file.getSignedUrl({
+        version: 'v4',
+        action: 'read',
+        expires: expiresAt
+      });
+
+      console.log(`✅ [DOWNLOAD URL] URL gerada (expira em 15min)`);
+      return signedUrl;
+    } catch (error) {
+      console.error(`❌ [DOWNLOAD URL] Erro:`, error);
+      throw new Error(`Falha ao gerar URL de download: ${error instanceof Error ? error.message : 'Erro desconhecido'}`);
+    }
+  }
   
   /**
    * Processa arquivo após upload (Cloud Storage ou local)

@@ -506,6 +506,66 @@ export class UploadController {
   }
 
   /**
+   * NOVO - Download de documento anexado
+   */
+  async downloadDocumento(req: Request, res: Response) {
+    console.log('📥 [DOWNLOAD DOCUMENTO] Endpoint chamado');
+    try {
+      const { path: filePath } = req.query;
+      
+      if (!filePath || typeof filePath !== 'string') {
+        return res.status(400).json({
+          status: 'error',
+          message: 'Caminho do arquivo é obrigatório'
+        });
+      }
+
+      console.log(`📥 [DOWNLOAD DOCUMENTO] Arquivo solicitado: ${filePath}`);
+
+      // Verificar se é cloud ou local
+      if (CloudStorageService.isConfigured()) {
+        // Cloud Storage - gerar URL de download
+        const downloadUrl = await this.cloudStorageService.gerarUrlDownload(filePath);
+        return res.redirect(downloadUrl);
+      } else {
+        // Local Storage - enviar arquivo diretamente
+        const fs = require('fs');
+        const path = require('path');
+        
+        const caminhoCompleto = path.join(__dirname, '../../../', filePath);
+        console.log(`📥 [DOWNLOAD DOCUMENTO] Caminho completo: ${caminhoCompleto}`);
+        
+        if (!fs.existsSync(caminhoCompleto)) {
+          console.error(`❌ [DOWNLOAD DOCUMENTO] Arquivo não encontrado: ${caminhoCompleto}`);
+          return res.status(404).json({
+            status: 'error',
+            message: 'Arquivo não encontrado'
+          });
+        }
+
+        const nomeArquivo = path.basename(filePath);
+        const stats = fs.statSync(caminhoCompleto);
+        
+        console.log(`✅ [DOWNLOAD DOCUMENTO] Enviando arquivo: ${nomeArquivo} (${(stats.size / 1024).toFixed(2)} KB)`);
+        
+        res.setHeader('Content-Disposition', `attachment; filename="${nomeArquivo}"`);
+        res.setHeader('Content-Type', 'application/octet-stream');
+        res.setHeader('Content-Length', stats.size);
+        
+        const readStream = fs.createReadStream(caminhoCompleto);
+        readStream.pipe(res);
+      }
+    } catch (error: any) {
+      console.error('❌ [DOWNLOAD DOCUMENTO] Erro:', error);
+      return res.status(500).json({
+        status: 'error',
+        message: 'Erro ao fazer download do documento',
+        details: error.message
+      });
+    }
+  }
+
+  /**
    * ENDPOINT DE HEALTH CHECK
    */
   async healthCheck(req: Request, res: Response) {
