@@ -20,18 +20,24 @@ function PrivateRoute({ children }) {
   return user ? children : <Navigate to="/login" />;
 }
 
+function AdminRoute({ children }) {
+  const { user, isAdmin } = useAuth();
+  if (!user) return <Navigate to="/login" />;
+  return isAdmin ? children : <Navigate to="/dashboard" />;
+}
+
 export default function AppRoutes() {
   const { user } = useAuth();
 
   return (
     <Routes>
-      <Route 
-        path="/login" 
-        element={user ? <Navigate to="/dashboard" /> : <Login />} 
+      <Route
+        path="/login"
+        element={user ? <Navigate to="/dashboard" /> : <Login />}
       />
-      <Route 
-        path="/register" 
-        element={user ? <Navigate to="/dashboard" /> : <Register />} 
+      <Route
+        path="/register"
+        element={user ? <Navigate to="/dashboard" /> : <Register />}
       />
       <Route
         path="/dashboard"
@@ -57,24 +63,24 @@ export default function AppRoutes() {
           </PrivateRoute>
         }
       />
-      <Route
+      <Route  
         path="/conversor"
         element={
-          <PrivateRoute>
+          <AdminRoute>
             <ConversorArquivos />
-          </PrivateRoute>
+          </AdminRoute>
         }
       />
-      <Route 
-        path="/" 
-        element={<Navigate to={user ? "/dashboard" : "/login"} />} 
+      <Route
+        path="/"
+        element={<Navigate to={user ? "/dashboard" : "/login"} />}
       />
-      <Route path="/relatorio" element={<Relatorio/>}/>
-      <Route path="/documentos" element={<Historico />}/>
-      <Route path="/gerenciamento" element={<Gerenciamento/>}/>
-      <Route path="/medicine/:codigo/:nome" element={<MedicineInfoTable/>}/>
+      <Route path="/relatorio" element={<Relatorio />} />
+      <Route path="/documentos" element={<Historico />} />
+      <Route path="/gerenciamento" element={<Gerenciamento />} />
+      <Route path="/medicine/:codigo/:nome" element={<MedicineInfoTable />} />
       <Route path="/users/pacientes/:id/:nome" element={<VisualizarPacientes />} />
-      <Route path='/calendar' element={<Calendar/>}/>
+      <Route path='/calendar' element={<Calendar />} />
       <Route path="/relatorio/impressao" element={<RelatorioImpressao />} />
     </Routes>
   );
