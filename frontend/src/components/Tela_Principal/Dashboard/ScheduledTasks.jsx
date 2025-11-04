@@ -69,7 +69,7 @@ const ScheduledTasks = () => {
         </Typography>
         <Box>
           <Grid container spacing={0}>
-            {weekDays.map((dayInfo, index) => (
+            {weekDays?.map((dayInfo, index) => (
               <React.Fragment key={dayInfo.day}>
                 <Grid 
                   item 

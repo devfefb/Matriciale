@@ -14,6 +14,7 @@ import RelatorioImpressao from '../components/Relatorio/RelatorioImpressao';
 import Pacientes from '../pages/pacientes/Pacientes';
 import VisualizarPacientes from '../components/Pacientes/VisualizarPacientes';
 import Historico from '../pages/Historico';
+import CriarTarefa from '../pages/Dashboard/Calendar/CriarTarefa';
 
 function PrivateRoute({ children }) {
   const { user } = useAuth();
@@ -76,11 +77,12 @@ export default function AppRoutes() {
         element={<Navigate to={user ? "/dashboard" : "/login"} />}
       />
       <Route path="/relatorio" element={<Relatorio />} />
-      <Route path="/documentos" element={<Historico />} />
+      {/* <Route path="/documentos" element={<Historico />} /> */}
       <Route path="/gerenciamento" element={<Gerenciamento />} />
       <Route path="/medicine/:codigo/:nome" element={<MedicineInfoTable />} />
       <Route path="/users/pacientes/:id/:nome" element={<VisualizarPacientes />} />
       <Route path='/calendar' element={<Calendar />} />
+      <Route path='/calendar/criar-tarefa' element={<CriarTarefa />} />
       <Route path="/relatorio/impressao" element={<RelatorioImpressao />} />
     </Routes>
   );

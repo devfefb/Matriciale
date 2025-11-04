@@ -10,60 +10,29 @@ import {
   TableHead, 
   TableRow,
   useTheme,
-  useMediaQuery
+  useMediaQuery,
+  Button,
+  Fab
 } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import { useNavigate } from 'react-router-dom';
 import Header from '../../Header';
 import Sidebar from '../../Sidebar';
-
-// Tipos de eventos e suas cores
-const EVENT_TYPES = {
-  TAREFA: { label: 'Tarefa', color: '#FF9800' },
-  REPOSICAO: { label: 'Reposição', color: '#9C27B0' },
-  REUNIAO: { label: 'Reunião', color: '#4CAF50' },
-  ENTREGA: { label: 'Entrega', color: '#F44336' }
-};
-
-// Função para gerar eventos mockados para o mês atual
-const generateMockEvents = (year, month) => {
-  const events = {};
-  const daysInMonth = new Date(year, month + 1, 0).getDate();
-  
-  // Gera eventos aleatórios para o mês
-  for (let day = 1; day <= daysInMonth; day++) {
-    const date = new Date(year, month, day);
-    const dayOfWeek = date.getDay();
-    
-    // Não gera eventos para finais de semana
-    if (dayOfWeek === 0 || dayOfWeek === 6) continue;
-    
-    // 30% de chance de ter um evento no dia
-    if (Math.random() < 0.3) {
-      const eventTypes = Object.values(EVENT_TYPES);
-      const numEvents = Math.floor(Math.random() * 2) + 1; // 1 ou 2 eventos por dia
-      
-      events[`${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`] = 
-        Array.from({ length: numEvents }, (_, i) => {
-          const eventType = eventTypes[Math.floor(Math.random() * eventTypes.length)];
-          return {
-            id: `${day}-${i}`,
-            title: eventType.label,
-            color: eventType.color
-          };
-        });
-    }
-  }
-  
-  return events;
-};
+import { useTasks } from '../Dashboard/TaskContext';
+import TaskDetailsModal from './TaskDetailsModal';
 
 const Calendar = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const { tasks, isLoading, refreshTasks } = useTasks();
   
   // Usar a data atual
   const [currentDate, setCurrentDate] = useState(new Date());
   const [calendarDays, setCalendarDays] = useState([]);
-  const [mockEvents, setMockEvents] = useState({});
+  const [eventsByDate, setEventsByDate] = useState({});
+  const [selectedTask, setSelectedTask] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Nomes dos dias da semana
   const weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
@@ -74,12 +43,29 @@ const Calendar = () => {
     'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
   ];
 
-  // Gerar eventos mockados quando o mês mudar
+  // Organizar tarefas por data
   useEffect(() => {
-    const year = currentDate.getFullYear();
-    const month = currentDate.getMonth();
-    setMockEvents(generateMockEvents(year, month));
-  }, [currentDate]);
+    if (!tasks) return;
+
+    const eventMap = {};
+    tasks.forEach(task => {
+      // Ajusta o fuso horário para considerar a data local
+      const taskDate = new Date(task.date);
+      taskDate.setMinutes(taskDate.getMinutes() + taskDate.getTimezoneOffset());
+      const formattedDate = `${taskDate.getFullYear()}-${String(taskDate.getMonth() + 1).padStart(2, '0')}-${String(taskDate.getDate()).padStart(2, '0')}`;
+      
+      if (!eventMap[formattedDate]) {
+        eventMap[formattedDate] = [];
+      }
+      
+      eventMap[formattedDate].push({
+        ...task,
+        id: task.id || Math.random().toString(36).substr(2, 9),
+      });
+    });
+
+    setEventsByDate(eventMap);
+  }, [tasks]);
 
   // Função para gerar os dias do calendário
   useEffect(() => {
@@ -142,11 +128,17 @@ const Calendar = () => {
     setCalendarDays(generateCalendarDays());
   }, [currentDate]);
 
+  // Handler para abrir o modal
+  const handleTaskClick = (task) => {
+    setSelectedTask(task);
+    setIsModalOpen(true);
+  };
+
   // Renderiza os eventos para um determinado dia
   const renderEvents = (formattedDate) => {
-    const events = mockEvents[formattedDate] || [];
+    const events = eventsByDate[formattedDate] || [];
     
-    return events.map((event, index) => (
+    return events.map((event) => (
       <Box 
         key={event.id}
         sx={{ 
@@ -154,18 +146,23 @@ const Calendar = () => {
           alignItems: 'center',
           mb: 0.5,
           fontSize: '0.75rem',
-          bgcolor: '#f5f5f5',
+          bgcolor: event.bgColor || '#f5f5f5',
           borderRadius: '4px',
           px: 1,
           py: 0.5,
           borderLeft: `10px solid ${event.color}`,
           overflow: 'hidden',
           textOverflow: 'ellipsis',
-          whiteSpace: 'nowrap'
+          whiteSpace: 'nowrap',
+          cursor: 'pointer',
+          '&:hover': {
+            filter: 'brightness(0.95)',
+          }
         }}
+        onClick={() => handleTaskClick(event)}
       >
         <Typography variant="caption" sx={{ fontSize: '0.75rem', ml: 1 }}>
-          {event.title}
+          {event.label}
         </Typography>
       </Box>
     ));
@@ -200,17 +197,36 @@ const Calendar = () => {
               border: '1px solid #e0e0e0'
             }}
           >
-            <Typography 
-              variant="h5" 
-              color="primary" 
-              sx={{ 
-                mb: 2, 
-                fontWeight: 500,
-                fontSize: { xs: '1.2rem', sm: '1.5rem' }
-              }}
-            >
-              {monthYearString}
-            </Typography>
+            <Box sx={{ 
+              display: 'flex', 
+              justifyContent: 'space-between', 
+              alignItems: 'center',
+              mb: 2
+            }}>
+              <Typography 
+                variant="h5" 
+                color="primary" 
+                sx={{ 
+                  fontWeight: 500,
+                  fontSize: { xs: '1.2rem', sm: '1.5rem' }
+                }}
+              >
+                {monthYearString}
+              </Typography>
+              
+              <Button
+                variant="contained"
+                color="primary"
+                startIcon={<AddIcon />}
+                onClick={() => navigate('/calendar/criar-tarefa')}
+                sx={{
+                  borderRadius: 2,
+                  textTransform: 'none'
+                }}
+              >
+                Nova Tarefa
+              </Button>
+            </Box>
             
             <TableContainer>
               <Table sx={{ tableLayout: 'fixed' }}>
@@ -276,6 +292,27 @@ const Calendar = () => {
               </Table>
             </TableContainer>
           </Paper>
+          <Fab 
+            color="primary" 
+            aria-label="add"
+            onClick={() => navigate('/calendar/criar-tarefa')}
+            sx={{
+              position: 'fixed',
+              bottom: 32,
+              right: 32
+            }}
+          >
+            <AddIcon />
+          </Fab>
+
+          <TaskDetailsModal
+            task={selectedTask}
+            open={isModalOpen}
+            onClose={() => {
+              setIsModalOpen(false);
+              setSelectedTask(null);
+            }}
+          />
         </Box> 
       </div>
     </>

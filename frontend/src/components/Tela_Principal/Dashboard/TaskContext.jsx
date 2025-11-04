@@ -1,41 +1,68 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { getCurrentWeek, getCurrentDate, isToday } from './taskUtils';
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+import api from '../../../services/api';
+import { useAuth } from '../../../contexts/AuthContext';
 
 const TaskContext = createContext(null);
 
+const getMunicipio = (email) => {
+  if (!email) return null;
+
+  console.log('Determining municipio for email:', email);
+  const normalizedEmail = email.toLowerCase();
+  
+  const PALMARES = ['gustavo.moraes@beetsjr.com.br'];
+  const PIRANGI = ['andre.ricardo.goncales@gmail.com'];
+  
+  if (PALMARES.includes(normalizedEmail)) return 'Palmares';
+  if (PIRANGI.includes(normalizedEmail)) return 'Pirangi';
+  
+  return null;
+};
+
 export const TaskProvider = ({ children }) => {
-  const [weekDays, setWeekDays] = useState([]);
-  const [currentDate, setCurrentDate] = useState(getCurrentDate());
-  const [todayTasks, setTodayTasks] = useState([]);
+  const { user } = useAuth();
+  const [tasks, setTasks] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const updateTasks = () => {
-      try {
-        const week = getCurrentWeek();
-        setWeekDays(week);
-        setCurrentDate(getCurrentDate());
-        
-        const today = week.find(day => isToday(day.fullDate));
-        setTodayTasks(today?.tasks || []);
+  const fetchTasks = async () => {
+    try {
+      const municipio = getMunicipio(user?.email);
+      if (!municipio) {
+        console.error('Usuário não tem permissão para visualizar tarefas');
         setIsLoading(false);
-      } catch (error) {
-        console.error('Erro ao atualizar tarefas:', error);
-        setIsLoading(false);
+        return;
       }
-    };
 
-    updateTasks();
-    const interval = setInterval(updateTasks, 30 * 60 * 1000);
+      const response = await api.get(`/tasks/${municipio}`);
+      setTasks(response.data);
+    } catch (error) {
+      console.error('Erro ao buscar tarefas:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
-    return () => clearInterval(interval);
-  }, []);
+  useEffect(() => {
+    if (user) {
+      fetchTasks();
+    }
+  }, [user]);
+
+  const currentDate = format(new Date(), "dd 'de' MMMM", { locale: ptBR });
+  
+  const todayTasks = tasks.filter(task => {
+    const taskDate = new Date(task.date);
+    return format(taskDate, 'yyyy-MM-dd') === format(new Date(), 'yyyy-MM-dd');
+  });
 
   const value = {
-    weekDays,
+    tasks,
     currentDate,
     todayTasks,
-    isLoading
+    isLoading,
+    refreshTasks: fetchTasks
   };
 
   return (
@@ -47,10 +74,8 @@ export const TaskProvider = ({ children }) => {
 
 export const useTasks = () => {
   const context = useContext(TaskContext);
-  
-  if (context === null) {
-    throw new Error('useTasks deve ser usado dentro de um TaskProvider');
+  if (!context) {
+    throw new Error('useTasks must be used within a TaskProvider');
   }
-  
   return context;
-}; 
+};

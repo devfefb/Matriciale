@@ -8,10 +8,18 @@ const ADMIN_WHITELIST = [
   'andre.ricardo.goncales@gmail.com'
 ];
 
+const PALMARES = [
+  'gustavo.moraes@beetsjr.com.br'
+];
+
+const PIRANGI = [
+  'andre.ricardo.goncales@gmail.com'
+];
+
 function isEmailAdmin(email) {
   if (!email) return false;
   const normalized = email.toLowerCase();
-  if (normalized.endsWith('@beetsjr.com.br')) return true;
+  if (normalized.endsWith('@beetsjr.com.br')) return true; // somos todos admins muhehe
   if (ADMIN_WHITELIST.includes(normalized)) return true;
   return false;
 }

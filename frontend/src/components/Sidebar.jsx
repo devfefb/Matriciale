@@ -17,7 +17,7 @@ function Sidebar(){
             <Link to="/gerenciamento"><div><img src={remedio}/></div><p>Visualizar<br/>Medicamento</p></Link>
             <Link><div><img src={farmacia}/></div><p>Visualizar<br/>Farmácias</p></Link>
             <Link to="/relatorio"><div><img src={relatorio}/></div><p>Relatórios</p></Link>
-            <Link to="/documentos"><div><img src={relatorio}/></div><p>Documentos</p></Link>
+            {/* <Link to="/documentos"><div><img src={relatorio}/></div><p>Documentos</p></Link> */}
             <Link to="/calendar"><div><img src={calendario}/></div><p>Agenda</p></Link>
             <Link to="/users/pacientes"><div><img src={medico}/></div><p>Pacientes</p></Link>
             <Link to="/conversor"><div><img src={relatorio}/></div><p>Conversor</p></Link>

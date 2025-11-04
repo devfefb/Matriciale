@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { usersRouter } from './users';
 import uploadRoutes from './upload.routes';
+import { taskRoutes } from './task.routes';
 import { auth } from '../config/firebase';
 
 const router = Router();
@@ -9,6 +10,8 @@ const router = Router();
 
 router.use('/users', usersRouter); // assim como esse exemplo, onde as rotas de usuários estão em um arquivo separado, e apenas usamos 'router.use' para importar as rotas
 router.use('/upload', uploadRoutes); // rotas para upload de planilhas
+router.use('/tasks', taskRoutes); // rotas para gerenciamento de tarefas
+router.use('/tasks', taskRoutes); // rotas para gerenciamento de tarefas
 
 // Rota de teste sem autenticação
 router.get('/test', (req, res) => {
