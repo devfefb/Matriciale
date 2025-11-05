@@ -1,0 +1,1018 @@
+[
+  {
+    "cod": 325023001,
+    "descricao": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325025001,
+    "descricao": "ACICLOVIR 200 MG CPR",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325025002,
+    "descricao": "ACICLOVIR 5 % CREME 10 G",
+    "unidade": "TB"
+  },
+  {
+    "cod": 325026001,
+    "descricao": "ACIDO FOLICO 5MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325027001,
+    "descricao": "ACIDO TRANEXÂMICO 250MG - TRANSAMIN",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325028001,
+    "descricao": "ACIDO VALPROICO 250 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325028002,
+    "descricao": "ACIDO VALPROICO 500MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 321003001,
+    "descricao": "AGULHA PARA CANETA DE INSULINA 4MM"
+  },
+  {
+    "cod": 321001392,
+    "descricao": "AGULHA PARA CANETA DE INSULINA 6MM",
+    "unidade": "UN"
+  },
+  {
+    "cod": 325031001,
+    "descricao": "ALBENDAZOL 40 MG/ML FRASCO 10 ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 325031002,
+    "descricao": "ALBENDAZOL 400 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325018001,
+    "descricao": "ALGESTONA ACETOFENIDA 150MG/ML + ENANTATO DE ESTRADIOL 10MG/ML INJ",
+    "unidade": "AMP"
+  },
+  {
+    "cod": 325032001,
+    "descricao": "ALOPURINOL  300MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325032002,
+    "descricao": "ALOPURINOL 100MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325021002,
+    "descricao": "AMBROXOL XAROPE ADULTO",
+    "unidade": "FR"
+  },
+  {
+    "cod": 325021003,
+    "descricao": "AMBROXOL XAROPE INFANTIL",
+    "unidade": "FR"
+  },
+  {
+    "cod": 325033001,
+    "descricao": "AMINOFILINA 100 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325029003,
+    "descricao": "AMIODARONA, CLORIDRATO  200 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325001004,
+    "descricao": "AMITRIPTILINA, CLORIDRATO  25 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325016005,
+    "descricao": "AMOXICILINA + CLAVULANATO 500/125 MCG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325016006,
+    "descricao": "AMOXICILINA + CLAVULANATO SUSP 250 MG/5 ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 325016007,
+    "descricao": "AMOXICILINA 250 MG/5ML - 150 ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 325016008,
+    "descricao": "AMOXICILINA 500 MG - CAPSULA",
+    "unidade": "CAP"
+  },
+  {
+    "cod": 325035001,
+    "descricao": "ANLODIPINO, BESILATO 5MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325016010,
+    "descricao": "AZITROMICINA 500 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325016009,
+    "descricao": "AZITROMICINA SUSP. 200MG/5ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 325038001,
+    "descricao": "BIPERIDENO, CLORIDRATO 2 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325039001,
+    "descricao": "BISACODIL 5MG - DULCOLAX",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325040001,
+    "descricao": "BROMOPRIDA 10MG CPR",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325040003,
+    "descricao": "BROMOPRIDA GTS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 325042002,
+    "descricao": "BUSCOPAM COMPOSTO CPR",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325042003,
+    "descricao": "BUSCOPAM SIMPLES CP",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325042004,
+    "descricao": "BUSCOPAM SIMPLES GOTAS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 325045001,
+    "descricao": "CAPTOPRIL 25 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325028003,
+    "descricao": "CARBAMAZEPINA 200 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000066,
+    "descricao": "CARBAMAZEPINA SUSP. 100 ML- 20 MG/ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 2000068,
+    "descricao": "CARBONATO DE CALCIO 1.250MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 230001019,
+    "descricao": "CARBONATO DE CALCIO 1.250MG + VITAMINA D 400UI",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000024,
+    "descricao": "CARBONATO DE LITIO 300 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 21001024,
+    "descricao": "CARVEDILOL 12,5 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 303007002,
+    "descricao": "CARVEDILOL 25 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 303002004,
+    "descricao": "CARVEDILOL 6,25 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000010,
+    "descricao": "CEFALEXINA 500 MG",
+    "unidade": "CAP"
+  },
+  {
+    "cod": 2000011,
+    "descricao": "CEFALEXINA SUSPENSÃO 250 MG/ 5 ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 22001012,
+    "descricao": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ EV",
+    "unidade": "FR"
+  },
+  {
+    "cod": 2000138,
+    "descricao": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ IM",
+    "unidade": "AMP"
+  },
+  {
+    "cod": 2000137,
+    "descricao": "CEFTRIAXONA 500 MG INJ -IM",
+    "unidade": "AMP"
+  },
+  {
+    "cod": 21004006,
+    "descricao": "CERUMIN GOTAS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 2000134,
+    "descricao": "CETOCONAZOL + BETAMETASONA POMADA 30 GR",
+    "unidade": "TB"
+  },
+  {
+    "cod": 301004002,
+    "descricao": "CETOCONAZOL 200 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000082,
+    "descricao": "CETOPROFENO 50 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 302008001,
+    "descricao": "CICLOBENZAPRINA 5MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 8001001,
+    "descricao": "CILOSTAZOL 100 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325003001,
+    "descricao": "CIMEGRIPE GTS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 2000012,
+    "descricao": "CIMETIDINA 200MG COMPRIMIDO",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000100,
+    "descricao": "CINARIZINA 75MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000045,
+    "descricao": "CIPROFLOXACINO 500MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 22001009,
+    "descricao": "CLARITROMICINA 500 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000020,
+    "descricao": "CLOMIPRAMINA, CLORIDRATO 25 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000022,
+    "descricao": "CLONAZEPAM 2,5 MG/ ML - GOTAS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 5000015,
+    "descricao": "CLONAZEPAM 2MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000014,
+    "descricao": "CLORPROMAZINA, CLORIDRATO 100MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000004,
+    "descricao": "CLORPROMAZINA, CLORIDRATO 25MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 21001025,
+    "descricao": "COMPLEXO B CP"
+  },
+  {
+    "cod": 325050001,
+    "descricao": "CUTISANOL BABY 120G",
+    "unidade": "UN"
+  },
+  {
+    "cod": 11001004,
+    "descricao": "DECONGEX PLUS GOTAS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 21001071,
+    "descricao": "DELTAMETRINA 0,2MG/ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 2000013,
+    "descricao": "DEXAMETASONA 0.1% CREME 10 GR",
+    "unidade": "TB"
+  },
+  {
+    "cod": 305002004,
+    "descricao": "DEXAMETASONA 4 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000127,
+    "descricao": "DEXCLORFENIRAMINA + BETAMETASONA SUSP ORAL 120",
+    "unidade": "FR"
+  },
+  {
+    "cod": 7000004,
+    "descricao": "DEXCLORFENIRAMINA, MALEATO  2MG/5ML - SUSPENSÃO",
+    "unidade": "FR"
+  },
+  {
+    "cod": 5000001,
+    "descricao": "DIAZEPAM 10 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000045,
+    "descricao": "DIAZEPAM 10 MG/ 2ML - AMP",
+    "unidade": "AMP"
+  },
+  {
+    "cod": 2000014,
+    "descricao": "DICLOFENACO 50 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 1000003,
+    "descricao": "DIGOXINA 0.25 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 21001030,
+    "descricao": "DIOSMINA + HESPERIDINA 450/50 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 323001001,
+    "descricao": "DIPIRONA SÓDICA COMPRIMIDO 500MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000015,
+    "descricao": "DIPIRONA SÓDICA GOTAS 500 MG / ML 10 ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 307001001,
+    "descricao": "DOXAZOSINA 2 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 21001094,
+    "descricao": "DOXAZOSINA MESILATO 4MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 11001002,
+    "descricao": "DRAMIN  GOTAS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 2000144,
+    "descricao": "DROPROPIZINA 1,5 MG/ML -XAROPE PEDIATRICO",
+    "unidade": "FR"
+  },
+  {
+    "cod": 21001061,
+    "descricao": "DROPROPIZINA 3 MG/ML - XAROPE ADULTO",
+    "unidade": "FR"
+  },
+  {
+    "cod": 1000016,
+    "descricao": "ENALAPRIL 10MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 304001003,
+    "descricao": "ENOXAPARINA SÓDICA 40 MG/0,4ML - CLEXANE",
+    "unidade": "AMP"
+  },
+  {
+    "cod": 303003001,
+    "descricao": "ESPIRONOLACTONA 25 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 9000008,
+    "descricao": "ESTRIOL 1MG/G - CR VAGINAL 50 GR",
+    "unidade": "TB"
+  },
+  {
+    "cod": 5000002,
+    "descricao": "FENITOINA 100 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000003,
+    "descricao": "FENOBARBITAL 100 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000032,
+    "descricao": "FENOBARBITAL 40 MG/ML - GOTAS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 307001002,
+    "descricao": "FINASTERIDA 5 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000060,
+    "descricao": "FLUCONAZOL 150 MG",
+    "unidade": "CAP"
+  },
+  {
+    "cod": 5000013,
+    "descricao": "FLUOXETINA, CLORIDRATO 20 MG",
+    "unidade": "CAP"
+  },
+  {
+    "cod": 301002004,
+    "descricao": "FOSFATO OSELTAMIVIR 30MG - TAMIFLU",
+    "unidade": "CP"
+  },
+  {
+    "cod": 301002003,
+    "descricao": "FOSFATO OSELTAMIVIR 45 MG - TAMIFLU",
+    "unidade": "CP"
+  },
+  {
+    "cod": 301002005,
+    "descricao": "FOSFATO OSELTAMIVIR 75 MG - TAMIFLU",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000019,
+    "descricao": "FUROSEMIDA 40MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 3000001,
+    "descricao": "GLIBENCLAMIDA 5 MG.",
+    "unidade": "CP"
+  },
+  {
+    "cod": 23001001,
+    "descricao": "GLICLAZIDA 30 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 3000016,
+    "descricao": "GLICLAZIDA 60 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325021001,
+    "descricao": "GUACO XAROPE - MIKANIA GLOMERATA 117,5MG/ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 5000030,
+    "descricao": "HALOPERIDOL 2 MG/ 10 ML - GOTAS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 5000006,
+    "descricao": "HALOPERIDOL 5MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000048,
+    "descricao": "HALOPERIDOL,DECANOATO 70,52MG/ML",
+    "unidade": "AMP"
+  },
+  {
+    "cod": 21001053,
+    "descricao": "HEPARINA SÓDICA 5.000 UI",
+    "unidade": "AMP"
+  },
+  {
+    "cod": 1000025,
+    "descricao": "HIDRALAZINA 25MG, CLORIDRATO DE",
+    "unidade": "CP"
+  },
+  {
+    "cod": 1000004,
+    "descricao": "HIDROCLOROTIAZIADA 25MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000020,
+    "descricao": "HIDROXIDO DE ALUMINIO 6.2% SUSP",
+    "unidade": "FR"
+  },
+  {
+    "cod": 2000130,
+    "descricao": "IBUPROFENO 100MG/ML -  GOTAS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 21001012,
+    "descricao": "IBUPROFENO 300 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 50001005,
+    "descricao": "IBUPROFENO 50MG/ML - GOTAS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 5000011,
+    "descricao": "IMIPRAMINA 25 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 3000006,
+    "descricao": "INSULINA HUMANA NPH 100 UI/ML - CANETA",
+    "unidade": "TUBET"
+  },
+  {
+    "cod": 3000004,
+    "descricao": "INSULINA HUMANA NPH 100 UI/ML - FRASCO 10 ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 3000005,
+    "descricao": "INSULINA HUMANA REGULAR 100 UI/ ML - FRASCO 10 ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 3000007,
+    "descricao": "INSULINA HUMANA REGULAR 100 UI/ML - CANETA",
+    "unidade": "TUBET"
+  },
+  {
+    "cod": 23001002,
+    "descricao": "INSULINA NOVORRAPID FLEX PEN"
+  },
+  {
+    "cod": 23001003,
+    "descricao": "INSULINA TRESIBA FLEX PEN",
+    "unidade": "UN"
+  },
+  {
+    "cod": 301004001,
+    "descricao": "ITRACONAZOL 100 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 21001060,
+    "descricao": "IVERMECTINA 6 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 21001035,
+    "descricao": "LACTULOSE XAROPE 120 ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 327001002,
+    "descricao": "LEVODOPA + BENSERAZIDA 100/25MG - PROLOPA BD",
+    "unidade": "CP"
+  },
+  {
+    "cod": 327001001,
+    "descricao": "LEVODOPA + BENSERAZIDA 200/50MG - PROLOPA",
+    "unidade": "CP"
+  },
+  {
+    "cod": 22001002,
+    "descricao": "LEVOFLOXACINO 500 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000037,
+    "descricao": "LEVOMEPROMAZINA 100 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000009,
+    "descricao": "LEVOMEPROMAZINA 25MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 308001002,
+    "descricao": "LEVONORGESTREL 0,15MG+ETINILESTRADIOL 0,03MG- CICLO 21",
+    "unidade": "CP"
+  },
+  {
+    "cod": 9000001,
+    "descricao": "LEVONORGESTREL 0,75 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 21001032,
+    "descricao": "LEVOTIROXINA SÓDICA 100MCG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 9000011,
+    "descricao": "LEVOTIROXINA SODICA 25 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 21001033,
+    "descricao": "LEVOTIROXINA SODICA 50MCG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 21001072,
+    "descricao": "LOPERAMIDA 2 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 10001003,
+    "descricao": "LORATADINA 1 MG/ML - XAROPE",
+    "unidade": "FR"
+  },
+  {
+    "cod": 10001004,
+    "descricao": "LORATADINA 10 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 330001002,
+    "descricao": "MEDROXIPROGESTERONA, ACETATO + CIPIONATO DE ESTRADIOL (CYCLOFEMINA)",
+    "unidade": "AMP"
+  },
+  {
+    "cod": 9000005,
+    "descricao": "MEDROXIPROGESTERONA, ACETATO 150MG/ML (DEPOPROVERA)",
+    "unidade": "AMP"
+  },
+  {
+    "cod": 3000002,
+    "descricao": "METFORMINA, CLORIDRATO 850MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 1000006,
+    "descricao": "METILDOPA 250 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 11001006,
+    "descricao": "METILFENIDATO 10 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000023,
+    "descricao": "METOCLOPRAMIDA 10 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 8001007,
+    "descricao": "METOPROLOL 100 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 8001008,
+    "descricao": "METOPROLOL 25 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 8001005,
+    "descricao": "METOPROLOL 50 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000024,
+    "descricao": "METRONIDAZOL 100 MG/G - GEL VAGINAL",
+    "unidade": "TB"
+  },
+  {
+    "cod": 2000025,
+    "descricao": "METRONIDAZOL 250 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000026,
+    "descricao": "METRONIDAZOL 40 MG/ML -  SUSPENSÃO ORAL",
+    "unidade": "FR"
+  },
+  {
+    "cod": 2000059,
+    "descricao": "MICONAZOL, NITRATO 0,02 MG/G -  80 G CREME VAGINAL",
+    "unidade": "TB"
+  },
+  {
+    "cod": 2000027,
+    "descricao": "NEOMICINA + BACITRACINA POMADA",
+    "unidade": "TB"
+  },
+  {
+    "cod": 1000008,
+    "descricao": "NIFEDIPINA 20MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000058,
+    "descricao": "NIMESULIDA 100 MG  CP",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000039,
+    "descricao": "NIMESULIDA GTS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 21001058,
+    "descricao": "NISTATINA 100.000 SUSP FRASCO 60 ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 2000028,
+    "descricao": "NISTATINA POMADA VAG.",
+    "unidade": "TB"
+  },
+  {
+    "cod": 5000025,
+    "descricao": "NITRAZEPAN 5 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000073,
+    "descricao": "NITROFURANTOINA 100MG CAPSULA",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000048,
+    "descricao": "NORETISTERONA + ESTRADIOL 50 + 5 MG/ML  (MESIGYNA) INJETAVEL",
+    "unidade": "AMP"
+  },
+  {
+    "cod": 2000047,
+    "descricao": "NORETISTERONA 0,35MG CAIXA COM 35 CPR",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000140,
+    "descricao": "NORFLOXACINO 400MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 304002002,
+    "descricao": "NORIPURUM INJ",
+    "unidade": "AMP"
+  },
+  {
+    "cod": 5000028,
+    "descricao": "NORTRIPTILINA, CLORIDRATO 25 MG",
+    "unidade": "CAP"
+  },
+  {
+    "cod": 2000141,
+    "descricao": "OLEO MINERAL 100 ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 12001001,
+    "descricao": "OMEPRAZOL 20MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 306001002,
+    "descricao": "ONDANSETRONA 4 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 12001002,
+    "descricao": "ONDANSETRONA 8 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000080,
+    "descricao": "OXCARBAMAZEPINA 60 MG/ML SUSP ORAL",
+    "unidade": "FR"
+  },
+  {
+    "cod": 302004003,
+    "descricao": "OXCARBAZEPINA 300 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 30001007,
+    "descricao": "PARACETAMOL + CODEINA 500/30 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000043,
+    "descricao": "PARACETAMOL 200 MG/ ML -  FRASCO 15 ML GOTAS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 2000031,
+    "descricao": "PARACETAMOL 500 MG - COMP",
+    "unidade": "CP"
+  },
+  {
+    "cod": 21001063,
+    "descricao": "PARACETAMOL 750 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 303006004,
+    "descricao": "PENTOXIFILINA 400 MG"
+  },
+  {
+    "cod": 11001001,
+    "descricao": "PERMANGANTO DE POTASSIO 100 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 325014001,
+    "descricao": "PERMETRINA 5% LOÇÃO",
+    "unidade": "TB"
+  },
+  {
+    "cod": 2000132,
+    "descricao": "PHOSFOENEMA 130ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 2000032,
+    "descricao": "POLIVITAMINICO GTS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 313001001,
+    "descricao": "POMADA PARA ASSADURA ( NIST+ OX ZINCO) PMD",
+    "unidade": "TB"
+  },
+  {
+    "cod": 10001002,
+    "descricao": "PREDNISOLONA 3MG/ML, FOSFATO SODICO DE",
+    "unidade": "FR"
+  },
+  {
+    "cod": 308002001,
+    "descricao": "PREDNISONA 20 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 7000001,
+    "descricao": "PREDNISONA 5 MG - CP",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000007,
+    "descricao": "PROMETAZINA 25 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000051,
+    "descricao": "PROMETAZINA 50 MG/ 2ML",
+    "unidade": "AMP"
+  },
+  {
+    "cod": 1000011,
+    "descricao": "PROPRANOLOL 40MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000033,
+    "descricao": "SAIS P/REIDRATAÇÃO ORAL",
+    "unidade": "EV"
+  },
+  {
+    "cod": 7000002,
+    "descricao": "SALBUTAMOL, SULFATO 100 MCG/ DOSE -  AEROSOL",
+    "unidade": "FR"
+  },
+  {
+    "cod": 5000033,
+    "descricao": "SERTRALINA 50MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000056,
+    "descricao": "SIMETICONA GTS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 222001002,
+    "descricao": "SINVASTATINA 10MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 222001001,
+    "descricao": "SINVASTATINA 20MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 21001095,
+    "descricao": "SORO NASAL INFANTIL/ADULTO -30 ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 2000036,
+    "descricao": "SULFAM. + TRIMETROP. 40 + 8 MG/ML - SUSPENSÃO ORAL 100 ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 2000035,
+    "descricao": "SULFAMET. +TRIMETOPRIMA  400 + 80MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000037,
+    "descricao": "SULFATO FERROSO 25 MG/ML - GOTAS",
+    "unidade": "FR"
+  },
+  {
+    "cod": 2000046,
+    "descricao": "SULFATO FERROSO 40 MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 2000038,
+    "descricao": "SUPLEMENTO VITAMINICO A-Z",
+    "unidade": "CP"
+  },
+  {
+    "cod": 1001006,
+    "descricao": "TESTE RAPIDO DE GRAVIDEZ",
+    "unidade": "EV"
+  },
+  {
+    "cod": 308003001,
+    "descricao": "TIAMAZOL 5MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 6000002,
+    "descricao": "TIAMINA 300 MG - CP",
+    "unidade": "CP"
+  },
+  {
+    "cod": 308001001,
+    "descricao": "TIBOLONA 1,25MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 315001002,
+    "descricao": "TOBRAMICINA 0,3 % COLIRIO - FRASCO 5 ML",
+    "unidade": "FR"
+  },
+  {
+    "cod": 21001090,
+    "descricao": "TRAMADOL 50MG",
+    "unidade": "CP"
+  },
+  {
+    "cod": 5000052,
+    "descricao": "TRAMADOL 50MG/ML(TRAMAL)- AMP",
+    "unidade": "AMP"
+  },
+  {
+    "cod": 5000021,
+    "descricao": "VALPROATO DE SÓDIO 50 MG/ML - XPE",
+    "unidade": "FR"
+  },
+  {
+    "cod": 304001004,
+    "descricao": "VARFARINA SODICA 5MG - MAREVAN",
+    "unidade": "CP"
+  },
+  {
+    "cod": 230001001,
+    "descricao": "VITAMINA D3 7.000 UI",
+    "unidade": "CP"
+  }
+]

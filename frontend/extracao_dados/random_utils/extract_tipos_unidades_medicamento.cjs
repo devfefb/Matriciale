@@ -9,10 +9,10 @@ const path = require('path');
 const INPUT_FILE_PATH = 'D:\\Beets\\Matriciale\\Well\\Palmares_data\\[Completo] Saída - Palmares - Base de Movimentações.xlsx';
 
 // O nome da aba que você quer ler
-const SHEET_NAME = 'BalanceteCAF';
+const SHEET_NAME = 'BalanceteOlavo'; // BalanceteOlavo
 
 // O nome do arquivo JSON que será gerado
-const OUTPUT_FILE_PATH = 'dados_convertidos.json';
+const OUTPUT_FILE_PATH = 'dados_convertidos_olavo.json';
 
 // --- Fim da Configuração ---
 

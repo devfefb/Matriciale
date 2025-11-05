@@ -19,6 +19,7 @@
     "extrair-campos-calculados": "ts-node src/scripts/auxiliar/executar-extrair-campos-calculados.ts",
     "calcular-estoques": "ts-node src/scripts/executar-processamento-estoque.ts",
     "validar-calculos": "ts-node src/scripts/testes/executar-validacao-completa.ts",
+    "inserir-tipos-medicamentos": "ts-node src/scripts/inserir-tp-medicamentos/inserir-tp-med.ts",
 
     "download-storage": "ts-node src/scripts/utils/executar-download.ts",
     "adicionar-cod-item": "ts-node src/scripts/utils/executar-adicionar-cod-item.ts",
