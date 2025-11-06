@@ -569,24 +569,19 @@ function atualizarMovimentacaoSemanal(
 ): { [key: string]: number } {
   const movimentacoesAtualizadas = { ...movimentacoesAtuais };
   
-  // Cenário 1: Índice livre
+  // Se índice não existe, usa ele direto
   if (!movimentacoesAtualizadas[anoSemana]) {
     movimentacoesAtualizadas[anoSemana] = novoValor;
     console.log(`📅 [MOVIMENTAÇÃO] ${anoSemana}: ${novoValor} (novo índice)`);
     return movimentacoesAtualizadas;
   }
   
-  // Cenário 2: Índice já ocupado - encontrar próximo sufixo disponível
-  let sufixo = 2;
-  let chaveAlternativa = `${anoSemana}_${sufixo}`;
-  
-  while (movimentacoesAtualizadas[chaveAlternativa]) {
-    sufixo++;
-    chaveAlternativa = `${anoSemana}_${sufixo}`;
-  }
-  
-  movimentacoesAtualizadas[chaveAlternativa] = novoValor;
-  console.log(`📅 [MOVIMENTAÇÃO] ${anoSemana} já ocupado, usando ${chaveAlternativa}: ${novoValor}`);
+  // Se já existe, apenas compara os valores e mantém o original
+  const valorExistente = movimentacoesAtualizadas[anoSemana];
+  console.log(`⚠️ [MOVIMENTAÇÃO] Conflito detectado em ${anoSemana}:`);
+  console.log(`   → Valor existente: ${valorExistente}`);
+  console.log(`   → Valor novo: ${novoValor}`);
+  console.log(`   → Diferença: ${novoValor - valorExistente}`);
   
   return movimentacoesAtualizadas;
 }

@@ -217,9 +217,9 @@ async function calcularEstoquesUnidades(): Promise<Map<string, EstoqueCalculado>
   }
 
   // TODO: nomes devem ser dinamicos, e nao hard-coded. existira um padrao de reconhecimento dos nomes
-  const caminhoCAF = path.join(__dirname, '../../utils/downloads')
-  const caminhoESF3 = path.join(__dirname, '../../../uploads/inventoryData_Palmares_ESF3_2025-09-02T13-58-17-049Z.json');
-  const caminhoOlavo = path.join(__dirname, '../../../uploads/inventoryData_Palmares_OLAVO_2025-09-02T13-58-34-943Z.json');
+  const caminhoCAF = "D:/Beets/Matriciale/Well/backend/functions/src/scripts/utils/downloads/uploads/Palmares/CAF/inventoryData/2025-09-27T19-18-23-367Z_c1f616a1-2185-44b5-b81d-b883008fd4d5_inventoryDataCAF.json";
+  const caminhoESF3 = "D:/Beets/Matriciale/Well/backend/functions/src/scripts/utils/downloads/uploads/Palmares/ESF3/inventoryData/2025-09-27T20-39-26-804Z_d776fc4d-ef1b-484a-ae95-d57aabe3f464_inventoryDataESF3.json";
+  const caminhoOlavo = "D:/Beets/Matriciale/Well/backend/functions/src/scripts/utils/downloads/uploads/Palmares/OLAVO/inventoryData/2025-09-27T20-40-00-865Z_dc047633-0f66-4c36-a5c4-e33b47f81b72_inventoryDataOLAVO.json";
   
   const dadosCAF = carregarDadosUnidade(caminhoCAF);
   const dadosESF3 = carregarDadosUnidade(caminhoESF3);
@@ -232,7 +232,7 @@ async function calcularEstoquesUnidades(): Promise<Map<string, EstoqueCalculado>
   });
   
   // salvar o estoque consolidado em um arquivo para inspeção manual
-  const caminhoEstoqueConsolidado = path.join(__dirname, './output_validacao/estoqueConsolidado.json');
+  const caminhoEstoqueConsolidado = path.join(__dirname, './estoqueConsolidado.json');
   fs.writeFileSync(caminhoEstoqueConsolidado, JSON.stringify(Array.from(estoqueConsolidadoCache.entries()), null, 2), 'utf8');
   
   return estoqueConsolidadoCache;
@@ -1207,7 +1207,7 @@ export async function validarCalculosComGabarito(): Promise<any> {
       analise_padroes: analisePadroes
     };
     
-    const caminhoRelatorio = path.join(__dirname, './output_validacao/relatorio-validacao.json');
+    const caminhoRelatorio = path.join(__dirname, './relatorio-validacao.json');
     fs.writeFileSync(caminhoRelatorio, JSON.stringify(relatorio, null, 2));
     console.log(`\n📝 Relatório detalhado salvo em: ${caminhoRelatorio}`);
     
@@ -1258,7 +1258,7 @@ export async function validarCalculosComGabarito(): Promise<any> {
     
 
     
-    const caminhoRelatorioResumido = path.join(__dirname, './output_validacao/relatorio-resumido.json');
+    const caminhoRelatorioResumido = path.join(__dirname, './relatorio-resumido.json');
     fs.writeFileSync(caminhoRelatorioResumido, JSON.stringify(relatorioResumido, null, 2));
     console.log(`📝 Relatório resumido salvo em: ${caminhoRelatorioResumido}`);
 
