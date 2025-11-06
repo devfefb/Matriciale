@@ -68,8 +68,8 @@ async function buscarMedicamentosFirebase(collectionPath: string): Promise<Query
  */
 async function atualizarTiposUnidadeMedicamentos(): Promise<void> {
   // --- CONFIGURAÇÕES ---
-  const JSON_FILE_NAME = 'dados_convertidos.json'; // << Coloque o nome do seu JSON aqui
-  const FIREBASE_COLLECTION_PATH = '/municipio/Palmares/unidades/CAF/medicamentos_unidade';
+  const JSON_FILE_NAME = 'dados_convertidos.json'; // nome do seu JSON aqui
+  const FIREBASE_COLLECTION_PATH = '/municipio/Palmares/unidades/Olavo/medicamentos_unidade'; // mudar para inserir em outras unidades
   // ---------------------
 
   console.log('🚀 Iniciando script de atualização de tipos de unidade...');

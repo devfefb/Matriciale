@@ -98,7 +98,7 @@ const MedicineTable = () => {
   const filteredMedicines = medicines
     .filter(med => med.nome.toLowerCase().includes(searchTerm.toLowerCase()))
     .filter(med => !colorFilter || med.status === colorFilter)
-    .filter(med => !classFilter || med.classificacaoItem === classFilter); // linha inserida agora. tome cuidado com o ;
+    .filter(med => !classFilter || med.classificacaoItem === classFilter);
 
   return (
     <div className="medicine-table-container">
