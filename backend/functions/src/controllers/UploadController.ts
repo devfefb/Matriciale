@@ -3,7 +3,7 @@ import { MovimentacaoClassifierService } from '../services/MovimentacaoClassifie
 import { CloudStorageService } from '../services/CloudStorageService';
 import { db } from '../config/firebase';
 // import { validarCalculosComGabarito } from '../scripts/testes/validar-calculos'; // DESATIVADO - Usar executar-calculos
-import { executarCalculosParaMunicipio, executarCalculosParaUnidade } from '../scripts/testes/executar-calculos';
+import { executarCalculosParaMunicipio, executarCalculosParaUnidade } from '../scripts/testes/[MAIN] executar-calculos';
 import { validarCalculosComGabarito } from '../scripts/testes/validar-calculos';
 
 export class UploadController {

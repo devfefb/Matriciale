@@ -217,7 +217,7 @@ async function calcularEstoquesUnidades(): Promise<Map<string, EstoqueCalculado>
   }
 
   // TODO: nomes devem ser dinamicos, e nao hard-coded. existira um padrao de reconhecimento dos nomes
-  const caminhoCAF = path.join(__dirname, '../../../uploads/inventoryData_Palmares_CAF_2025-09-02T13-53-57-750Z.json');
+  const caminhoCAF = path.join(__dirname, '../../utils/downloads')
   const caminhoESF3 = path.join(__dirname, '../../../uploads/inventoryData_Palmares_ESF3_2025-09-02T13-58-17-049Z.json');
   const caminhoOlavo = path.join(__dirname, '../../../uploads/inventoryData_Palmares_OLAVO_2025-09-02T13-58-34-943Z.json');
   

@@ -451,6 +451,8 @@ function converterMovimentacoesParaHistorico(movimentacoes: { [key: string]: num
 /**
  * Calcula a semana de movimentação baseada no período (cópia local)
  * Formato: YYYY_WW (ex: 2025_22)
+ *
+ * AJUSTE: Esta versão considera que a semana começa na Segunda-feira.
  */
 function calcularSemanaMovimentacaoLocal(periodoInicio: string, periodoFim: string): string {
   try {
@@ -461,13 +463,16 @@ function calcularSemanaMovimentacaoLocal(periodoInicio: string, periodoFim: stri
     // Calcular número da semana do ano
     const primeiroJaneiro = new Date(ano, 0, 1);
     const diasDoAno = Math.floor((dataFim.getTime() - primeiroJaneiro.getTime()) / (24 * 60 * 60 * 1000));
-    const numeroSemana = Math.ceil((diasDoAno + primeiroJaneiro.getDay() + 1) / 7);
+    
+    // LINHA MODIFICADA: Removemos o "+ 1" para que a semana comece na Segunda-feira.
+    const numeroSemana = Math.ceil((diasDoAno + primeiroJaneiro.getDay()) / 7);
     
     return `${ano}_${String(numeroSemana).padStart(2, '0')}`;
     
   } catch (error) {
     console.error('Erro ao calcular semana:', error);
     // Fallback: usar data atual
+    // Nota: O fallback não foi modificado e pode ter uma lógica de contagem de semana diferente.
     const agora = new Date();
     const ano = agora.getFullYear();
     const semana = Math.ceil((agora.getTime() - new Date(ano, 0, 1).getTime()) / (7 * 24 * 60 * 60 * 1000));
