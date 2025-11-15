@@ -9,8 +9,7 @@ import {
   AnaliseReposicao
 } from '../interfaces/interfaces-campos-calculados';
 
-import { EstoqueCalculado } from '../interfaces/calculos';
-import { DadosUnidade } from '../interfaces/interfaces-campos-banco';
+import { DadosUnidade, EstoqueCalculado } from '../interfaces/calculos';
 
 type DadosTodasUnidades = {
   [nomeUnidade: string]: DadosUnidade;
