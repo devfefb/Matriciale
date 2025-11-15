@@ -609,7 +609,7 @@ export async function validarCalculosComGabarito(): Promise<any> {
       analise_padroes: analisePadroes
     };
 
-    const caminhoRelatorio = path.join(__dirname, './relatorio-validacao.json');
+    const caminhoRelatorio = path.join(__dirname, './relatorios/relatorio-validacao.json');
     fs.writeFileSync(caminhoRelatorio, JSON.stringify(relatorio, null, 2));
     console.log(`\n📝 Relatório detalhado salvo em: ${caminhoRelatorio}`);
 
@@ -657,7 +657,7 @@ export async function validarCalculosComGabarito(): Promise<any> {
       }))
     };
 
-    const caminhoRelatorioResumido = path.join(__dirname, './relatorio-resumido.json');
+    const caminhoRelatorioResumido = path.join(__dirname, './relatorios/relatorio-resumido.json');
     fs.writeFileSync(caminhoRelatorioResumido, JSON.stringify(relatorioResumido, null, 2));
     console.log(`📝 Relatório resumido salvo em: ${caminhoRelatorioResumido}`);
 
