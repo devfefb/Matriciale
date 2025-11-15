@@ -1,612 +1,15 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { 
-  SemanaHistorico, 
-  Contagens, 
-  Medianas, 
-  MedicamentoCalculado,
-  DadosCalculados,
-  AnaliseReposicao
-} from '../interfaces/interfaces-campos-calculados';
+import { MedicamentoCalculado } from '../interfaces/interfaces-campos-calculados';
 import { db } from '../../config/firebase';
 
-// Interfaces para cálculo de estoque
-interface ItemMovimentacao {
-  cod_sistemico_item: string;
-  descricao_item: string;
-  qtd_periodo_final: number;
-  [key: string]: any;
-}
+import { AnalisePadroes, EstatisticasCampo, EstoqueCalculado, GabaritoEstrutura, ResultadoValidacao } from '../interfaces/calculos';
+import { calcularCamposParaMedicamento } from '../core/calculosService';
 
-type DadosTodasUnidades = {
-  [nomeUnidade: string]: DadosUnidade;
-};
-
-interface DadosUnidade {
-  periodo_inicio: string;
-  periodo_fim: string;
-  itens: ItemMovimentacao[];
-}
-
-interface EstoqueCalculado {
-  descricao_item: string;
-  [campoEstoque: string]: string | number; // Permite 'estoque_NOME': numero
-}
-
-// Interface para o gabarito
-interface GabaritoItem {
-  "NOME ITEM": string;
-  "Total Geral": number | null;
-  "Md04": number;
-  "Md08": number;
-  "Md12": number;
-  "Md16": number;
-  "Md26": number;
-  "MdAno": number;
-  "MdTt": number;
-  "Máximo": number;
-  "Metodo": number;
-  "MetEst": number;
-  "Estoque": number;
-  "Reposição": number;
-  "Cont04": number;
-  "Cont08": number;
-  "Cont12": number;
-  "Cont16": number;
-  "Cont26": number;
-  "ContAno": number;
-  "ContTt": number;
-  "TP_Metodo": string;
-  "Md52": number;
-  "Cont52": number;
-}
-
-interface GabaritoEstrutura {
-  unidade: {
-    [key: string]: GabaritoItem[];
-  };
-}
-
-interface ResultadoValidacao {
-  medicamento: string;
-  unidade: string;
-  campos_corretos: string[];
-  campos_incorretos: {
-    campo: string;
-    valor_calculado: any;
-    valor_gabarito: any;
-    diferenca?: number;
-    percentual_erro?: number;
-  }[];
-  acerto: number; // percentual de acerto (0-100)
-}
-
-// Novas interfaces para análise detalhada
-interface EstatisticasCampo {
-  campo: string;
-  total_verificacoes: number;
-  acertos: number;
-  erros: number;
-  taxa_acerto: number;
-  erros_detalhados: {
-    medicamento: string;
-    unidade: string;
-    valor_calculado: any;
-    valor_gabarito: any;
-    diferenca?: number;
-    percentual_erro?: number;
-  }[];
-  valores_mais_frequentes: {
-    valor: any;
-    quantidade: number;
-    percentual: number;
-  }[];
-}
-
-interface AnalisePadroes {
-  campos_mais_problematicos: EstatisticasCampo[];
-  unidades_mais_problematicas: {
-    unidade: string;
-    total_medicamentos: number;
-    acerto_medio: number;
-    campos_com_erro: string[];
-  }[];
-  medicamentos_mais_problematicos: {
-    medicamento: string;
-    unidade: string;
-    acerto: number;
-    campos_incorretos: string[];
-  }[];
-  distribuicao_erros: {
-    faixa_acerto: string;
-    quantidade: number;
-    percentual: number;
-  }[];
-}
-
-// Cache global para estoque consolidado
-let estoqueConsolidadoCache: Map<string, EstoqueCalculado> | null = null;
-
-// --- FUNÇÕES DE CÁLCULO DE ESTOQUE (copiadas do script original) ---
-
-function carregarDadosUnidade(caminhoArquivo: string): DadosUnidade {
-  try {
-    const dados = fs.readFileSync(caminhoArquivo, 'utf8');
-    return JSON.parse(dados);
-  } catch (error) {
-    console.error(`❌ Erro ao carregar arquivo ${caminhoArquivo}:`, error);
-    throw error;
-  }
-}
-
-/**
- * Calcula o estoque consolidado de forma dinâmica para múltiplas unidades,
- * aplicando regras de negócio específicas para a CAF e para as demais unidades.
- *
- * @param todasUnidades Um objeto onde cada chave é o nome de uma unidade e o valor
- * são os dados de estoque dessa unidade.
- * @returns Um Map onde a chave é a descrição do item e o valor é o objeto de estoque calculado.
- */
-function calcularEstoqueDinamico(
-  todasUnidades: DadosTodasUnidades 
-): Map<string, EstoqueCalculado> {
-  // Mapa para agrupar todos os itens por sua descrição.
-  // A chave é a 'descricao_item', o valor é o objeto de resultado parcial.
-  const estoqueAgrupado = new Map<string, EstoqueCalculado>();
-
-  // 1. Itera sobre cada unidade para processar seus itens.
-  for (const nomeUnidade in todasUnidades) {
-    const dadosDaUnidade = todasUnidades[nomeUnidade];
-    const nomeCampoEstoque = `estoque_${nomeUnidade}`;
-
-    for (const item of dadosDaUnidade.itens) {
-      // Verifica se o item já foi adicionado ao mapa
-      if (!estoqueAgrupado.has(item.descricao_item)) {
-        // Se não existe, cria um novo objeto base
-        estoqueAgrupado.set(item.descricao_item, {
-          descricao_item: item.descricao_item,
-        });
-      }
-
-      const itemConsolidado = estoqueAgrupado.get(item.descricao_item)!;
-
-      // 2. Aplica a regra para unidades NÃO-CAF: valor direto.
-      // A regra da CAF será aplicada posteriormente, pois depende dos outros.
-      if (nomeUnidade.toUpperCase() !== 'CAF') {
-        itemConsolidado[nomeCampoEstoque] = item.qtd_periodo_final;
-      }
-    }
-  }
-
-  // 3. Processamento especial para a CAF.
-  // Verifica se existe uma unidade CAF nos dados de entrada.
-  if (todasUnidades.CAF) {
-    const dadosCAF = todasUnidades.CAF;
-    const nomeCampoEstoqueCAF = 'estoque_CAF';
-
-    for (const itemCAF of dadosCAF.itens) {
-      // Pega o item correspondente que já foi processado (com os estoques das outras unidades)
-      const itemConsolidado = estoqueAgrupado.get(itemCAF.descricao_item);
-
-      if (itemConsolidado) {
-        // Inicia o cálculo do estoque da CAF com seu próprio valor base.
-        let estoqueCalculadoCAF = itemCAF.qtd_periodo_final;
-
-        // Soma os valores de estoque das outras unidades para o mesmo item.
-        for (const chave in itemConsolidado) {
-          // A condição verifica se a chave é de um campo de estoque (ex: 'estoque_ESF3')
-          // e não o próprio 'descricao_item'.
-          if (chave.startsWith('estoque_')) {
-            estoqueCalculadoCAF += itemConsolidado[chave] as number;
-          }
-        }
-
-        // Atribui o valor final calculado ao campo de estoque da CAF.
-        itemConsolidado[nomeCampoEstoqueCAF] = estoqueCalculadoCAF;
-      }
-    }
-  }
-
-  return estoqueAgrupado;
-}
-
-async function calcularEstoquesUnidades(): Promise<Map<string, EstoqueCalculado>> {
-  if (estoqueConsolidadoCache) {
-    return estoqueConsolidadoCache;
-  }
-
-  // TODO: nomes devem ser dinamicos, e nao hard-coded. existira um padrao de reconhecimento dos nomes
-  const caminhoCAF = "D:/Beets/Matriciale/Well/backend/functions/src/scripts/utils/downloads/uploads/Palmares/CAF/inventoryData/2025-09-27T19-18-23-367Z_c1f616a1-2185-44b5-b81d-b883008fd4d5_inventoryDataCAF.json";
-  const caminhoESF3 = "D:/Beets/Matriciale/Well/backend/functions/src/scripts/utils/downloads/uploads/Palmares/ESF3/inventoryData/2025-09-27T20-39-26-804Z_d776fc4d-ef1b-484a-ae95-d57aabe3f464_inventoryDataESF3.json";
-  const caminhoOlavo = "D:/Beets/Matriciale/Well/backend/functions/src/scripts/utils/downloads/uploads/Palmares/OLAVO/inventoryData/2025-09-27T20-40-00-865Z_dc047633-0f66-4c36-a5c4-e33b47f81b72_inventoryDataOLAVO.json";
-  
-  const dadosCAF = carregarDadosUnidade(caminhoCAF);
-  const dadosESF3 = carregarDadosUnidade(caminhoESF3);
-  const dadosOlavo = carregarDadosUnidade(caminhoOlavo);
-  
-  estoqueConsolidadoCache = calcularEstoqueDinamico({
-    CAF: dadosCAF,
-    ESF3: dadosESF3,
-    Olavo: dadosOlavo
-  });
-  
-  // salvar o estoque consolidado em um arquivo para inspeção manual
-  const caminhoEstoqueConsolidado = path.join(__dirname, './estoqueConsolidado.json');
-  fs.writeFileSync(caminhoEstoqueConsolidado, JSON.stringify(Array.from(estoqueConsolidadoCache.entries()), null, 2), 'utf8');
-  
-  return estoqueConsolidadoCache;
-}
-
-async function buscarEstoqueMedicamento(
-  nomeMedicamento: string, 
-  unidadeId: string
-): Promise<number> { // <-- Retorna sempre um número para segurança
-  try {
-    const estoqueConsolidado = await calcularEstoquesUnidades();
-    const estoqueItem = estoqueConsolidado.get(nomeMedicamento);
-
-    console.log(`🔍 Buscando estoque para ${nomeMedicamento} na unidade ${unidadeId}:`, estoqueItem);
-
-    if (estoqueItem) {
-      // Constrói o nome do campo dinamicamente, ex: 'estoque_CAF' ou 'estoque_ESF3'
-      const nomeCampoEstoque = `estoque_${unidadeId}`;
-
-      // Verifica se a propriedade existe no objeto e retorna seu valor.
-      // A conversão para Number() garante que o retorno seja sempre numérico.
-      if (nomeCampoEstoque in estoqueItem) {
-        return Number(estoqueItem[nomeCampoEstoque]);
-      }
-    }
-    
-    // Se o item ou o estoque específico da unidade não for encontrado, retorna 0.
-    return 0;
-  } catch (error) {
-    console.error(`Erro ao buscar estoque para ${nomeMedicamento} na unidade ${unidadeId}:`, error);
-    return 0;
-  }
-}
-
-// --- FUNÇÕES DE CÁLCULO (copiadas do script original) ---
-function calcularContagensParaHistorico(historicoSemanas: SemanaHistorico[]): Contagens {
-  const contarUltimas = (n: number): number => {
-    const ultimasNSemanas = historicoSemanas.slice(-n);
-    return ultimasNSemanas.filter(s => s.value > 0).length;
-  };
-
-  const cont04 = contarUltimas(4);
-  const cont08 = contarUltimas(8);
-  const cont12 = contarUltimas(12);
-  const cont16 = contarUltimas(16);
-  const cont26 = contarUltimas(26);
-  
-  const cont52 = contarUltimas(52);
-
-  const contTotal = historicoSemanas.filter(s => s.value > 0).length;
-
-  let contAno = 0;
-  if (historicoSemanas.length > 0) {
-    const anoMaisRecente = historicoSemanas[historicoSemanas.length - 1].week.substring(0, 4);
-    contAno = historicoSemanas
-      .filter(s => s.week.startsWith(anoMaisRecente) && s.value > 0)
-      .length;
-  }
-
-  return {
-    Cont04: cont04,
-    Cont08: cont08,
-    Cont12: cont12,
-    Cont16: cont16,
-    Cont26: cont26,
-    Cont52: cont52,
-    ContAno: contAno,
-    ContTt: contTotal
-  };
-}
-
-function calcularMaximaMedicamento(historicoSemanas: SemanaHistorico[]): number {
-  const valores = historicoSemanas.map(s => s.value);
-  const numerosValidos = valores.filter(v => typeof v === 'number' && !isNaN(v));
-
-  if (numerosValidos.length === 0) {
-    return 0;
-  }
-
-  return Math.max(...numerosValidos);
-}
-
-function calcularMediana(numeros: number[]): number {
-  try {
-    // Verifica se o array é válido
-    if (!Array.isArray(numeros) || numeros.length === 0) {
-      return 0;
-    }
-    
-    // Filtra apenas números válidos (não NaN, não undefined, não null)
-    const numerosValidos = numeros.filter(n => typeof n === 'number' && !isNaN(n) && n !== null && n !== undefined);
-    
-    // Se não há números válidos, retorna 0
-    if (numerosValidos.length === 0) {
-      return 0;
-    }
-    
-    // Calcula a mediana
-    const sorted = [...numerosValidos].sort((a, b) => a - b);
-    const middleIndex = Math.floor(sorted.length / 2);
-    
-    let mediana: number;
-    if (sorted.length % 2 !== 0) {
-      // Número ímpar de elementos - mediana é o elemento do meio
-      mediana = sorted[middleIndex];
-    } else {
-      // Número par de elementos - mediana é a média dos dois elementos do meio
-      mediana = (sorted[middleIndex - 1] + sorted[middleIndex]) / 2;
-    }
-    
-    // Arredonda para 0 casas decimais (ARRED(MED(...);0))
-    const medianaArredondada = Math.round(mediana);
-    
-    return medianaArredondada;
-    
-  } catch (error) {
-    // Se houver qualquer erro, retorna 0 (SE(ÉERROS(...);0;...))
-    console.warn('⚠️ Erro ao calcular mediana:', error);
-    return 0;
-  }
-}
-
-/**
- * Calcula todas as medianas espelhando a lógica do Excel (inclui zeros, ignora nulos).
- * Mantém a opção de alternar entre 49 e 52 semanas para o cálculo principal.
- */
-/**
- * Calcula todas as medianas com a lógica de negócio dupla e definitiva.
- * Mantém a opção de alternar entre 49 e 52 semanas.
- */
-function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[]): Medianas {
-    
-    const historicoValoresComZeros = historicoSemanas.map(s => s.value);
-
-    const historicoValoresSemZeros = historicoValoresComZeros.filter(v => v > 0);
-
-    const md04 = calcularMediana(historicoValoresComZeros.slice(-4).filter(v => v > 0)); // Inclui zeros, mas ignora nulos
-    const md08 = calcularMediana(historicoValoresComZeros.slice(-8).filter(v => v > 0));
-    const md12 = calcularMediana(historicoValoresComZeros.slice(-12).filter(v => v > 0));
-    const md16 = calcularMediana(historicoValoresComZeros.slice(-16).filter(v => v > 0));
-
-    // --- Cálculos de MAGNITUDE (usam o dataset SEM ZEROS) ---
-    // O nome da propriedade no retorno continua Md52, mesmo que o cálculo possa usar 49 semanas.
-    const md52 = calcularMediana(historicoValoresComZeros.slice(-52).filter(v => v > 0));
-    const md26 = calcularMediana(historicoValoresComZeros.slice(-26).filter(v => v > 0));
-    const mdTotal = calcularMediana(historicoValoresSemZeros);
-
-    let mdAno = 0;
-    if (historicoSemanas.length > 0) {
-        const anoMaisRecente = historicoSemanas[historicoSemanas.length - 1].week.substring(0, 4);
-        const valoresDoAno = historicoSemanas
-            .filter(s => s.week.startsWith(anoMaisRecente))
-            .map(s => s.value)
-            .filter(v => v > 0); // Magnitude do ano também filtra zeros
-        mdAno = calcularMediana(valoresDoAno);
-    }
-    
-    // O retorno usa a sua função `calcularMediana` que já faz o arredondamento.
-    return {
-        Md04: md04,
-        Md08: md08,
-        Md12: md12,
-        Md16: md16,
-        Md26: md26,
-        Md52: md52,
-        MdAno: mdAno,
-        MdTt: mdTotal
-    };
-}
-
-
-function calcularTPMetodo(dadosCalculados: DadosCalculados): string {
-  const { contagens, semanas } = dadosCalculados;
-
-  const ultimaSemanaHistorico = semanas[semanas.length - 1];
-  //=SE(E(DD2=1;DI2=1;CO2<>"");"5.ENTRANTES";
-  if (contagens.Cont04 === 1 && contagens.Cont52 === 1 && ultimaSemanaHistorico && ultimaSemanaHistorico.value > 0) {
-    return "5.ENTRANTES";
-  }
-
-  //SE(E(DD2<>0;DD2/DIREITA($DD$1;1)>=0,5;DI2=DD2);"4.RECENTES";
-  //SE(E(DE2<>0;DE2/DIREITA($DE$1;1)>=0,5;DI2=DE2);"4.RECENTES";
-  //SE(E(DF2<>0;DF2/DIREITA($DF$1;2)>=0,5;DI2=DF2);"4.RECENTES";
-  //SE(E(DG2<>0;DG2/DIREITA($DG$1;2)>=0,5;DI2=DG2);"4.RECENTES";
-  //SE(E(DH2<>0;DH2/DIREITA($DH$1;2)>=0,5;DI2=DH2);"4.RECENTES";
-  if (contagens.Cont04 > 0 && (contagens.Cont04 / 4) >= 0.5 && contagens.ContTt === contagens.Cont04) {
-    return "4.RECENTES";
-  }
-  if (contagens.Cont08 > 0 && (contagens.Cont08 / 8) >= 0.5 && contagens.ContTt === contagens.Cont08) {
-    return "4.RECENTES";
-  }
-  if (contagens.Cont12 > 0 && (contagens.Cont12 / 12) >= 0.5 && contagens.ContTt === contagens.Cont12) {
-    return "4.RECENTES";
-  }
-  if (contagens.Cont16 > 0 && (contagens.Cont16 / 16) >= 0.5 && contagens.ContTt === contagens.Cont16) {
-    return "4.RECENTES";
-  }
-  if (contagens.Cont26 > 0 && (contagens.Cont26 / 26) >= 0.5 && contagens.ContTt === contagens.Cont26) {
-    return "4.RECENTES";
-  }
-
-  //SE(E(DD2=0;DE2=0;DF2=0;DG2=0);"3.INATIVOS";
-  if (contagens.Cont16 === 0) {
-    return "3.INATIVOS";
-  }
-
-  //SE(DI2/DIREITA($DI$1;2)<0,5;"2.INTERMITENTES";
-  const periodo = Math.min(semanas.length, 52);
-  if (periodo > 0 && (contagens.Cont52 / periodo) < 0.5) {
-    return "2.INTERMITENTES";
-  }
-
-  //"1.ORDINÁRIOS"))))))))
-  return "1.ORDINÁRIOS";
-}
-
-/*
-  5.ENTRANTES =SE(E(DD2=1;DI2=1;CO2<>"");CO2;
-  4.RECENTES SE(E(DD2<>0;DD2/DIREITA($DD$1;1)>=0,5;DI2=DD2);MÁXIMO(CQ2:CX2);
-  4.RECENTES SE(E(DE2<>0;DE2/DIREITA($DE$1;1)>=0,5;DI2=DE2);MÁXIMO(CQ2:CX2);
-  4.RECENTES SE(E(DF2<>0;DF2/DIREITA($DF$1;2)>=0,5;DI2=DF2);MÁXIMO(CQ2:CX2);
-  4.RECENTES SE(E(DG2<>0;DG2/DIREITA($DG$1;2)>=0,5;DI2=DG2);MÁXIMO(CQ2:CX2);
-  4.RECENTES SE(E(DH2<>0;DH2/DIREITA($DH$1;2)>=0,5;DI2=DH2);MÁXIMO(CQ2:CX2);
-  3.INATIVOS SE(E(DD2=0;DE2=0;DF2=0;DG2=0);0;
-  2.INTERMITENTES SE(DI2/DIREITA($DI$1;2)<0,5;ARRED(CP2/DIREITA($DI$1;2);0);
-  1.ORDINÁRIOS MÁXIMO(CQ2:CX2)))))))))
-*/
-function calcularMetodo(dadosMedicamento: {
-  historicoSemanas: SemanaHistorico[];
-  medianas: Medianas;
-  contagens: Contagens;
-  maximo: number;
-  tp_metodo: string;
-  totalGeral: number;
-}): number {
-
-  if (dadosMedicamento.tp_metodo === "3.INATIVOS") {
-    return 0;
-  }
-  if (dadosMedicamento.tp_metodo === "5.ENTRANTES") {
-    return dadosMedicamento.historicoSemanas[dadosMedicamento.historicoSemanas.length - 1].value;
-  }
-  if (dadosMedicamento.tp_metodo === "4.RECENTES" || dadosMedicamento.tp_metodo === "1.ORDINÁRIOS") {
-    const todasAsMedianas = Object.values(dadosMedicamento.medianas);
-    return Math.max(...todasAsMedianas);
-  }
-
-  //SE(DI2/DIREITA($DI$1;2)<0,5;ARRED(CP2/DIREITA($DI$1;2);0);
-  if (dadosMedicamento.tp_metodo === "2.INTERMITENTES") {
-    return Math.round(dadosMedicamento.totalGeral / 52);
-  }
-
-  return 0;
-}
-
-function calcularMetEst(tpMetodo: string, metodo: number, unidade: String, maximo: number): number {
-  switch (tpMetodo) {
-    case "1.ORDINÁRIOS":
-      if (unidade === 'ESF3') return metodo * 4;
-      else if (unidade === 'Olavo') return metodo * 3;
-      else return metodo * 16;
-    case "2.INTERMITENTES":
-      if (unidade === 'CAF') return maximo * 3;
-      else return maximo;
-    case "3.INATIVOS": return 0;
-    case "5.ENTRANTES": 
-      if ('ESF3' === unidade) return metodo * 4;
-      return metodo * 16;
-    case "4.RECENTES": return maximo * 3;
-    default: return metodo * 16;
-  }
-}
-
-function calcularReposicao(metEst: number, estoque: number): number {
-  if (typeof metEst !== 'number' || typeof estoque !== 'number') {
-    throw new Error('MetEst e estoque devem ser números válidos');
-  }
-  return (metEst - estoque);
-}
-
-function converterMovimentacoesParaHistorico(movimentacoes: { [key: string]: number }): SemanaHistorico[] {
-  const historico: SemanaHistorico[] = [];
-  const semanas = Object.keys(movimentacoes).sort();
-  
-  for (const semana of semanas) {
-    historico.push({
-      week: semana,
-      value: movimentacoes[semana]
-    });
-  }
-  
-  return historico;
-}
-
-// --- FUNÇÃO PARA CALCULAR CAMPOS SEM SALVAR NO BANCO ---
-
-async function calcularCamposMedicamentoSemSalvar(
-  medicamento: MedicamentoCalculado, 
-  unidadeId: string
-): Promise<{
-  contagens: Contagens;
-  maximo: number;
-  medianas: Medianas;
-  tp_metodo: string;
-  metodo: number;
-  metEst: number;
-  reposicao: number;
-  analise_reposicao: AnaliseReposicao;
-  totalGeral: number;
-  estoque: number;
-  ultimaSemana: string;
-}> {
-  const historicoSemanas = converterMovimentacoesParaHistorico(medicamento.movimentacoes_semanais);
-  const totalGeral = historicoSemanas.reduce((acc, curr) => acc + curr.value, 0);
-  
-  if (historicoSemanas.length === 0) {
-    throw new Error(`Medicamento sem movimentações: ${medicamento.nome}`);
-  }
-  
-  const contagens = calcularContagensParaHistorico(historicoSemanas);
-  const maximo = calcularMaximaMedicamento(historicoSemanas);
-  const medianas = calcularMedianasParaHistorico(historicoSemanas);
-  
-  const dadosCalculados: DadosCalculados = {
-    contagens,
-    semanas: historicoSemanas,
-    totalSemanasHistorico: historicoSemanas.length
-  };
-  const tp_metodo = calcularTPMetodo(dadosCalculados);
-  
-  // erro começa aqui, provavelmente
-  const metodo = calcularMetodo({
-    historicoSemanas,
-    medianas,
-    contagens,
-    maximo,
-    tp_metodo,
-    totalGeral
-  });
-
-  const metEst = calcularMetEst(tp_metodo, metodo, unidadeId, maximo);
-  const estoque = await buscarEstoqueMedicamento(medicamento.nome, unidadeId); // <-- Chamada corrigida
-  const reposicao = calcularReposicao(metEst, estoque);
-  
-  const analise_reposicao: AnaliseReposicao = {
-    metEst,
-    estoque_atual: estoque,
-    reposicao_calculada: reposicao,
-    status: reposicao > 0 ? 'NECESSITA_REPOSICAO' : 'ESTOQUE_SUFICIENTE',
-    percentual_cobertura: estoque > 0 ? ((estoque / metEst) * 100).toFixed(2) : '0'
-  };
-
-  // Captura a última semana utilizada nos cálculos
-  const ultimaSemana = historicoSemanas.length > 0 ? historicoSemanas[historicoSemanas.length - 1].week : 'N/A';
-
-  return {
-    contagens,
-    maximo,
-    medianas,
-    tp_metodo,
-    metodo,
-    metEst,
-    reposicao,
-    analise_reposicao,
-    totalGeral,
-    estoque,
-    ultimaSemana
-  };
-}
-
-// --- FUNÇÕES DE COMPARAÇÃO ---
 
 function compararCamposComMapeamento(
-  calculado: any, 
-  gabarito: any, 
+  calculado: any,
+  gabarito: any,
   mapeamento: { calculado: string; gabarito: string }[]
 ): { corretos: string[], incorretos: { campo: string; valor_calculado: any; valor_gabarito: any; diferenca?: number; percentual_erro?: number }[] } {
   const corretos: string[] = [];
@@ -642,7 +45,7 @@ function compararCamposComMapeamento(
       // Calcula diferença e percentual de erro para campos numéricos
       let diferenca: number | undefined;
       let percentualErro: number | undefined;
-      
+
       if (typeof valorCalculado === 'number' && typeof valorGabarito === 'number') {
         diferenca = valorCalculado - valorGabarito;
         if (valorGabarito !== 0) {
@@ -672,7 +75,7 @@ function normalizarValorParaComparacao(valor: any, campo: string): any {
   if (valor === null || valor === undefined) {
     return 0;
   }
-  
+
   return valor;
 }
 
@@ -681,19 +84,18 @@ function calcularTaxaAcerto(corretos: string[], total: number): number {
 }
 
 // --- FUNÇÕES DE ANÁLISE DETALHADA ---
-
 function analisarEstatisticasPorCampo(resultados: ResultadoValidacao[]): EstatisticasCampo[] {
   const estatisticasPorCampo = new Map<string, EstatisticasCampo>();
-  
+
   // Inicializa estatísticas para todos os campos
   const todosCampos = [
-    'contagens.Cont04', 'contagens.Cont08', 'contagens.Cont12', 'contagens.Cont16', 
+    'contagens.Cont04', 'contagens.Cont08', 'contagens.Cont12', 'contagens.Cont16',
     'contagens.Cont26', 'contagens.Cont52', 'contagens.ContAno', 'contagens.ContTt',
     'maximo', 'medianas.Md04', 'medianas.Md08', 'medianas.Md12', 'medianas.Md16',
     'medianas.Md26', 'medianas.Md52', 'medianas.MdAno', 'medianas.MdTt',
     'tp_metodo', 'metodo', 'metEst', 'reposicao', 'totalGeral', 'estoque'
   ];
-  
+
   todosCampos.forEach(campo => {
     estatisticasPorCampo.set(campo, {
       campo,
@@ -705,13 +107,13 @@ function analisarEstatisticasPorCampo(resultados: ResultadoValidacao[]): Estatis
       valores_mais_frequentes: []
     });
   });
-  
+
   // Processa todos os resultados
   for (const resultado of resultados) {
     for (const campo of todosCampos) {
       const estatistica = estatisticasPorCampo.get(campo)!;
       estatistica.total_verificacoes++;
-      
+
       const campoCorreto = resultado.campos_corretos.includes(campo);
       if (campoCorreto) {
         estatistica.acertos++;
@@ -732,29 +134,29 @@ function analisarEstatisticasPorCampo(resultados: ResultadoValidacao[]): Estatis
       }
     }
   }
-  
+
   // Calcula taxas de acerto e valores mais frequentes
   for (const estatistica of estatisticasPorCampo.values()) {
     estatistica.taxa_acerto = (estatistica.acertos / estatistica.total_verificacoes) * 100;
-    
+
     // Calcula valores mais frequentes nos erros
     const valoresFrequencia = new Map<any, number>();
     for (const erro of estatistica.erros_detalhados) {
       const valor = erro.valor_calculado;
       valoresFrequencia.set(valor, (valoresFrequencia.get(valor) || 0) + 1);
     }
-    
+
     const valoresOrdenados = Array.from(valoresFrequencia.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5); // Top 5 valores mais frequentes
-    
+
     estatistica.valores_mais_frequentes = valoresOrdenados.map(([valor, quantidade]) => ({
       valor,
       quantidade,
       percentual: (quantidade / estatistica.erros) * 100
     }));
   }
-  
+
   return Array.from(estatisticasPorCampo.values())
     .sort((a, b) => a.taxa_acerto - b.taxa_acerto); // Ordena por taxa de acerto (pior primeiro)
 }
@@ -771,7 +173,7 @@ function analisarUnidadesProblematicas(resultados: ResultadoValidacao[]): {
     acertos_soma: number;
     campos_com_erro: Set<string>;
   }>();
-  
+
   for (const resultado of resultados) {
     const unidade = resultado.unidade;
     const estatistica = estatisticasUnidade.get(unidade) || {
@@ -780,17 +182,17 @@ function analisarUnidadesProblematicas(resultados: ResultadoValidacao[]): {
       acertos_soma: 0,
       campos_com_erro: new Set<string>()
     };
-    
+
     estatistica.total_medicamentos++;
     estatistica.acertos_soma += resultado.acerto;
-    
+
     for (const erro of resultado.campos_incorretos) {
       estatistica.campos_com_erro.add(erro.campo);
     }
-    
+
     estatisticasUnidade.set(unidade, estatistica);
   }
-  
+
   return Array.from(estatisticasUnidade.values())
     .map(estat => ({
       unidade: estat.unidade,
@@ -832,30 +234,30 @@ function analisarDistribuicaoErros(resultados: ResultadoValidacao[]): {
     { min: 80, max: 99, nome: '80-99%' },
     { min: 100, max: 100, nome: '100%' }
   ];
-  
+
   const distribuicao = faixas.map(faixa => {
-    const quantidade = resultados.filter(r => 
+    const quantidade = resultados.filter(r =>
       r.acerto >= faixa.min && r.acerto <= faixa.max
     ).length;
-    
+
     return {
       faixa_acerto: faixa.nome,
       quantidade,
       percentual: (quantidade / resultados.length) * 100
     };
   });
-  
+
   return distribuicao;
 }
 
 function gerarRelatorioDetalhado(resultados: ResultadoValidacao[]): AnalisePadroes {
   console.log('📊 Gerando análise detalhada dos padrões de erro...');
-  
+
   const camposProblematicos = analisarEstatisticasPorCampo(resultados);
   const unidadesProblematicas = analisarUnidadesProblematicas(resultados);
   const medicamentosProblematicos = analisarMedicamentosProblematicos(resultados);
   const distribuicaoErros = analisarDistribuicaoErros(resultados);
-  
+
   return {
     campos_mais_problematicos: camposProblematicos,
     unidades_mais_problematicas: unidadesProblematicas,
@@ -866,40 +268,40 @@ function gerarRelatorioDetalhado(resultados: ResultadoValidacao[]): AnalisePadro
 
 function gerarRelatorioCamposSistematicos(analisePadroes: AnalisePadroes): void {
   console.log('\n🔧 ANÁLISE DE CAMPOS COM PROBLEMAS SISTEMÁTICOS:');
-  console.log('=' .repeat(80));
-  
+  console.log('='.repeat(80));
+
   const camposCriticos = analisePadroes.campos_mais_problematicos.filter(campo => campo.taxa_acerto < 50);
-  
+
   if (camposCriticos.length === 0) {
     console.log('✅ Nenhum campo com problemas sistemáticos identificado (todos acima de 50% de acerto)');
     return;
   }
-  
+
   console.log(`⚠️  ${camposCriticos.length} campos com problemas sistemáticos (taxa de acerto < 50%):`);
-  
+
   for (const campo of camposCriticos) {
     console.log(`\n🚨 CAMPO CRÍTICO: ${campo.campo}`);
     console.log(`   Taxa de acerto: ${campo.taxa_acerto.toFixed(2)}%`);
     console.log(`   Total de erros: ${campo.erros}/${campo.total_verificacoes}`);
-    
+
     // Analisa padrões nos erros
-    const errosNumericos = campo.erros_detalhados.filter(e => 
+    const errosNumericos = campo.erros_detalhados.filter(e =>
       typeof e.valor_calculado === 'number' && typeof e.valor_gabarito === 'number'
     );
-    
+
     if (errosNumericos.length > 0) {
       const diferencas = errosNumericos.map(e => e.diferenca!);
       const diferencaMedia = diferencas.reduce((a, b) => a + b, 0) / diferencas.length;
       const diferencaAbsolutaMedia = diferencas.reduce((a, b) => a + Math.abs(b), 0) / diferencas.length;
-      
+
       console.log(`   Diferença média: ${diferencaMedia.toFixed(2)}`);
       console.log(`   Diferença absoluta média: ${diferencaAbsolutaMedia.toFixed(2)}`);
-      
+
       // Identifica se há padrão de sempre ser maior ou menor
       const positivos = diferencas.filter(d => d > 0).length;
       const negativos = diferencas.filter(d => d < 0).length;
       const zeros = diferencas.filter(d => d === 0).length;
-      
+
       if (positivos > negativos * 2) {
         console.log(`   🎯 PADRÃO: Valores calculados tendem a ser MAIORES que o gabarito (${positivos} vs ${negativos})`);
       } else if (negativos > positivos * 2) {
@@ -908,7 +310,7 @@ function gerarRelatorioCamposSistematicos(analisePadroes: AnalisePadroes): void 
         console.log(`   🎯 PADRÃO: Valores variam sem tendência clara (${positivos} positivos, ${negativos} negativos, ${zeros} zeros)`);
       }
     }
-    
+
     // Mostra exemplos específicos
     console.log(`   Exemplos de erros:`);
     campo.erros_detalhados.slice(0, 5).forEach(erro => {
@@ -916,7 +318,7 @@ function gerarRelatorioCamposSistematicos(analisePadroes: AnalisePadroes): void 
       const percentual = erro.percentual_erro !== undefined ? ` (${erro.percentual_erro.toFixed(1)}% erro)` : '';
       console.log(`     - ${erro.medicamento} (${erro.unidade}): calc=${erro.valor_calculado}, gab=${erro.valor_gabarito}${diferenca}${percentual}`);
     });
-    
+
     // Sugestões de correção baseadas no campo
     console.log(`   💡 SUGESTÕES DE CORREÇÃO:`);
     if (campo.campo.startsWith('contagens.')) {
@@ -943,11 +345,10 @@ function gerarRelatorioCamposSistematicos(analisePadroes: AnalisePadroes): void 
 }
 
 // --- FUNÇÃO PRINCIPAL DE VALIDAÇÃO ---
-
 export async function validarCalculosComGabarito(): Promise<any> {
   try {
     console.log('🔍 Iniciando validação dos cálculos com gabarito...');
-    
+
     // Carrega o gabarito (resolve caminho com fallback: dist → src → CWD)
     const candidatosGabarito = [
       path.join(__dirname, '../testes/gabarito/gabarito-campos-calculados.json'),
@@ -963,26 +364,26 @@ export async function validarCalculosComGabarito(): Promise<any> {
     if (!caminhoGabarito) {
       throw new Error(`Gabarito não encontrado em nenhum dos caminhos candidatos.`);
     }
-    
+
     const gabaritoData = fs.readFileSync(caminhoGabarito, 'utf8');
     const gabarito: GabaritoEstrutura = JSON.parse(gabaritoData);
-    
+
     // Conta total de medicamentos no gabarito
     const totalGabarito = Object.values(gabarito.unidade).reduce((acc, unidade) => acc + unidade.length, 0);
     console.log(`📊 Gabarito carregado com ${totalGabarito} medicamentos`);
-    
+
     // Busca dados do Firebase
     const municipiosSnapshot = await db.collection('municipio').get();
-    
+
     const resultados: ResultadoValidacao[] = [];
     let totalProcessados = 0;
     let totalIgnoradosSemanaFaltando = 0;
     let totalSucessos = 0;
-    
+
     // Estrutura para armazenar informações sobre semanas
     const semanasPorUnidade = new Map<string, Set<string>>();
     const ultimaSemanaGeral = new Set<string>();
-    
+
     // Mapeamento de campos entre formato calculado e gabarito
     const mapeamentoCampos = [
       { calculado: 'contagens.Cont04', gabarito: 'Cont04' },
@@ -1009,30 +410,30 @@ export async function validarCalculosComGabarito(): Promise<any> {
       { calculado: 'totalGeral', gabarito: 'Total Geral' },
       { calculado: 'estoque', gabarito: 'Estoque' }
     ];
-    
+
     for (const municipioDoc of municipiosSnapshot.docs) {
       const unidadesSnapshot = await municipioDoc.ref.collection('unidades').get();
-      
+
       for (const unidadeDoc of unidadesSnapshot.docs) {
         const medicamentosSnapshot = await unidadeDoc.ref.collection('medicamentos_unidade').get();
-        
+
         for (const medicamentoDoc of medicamentosSnapshot.docs) {
           totalProcessados++;
-          
+
           try {
             const medicamento = medicamentoDoc.data() as MedicamentoCalculado;
-            
+
             // Busca no gabarito
             const medicamentosUnidade = gabarito.unidade[unidadeDoc.id];
             if (!medicamentosUnidade) {
               console.warn(`⚠️ Unidade não encontrada no gabarito: ${unidadeDoc.id}`);
               continue;
             }
-            
-            const gabaritoItem = medicamentosUnidade.find(g => 
+
+            const gabaritoItem = medicamentosUnidade.find(g =>
               g["NOME ITEM"] === medicamento.nome
             );
-            
+
             if (!gabaritoItem) {
               console.warn(`⚠️ Medicamento não encontrado no gabarito: ${medicamento.nome} (${unidadeDoc.id})`);
               continue;
@@ -1046,15 +447,17 @@ export async function validarCalculosComGabarito(): Promise<any> {
               console.warn(`⏭️  Ignorando ${medicamento.nome} (${unidadeDoc.id}) por ausência da semana ${semanaRequerida}`);
               continue;
             }
-            
+
             // Calcula campos
-            const camposCalculados = await calcularCamposMedicamentoSemSalvar(medicamento, unidadeDoc.id);
-            
+            const camposCalculados = await calcularCamposParaMedicamento(
+              medicamento as MedicamentoCalculado,
+              unidadeDoc.id
+            );
             // Compara campos usando mapeamento
             const { corretos, incorretos } = compararCamposComMapeamento(camposCalculados, gabaritoItem, mapeamentoCampos);
-            
+
             const acerto = calcularTaxaAcerto(corretos, mapeamentoCampos.length);
-            
+
             const resultado: ResultadoValidacao = {
               medicamento: medicamento.nome,
               unidade: unidadeDoc.id,
@@ -1062,34 +465,34 @@ export async function validarCalculosComGabarito(): Promise<any> {
               campos_incorretos: incorretos,
               acerto
             };
-            
+
             resultados.push(resultado);
-            
+
             if (acerto === 100) {
               totalSucessos++;
             }
-            
+
             console.log(`✅ ${medicamento.nome} (${unidadeDoc.id}): ${acerto.toFixed(1)}% de acerto - Última semana: ${camposCalculados.ultimaSemana}`);
-            
+
             // Armazena a última semana para cada medicamento
             if (!semanasPorUnidade.has(unidadeDoc.id)) {
               semanasPorUnidade.set(unidadeDoc.id, new Set());
             }
             semanasPorUnidade.get(unidadeDoc.id)!.add(camposCalculados.ultimaSemana);
             ultimaSemanaGeral.add(camposCalculados.ultimaSemana);
-            
+
           } catch (error) {
             console.error(`❌ Erro ao processar medicamento ${medicamentoDoc.id}:`, error);
           }
         }
       }
     }
-    
+
     // Calcula estatísticas finais
     const taxaAcertoGeral = totalProcessados > 0 ? (totalSucessos / totalProcessados) * 100 : 0;
-    const acertoMedio = resultados.length > 0 ? 
+    const acertoMedio = resultados.length > 0 ?
       resultados.reduce((acc, r) => acc + r.acerto, 0) / resultados.length : 0;
-    
+
     console.log('\n🎉 Validação concluída!');
     console.log('📊 Estatísticas finais:');
     console.log(`   📦 Total processados: ${totalProcessados}`);
@@ -1097,30 +500,30 @@ export async function validarCalculosComGabarito(): Promise<any> {
     console.log(`   📈 Taxa de acerto geral: ${taxaAcertoGeral.toFixed(2)}%`);
     console.log(`   ⏭️ Ignorados por falta da semana 2025_22: ${totalIgnoradosSemanaFaltando}`);
     console.log(`   📊 Acerto médio: ${acertoMedio.toFixed(2)}%`);
-    
+
     // Gera análise detalhada dos padrões
     const analisePadroes = gerarRelatorioDetalhado(resultados);
-    
+
     // Análise de campos com problemas sistemáticos
     gerarRelatorioCamposSistematicos(analisePadroes);
-    
+
     // Exibe resumo dos campos mais problemáticos
     console.log('\n🔍 ANÁLISE DETALHADA DOS CAMPOS MAIS PROBLEMÁTICOS:');
-    console.log('=' .repeat(80));
-    
+    console.log('='.repeat(80));
+
     const top5CamposProblematicos = analisePadroes.campos_mais_problematicos.slice(0, 5);
     for (const campo of top5CamposProblematicos) {
       console.log(`\n📊 Campo: ${campo.campo}`);
       console.log(`   Taxa de acerto: ${campo.taxa_acerto.toFixed(2)}%`);
       console.log(`   Erros: ${campo.erros}/${campo.total_verificacoes}`);
-      
+
       if (campo.valores_mais_frequentes.length > 0) {
         console.log(`   Valores mais frequentes nos erros:`);
         campo.valores_mais_frequentes.slice(0, 3).forEach(valor => {
           console.log(`     - ${valor.valor}: ${valor.quantidade}x (${valor.percentual.toFixed(1)}%)`);
         });
       }
-      
+
       // Mostra alguns exemplos de erros
       if (campo.erros_detalhados.length > 0) {
         console.log(`   Exemplos de erros:`);
@@ -1131,11 +534,11 @@ export async function validarCalculosComGabarito(): Promise<any> {
         });
       }
     }
-    
+
     // Exibe unidades mais problemáticas
     console.log('\n🏥 UNIDADES MAIS PROBLEMÁTICAS:');
-    console.log('=' .repeat(80));
-    
+    console.log('='.repeat(80));
+
     const top3UnidadesProblematicas = analisePadroes.unidades_mais_problematicas.slice(0, 3);
     for (const unidade of top3UnidadesProblematicas) {
       console.log(`\n🏥 Unidade: ${unidade.unidade}`);
@@ -1143,19 +546,19 @@ export async function validarCalculosComGabarito(): Promise<any> {
       console.log(`   Medicamentos: ${unidade.total_medicamentos}`);
       console.log(`   Campos com erro: ${unidade.campos_com_erro.join(', ')}`);
     }
-    
+
     // Exibe distribuição de erros
     console.log('\n📈 DISTRIBUIÇÃO DOS ERROS:');
-    console.log('=' .repeat(80));
-    
+    console.log('='.repeat(80));
+
     for (const faixa of analisePadroes.distribuicao_erros) {
       console.log(`   ${faixa.faixa_acerto}: ${faixa.quantidade} medicamentos (${faixa.percentual.toFixed(1)}%)`);
     }
-    
+
     // Exibe informações sobre as semanas utilizadas nos cálculos
     console.log('\n📅 INFORMAÇÕES SOBRE SEMANAS UTILIZADAS NOS CÁLCULOS:');
-    console.log('=' .repeat(80));
-    
+    console.log('='.repeat(80));
+
     // Exibe resumo das semanas por unidade
     for (const [unidade, semanas] of semanasPorUnidade) {
       if (semanas.size > 0) {
@@ -1167,7 +570,7 @@ export async function validarCalculosComGabarito(): Promise<any> {
         console.log(`   Faixa de semanas: ${semanasOrdenadas[0]} a ${semanaMaisRecente}`);
       }
     }
-    
+
     // Exibe a semana mais recente geral
     if (ultimaSemanaGeral.size > 0) {
       const todasSemanasOrdenadas = Array.from(ultimaSemanaGeral).sort();
@@ -1177,7 +580,7 @@ export async function validarCalculosComGabarito(): Promise<any> {
       console.log(`   Total de semanas únicas no sistema: ${ultimaSemanaGeral.size}`);
       console.log(`   Faixa geral de semanas: ${todasSemanasOrdenadas[0]} a ${semanaMaisRecenteGeral}`);
     }
-    
+
     // Salva relatório detalhado
     const relatorio = {
       data_validacao: new Date().toISOString(),
@@ -1205,11 +608,11 @@ export async function validarCalculosComGabarito(): Promise<any> {
       resultados_detalhados: resultados,
       analise_padroes: analisePadroes
     };
-    
+
     const caminhoRelatorio = path.join(__dirname, './relatorio-validacao.json');
     fs.writeFileSync(caminhoRelatorio, JSON.stringify(relatorio, null, 2));
     console.log(`\n📝 Relatório detalhado salvo em: ${caminhoRelatorio}`);
-    
+
     // Salva relatório resumido em formato mais legível
     const relatorioResumido = {
       data_validacao: new Date().toISOString(),
@@ -1254,15 +657,12 @@ export async function validarCalculosComGabarito(): Promise<any> {
       }))
     };
 
-    
-
-    
     const caminhoRelatorioResumido = path.join(__dirname, './relatorio-resumido.json');
     fs.writeFileSync(caminhoRelatorioResumido, JSON.stringify(relatorioResumido, null, 2));
     console.log(`📝 Relatório resumido salvo em: ${caminhoRelatorioResumido}`);
 
     return relatorioResumido;
-    
+
   } catch (error) {
     console.error('💥 Erro durante a validação:', error);
     throw error;
