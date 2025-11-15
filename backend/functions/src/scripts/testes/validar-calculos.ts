@@ -10,7 +10,6 @@ import {
 } from '../interfaces/interfaces-campos-calculados';
 import { db } from '../../config/firebase';
 
-
 // Interfaces para cálculo de estoque
 interface ItemMovimentacao {
   cod_sistemico_item: string;

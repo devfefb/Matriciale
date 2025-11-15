@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { validarCalculosGeneralizado, criarConfiguracaoAutomatica, ConfiguracaoValidacao } from './validar-calculos-generalized';
+import { validarCalculosGeneralizado, criarConfiguracaoAutomatica, ConfiguracaoValidacao } from '../validar-calculos-generalized';
 
 /**
  * Sistema de Validação Consolidado
