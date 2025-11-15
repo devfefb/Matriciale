@@ -1,9 +1,9 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { 
-  SemanaHistorico, 
-  Contagens, 
-  Medianas, 
+import {
+  SemanaHistorico,
+  Contagens,
+  Medianas,
   MedicamentoCalculado,
   DadosCalculados,
   AnaliseReposicao
@@ -74,7 +74,7 @@ function carregarDadosUnidade(caminhoArquivo: string): DadosUnidade {
  * aplicando regras de negócio específicas para a CAF e para as demais unidades.
  */
 function calcularEstoqueDinamico(
-  todasUnidades: DadosTodasUnidades 
+  todasUnidades: DadosTodasUnidades
 ): Map<string, EstoqueCalculado> {
   const estoqueAgrupado = new Map<string, EstoqueCalculado>();
 
@@ -136,20 +136,20 @@ async function carregarDadosEstoqueDoStorage(municipio: string): Promise<Map<str
     console.log(`📦 [ESTOQUE] Carregando dados de estoque para ${municipio}...`);
 
     const cloudStorageService = new CloudStorageService();
-    
+
     // Lista arquivos do município no storage
     const { arquivos } = await cloudStorageService.listarArquivosPendentes(municipio);
-    
+
     const todasUnidades: DadosTodasUnidades = {};
-    
+
     for (const arquivo of arquivos) {
       try {
         // Extrair nome da unidade do path do arquivo
         const nomeUnidade = extrairNomeUnidadeDoPath(arquivo.path);
-        
+
         // Processar arquivo do storage
         const resultado = await cloudStorageService.processarArquivoUpload(arquivo.path);
-        
+
         if (resultado.sucesso && resultado.dados_processados) {
           todasUnidades[nomeUnidade] = resultado.dados_processados.conteudo;
           console.log(`📋 [ESTOQUE] Dados carregados para unidade ${nomeUnidade}`);
@@ -162,22 +162,22 @@ async function carregarDadosEstoqueDoStorage(municipio: string): Promise<Map<str
     // Se não conseguiu carregar do storage, tenta carregar dos arquivos locais (fallback para desenvolvimento)
     if (Object.keys(todasUnidades).length === 0) {
       console.log('⚠️ [ESTOQUE] Não foi possível carregar do storage, usando arquivos locais...');
-      
+
       const caminhoCAF = path.join(__dirname, '../../../uploads/inventoryData_Palmares_CAF_2025-09-02T13-53-57-750Z.json');
       const caminhoESF3 = path.join(__dirname, '../../../uploads/inventoryData_Palmares_ESF3_2025-09-02T13-58-17-049Z.json');
       const caminhoOlavo = path.join(__dirname, '../../../uploads/inventoryData_Palmares_OLAVO_2025-09-02T13-58-34-943Z.json');
-      
+
       if (fs.existsSync(caminhoCAF)) todasUnidades.CAF = carregarDadosUnidade(caminhoCAF);
       if (fs.existsSync(caminhoESF3)) todasUnidades.ESF3 = carregarDadosUnidade(caminhoESF3);
       if (fs.existsSync(caminhoOlavo)) todasUnidades.Olavo = carregarDadosUnidade(caminhoOlavo);
     }
 
     estoqueConsolidadoCache = calcularEstoqueDinamico(todasUnidades);
-    
+
     console.log(`✅ [ESTOQUE] Estoque consolidado calculado para ${estoqueConsolidadoCache.size} itens`);
-    
+
     return estoqueConsolidadoCache;
-    
+
   } catch (error) {
     console.error('❌ [ESTOQUE] Erro ao carregar dados de estoque:', error);
     return new Map();
@@ -190,7 +190,7 @@ function extrairNomeUnidadeDoPath(arquivoPath: string): string {
   if (parts.length >= 3) {
     return parts[2]; // unidade
   }
-  
+
   // Fallback: extrai do nome do arquivo
   const nomeArquivo = parts[parts.length - 1];
   const patterns = [
@@ -198,19 +198,19 @@ function extrairNomeUnidadeDoPath(arquivoPath: string): string {
     /inventory.*?([A-Za-z0-9]+)\./i,
     /([A-Za-z0-9]+).*inventory/i,
   ];
-  
+
   for (const pattern of patterns) {
     const match = nomeArquivo.match(pattern);
     if (match && match[1]) {
       return match[1].toUpperCase();
     }
   }
-  
+
   return 'DESCONHECIDO';
 }
 
 async function buscarEstoqueMedicamento(
-  nomeMedicamento: string, 
+  nomeMedicamento: string,
   unidadeId: string,
   municipio: string
 ): Promise<number> {
@@ -224,7 +224,7 @@ async function buscarEstoqueMedicamento(
         return Number(estoqueItem[nomeCampoEstoque]);
       }
     }
-    
+
     return 0;
   } catch (error) {
     console.error(`❌ [ESTOQUE] Erro ao buscar estoque para ${nomeMedicamento} na unidade ${unidadeId}:`, error);
@@ -284,27 +284,27 @@ function calcularMediana(numeros: number[]): number {
     if (!Array.isArray(numeros) || numeros.length === 0) {
       return 0;
     }
-    
+
     const numerosValidos = numeros.filter(n => typeof n === 'number' && !isNaN(n) && n !== null && n !== undefined);
-    
+
     if (numerosValidos.length === 0) {
       return 0;
     }
-    
+
     const sorted = [...numerosValidos].sort((a, b) => a - b);
     const middleIndex = Math.floor(sorted.length / 2);
-    
+
     let mediana: number;
     if (sorted.length % 2 !== 0) {
       mediana = sorted[middleIndex];
     } else {
       mediana = (sorted[middleIndex - 1] + sorted[middleIndex]) / 2;
     }
-    
+
     const medianaArredondada = Math.round(mediana);
-    
+
     return medianaArredondada;
-    
+
   } catch (error) {
     console.warn('⚠️ Erro ao calcular mediana:', error);
     return 0;
@@ -332,7 +332,7 @@ function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[]): Med
       .filter(v => v > 0);
     mdAno = calcularMediana(valoresDoAno);
   }
-    
+
   return {
     Md04: md04,
     Md08: md08,
@@ -349,7 +349,7 @@ function calcularTPMetodo(dadosCalculados: DadosCalculados): string {
   const { contagens, semanas } = dadosCalculados;
 
   const ultimaSemanaHistorico = semanas[semanas.length - 1];
-  
+
   if (contagens.Cont04 === 1 && contagens.Cont52 === 1 && ultimaSemanaHistorico && ultimaSemanaHistorico.value > 0) {
     return "5.ENTRANTES";
   }
@@ -419,7 +419,7 @@ function calcularMetEst(tpMetodo: string, metodo: number, unidade: String, maxim
       if (unidade === 'CAF') return maximo * 3;
       else return maximo;
     case "3.INATIVOS": return 0;
-    case "5.ENTRANTES": 
+    case "5.ENTRANTES":
       if ('ESF3' === unidade) return metodo * 4;
       return metodo * 16;
     case "4.RECENTES": return maximo * 3;
@@ -437,14 +437,14 @@ function calcularReposicao(metEst: number, estoque: number): number {
 function converterMovimentacoesParaHistorico(movimentacoes: { [key: string]: number }): SemanaHistorico[] {
   const historico: SemanaHistorico[] = [];
   const semanas = Object.keys(movimentacoes).sort();
-  
+
   for (const semana of semanas) {
     historico.push({
       week: semana,
       value: movimentacoes[semana]
     });
   }
-  
+
   return historico;
 }
 
@@ -459,16 +459,16 @@ function calcularSemanaMovimentacaoLocal(periodoInicio: string, periodoFim: stri
     // Parse da data de fim (formato DD/MM/YYYY)
     const [dia, mes, ano] = periodoFim.split('/').map(n => parseInt(n));
     const dataFim = new Date(ano, mes - 1, dia);
-    
+
     // Calcular número da semana do ano
     const primeiroJaneiro = new Date(ano, 0, 1);
     const diasDoAno = Math.floor((dataFim.getTime() - primeiroJaneiro.getTime()) / (24 * 60 * 60 * 1000));
-    
+
     // LINHA MODIFICADA: Removemos o "+ 1" para que a semana comece na Segunda-feira.
     const numeroSemana = Math.ceil((diasDoAno + primeiroJaneiro.getDay()) / 7);
-    
+
     return `${ano}_${String(numeroSemana).padStart(2, '0')}`;
-    
+
   } catch (error) {
     console.error('Erro ao calcular semana:', error);
     // Fallback: usar data atual
@@ -481,9 +481,8 @@ function calcularSemanaMovimentacaoLocal(periodoInicio: string, periodoFim: stri
 }
 
 // --- FUNÇÃO PRINCIPAL PARA CALCULAR CAMPOS ---
-
 async function calcularCamposMedicamento(
-  medicamento: MedicamentoCalculado, 
+  medicamento: MedicamentoCalculado,
   unidadeId: string,
   municipio: string
 ): Promise<{
@@ -501,22 +500,22 @@ async function calcularCamposMedicamento(
 }> {
   const historicoSemanas = converterMovimentacoesParaHistorico(medicamento.movimentacoes_semanais);
   const totalGeral = historicoSemanas.reduce((acc, curr) => acc + curr.value, 0);
-  
+
   if (historicoSemanas.length === 0) {
     throw new Error(`Medicamento sem movimentações: ${medicamento.nome}`);
   }
-  
+
   const contagens = calcularContagensParaHistorico(historicoSemanas);
   const maximo = calcularMaximaMedicamento(historicoSemanas);
   const medianas = calcularMedianasParaHistorico(historicoSemanas);
-  
+
   const dadosCalculados: DadosCalculados = {
     contagens,
     semanas: historicoSemanas,
     totalSemanasHistorico: historicoSemanas.length
   };
   const tp_metodo = calcularTPMetodo(dadosCalculados);
-  
+
   const metodo = calcularMetodo({
     historicoSemanas,
     medianas,
@@ -529,7 +528,7 @@ async function calcularCamposMedicamento(
   const metEst = calcularMetEst(tp_metodo, metodo, unidadeId, maximo);
   const estoque = await buscarEstoqueMedicamento(medicamento.nome, unidadeId, municipio);
   const reposicao = calcularReposicao(metEst, estoque);
-  
+
   const analise_reposicao: AnaliseReposicao = {
     metEst,
     estoque_atual: estoque,
@@ -568,21 +567,21 @@ function atualizarMovimentacaoSemanal(
   novoValor: number
 ): { [key: string]: number } {
   const movimentacoesAtualizadas = { ...movimentacoesAtuais };
-  
+
   // Se índice não existe, usa ele direto
   if (!movimentacoesAtualizadas[anoSemana]) {
     movimentacoesAtualizadas[anoSemana] = novoValor;
     console.log(`📅 [MOVIMENTAÇÃO] ${anoSemana}: ${novoValor} (novo índice)`);
     return movimentacoesAtualizadas;
   }
-  
+
   // Se já existe, apenas compara os valores e mantém o original
   const valorExistente = movimentacoesAtualizadas[anoSemana];
   console.log(`⚠️ [MOVIMENTAÇÃO] Conflito detectado em ${anoSemana}:`);
   console.log(`   → Valor existente: ${valorExistente}`);
   console.log(`   → Valor novo: ${novoValor}`);
   console.log(`   → Diferença: ${novoValor - valorExistente}`);
-  
+
   return movimentacoesAtualizadas;
 }
 
@@ -607,24 +606,24 @@ async function salvarCamposCalculadosNoFirestore(
 ): Promise<{ sucesso: boolean; erro?: string; arquivo_json?: string }> {
   try {
     const isDevelopment = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV;
-    
+
     if (isDevelopment) {
       // MODO DESENVOLVIMENTO: Salvar em JSON local
       console.log(`💾 [DEV JSON] Salvando campos calculados em JSON: ${municipio}/${unidadeId}/${medicamentoId}`);
-      
+
       // Preparar dados com movimentação atualizada (simulada)
       const movimentacoesSimuladas = {
         [`${novaMovimentacao.anoSemana}`]: novaMovimentacao.valor
       };
-      
+
       const dadosCalculados = {
         // Dados básicos do medicamento
         nome: camposCalculados.nome,
         cod_item: medicamentoId,
-        
+
         // CAMPO PRINCIPAL: Movimentações semanais com nova lógica
         movimentacoes_semanais: movimentacoesSimuladas,
-        
+
         // Campos calculados principais
         contagens: camposCalculados.contagens,
         maximo: camposCalculados.maximo,
@@ -636,44 +635,44 @@ async function salvarCamposCalculadosNoFirestore(
         analise_reposicao: camposCalculados.analise_reposicao,
         totalGeral: camposCalculados.totalGeral,
         estoque: camposCalculados.estoque,
-        
+
         // Metadados de cálculo
         ultima_atualizacao_calculos: new Date().toISOString(),
         versao_calculo: '2.0.0',
         ultima_semana_calculo: camposCalculados.ultimaSemana,
-        
+
         // Status do medicamento
         status_calculo: 'CALCULADO',
-        
+
         // Metadados da unidade
         unidade: unidadeId,
         municipio: municipio
       };
-      
+
       // Criar diretório se não existir
       const outputDir = path.join(__dirname, '../../../output_calculos_dev');
       if (!fs.existsSync(outputDir)) {
         fs.mkdirSync(outputDir, { recursive: true });
       }
-      
+
       // Salvar em arquivo JSON
       const nomeArquivo = `${municipio}_${unidadeId}_${medicamentoId}_${Date.now()}.json`;
       const caminhoArquivo = path.join(outputDir, nomeArquivo);
-      
+
       fs.writeFileSync(caminhoArquivo, JSON.stringify(dadosCalculados, null, 2), 'utf8');
-      
+
       console.log(`✅ [DEV JSON] Campos calculados salvos em: ${caminhoArquivo}`);
       console.log(`📅 [DEV JSON] Movimentação ${novaMovimentacao.anoSemana}: ${novaMovimentacao.valor}`);
-      
-      return { 
-        sucesso: true, 
-        arquivo_json: caminhoArquivo 
+
+      return {
+        sucesso: true,
+        arquivo_json: caminhoArquivo
       };
-      
+
     } else {
       // MODO PRODUÇÃO: Salvar no Firestore
       console.log(`💾 [FIRESTORE] Salvando campos calculados: ${municipio}/${unidadeId}/${medicamentoId}`);
-      
+
       const medicamentoRef = db
         .collection('municipio')
         .doc(municipio)
@@ -685,7 +684,7 @@ async function salvarCamposCalculadosNoFirestore(
       // Buscar documento atual para obter movimentações existentes
       const medicamentoDoc = await medicamentoRef.get();
       const dadosAtuais = medicamentoDoc.exists ? medicamentoDoc.data() : {};
-      
+
       // Aplicar nova lógica de movimentação semanal
       const movimentacoesAtuais = dadosAtuais?.movimentacoes_semanais || {};
       const movimentacoesAtualizadas = atualizarMovimentacaoSemanal(
@@ -699,10 +698,10 @@ async function salvarCamposCalculadosNoFirestore(
         // Dados básicos do medicamento (se não existir ainda)
         nome: camposCalculados.nome || dadosAtuais.nome,
         cod_item: medicamentoId,
-        
+
         // CAMPO PRINCIPAL: Movimentações semanais com nova lógica
         movimentacoes_semanais: movimentacoesAtualizadas,
-        
+
         // Campos calculados principais
         contagens: camposCalculados.contagens,
         maximo: camposCalculados.maximo,
@@ -714,28 +713,28 @@ async function salvarCamposCalculadosNoFirestore(
         analise_reposicao: camposCalculados.analise_reposicao,
         totalGeral: camposCalculados.totalGeral,
         estoque: camposCalculados.estoque,
-        
+
         // Metadados de cálculo
         ultima_atualizacao_calculos: new Date(),
         versao_calculo: '2.0.0',
         ultima_semana_calculo: camposCalculados.ultimaSemana,
-        
+
         // Status do medicamento
         status_calculo: 'CALCULADO',
-        
+
         // Metadados da unidade
         unidade: unidadeId,
         municipio: municipio
       };
 
       await medicamentoRef.set(dadosParaSalvar, { merge: true });
-      
+
       console.log(`✅ [FIRESTORE] Campos calculados salvos para ${medicamentoId}`);
       console.log(`📅 [FIRESTORE] Movimentação ${novaMovimentacao.anoSemana}: ${novaMovimentacao.valor}`);
-      
+
       return { sucesso: true };
     }
-    
+
   } catch (error) {
     console.error(`❌ [SALVAR] Erro ao salvar campos calculados:`, error);
     return {
@@ -761,40 +760,42 @@ export async function processarArquivoComNovaLogica(
 }> {
   try {
     console.log(`📁 [PROCESSAR ARQUIVO] Iniciando: ${arquivoPath}`);
-    
+
     // 1. Ler arquivo do storage
     const cloudStorageService = new (require('../../services/CloudStorageService')).CloudStorageService();
     const resultadoLeitura = await cloudStorageService.processarArquivoUpload(arquivoPath);
-    
+
     if (!resultadoLeitura.sucesso || !resultadoLeitura.dados_processados) {
       throw new Error(`Erro ao ler arquivo: ${resultadoLeitura.erro}`);
     }
-    
+
+    fs.writeFileSync(path.join(__dirname, './processar_arquivo_input_vindo_do_storage.json'), JSON.stringify(resultadoLeitura, null, 2), 'utf8');
+
     const inventoryData = resultadoLeitura.dados_processados.conteudo;
     const unidadeId = inventoryData.unidade || 'DESCONHECIDA';
-    
+
     console.log(`🏥 [PROCESSAR ARQUIVO] Unidade: ${unidadeId}`);
     console.log(`📊 [PROCESSAR ARQUIVO] Itens no arquivo: ${inventoryData.itens?.length || 0}`);
-    
+
     // 2. Calcular semana baseada no período
     const semanaCalculada = calcularSemanaMovimentacaoLocal(
       inventoryData.periodo_inicio,
       inventoryData.periodo_fim
     );
-    
+
     console.log(`📅 [PROCESSAR ARQUIVO] Semana calculada: ${semanaCalculada}`);
-    
+
     // 3. Processar cada medicamento do arquivo
     let medicamentosProcessados = 0;
     const medicamentosNaoEncontrados: string[] = [];
-    
+
     for (const item of inventoryData.itens || []) {
       try {
         const medicamentoId = item.cod_sistemico_item || item.cod_item;
         const valorMovimentacao = item.movimentacao_semanal_calculada || 0;
-        
+
         console.log(`💊 [PROCESSAR ARQUIVO] Processando: ${item.descricao_item} (${medicamentoId})`);
-        
+
         // Buscar medicamento no banco
         const medicamentoRef = db
           .collection('municipio')
@@ -803,19 +804,19 @@ export async function processarArquivoComNovaLogica(
           .doc(unidadeId)
           .collection('medicamentos_unidade')
           .doc(medicamentoId);
-        
+
         const medicamentoDoc = await medicamentoRef.get();
-        
+
         if (medicamentoDoc.exists) {
           // Medicamento encontrado - calcular campos e atualizar
           const medicamentoData = medicamentoDoc.data() as MedicamentoCalculado;
-          
+
           const camposCalculados = await calcularCamposMedicamento(
             medicamentoData,
             unidadeId,
             municipio
           );
-          
+
           // Salvar com nova lógica de movimentação
           const resultadoSalvamento = await salvarCamposCalculadosNoFirestore(
             municipio,
@@ -824,22 +825,22 @@ export async function processarArquivoComNovaLogica(
             { ...camposCalculados, nome: item.descricao_item },
             { anoSemana: semanaCalculada, valor: valorMovimentacao }
           );
-          
+
           if (resultadoSalvamento.sucesso) {
             medicamentosProcessados++;
             console.log(`✅ [PROCESSAR ARQUIVO] ${item.descricao_item}: atualizado`);
           } else {
             console.error(`❌ [PROCESSAR ARQUIVO] Erro ao salvar ${item.descricao_item}: ${resultadoSalvamento.erro}`);
           }
-          
+
         } else {
           // Medicamento não encontrado - registrar valor 0
           console.warn(`⚠️ [PROCESSAR ARQUIVO] Medicamento não encontrado: ${item.descricao_item}`);
           medicamentosNaoEncontrados.push(item.descricao_item);
-          
+
           // Criar documento com valor 0
           const movimentacoesIniciais = registrarMedicamentoNaoEncontrado({}, semanaCalculada);
-          
+
           await medicamentoRef.set({
             nome: item.descricao_item,
             cod_item: medicamentoId,
@@ -849,23 +850,23 @@ export async function processarArquivoComNovaLogica(
             status_calculo: 'NAO_ENCONTRADO_REGISTRADO_ZERO',
             data_criacao: new Date()
           });
-          
+
           console.log(`📝 [PROCESSAR ARQUIVO] Criado com valor 0: ${item.descricao_item}`);
         }
-        
+
       } catch (error) {
         console.error(`❌ [PROCESSAR ARQUIVO] Erro ao processar item ${item.descricao_item}:`, error);
       }
     }
-    
+
     console.log(`🎉 [PROCESSAR ARQUIVO] Concluído: ${medicamentosProcessados} processados, ${medicamentosNaoEncontrados.length} não encontrados`);
-    
+
     return {
       sucesso: true,
       medicamentos_processados: medicamentosProcessados,
       medicamentos_nao_encontrados: medicamentosNaoEncontrados
     };
-    
+
   } catch (error) {
     console.error(`💥 [PROCESSAR ARQUIVO] Erro:`, error);
     return {
@@ -888,42 +889,42 @@ export async function executarCalculosParaMunicipio(municipio: string): Promise<
 }> {
   try {
     console.log(`🚀 [CÁLCULOS] Iniciando cálculos para município: ${municipio}`);
-    
+
     // Limpar cache de estoque para garantir dados atualizados
     estoqueConsolidadoCache = null;
-    
+
     const resultados: ResultadoCalculos[] = [];
     const arquivosGerados: string[] = [];
     let totalProcessados = 0;
     let totalSucesso = 0;
     let totalErros = 0;
-    
+
     // Buscar dados do Firebase para o município
     const municipioRef = db.collection('municipio').doc(municipio);
     const municipioDoc = await municipioRef.get();
-    
+
     if (!municipioDoc.exists) {
       throw new Error(`Município não encontrado: ${municipio}`);
     }
-    
+
     const unidadesSnapshot = await municipioRef.collection('unidades').get();
-    
+
     for (const unidadeDoc of unidadesSnapshot.docs) {
       console.log(`🏥 [CÁLCULOS] Processando unidade: ${unidadeDoc.id}`);
-      
+
       const medicamentosSnapshot = await unidadeDoc.ref.collection('medicamentos_unidade').get();
-      
+
       for (const medicamentoDoc of medicamentosSnapshot.docs) {
         totalProcessados++;
-        
+
         try {
           const medicamento = medicamentoDoc.data() as MedicamentoCalculado;
-          
+
           // Verificar se o medicamento tem movimentações
           if (!medicamento.movimentacoes_semanais || Object.keys(medicamento.movimentacoes_semanais).length === 0) {
             console.warn(`⚠️ [CÁLCULOS] Medicamento sem movimentações: ${medicamento.nome} (${unidadeDoc.id})`);
             totalErros++;
-            
+
             resultados.push({
               medicamento: medicamento.nome,
               unidade: unidadeDoc.id,
@@ -933,11 +934,11 @@ export async function executarCalculosParaMunicipio(municipio: string): Promise<
             });
             continue;
           }
-          
+
           // Calcular campos
           console.log(`📊 [CÁLCULOS] Calculando ${medicamento.nome} (${unidadeDoc.id})...`);
           const camposCalculados = await calcularCamposMedicamento(medicamento, unidadeDoc.id, municipio);
-          
+
           // Para execução manual, apenas atualizar campos calculados sem nova movimentação
           const resultadoSalvamento = await salvarCamposCalculadosNoFirestore(
             municipio,
@@ -946,17 +947,17 @@ export async function executarCalculosParaMunicipio(municipio: string): Promise<
             camposCalculados,
             { anoSemana: camposCalculados.ultimaSemana, valor: 0 } // Valor 0 para não alterar movimentações
           );
-          
+
           if (resultadoSalvamento.sucesso) {
             totalSucesso++;
-            
+
             // Se foi gerado arquivo JSON, adicionar à lista
             if (resultadoSalvamento.arquivo_json) {
               arquivosGerados.push(resultadoSalvamento.arquivo_json);
             }
-            
+
             console.log(`✅ [CÁLCULOS] ${medicamento.nome} (${unidadeDoc.id}): Sucesso - TP: ${camposCalculados.tp_metodo}, Reposição: ${camposCalculados.reposicao}`);
-            
+
             resultados.push({
               medicamento: medicamento.nome,
               unidade: unidadeDoc.id,
@@ -966,7 +967,7 @@ export async function executarCalculosParaMunicipio(municipio: string): Promise<
           } else {
             totalErros++;
             console.error(`❌ [CÁLCULOS] Erro ao salvar ${medicamento.nome}: ${resultadoSalvamento.erro}`);
-            
+
             resultados.push({
               medicamento: medicamento.nome,
               unidade: unidadeDoc.id,
@@ -975,12 +976,12 @@ export async function executarCalculosParaMunicipio(municipio: string): Promise<
               erro: resultadoSalvamento.erro
             });
           }
-          
+
         } catch (error) {
           totalErros++;
           const mensagemErro = error instanceof Error ? error.message : 'Erro desconhecido';
           console.error(`❌ [CÁLCULOS] Erro ao processar medicamento ${medicamentoDoc.id}:`, mensagemErro);
-          
+
           resultados.push({
             medicamento: medicamentoDoc.id,
             unidade: unidadeDoc.id,
@@ -991,14 +992,14 @@ export async function executarCalculosParaMunicipio(municipio: string): Promise<
         }
       }
     }
-    
+
     console.log(`🎉 [CÁLCULOS] Processamento concluído para ${municipio}:`);
     console.log(`   📦 Total processados: ${totalProcessados}`);
     console.log(`   ✅ Sucessos: ${totalSucesso}`);
     console.log(`   ❌ Erros: ${totalErros}`);
     console.log(`   📊 Taxa de sucesso: ${totalProcessados > 0 ? ((totalSucesso / totalProcessados) * 100).toFixed(2) : 0}%`);
     console.log(`   📁 Arquivos JSON gerados: ${arquivosGerados.length}`);
-    
+
     return {
       sucesso: true,
       total_processados: totalProcessados,
@@ -1007,7 +1008,7 @@ export async function executarCalculosParaMunicipio(municipio: string): Promise<
       resultados,
       arquivos_gerados: arquivosGerados
     };
-    
+
   } catch (error) {
     console.error(`💥 [CÁLCULOS] Erro durante execução dos cálculos:`, error);
     return {
@@ -1024,7 +1025,7 @@ export async function executarCalculosParaMunicipio(municipio: string): Promise<
 // --- FUNÇÃO AUXILIAR PARA EXECUTAR CÁLCULOS DE UNIDADE ESPECÍFICA ---
 
 export async function executarCalculosParaUnidade(
-  municipio: string, 
+  municipio: string,
   unidadeId: string
 ): Promise<{
   sucesso: boolean;
@@ -1036,39 +1037,39 @@ export async function executarCalculosParaUnidade(
 }> {
   try {
     console.log(`🚀 [CÁLCULOS] Iniciando cálculos para unidade: ${municipio}/${unidadeId}`);
-    
+
     // Limpar cache de estoque para garantir dados atualizados
     estoqueConsolidadoCache = null;
-    
+
     const resultados: ResultadoCalculos[] = [];
     let totalProcessados = 0;
     let totalSucesso = 0;
     let totalErros = 0;
-    
+
     const unidadeRef = db
       .collection('municipio')
       .doc(municipio)
       .collection('unidades')
       .doc(unidadeId);
-      
+
     const unidadeDoc = await unidadeRef.get();
-    
+
     if (!unidadeDoc.exists) {
       throw new Error(`Unidade não encontrada: ${municipio}/${unidadeId}`);
     }
-    
+
     const medicamentosSnapshot = await unidadeRef.collection('medicamentos_unidade').get();
-    
+
     for (const medicamentoDoc of medicamentosSnapshot.docs) {
       totalProcessados++;
-      
+
       try {
         const medicamento = medicamentoDoc.data() as MedicamentoCalculado;
-        
+
         if (!medicamento.movimentacoes_semanais || Object.keys(medicamento.movimentacoes_semanais).length === 0) {
           console.warn(`⚠️ [CÁLCULOS] Medicamento sem movimentações: ${medicamento.nome}`);
           totalErros++;
-          
+
           resultados.push({
             medicamento: medicamento.nome,
             unidade: unidadeId,
@@ -1078,10 +1079,10 @@ export async function executarCalculosParaUnidade(
           });
           continue;
         }
-        
+
         console.log(`📊 [CÁLCULOS] Calculando ${medicamento.nome}...`);
         const camposCalculados = await calcularCamposMedicamento(medicamento, unidadeId, municipio);
-        
+
         const resultadoSalvamento = await salvarCamposCalculadosNoFirestore(
           municipio,
           unidadeId,
@@ -1089,11 +1090,11 @@ export async function executarCalculosParaUnidade(
           camposCalculados,
           { anoSemana: camposCalculados.ultimaSemana, valor: 0 } // Valor 0 para não alterar movimentações
         );
-        
+
         if (resultadoSalvamento.sucesso) {
           totalSucesso++;
           console.log(`✅ [CÁLCULOS] ${medicamento.nome}: Sucesso - TP: ${camposCalculados.tp_metodo}, Reposição: ${camposCalculados.reposicao}`);
-          
+
           resultados.push({
             medicamento: medicamento.nome,
             unidade: unidadeId,
@@ -1103,7 +1104,7 @@ export async function executarCalculosParaUnidade(
         } else {
           totalErros++;
           console.error(`❌ [CÁLCULOS] Erro ao salvar ${medicamento.nome}: ${resultadoSalvamento.erro}`);
-          
+
           resultados.push({
             medicamento: medicamento.nome,
             unidade: unidadeId,
@@ -1112,12 +1113,12 @@ export async function executarCalculosParaUnidade(
             erro: resultadoSalvamento.erro
           });
         }
-        
+
       } catch (error) {
         totalErros++;
         const mensagemErro = error instanceof Error ? error.message : 'Erro desconhecido';
         console.error(`❌ [CÁLCULOS] Erro ao processar medicamento ${medicamentoDoc.id}:`, mensagemErro);
-        
+
         resultados.push({
           medicamento: medicamentoDoc.id,
           unidade: unidadeId,
@@ -1127,12 +1128,12 @@ export async function executarCalculosParaUnidade(
         });
       }
     }
-    
+
     console.log(`🎉 [CÁLCULOS] Processamento concluído para ${municipio}/${unidadeId}:`);
     console.log(`   📦 Total processados: ${totalProcessados}`);
     console.log(`   ✅ Sucessos: ${totalSucesso}`);
     console.log(`   ❌ Erros: ${totalErros}`);
-    
+
     return {
       sucesso: true,
       total_processados: totalProcessados,
@@ -1140,7 +1141,7 @@ export async function executarCalculosParaUnidade(
       total_erros: totalErros,
       resultados
     };
-    
+
   } catch (error) {
     console.error(`💥 [CÁLCULOS] Erro durante execução dos cálculos para unidade:`, error);
     return {
@@ -1158,11 +1159,11 @@ export async function executarCalculosParaUnidade(
 if (require.main === module) {
   const municipio = process.argv[2] || 'Palmares';
   const unidade = process.argv[3]; // Opcional
-  
-  const executarFunc = unidade 
+
+  const executarFunc = unidade
     ? executarCalculosParaUnidade(municipio, unidade)
     : executarCalculosParaMunicipio(municipio);
-    
+
   executarFunc
     .then((resultado) => {
       console.log('\n✅ Cálculos executados com sucesso!');
