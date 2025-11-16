@@ -1,8 +1,7 @@
-import { db } from '../../config/firebase'; // Verifique o caminho
-import * as path from 'path';
-import * as fs from 'fs';
+import { db } from '../../config/firebase';
+
 import { MedicamentoCalculado } from '../interfaces/interfaces-campos-calculados';
-import { calcularCamposMedicamentoSemSalvar } from './validar-calculos';
+import { calcularCamposParaMedicamento } from '../core/calculosService';
 
 /**
  * Função principal para CALCULAR e SALVAR os campos no Firestore.
@@ -35,7 +34,7 @@ export async function atualizarCamposCalculadosNoFirestore(): Promise<any> {
 
           try {
             // 4. CHAMA A LÓGICA DE CÁLCULO JÁ VALIDADA
-            const camposCalculados = await calcularCamposMedicamentoSemSalvar(medicamento, unidadeDoc.id);
+            const camposCalculados = await calcularCamposParaMedicamento(medicamento, unidadeDoc.id);
 
             // 5. FORMATA O OBJETO PARA SALVAR NO FIRESTORE
             //    (Usando os nomes exatos que você listou)

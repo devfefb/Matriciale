@@ -37,18 +37,6 @@ router.post('/processar-cloud-storage', uploadController.processarArquivoCloudSt
 router.post('/executar-calculos', uploadController.executarCalculos.bind(uploadController));
 
 /**
- * NOVO - Upload direto local (desenvolvimento)
- */
-router.post('/local-direct/:municipio/:unidade/:uploadId', uploadController.uploadLocalDirect.bind(uploadController));
-// Upload local de anexos (binário)
-router.post(
-  '/local-direct-attachment/:municipio/:unidade/:uploadId',
-  // Parser específico para binários (anexos)
-  express.raw({ type: '*/*', limit: '200mb' }),
-  uploadController.uploadLocalDirectAttachment.bind(uploadController)
-);
-
-/**
  * NOVO - Status do processamento
  */
 router.get('/status', uploadController.statusProcessamento.bind(uploadController));
