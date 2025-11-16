@@ -1,11 +1,11 @@
 {
-  "data_validacao": "2025-09-03T23:31:06.776Z",
+  "data_validacao": "2025-11-16T13:13:46.735Z",
   "resumo": {
     "total_processados": 1052,
-    "perfeitos": 224,
-    "taxa_acerto_geral": 21.292775665399237,
-    "acerto_medio": 93.36133725965601,
-    "ignorados_semana_2025_22": 46
+    "perfeitos": 534,
+    "taxa_acerto_geral": 50.760456273764255,
+    "acerto_medio": 94.25672877846722,
+    "ignorados_semana_2025_22": 0
   },
   "informacoes_semanas": {
     "semana_mais_recente_geral": "2025_22",
@@ -27,161 +27,281 @@
   },
   "campos_mais_problematicos": [
     {
-      "campo": "estoque",
-      "taxa_acerto": 22.50996015936255,
-      "erros": 778,
-      "total": 1004,
+      "campo": "reposicao",
+      "taxa_acerto": 57.14285714285714,
+      "erros": 450,
+      "total": 1050,
       "valores_mais_frequentes": [
         {
-          "valor": 0,
-          "quantidade": 778,
-          "percentual": 100
+          "valor": 180,
+          "quantidade": 10,
+          "percentual": 2.2222222222222223
+        },
+        {
+          "valor": -4,
+          "quantidade": 10,
+          "percentual": 2.2222222222222223
+        },
+        {
+          "valor": 2,
+          "quantidade": 9,
+          "percentual": 2
         }
       ]
     },
     {
-      "campo": "reposicao",
-      "taxa_acerto": 28.286852589641438,
-      "erros": 720,
-      "total": 1004,
+      "campo": "estoque",
+      "taxa_acerto": 67.9047619047619,
+      "erros": 337,
+      "total": 1050,
       "valores_mais_frequentes": [
         {
-          "valor": 180,
-          "quantidade": 21,
-          "percentual": 2.9166666666666665
+          "valor": 0,
+          "quantidade": 287,
+          "percentual": 85.16320474777447
         },
         {
-          "valor": 6,
-          "quantidade": 20,
-          "percentual": 2.7777777777777777
+          "valor": 60,
+          "quantidade": 3,
+          "percentual": 0.8902077151335311
         },
         {
-          "valor": 24,
-          "quantidade": 17,
-          "percentual": 2.361111111111111
+          "valor": 158,
+          "quantidade": 2,
+          "percentual": 0.5934718100890208
         }
       ]
     },
     {
       "campo": "metodo",
-      "taxa_acerto": 97.31075697211156,
-      "erros": 27,
-      "total": 1004,
+      "taxa_acerto": 95.23809523809523,
+      "erros": 50,
+      "total": 1050,
       "valores_mais_frequentes": [
+        {
+          "valor": 14,
+          "quantidade": 2,
+          "percentual": 4
+        },
+        {
+          "valor": 35,
+          "quantidade": 2,
+          "percentual": 4
+        },
         {
           "valor": 27,
           "quantidade": 2,
-          "percentual": 7.4074074074074066
-        },
-        {
-          "valor": 3,
-          "quantidade": 2,
-          "percentual": 7.4074074074074066
-        },
-        {
-          "valor": 2,
-          "quantidade": 2,
-          "percentual": 7.4074074074074066
-        }
-      ]
-    },
-    {
-      "campo": "metEst",
-      "taxa_acerto": 99.5019920318725,
-      "erros": 5,
-      "total": 1004,
-      "valores_mais_frequentes": [
-        {
-          "valor": 9,
-          "quantidade": 1,
-          "percentual": 20
-        },
-        {
-          "valor": 7,
-          "quantidade": 1,
-          "percentual": 20
-        },
-        {
-          "valor": 40,
-          "quantidade": 1,
-          "percentual": 20
-        }
-      ]
-    },
-    {
-      "campo": "tp_metodo",
-      "taxa_acerto": 99.7011952191235,
-      "erros": 3,
-      "total": 1004,
-      "valores_mais_frequentes": [
-        {
-          "valor": "2.INTERMITENTES",
-          "quantidade": 3,
-          "percentual": 100
+          "percentual": 4
         }
       ]
     },
     {
       "campo": "contagens.Cont04",
-      "taxa_acerto": 100,
-      "erros": 0,
-      "total": 1004,
-      "valores_mais_frequentes": []
+      "taxa_acerto": 96.38095238095238,
+      "erros": 38,
+      "total": 1050,
+      "valores_mais_frequentes": [
+        {
+          "valor": 3,
+          "quantidade": 34,
+          "percentual": 89.47368421052632
+        },
+        {
+          "valor": 2,
+          "quantidade": 3,
+          "percentual": 7.894736842105263
+        },
+        {
+          "valor": 0,
+          "quantidade": 1,
+          "percentual": 2.631578947368421
+        }
+      ]
     },
     {
       "campo": "contagens.Cont08",
-      "taxa_acerto": 100,
-      "erros": 0,
-      "total": 1004,
-      "valores_mais_frequentes": []
+      "taxa_acerto": 96.38095238095238,
+      "erros": 38,
+      "total": 1050,
+      "valores_mais_frequentes": [
+        {
+          "valor": 7,
+          "quantidade": 31,
+          "percentual": 81.57894736842105
+        },
+        {
+          "valor": 6,
+          "quantidade": 3,
+          "percentual": 7.894736842105263
+        },
+        {
+          "valor": 5,
+          "quantidade": 2,
+          "percentual": 5.263157894736842
+        }
+      ]
     },
     {
       "campo": "contagens.Cont12",
-      "taxa_acerto": 100,
-      "erros": 0,
-      "total": 1004,
-      "valores_mais_frequentes": []
+      "taxa_acerto": 96.38095238095238,
+      "erros": 38,
+      "total": 1050,
+      "valores_mais_frequentes": [
+        {
+          "valor": 11,
+          "quantidade": 30,
+          "percentual": 78.94736842105263
+        },
+        {
+          "valor": 9,
+          "quantidade": 3,
+          "percentual": 7.894736842105263
+        },
+        {
+          "valor": 10,
+          "quantidade": 3,
+          "percentual": 7.894736842105263
+        }
+      ]
     },
     {
       "campo": "contagens.Cont16",
-      "taxa_acerto": 100,
-      "erros": 0,
-      "total": 1004,
-      "valores_mais_frequentes": []
+      "taxa_acerto": 96.38095238095238,
+      "erros": 38,
+      "total": 1050,
+      "valores_mais_frequentes": [
+        {
+          "valor": 15,
+          "quantidade": 30,
+          "percentual": 78.94736842105263
+        },
+        {
+          "valor": 13,
+          "quantidade": 5,
+          "percentual": 13.157894736842104
+        },
+        {
+          "valor": 14,
+          "quantidade": 1,
+          "percentual": 2.631578947368421
+        }
+      ]
     },
     {
       "campo": "contagens.Cont26",
-      "taxa_acerto": 100,
-      "erros": 0,
-      "total": 1004,
-      "valores_mais_frequentes": []
+      "taxa_acerto": 96.38095238095238,
+      "erros": 38,
+      "total": 1050,
+      "valores_mais_frequentes": [
+        {
+          "valor": 25,
+          "quantidade": 26,
+          "percentual": 68.42105263157895
+        },
+        {
+          "valor": 22,
+          "quantidade": 4,
+          "percentual": 10.526315789473683
+        },
+        {
+          "valor": 23,
+          "quantidade": 3,
+          "percentual": 7.894736842105263
+        }
+      ]
+    },
+    {
+      "campo": "contagens.Cont52",
+      "taxa_acerto": 96.38095238095238,
+      "erros": 38,
+      "total": 1050,
+      "valores_mais_frequentes": [
+        {
+          "valor": 51,
+          "quantidade": 23,
+          "percentual": 60.526315789473685
+        },
+        {
+          "valor": 50,
+          "quantidade": 3,
+          "percentual": 7.894736842105263
+        },
+        {
+          "valor": 45,
+          "quantidade": 2,
+          "percentual": 5.263157894736842
+        }
+      ]
+    },
+    {
+      "campo": "contagens.ContAno",
+      "taxa_acerto": 96.38095238095238,
+      "erros": 38,
+      "total": 1050,
+      "valores_mais_frequentes": [
+        {
+          "valor": 21,
+          "quantidade": 28,
+          "percentual": 73.68421052631578
+        },
+        {
+          "valor": 19,
+          "quantidade": 6,
+          "percentual": 15.789473684210526
+        },
+        {
+          "valor": 20,
+          "quantidade": 2,
+          "percentual": 5.263157894736842
+        }
+      ]
     }
   ],
   "unidades_mais_problematicas": [
     {
-      "unidade": "ESF3",
-      "acerto_medio": 91.34871339840261,
-      "total_medicamentos": 196,
+      "unidade": "CAF",
+      "acerto_medio": 90.94811837778597,
+      "total_medicamentos": 476,
       "campos_com_erro": [
         "reposicao",
         "estoque",
+        "contagens.Cont04",
+        "contagens.Cont08",
+        "contagens.Cont12",
+        "contagens.Cont16",
+        "contagens.Cont26",
+        "contagens.Cont52",
+        "contagens.ContAno",
+        "contagens.ContTt",
+        "medianas.Md04",
+        "medianas.Md08",
+        "medianas.Md12",
+        "medianas.Md16",
+        "medianas.Md26",
+        "medianas.Md52",
+        "medianas.MdAno",
+        "metodo",
+        "metEst",
+        "totalGeral",
+        "medianas.MdTt",
+        "maximo"
+      ]
+    },
+    {
+      "unidade": "ESF3",
+      "acerto_medio": 95.74090505767526,
+      "total_medicamentos": 196,
+      "campos_com_erro": [
+        "estoque",
+        "reposicao",
         "metodo",
         "tp_metodo",
         "metEst"
       ]
     },
     {
-      "unidade": "CAF",
-      "acerto_medio": 93.5894843276039,
-      "total_medicamentos": 430,
-      "campos_com_erro": [
-        "reposicao",
-        "estoque"
-      ]
-    },
-    {
       "unidade": "Olavo",
-      "acerto_medio": 94.14538762364866,
+      "acerto_medio": 97.65355417529335,
       "total_medicamentos": 378,
       "campos_com_erro": [
         "reposicao",
@@ -192,109 +312,270 @@
   ],
   "medicamentos_mais_problematicos": [
     {
-      "medicamento": "INSULINA HUMANA REGULAR 100 UI/ML - CANETA",
-      "unidade": "ESF3",
-      "acerto": 78.26086956521739,
+      "medicamento": "AMOXICILINA + CLAVULANATO 500/125 MCG",
+      "unidade": "CAF",
+      "acerto": 8.695652173913043,
       "campos_incorretos": [
-        "tp_metodo",
+        "contagens.Cont04",
+        "contagens.Cont08",
+        "contagens.Cont12",
+        "contagens.Cont16",
+        "contagens.Cont26",
+        "contagens.Cont52",
+        "contagens.ContAno",
+        "contagens.ContTt",
+        "maximo",
+        "medianas.Md04",
+        "medianas.Md08",
+        "medianas.Md12",
+        "medianas.Md16",
+        "medianas.Md26",
+        "medianas.Md52",
+        "medianas.MdAno",
+        "medianas.MdTt",
         "metodo",
         "metEst",
         "reposicao",
-        "estoque"
-      ]
-    },
-    {
-      "medicamento": "HIDROXIDO DE ALUMINIO 6.2% SUSP",
-      "unidade": "ESF3",
-      "acerto": 78.26086956521739,
-      "campos_incorretos": [
-        "tp_metodo",
-        "metodo",
-        "metEst",
-        "reposicao",
-        "estoque"
+        "totalGeral"
       ]
     },
     {
       "medicamento": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ EV",
-      "unidade": "ESF3",
-      "acerto": 78.26086956521739,
+      "unidade": "CAF",
+      "acerto": 13.043478260869565,
       "campos_incorretos": [
-        "tp_metodo",
+        "contagens.Cont04",
+        "contagens.Cont08",
+        "contagens.Cont12",
+        "contagens.Cont16",
+        "contagens.Cont26",
+        "contagens.Cont52",
+        "contagens.ContAno",
+        "contagens.ContTt",
+        "medianas.Md04",
+        "medianas.Md08",
+        "medianas.Md12",
+        "medianas.Md16",
+        "medianas.Md26",
+        "medianas.MdAno",
+        "medianas.MdTt",
         "metodo",
         "metEst",
         "reposicao",
+        "totalGeral",
         "estoque"
       ]
     },
     {
-      "medicamento": "GLIBENCLAMIDA 5 MG.",
-      "unidade": "ESF3",
-      "acerto": 86.95652173913044,
+      "medicamento": "ACIDO VALPROICO 250 MG",
+      "unidade": "CAF",
+      "acerto": 13.043478260869565,
       "campos_incorretos": [
+        "contagens.Cont04",
+        "contagens.Cont08",
+        "contagens.Cont12",
+        "contagens.Cont16",
+        "contagens.Cont26",
+        "contagens.Cont52",
+        "contagens.ContAno",
+        "contagens.ContTt",
+        "medianas.Md04",
+        "medianas.Md08",
+        "medianas.Md12",
+        "medianas.Md16",
+        "medianas.Md26",
+        "medianas.Md52",
+        "medianas.MdAno",
+        "medianas.MdTt",
         "metodo",
+        "metEst",
         "reposicao",
-        "estoque"
+        "totalGeral"
       ]
     },
     {
-      "medicamento": "CLORPROMAZINA, CLORIDRATO 25MG",
-      "unidade": "ESF3",
-      "acerto": 86.95652173913044,
+      "medicamento": "BROMOPRIDA 10MG CPR",
+      "unidade": "CAF",
+      "acerto": 13.043478260869565,
       "campos_incorretos": [
+        "contagens.Cont04",
+        "contagens.Cont08",
+        "contagens.Cont12",
+        "contagens.Cont16",
+        "contagens.Cont26",
+        "contagens.Cont52",
+        "contagens.ContAno",
+        "contagens.ContTt",
+        "medianas.Md04",
+        "medianas.Md08",
+        "medianas.Md12",
+        "medianas.Md16",
+        "medianas.Md26",
+        "medianas.Md52",
+        "medianas.MdAno",
+        "medianas.MdTt",
         "metodo",
+        "metEst",
         "reposicao",
-        "estoque"
+        "totalGeral"
       ]
     },
     {
-      "medicamento": "LEVOMEPROMAZINA 100 MG",
-      "unidade": "ESF3",
-      "acerto": 86.95652173913044,
+      "medicamento": "AMOXICILINA 500 MG - CAPSULA",
+      "unidade": "CAF",
+      "acerto": 13.043478260869565,
       "campos_incorretos": [
+        "contagens.Cont04",
+        "contagens.Cont08",
+        "contagens.Cont12",
+        "contagens.Cont16",
+        "contagens.Cont26",
+        "contagens.Cont52",
+        "contagens.ContAno",
+        "contagens.ContTt",
+        "medianas.Md04",
+        "medianas.Md08",
+        "medianas.Md12",
+        "medianas.Md16",
+        "medianas.Md26",
+        "medianas.Md52",
+        "medianas.MdAno",
+        "medianas.MdTt",
         "metodo",
+        "metEst",
         "reposicao",
-        "estoque"
+        "totalGeral"
       ]
     },
     {
-      "medicamento": "DELTAMETRINA 0,2MG/ML",
-      "unidade": "ESF3",
-      "acerto": 86.95652173913044,
+      "medicamento": "AZITROMICINA 500 MG",
+      "unidade": "CAF",
+      "acerto": 13.043478260869565,
       "campos_incorretos": [
+        "contagens.Cont04",
+        "contagens.Cont08",
+        "contagens.Cont12",
+        "contagens.Cont16",
+        "contagens.Cont26",
+        "contagens.Cont52",
+        "contagens.ContAno",
+        "contagens.ContTt",
+        "medianas.Md04",
+        "medianas.Md08",
+        "medianas.Md12",
+        "medianas.Md16",
+        "medianas.Md26",
+        "medianas.Md52",
+        "medianas.MdAno",
+        "medianas.MdTt",
         "metodo",
+        "metEst",
         "reposicao",
-        "estoque"
+        "totalGeral"
       ]
     },
     {
-      "medicamento": "METRONIDAZOL 250 MG",
-      "unidade": "ESF3",
-      "acerto": 86.95652173913044,
+      "medicamento": "CARBAMAZEPINA 200 MG",
+      "unidade": "CAF",
+      "acerto": 17.391304347826086,
       "campos_incorretos": [
+        "contagens.Cont04",
+        "contagens.Cont08",
+        "contagens.Cont12",
+        "contagens.Cont16",
+        "contagens.Cont26",
+        "contagens.Cont52",
+        "contagens.ContAno",
+        "contagens.ContTt",
+        "medianas.Md04",
+        "medianas.Md08",
+        "medianas.Md12",
+        "medianas.Md16",
+        "medianas.Md26",
+        "medianas.Md52",
+        "medianas.MdAno",
         "metodo",
+        "metEst",
         "reposicao",
-        "estoque"
+        "totalGeral"
       ]
     },
     {
-      "medicamento": "HIDROCLOROTIAZIADA 25MG",
-      "unidade": "ESF3",
-      "acerto": 86.95652173913044,
+      "medicamento": "CEFALEXINA 500 MG",
+      "unidade": "CAF",
+      "acerto": 17.391304347826086,
       "campos_incorretos": [
+        "contagens.Cont04",
+        "contagens.Cont08",
+        "contagens.Cont12",
+        "contagens.Cont16",
+        "contagens.Cont26",
+        "contagens.Cont52",
+        "contagens.ContAno",
+        "contagens.ContTt",
+        "medianas.Md04",
+        "medianas.Md08",
+        "medianas.Md12",
+        "medianas.Md16",
+        "medianas.Md26",
+        "medianas.Md52",
+        "medianas.MdAno",
         "metodo",
+        "metEst",
         "reposicao",
-        "estoque"
+        "totalGeral"
       ]
     },
     {
-      "medicamento": "METOPROLOL 50 MG",
-      "unidade": "ESF3",
-      "acerto": 86.95652173913044,
+      "medicamento": "AMBROXOL XAROPE ADULTO",
+      "unidade": "CAF",
+      "acerto": 17.391304347826086,
       "campos_incorretos": [
+        "contagens.Cont04",
+        "contagens.Cont08",
+        "contagens.Cont12",
+        "contagens.Cont16",
+        "contagens.Cont26",
+        "contagens.Cont52",
+        "contagens.ContAno",
+        "contagens.ContTt",
+        "maximo",
+        "medianas.Md04",
+        "medianas.Md08",
+        "medianas.Md12",
+        "medianas.Md16",
+        "medianas.Md26",
+        "medianas.MdAno",
         "metodo",
+        "metEst",
         "reposicao",
-        "estoque"
+        "totalGeral"
+      ]
+    },
+    {
+      "medicamento": "AMITRIPTILINA, CLORIDRATO  25 MG",
+      "unidade": "CAF",
+      "acerto": 17.391304347826086,
+      "campos_incorretos": [
+        "contagens.Cont04",
+        "contagens.Cont08",
+        "contagens.Cont12",
+        "contagens.Cont16",
+        "contagens.Cont26",
+        "contagens.Cont52",
+        "contagens.ContAno",
+        "contagens.ContTt",
+        "medianas.Md04",
+        "medianas.Md08",
+        "medianas.Md12",
+        "medianas.Md16",
+        "medianas.Md26",
+        "medianas.MdAno",
+        "medianas.MdTt",
+        "metodo",
+        "metEst",
+        "reposicao",
+        "totalGeral"
       ]
     }
   ]

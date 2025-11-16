@@ -5,7 +5,7 @@ console.log('🔧 Script de Preenchimento da Semana 2025_22');
 console.log('============================================\n');
 
 // Verificar variáveis de ambiente
-verificarVariaveisAmbiente();
+// verificarVariaveisAmbiente();
 
 console.log('✅ Variáveis de ambiente verificadas');
 console.log('🚀 Iniciando processo de preenchimento...\n');
