@@ -17,7 +17,7 @@ router.use((req, res, next) => {
  * ROTA PRINCIPAL - Upload Semanal
  * Frontend envia dados JSON processados → Backend classifica → Salva no Firestore
  */
-router.post('/semanal', uploadController.uploadSemanal.bind(uploadController));
+// router.post('/semanal', uploadController.uploadSemanal.bind(uploadController));
 
 /**
  * FLUXO DE PRODUÇÃO - Solicitar URLs assinadas
@@ -34,7 +34,7 @@ router.post('/processar-cloud-storage', uploadController.processarArquivoCloudSt
 /**
  * NOVO - Executar cálculos manualmente
  */
-router.post('/executar-calculos', uploadController.executarCalculos.bind(uploadController));
+// router.post('/executar-calculos', uploadController.executarCalculos.bind(uploadController));
 
 /**
  * NOVO - Status do processamento

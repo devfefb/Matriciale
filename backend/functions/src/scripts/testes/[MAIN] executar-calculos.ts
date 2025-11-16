@@ -3,6 +3,11 @@ import { db } from '../../config/firebase';
 import { MedicamentoCalculado } from '../interfaces/interfaces-campos-calculados';
 import { calcularCamposParaMedicamento } from '../core/calculosService';
 
+
+// essa função nao atualiza o array de movimentacoes semanais com o valor correspondente da semana atual; isso pois para fins de testes
+// nós inserimos a semana atual no banco manualmente. contudo, no fluxo normal, essa atualização é feita ANTES DE QUALQUER COISA.
+// ao implementar essa inserção inicial automática, lembre-se de atualizar esse script para refletir isso. alem disso, nao se esquecer
+// de inserir como 0 o valor para aquela semana de medicamentos não encontrados.
 /**
  * Função principal para CALCULAR e SALVAR os campos no Firestore.
  */
