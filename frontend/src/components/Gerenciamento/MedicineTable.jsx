@@ -1,121 +1,81 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TableHeader from './TableHeader';
 import TableRow from './TableRow';
 import ColorLegend from './ColorLegend';
 import SearchBar from './SearchBar';
 import '../../styles/MedicineTable.css';
+import api from '../../services/api';
+import { useAuth } from '../../contexts/AuthContext';
 
 const MedicineTable = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [colorFilter, setColorFilter] = useState('');
-  const [classFilter, setClassFilter] = useState(""); // linha inserida agora
-  
-  // Dados mockados (substituir pelo Firebase posteriormente)
-  const medicines = [
-    {
-      codigo: '302001001',
-      nome: 'Ácido Valpróico',
-      classificacaoItem: 'Remune',
-      classificacaoModelo: 'Ordinários',
-      unidade: 'CP',
-      qtdAtual: 0,
-      status: 'zerado'
-    },
-    {
-      codigo: '2000031',
-      nome: 'Paracetamol',
-      classificacaoItem: 'Remune',
-      classificacaoModelo: 'Ordinários',
-      unidade: 'CP',
-      qtdAtual: 0,
-      status: 'zerado'
-    },
-    {
-      codigo: '2000067',
-      nome: 'Losartana',
-      classificacaoItem: 'Remune',
-      classificacaoModelo: 'Intermitente',
-      unidade: 'AMP',
-      qtdAtual: 150,
-      status: 'quatro-semanas'
-    },
-    {
-      codigo: '3000002',
-      nome: 'Metformina',
-      classificacaoItem: 'Remune',
-      classificacaoModelo: 'Inativo',
-      unidade: 'CP',
-      qtdAtual: 345,
-      status: 'oito-semanas'
-    },
-    {
-      codigo: '228001001',
-      nome: 'Mirtazapina',
-      classificacaoItem: 'Assistencial',
-      classificacaoModelo: 'Intermitente',
-      unidade: 'FR',
-      qtdAtual: 236,
-      status: 'oito-semanas'
-    },
-    {
-      codigo: '301002001',
-      nome: 'Aciclovir',
-      classificacaoItem: 'Remune',
-      classificacaoModelo: 'Ordinários',
-      unidade: 'AMP',
-      qtdAtual: 1198,
-      status: 'doze-semanas'
-    },
-    {
-      codigo: '21001060',
-      nome: 'Ivermectina',
-      classificacaoItem: 'Remune',
-      classificacaoModelo: 'Ordinários',
-      unidade: 'FR',
-      qtdAtual: 1000,
-      status: 'doze-semanas'
-    },
-    {
-      codigo: '1001007',
-      nome: 'Omeprazol',
-      classificacaoItem: 'Remune',
-      classificacaoModelo: 'Ordinários',
-      unidade: 'AMP',
-      qtdAtual: 1457,
-      status: 'dezesseis-semanas'
-    },
-    {
-      codigo: '22001007',
-      nome: 'Amoxicilina',
-      classificacaoItem: 'Remune',
-      classificacaoModelo: 'Ordinários',
-      unidade: 'CP',
-      qtdAtual: 2000,
-      status: 'mais-dezesseis-semanas'
-    },
-  ];
+  const [classFilter, setClassFilter] = useState("");
+  const [medicines, setMedicines] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const { user } = useAuth();
+
+  useEffect(() => {
+    const fetchMedicines = async () => {
+      try {
+        if (!user?.email) return;
+
+        const response = await api.get('/medicines/general', {
+          params: { email: user.email }
+        });
+
+        const mappedMedicines = response.data.map(med => ({
+          id: med.id,
+          codigo: med.cod_item,
+          nome: med.nome,
+          classificacaoItem: med.classificacao,
+          classificacaoModelo: med.tp_metodo,
+          unidade: med.tp_unidade_medicamento,
+          qtdAtual: med.estoque,
+          status: med.status // This is the number/ratio from backend
+        }));
+
+        setMedicines(mappedMedicines);
+      } catch (error) {
+        console.error('Erro ao buscar medicamentos:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMedicines();
+  }, [user]);
+
+  const getStatusClass = (status) => {
+    if (status === 0) return 'zerado';
+    if (status <= 4) return 'quatro-semanas';
+    if (status <= 8) return 'oito-semanas';
+    if (status <= 12) return 'doze-semanas';
+    if (status <= 16) return 'dezesseis-semanas';
+    return 'mais-dezesseis-semanas';
+  };
 
   const filteredMedicines = medicines
     .filter(med => med.nome.toLowerCase().includes(searchTerm.toLowerCase()))
-    .filter(med => !colorFilter || med.status === colorFilter)
+    .filter(med => !colorFilter || getStatusClass(med.status) === colorFilter)
     .filter(med => !classFilter || med.classificacaoItem === classFilter);
 
   return (
     <div className="medicine-table-container">
-      <p className="main-title">Busca por Medicamentos no Município Xxxxxxxxxxxx</p>
+      <p className="main-title">Busca por Medicamentos no Município</p>
       <div className="title-controls-legends-container">
-        <div className="title-controls-container"> 
-          <div className="controls-container"> 
-            <SearchBar 
+        <div className="title-controls-container">
+          <div className="controls-container">
+            <SearchBar
               onSearch={setSearchTerm}
               onColorFilter={setColorFilter}
-              onClassFilter={setClassFilter} // linha inserida agora
+              onClassFilter={setClassFilter}
             />
           </div>
         </div>
 
         <div>
-            <ColorLegend />
+          <ColorLegend />
         </div>
       </div>
 
@@ -124,13 +84,17 @@ const MedicineTable = () => {
       <table className="medicine-table">
         <TableHeader />
         <tbody>
-          {filteredMedicines.map(medicine => (
-            <TableRow key={medicine.codigo} medicine={medicine} />
-          ))}
+          {loading ? (
+            <tr><td colSpan="7">Carregando...</td></tr>
+          ) : (
+            filteredMedicines.map(medicine => (
+              <TableRow key={medicine.id} medicine={medicine} />
+            ))
+          )}
         </tbody>
       </table>
     </div>
   );
 };
 
-export default MedicineTable; 
+export default MedicineTable;

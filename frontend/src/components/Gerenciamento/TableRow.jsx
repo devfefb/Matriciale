@@ -4,21 +4,21 @@ import { useNavigate } from 'react-router-dom';
 
 const TableRow = ({ medicine }) => {
 
-  const getStatusClass = (qtdAtual) => {
-    if (qtdAtual === 0) return 'zerado';
-    if (qtdAtual <= 200) return 'quatro-semanas';
-    if (qtdAtual <= 700) return 'oito-semanas';
-    if (qtdAtual <= 1200) return 'doze-semanas';
-    if (qtdAtual <= 1500) return 'dezesseis-semanas';
+  const getStatusClass = (status) => {
+    if (status === 0) return 'zerado';
+    if (status <= 4) return 'quatro-semanas';
+    if (status <= 8) return 'oito-semanas';
+    if (status <= 12) return 'doze-semanas';
+    if (status <= 16) return 'dezesseis-semanas';
     return 'mais-dezesseis-semanas';
   };
 
-  const getStockMessage = (qtdAtual) => {
-    if (qtdAtual === 0) return 'Estoque zerado';
-    if (qtdAtual <= 200) return 'Estoque de 4 semanas';
-    if (qtdAtual <= 700) return 'Estoque de 8 semanas';
-    if (qtdAtual <= 1200) return 'Estoque de 12 semanas';
-    if (qtdAtual <= 1500) return 'Estoque de 16 semanas';
+  const getStockMessage = (status) => {
+    if (status === 0) return 'Estoque zerado';
+    if (status <= 4) return 'Estoque de 4 semanas';
+    if (status <= 8) return 'Estoque de 8 semanas';
+    if (status <= 12) return 'Estoque de 12 semanas';
+    if (status <= 16) return 'Estoque de 16 semanas';
     return 'Estoque superior a 16 semanas';
   };
 
@@ -29,22 +29,22 @@ const TableRow = ({ medicine }) => {
   const navigate = useNavigate();
 
   const handleDetailsClick = () => {
-    navigate(`/medicine/${medicine.codigo}/${encodeURIComponent(medicine.nome)}`);
+    navigate(`/medicine/${medicine.id}`);
   };
 
   return (
-      <tr className={`table-row ${getStatusClass(medicine.qtdAtual)}`} title={getStockMessage(medicine.qtdAtual)}>
-        <td className="coluna-codigo">{medicine.codigo}</td>
-        <td className="coluna-nome">{medicine.nome}</td>
-        <td className="coluna-class-item">{medicine.classificacaoItem}</td>
-        <td className="coluna-class-modelo">{medicine.classificacaoModelo}</td>
-        <td className="coluna-unidade">{medicine.unidade}</td>
-        <td className="coluna-quantidade">{medicine.qtdAtual}</td>
-        <td>
-          <button className="details-button" onClick={handleDetailsClick} title={getDetailsMessage()}>Detalhes</button>
-        </td>
-      </tr>
+    <tr className={`table-row ${getStatusClass(medicine.status)}`} title={getStockMessage(medicine.status)}>
+      <td className="coluna-codigo">{medicine.codigo}</td>
+      <td className="coluna-nome">{medicine.nome}</td>
+      <td className="coluna-class-item">{medicine.classificacaoItem}</td>
+      <td className="coluna-class-modelo">{medicine.classificacaoModelo}</td>
+      <td className="coluna-unidade">{medicine.unidade}</td>
+      <td className="coluna-quantidade">{medicine.qtdAtual}</td>
+      <td>
+        <button className="details-button" onClick={handleDetailsClick} title={getDetailsMessage()}>Detalhes</button>
+      </td>
+    </tr>
   );
 };
 
-export default TableRow; 
+export default TableRow;

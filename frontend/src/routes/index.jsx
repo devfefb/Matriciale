@@ -64,7 +64,7 @@ export default function AppRoutes() {
           </PrivateRoute>
         }
       />
-      <Route  
+      <Route
         path="/conversor"
         element={
           <AdminRoute>
@@ -79,7 +79,7 @@ export default function AppRoutes() {
       <Route path="/relatorio" element={<Relatorio />} />
       {/* <Route path="/documentos" element={<Historico />} /> */}
       <Route path="/gerenciamento" element={<Gerenciamento />} />
-      <Route path="/medicine/:codigo/:nome" element={<MedicineInfoTable />} />
+      <Route path="/medicine/:id" element={<MedicineInfoTable />} />
       <Route path="/users/pacientes/:id/:nome" element={<VisualizarPacientes />} />
       <Route path='/calendar' element={<Calendar />} />
       <Route path='/calendar/criar-tarefa' element={<CriarTarefa />} />
