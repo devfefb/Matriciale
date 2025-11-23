@@ -42,9 +42,9 @@ const ScheduledTasks = () => {
           minHeight: '90px',
         }}
       >
-        <Typography 
+        <Typography
           align="center"
-          sx={{ 
+          sx={{
             color: '#555',
             fontSize: '0.9rem',
             lineHeight: 1.4
@@ -57,78 +57,85 @@ const ScheduledTasks = () => {
   );
 
   return (
-    <Card>
+    <Card sx={{ mb: 3 }}>
       <CardContent sx={{ p: 3 }}>
-        <Typography 
-          variant="h6" 
-          color="primary" 
-          align="center" 
+        <Typography
+          variant="h6"
+          color="primary"
+          align="center"
           sx={{ mb: 3 }}
         >
           Tarefas Agendadas
         </Typography>
         <Box>
           <Grid container spacing={0}>
-            {weekDays?.map((dayInfo, index) => (
-              <React.Fragment key={dayInfo.day}>
-                <Grid 
-                  item 
-                  xs={12} 
-                  sm={2.4} 
-                  sx={{ 
-                    position: 'relative',
-                    px: 1
-                  }}
-                >
-                  <Box sx={{ 
-                    textAlign: 'center', 
-                    mb: 1.5,
-                    borderBottom: '2px solid',
-                    borderColor: 'primary.main',
-                    pb: 0.5
-                  }}>
-                    <Typography 
-                      color="error"
-                      sx={{ 
-                        fontWeight: 500,
-                        fontSize: '0.95rem'
-                      }}
-                    >
-                      {dayInfo.day}
-                    </Typography>
-                    <Typography 
-                      color="error"
-                      sx={{ 
-                        fontSize: '0.85rem'
-                      }}
-                    >
-                      {dayInfo.date}
-                    </Typography>
-                  </Box>
-                  <Box sx={{ minHeight: '300px' }}>
-                    {dayInfo.tasks.map(task => renderTask(task))}
-                  </Box>
-                  {index < weekDays.length - 1 && (
-                    <Divider 
-                      orientation="vertical" 
-                      sx={{ 
-                        position: 'absolute',
-                        right: 0,
-                        top: 0,
-                        bottom: 0,
-                        borderColor: 'rgba(0, 0, 0, 0.12)'
-                      }} 
-                    />
-                  )}
-                </Grid>
-              </React.Fragment>
-            ))}
+            {weekDays && weekDays.length > 0 ? (
+              weekDays.map((dayInfo, index) => (
+                <React.Fragment key={dayInfo.day}>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={2.4}
+                    sx={{
+                      position: 'relative',
+                      px: 1
+                    }}
+                  >
+                    <Box sx={{
+                      textAlign: 'center',
+                      mb: 1.5,
+                      borderBottom: '2px solid',
+                      borderColor: 'primary.main',
+                      pb: 0.5
+                    }}>
+                      <Typography
+                        color="error"
+                        sx={{
+                          fontWeight: 500,
+                          fontSize: '0.95rem'
+                        }}
+                      >
+                        {dayInfo.day}
+                      </Typography>
+                      <Typography
+                        color="error"
+                        sx={{
+                          fontSize: '0.85rem'
+                        }}
+                      >
+                        {dayInfo.date}
+                      </Typography>
+                    </Box>
+                    <Box sx={{ minHeight: '150px' }}>
+                      {dayInfo.tasks.map(task => renderTask(task))}
+                    </Box>
+                    {index < weekDays.length - 1 && (
+                      <Divider
+                        orientation="vertical"
+                        sx={{
+                          position: 'absolute',
+                          right: 0,
+                          top: 0,
+                          bottom: 0,
+                          borderColor: 'rgba(0, 0, 0, 0.12)',
+                          display: { xs: 'none', sm: 'block' }
+                        }}
+                      />
+                    )}
+                  </Grid>
+                </React.Fragment>
+              ))
+            ) : (
+              <Typography align="center" sx={{ width: '100%', py: 4 }}>
+                Nenhuma tarefa agendada para esta semana.
+              </Typography>
+            )}
           </Grid>
         </Box>
         <Box sx={{ textAlign: 'center', mt: 4 }}>
-          <Button 
+          <Button
             variant="contained"
-            sx={{ 
+            sx={{
               minWidth: '140px',
               height: '40px'
             }}
@@ -142,4 +149,4 @@ const ScheduledTasks = () => {
   );
 };
 
-export default ScheduledTasks; 
+export default ScheduledTasks;

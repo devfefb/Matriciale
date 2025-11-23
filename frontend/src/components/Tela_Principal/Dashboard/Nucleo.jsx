@@ -16,15 +16,20 @@ const Nucleo = () => {
           marginLeft: '20%'
         }}
       >
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
-            <PriorityTasks />
-          </Grid>
+        <Grid container spacing={3} alignItems="stretch">
+          {/* 1st Half: Pie Chart */}
           <Grid item xs={12} md={6}>
             <StockChart />
           </Grid>
-          <Grid item xs={12}>
-            <ScheduledTasks />
+
+          {/* 2nd Half: Scheduled Tasks + Priority Tasks */}
+          <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Box sx={{ mb: 3 }}>
+              <ScheduledTasks />
+            </Box>
+            <Box sx={{ flex: 1 }}>
+              <PriorityTasks />
+            </Box>
           </Grid>
         </Grid>
       </Box>
@@ -32,4 +37,4 @@ const Nucleo = () => {
   );
 };
 
-export default Nucleo; 
+export default Nucleo;
