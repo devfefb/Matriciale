@@ -26,16 +26,28 @@ export class MedicineService {
 
     const medicines = await this.medicineRepository.getMedicinesByUnit(municipio, 'CAF');
 
-    return medicines.map((med: any) => ({
-      id: med.id,
-      cod_item: med.cod_item,
-      nome: med.nome,
-      classificacao: med.classificacao,
-      tp_metodo: med.tp_metodo,
-      tp_unidade_medicamento: med.tp_unidade_medicamento,
-      estoque: med.estoque,
-      status: med.tp_metodo ? (med.estoque / med.tp_metodo) : 0
-    }));
+    const mappedMedicines = medicines.map((med: any) => {
+      const status = med.metodo ? (med.estoque / med.metodo) : 0;
+      // Debug log for status calculation
+      if (status <= 4) {
+        console.log(`[DEBUG] Low status for ${med.nome}: Stock=${med.estoque}, Method=${med.tp_metodo}, Status=${status}`);
+      }
+      return {
+        id: med.id,
+        cod_item: med.cod_item,
+        nome: med.nome,
+        classificacao: med.classificacao,
+        tp_metodo: med.tp_metodo,
+        tp_unidade_medicamento: med.tp_unidade_medicamento,
+        estoque: med.estoque,
+        status: med.estoque === 0 ? 0 : status
+      };
+    });
+
+    return {
+      municipality: municipio,
+      medicines: mappedMedicines
+    };
   }
 
   async getMedicineDetails(email: string, medicineId: string) {
@@ -43,6 +55,7 @@ export class MedicineService {
     if (!municipio) throw new Error('Município não encontrado para este usuário.');
 
     const units = await this.medicineRepository.getAllUnits(municipio);
+    console.log(`[DEBUG] Units found for ${municipio}:`, units.map(u => u.id));
 
     const details = [];
 
@@ -64,6 +77,12 @@ export class MedicineService {
     // Now other units
     for (const unit of units) {
       if (unit.id === 'CAF') continue; // Skip CAF as we already added it
+
+      // The user mentioned: /municipio/{municipio}/unidades/{municipio}/medicamentos_unidade
+      // This implies the unit ID might be the municipality name itself in some cases?
+      // Or maybe the user meant we should iterate properly.
+      // Let's stick to iterating units found in `getAllUnits`.
+
       const unitMed = await this.medicineRepository.getMedicineInUnit(municipio, unit.id, medicineId);
       if (unitMed) {
         details.push({
@@ -73,6 +92,8 @@ export class MedicineService {
           met_est: unitMed.met_est,
           reposicao: unitMed.reposicao
         });
+      } else {
+        console.log(`[DEBUG] Medicine ${medicineId} not found in unit ${unit.id}`);
       }
     }
 

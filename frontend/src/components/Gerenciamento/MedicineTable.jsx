@@ -12,6 +12,7 @@ const MedicineTable = () => {
   const [colorFilter, setColorFilter] = useState('');
   const [classFilter, setClassFilter] = useState("");
   const [medicines, setMedicines] = useState([]);
+  const [municipality, setMunicipality] = useState('');
   const [loading, setLoading] = useState(true);
   const { user } = useAuth();
 
@@ -24,7 +25,20 @@ const MedicineTable = () => {
           params: { email: user.email }
         });
 
-        const mappedMedicines = response.data.map(med => ({
+        // Handle new response structure { municipality, medicines } or fallback to array
+        let fetchedMedicines = [];
+        let mun = '';
+
+        if (Array.isArray(response.data)) {
+          fetchedMedicines = response.data;
+        } else if (response.data && response.data.medicines) {
+          fetchedMedicines = response.data.medicines;
+          mun = response.data.municipality;
+        }
+
+        setMunicipality(mun);
+
+        const mappedMedicines = fetchedMedicines.map(med => ({
           id: med.id,
           codigo: med.cod_item,
           nome: med.nome,
@@ -32,7 +46,8 @@ const MedicineTable = () => {
           classificacaoModelo: med.tp_metodo,
           unidade: med.tp_unidade_medicamento,
           qtdAtual: med.estoque,
-          status: med.status // This is the number/ratio from backend
+          metodo: med.metodo,
+          status: med.status
         }));
 
         setMedicines(mappedMedicines);
@@ -62,7 +77,9 @@ const MedicineTable = () => {
 
   return (
     <div className="medicine-table-container">
-      <p className="main-title">Busca por Medicamentos no Município</p>
+      <p className="main-title">
+        Busca por Medicamentos no Município {municipality ? `- ${municipality}` : ''}
+      </p>
       <div className="title-controls-legends-container">
         <div className="title-controls-container">
           <div className="controls-container">
@@ -85,7 +102,14 @@ const MedicineTable = () => {
         <TableHeader />
         <tbody>
           {loading ? (
-            <tr><td colSpan="7">Carregando...</td></tr>
+            // Shimmer Loading Rows
+            Array.from({ length: 5 }).map((_, index) => (
+              <tr key={index}>
+                <td colSpan="7">
+                  <div className="shimmer-wrapper"></div>
+                </td>
+              </tr>
+            ))
           ) : (
             filteredMedicines.map(medicine => (
               <TableRow key={medicine.id} medicine={medicine} />
