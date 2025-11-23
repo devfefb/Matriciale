@@ -3,6 +3,7 @@ import { usersRouter } from './users';
 import uploadRoutes from './upload.routes';
 import { taskRoutes } from './task.routes';
 import { medicineRoutes } from './medicine.routes';
+import { calculosRoutes } from './calculos.routes';
 import { auth } from '../config/firebase';
 
 const router = Router();
@@ -14,6 +15,7 @@ router.use('/upload', uploadRoutes); // rotas para upload de planilhas
 router.use('/tasks', taskRoutes); // rotas para gerenciamento de tarefas
 router.use('/tasks', taskRoutes); // rotas para gerenciamento de tarefas
 router.use('/medicines', medicineRoutes); // rotas para medicamentos
+router.use('/calculos', calculosRoutes); // rotas para cálculos
 
 // Rota de teste sem autenticação
 router.get('/test', (req, res) => {

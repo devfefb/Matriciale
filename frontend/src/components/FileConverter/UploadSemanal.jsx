@@ -233,8 +233,10 @@ const UploadSemanal = () => {
     });
   }, []);
 
+  const [selectedMunicipio, setSelectedMunicipio] = useState('Palmares');
+
   const handleCalcular = useCallback(async () => {
-    const municipio = 'Palmares';
+    const municipio = selectedMunicipio;
     setCalcError(null);
     setCalcResult(null);
     setCalcLoading(true);
@@ -250,14 +252,17 @@ const UploadSemanal = () => {
         setCalcError(msg);
         return;
       }
-      const validar = await api.post('/upload/validar-calculos');
-      setCalcResult(validar?.data?.data || null);
+
+      // Chamada para o novo endpoint de cálculo real
+      const calculoResp = await api.post('/calculos/executar', { municipio });
+      setCalcResult(calculoResp?.data || null);
+
     } catch (e) {
-      setCalcError(e?.response?.data?.message || e.message || 'Erro ao executar cálculo');
+      setCalcError(e?.response?.data?.error || e.message || 'Erro ao executar cálculo');
     } finally {
       setCalcLoading(false);
     }
-  }, []);
+  }, [selectedMunicipio]);
 
   return (
     <div className={styles.container}> {/* Mudou de style para className */}
@@ -405,6 +410,20 @@ const UploadSemanal = () => {
         <p style={{ color: '#6c757d', marginTop: '6px' }}>
           Verifica se todas as unidades possuem JSON no bucket. Se completo, roda a validação com gabarito e não altera o banco.
         </p>
+
+        <div style={{ marginBottom: '15px' }}>
+          <label htmlFor="municipio-select" style={{ marginRight: '10px', fontWeight: 'bold' }}>Município:</label>
+          <select
+            id="municipio-select"
+            value={selectedMunicipio}
+            onChange={(e) => setSelectedMunicipio(e.target.value)}
+            style={{ padding: '5px', borderRadius: '4px' }}
+          >
+            <option value="Palmares">Palmares</option>
+            <option value="Pirangi">Pirangi</option>
+          </select>
+        </div>
+
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}> {/* Inline OK */}
           <button
             className={styles.processBtn} // Mudou
@@ -420,14 +439,14 @@ const UploadSemanal = () => {
         </div>
         {calcResult && (
           <div style={{ marginTop: '12px', padding: '12px', background: '#e8f5e8', border: '1px solid #28a745', borderRadius: '8px' }}> {/* Inline OK */}
-            <div style={{ fontWeight: 'bold', color: '#155724' }}>Validação executada</div>
+            <div style={{ fontWeight: 'bold', color: '#155724' }}>Cálculo executado com sucesso!</div>
             <div style={{ fontSize: '14px', color: '#155724' }}>
-              Data: {new Date(calcResult?.data_validacao || Date.now()).toLocaleString('pt-BR')}
+              Data: {new Date().toLocaleString('pt-BR')}
             </div>
             <div style={{ marginTop: '6px', fontSize: '14px' }}>
-              <div><strong>Perfeitos (100%):</strong> {calcResult?.resumo?.perfeitos ?? calcResult?.estatisticas?.perfeitos ?? 0}</div>
-              <div><strong>Taxa de acerto geral:</strong> {(calcResult?.resumo?.taxa_acerto_geral ?? calcResult?.estatisticas?.taxa_acerto_geral ?? 0).toFixed ? (calcResult?.resumo?.taxa_acerto_geral ?? calcResult?.estatisticas?.taxa_acerto_geral).toFixed(2) : (calcResult?.resumo?.taxa_acerto_geral ?? calcResult?.estatisticas?.taxa_acerto_geral)}</div>
-              <div><strong>Ignorados semana 2025_22:</strong> {calcResult?.resumo?.ignorados_semana_2025_22 ?? calcResult?.estatisticas?.ignorados_semana_2025_22 ?? 0}</div>
+              <div><strong>Total Processados:</strong> {calcResult?.totalProcessados ?? 0}</div>
+              <div><strong>Sucessos:</strong> {calcResult?.totalSucessos ?? 0}</div>
+              <div><strong>Erros:</strong> {calcResult?.totalErros ?? 0}</div>
             </div>
           </div>
         )}
