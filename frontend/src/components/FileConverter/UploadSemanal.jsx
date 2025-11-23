@@ -406,9 +406,9 @@ const UploadSemanal = () => {
         </div>
       )}
       <div style={{ marginTop: '20px', padding: '16px', border: '1px solid #e9ecef', borderRadius: '8px', background: '#fff' }}> {/* Inline OK */}
-        <h3 style={{ marginTop: 0 }}>Cálculo Global (Bucket)</h3>
+        <h3 style={{ marginTop: 0 }}>Calcular</h3>
         <p style={{ color: '#6c757d', marginTop: '6px' }}>
-          Verifica se todas as unidades possuem JSON no bucket. Se completo, roda a validação com gabarito e não altera o banco.
+          Verifica se os dados processados de todas as unidades estão disponíveis. Em caso positivo, executa os cálculos e salva no banco.
         </p>
 
         <div style={{ marginBottom: '15px' }}>
@@ -431,7 +431,7 @@ const UploadSemanal = () => {
             onClick={handleCalcular}
             disabled={calcLoading}
           >
-            {calcLoading ? 'Validando...' : 'Calcular (Bucket)'}
+            {calcLoading ? 'Validando...' : 'Calcular'}
           </button>
           {calcError && (
             <span style={{ color: '#dc3545' }}>{calcError}</span>
