@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { CiFilter } from "react-icons/ci";
 import RelatorioTableRow from "./RelatorioTableRow";
 import FilterRelatorio from "./FilterRelatorio";
@@ -6,6 +6,8 @@ import styles from "../../styles/RelatorioTable.module.css"
 import FilterCodItem from "./FilterCodItem";
 import FilterNomeItem from "./FilterNomeItem";
 import FilterModelo from "./FilterModelo";
+import api from "../../services/api";
+import { useAuth } from "../../contexts/AuthContext";
 
 const RelatorioTable = () => {
     const currentDate = new Date();
@@ -18,152 +20,62 @@ const RelatorioTable = () => {
     const [showFilterNome, setShowFilterNome] = useState(false);
     const [showFilterMod, setShowFilterMod] = useState(false);
 
-    const relatorios = [
-        {
-        classificacao: '10 Remune',
-        codItem: '021.001.092',
-        nome: 'AAS - Ácido Acetil Salicilico 100MG',
-        tpMetodo: '1.Ordinários',
-        metodo: 730,
-        metEst: 2190,
-        estoque: 1720,
-        reposicao: 470
-        },
-        {
-        classificacao: '10 Remune',
-        codItem: '301.002.001',
-        nome: 'Aciclovir 200 MG CPR',
-        tpMetodo: '1.Ordinários',
-        metodo: 190,
-        metEst: 510,
-        estoque: 140,
-        reposicao: 430
-        },
-        {
-        classificacao: '10 Remune',
-        codItem: '301.002.002',
-        nome: 'Aciclovir Creme 5% 10G',
-        tpMetodo: '1.Ordinários',
-        metodo: 4,
-        metEst: 12,
-        estoque: 5,
-        reposicao: 7
-        },
-        {
-        classificacao: '10 Remune',
-        codItem: '304.002.001',
-        nome: 'Ácido Folico 5MG',
-        tpMetodo: '1.Ordinários',
-        metodo: 200,
-        metEst: 600,
-        estoque: 400,
-        reposicao: 200
-        },
-        {
-        classificacao: '10 Remune',
-        codItem: '304.004.001',
-        nome: 'Ácido Tranexâmico 250MG - Transamin',
-        tpMetodo: '1.Ordinários',
-        metodo: 88,
-        metEst: 264,
-        estoque: 136,
-        reposicao: 128
-        },
-        {
-        classificacao: '10 Remune',
-        codItem: '302.001.001',
-        nome: 'Ácido Valproico 250MG',
-        tpMetodo: '1.Ordinários',
-        metodo: 200,
-        metEst: 1800,
-        estoque: 1610,
-        reposicao: 190
-        },
-        {
-        classificacao: 'Farmacológico',
-        codItem: '013.001.003',
-        nome: 'Ácido Valproico 500MG',
-        tpMetodo: '2.Intermitentes',
-        metodo: 80,
-        metEst: 143,
-        estoque: 140,
-        reposicao: 520
-        },
-        {
-        classificacao: '10 Remune',
-        codItem: '203.001.001',
-        nome: 'Albendazol 40 MG/ML Frasco 10ML',
-        tpMetodo: '1.Ordinários',
-        metodo: 10,
-        metEst: 30,
-        estoque: 23,
-        reposicao: 7 
-        },
-        {
-        classificacao: 'Farmacológico',
-        codItem: '301.003.001',
-        nome: 'Albendazol 400MG',
-        tpMetodo: '1.Ordinários',
-        metodo: 12,
-        metEst: 36,
-        estoque: 15,
-        reposicao: 21
-        },
-        {
-        classificacao: 'Farmacológico',
-        codItem: '309.002.001',
-        nome: 'Alopurinol 300MG',
-        tpMetodo: '1.Ordinários',
-        metodo: 210,
-        metEst: 630,
-        estoque: 720,
-        reposicao: 0
-        },
-        {
-        classificacao: '10 Remune',
-        codItem: '309.002.022',
-        nome: 'Alopurinol 100MG',
-        tpMetodo: '1.Ordinários',
-        metodo: 90,
-        metEst: 270,
-        estoque: 450,
-        reposicao: 0
-        },
-        {
-        classificacao: '10 Remune',
-        codItem: '305.001.004',
-        nome: 'Ambroxol Xarope Adulto',
-        tpMetodo: '1.Ordinários',
-        metodo: 41,
-        metEst: 123,
-        estoque: 52,
-        reposicao: 71
-        },
-        {
-        classificacao: 'Assistencial',
-        codItem: '305.001.005',
-        nome: 'Ambroxol Xarope Infantil',
-        tpMetodo: '1.Ordinários',
-        metodo: 15,
-        metEst: 45,
-        estoque: 34,
-        reposicao: 11
-        },
-    ];
-    
+    const [units, setUnits] = useState([]);
+    const [selectedUnit, setSelectedUnit] = useState('');
+    const [relatorios, setRelatorios] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const { user } = useAuth();
+
+    useEffect(() => {
+        const fetchUnits = async () => {
+            try {
+                if (!user?.email) return;
+                const response = await api.get('/medicines/units', {
+                    params: { email: user.email }
+                });
+                setUnits(response.data);
+                if (response.data.length > 0) {
+                    // Default to CAF if available, otherwise first unit
+                    const defaultUnit = response.data.includes('CAF') ? 'CAF' : response.data[0];
+                    setSelectedUnit(defaultUnit);
+                }
+            } catch (error) {
+                console.error("Erro ao buscar unidades:", error);
+            }
+        };
+        fetchUnits();
+    }, [user]);
+
+    useEffect(() => {
+        const fetchReport = async () => {
+            if (!selectedUnit || !user?.email) return;
+            setLoading(true);
+            try {
+                const response = await api.get('/medicines/report', {
+                    params: { email: user.email, unit: selectedUnit }
+                });
+                setRelatorios(response.data);
+            } catch (error) {
+                console.error("Erro ao buscar relatório:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchReport();
+    }, [selectedUnit, user]);
 
     const filteredRelatorio = relatorios.filter((item) => {
         const filterClass = !classificacaoFilter
-            || item.classificacao.toLocaleLowerCase() === classificacaoFilter.toLocaleLowerCase();
-        
+            || (item.classificacao && item.classificacao.toLocaleLowerCase().includes(classificacaoFilter.toLocaleLowerCase()));
+
         const filterCod = !codItemFilter
-            || item.codItem.toLocaleLowerCase() === codItemFilter.toLocaleLowerCase();
-        
+            || (item.cod_item && item.cod_item.toLocaleLowerCase().includes(codItemFilter.toLocaleLowerCase()));
+
         const filterNome = !nomeItemFilter
-            || item.nome.toLocaleLowerCase() === nomeItemFilter.toLocaleLowerCase();
-            
+            || (item.nome_item && item.nome_item.toLocaleLowerCase().includes(nomeItemFilter.toLocaleLowerCase()));
+
         const filterMod = !modeloFilter
-            || item.tpMetodo.toLocaleLowerCase() === modeloFilter.toLocaleLowerCase();
+            || (item.tp_metodo && item.tp_metodo.toLocaleLowerCase().includes(modeloFilter.toLocaleLowerCase()));
 
         return filterClass && filterCod && filterNome && filterMod;
     });
@@ -196,66 +108,86 @@ const RelatorioTable = () => {
         window.location.reload(); // Para recarregar os scripts/react normalmente
     };
 
+    const getUnitType = (unitName) => {
+        if (unitName === 'ESF3') return 'UBS';
+        if (unitName === 'CAF') return 'CAF';
+        return 'Farmácia';
+    };
+
     return (
         <div className={styles.container_relatorio} ref={printRef}>
             <div className={styles.header_relatorio}>
                 <div>
-                    <p className={styles.header_relatorio_txt1}>Nome: <span>{"<Nome Unidade>"}</span></p>
+                    <p className={styles.header_relatorio_txt1}>Nome: <span>{selectedUnit || 'Selecione uma unidade'}</span></p>
                     <p className={styles.header_relatorio_txt2}>Data: {currentDate.toLocaleDateString()}</p>
-                    <button onClick={handlePrint}>
+                    <button onClick={handlePrint} className="no-print">
                         Imprimir Relatório
                     </button>
+
+                    <div className="unit-selector no-print" style={{ marginTop: '10px' }}>
+                        <label htmlFor="unit-select" style={{ marginRight: '10px', fontWeight: 'bold' }}>Selecionar Unidade:</label>
+                        <select
+                            id="unit-select"
+                            value={selectedUnit}
+                            onChange={(e) => setSelectedUnit(e.target.value)}
+                            style={{ padding: '5px', borderRadius: '4px' }}
+                        >
+                            {units.map(unit => (
+                                <option key={unit} value={unit}>{unit}</option>
+                            ))}
+                        </select>
+                    </div>
                 </div>
                 <div>
-                    <p className={styles.header_relatorio_txt1}>Unidade: <span>{"<Tipo Unidade>"}</span></p>
+                    <p className={styles.header_relatorio_txt1}>Unidade: <span>{getUnitType(selectedUnit)}</span></p>
                     <p className={styles.header_relatorio_txt3}>Farmácia, UBS, Pronto Socorro.</p>
                 </div>
             </div>
-            <table className={styles.tabela_relatorio} 
-            style={{
-                borderCollapse: "separate",
-                borderSpacing: "0px 11.62px",
-                width: "100%",
-                overflowY: "auto",
-            }}>
+            <table className={styles.tabela_relatorio}
+                style={{
+                    borderCollapse: "separate",
+                    borderSpacing: "0px 11.62px",
+                    width: "100%",
+                    overflowY: "auto",
+                }}>
                 <thead>
                     <tr
-                    style={{
-                        position: "sticky",
-                        backgroundColor: "#F3F1EE",
-                    }}>
-                        <th 
-                            onClick={handleClickClass} 
+                        style={{
+                            position: "sticky",
+                            backgroundColor: "#F3F1EE",
+                        }}>
+                        <th
+                            onClick={handleClickClass}
                             style={{
                                 cursor: "pointer",
                             }}
                         >
-                            Item<CiFilter size="18"/>
-                            <FilterRelatorio 
+                            Item<CiFilter size="18" />
+                            <FilterRelatorio
                                 showFilter={showFilterClass}
-                                onClassificacaoFilter={setClassificacaoFilter} 
+                                onClassificacaoFilter={setClassificacaoFilter}
                             />
                         </th>
                         <th
-                            onClick={handleClickCod} 
+                            onClick={handleClickCod}
                             style={{
                                 cursor: "pointer",
                             }}
-                        >Código Item<CiFilter size="18"/>
+                        >Código Item<CiFilter size="18" />
                             <FilterCodItem
                                 showFilter={showFilterCod}
-                                onCodItemFilter={setCodItemFilter} 
+                                onCodItemFilter={setCodItemFilter}
                             />
                         </th>
                         <th
-                            onClick={handleClickNome} 
+                            onClick={handleClickNome}
                             style={{
                                 cursor: "pointer",
                             }}
-                        >Nome Item<CiFilter size="18"/>
+                        >Nome Item<CiFilter size="18" />
                             <FilterNomeItem
                                 showFilter={showFilterNome}
-                                onNomeItemFilter={setNomeItemFilter} 
+                                onNomeItemFilter={setNomeItemFilter}
                             />
                         </th>
                         <th
@@ -263,25 +195,36 @@ const RelatorioTable = () => {
                             style={{
                                 cursor: "pointer"
                             }}
-                        >Classificação<br/>
-                        Modelo<CiFilter size="18"/>
+                        >Classificação<br />
+                            Modelo<CiFilter size="18" />
                             <FilterModelo
                                 showFilter={showFilterMod}
                                 onModeloFilter={setModeloFilter}
                             />
                         </th>
-                        <th>Qtde<br/>Modelo</th>
-                        <th>Estoque<br/>ideal</th>
-                        <th>Estoque<br/>atual</th>
-                        <th>Qtde<br/>Reposição</th>
+                        <th>Qtde<br />Modelo</th>
+                        <th>Estoque<br />ideal</th>
+                        <th>Estoque<br />atual</th>
+                        <th>Qtde<br />Reposição</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {filteredRelatorio.map((item) => (
-                        <RelatorioTableRow key={item.codItem} relatorios={item} />
-                    ))}
+                    {loading ? (
+                        <tr><td colSpan="8" style={{ textAlign: 'center', padding: '20px' }}>Carregando...</td></tr>
+                    ) : (
+                        filteredRelatorio.map((item) => (
+                            <RelatorioTableRow key={item.id || item.cod_item} relatorios={item} />
+                        ))
+                    )}
                 </tbody>
             </table>
+            <style>{`
+                @media print {
+                    .no-print {
+                        display: none !important;
+                    }
+                }
+            `}</style>
         </div>
     );
 };
