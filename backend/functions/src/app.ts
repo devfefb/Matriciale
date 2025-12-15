@@ -9,7 +9,10 @@ const app = express();
 // CORS configuração condicional para desenvolvimento e produção
 const corsOrigins = process.env.NODE_ENV === 'development' 
   ? ['http://localhost:3000', 'http://localhost:5173'] // Vite + React dev servers
-  : ['https://your-domain.com']; // Configurar domínios de produção
+  : [
+      'https://matriciale-7e20b.web.app',
+      'https://matriciale-7e20b.firebaseapp.com'
+    ]; // Domínios de produção Firebase Hosting
 
 app.use(cors({
   origin: corsOrigins,

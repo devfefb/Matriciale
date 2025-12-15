@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { useAuth } from '../../contexts/AuthContext';
+import LogoImage from '../../assets/img/wellft-removebg-preview.png';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -212,7 +213,7 @@ export default function Login() {
         }}
       >
         <img
-          src="/src/assets/img/wellft-removebg-preview.png"
+          src={LogoImage}
           alt="Matriciale Logo"
           style={{
             maxWidth: '600px',
