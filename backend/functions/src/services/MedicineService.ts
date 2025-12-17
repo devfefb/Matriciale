@@ -12,7 +12,7 @@ export class MedicineService {
     if (!email) return null;
     const normalizedEmail = email.toLowerCase();
 
-    const PALMARES = ['gustavo.moraes@beetsjr.com.br'];
+    const PALMARES = ['gustavo.moraes@beetsjr.com.br', 'andre.ricardo.goncales@gmail.com'];
     const PIRANGI = ['andre.ricardo.goncales@gmail.com'];
 
     if (PALMARES.includes(normalizedEmail)) {
