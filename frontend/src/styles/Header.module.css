@@ -4,25 +4,38 @@
     left: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 99.26px;
-    background: #FCF9F2 ;
+    min-height: 99.26px;
+    background: #FCF9F2;
     box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.25);
-    padding-top: 21.48px;
-    padding-right: 32.37px;
+    padding: 1rem 2rem;
     z-index: 1000;
+}
+
+.header_logo{
+    display: flex;
+    align-items: center;
 }
 
 .header_logo img{
     width: 279px;
     height: 65px;
-    margin-left: 69.63px;
+    object-fit: contain;
 }
 
 .header_perfil{
     display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
+.header_perfil > div:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.25rem;
+}
 
 .header_perfil span{
     display: block;
@@ -31,14 +44,12 @@
     font-size: 19.92px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    margin-right: 21.58px;
-    margin-top: 10px;
+    line-height: 1.2;
 }
 
 .adminLabel{
     display: inline-block;
-    background: #C0C0C0; /* silver */
+    background: #C0C0C0;
     color: #000;
     font-size: 12px;
     font-weight: 600;
@@ -54,21 +65,88 @@
     font-size: 16.6px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    margin-right: 21.58px;
+    line-height: 1.2;
+    margin: 0;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.header_perfil p:hover{
+    opacity: 0.7;
 }
 
 .foto_perfil{
     width: 68.82px;
     height: 68.06px;
-    margin-right: 27.39px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .saida{
-    padding-top: 2.5%;
+    display: flex;
+    align-items: center;
 }
 
 .saida img{
     height: 41.5px;
     width: 41.5px;
+    transition: transform 0.2s;
+}
+
+.saida img:hover{
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .header{
+        padding: 1rem;
+    }
+    
+    .header_logo img{
+        width: 220px;
+        height: 52px;
+    }
+    
+    .header_perfil span{
+        font-size: 16px;
+    }
+    
+    .header_perfil p{
+        font-size: 14px;
+    }
+    
+    .foto_perfil{
+        width: 55px;
+        height: 55px;
+    }
+    
+    .saida img{
+        height: 35px;
+        width: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header{
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .header_logo img{
+        width: 180px;
+        height: 42px;
+    }
+    
+    .header_perfil{
+        gap: 1rem;
+    }
+    
+    .header_perfil span{
+        font-size: 14px;
+    }
+    
+    .header_perfil p{
+        display: none;
+    }
 }

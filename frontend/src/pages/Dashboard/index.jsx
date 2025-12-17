@@ -1,7 +1,8 @@
 import React from 'react';
 import { 
   ThemeProvider,
-  CssBaseline
+  CssBaseline,
+  Box
 } from '@mui/material';
 import Sidebar from '../../components/Sidebar';
 import Header from '../../components/Header';
@@ -11,17 +12,19 @@ import theme from '../../theme/theme';
 export default function Dashboard() {
 
   return (
-    <>
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header/>
-      <div style={{
-        display: 'flex'
+      <Box sx={{
+        display: 'flex',
+        flex: 1,
+        overflow: 'hidden'
       }}>
         <Sidebar/>
-          <ThemeProvider theme={theme}>
-            <CssBaseline/>
-            <Nucleo/>
-          </ThemeProvider>
-      </div>
-    </>
+        <ThemeProvider theme={theme}>
+          <CssBaseline/>
+          <Nucleo/>
+        </ThemeProvider>
+      </Box>
+    </Box>
   );
 } 

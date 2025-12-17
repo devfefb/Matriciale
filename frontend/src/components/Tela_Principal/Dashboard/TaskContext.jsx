@@ -3,6 +3,7 @@ import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import api from '../../../services/api';
 import { useAuth } from '../../../contexts/AuthContext';
+import { getCurrentWeek } from './taskUtils';
 
 const TaskContext = createContext(null);
 
@@ -57,10 +58,13 @@ export const TaskProvider = ({ children }) => {
     return format(taskDate, 'yyyy-MM-dd') === format(new Date(), 'yyyy-MM-dd');
   });
 
+  const weekDays = getCurrentWeek();
+
   const value = {
     tasks,
     currentDate,
     todayTasks,
+    weekDays,
     isLoading,
     refreshTasks: fetchTasks
   };

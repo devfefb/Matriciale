@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card, CardContent, Typography, Box, Skeleton } from '@mui/material';
+import { Card, CardContent, Typography, Box, Skeleton, useMediaQuery, useTheme } from '@mui/material';
 import { PieChart } from '@mui/x-charts/PieChart';
 import api from '../../../services/api';
 import { useAuth } from '../../../contexts/AuthContext';
@@ -8,6 +8,9 @@ const StockChart = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const { user } = useAuth();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
 
   useEffect(() => {
     const fetchData = async () => {
@@ -89,15 +92,48 @@ const StockChart = () => {
   }, [user]);
 
   return (
-    <Card sx={{ height: '100%', minHeight: '550px', display: 'flex', flexDirection: 'column' }}>
-      <CardContent sx={{ p: 2.5, display: 'flex', flexDirection: 'column', flex: 1 }}>
-        <Typography variant="h5" gutterBottom align="center" sx={{ fontWeight: 'bold', mb: 2 }}>
+    <Card sx={{ 
+      width: '100%',
+      height: '100%', 
+      minHeight: { xs: '400px', sm: '450px', md: '550px' },
+      maxHeight: { xs: '500px', md: '65vh' },
+      display: 'flex', 
+      flexDirection: 'column',
+      overflow: 'auto'
+    }}>
+      <CardContent sx={{ 
+        p: { xs: 2, md: 2.5 }, 
+        display: 'flex', 
+        flexDirection: 'column', 
+        flex: 1,
+        overflow: 'auto'
+      }}>
+        <Typography 
+          variant="h5" 
+          gutterBottom 
+          align="center" 
+          sx={{ 
+            fontWeight: 'bold', 
+            mb: { xs: 1, md: 2 },
+            fontSize: { xs: '1.25rem', md: '1.5rem' }
+          }}
+        >
           CAF - Giro de Estoque
         </Typography>
 
         {loading ? (
-          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
-            <Skeleton variant="circular" width={300} height={300} />
+          <Box sx={{ 
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            flex: 1,
+            minHeight: '300px'
+          }}>
+            <Skeleton 
+              variant="circular" 
+              width={{ xs: 250, sm: 300 }} 
+              height={{ xs: 250, sm: 300 }} 
+            />
           </Box>
         ) : (
           <Box sx={{
@@ -106,13 +142,14 @@ const StockChart = () => {
             alignItems: 'center',
             flex: 1,
             width: '100%',
-            position: 'relative'
+            position: 'relative',
+            overflow: 'visible'
           }}>
             <PieChart
               series={[
                 {
                   data: data,
-                  outerRadius: 140,
+                  outerRadius: isMobile ? 90 : isTablet ? 110 : 140,
                   paddingAngle: 1,
                   cornerRadius: 5,
                   highlightScope: { faded: 'global', highlighted: 'item' },
@@ -125,20 +162,33 @@ const StockChart = () => {
                   arcLabelMinAngle: 20,
                 },
               ]}
-              width={450}
-              height={450}
-              margin={{ top: 20, bottom: 120, left: 20, right: 20 }}
+              width={isMobile ? 350 : isTablet ? 400 : 450}
+              height={isMobile ? 380 : isTablet ? 420 : 450}
+              margin={{ 
+                top: 20, 
+                bottom: isMobile ? 100 : 120, 
+                left: isMobile ? 10 : 20, 
+                right: isMobile ? 10 : 20
+              }}
               slotProps={{
                 legend: {
-                  direction: 'row',
+                  direction: isMobile ? 'column' : 'row',
                   position: { vertical: 'bottom', horizontal: 'middle' },
                   padding: 0,
-                  itemMarkWidth: 12,
-                  itemMarkHeight: 12,
+                  itemMarkWidth: isMobile ? 10 : 12,
+                  itemMarkHeight: isMobile ? 10 : 12,
                   labelStyle: {
-                    fontSize: 13,
+                    fontSize: isMobile ? 11 : isTablet ? 12 : 13,
                     fill: '#555'
                   },
+                  itemGap: isMobile ? 8 : 10
+                }
+              }}
+              sx={{
+                maxWidth: '100%',
+                '& .MuiChartsLegend-root': {
+                  maxWidth: '100%',
+                  flexWrap: 'wrap'
                 }
               }}
             />

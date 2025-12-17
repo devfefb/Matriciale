@@ -32,6 +32,7 @@
 .main-title{
   font-size: 26.6px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .main-title-gerenciamento {
@@ -43,6 +44,18 @@
   margin-bottom: 21px;
 }
 
+/* Legenda ocupando toda a largura */
+.legend-section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Filtros e busca numa linha só */
+.filters-section {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
 .medicine-table {
   width: 100%;
   border-collapse: separate;
@@ -52,6 +65,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 15px;
 }
 
 .linha-divisao {

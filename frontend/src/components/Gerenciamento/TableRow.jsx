@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/TableRow.css';
 import { useNavigate } from 'react-router-dom';
+import { formatNumber } from '../../utils/formatNumber';
 
 const TableRow = ({ medicine }) => {
 
@@ -65,12 +66,12 @@ const TableRow = ({ medicine }) => {
 
   return (
     <tr className={`table-row ${getStatusClass(medicine)}`} title={getStockMessage(medicine)}>
-      <td className="coluna-codigo">{medicine.codigo}</td>
+      <td className="coluna-codigo">{formatNumber(medicine.codigo, true)}</td>
       <td className="coluna-nome">{medicine.nome}</td>
       <td className="coluna-class-item">{medicine.classificacaoItem}</td>
       <td className="coluna-class-modelo">{medicine.classificacaoModelo}</td>
       <td className="coluna-unidade">{medicine.unidade}</td>
-      <td className="coluna-quantidade">{medicine.qtdAtual}</td>
+      <td className="coluna-quantidade">{formatNumber(medicine.qtdAtual)}</td>
       <td>
         <button className="details-button" onClick={handleDetailsClick} title={getDetailsMessage()}>Detalhes</button>
       </td>

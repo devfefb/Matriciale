@@ -27,25 +27,6 @@ export const TASK_TYPES = {
   }
 };
 
-// Função para gerar tarefas aleatórias para um dia
-export const generateRandomTasks = () => {
-  const numTasks = Math.floor(Math.random() * 3); // 0 a 2 tarefas
-  if (numTasks === 0) return [];
-
-  const taskTypes = Object.values(TASK_TYPES);
-  const tasks = [];
-
-  for (let i = 0; i < numTasks; i++) {
-    const taskType = taskTypes[Math.floor(Math.random() * taskTypes.length)];
-    tasks.push({
-      id: `${Date.now()}-${i}`,
-      ...taskType
-    });
-  }
-
-  return tasks;
-};
-
 // Função para obter a semana atual (segunda a sexta)
 export const getCurrentWeek = () => {
   const today = new Date();
@@ -66,7 +47,7 @@ export const getCurrentWeek = () => {
       day: dayNames[i],
       date: date.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' }),
       fullDate: date,
-      tasks: generateRandomTasks()
+      tasks: []
     });
   }
   

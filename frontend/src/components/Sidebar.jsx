@@ -14,12 +14,13 @@ function Sidebar(){
     return(
         <nav className={styles.sidebar}>
             <Link to="/"><div><img src={casa}/></div><p>Página Inicial</p></Link>
+            <Link to="/tarefas"><div><img src={calendario}/></div><p>Tarefas</p></Link>
             <Link to="/gerenciamento"><div><img src={remedio}/></div><p>Visualizar<br/>Medicamento</p></Link>
             {/* <Link to="" ><div><img src={farmacia}/></div><p>Visualizar<br/>Farmácias</p></Link> */}
             <Link to="/relatorio"><div><img src={relatorio}/></div><p>Relatórios</p></Link>
             {/* <Link to="/documentos"><div><img src={relatorio}/></div><p>Documentos</p></Link> */}
             <Link to="/calendar"><div><img src={calendario}/></div><p>Agenda</p></Link>
-            <Link to="/users/pacientes"><div><img src={medico}/></div><p>Pacientes</p></Link>
+            {/* <Link to="/users/pacientes"><div><img src={medico}/></div><p>Pacientes</p></Link> */}
             <Link to="/conversor"><div><img src={relatorio}/></div><p>Conversor</p></Link>
         </nav>
     )

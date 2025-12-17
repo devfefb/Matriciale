@@ -100,20 +100,19 @@ const MedicineTable = () => {
       <p className="main-title">
         Busca por Medicamentos no Município {municipality ? `- ${municipality}` : ''}
       </p>
-      <div className="title-controls-legends-container">
-        <div className="title-controls-container">
-          <div className="controls-container">
-            <SearchBar
-              onSearch={setSearchTerm}
-              onColorFilter={setColorFilter}
-              onClassFilter={setClassFilter}
-            />
-          </div>
-        </div>
+      
+      {/* Legenda ocupando toda a largura */}
+      <div className="legend-section">
+        <ColorLegend />
+      </div>
 
-        <div>
-          <ColorLegend />
-        </div>
+      {/* Filtros e busca numa linha só */}
+      <div className="filters-section">
+        <SearchBar
+          onSearch={setSearchTerm}
+          onColorFilter={setColorFilter}
+          onClassFilter={setClassFilter}
+        />
       </div>
 
       <hr className="linha-divisao" />

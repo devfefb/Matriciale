@@ -5,6 +5,7 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Users from '../pages/Users';
 import Dashboard from '../pages/Dashboard';
+import Tarefas from '../pages/Tarefas';
 import Relatorio from '../pages/Relatorio';
 import Gerenciamento from '../pages/Gerenciamento';
 import ConversorArquivos from '../pages/ConversorArquivos';
@@ -49,6 +50,14 @@ export default function AppRoutes() {
         }
       />
       <Route
+        path="/tarefas"
+        element={
+          <PrivateRoute>
+            <Tarefas />
+          </PrivateRoute>
+        }
+      />
+      <Route
         path="/users"
         element={
           <PrivateRoute>
@@ -56,14 +65,14 @@ export default function AppRoutes() {
           </PrivateRoute>
         }
       />
-      <Route
+      {/* <Route
         path="/users/pacientes"
         element={
           <PrivateRoute>
             <Pacientes />
           </PrivateRoute>
         }
-      />
+      /> */}
       <Route
         path="/conversor"
         element={
