@@ -35,6 +35,7 @@ export class MedicineService {
     const medicines = await this.medicineRepository.getMedicinesByUnit(municipio, 'CAF');
 
     const mappedMedicines = medicines.map((med: any) => {
+      
       const status = med.metodo ? (med.estoque / med.metodo) : 0;
       return {
         id: med.id,
@@ -45,7 +46,9 @@ export class MedicineService {
         tp_unidade_medicamento: med.tp_unidade_medicamento,
         estoque: med.estoque,
         status: med.estoque === 0 ? 0 : status,
-        metodo: med.metodo
+        metodo: med.metodo,
+        // Indica se é inativo para facilitar a classificação no frontend
+        isInativo: med.tp_metodo === "3.INATIVOS"
       };
     });
 

@@ -47,7 +47,8 @@ const MedicineTable = () => {
           unidade: med.tp_unidade_medicamento,
           qtdAtual: med.estoque,
           metodo: med.metodo,
-          status: med.status
+          status: med.status,
+          isInativo: med.isInativo || med.tp_metodo === "3.INATIVOS"
         }));
 
         setMedicines(mappedMedicines);
@@ -61,18 +62,37 @@ const MedicineTable = () => {
     fetchMedicines();
   }, [user]);
 
-  const getStatusClass = (status) => {
-    if (status === 0) return 'zerado';
+  // Nova função de classificação detalhada
+  const getStatusClass = (medicine) => {
+    const { status, isInativo } = medicine;
+    
+    // Categoria Roxo: Itens Zerados
+    if (status === 0) {
+      if (isInativo) {
+        return 'zerado-inativo'; // Roxo escuro
+      }
+      return 'zerado-dispensacao'; // Roxo atual
+    }
+    
+    // Categorias normais (0-16 semanas)
     if (status <= 4) return 'quatro-semanas';
     if (status <= 8) return 'oito-semanas';
     if (status <= 12) return 'doze-semanas';
-    if (status <= 16) return 'dezesseis-semanas';
-    return 'mais-dezesseis-semanas';
+    if (status <= 16) {
+      if (isInativo) {
+        return 'dezesseis-semanas-inativo'; // Alerta especial
+      }
+      return 'dezesseis-semanas';
+    }
+    
+    // Categoria Acima de 16 Semanas
+    if (status <= 52) return 'azul-claro'; // 16-52 semanas
+    return 'azul-escuro'; // 52+ semanas
   };
 
   const filteredMedicines = medicines
     .filter(med => med.nome.toLowerCase().includes(searchTerm.toLowerCase()))
-    .filter(med => !colorFilter || getStatusClass(med.status) === colorFilter)
+    .filter(med => !colorFilter || getStatusClass(med) === colorFilter)
     .filter(med => !classFilter || med.classificacaoItem === classFilter);
 
   return (

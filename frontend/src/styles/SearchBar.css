@@ -98,3 +98,27 @@
 .filter-dropdown li:hover {
   background-color: #B1AFAA;
 }
+
+/* Categoria de filtro (títulos) */
+.filter-dropdown li.filter-category {
+  font-weight: 600;
+  font-size: 15px;
+  color: #0D92F4;
+  background-color: #D5D2CC;
+  cursor: default;
+  padding: 6px 12px;
+  margin-top: 4px;
+}
+
+.filter-dropdown li.filter-category:hover {
+  background-color: #D5D2CC;
+}
+
+.filter-dropdown li.filter-category:first-child {
+  margin-top: 0;
+}
+
+/* Indentação para itens de filtro */
+.filter-indent {
+  padding-left: 12px;
+}

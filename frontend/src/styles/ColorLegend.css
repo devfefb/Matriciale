@@ -9,22 +9,43 @@
 
 .color-legend {
   background-color: #E6E3DC;
-  min-width: 300px;
+  min-width: 320px;
   border-radius: 15px;
   height: 100%;
   border: 2px solid #D5D2CC;
+  padding: 10px;
 }
 
 .titulo-legenda{
-  width: 274px;
-  height: 25px;
+  width: 100%;
   text-align: center;
-  margin-left: 13px;
   color: #0D92F4;
   font-weight: 700;
   font-size: 18px;
-  margin-top: 7px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
+}
+
+.legend-category {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #D5D2CC;
+}
+
+.legend-category:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.categoria-titulo {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2A2928;
+  margin-bottom: 6px;
+  margin-left: 5px;
+}
+
+.categoria-titulo.alerta {
+  color: #FF6F00;
 }
 
 .legend-items {
@@ -32,64 +53,85 @@
   display: flex;
   gap: 12px;
   align-items: center;
-  width: 284px;
-  height: 27px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
 }
 
 .legend-item {
   display: flex;
   align-items: center;
-  width: 134px;
+  width: auto;
+  min-width: 130px;
   gap: 7px;
   background-color: transparent;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 14px;
 }
 
-.color-circle1 {
+/* Base para todos os círculos */
+[class*="color-circle"] {
   width: 17px;   
   height: 17px;
   border-radius: 50%;  
   display: inline-block;
-  background-color: #8D2ABB8A;
-} 
+  flex-shrink: 0;
+}
 
+/* Categoria Roxo - Itens Zerados */
+.color-circle-zerado-inativo {
+  background-color: #6A1B9A; /* Roxo escuro */
+}
+
+.color-circle-zerado-dispensacao {
+  background-color: #8D2ABB; /* Roxo médio */
+}
+
+/* Categorias Normais */
 .color-circle2 {
-  width: 17px;   
-  height: 17px;
-  border-radius: 50%;  
-  display: inline-block;
-  background-color: #C5262678;
-} 
+  background-color: #C5262678; /* 4 semanas */
+}
 
 .color-circle3 {
-  width: 17px;   
-  height: 17px;
-  border-radius: 50%;  
-  display: inline-block;
-  background-color: #F4660070;
-} 
+  background-color: #F4660070; /* 8 semanas */
+}
 
 .color-circle4 {
-  width: 17px;   
-  height: 17px;
-  border-radius: 50%;  
-  display: inline-block;
-  background-color: #379A1352;
-} 
+  background-color: #379A1352; /* 12 semanas */
+}
 
 .color-circle5 {
-  width: 17px;   
-  height: 17px;
-  border-radius: 50%;  
-  display: inline-block;
-  background-color: #005E0070;
-} 
+  background-color: #005E0070; /* 16 semanas */
+}
+
+/* Categoria Acima de 16 Semanas */
+.color-circle-azul-claro {
+  background-color: #64B5F6; /* 16-52 semanas */
+}
+
+.color-circle-azul-escuro {
+  background-color: #1565C0; /* >52 semanas */
+}
+
+/* Alerta Especial */
+.color-circle-alerta {
+  background-color: #FFB300; /* 16 semanas inativo */
+  animation: pulse-circle 2s infinite;
+}
+
+@keyframes pulse-circle {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 179, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(255, 179, 0, 0);
+  }
+}
+
+/* Mantém compatibilidade */
+.color-circle1 {
+  background-color: #8D2ABB8A;
+}
 
 .color-circle6 {
-  width: 17px;   
-  height: 17px;
-  border-radius: 50%;  
-  display: inline-block;
   background-color: #136EF882;
 } 

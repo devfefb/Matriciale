@@ -26,31 +26,55 @@ const StockChart = () => {
         }
 
         const statusCounts = {
-          'Zerado': 0,
+          'Zerado Inativo': 0,
+          'Zerado c/ Dispensação': 0,
           '4 Semanas': 0,
           '8 Semanas': 0,
           '12 Semanas': 0,
           '16 Semanas': 0,
-          '> 16 Semanas': 0
+          '16 Sem. Inativo (Alerta)': 0,
+          '16-52 Semanas': 0,
+          '> 52 Semanas': 0
         };
 
         medicines.forEach(med => {
           const status = med.status;
-          if (status === 0) statusCounts['Zerado']++;
+          const isInativo = med.isInativo || med.tp_metodo === "3.INATIVOS";
+          
+          // Categoria Roxo: Itens Zerados
+          if (status === 0) {
+            if (isInativo) {
+              statusCounts['Zerado Inativo']++;
+            } else {
+              statusCounts['Zerado c/ Dispensação']++;
+            }
+          }
+          // Categorias normais (0-16 semanas)
           else if (status <= 4) statusCounts['4 Semanas']++;
           else if (status <= 8) statusCounts['8 Semanas']++;
           else if (status <= 12) statusCounts['12 Semanas']++;
-          else if (status <= 16) statusCounts['16 Semanas']++;
-          else statusCounts['> 16 Semanas']++;
+          else if (status <= 16) {
+            if (isInativo) {
+              statusCounts['16 Sem. Inativo (Alerta)']++;
+            } else {
+              statusCounts['16 Semanas']++;
+            }
+          }
+          // Categoria Acima de 16 Semanas
+          else if (status <= 52) statusCounts['16-52 Semanas']++;
+          else statusCounts['> 52 Semanas']++;
         });
 
         const chartData = [
-          { label: 'Zerado', value: statusCounts['Zerado'], color: '#F44336' },
-          { label: '4 Semanas', value: statusCounts['4 Semanas'], color: '#FF9800' },
-          { label: '8 Semanas', value: statusCounts['8 Semanas'], color: '#FFC107' },
-          { label: '12 Semanas', value: statusCounts['12 Semanas'], color: '#8BC34A' },
+          { label: 'Zerado Inativo', value: statusCounts['Zerado Inativo'], color: '#6A1B9A' },
+          { label: 'Zerado c/ Dispensação', value: statusCounts['Zerado c/ Dispensação'], color: '#8D2ABB' },
+          { label: '4 Semanas', value: statusCounts['4 Semanas'], color: '#F44336' },
+          { label: '8 Semanas', value: statusCounts['8 Semanas'], color: '#FF9800' },
+          { label: '12 Semanas', value: statusCounts['12 Semanas'], color: '#FFC107' },
           { label: '16 Semanas', value: statusCounts['16 Semanas'], color: '#4CAF50' },
-          { label: '> 16 Semanas', value: statusCounts['> 16 Semanas'], color: '#1565C0' },
+          { label: '16 Sem. Inativo (Alerta)', value: statusCounts['16 Sem. Inativo (Alerta)'], color: '#FFB300' },
+          { label: '16-52 Semanas', value: statusCounts['16-52 Semanas'], color: '#64B5F6' },
+          { label: '> 52 Semanas', value: statusCounts['> 52 Semanas'], color: '#1565C0' },
         ].filter(item => item.value > 0);
 
         setData(chartData);

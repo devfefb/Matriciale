@@ -18,12 +18,48 @@
   font-size: 20.75px;
 }
 
-.zerado { background-color: #8D2ABB8A; }
+/* Categoria Roxo - Itens Zerados */
+.zerado-inativo { 
+  background-color: #6A1B9A; /* Roxo escuro - Zerado Inativo */
+}
+.zerado-dispensacao { 
+  background-color: #8D2ABB8A; /* Roxo original - Zerado com Dispensação */
+}
+
+/* Categorias Normais (0-16 semanas) */
 .quatro-semanas { background-color: #C5262678; }
 .oito-semanas { background-color: #F4660070; }
 .doze-semanas { background-color: #379A1352; }
 .dezesseis-semanas { background-color: #005E0070; }
+
+/* 16 Semanas Inativo - Alerta Especial */
+.dezesseis-semanas-inativo { 
+  background-color: #FFB300; /* Amarelo/Laranja - Alerta de possível vencimento */
+  animation: pulse-alert 2s infinite;
+}
+
+/* Categoria Acima de 16 Semanas */
+.azul-claro { 
+  background-color: #64B5F6; /* Azul claro - 16 a 52 semanas */
+}
+.azul-escuro { 
+  background-color: #1565C0; /* Azul escuro - Acima de 52 semanas */
+  color: white;
+}
+
+/* Animação para itens com alerta */
+@keyframes pulse-alert {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Mantém compatibilidade com código antigo */
 .mais-dezesseis-semanas { background-color: #136EF882; }
+.zerado { background-color: #8D2ABB8A; }
 
 .medicineInfo {
   background-color: #5E17EB21;

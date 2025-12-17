@@ -47,12 +47,45 @@ const SearchBar = ({ onSearch, onColorFilter, onClassFilter }) => {
           {showColorFilter && (
             <ul className="filter-dropdown">
               <li onClick={() => handleColorFilter("", "Filtrar por cor")}>Todos</li>
-              <li onClick={() => handleColorFilter("zerado", "Zerado")}>Zerado</li>
-              <li onClick={() => handleColorFilter("quatro-semanas", "4 Semanas")}>4 Semanas</li>
-              <li onClick={() => handleColorFilter("oito-semanas", "8 Semanas")}>8 Semanas</li>
-              <li onClick={() => handleColorFilter("doze-semanas", "12 Semanas")}>12 Semanas</li>
-              <li onClick={() => handleColorFilter("dezesseis-semanas", "16 Semanas")}>16 Semanas</li>
-              <li onClick={() => handleColorFilter("mais-dezesseis-semanas", "+16 Semanas")}>+16 Semanas</li>
+              
+              {/* Categoria Roxo - Itens Zerados */}
+              <li className="filter-category">Itens Zerados</li>
+              <li onClick={() => handleColorFilter("zerado-inativo", "Zerado Inativo")}>
+                <span className="filter-indent">Zerado Inativo</span>
+              </li>
+              <li onClick={() => handleColorFilter("zerado-dispensacao", "Zerado c/ Dispensação")}>
+                <span className="filter-indent">Zerado c/ Dispensação</span>
+              </li>
+              
+              {/* Categorias Normais */}
+              <li className="filter-category">Estoque Normal</li>
+              <li onClick={() => handleColorFilter("quatro-semanas", "4 Semanas")}>
+                <span className="filter-indent">4 Semanas</span>
+              </li>
+              <li onClick={() => handleColorFilter("oito-semanas", "8 Semanas")}>
+                <span className="filter-indent">8 Semanas</span>
+              </li>
+              <li onClick={() => handleColorFilter("doze-semanas", "12 Semanas")}>
+                <span className="filter-indent">12 Semanas</span>
+              </li>
+              <li onClick={() => handleColorFilter("dezesseis-semanas", "16 Semanas")}>
+                <span className="filter-indent">16 Semanas</span>
+              </li>
+              
+              {/* Categoria Alto Estoque */}
+              <li className="filter-category">Alto Estoque</li>
+              <li onClick={() => handleColorFilter("azul-claro", "16-52 Semanas")}>
+                <span className="filter-indent">16-52 Semanas</span>
+              </li>
+              <li onClick={() => handleColorFilter("azul-escuro", "+52 Semanas")}>
+                <span className="filter-indent">+52 Semanas</span>
+              </li>
+              
+              {/* Alertas */}
+              <li className="filter-category">Alertas</li>
+              <li onClick={() => handleColorFilter("dezesseis-semanas-inativo", "16 Sem. Inativo (Alerta)")}>
+                <span className="filter-indent">16 Sem. Inativo</span>
+              </li>
             </ul>
           )}
         </div>
