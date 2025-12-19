@@ -26,6 +26,9 @@ yarn-error.log*
 logs
 *.log
 
+# Output files (relatórios, testes, etc)
+/src/scripts/**/output/*
+
 # System Files
 .DS_Store
 Thumbs.db

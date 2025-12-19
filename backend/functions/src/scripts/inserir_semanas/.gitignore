@@ -1,0 +1,10 @@
+# Ignore output files
+output/
+*.json
+!package.json
+
+# Ignore Excel files (except samples)
+*.xlsx
+*.xls
+!*_sample.xlsx
+

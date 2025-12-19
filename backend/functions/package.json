@@ -13,7 +13,6 @@
     
     "inserir-dados": "ts-node src/scripts/executar-insercao.ts",
     "validar-dados": "ts-node src/scripts/executar-validacao.ts",
-    "calcular-campos": "ts-node src/scripts/calculos/executar-calculos.ts",
     "inserir-semana": "ts-node src/scripts/auxiliar/executar-inserir-semana.ts",
     "preencher-nulos": "ts-node src/scripts/utils/executar-preencher-nulos.ts",
     "extrair-campos-calculados": "ts-node src/scripts/auxiliar/executar-extrair-campos-calculados.ts",
@@ -24,8 +23,13 @@
     "download-storage": "ts-node src/scripts/utils/executar-download.ts",
     "adicionar-cod-item": "ts-node src/scripts/utils/executar-adicionar-cod-item.ts",
     "script-deletar-medicamentos": "ts-node src/scripts/testes/script.ts",
+    "atualizar-movimentacoes": "ts-node src/scripts/inserir_semanas/executar-atualizacao.ts",
+    "reprocessar-nao-encontrados": "ts-node src/scripts/inserir_semanas/executar-reprocessamento.ts",
+    "limpar-duplicados": "ts-node src/scripts/inserir_semanas/executar-limpeza.ts",
 
-    "remover-espurios": "ts-node src/scripts/utils/remover_campos_indesejados.ts"
+    "remover-espurios": "ts-node src/scripts/utils/remover_campos_indesejados.ts",
+
+    "calcular-campos": "ts-node \"src/scripts/testes/[MAIN] executar-calculos.ts\""
   },
   "engines": {
     "node": "20"
