@@ -4,23 +4,40 @@ import * as XLSX from 'xlsx';
 // Função melhorada para extrair nome da unidade do arquivo
 export const extrairNomeUnidade = (nomeArquivo) => {
   console.log(`🔍 [EXTRAÇÃO] Processando arquivo: ${nomeArquivo}`);
+  
+  // Padrões ordenados por especificidade (mais específicos primeiro)
   const patterns = [
+    // Novos formatos: "Balancete CAF 20251123" ou "Movimentação CAF 20251123"
+    /(?:balancete|movimenta[cç][aã]o|moviment)\s+([A-Za-z0-9]+)\s+\d{8}/i,
+    
+    // Formatos existentes: "movimentacao CAF" ou "balancete CAF"
     /movimentac[aã]o\s+([A-Za-z0-9]+)/i,
     /balancete\s+([A-Za-z0-9]+)/i,
     /moviment\s+([A-Za-z0-9]+)/i,
+    
+    // Formatos com datas: "CAF 01-06" ou "CAF_01-06"
     /([A-Za-z0-9]+)\s+\d{2}-\d{2}/i,
     /([A-Za-z0-9]+)[-_]\d{2}-\d{2}/i,
+    
+    // Formatos com datas: "CAF 01/06"
     /([A-Za-z0-9]+)\s*\d{2}\/\d{2}/i,
+    
+    // Formato com data YYYYMMDD no final: "CAF 20251123"
+    /([A-Za-z0-9]+)\s+\d{8}/i,
+    
+    // Último recurso: pegar qualquer sequência alfanumérica
     /([A-Za-z0-9]+)$/i
   ];
+  
   for (const pattern of patterns) {
     const match = nomeArquivo.match(pattern);
     if (match && match[1] && match[1].length >= 2) {
       const unidade = match[1].toUpperCase().trim();
-      console.log(`✅ [EXTRAÇÃO] Unidade encontrada: ${unidade}`);
+      console.log(`✅ [EXTRAÇÃO] Unidade encontrada: ${unidade} (padrão: ${pattern})`);
       return unidade;
     }
   }
+  
   const fallback = nomeArquivo.replace(/\.(xlsx|xls|csv)$/i, '').replace(/[^A-Za-z0-9]/g, '').toUpperCase() || 'DESCONHECIDO';
   console.log(`⚠️ [EXTRAÇÃO] Usando fallback: ${fallback}`);
   return fallback;
@@ -34,6 +51,57 @@ export const determinarTipoArquivo = (nomeArquivo) => {
   } else if (nome.includes('balancete') || nome.includes('balance')) {
     return 'balancete';
   }
+  return null;
+};
+
+// Função para extrair data do nome do arquivo (formato YYYYMMDD)
+export const extrairDataDoNomeArquivo = (nomeArquivo) => {
+  console.log(`📅 [EXTRAÇÃO DATA] Processando arquivo: ${nomeArquivo}`);
+  
+  // Padrão para data no formato YYYYMMDD (ex: 20251123)
+  const patternData = /\d{8}/;
+  const match = nomeArquivo.match(patternData);
+  
+  if (match) {
+    const dataStr = match[0];
+    const ano = dataStr.substring(0, 4);
+    const mes = dataStr.substring(4, 6);
+    const dia = dataStr.substring(6, 8);
+    
+    // Validar se é uma data válida
+    const data = new Date(parseInt(ano), parseInt(mes) - 1, parseInt(dia));
+    if (data.getFullYear() == ano && 
+        data.getMonth() == parseInt(mes) - 1 && 
+        data.getDate() == parseInt(dia)) {
+      const dataFormatada = `${dia}/${mes}/${ano}`;
+      console.log(`✅ [EXTRAÇÃO DATA] Data encontrada: ${dataFormatada} (formato YYYYMMDD: ${dataStr})`);
+      return {
+        dataFormatada,
+        dataOriginal: dataStr,
+        dataObjeto: data
+      };
+    } else {
+      console.log(`⚠️ [EXTRAÇÃO DATA] Data inválida encontrada: ${dataStr}`);
+    }
+  }
+  
+  // Tentar outros formatos de data comuns
+  const patternDDMMYYYY = /(\d{2})[\/\-](\d{2})[\/\-](\d{4})/;
+  const matchDDMMYYYY = nomeArquivo.match(patternDDMMYYYY);
+  if (matchDDMMYYYY) {
+    const dia = matchDDMMYYYY[1];
+    const mes = matchDDMMYYYY[2];
+    const ano = matchDDMMYYYY[3];
+    const dataFormatada = `${dia}/${mes}/${ano}`;
+    console.log(`✅ [EXTRAÇÃO DATA] Data encontrada: ${dataFormatada} (formato DD/MM/YYYY)`);
+    return {
+      dataFormatada,
+      dataOriginal: `${dia}${mes}${ano}`,
+      dataObjeto: new Date(parseInt(ano), parseInt(mes) - 1, parseInt(dia))
+    };
+  }
+  
+  console.log(`⚠️ [EXTRAÇÃO DATA] Nenhuma data encontrada no nome do arquivo`);
   return null;
 };
 

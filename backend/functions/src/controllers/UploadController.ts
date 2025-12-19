@@ -559,6 +559,61 @@ export class UploadController {
     }
   }
 
+  /**
+   * NOVO - Executar cálculos manualmente
+   * Executa os cálculos de campos calculados para um município
+   */
+  async executarCalculos(req: Request, res: Response) {
+    console.log('🧮 [EXECUTAR CALCULOS] Endpoint chamado');
+    
+    try {
+      const { municipio } = req.body;
+      
+      // Validar parâmetro
+      if (!municipio) {
+        return res.status(400).json({
+          status: 'error',
+          message: 'Parâmetro "municipio" é obrigatório',
+          exemplo: { municipio: 'Palmares' }
+        });
+      }
+
+      console.log(`🧮 Iniciando cálculos para município: ${municipio}`);
+      
+      // Importar e executar função de cálculos
+      const { atualizarCamposCalculadosNoFirestore } = require('../scripts/testes/[MAIN] executar-calculos');
+      
+      const resultado = await atualizarCamposCalculadosNoFirestore(municipio);
+      
+      console.log(`✅ Cálculos concluídos com sucesso!`);
+      console.log(`📊 Total processados: ${resultado.totalProcessados}`);
+      console.log(`✅ Sucessos: ${resultado.totalSucessos}`);
+      console.log(`❌ Erros: ${resultado.totalErros}`);
+      
+      return res.status(200).json({
+        status: 'success',
+        message: 'Cálculos executados com sucesso',
+        data: {
+          municipio,
+          total_processados: resultado.totalProcessados,
+          total_sucessos: resultado.totalSucessos,
+          total_erros: resultado.totalErros,
+          taxa_sucesso: `${((resultado.totalSucessos / resultado.totalProcessados) * 100).toFixed(2)}%`
+        },
+        timestamp: new Date().toISOString()
+      });
+      
+    } catch (error: any) {
+      console.error('❌ [EXECUTAR CALCULOS] Erro:', error);
+      return res.status(500).json({
+        status: 'error',
+        message: 'Erro ao executar cálculos',
+        details: error.message,
+        stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+      });
+    }
+  }
+
   // ============ MÉTODOS PRIVADOS (CORE DO SISTEMA) ============
 
   /**
@@ -575,30 +630,31 @@ export class UploadController {
     semana_calculada?: string;
   }> {
     try {
-      console.log(`⚠️ [FIRESTORE DESATIVADO] Simulando processamento para ${municipio}/${inventoryData.unidade}`);
+      console.log(`💾 [FIRESTORE ATIVO] Processando dados para ${municipio}/${inventoryData.unidade}`);
       
-      // 1. Extrair nome da unidade
-      const nomeUnidade = inventoryData.unidade || inventoryData.unidade_info?.nome || 'DESCONHECIDO';
+      // Importar função de atualização
+      const { atualizarEstoqueEMovimentacaoSemanal } = require('../scripts/inserir_semanas/atualizar-estoque-movimentacao');
       
-      // 2. Calcular semana baseada no período (sem salvar)
-      const semanaCalculada = this.calcularSemanaMovimentacao(
-        inventoryData.periodo_inicio, 
-        inventoryData.periodo_fim
-      );
+      // Chamar função de atualização
+      const resultado = await atualizarEstoqueEMovimentacaoSemanal(inventoryData, municipio);
       
-      console.log(`📅 [FIRESTORE DESATIVADO] Semana calculada: ${semanaCalculada}`);
-      console.log(`💾 [FIRESTORE DESATIVADO] Total itens: ${inventoryData.itens?.length || 0}`);
-      console.log(`⚠️ [FIRESTORE DESATIVADO] BANCO NÃO FOI MODIFICADO - apenas simulação`);
+      if (!resultado.sucesso) {
+        throw new Error(resultado.erro || 'Erro ao atualizar dados no Firestore');
+      }
       
-      // Simular salvamento bem-sucedido sem tocar no banco
+      console.log(`✅ [FIRESTORE ATIVO] Dados salvos com sucesso!`);
+      console.log(`📊 Medicamentos atualizados: ${resultado.medicamentos_atualizados}`);
+      console.log(`📊 Medicamentos zerados: ${resultado.medicamentos_zerados}`);
+      console.log(`📅 Semana calculada: ${resultado.semana_calculada}`);
+      
       return {
         sucesso: true,
-        medicamentos_processados: inventoryData.itens?.length || 0,
-        semana_calculada: semanaCalculada
+        medicamentos_processados: resultado.medicamentos_atualizados + resultado.medicamentos_zerados,
+        semana_calculada: resultado.semana_calculada
       };
       
     } catch (error) {
-      console.error(`❌ [FIRESTORE DESATIVADO] Erro na simulação:`, error);
+      console.error(`❌ [FIRESTORE ATIVO] Erro ao processar dados:`, error);
       return {
         sucesso: false,
         erro: error instanceof Error ? error.message : 'Erro desconhecido'

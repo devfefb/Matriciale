@@ -68,8 +68,7 @@ export async function atualizarCamposCalculadosNoFirestore(municipioId: string):
             "maximo": camposCalculados.maximo,
             "metodo": camposCalculados.metodo,
             "met_est": camposCalculados.metEst,
-            "
-            ": camposCalculados.estoque,
+            "estoque": camposCalculados.estoque,
             "reposicao": camposCalculados.reposicao,
             "tp_metodo": camposCalculados.tp_metodo,
 

@@ -241,6 +241,7 @@ const UploadSemanal = () => {
     setCalcResult(null);
     setCalcLoading(true);
     try {
+      // Verificar se todas as unidades têm dados processados
       const resp = await api.get('/upload/check-completeness', { params: { municipio } });
       const data = resp?.data?.data;
       if (!data) {
@@ -253,12 +254,20 @@ const UploadSemanal = () => {
         return;
       }
 
-      // Chamada para o novo endpoint de cálculo real
-      const calculoResp = await api.post('/calculos/executar', { municipio });
-      setCalcResult(calculoResp?.data || null);
+      // Chamada para o novo endpoint de cálculo
+      console.log('🧮 Executando cálculos para município:', municipio);
+      const calculoResp = await api.post('/upload/executar-calculos', { municipio });
+      
+      if (calculoResp?.data?.status === 'success') {
+        console.log('✅ Cálculos executados com sucesso:', calculoResp.data);
+        setCalcResult(calculoResp.data.data);
+      } else {
+        throw new Error(calculoResp?.data?.message || 'Erro ao executar cálculos');
+      }
 
     } catch (e) {
-      setCalcError(e?.response?.data?.error || e.message || 'Erro ao executar cálculo');
+      console.error('❌ Erro ao executar cálculos:', e);
+      setCalcError(e?.response?.data?.message || e?.response?.data?.error || e.message || 'Erro ao executar cálculo');
     } finally {
       setCalcLoading(false);
     }
@@ -444,9 +453,11 @@ const UploadSemanal = () => {
               Data: {new Date().toLocaleString('pt-BR')}
             </div>
             <div style={{ marginTop: '6px', fontSize: '14px' }}>
-              <div><strong>Total Processados:</strong> {calcResult?.totalProcessados ?? 0}</div>
-              <div><strong>Sucessos:</strong> {calcResult?.totalSucessos ?? 0}</div>
-              <div><strong>Erros:</strong> {calcResult?.totalErros ?? 0}</div>
+              <div><strong>Município:</strong> {calcResult?.municipio ?? selectedMunicipio}</div>
+              <div><strong>Total Processados:</strong> {calcResult?.total_processados ?? 0}</div>
+              <div><strong>Sucessos:</strong> {calcResult?.total_sucessos ?? 0}</div>
+              <div><strong>Erros:</strong> {calcResult?.total_erros ?? 0}</div>
+              <div><strong>Taxa de Sucesso:</strong> {calcResult?.taxa_sucesso ?? '0%'}</div>
             </div>
           </div>
         )}

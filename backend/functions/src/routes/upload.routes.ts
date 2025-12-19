@@ -34,7 +34,7 @@ router.post('/processar-cloud-storage', uploadController.processarArquivoCloudSt
 /**
  * NOVO - Executar cálculos manualmente
  */
-// router.post('/executar-calculos', uploadController.executarCalculos.bind(uploadController));
+router.post('/executar-calculos', uploadController.executarCalculos.bind(uploadController));
 
 /**
  * NOVO - Status do processamento
