@@ -29,55 +29,90 @@ const StockChart = () => {
         }
 
         const statusCounts = {
-          'Zerado Inativo': 0,
-          'Zerado c/ Dispensação': 0,
-          '4 Semanas': 0,
-          '8 Semanas': 0,
-          '12 Semanas': 0,
-          '16 Semanas': 0,
-          '16 Sem. Inativo (Alerta)': 0,
-          '16-52 Semanas': 0,
-          '> 52 Semanas': 0
+          'INATIVOS ZERADOS': 0,
+          'ZERADOS COM DISPENSAÇÕES': 0,
+          'ATÉ UM MÊS DE ESTOQUE': 0,
+          'ATÉ DOIS MESES DE ESTOQUE': 0,
+          'ATÉ TRÊS MESES DE ESTOQUE': 0,
+          'ATÉ QUATRO MESES DE ESTOQUE': 0,
+          'ATÉ DOZE MESES DE ESTOQUE': 0,
+          'ACIMA DE DOZE MESES DE ESTOQUE': 0,
+          'INATIVOS COM ESTOQUES': 0
         };
 
         medicines.forEach(med => {
           const status = med.status;
           const isInativo = med.isInativo || med.tp_metodo === "3.INATIVOS";
           
-          // Categoria Roxo: Itens Zerados
+          // Categoria: Itens Zerados
           if (status === 0) {
             if (isInativo) {
-              statusCounts['Zerado Inativo']++;
+              statusCounts['INATIVOS ZERADOS']++;
             } else {
-              statusCounts['Zerado c/ Dispensação']++;
+              statusCounts['ZERADOS COM DISPENSAÇÕES']++;
             }
           }
-          // Categorias normais (0-16 semanas)
-          else if (status <= 4) statusCounts['4 Semanas']++;
-          else if (status <= 8) statusCounts['8 Semanas']++;
-          else if (status <= 12) statusCounts['12 Semanas']++;
+          // Categorias por meses de estoque (1 mês = 4 semanas)
+          // ATÉ UM MÊS (até 4 semanas)
+          else if (status <= 4) {
+            if (isInativo) {
+              statusCounts['INATIVOS COM ESTOQUES']++;
+            } else {
+              statusCounts['ATÉ UM MÊS DE ESTOQUE']++;
+            }
+          }
+          // ATÉ DOIS MESES (5-8 semanas)
+          else if (status <= 8) {
+            if (isInativo) {
+              statusCounts['INATIVOS COM ESTOQUES']++;
+            } else {
+              statusCounts['ATÉ DOIS MESES DE ESTOQUE']++;
+            }
+          }
+          // ATÉ TRÊS MESES (9-12 semanas)
+          else if (status <= 12) {
+            if (isInativo) {
+              statusCounts['INATIVOS COM ESTOQUES']++;
+            } else {
+              statusCounts['ATÉ TRÊS MESES DE ESTOQUE']++;
+            }
+          }
+          // ATÉ QUATRO MESES (13-16 semanas)
           else if (status <= 16) {
             if (isInativo) {
-              statusCounts['16 Sem. Inativo (Alerta)']++;
+              statusCounts['INATIVOS COM ESTOQUES']++;
             } else {
-              statusCounts['16 Semanas']++;
+              statusCounts['ATÉ QUATRO MESES DE ESTOQUE']++;
             }
           }
-          // Categoria Acima de 16 Semanas
-          else if (status <= 52) statusCounts['16-52 Semanas']++;
-          else statusCounts['> 52 Semanas']++;
+          // ATÉ DOZE MESES (17-52 semanas)
+          else if (status <= 52) {
+            if (isInativo) {
+              statusCounts['INATIVOS COM ESTOQUES']++;
+            } else {
+              statusCounts['ATÉ DOZE MESES DE ESTOQUE']++;
+            }
+          }
+          // ACIMA DE DOZE MESES (> 52 semanas)
+          else {
+            if (isInativo) {
+              statusCounts['INATIVOS COM ESTOQUES']++;
+            } else {
+              statusCounts['ACIMA DE DOZE MESES DE ESTOQUE']++;
+            }
+          }
         });
 
         const chartData = [
-          { label: 'Zerado Inativo', value: statusCounts['Zerado Inativo'], color: '#6A1B9A' },
-          { label: 'Zerado c/ Dispensação', value: statusCounts['Zerado c/ Dispensação'], color: '#8D2ABB' },
-          { label: '4 Semanas', value: statusCounts['4 Semanas'], color: '#F44336' },
-          { label: '8 Semanas', value: statusCounts['8 Semanas'], color: '#FF9800' },
-          { label: '12 Semanas', value: statusCounts['12 Semanas'], color: '#FFC107' },
-          { label: '16 Semanas', value: statusCounts['16 Semanas'], color: '#4CAF50' },
-          { label: '16 Sem. Inativo (Alerta)', value: statusCounts['16 Sem. Inativo (Alerta)'], color: '#FFB300' },
-          { label: '16-52 Semanas', value: statusCounts['16-52 Semanas'], color: '#64B5F6' },
-          { label: '> 52 Semanas', value: statusCounts['> 52 Semanas'], color: '#1565C0' },
+          { label: 'INATIVOS ZERADOS', value: statusCounts['INATIVOS ZERADOS'], color: '#CC99FF' },
+          { label: 'ZERADOS COM DISPENSAÇÕES', value: statusCounts['ZERADOS COM DISPENSAÇÕES'], color: '#C00000' },
+          { label: 'ATÉ UM MÊS DE ESTOQUE', value: statusCounts['ATÉ UM MÊS DE ESTOQUE'], color: '#FF0000' },
+          { label: 'ATÉ DOIS MESES DE ESTOQUE', value: statusCounts['ATÉ DOIS MESES DE ESTOQUE'], color: '#FF9900' },
+          { label: 'ATÉ TRÊS MESES DE ESTOQUE', value: statusCounts['ATÉ TRÊS MESES DE ESTOQUE'], color: '#00CC00' },
+          { label: 'ATÉ QUATRO MESES DE ESTOQUE', value: statusCounts['ATÉ QUATRO MESES DE ESTOQUE'], color: '#008000' },
+          { label: 'ATÉ DOZE MESES DE ESTOQUE', value: statusCounts['ATÉ DOZE MESES DE ESTOQUE'], color: '#0000FF' },
+          { label: 'ACIMA DE DOZE MESES DE ESTOQUE', value: statusCounts['ACIMA DE DOZE MESES DE ESTOQUE'], color: '#000099' },
+          { label: 'INATIVOS COM ESTOQUES', value: statusCounts['INATIVOS COM ESTOQUES'], color: '#6600CC' },
         ].filter(item => item.value > 0);
 
         setData(chartData);

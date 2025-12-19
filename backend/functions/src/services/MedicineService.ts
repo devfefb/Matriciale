@@ -36,6 +36,8 @@ export class MedicineService {
 
     const mappedMedicines = medicines.map((med: any) => {
       
+      // [TODO] rever esse calculo com o andre posteriormente, pois há muitos voltando zerado por nao haver metodo talvez?
+      // como é aqui que se escolhe qual o satus, a atenção tem que ser dada para essa parte aqui.
       const status = med.metodo ? (med.estoque / med.metodo) : 0;
       return {
         id: med.id,
