@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import TableHeader from './TableHeader';
 import TableRow from './TableRow';
 import ColorLegend from './ColorLegend';
@@ -8,13 +9,22 @@ import api from '../../services/api';
 import { useAuth } from '../../contexts/AuthContext';
 
 const MedicineTable = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState('');
-  const [colorFilter, setColorFilter] = useState('');
+  const [colorFilter, setColorFilter] = useState(searchParams.get('colorFilter') || '');
   const [classFilter, setClassFilter] = useState("");
   const [medicines, setMedicines] = useState([]);
   const [municipality, setMunicipality] = useState('');
   const [loading, setLoading] = useState(true);
   const { user } = useAuth();
+
+  // Atualiza o filtro quando o parâmetro da URL mudar
+  useEffect(() => {
+    const urlColorFilter = searchParams.get('colorFilter');
+    if (urlColorFilter) {
+      setColorFilter(urlColorFilter);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     const fetchMedicines = async () => {
@@ -38,18 +48,25 @@ const MedicineTable = () => {
 
         setMunicipality(mun);
 
-        const mappedMedicines = fetchedMedicines.map(med => ({
-          id: med.id,
-          codigo: med.cod_item,
-          nome: med.nome,
-          classificacaoItem: med.classificacao,
-          classificacaoModelo: med.tp_metodo,
-          unidade: med.tp_unidade_medicamento,
-          qtdAtual: med.estoque,
-          metodo: med.metodo,
-          status: med.status,
-          isInativo: med.isInativo || med.tp_metodo === "3.INATIVOS"
-        }));
+        const mappedMedicines = fetchedMedicines
+          .map(med => ({
+            id: med.id,
+            codigo: med.cod_item,
+            nome: med.nome,
+            classificacaoItem: med.classificacao,
+            classificacaoModelo: med.tp_metodo,
+            unidade: med.tp_unidade_medicamento,
+            qtdAtual: med.estoque,
+            metodo: med.metodo,
+            status: med.status,
+            isInativo: med.isInativo || med.tp_metodo === "3.INATIVOS"
+          }))
+          // Ordenação alfabética por nome
+          .sort((a, b) => {
+            const nomeA = (a.nome || '').toLowerCase();
+            const nomeB = (b.nome || '').toLowerCase();
+            return nomeA.localeCompare(nomeB, 'pt-BR');
+          });
 
         setMedicines(mappedMedicines);
       } catch (error) {
@@ -93,11 +110,16 @@ const MedicineTable = () => {
   const filteredMedicines = medicines
     .filter(med => med.nome.toLowerCase().includes(searchTerm.toLowerCase()))
     .filter(med => !colorFilter || getStatusClass(med) === colorFilter)
-    .filter(med => !classFilter || med.classificacaoItem === classFilter);
+    .filter(med => {
+      if (!classFilter) return true;
+      const medClass = (med.classificacaoItem || '').toLowerCase().trim();
+      const filterClass = classFilter.toLowerCase().trim();
+      return medClass.includes(filterClass);
+    });
 
   return (
     <div className="medicine-table-container">
-      <p className="main-title">
+      <p className="main-title" style={{ color: 'var(--text-azul-escuro)' }}>
         Busca por Medicamentos no Município {municipality ? `- ${municipality}` : ''}
       </p>
       
@@ -112,6 +134,7 @@ const MedicineTable = () => {
           onSearch={setSearchTerm}
           onColorFilter={setColorFilter}
           onClassFilter={setClassFilter}
+          colorFilter={colorFilter}
         />
       </div>
 
@@ -121,9 +144,8 @@ const MedicineTable = () => {
         <TableHeader />
         <tbody>
           {loading ? (
-            // Shimmer Loading Rows
-            Array.from({ length: 5 }).map((_, index) => (
-              <tr key={index}>
+            Array.from({ length: 8 }).map((_, index) => (
+              <tr key={index} className="shimmer-row">
                 <td colSpan="7">
                   <div className="shimmer-wrapper"></div>
                 </td>

@@ -4,11 +4,34 @@ import filtroIcon from "../../img/Icone-filtro.png";
 import setaBaixoIcon from "../../img/Icone-seta-baixo.png";
 import searchIcon from "../../img/Union.png";
 
-const SearchBar = ({ onSearch, onColorFilter, onClassFilter }) => {
+const SearchBar = ({ onSearch, onColorFilter, onClassFilter, colorFilter }) => {
   const [showColorFilter, setShowColorFilter] = useState(false);
   const [showClassFilter, setShowClassFilter] = useState(false);
   const [selectedColor, setSelectedColor] = useState("Filtrar por cor");
   const [selectedClass, setSelectedClass] = useState("Filtrar por classificação");
+
+  // Mapeamento de classes de filtro para labels de exibição
+  const colorFilterLabels = {
+    "": "Filtrar por cor",
+    "zerado-inativo": "Zerado Inativo",
+    "zerado-dispensacao": "Zerado c/ Dispensação",
+    "quatro-semanas": "Até 1 Mês",
+    "oito-semanas": "Até 2 Meses",
+    "doze-semanas": "Até 3 Meses",
+    "dezesseis-semanas": "Até 4 Meses",
+    "azul-claro": "Até 12 Meses",
+    "azul-escuro": "Acima de 12 Meses",
+    "dezesseis-semanas-inativo": "Inativo c/ Estoque"
+  };
+
+  // Sincroniza o label do botão com o filtro aplicado
+  React.useEffect(() => {
+    if (colorFilter && colorFilterLabels[colorFilter]) {
+      setSelectedColor(colorFilterLabels[colorFilter]);
+    } else {
+      setSelectedColor("Filtrar por cor");
+    }
+  }, [colorFilter]);
 
   // Função para selecionar filtro e atualizar texto do botão
   const handleColorFilter = (filter, label) => {
@@ -101,7 +124,7 @@ const SearchBar = ({ onSearch, onColorFilter, onClassFilter }) => {
           {showClassFilter && (
             <ul className="filter-dropdown">
               <li onClick={() => handleClassFilter("", "Filtrar por classificação")}>Todos</li>
-              <li onClick={() => handleClassFilter("Remune", "Remune")}>Remune</li>
+              <li onClick={() => handleClassFilter("Remume", "Remume")}>Remume</li>
               <li onClick={() => handleClassFilter("Assistencial", "Assistencial")}>Assistencial</li>
               <li onClick={() => handleClassFilter("Processo Judicial", "Processo Judicial")}>Processo Judicial</li>
               <li onClick={() => handleClassFilter("Farmacológico", "Farmacológico")}>Farmacológico</li>

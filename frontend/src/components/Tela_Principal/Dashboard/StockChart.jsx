@@ -1,16 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, Typography, Box, Skeleton, useMediaQuery, useTheme } from '@mui/material';
 import { PieChart } from '@mui/x-charts/PieChart';
+import { useNavigate } from 'react-router-dom';
 import api from '../../../services/api';
 import { useAuth } from '../../../contexts/AuthContext';
+import ColorLegend from '../../Gerenciamento/ColorLegend';
 
 const StockChart = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const { user } = useAuth();
+  const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+
+  // Mapeamento de labels do gráfico para classes de status
+  const labelToStatusClass = {
+    'INATIVOS ZERADOS': 'zerado-inativo',
+    'ZERADOS COM DISPENSAÇÕES': 'zerado-dispensacao',
+    'ATÉ UM MÊS DE ESTOQUE': 'quatro-semanas',
+    'ATÉ DOIS MESES DE ESTOQUE': 'oito-semanas',
+    'ATÉ TRÊS MESES DE ESTOQUE': 'doze-semanas',
+    'ATÉ QUATRO MESES DE ESTOQUE': 'dezesseis-semanas',
+    'ATÉ DOZE MESES DE ESTOQUE': 'azul-claro',
+    'ACIMA DE DOZE MESES DE ESTOQUE': 'azul-escuro',
+    'INATIVOS COM ESTOQUES': 'dezesseis-semanas-inativo'
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -103,16 +119,17 @@ const StockChart = () => {
           }
         });
 
+        // Cores correspondentes à ColorLegend
         const chartData = [
-          { label: 'INATIVOS ZERADOS', value: statusCounts['INATIVOS ZERADOS'], color: '#CC99FF' },
-          { label: 'ZERADOS COM DISPENSAÇÕES', value: statusCounts['ZERADOS COM DISPENSAÇÕES'], color: '#C00000' },
-          { label: 'ATÉ UM MÊS DE ESTOQUE', value: statusCounts['ATÉ UM MÊS DE ESTOQUE'], color: '#FF0000' },
-          { label: 'ATÉ DOIS MESES DE ESTOQUE', value: statusCounts['ATÉ DOIS MESES DE ESTOQUE'], color: '#FF9900' },
-          { label: 'ATÉ TRÊS MESES DE ESTOQUE', value: statusCounts['ATÉ TRÊS MESES DE ESTOQUE'], color: '#00CC00' },
-          { label: 'ATÉ QUATRO MESES DE ESTOQUE', value: statusCounts['ATÉ QUATRO MESES DE ESTOQUE'], color: '#008000' },
-          { label: 'ATÉ DOZE MESES DE ESTOQUE', value: statusCounts['ATÉ DOZE MESES DE ESTOQUE'], color: '#0000FF' },
-          { label: 'ACIMA DE DOZE MESES DE ESTOQUE', value: statusCounts['ACIMA DE DOZE MESES DE ESTOQUE'], color: '#000099' },
-          { label: 'INATIVOS COM ESTOQUES', value: statusCounts['INATIVOS COM ESTOQUES'], color: '#6600CC' },
+          { label: 'INATIVOS ZERADOS', value: statusCounts['INATIVOS ZERADOS'], color: '#6A1B9A' },
+          { label: 'ZERADOS COM DISPENSAÇÕES', value: statusCounts['ZERADOS COM DISPENSAÇÕES'], color: '#8D2ABB' },
+          { label: 'ATÉ UM MÊS DE ESTOQUE', value: statusCounts['ATÉ UM MÊS DE ESTOQUE'], color: '#C52626' },
+          { label: 'ATÉ DOIS MESES DE ESTOQUE', value: statusCounts['ATÉ DOIS MESES DE ESTOQUE'], color: '#F46600' },
+          { label: 'ATÉ TRÊS MESES DE ESTOQUE', value: statusCounts['ATÉ TRÊS MESES DE ESTOQUE'], color: '#379A13' },
+          { label: 'ATÉ QUATRO MESES DE ESTOQUE', value: statusCounts['ATÉ QUATRO MESES DE ESTOQUE'], color: '#005E00' },
+          { label: 'ATÉ DOZE MESES DE ESTOQUE', value: statusCounts['ATÉ DOZE MESES DE ESTOQUE'], color: '#64B5F6' },
+          { label: 'ACIMA DE DOZE MESES DE ESTOQUE', value: statusCounts['ACIMA DE DOZE MESES DE ESTOQUE'], color: '#1565C0' },
+          { label: 'INATIVOS COM ESTOQUES', value: statusCounts['INATIVOS COM ESTOQUES'], color: '#FFB300' },
         ].filter(item => item.value > 0);
 
         setData(chartData);
@@ -130,27 +147,28 @@ const StockChart = () => {
     <Card sx={{ 
       width: '100%',
       height: '100%', 
-      minHeight: { xs: '400px', sm: '450px', md: '550px' },
-      maxHeight: { xs: '500px', md: '65vh' },
       display: 'flex', 
       flexDirection: 'column',
-      overflow: 'auto'
+      overflow: 'hidden'
     }}>
       <CardContent sx={{ 
-        p: { xs: 2, md: 2.5 }, 
+        p: { xs: 0.5, md: 1 }, 
         display: 'flex', 
         flexDirection: 'column', 
         flex: 1,
-        overflow: 'auto'
+        overflow: 'hidden'
       }}>
         <Typography 
           variant="h5" 
-          gutterBottom 
           align="center" 
           sx={{ 
             fontWeight: 'bold', 
-            mb: { xs: 1, md: 2 },
-            fontSize: { xs: '1.25rem', md: '1.5rem' }
+            mb: 0,
+            fontSize: { xs: '1rem', md: '1.2rem' },
+            color: '#0D91F3',
+            flexShrink: 0,
+            lineHeight: 1.1,
+            py: 0.5
           }}
         >
           CAF - Giro de Estoque
@@ -161,8 +179,7 @@ const StockChart = () => {
             display: 'flex', 
             justifyContent: 'center', 
             alignItems: 'center', 
-            flex: 1,
-            minHeight: '300px'
+            flex: 1
           }}>
             <Skeleton 
               variant="circular" 
@@ -173,60 +190,87 @@ const StockChart = () => {
         ) : (
           <Box sx={{
             display: 'flex',
-            justifyContent: 'center',
+            flexDirection: 'column',
             alignItems: 'center',
-            flex: 1,
             width: '100%',
-            position: 'relative',
-            overflow: 'visible'
+            flex: 1,
+            overflow: 'hidden',
+            gap: 0
           }}>
-            <PieChart
-              series={[
-                {
-                  data: data,
-                  outerRadius: isMobile ? 90 : isTablet ? 110 : 140,
-                  paddingAngle: 1,
-                  cornerRadius: 5,
-                  highlightScope: { faded: 'global', highlighted: 'item' },
-                  arcLabel: (item) => {
-                    const total = data.reduce((a, b) => a + b.value, 0);
-                    const percent = (item.value / total) * 100;
-                    // Only show label if percentage is significant to avoid overlap
-                    return percent > 5 ? `${item.value} (${percent.toFixed(1)}%)` : '';
+            {/* Gráfico */}
+            <Box sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '100%',
+              flex: '0 0 auto',
+              maxHeight: '400px',
+              mb: 0,
+              pb: 0,
+              mt: 0
+            }}>
+              <PieChart
+                series={[
+                  {
+                    data: data.map((item, index) => ({ 
+                      ...item, 
+                      id: item.label || index
+                    })),
+                    outerRadius: isMobile ? 85 : isTablet ? 105 : 120,
+                    paddingAngle: 2,
+                    cornerRadius: 8,
+                    highlightScope: { faded: 'global', highlighted: 'item' },
+                    arcLabel: (item) => {
+                      const total = data.reduce((a, b) => a + b.value, 0);
+                      const percent = (item.value / total) * 100;
+                      return percent > 5 ? `${item.value}` : '';
+                    },
+                    arcLabelMinAngle: 20,
                   },
-                  arcLabelMinAngle: 20,
-                },
-              ]}
-              width={isMobile ? 350 : isTablet ? 400 : 450}
-              height={isMobile ? 380 : isTablet ? 420 : 450}
-              margin={{ 
-                top: 20, 
-                bottom: isMobile ? 100 : 120, 
-                left: isMobile ? 10 : 20, 
-                right: isMobile ? 10 : 20
-              }}
-              slotProps={{
-                legend: {
-                  direction: isMobile ? 'column' : 'row',
-                  position: { vertical: 'bottom', horizontal: 'middle' },
-                  padding: 0,
-                  itemMarkWidth: isMobile ? 10 : 12,
-                  itemMarkHeight: isMobile ? 10 : 12,
-                  labelStyle: {
-                    fontSize: isMobile ? 11 : isTablet ? 12 : 13,
-                    fill: '#555'
-                  },
-                  itemGap: isMobile ? 8 : 10
-                }
-              }}
-              sx={{
-                maxWidth: '100%',
-                '& .MuiChartsLegend-root': {
-                  maxWidth: '100%',
-                  flexWrap: 'wrap'
-                }
-              }}
-            />
+                ]}
+                onItemClick={(event, d) => {
+                  if (d && d.dataIndex !== undefined && data[d.dataIndex]) {
+                    const clickedItem = data[d.dataIndex];
+                    const statusClass = labelToStatusClass[clickedItem.label];
+                    if (statusClass) {
+                      navigate(`/gerenciamento?colorFilter=${statusClass}`);
+                    }
+                  }
+                }}
+                width={isMobile ? 350 : isTablet ? 400 : 420}
+                height={isMobile ? 350 : isTablet ? 380 : 380}
+                margin={{ 
+                  top: 0, 
+                  bottom: 0, 
+                  left: isMobile ? 10 : 15, 
+                  right: isMobile ? 10 : 15
+                }}
+                slotProps={{
+                  legend: { hidden: true }
+                }}
+                sx={{
+                  '& .MuiPieArc-root': {
+                    cursor: 'pointer',
+                    transition: 'opacity 0.2s ease',
+                    '&:hover': {
+                      opacity: 0.8
+                    }
+                  }
+                }}
+              />
+            </Box>
+
+            {/* Legenda Customizada */}
+            <Box sx={{ 
+              width: '100%', 
+              maxWidth: '900px',
+              flex: '0 0 auto',
+              overflow: 'visible',
+              mt: 0,
+              pt: 0
+            }}>
+              <ColorLegend />
+            </Box>
           </Box>
         )}
       </CardContent>

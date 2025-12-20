@@ -1,4 +1,6 @@
 
+@import './variables.css';
+
 * {
 	margin: 0;
 	padding: 0;
@@ -7,45 +9,47 @@
 
 
 .table-row {
-  border-radius: 20px;
+  border-radius: 15px;
+  background-color: #E0DFDA;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
 
 .table-row td {
   height: 44.82px;
-  text-align: center;
-  font-weight: 400;
-  font-size: 14px;
-  padding: 8px 4px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 13.28px;
+  color: #0D91F3;
+  padding: 12.45px;
 }
 
+/* Removido: cores de fundo das linhas - agora apenas no botão */
 /* Categoria Roxo - Itens Zerados */
 .zerado-inativo { 
-  background-color: #6A1B9A; /* Roxo escuro - Zerado Inativo */
+  background-color: transparent; /* Sem cor de fundo na linha */
 }
 .zerado-dispensacao { 
-  background-color: #8D2ABB8A; /* Roxo original - Zerado com Dispensação */
+  background-color: transparent; /* Sem cor de fundo na linha */
 }
 
 /* Categorias Normais (0-16 semanas) */
-.quatro-semanas { background-color: #C5262678; }
-.oito-semanas { background-color: #F4660070; }
-.doze-semanas { background-color: #379A1352; }
-.dezesseis-semanas { background-color: #005E0070; }
+.quatro-semanas { background-color: transparent; }
+.oito-semanas { background-color: transparent; }
+.doze-semanas { background-color: transparent; }
+.dezesseis-semanas { background-color: transparent; }
 
 /* 16 Semanas Inativo - Alerta Especial */
 .dezesseis-semanas-inativo { 
-  background-color: #FFB300; /* Amarelo/Laranja - Alerta de possível vencimento */
-  animation: pulse-alert 2s infinite;
+  background-color: transparent; /* Sem cor de fundo na linha */
 }
 
 /* Categoria Acima de 16 Semanas */
 .azul-claro { 
-  background-color: #64B5F6; /* Azul claro - 16 a 52 semanas */
+  background-color: transparent; /* Sem cor de fundo na linha */
 }
 .azul-escuro { 
-  background-color: #1565C0; /* Azul escuro - Acima de 52 semanas */
-  color: white;
+  background-color: transparent; /* Sem cor de fundo na linha */
 }
 
 /* Animação para itens com alerta */
@@ -79,6 +83,49 @@
   font-weight: 600;
   font-size: 18.26px;
   margin-right: 4.15px;
+  transition: all 0.3s ease;
+}
+
+/* Cores do botão baseadas na classificação do status */
+.table-row.zerado-inativo .details-button {
+  background-color: var(--status-zerado-inativo);
+}
+
+.table-row.zerado-dispensacao .details-button {
+  background-color: var(--status-zerado-dispensacao);
+}
+
+.table-row.quatro-semanas .details-button {
+  background-color: var(--status-4-semanas);
+}
+
+.table-row.oito-semanas .details-button {
+  background-color: var(--status-8-semanas);
+}
+
+.table-row.doze-semanas .details-button {
+  background-color: var(--status-12-semanas);
+}
+
+.table-row.dezesseis-semanas .details-button {
+  background-color: var(--status-16-semanas);
+}
+
+.table-row.dezesseis-semanas-inativo .details-button {
+  background-color: var(--status-16-semanas-inativo);
+}
+
+.table-row.azul-claro .details-button {
+  background-color: var(--status-azul-claro);
+}
+
+.table-row.azul-escuro .details-button {
+  background-color: var(--status-azul-escuro);
+}
+
+.details-button:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
 } 
 
 .coluna-codigo{
@@ -106,18 +153,18 @@
 }
 
 td:first-child {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 td:last-child {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 table {
   border-collapse: separate;
-  border-spacing: 0 8.3px; /* 8.3px de espaçamento entre as linhas */
+  border-spacing: 0 11.62px; /* Espaçamento igual ao relatório */
 }
 
 .colunaInfo {

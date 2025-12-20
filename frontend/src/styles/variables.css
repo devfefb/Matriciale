@@ -1,0 +1,35 @@
+:root {
+  /* Paleta de Cores - Nova Identidade Visual */
+  --color-off-white: rgb(249, 252, 242);
+  --color-azul-escuro: #0D91F3;
+  --color-azul-claro: #E3F3FC; /* Versão bem tenue do azul padrão #0D91F3 */
+  --color-vermelho: #F35552;
+  --color-vermelho-alt: #F85453; /* Variação para texto específico */
+  
+  /* Cores de Fundo */
+  --bg-off-white: var(--color-off-white);
+  --bg-azul-claro: var(--color-azul-claro);
+  
+  /* Cores de Texto */
+  --text-azul-escuro: var(--color-azul-escuro);
+  --text-azul: var(--color-azul-escuro);
+  --text-vermelho: var(--color-vermelho-alt);
+  --text-azul-claro: #48A9F7; /* Texto claro: versão um pouco mais clara do azul escuro */
+  /* Cores de Botões */
+  --btn-primary: var(--color-azul-escuro);
+  --btn-primary-hover: #0B7BC7;
+  --btn-secondary: var(--color-vermelho);
+  --btn-secondary-hover: #E04A47;
+  
+  /* Cores de Tabela - Status (para botões de detalhes) */
+  --status-zerado-inativo: #6A1B9A;
+  --status-zerado-dispensacao: #8D2ABB;
+  --status-4-semanas: #C52626;
+  --status-8-semanas: #F46600;
+  --status-12-semanas: #379A13;
+  --status-16-semanas: #005E00;
+  --status-16-semanas-inativo: #FFB300;
+  --status-azul-claro: #64B5F6;
+  --status-azul-escuro: #1565C0;
+}
+

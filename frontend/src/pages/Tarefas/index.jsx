@@ -52,7 +52,7 @@ export default function Tarefas() {
                   sx={{
                     fontSize: { xs: '1.5rem', md: '2rem' },
                     fontWeight: 'bold',
-                    color: '#333'
+                    color: 'var(--color-azul-escuro)'
                   }}
                 >
                   Tarefas

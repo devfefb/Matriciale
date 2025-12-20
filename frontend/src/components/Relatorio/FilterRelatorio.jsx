@@ -8,7 +8,7 @@ const FilterRelatorio = ({ showFilter, onClassificacaoFilter }) => {
         <div>
             <ul>
                 <li onClick={() => onClassificacaoFilter("") } className={styles.primeiro_item}>Todos</li>
-                <li onClick={() => onClassificacaoFilter("10 Remune") } >10 Remune</li>
+                <li onClick={() => onClassificacaoFilter("10 REMUME") } >10 REMUME</li>
                 <li onClick={() => onClassificacaoFilter("assistencial")}>Assistencial</li>
                 <li onClick={() => onClassificacaoFilter("proc.Judicial")}>Proc.Judicial</li>
                 <li onClick={() => onClassificacaoFilter("Farmacológico")}>Farmacológico</li>

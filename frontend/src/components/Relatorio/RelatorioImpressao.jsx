@@ -16,7 +16,7 @@ const RelatorioImpressao = () => {
 
   const relatorios = [
     {
-      classificacao: '10 Remune',
+      classificacao: '10 Remume',
       codItem: '021.001.092',
       nome: 'AAS - Ácido Acetil Salicilico 100MG',
       tpMetodo: '1.Ordinários',
@@ -26,7 +26,7 @@ const RelatorioImpressao = () => {
       reposicao: 470
     },
     {
-      classificacao: '10 Remune',
+      classificacao: '10 Remume',
       codItem: '301.002.001',
       nome: 'Aciclovir 200 MG CPR',
       tpMetodo: '1.Ordinários',
@@ -36,7 +36,7 @@ const RelatorioImpressao = () => {
       reposicao: 430
     },
     {
-      classificacao: '10 Remune',
+      classificacao: '10 Remume',
       codItem: '301.002.002',
       nome: 'Aciclovir Creme 5% 10G',
       tpMetodo: '1.Ordinários',
@@ -46,7 +46,7 @@ const RelatorioImpressao = () => {
       reposicao: 7
     },
     {
-      classificacao: '10 Remune',
+      classificacao: '10 Remume',
       codItem: '304.002.001',
       nome: 'Ácido Folico 5MG',
       tpMetodo: '1.Ordinários',

@@ -73,12 +73,12 @@ const ScheduledTasks = () => {
       }}>
         <Typography
           variant="h6"
-          color="primary"
           align="center"
           sx={{ 
             mb: { xs: 2, md: 3 },
             fontSize: { xs: '1.1rem', md: '1.25rem' },
-            flexShrink: 0
+            flexShrink: 0,
+            color: 'var(--text-azul-claro)'
           }}
         >
           Tarefas Agendadas

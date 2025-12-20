@@ -22,7 +22,7 @@ A planilha `movimentacoes_atualizacao.xlsx` deve ter a seguinte estrutura:
 ```
 | Classificação | NOME_ITEM              | 2025_23 | 2025_24 | 2025_25 |
 |---------------|------------------------|---------|---------|---------|
-| Remune        | PARACETAMOL 500MG      | 150     | 200     | 180     |
+| Remume        | PARACETAMOL 500MG      | 150     | 200     | 180     |
 | Assistencial  | DIPIRONA SODICA 500MG  | 300     | 250     | 275     |
 ```
 

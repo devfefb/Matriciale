@@ -11,17 +11,16 @@
   padding-top: 31px;
   padding-bottom: 31px;
   padding-right: 17px;
-  width: 76.6%;
+  width: 76.96%;
   height: 100%;
   min-height: 743px;
   margin: 0 auto;
   background-color: #F3F1EE;
-  border-radius: 47px;
+  border-radius: 30px;
   margin-top: 24.9px;
   margin-left: 21.75%;
   margin-bottom: 24px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
 }
 
 .title-controls-legends-container{
@@ -30,7 +29,8 @@
 }
 
 .main-title{
-  font-size: 26.6px;
+  font-size: 29.88px;
+  font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -83,29 +83,24 @@
 }
 
 /* Shimmer Effect */
-.shimmer-wrapper {
-  width: 100%;
-  height: 40px;
-  background: #f6f7f8;
-  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
-  background-repeat: no-repeat;
-  background-size: 800px 40px; 
-  display: inline-block;
-  position: relative; 
-  animation-duration: 1s;
-  animation-fill-mode: forwards; 
-  animation-iteration-count: infinite;
-  animation-name: placeholderShimmer;
-  animation-timing-function: linear;
-  border-radius: 4px;
-  margin-bottom: 8px;
+.shimmer-row {
+  background-color: transparent;
 }
 
-@keyframes placeholderShimmer {
+.shimmer-wrapper {
+  width: 100%;
+  height: 44px;
+  background: linear-gradient(90deg, #E0DFDA 25%, #F0EFEA 50%, #E0DFDA 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 15px;
+}
+
+@keyframes shimmer {
   0% {
-    background-position: -468px 0;
+    background-position: -200% 0;
   }
   100% {
-    background-position: 468px 0;
+    background-position: 200% 0;
   }
 }

@@ -64,21 +64,29 @@ const RelatorioTable = () => {
         fetchReport();
     }, [selectedUnit, user]);
 
-    const filteredRelatorio = relatorios.filter((item) => {
-        const filterClass = !classificacaoFilter
-            || (item.classificacao && item.classificacao.toLocaleLowerCase().includes(classificacaoFilter.toLocaleLowerCase()));
+    const filteredRelatorio = relatorios
+        .filter((item) => {
+            // Filtro de classificação - corrigido para funcionar com "10 REMUME" (case-insensitive)
+            const filterClass = !classificacaoFilter
+                || (item.classificacao && item.classificacao.toLowerCase().trim().includes(classificacaoFilter.toLowerCase().trim()));
 
-        const filterCod = !codItemFilter
-            || (item.cod_item && item.cod_item.toLocaleLowerCase().includes(codItemFilter.toLocaleLowerCase()));
+            const filterCod = !codItemFilter
+                || (item.cod_item && String(item.cod_item).toLowerCase().includes(codItemFilter.toLowerCase()));
 
-        const filterNome = !nomeItemFilter
-            || (item.nome_item && item.nome_item.toLocaleLowerCase().includes(nomeItemFilter.toLocaleLowerCase()));
+            const filterNome = !nomeItemFilter
+                || (item.nome_item && item.nome_item.toLowerCase().includes(nomeItemFilter.toLowerCase()));
 
-        const filterMod = !modeloFilter
-            || (item.tp_metodo && item.tp_metodo.toLocaleLowerCase().includes(modeloFilter.toLocaleLowerCase()));
+            const filterMod = !modeloFilter
+                || (item.tp_metodo && item.tp_metodo.toLowerCase().includes(modeloFilter.toLowerCase()));
 
-        return filterClass && filterCod && filterNome && filterMod;
-    });
+            return filterClass && filterCod && filterNome && filterMod;
+        })
+        // Ordenação alfabética por nome do item
+        .sort((a, b) => {
+            const nomeA = (a.nome_item || '').toLowerCase();
+            const nomeB = (b.nome_item || '').toLowerCase();
+            return nomeA.localeCompare(nomeB, 'pt-BR');
+        });
 
     const handleClickClass = () => {
         setShowFilterClass(prev => !prev);
@@ -210,7 +218,13 @@ const RelatorioTable = () => {
                 </thead>
                 <tbody>
                     {loading ? (
-                        <tr><td colSpan="8" style={{ textAlign: 'center', padding: '20px' }}>Carregando...</td></tr>
+                        Array.from({ length: 8 }).map((_, index) => (
+                            <tr key={index} className="shimmer-row">
+                                <td colSpan="8">
+                                    <div className="shimmer-wrapper"></div>
+                                </td>
+                            </tr>
+                        ))
                     ) : (
                         filteredRelatorio.map((item) => (
                             <RelatorioTableRow key={item.id || item.cod_item} relatorios={item} />

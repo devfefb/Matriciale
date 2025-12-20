@@ -10,9 +10,12 @@ thead {
 }
 
 th {
-  color: #0D92F4;
+  color: var(--text-azul-escuro, #0D91F3);
+  text-align: left;
   font-weight: 700;
-  font-size: 26.56px;
+  font-size: 16.6px;
+  white-space: nowrap;
+  padding-right: 5px;
 }
 
 th:last-child {

@@ -12,6 +12,7 @@ import {
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { useAuth } from '../../contexts/AuthContext';
 import LogoImage from '../../assets/img/wellft-removebg-preview.png';
+import '../../styles/variables.css';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -50,6 +51,7 @@ export default function Login() {
         backgroundColor: '#fff',
       }}
     >
+      {/* Lado Esquerdo - Azul Claro */}
       <Box
         sx={{
           flex: '0 0 45%',
@@ -57,7 +59,7 @@ export default function Login() {
           flexDirection: 'column',
           justifyContent: 'center',
           padding: '0 64px',
-          backgroundColor: '#f5f5f5',
+          backgroundColor: 'var(--bg-azul-claro)',
           maxWidth: '800px',
         }}
       >
@@ -66,7 +68,7 @@ export default function Login() {
             variant="h3"
             component="h1"
             sx={{
-              color: '#0D92F4',
+              color: 'var(--text-azul-escuro)',
               fontWeight: 'bold',
               marginBottom: 1,
               lineHeight: 1.2,
@@ -78,12 +80,13 @@ export default function Login() {
           
           <Typography
             sx={{
-              color: '#FF0000',
+              color: 'var(--text-vermelho)',
               marginBottom: 4,
               fontSize: '1rem',
+              fontWeight: 'bold',
             }}
           >
-            Sentimos sua falta!
+            Sentimos a sua falta!
           </Typography>
 
           <form onSubmit={handleSubmit}>
@@ -93,7 +96,7 @@ export default function Login() {
                 sx={{
                   display: 'block',
                   mb: 1,
-                  color: '#666',
+                  color: 'var(--color-azul-escuro)'
                 }}
               >
                 Email
@@ -113,6 +116,9 @@ export default function Login() {
                     '& fieldset': {
                       borderColor: '#ddd',
                     },
+                    '& input': {
+                      color: 'var(--color-azul-escuro)',
+                    },
                   },
                 }}
               />
@@ -124,7 +130,7 @@ export default function Login() {
                 sx={{
                   display: 'block',
                   mb: 1,
-                  color: '#666',
+                  color: 'var(--color-azul-escuro)'
                 }}
               >
                 Senha
@@ -144,7 +150,11 @@ export default function Login() {
                     '& fieldset': {
                       borderColor: '#ddd',
                     },
+                    '& input': {
+                      color: 'var(--color-azul-escuro)',
+                    },
                   },
+                  color: 'var(--color-azul-escuro)'
                 }}
               />
             </Box>
@@ -164,14 +174,14 @@ export default function Login() {
                 mt: 2,
                 mb: 2,
                 py: 1.5,
-                backgroundColor: isFormFilled ? '#0D92F4' : '#E6EEF8',
-                color: isFormFilled ? '#fff' : '#0D92F4',
+                backgroundColor: isFormFilled ? 'var(--btn-primary)' : '#E6EEF8',
+                color: isFormFilled ? '#fff' : 'var(--text-azul-escuro)',
                 '&:hover': {
-                  backgroundColor: isFormFilled ? '#001a4d' : '#d5e3f7',
+                  backgroundColor: isFormFilled ? 'var(--btn-primary-hover)' : '#d5e3f7',
                 },
                 '&:disabled': {
                   backgroundColor: '#E6EEF8',
-                  color: '#0D92F4',
+                  color: 'var(--text-azul-escuro)',
                   opacity: 0.7,
                 },
                 transition: 'all 0.3s ease',
@@ -188,7 +198,7 @@ export default function Login() {
                 component={Link}
                 to="/forgot-password"
                 sx={{
-                  color: '#0D92F4',
+                  color: 'var(--text-azul-escuro)',
                   textDecoration: 'none',
                   '&:hover': {
                     textDecoration: 'underline',
@@ -202,13 +212,14 @@ export default function Login() {
         </Box>
       </Box>
 
+      {/* Lado Direito - Off-White */}
       <Box
         sx={{
           flex: 1,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: '#fff',
+          backgroundColor: 'var(--bg-off-white)',
           p: 4,
         }}
       >
