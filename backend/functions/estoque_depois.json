@@ -1,0 +1,7962 @@
+[
+  {
+    "unidade": "CAF",
+    "id": "56pfa7KDa4oLBJZGifky",
+    "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 18970,
+    "metodo": 1045
+  },
+  {
+    "unidade": "CAF",
+    "id": "MAxfhJnqgoYibEvwsg4A",
+    "nome": "ACICLOVIR 200 MG CPR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2655,
+    "metodo": 153
+  },
+  {
+    "unidade": "CAF",
+    "id": "OgnEhUhO0bTMJI84iPo1",
+    "nome": "ACICLOVIR 5 % CREME 10 G",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 30,
+    "metodo": 10
+  },
+  {
+    "unidade": "CAF",
+    "id": "F9u3Jrsshv9tqwB4j1fn",
+    "nome": "ACIDO FOLICO 5MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 7890,
+    "metodo": 500
+  },
+  {
+    "unidade": "CAF",
+    "id": "1zOCi8SfjBWCfmohrhEM",
+    "nome": "ACIDO TRANEXÂMICO 250MG - TRANSAMIN",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1962,
+    "metodo": 78
+  },
+  {
+    "unidade": "CAF",
+    "id": "KgXPPZ971FhQPgd6CkIg",
+    "nome": "ACIDO VALPROICO 500MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 1440,
+    "metodo": 137
+  },
+  {
+    "unidade": "CAF",
+    "id": "5nPi6KGKn9FlILDho39n",
+    "nome": "ALBENDAZOL 40 MG/ML FRASCO 10 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 75,
+    "metodo": 12
+  },
+  {
+    "unidade": "CAF",
+    "id": "9vXdAVxBHpTn7zOCOFvy",
+    "nome": "ALBENDAZOL 400 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 83,
+    "metodo": 24
+  },
+  {
+    "unidade": "CAF",
+    "id": "YSwFda36jJsmvGnfegSI",
+    "nome": "ALOPURINOL  300MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 4160,
+    "metodo": 1000
+  },
+  {
+    "unidade": "CAF",
+    "id": "LPesqvxdJlBpKy4cojfq",
+    "nome": "ALOPURINOL 100MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1949,
+    "metodo": 120
+  },
+  {
+    "unidade": "CAF",
+    "id": "VSzBqGGSJNulUOiQRPZx",
+    "nome": "AMBROXOL XAROPE ADULTO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 786,
+    "metodo": 45
+  },
+  {
+    "unidade": "CAF",
+    "id": "XVEBotF7X8s4VNmX2NW7",
+    "nome": "AMBROXOL XAROPE INFANTIL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 277,
+    "metodo": 14
+  },
+  {
+    "unidade": "CAF",
+    "id": "MAUFyz1jl4RcqnXrjYTx",
+    "nome": "AMINOFILINA 100 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "1p0y0U62rEZWGhShq2pa",
+    "nome": "AMIODARONA, CLORIDRATO  200 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 4090,
+    "metodo": 240
+  },
+  {
+    "unidade": "CAF",
+    "id": "NB6O3v2lrjliFDtLWG0p",
+    "nome": "AMITRIPTILINA, CLORIDRATO  25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 10350,
+    "metodo": 2400
+  },
+  {
+    "unidade": "CAF",
+    "id": "HvrcXGBTYRoBShzsvZkP",
+    "nome": "AMOXICILINA + CLAVULANATO 500/125 MCG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 10057,
+    "metodo": 795
+  },
+  {
+    "unidade": "CAF",
+    "id": "2tzpAbxhQFo9r3SVRZyg",
+    "nome": "AMOXICILINA + CLAVULANATO SUSP 250 MG/5 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 356,
+    "metodo": 30
+  },
+  {
+    "unidade": "CAF",
+    "id": "VKebIuqj1wKGQaKOlVWz",
+    "nome": "AMOXICILINA 250 MG/5ML - 150 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 188,
+    "metodo": 11
+  },
+  {
+    "unidade": "CAF",
+    "id": "efl9ynEoPMbuZSZjtSWg",
+    "nome": "AMOXICILINA 500 MG - CAPSULA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5757,
+    "metodo": 500
+  },
+  {
+    "unidade": "CAF",
+    "id": "CSqJcb3TBXbbxAV2OEpG",
+    "nome": "ANESTESICO COLIRIO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "UuXgwbvMsDxupN1UQdkH",
+    "nome": "ANLODIPINO, BESILATO 5MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5790,
+    "metodo": 840
+  },
+  {
+    "unidade": "CAF",
+    "id": "Xt8VbHIYjLPVr9Jwpvf6",
+    "nome": "ATENOLOL 25MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 750,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "rOBYq4FwcBZyb8AOJ99z",
+    "nome": "AZITROMICINA 500 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 4817,
+    "metodo": 216
+  },
+  {
+    "unidade": "CAF",
+    "id": "pnN8N2uBfSNefEhNh6oE",
+    "nome": "AZITROMICINA SUSP. 200MG/5ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 479,
+    "metodo": 50
+  },
+  {
+    "unidade": "CAF",
+    "id": "IeqdHuULWqS8hJj2N0yB",
+    "nome": "BIPERIDENO, CLORIDRATO 2 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 4420,
+    "metodo": 200
+  },
+  {
+    "unidade": "CAF",
+    "id": "5Auij8873CW92QAyECdA",
+    "nome": "BISACODIL 5MG - DULCOLAX",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 495,
+    "metodo": 40
+  },
+  {
+    "unidade": "CAF",
+    "id": "VQQsb9LC1cycPtYIqDzC",
+    "nome": "BROMOPRIDA 10MG CPR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 10050,
+    "metodo": 530
+  },
+  {
+    "unidade": "CAF",
+    "id": "8rO3Q4wBT5kCF8zdzygx",
+    "nome": "BROMOPRIDA GTS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 185,
+    "metodo": 10
+  },
+  {
+    "unidade": "CAF",
+    "id": "6SgxCvM6iiyeZZUZQmxI",
+    "nome": "BUSCOPAM COMPOSTO  GOTAS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "Tn1EFXXVq86QAd30gzLV",
+    "nome": "BUSCOPAM COMPOSTO CPR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 4880,
+    "metodo": 686
+  },
+  {
+    "unidade": "CAF",
+    "id": "6U3OsKtk6SDK5owtoLQ4",
+    "nome": "BUSCOPAM SIMPLES CP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3159,
+    "metodo": 221
+  },
+  {
+    "unidade": "CAF",
+    "id": "OkB0krDlwWExy2P6LO11",
+    "nome": "BUSCOPAM SIMPLES GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 141,
+    "metodo": 10
+  },
+  {
+    "unidade": "CAF",
+    "id": "DrTDtCxTpd4EXePMOogj",
+    "nome": "CAPTOPRIL 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2203,
+    "metodo": 120
+  },
+  {
+    "unidade": "CAF",
+    "id": "5XZUljmQmktuZFbTeji0",
+    "nome": "CARBAMAZEPINA 200 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1860,
+    "metodo": 1000
+  },
+  {
+    "unidade": "CAF",
+    "id": "GfxXvMBDTl08yr410jgV",
+    "nome": "CARBAMAZEPINA SUSP. 100 ML- 20 MG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 57,
+    "metodo": 4
+  },
+  {
+    "unidade": "CAF",
+    "id": "H99uvzb5MTIbFRe6pwoI",
+    "nome": "CARBONATO DE CALCIO 1.250MG + VITAMINA D 400UI",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2310,
+    "metodo": 150
+  },
+  {
+    "unidade": "CAF",
+    "id": "HGPbVR1SaPRlNH9A2iv4",
+    "nome": "CARBONATO DE LITIO 300 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 4980,
+    "metodo": 500
+  },
+  {
+    "unidade": "CAF",
+    "id": "YJAiDSLRkMXdCG3P0qqF",
+    "nome": "CARVEDILOL 12,5 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1350,
+    "metodo": 255
+  },
+  {
+    "unidade": "CAF",
+    "id": "GPb4IuzhqIZQoPKUSXXj",
+    "nome": "CARVEDILOL 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3150,
+    "metodo": 300
+  },
+  {
+    "unidade": "CAF",
+    "id": "F1xC4EyjEoZdNBKv3lvp",
+    "nome": "CARVEDILOL 6,25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1080,
+    "metodo": 330
+  },
+  {
+    "unidade": "CAF",
+    "id": "0080eMOHAR6Xaw7KITGT",
+    "nome": "CEFALEXINA 500 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 9897,
+    "metodo": 524
+  },
+  {
+    "unidade": "CAF",
+    "id": "QDVPqQMjOYszZANBiy0J",
+    "nome": "CEFALEXINA SUSPENSÃO 250 MG/ 5 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 131,
+    "metodo": 10
+  },
+  {
+    "unidade": "CAF",
+    "id": "FvzRUa4xpMLqpMmGvZKk",
+    "nome": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ EV",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1783,
+    "metodo": 200
+  },
+  {
+    "unidade": "CAF",
+    "id": "lbRMYtmjWOwFo21WzM4C",
+    "nome": "CERUMIN GOTAS",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 6,
+    "metodo": 2
+  },
+  {
+    "unidade": "CAF",
+    "id": "NFZsTnnq8qwmHDKquABP",
+    "nome": "CETOCONAZOL + BETAMETASONA POMADA 30 GR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2,
+    "metodo": 8
+  },
+  {
+    "unidade": "CAF",
+    "id": "nLo5NGr4oziADuekgiiR",
+    "nome": "CETOCONAZOL 200 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 510,
+    "metodo": 19
+  },
+  {
+    "unidade": "CAF",
+    "id": "7dwCmC66WfX4pcBRzmgs",
+    "nome": "CETOPROFENO 50 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 12680,
+    "metodo": 792
+  },
+  {
+    "unidade": "CAF",
+    "id": "phJJeAzBBgxwlqCIHobs",
+    "nome": "CICLOBENZAPRINA 5MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 24275,
+    "metodo": 1418
+  },
+  {
+    "unidade": "CAF",
+    "id": "Z5tJACp5i198O5nTQQPT",
+    "nome": "CILOSTAZOL 100 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1240,
+    "metodo": 150
+  },
+  {
+    "unidade": "CAF",
+    "id": "coDu8DVlfNI88cRryg2O",
+    "nome": "CIMEGRIPE GTS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 18,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "aD3I7Q42ShYKsAq5KiQH",
+    "nome": "CIMETIDINA 200MG COMPRIMIDO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3250,
+    "metodo": 195
+  },
+  {
+    "unidade": "CAF",
+    "id": "PtoMQeeFKOBajjPcYzcS",
+    "nome": "CINARIZINA 75MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 4320,
+    "metodo": 340
+  },
+  {
+    "unidade": "CAF",
+    "id": "xe9ag9CCmh7zwbYXJAc7",
+    "nome": "CIPROFLOXACINO 500MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 4129,
+    "metodo": 300
+  },
+  {
+    "unidade": "CAF",
+    "id": "hKDp09qVIgqfMfVHnjyu",
+    "nome": "CLARITROMICINA 500 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 515,
+    "metodo": 50
+  },
+  {
+    "unidade": "CAF",
+    "id": "6LMyWnfxcNYiDldJLLL3",
+    "nome": "CLOMIPRAMINA, CLORIDRATO 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 7810,
+    "metodo": 500
+  },
+  {
+    "unidade": "CAF",
+    "id": "LWvbFZwbnDAj6KP3ll6a",
+    "nome": "CLONAZEPAM 2,5 MG/ ML - GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 298,
+    "metodo": 30
+  },
+  {
+    "unidade": "CAF",
+    "id": "2QMF7N834L50x3EzxGw3",
+    "nome": "CLONAZEPAM 2MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 28277,
+    "metodo": 2187
+  },
+  {
+    "unidade": "CAF",
+    "id": "DgTaJH3Uyc5yDJatr8Mo",
+    "nome": "CLORPROMAZINA, CLORIDRATO 100MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3870,
+    "metodo": 200
+  },
+  {
+    "unidade": "CAF",
+    "id": "Q1Wen7HkRWNjO47N1frr",
+    "nome": "CLORPROMAZINA, CLORIDRATO 25MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2180,
+    "metodo": 200
+  },
+  {
+    "unidade": "CAF",
+    "id": "JatoPcC7zNNLAaBoPJu0",
+    "nome": "COMPLEXO B CP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2595,
+    "metodo": 510
+  },
+  {
+    "unidade": "CAF",
+    "id": "5COFKL9cvlFEbeIWC5nR",
+    "nome": "DECONGEX PLUS GOTAS",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 10,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "aQWAtjVgpF1kF54jO0tf",
+    "nome": "DELTAMETRINA 0,2MG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 21,
+    "metodo": 2
+  },
+  {
+    "unidade": "CAF",
+    "id": "itWtgRkikuutMPPLynVQ",
+    "nome": "DERMACERIUM (SULFADIAZINA PRATA + CERIO)",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 32,
+    "metodo": 3
+  },
+  {
+    "unidade": "CAF",
+    "id": "0dtX2C7XcuNMQSaKg3PK",
+    "nome": "DERSANI 200ML (ACIDOS GRAXOS ESSENCIAIS)",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 11,
+    "metodo": 10
+  },
+  {
+    "unidade": "CAF",
+    "id": "3oGdVlNa059ZVrN80juJ",
+    "nome": "DEXAMETASONA 0,5 MG/5ML- ELIXIR",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "3By7ejcJuY3J6gM2IScN",
+    "nome": "DEXAMETASONA 0.1% CREME 10 GR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 659,
+    "metodo": 43
+  },
+  {
+    "unidade": "CAF",
+    "id": "W7LscucW5tHYMjbmc0NB",
+    "nome": "DEXCLORFENIRAMINA + BETAMETASONA SUSP ORAL 120",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 586,
+    "metodo": 39
+  },
+  {
+    "unidade": "CAF",
+    "id": "9tBuT8IT4DPf9EDUWqwK",
+    "nome": "DEXCLORFENIRAMINA, MALEATO  2MG/5ML - SUSPENSÃO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 124,
+    "metodo": 7
+  },
+  {
+    "unidade": "CAF",
+    "id": "2QJQOTIYHDNEZwMvY6Gv",
+    "nome": "DIAZEPAM 10 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3756,
+    "metodo": 1000
+  },
+  {
+    "unidade": "CAF",
+    "id": "wSmsMyNsmcoI0AHOZsD0",
+    "nome": "DICLOFENACO 50 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5710,
+    "metodo": 340
+  },
+  {
+    "unidade": "CAF",
+    "id": "g9hqgoSQqQJxAFlMb0Q6",
+    "nome": "DIGOXINA 0.25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2070,
+    "metodo": 180
+  },
+  {
+    "unidade": "CAF",
+    "id": "7Hm6SIMbBmauCttFJMxL",
+    "nome": "DIOSMINA + HESPERIDINA 450/50 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 13223,
+    "metodo": 2295
+  },
+  {
+    "unidade": "CAF",
+    "id": "mUDgyIHATRkkkZRGF298",
+    "nome": "DIPIRONA SÓDICA COMPRIMIDO 500MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 62036,
+    "metodo": 5041
+  },
+  {
+    "unidade": "CAF",
+    "id": "dm2rIz0rhRrlSQNDkjW1",
+    "nome": "DIPIRONA SÓDICA GOTAS 500 MG / ML 10 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1306,
+    "metodo": 108
+  },
+  {
+    "unidade": "CAF",
+    "id": "m1SAI1Qzx5fCO4vjoweP",
+    "nome": "DISPOSITIVO INTRA-UTERINO - DIU",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 69,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "soxzvxvtQjy8fsy9RqYb",
+    "nome": "DOXAZOSINA 2 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 6270,
+    "metodo": 450
+  },
+  {
+    "unidade": "CAF",
+    "id": "Y8elAqaC5Kq1HJFm11lf",
+    "nome": "DOXAZOSINA MESILATO 4MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3240,
+    "metodo": 165
+  },
+  {
+    "unidade": "CAF",
+    "id": "mnfSD5oYO79qKksHxlQj",
+    "nome": "DRAMIN  GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 207,
+    "metodo": 13
+  },
+  {
+    "unidade": "CAF",
+    "id": "Pr63wxqUImB2mzmujRVe",
+    "nome": "DROPROPIZINA 1,5 MG/ML -XAROPE PEDIATRICO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 130,
+    "metodo": 10
+  },
+  {
+    "unidade": "CAF",
+    "id": "u4npOHvNY4cU7uvcq5pa",
+    "nome": "DROPROPIZINA 3 MG/ML - XAROPE ADULTO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 149,
+    "metodo": 24
+  },
+  {
+    "unidade": "CAF",
+    "id": "eQPnFCc0i5t23CSvmrNc",
+    "nome": "ENALAPRIL 10MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 360,
+    "metodo": 22
+  },
+  {
+    "unidade": "CAF",
+    "id": "B3MNnwdTOM7272bHx5HM",
+    "nome": "ENOXAPARINA SÓDICA 40 MG/0,4ML - CLEXANE",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 509,
+    "metodo": 70
+  },
+  {
+    "unidade": "CAF",
+    "id": "PZC8uTZ7cXB91hZJwubI",
+    "nome": "EPITEZAN POMADA OFTALMICA 3,5 GR",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 15,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "XBnbBtanjyVzI1Degupg",
+    "nome": "ESPIRONOLACTONA 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5746,
+    "metodo": 450
+  },
+  {
+    "unidade": "CAF",
+    "id": "R6XNm7p2dJO5DHd4iv5E",
+    "nome": "ESTRIOL 1MG/G - CR VAGINAL 50 GR",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 36,
+    "metodo": 2
+  },
+  {
+    "unidade": "CAF",
+    "id": "ZO8akO0o9xeUoafmZIss",
+    "nome": "FENITOINA 100 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5570,
+    "metodo": 500
+  },
+  {
+    "unidade": "CAF",
+    "id": "ATcCziPeN5Q399wrNQjl",
+    "nome": "FENOBARBITAL 100 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5360,
+    "metodo": 400
+  },
+  {
+    "unidade": "CAF",
+    "id": "GAa6AD63zZ3CBA14RRL6",
+    "nome": "FENOBARBITAL 40 MG/ML - GOTAS",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 19,
+    "metodo": 2
+  },
+  {
+    "unidade": "CAF",
+    "id": "asv8ANfc7DB0ez4Wzih1",
+    "nome": "FINASTERIDA 5 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 6750,
+    "metodo": 480
+  },
+  {
+    "unidade": "CAF",
+    "id": "D1IPbVFWQgAy8PdnI0qy",
+    "nome": "FLUCONAZOL 150 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 206,
+    "metodo": 20
+  },
+  {
+    "unidade": "CAF",
+    "id": "SUBVSXADczJ3pnnELTq1",
+    "nome": "FLUOXETINA, CLORIDRATO 20 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 13675,
+    "metodo": 1350
+  },
+  {
+    "unidade": "CAF",
+    "id": "LLZ3ayxpwz7os2ZDV6Xs",
+    "nome": "FUROSEMIDA 40MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5000,
+    "metodo": 655
+  },
+  {
+    "unidade": "CAF",
+    "id": "kjDoYjmKFHAe6SiZvAdr",
+    "nome": "GLIBENCLAMIDA 5 MG.",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 600,
+    "metodo": 20
+  },
+  {
+    "unidade": "CAF",
+    "id": "ozymaRu3txV3w2vuwhOU",
+    "nome": "GLICLAZIDA 30 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5400,
+    "metodo": 1000
+  },
+  {
+    "unidade": "CAF",
+    "id": "sbksi6C5dh8BbPYFqSEJ",
+    "nome": "GLICLAZIDA 60 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3940,
+    "metodo": 500
+  },
+  {
+    "unidade": "CAF",
+    "id": "MkIXeBIAEZEaNkkeAkt8",
+    "nome": "HALOPERIDOL 5MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2860,
+    "metodo": 200
+  },
+  {
+    "unidade": "CAF",
+    "id": "bdgH9O7yKc2aql3VChkM",
+    "nome": "HIDRALAZINA 25MG, CLORIDRATO DE",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 3468,
+    "metodo": 40
+  },
+  {
+    "unidade": "CAF",
+    "id": "K8qNPhoM8cuuNpX6uvUQ",
+    "nome": "HIDROCLOROTIAZIADA 25MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 1440,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "9xkBe5FaLqDO1pbGtTlt",
+    "nome": "HIDROGEL COM ALGINATO - SAF GEL 85 GR",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 27,
+    "metodo": 2
+  },
+  {
+    "unidade": "CAF",
+    "id": "YVQ14zLcmflNF2DhLziH",
+    "nome": "HIDROXIDO DE ALUMINIO 6.2% SUSP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 190,
+    "metodo": 11
+  },
+  {
+    "unidade": "CAF",
+    "id": "RyNd0PfihDPiHQboavCC",
+    "nome": "IBUPROFENO 100MG/ML -  GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 104,
+    "metodo": 42
+  },
+  {
+    "unidade": "CAF",
+    "id": "WyTj0WWMKmlWFTWnmO7o",
+    "nome": "IBUPROFENO 300 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5340,
+    "metodo": 690
+  },
+  {
+    "unidade": "CAF",
+    "id": "EpJ8og89rBADtGSoq7XC",
+    "nome": "IBUPROFENO 50MG/ML - GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 305,
+    "metodo": 10
+  },
+  {
+    "unidade": "CAF",
+    "id": "hASa42igEW2V4UtCaNTG",
+    "nome": "IMIPRAMINA 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1510,
+    "metodo": 210
+  },
+  {
+    "unidade": "CAF",
+    "id": "XFqTEkA6JbJlFrmsw5oq",
+    "nome": "IPRATROPIO,BROMETO 0,25 MG/ML SOLUÇÃO PARA INALAÇÃO 20 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 62,
+    "metodo": 10
+  },
+  {
+    "unidade": "CAF",
+    "id": "gWIbA8tTx5DGt13nd2xI",
+    "nome": "ITRACONAZOL 100 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 460,
+    "metodo": 38
+  },
+  {
+    "unidade": "CAF",
+    "id": "mPVhS9kazM4rJZIkIc5Q",
+    "nome": "IVERMECTINA 6 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 358,
+    "metodo": 34
+  },
+  {
+    "unidade": "CAF",
+    "id": "nbAlVf2c4odbDZO6pqsO",
+    "nome": "KOLLAGENASE POMADA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 68,
+    "metodo": 6
+  },
+  {
+    "unidade": "CAF",
+    "id": "iOxWYCVu3Vb4ZMlcKK6T",
+    "nome": "LEVODOPA + BENSERAZIDA 100/25MG - PROLOPA BD",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 4290,
+    "metodo": 26
+  },
+  {
+    "unidade": "CAF",
+    "id": "KzhsRnoIURyy5BxZqwdL",
+    "nome": "LEVODOPA + BENSERAZIDA 200/50MG - PROLOPA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5430,
+    "metodo": 255
+  },
+  {
+    "unidade": "CAF",
+    "id": "UYi5uq1ifhoGdHlRZxnG",
+    "nome": "LEVOFLOXACINO 500 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1395,
+    "metodo": 275
+  },
+  {
+    "unidade": "CAF",
+    "id": "n0vYviKWqyGh8eBCuFMo",
+    "nome": "LEVOMEPROMAZINA 100 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1610,
+    "metodo": 500
+  },
+  {
+    "unidade": "CAF",
+    "id": "6dFlmOMvVOKSLjhKl1CC",
+    "nome": "LEVOMEPROMAZINA 25MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 720,
+    "metodo": 74
+  },
+  {
+    "unidade": "CAF",
+    "id": "4p2zBB4ewDF6IlloufKm",
+    "nome": "LEVONORGESTREL 0,15MG+ETINILESTRADIOL 0,03MG- CICLO 21",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2183,
+    "metodo": 168
+  },
+  {
+    "unidade": "CAF",
+    "id": "N5L0bTWXlCrUnRcrOznE",
+    "nome": "LEVONORGESTREL 0,75 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 40,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "EvsMpmDaKbdAEAso1nrM",
+    "nome": "LEVOTIROXINA SÓDICA 100MCG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 7780,
+    "metodo": 600
+  },
+  {
+    "unidade": "CAF",
+    "id": "VQVaXnKrtkJRFItNT8an",
+    "nome": "LEVOTIROXINA SODICA 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 8345,
+    "metodo": 775
+  },
+  {
+    "unidade": "CAF",
+    "id": "nRPwHsUCWNXMeyUtCezk",
+    "nome": "LEVOTIROXINA SODICA 50MCG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 15679,
+    "metodo": 1053
+  },
+  {
+    "unidade": "CAF",
+    "id": "fY1BssgaOFUhTmWeXYTM",
+    "nome": "LIDOCAINA 2% GELEIA - 30 GR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 15,
+    "metodo": 4
+  },
+  {
+    "unidade": "CAF",
+    "id": "0HUdWaCvd8cGVs1s3dWH",
+    "nome": "LORATADINA 1 MG/ML - XAROPE",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 887,
+    "metodo": 35
+  },
+  {
+    "unidade": "CAF",
+    "id": "J7dkTaFguzeLeB5yfkfD",
+    "nome": "LORATADINA 10 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 18063,
+    "metodo": 844
+  },
+  {
+    "unidade": "CAF",
+    "id": "DOAnfCR9evVvCEMzhfip",
+    "nome": "LOSARTANA POTASSICA 50MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 315,
+    "metodo": 25
+  },
+  {
+    "unidade": "CAF",
+    "id": "nK0a0peVtRUYiSCSoPuX",
+    "nome": "MEDROXIPROGESTERONA, ACETATO + CIPIONATO DE ESTRADIOL (CYCLOFEMINA)",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 14,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "NI8GS3kl1eMLSHJo3WoW",
+    "nome": "METFORMINA, CLORIDRATO 850MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 500,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "jeefPcIg2XRM15dnBASP",
+    "nome": "METILDOPA 250 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5940,
+    "metodo": 720
+  },
+  {
+    "unidade": "CAF",
+    "id": "CDPqxd9oTiVbjr9NwrZb",
+    "nome": "METOCLOPRAMIDA 10 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1330,
+    "metodo": 400
+  },
+  {
+    "unidade": "CAF",
+    "id": "o5Ng0hCLtrCU2TtIdWX1",
+    "nome": "METOPROLOL 100 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 778,
+    "metodo": 36
+  },
+  {
+    "unidade": "CAF",
+    "id": "WWwsLJKLLs5wOIcOz8l9",
+    "nome": "METOPROLOL 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3090,
+    "metodo": 330
+  },
+  {
+    "unidade": "CAF",
+    "id": "lGZEWAbwTEyBbhcLgA62",
+    "nome": "METOPROLOL 50 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1420,
+    "metodo": 120
+  },
+  {
+    "unidade": "CAF",
+    "id": "EByZ18ZsY4wKflC9aJTj",
+    "nome": "METRONIDAZOL 100 MG/G - GEL VAGINAL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 62,
+    "metodo": 5
+  },
+  {
+    "unidade": "CAF",
+    "id": "PcRwIBw1hEXOmdWVMjHP",
+    "nome": "METRONIDAZOL 250 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1752,
+    "metodo": 200
+  },
+  {
+    "unidade": "CAF",
+    "id": "itilE0RioXc5AZpJz6RS",
+    "nome": "METRONIDAZOL 40 MG/ML -  SUSPENSÃO ORAL",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 102,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "LqUsROsACRRkxB15wm2r",
+    "nome": "MICONAZOL, NITRATO 0,02 MG/G -  80 G CREME VAGINAL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 42,
+    "metodo": 5
+  },
+  {
+    "unidade": "CAF",
+    "id": "TKXO5Jrc9WK7hbABer1N",
+    "nome": "NEOMICINA + BACITRACINA POMADA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 551,
+    "metodo": 27
+  },
+  {
+    "unidade": "CAF",
+    "id": "xiK9N2birIK4KXeOL3a8",
+    "nome": "NIFEDIPINA 20MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 6630,
+    "metodo": 390
+  },
+  {
+    "unidade": "CAF",
+    "id": "b5rtVtITjxkJU7xTGyew",
+    "nome": "NIMESULIDA 100 MG  CP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 14270,
+    "metodo": 1302
+  },
+  {
+    "unidade": "CAF",
+    "id": "0h3oFBQuqfA2g5KduUMQ",
+    "nome": "NIMESULIDA GTS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 69,
+    "metodo": 4
+  },
+  {
+    "unidade": "CAF",
+    "id": "UtfJGlUYQY97C5AWMNmP",
+    "nome": "NIMODIPINO 30 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "95oQoYhgP6egDawHRrX7",
+    "nome": "NISTATINA 100.000 SUSP FRASCO 60 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 73,
+    "metodo": 10
+  },
+  {
+    "unidade": "CAF",
+    "id": "gFUSmDpP8uC8fXPM0uGq",
+    "nome": "NISTATINA POMADA VAG.",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 58,
+    "metodo": 6
+  },
+  {
+    "unidade": "CAF",
+    "id": "GcDMF2v2e5s3d0q0XAW4",
+    "nome": "NITRAZEPAN 5 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 740,
+    "metodo": 8
+  },
+  {
+    "unidade": "CAF",
+    "id": "ubw9Y7U8o1mmRr7TWuvH",
+    "nome": "NITROFURANTOINA 100MG CAPSULA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 4540,
+    "metodo": 291
+  },
+  {
+    "unidade": "CAF",
+    "id": "0j02HLpxyERdvCmoU6D4",
+    "nome": "NORETISTERONA 0,35MG CAIXA COM 35 CPR",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 1925,
+    "metodo": 3
+  },
+  {
+    "unidade": "CAF",
+    "id": "7NmKnCCb7ji6E1DDHdFr",
+    "nome": "NORFLOXACINO 400MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 392,
+    "metodo": 24
+  },
+  {
+    "unidade": "CAF",
+    "id": "sX75xQ2PUQ82QBbA8XVB",
+    "nome": "NORTRIPTILINA, CLORIDRATO 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 7100,
+    "metodo": 500
+  },
+  {
+    "unidade": "CAF",
+    "id": "LIfnnCUwlnvQ6j4kIyCX",
+    "nome": "OLEO MINERAL 100 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 110,
+    "metodo": 10
+  },
+  {
+    "unidade": "CAF",
+    "id": "hHGCEAJzgxohrGeqxe49",
+    "nome": "OMEPRAZOL 20MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 14792,
+    "metodo": 1613
+  },
+  {
+    "unidade": "CAF",
+    "id": "ztkKXi1alZVIeCXrYrpr",
+    "nome": "OXCARBAMAZEPINA 60 MG/ML SUSP ORAL",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 1,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "N7gYusqFhoxvv3Osolz1",
+    "nome": "OXCARBAZEPINA 300 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2700,
+    "metodo": 450
+  },
+  {
+    "unidade": "CAF",
+    "id": "ztt7H6QyjKsksbmYTiLO",
+    "nome": "PARACETAMOL + CODEINA 500/30 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 224,
+    "metodo": 672
+  },
+  {
+    "unidade": "CAF",
+    "id": "yN2GlugMP2rzYjq3xyey",
+    "nome": "PARACETAMOL 200 MG/ ML -  FRASCO 15 ML GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 328,
+    "metodo": 14
+  },
+  {
+    "unidade": "CAF",
+    "id": "fkj7oP4n6MezYt0UK64S",
+    "nome": "PARACETAMOL 500 MG - COMP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 4090,
+    "metodo": 271
+  },
+  {
+    "unidade": "CAF",
+    "id": "5aydPCmQ4qqpNkq7IBhn",
+    "nome": "PARACETAMOL 750 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1930,
+    "metodo": 120
+  },
+  {
+    "unidade": "CAF",
+    "id": "yNWX9oxPmoMr6ZzE3X9d",
+    "nome": "PENTOXIFILINA 400 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1030,
+    "metodo": 90
+  },
+  {
+    "unidade": "CAF",
+    "id": "bnDNWjqqJB5LHOm13mCp",
+    "nome": "PERMANGANTO DE POTASSIO 100 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 540,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "TrqWwOISNJemstLha0Nb",
+    "nome": "PERMETRINA 5% LOÇÃO",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 7,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "kMFEL6MITcXGCVAUto4x",
+    "nome": "PHOSFOENEMA 130ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 79,
+    "metodo": 5
+  },
+  {
+    "unidade": "CAF",
+    "id": "GFn8q9hkFcV9LWqHpUuk",
+    "nome": "POLIVITAMINICO GTS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 1,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "etXuQCbnlqgbUg4NZJMx",
+    "nome": "POMADA PARA ASSADURA ( NIST+ OX ZINCO) PMD",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 91,
+    "metodo": 21
+  },
+  {
+    "unidade": "CAF",
+    "id": "jxb0BWzLyS162MYNJkH5",
+    "nome": "PREDNISOLONA 3MG/ML, FOSFATO SODICO DE",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 599,
+    "metodo": 33
+  },
+  {
+    "unidade": "CAF",
+    "id": "bTUH4tyOjUfMlYImT9MW",
+    "nome": "PREDNISONA 20 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 20260,
+    "metodo": 878
+  },
+  {
+    "unidade": "CAF",
+    "id": "8AL8fcCMigUZqDvIvcIS",
+    "nome": "PREDNISONA 5 MG - CP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 920,
+    "metodo": 120
+  },
+  {
+    "unidade": "CAF",
+    "id": "mIqWYaCeRkPmM1ZAAG4p",
+    "nome": "PROMETAZINA 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1916,
+    "metodo": 400
+  },
+  {
+    "unidade": "CAF",
+    "id": "HLJEdXd21INYUv05lkTH",
+    "nome": "PROPRANOLOL 40MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 4580,
+    "metodo": 260
+  },
+  {
+    "unidade": "CAF",
+    "id": "6XcVIKT1RkuhgIFMTALB",
+    "nome": "RIFOCINA SPRAY",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 49,
+    "metodo": 7
+  },
+  {
+    "unidade": "CAF",
+    "id": "jv9vtPzeh5HnMLIXzOpn",
+    "nome": "SAIS P/REIDRATAÇÃO ORAL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1068,
+    "metodo": 125
+  },
+  {
+    "unidade": "CAF",
+    "id": "my6AZaewn6pqSwwQX25s",
+    "nome": "SALBUTAMOL, SULFATO 100 MCG/ DOSE -  AEROSOL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 187,
+    "metodo": 9
+  },
+  {
+    "unidade": "CAF",
+    "id": "1n4al9b30pDIWsyPHwWE",
+    "nome": "SERTRALINA 50MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 37859,
+    "metodo": 3252
+  },
+  {
+    "unidade": "CAF",
+    "id": "onOxwh2oBy18w0L5iSxf",
+    "nome": "SIMETICONA GTS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 432,
+    "metodo": 34
+  },
+  {
+    "unidade": "CAF",
+    "id": "r38EfOCdjGoN6NrtsrdS",
+    "nome": "SINVASTATINA 10MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 570,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "u1RBTgAqson1RdfjSfBq",
+    "nome": "SINVASTATINA 20MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 660,
+    "metodo": 13
+  },
+  {
+    "unidade": "CAF",
+    "id": "BLJXgqUYz7ilA09dySs8",
+    "nome": "SORO NASAL ADULTO -30 ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "c5nKpQDvirnn2gwUrOhU",
+    "nome": "SORO NASAL INFANTIL/ADULTO -30 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 146,
+    "metodo": 10
+  },
+  {
+    "unidade": "CAF",
+    "id": "oIyUT49A80lBGHPVcCYi",
+    "nome": "SULFADIAZINA DE PRATA 0,01",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 91,
+    "metodo": 4
+  },
+  {
+    "unidade": "CAF",
+    "id": "HZCQCNK29JRZhSPnYRSb",
+    "nome": "SULFAM. + TRIMETROP. 40 + 8 MG/ML - SUSPENSÃO ORAL 100 ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 15,
+    "metodo": 2
+  },
+  {
+    "unidade": "CAF",
+    "id": "qtK9ZXjqQVBppBrelKVw",
+    "nome": "SULFAMET. +TRIMETOPRIMA  400 + 80MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 680,
+    "metodo": 150
+  },
+  {
+    "unidade": "CAF",
+    "id": "y64oy8sLotMN2GanX2DP",
+    "nome": "SULFATO FERROSO 25 MG/ML - GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 93,
+    "metodo": 13
+  },
+  {
+    "unidade": "CAF",
+    "id": "H0Mty9mwMBytoJgc9Epk",
+    "nome": "SULFATO FERROSO 40 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 7737,
+    "metodo": 1200
+  },
+  {
+    "unidade": "CAF",
+    "id": "8GSjqvk8AQCwqv9SQdRc",
+    "nome": "SUPLEMENTO VITAMINICO A-Z",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 4760,
+    "metodo": 300
+  },
+  {
+    "unidade": "CAF",
+    "id": "RDXCFe15NY5cGdJCODwa",
+    "nome": "TIAMAZOL 5MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 870,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "tzM5HyBfI8JKl0fVkRxX",
+    "nome": "TIAMINA 300 MG - CP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 4620,
+    "metodo": 600
+  },
+  {
+    "unidade": "CAF",
+    "id": "H6vqTSQNU7kMGUVXjLuL",
+    "nome": "TIBOLONA 1,25MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1795,
+    "metodo": 175
+  },
+  {
+    "unidade": "CAF",
+    "id": "2eW3vLaiFqi3ChhSNowB",
+    "nome": "TOBRAMICINA 0,3 % COLIRIO - FRASCO 5 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 103,
+    "metodo": 7
+  },
+  {
+    "unidade": "CAF",
+    "id": "L1XjFJCqNhzezk1GQ0ec",
+    "nome": "TORVAL 500MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "0UzmCcfqoK39sEAf6Rwf",
+    "nome": "VALPROATO DE SÓDIO 50 MG/ML - XPE",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 190,
+    "metodo": 10
+  },
+  {
+    "unidade": "CAF",
+    "id": "UvWJHiijp79TzHRgubfa",
+    "nome": "VARFARINA SODICA 5MG - MAREVAN",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1800,
+    "metodo": 150
+  },
+  {
+    "unidade": "CAF",
+    "id": "l0hrgmHcJwYa5hxrHUSm",
+    "nome": "VITAMINA D3 7.000 UI",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3568,
+    "metodo": 243
+  },
+  {
+    "unidade": "CAF",
+    "id": "clCjD9TVH5wMU60o7VRh",
+    "nome": "BISSULFATO DE CLOPIDOGREL 75 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 430,
+    "metodo": 25
+  },
+  {
+    "unidade": "CAF",
+    "id": "ZJa9CxNSJn4YfA9tkFHR",
+    "nome": "ISOSSORBIDA, DINITRATO 5 MG - SUB LINGUAL",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 90,
+    "metodo": 9
+  },
+  {
+    "unidade": "CAF",
+    "id": "nQT0sFcuyN3wPyWWiVGv",
+    "nome": "ACETILCISTEINA 600 MG - FLUIMUCIL",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 11,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "oe2giHGUYF2mLe7WlVxj",
+    "nome": "ACIDO FUSIDICO + VALERATO DE BETAMETASONA CREME",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "h9WNgxJUzz5eZOzBpTXc",
+    "nome": "ADORLAN 25",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "0ZZw2LpzKVUZeLcKDwwZ",
+    "nome": "ANESTESICO COLIRIO - OXINEST",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "B4uaYbs78PcgBWXcoPHv",
+    "nome": "ARIPIPRAZOL 20MG/ML SUSP GTS",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "SLPbpcG5Pb7NEVolVUYi",
+    "nome": "BACLOFENO 10 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "98Y4aUei09v22k3Lghu5",
+    "nome": "BETAISTINA, DICLORIDRATO 16MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "5fkEDG5c03LYs7cUySqc",
+    "nome": "BIOVISC ORTHO SINGLE 90MG 3ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "v1Xp5UxmsAgmqPwJxeY7",
+    "nome": "BOLSA DE OSTOMIA DRENAVEL SOFT CONVEXA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "XES0KoO074StqVRY52PC",
+    "nome": "BUPROPIONA 150 MG - ASSISTENCIAL",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 19
+  },
+  {
+    "unidade": "CAF",
+    "id": "wtrRuyLsAhYrnLqelXhu",
+    "nome": "BUPROPIONA XL 150 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "wP3CCoiGWFa2yur8rBbh",
+    "nome": "CERAVE LOÇÃO HIDRATANTE 473ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "TPWWnWt24YQbzX8oLhwi",
+    "nome": "CETAPHIL LOCAO HIDRATANTE",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 2,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "RdfvdBBjmR0wBBvpxC7O",
+    "nome": "CILODEX COLIRIO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "L4XgzFbK5ELxtfnu7jaM",
+    "nome": "CINTO P/ BOLSA DE OSTOMIA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "UfuclvzO32nzTjpZ0zat",
+    "nome": "CIPROFLOXACINO + DEXAMETASONA COLIRIO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 1,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "7D0haFb7SnW7PW1K9DRx",
+    "nome": "CITONEURIN 5000 MCG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "dxT2SA3ZcjWBHEgXqZN7",
+    "nome": "CLINDAMICINA, CLORIDRATO 300 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "JSZIL11se7bJ6zL8P9xn",
+    "nome": "CLINDOXYL GEL",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "9wullEaa3dQ2EBotlTzB",
+    "nome": "CLOBAZAM 10MG (URBANIL)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 60,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "Z49OqLPpqLl0XSeGs9P5",
+    "nome": "CLONIDINA 0,150MG - ATENSINA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "ynn41vY6gUW9GfxBPOUR",
+    "nome": "CLOZAPINA 25MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "QvRSOoIEZRS9PdZx0v6f",
+    "nome": "COLAGENO TIPO II + VITAMINAS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "AOAWIppJtCTZGSqJxt9y",
+    "nome": "COLCHICINA0,5MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 150,
+    "metodo": 10
+  },
+  {
+    "unidade": "CAF",
+    "id": "mf2dKoHaemouClQcH7HK",
+    "nome": "COLETE PUTTI COMFORT AIR",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "x2cD8JDXAaNUfW011eak",
+    "nome": "CREATINA PROBIOTICA PURA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "HC5caGAMBZDMM36rvjgA",
+    "nome": "CROMOLERG 4%",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "SSw3pBZbTmyx8jSNe8o4",
+    "nome": "CUTISANOL BABY 120G",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "3HbIItfasiveaTbsyMAD",
+    "nome": "DESLORATADINA SOLUÇÃO ORAL",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "GW6LrwI2MpYoFVOwMJXi",
+    "nome": "DESVENLAFAXINA 50MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 210,
+    "metodo": 2
+  },
+  {
+    "unidade": "CAF",
+    "id": "CTC28iTkZtAj72RtoGbh",
+    "nome": "DEXAMETASONA 4 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3160,
+    "metodo": 170
+  },
+  {
+    "unidade": "CAF",
+    "id": "09W43eDQzqcoQxKf9wt5",
+    "nome": "DOMPERIDONA 10 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 390,
+    "metodo": 32
+  },
+  {
+    "unidade": "CAF",
+    "id": "ebbs7PfVgFYgOZcAEtBI",
+    "nome": "DORZOLAMIDA 2%",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "Iz6pJB9xr6jBqkEFvROS",
+    "nome": "DOXICICLINA 100MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "bxdRCRoBy4jkVvs1ujfv",
+    "nome": "DOZEMAST 1000MCG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "PfmcJVFRZZ6AbPvYhaFQ",
+    "nome": "DULOXETINA, CLORIDRATO 60MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 120,
+    "metodo": 25
+  },
+  {
+    "unidade": "CAF",
+    "id": "nA42QCrvNDS7aPYzERCc",
+    "nome": "EMPAGLIFLOZINA 25MG (JARDIANCE)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "eEKbxdYXBzxOKArLEIs2",
+    "nome": "ENSURE LATA 400G",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 113,
+    "metodo": 11
+  },
+  {
+    "unidade": "CAF",
+    "id": "TwnLk2XLCOXfWk15nZvW",
+    "nome": "ENTEROGERMINA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "882r7HgKgsw7NDFtOCAD",
+    "nome": "ESOMEPRAZOL 40MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "DMX1vO8BBZtpxVyufK84",
+    "nome": "ESPAÇADOR P/ MEDICAMENTO ADULTO E INFANTILL",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "Wlvoc7dBw2sRPIJ8RJGg",
+    "nome": "ESPIRAMICINA 1,5 MG CP",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "fqEheyRghlUUOCmh9GiS",
+    "nome": "FENAZOPIRIDA 200MG - PYRIDIUM",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 9,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "xJG4xM95BVjKT5OvE2d0",
+    "nome": "FLEX-S COLAGENO HIDROLISADO TIPO II",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "ApinTW1CHNX94E5CMW9T",
+    "nome": "FLUTINOL COLIRIO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "MwlTHGO2TUhepUbU27Gx",
+    "nome": "FORXIGA 10MG (DAPAGLIFLOZINA)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "yIaeAARlgH074Y1dfP1X",
+    "nome": "FOSFOMICINA TROMETAMOL - MONURIL",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "ImM838wEkxf6WlBmAiHn",
+    "nome": "GLUCERNA 400G",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 18,
+    "metodo": 2
+  },
+  {
+    "unidade": "CAF",
+    "id": "3QTsCWQ1lntjW1fE9M7R",
+    "nome": "GUACO XAROPE - MIKANIA GLOMERATA 117,5MG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 43,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "k9Q52ikdimagiGTWLTJG",
+    "nome": "HIDROXIZINA XAROPE",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "Zyzp1rmN7IuAYFhLaq5V",
+    "nome": "IMPACT NUTRICAO ORAL E ENTERAL",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "ivu9tqKY8MXA6xNUJLE7",
+    "nome": "INELATTE 800DKM",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 60,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "4PGLiZ16rU66BmBx0ro7",
+    "nome": "ISOSOURCE 1.5",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "KZeoKt7z0mLf3GZdrxL5",
+    "nome": "IZIZ C/28",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "E9C2UVwPFuQ6EQz7wquc",
+    "nome": "LACTULOSE XAROPE 120 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 54,
+    "metodo": 9
+  },
+  {
+    "unidade": "CAF",
+    "id": "fqdgpMD6qrsGW1vI6JDK",
+    "nome": "LEITE APTAMIL AR 800G",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "fp3L47r9UcjndNILA1Kp",
+    "nome": "LEITE APTAMIL PREMIUM 1 - LATA 800G",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 8,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "M7PcBqTegT2YeQ38lgGD",
+    "nome": "LEITE APTAMIL PRO EXPERT SOJA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "CD2qZwyRmCJIdhcMWrZv",
+    "nome": "LEITE NAN COMFOR 1 - LATA 800 G",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 6,
+    "metodo": 2
+  },
+  {
+    "unidade": "CAF",
+    "id": "YTBeBEKQq1OhxwRyI5Pe",
+    "nome": "LEITE NAN COMFOR 2 - LATA 800 G",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 2,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "13gLOOpsVgz8OroJeUOY",
+    "nome": "LEITE NAN ESPESSAR- LATA 800 G",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "Ru9ngfjA74SkV1UgTkNT",
+    "nome": "LEITE NAN SUPREME 1- 800G",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 5,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "JWWONjOYX2mcM9FA9SIw",
+    "nome": "LEITE NESTOGENO 1 - LATA 800G",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "RvCLE8rrI6WlVdsbXCuU",
+    "nome": "LEITE NINHO FASE I",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "19tGQni3pqGnzpl8jpLj",
+    "nome": "LISDEXANFETAMINA, DIMESILATO DE 30MG - VENVANSE",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 150,
+    "metodo": 6
+  },
+  {
+    "unidade": "CAF",
+    "id": "t9Mv8tFZD6ieDTxKDw6i",
+    "nome": "LOPERAMIDA 2 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 888,
+    "metodo": 120
+  },
+  {
+    "unidade": "CAF",
+    "id": "Dy20KseCwfDRVp3tp8Bd",
+    "nome": "LURASIDONA, CLORIDRATO DE 40MG (LATUDA)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "03xukFiKViEfrwg603S1",
+    "nome": "MAXIDEX - DEXAMETASONA 1MG/ML COLIRIO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "la5qFTbBKIRhaVm11HId",
+    "nome": "MAXIDRATE GEL HIDRATANTE",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "3tirqyk36kwx1ff8U08C",
+    "nome": "MEIA 3/4 20-30MM",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "8EQKbDHBb8aKVpzyLWZk",
+    "nome": "MEIA 3/4 30-40MM",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "TDgwN7ITx69tfOez9J0v",
+    "nome": "MELOXICAM 15MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "MkUItNIa99H9Vis78Wc0",
+    "nome": "METFORMINA, CLORIDRATO 500MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 480,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "be8ZK8PxhMykXammDkPw",
+    "nome": "METILCOBALAMINA 1.000MCG - DOZEMAST - MECOBE",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 370,
+    "metodo": 11
+  },
+  {
+    "unidade": "CAF",
+    "id": "oAsHJoA1Se15gspTa3If",
+    "nome": "METILFENIDATO 10 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1770,
+    "metodo": 120
+  },
+  {
+    "unidade": "CAF",
+    "id": "EbGdBfopFqlpd4fTrDrj",
+    "nome": "MIRABEGRONA 50MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "RivLPqxYggjlSiHtjzBb",
+    "nome": "MIRTAZAPINA 15MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 240,
+    "metodo": 6
+  },
+  {
+    "unidade": "CAF",
+    "id": "A1Hx5rKefA8PMNJV10Yu",
+    "nome": "MIRTAZAPINA 15MG COMPRIMIDO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "sd8mTUNGn83cIP3w3dAA",
+    "nome": "MIRTAZAPINA 30MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "DRFzshvap5fD11wRvdiz",
+    "nome": "NALTREXONA 50 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 180,
+    "metodo": 7
+  },
+  {
+    "unidade": "CAF",
+    "id": "07OsYcmU03iWz3VotUGW",
+    "nome": "NAPROXENO 500MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "2A3Rs9qginsrbwJ3I20Q",
+    "nome": "NEOCATE LCP",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 6,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "7nqlElQCZGw1OCQ1U3H9",
+    "nome": "NEULEPTIL - PERICIAZINA 40MG/ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "fju0esXlYLX8rEWVDTmm",
+    "nome": "NUTRASENIOR 400 GR",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "y75avTQeD67eWNKJQ15l",
+    "nome": "NUTREN SENIOR",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "NJks0S26PveorCeDPgQb",
+    "nome": "OFTPRED COLIRIO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "8b0oAgadQN5cd0HcFtBl",
+    "nome": "OLMESARTANA 40MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "pH5LCRQCRTpnkjZkQCbD",
+    "nome": "ONDANSETRONA 4 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3390,
+    "metodo": 240
+  },
+  {
+    "unidade": "CAF",
+    "id": "lNvFtsQXhZYQA1O5tqVQ",
+    "nome": "ONDANSETRONA 8 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 430,
+    "metodo": 55
+  },
+  {
+    "unidade": "CAF",
+    "id": "okw2jLL0S4Yp0UVk2eBi",
+    "nome": "PANT SPRAY",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "gRgfjDPbPWJYVRjO2xPH",
+    "nome": "PANTOPRAZOL 20 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "M8o6281pyoPqBrSPTvVP",
+    "nome": "PANTOPRAZOL 40 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 28,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "NAMDqbsNQpih2yjkoLRY",
+    "nome": "PARACETAMOL + TRAMADOL 325/37,5MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "TPmNeAmZWfMnxpNtpYz0",
+    "nome": "PAROXETINA 12,5MG - PONDERA XR",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "PzDtDOL1Z75lHTMXZTYc",
+    "nome": "PAROXETINA 20 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 540,
+    "metodo": 61
+  },
+  {
+    "unidade": "CAF",
+    "id": "jzkPj7seiSYs2VhMmuJO",
+    "nome": "PIRACETAM 400 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "e5OqCuFHfsj3Ob3zTcw5",
+    "nome": "PREGABALINA 100MG - PREBICTAL",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 30,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "p6v8Ve69ohbeSfGjuvUo",
+    "nome": "PREGABALINA 75MG - LYRICA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1516,
+    "metodo": 300
+  },
+  {
+    "unidade": "CAF",
+    "id": "2n8I86Tv3rQcHMeBSFMD",
+    "nome": "PREVDERM SPRAY 50ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "hhqXwctMfKgMvqVaUQ4P",
+    "nome": "PROPAFENONA 300 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "JPyfPllfescUpNsqh1H9",
+    "nome": "QUETIAPINA 100MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "UVOhucSTdWGTdVNKfHzJ",
+    "nome": "RISPERIDONA 1 MG/ML SOLUÇÃO",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 67,
+    "metodo": 2
+  },
+  {
+    "unidade": "CAF",
+    "id": "xXVce28GF6OclKUsmvan",
+    "nome": "RISPERIDONA 1MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "98m981as3l4Ih5DayJFR",
+    "nome": "RIVAROXABANA 10 MG (XARELTO)",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 120,
+    "metodo": 14
+  },
+  {
+    "unidade": "CAF",
+    "id": "RyNxNaeVvTnfmgjWFXZj",
+    "nome": "RIVAROXABANA 15 MG (XARELTO)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "HQ91S9Rbm4QVBWjY2jJS",
+    "nome": "RIVAROXABANA 20MG (XARELTO)",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 240,
+    "metodo": 16
+  },
+  {
+    "unidade": "CAF",
+    "id": "3MXMAwoKO7Q32Ywgtutg",
+    "nome": "ROSUVASTATINA 10MG + EZETIMIBA 10MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "hNd8TOd86Dz69700VMoi",
+    "nome": "SALBUTAMOL GOTAS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "C6gTpWB17MUDhyOwpjH4",
+    "nome": "SILIMARINA 200MG (FIGMED)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "igbElbC6l3qQRyfBpsOa",
+    "nome": "SILYBUM MARIANUM 300MG (FORFIG)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "DPavErRGBCftcFqKUv2V",
+    "nome": "SUSTAGEN ADULTOS+",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 8,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "2t7XTo7OGzG4qO7cuULT",
+    "nome": "TAMARINE CP",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "F2Prcb1OpyPLVH3FcCng",
+    "nome": "TOPCOID GEL - POLISSULFATO DE MUCOPOLISSACARIDEO",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "4OmR30yxPaiJO7ZQ3GTF",
+    "nome": "TRAMADOL 100 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "wHmUnagFZnuJPWIdxliV",
+    "nome": "TRAMADOL 50MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 710,
+    "metodo": 81
+  },
+  {
+    "unidade": "CAF",
+    "id": "k6t7PoZjUEd8VpyDl0tA",
+    "nome": "TRAZODONA, CLORIDRATO 50MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 240,
+    "metodo": 3
+  },
+  {
+    "unidade": "CAF",
+    "id": "oSLNM5Eiq2ZCLzZZMtve",
+    "nome": "TRIADE MULHER",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "Awf2gbPNSmMl5p0a9QZm",
+    "nome": "TROK-G (BETAMETASONA+ GENTAMICINA) POMADA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "mD4mVoifdrB4MwI6kwij",
+    "nome": "TROPHIC BASIC NUTRICAO ENTERAL E ORAL 800G",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "aHk79gkBb0S1T3VFT1km",
+    "nome": "URSACOL 300 MG - ÁCIDO URSODESOXICOLICO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "gEjOmcMmd9yhB6GuUzRz",
+    "nome": "VENLAFAXINA 75 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 1254,
+    "metodo": 129
+  },
+  {
+    "unidade": "CAF",
+    "id": "ofJUpurbbdrkn8HSUyRw",
+    "nome": "VICOG 5MG - VIMPOCETINA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "RtPgBqsst5FJymohBetm",
+    "nome": "VIGADEXA COL - MOXIFLOXACINO + DEXAMETASONA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "vm4LJ5Jh5uajOQ7SS4rK",
+    "nome": "VITAMINA D 15.000UI",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "JqmU8WKAqGbsLZsVmi9I",
+    "nome": "VITAMINA D 200 UI - GOTAS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 1,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "MejxRDFFOsggZLHsNCXH",
+    "nome": "VITAMINA D 2000UI",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "phMru882PJazuffuNMr2",
+    "nome": "VITAMINA E",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "osDAJU7UwBbcW5SL665C",
+    "nome": "WHEY PROTEIN ISOLADO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "SUuNiwGv28CHq5U2sUdt",
+    "nome": "ZIPRASIDONA, CLORIDRATO DE 40MG (GEODON)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "qZhgOZYzszihiHx0Y09r",
+    "nome": "ACIDO ASCORBICO AMP 5 ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 255,
+    "metodo": 87
+  },
+  {
+    "unidade": "CAF",
+    "id": "BHTWHIpseAqErTkbKUvk",
+    "nome": "ACIDO TRANEXAMICO 50 MG/ML -AMP (TRANSAMIN)",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 250,
+    "metodo": 35
+  },
+  {
+    "unidade": "CAF",
+    "id": "cveG6asAv3IOJpS5d8H7",
+    "nome": "AGUA DESTILADA AMPOLA 10 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1570,
+    "metodo": 200
+  },
+  {
+    "unidade": "CAF",
+    "id": "jiItXVwAniuUCuVFBQdw",
+    "nome": "AMIODARONA 50MG/ML - AMP",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 58,
+    "metodo": 2
+  },
+  {
+    "unidade": "CAF",
+    "id": "QPcg4NF1FLInXf8AaKVp",
+    "nome": "BENZILPENICILINA 1.200.000 UI - PÓ P/ SUSP. INJ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 50,
+    "metodo": 43
+  },
+  {
+    "unidade": "CAF",
+    "id": "cjZBdxbXM80XcmFkPmhW",
+    "nome": "BROMOPRIDA 10MG/2ML - INJ",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 465,
+    "metodo": 78
+  },
+  {
+    "unidade": "CAF",
+    "id": "n1mVvVTMqSduy7h6h4nY",
+    "nome": "BUSCOPAM COMPOSTO INJETAVEL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1091,
+    "metodo": 100
+  },
+  {
+    "unidade": "CAF",
+    "id": "8BhUDa0uaKtDrF32jSjE",
+    "nome": "BUSCOPAM SIMPLES INJETAVEL",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 330,
+    "metodo": 28
+  },
+  {
+    "unidade": "CAF",
+    "id": "M4g15BF3472srpMLxx2R",
+    "nome": "CARVAO ATIVADO EM PO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "zn1KN1pgJzTUIskpyo9f",
+    "nome": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ IM",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 475,
+    "metodo": 59
+  },
+  {
+    "unidade": "CAF",
+    "id": "AsfwwaQi1KQerQUMt8hn",
+    "nome": "CEFTRIAXONA 500 MG INJ -IM",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 51,
+    "metodo": 3
+  },
+  {
+    "unidade": "CAF",
+    "id": "4mPPUkosxWeFeGVQ79Y7",
+    "nome": "CETOPROFENO  50MG/ML IM (PROFENID)",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 600,
+    "metodo": 200
+  },
+  {
+    "unidade": "CAF",
+    "id": "sP5HFzyGj5FeehtrpI7g",
+    "nome": "CETOPROFENO 100 MG - EV",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 34,
+    "metodo": 58
+  },
+  {
+    "unidade": "CAF",
+    "id": "psPzS4n0uK5yJSsH463L",
+    "nome": "CIMETIDINA 150MG/ML IM",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 570,
+    "metodo": 63
+  },
+  {
+    "unidade": "CAF",
+    "id": "qqidJqvTN5DPkTlaSY1V",
+    "nome": "COLTRAX INJ (TIOCOLCHICOSIDEO)",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 150,
+    "metodo": 14
+  },
+  {
+    "unidade": "CAF",
+    "id": "k0TmRRuBVyTHn9ehRcMD",
+    "nome": "COMPLEXO B INJ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1200,
+    "metodo": 200
+  },
+  {
+    "unidade": "CAF",
+    "id": "BHQackUU2RPmCk7UZSqj",
+    "nome": "DESPACILINA - BENZILPENICILINA PROCAINA 300.000UI + BENZILPENICILINA OTASSICA 100.000UI",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "iygjuFivoSWKplZS3itG",
+    "nome": "DEXAMETASONA 2MG/ML- AMP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 550,
+    "metodo": 100
+  },
+  {
+    "unidade": "CAF",
+    "id": "gMMWRPT1VBGYr2C7MK6i",
+    "nome": "DEXAMETASONA 4 MG/ML - AMPOLA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2200,
+    "metodo": 200
+  },
+  {
+    "unidade": "CAF",
+    "id": "hDFA1F3viPhOw8vOYbtm",
+    "nome": "DIPIRONA 500 MG/2 ML - AMP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3300,
+    "metodo": 300
+  },
+  {
+    "unidade": "CAF",
+    "id": "ORoe2dIZIyGyED7S2bP9",
+    "nome": "DIPROSPAN AMP 2 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 0,
+    "metodo": 50
+  },
+  {
+    "unidade": "CAF",
+    "id": "QedbtYv4v0IkcxQdxccC",
+    "nome": "DRAMIN B6 DL EV",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 994,
+    "metodo": 100
+  },
+  {
+    "unidade": "CAF",
+    "id": "Xze3I7yOZcEPDaUe1i5T",
+    "nome": "DRAMIN B6 IM",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "hwKC6jEYd61qjEUbhOx1",
+    "nome": "FITOMENADIONA 10MG/ML INJ",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 95,
+    "metodo": 12
+  },
+  {
+    "unidade": "CAF",
+    "id": "iJufesYcE5fE1V1DB1p4",
+    "nome": "FUROSEMIDA 10 MG/ ML- AMPOLA",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 45,
+    "metodo": 22
+  },
+  {
+    "unidade": "CAF",
+    "id": "6ys2yC1k8vGdC2HtW3yr",
+    "nome": "GENTAMICINA 80 MG INJ- AMPOLA",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 240,
+    "metodo": 12
+  },
+  {
+    "unidade": "CAF",
+    "id": "FwACT0nUN8St05ELhQE5",
+    "nome": "GLICOSE 25% - 10 ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 220,
+    "metodo": 9
+  },
+  {
+    "unidade": "CAF",
+    "id": "xTonu2zccY6sWMErE6wZ",
+    "nome": "GLICOSE 50 % - 10 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 150,
+    "metodo": 15
+  },
+  {
+    "unidade": "CAF",
+    "id": "0ZQT8TIgDGevRLg9qYT8",
+    "nome": "HALOPERIDOL,DECANOATO 70,52MG/ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 140,
+    "metodo": 25
+  },
+  {
+    "unidade": "CAF",
+    "id": "QeX3lfZhvIyVkUysujiZ",
+    "nome": "HIDROCORTISONA, SUCCINATO 100 MG - PÓ P/ SOL. INJ",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 119,
+    "metodo": 11
+  },
+  {
+    "unidade": "CAF",
+    "id": "BDRBMEQRb53tUxpZ3GgX",
+    "nome": "HIDROCORTISONA, SUCCINATO 500 MG - PÓ P/ SOL. INJ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 385,
+    "metodo": 20
+  },
+  {
+    "unidade": "CAF",
+    "id": "kp1CZYWdFdQD7XaCfIJI",
+    "nome": "LIDOCAINA 2% - S/ VASO - SOL. INJETAVEL 20ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 85,
+    "metodo": 3
+  },
+  {
+    "unidade": "CAF",
+    "id": "E3hM7B60nc95IKNveJpd",
+    "nome": "LIDOCAINA 2% - S/ VASO - SOL. INJETAVEL 5ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "OOiVlSyT5Z0tPi8Lrmup",
+    "nome": "MEDROXIPROGESTERONA, ACETATO 150MG/ML (DEPOPROVERA)",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 63,
+    "metodo": 15
+  },
+  {
+    "unidade": "CAF",
+    "id": "AzZQFCFXWxKaSrXJwUi8",
+    "nome": "METOCLOPRAMIDA 10 MG/ 2ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 90,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "4bHy4TLRW6yaEq6YA4Jk",
+    "nome": "NORETISTERONA + ESTRADIOL 50 + 5 MG/ML  (MESIGYNA) INJETAVEL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 69,
+    "metodo": 12
+  },
+  {
+    "unidade": "CAF",
+    "id": "zUuYGCZDZxoB0nsWBsyp",
+    "nome": "NORIPURUM INJ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 200,
+    "metodo": 28
+  },
+  {
+    "unidade": "CAF",
+    "id": "aIVvqE2sDdaluqI4G5VR",
+    "nome": "ONDANSETRONA 4 MG/ 2 ML INJ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1300,
+    "metodo": 145
+  },
+  {
+    "unidade": "CAF",
+    "id": "ymL7GXkyn9ogZ7HI8vRj",
+    "nome": "OXITOCINA 5UI/ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "19Jxt9OroinRNtefpnXo",
+    "nome": "ROCURÔNIO 50 MG/ 5 ML - IV",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "x5eil6ATv0YJAnHYEz8Y",
+    "nome": "ADENOSINA 3MG/2ML - AMP",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 63,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "JRfBHiICtzGkjoTRyS1c",
+    "nome": "AMINOFILINA 24 MG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 86,
+    "metodo": 2
+  },
+  {
+    "unidade": "CAF",
+    "id": "c3ftTbJoOAeptQZIfEku",
+    "nome": "ATROPINA, SULFATO 0,50MG/ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 100,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "tR1YAKp88EaqeThFVQ3v",
+    "nome": "CLONIDINA, CLORIDRATO DE 150MCG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 42,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "SraMhaaWroF3PIbQ6qfs",
+    "nome": "CLORETO DE POTASSIO 19,1% - 10 ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 32,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "BoJJeaG3DzWWxitoV4Yd",
+    "nome": "CLORETO DE SODIO 20% - 10 ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 24,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "wsc7OX63zbd0XjgzfJ9j",
+    "nome": "CLORPROMAZINA 25MG/5ML INJ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 58,
+    "metodo": 31
+  },
+  {
+    "unidade": "CAF",
+    "id": "NWoQNOV9u0lOsDSAIhvD",
+    "nome": "DESLANOSIDEO 0,2 MG/ML- AMP",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 50,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "dfGzwhQ0BtVeIhlWWDQc",
+    "nome": "DIAZEPAM 10 MG/ 2ML - AMP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 112,
+    "metodo": 5
+  },
+  {
+    "unidade": "CAF",
+    "id": "ODy1bHylMb3P7LQBpkct",
+    "nome": "DIFENIDRAMINA 50 MG/ML - AMP",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 15,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "8hQIWv1uToNf0w0dJ3hc",
+    "nome": "DOBUTAMINA 12,5MG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 12,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "WMHwZMb2EBJAXATKLbLu",
+    "nome": "DOPAMINA 5 MG/ ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 44,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "W9oRz64u78M0Gj4HvEiq",
+    "nome": "EPINEFRINA 1MG/ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 69,
+    "metodo": 5
+  },
+  {
+    "unidade": "CAF",
+    "id": "pR1rQSQGD5GsIN1TPCZT",
+    "nome": "ETOMIDATO 2 MG/ML - AMP",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 9,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "vPTqIE0lST34hTmYqYYH",
+    "nome": "FENITOINA 50 MG / ML- AMPOLA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 79,
+    "metodo": 6
+  },
+  {
+    "unidade": "CAF",
+    "id": "WHpBYcwEGzirCTzIVJ9H",
+    "nome": "FENOBARBITAL 200 MG/ ML - AMPOLA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 7,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "tGHgK3AhX3gwvjUkWJTQ",
+    "nome": "FENTANILA,CITRATO 78,5MCG/5ML EQUIVALENTE A 50MCG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 21,
+    "metodo": 3
+  },
+  {
+    "unidade": "CAF",
+    "id": "TMGB9Vcm8kKf3feRCSrC",
+    "nome": "FLUMAZENIL 0,1 MG/ 5 ML SOL INJ.",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 42,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "ZyYUcta8OxB69JaRMr1f",
+    "nome": "GLICONATO DE CALCIO 10% - AMP",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 5,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "QMUK4Xt0WQ3BIlIDbGKj",
+    "nome": "HALOPERIDOL 5 MG /ML - AMPOLA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 49,
+    "metodo": 3
+  },
+  {
+    "unidade": "CAF",
+    "id": "Gz2njaOUSH3JOHjUfmCq",
+    "nome": "HEPARINA SÓDICA 5.000 UI",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 59,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "g7kLeT7WICheEqQPioP5",
+    "nome": "HIDRALAZINA 20 MG/ML - AMPOLAS",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 20,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "p92VvabmWDLoDrf900uf",
+    "nome": "METOPROLOL 1 MG/ML - AMPOLA",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 45,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "Nyld68otgN4WDSIaz5t3",
+    "nome": "MIDAZOLAM, CLORIDRATO 5MG/ML 10ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 106,
+    "metodo": 4
+  },
+  {
+    "unidade": "CAF",
+    "id": "69EfGhC5FGRKuKiAtAne",
+    "nome": "MIDAZOLAM, CLORIDRATO 5MG/ML 3ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "sYEg26Fo7hDHW6E7CKOM",
+    "nome": "MORFINA 10MG/ML INJ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 104,
+    "metodo": 3
+  },
+  {
+    "unidade": "CAF",
+    "id": "fjbxYOmvs3a9Eqn1ky4U",
+    "nome": "MORFINA 1MG/ML INJ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 21,
+    "metodo": 5
+  },
+  {
+    "unidade": "CAF",
+    "id": "bq7miTmU2vjt19uGrmH4",
+    "nome": "NALOXONA, CLORIDRATO DE  0,4 MG/ 1 ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 4,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "dkMaXa5gbzXWWNGfILzX",
+    "nome": "NITROGLICERINA 5 MG/ML - TRIDIL",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 25,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "O1nXHMn4kACm2rm9PuHY",
+    "nome": "NITROPRUSSETO DE SÓDIO 25 MG/ML - NITROP",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 47,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "WWZ4BYfYPLB10PYdoCJV",
+    "nome": "NOREPINEFRINA 2MG/4ML - AMP",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 77,
+    "metodo": 3
+  },
+  {
+    "unidade": "CAF",
+    "id": "hddICtUqAgZX87q2RtKA",
+    "nome": "OMEPRAZOL SODICO PO INJETAVEL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 101,
+    "metodo": 9
+  },
+  {
+    "unidade": "CAF",
+    "id": "s6Yq6Aaiz7ZO1exj6zji",
+    "nome": "PETIDINA 50MG/ML(DOLANTINA)",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "znRGOI0MNcpLAANcTkmp",
+    "nome": "PROMETAZINA 50 MG/ 2ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 314,
+    "metodo": 13
+  },
+  {
+    "unidade": "CAF",
+    "id": "xnikQu2YQn0bZLiKnckF",
+    "nome": "SULFATO DE MAGNESIO 10%",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 19,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "ehu65Xw6PanbsuaXVOlQ",
+    "nome": "SUXAMETONIO 100MG SUSP INJ",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 14,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "CIsf4DnWmPHhh0SxEOg9",
+    "nome": "TERBUTALINA 0,5MG/ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 62,
+    "metodo": 1
+  },
+  {
+    "unidade": "CAF",
+    "id": "aI3TeiVNbCodCjFVa1KE",
+    "nome": "TESTE RAPIDO COMBO (COVID-19/ INFLUENZA A/B)",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 52,
+    "metodo": 3
+  },
+  {
+    "unidade": "CAF",
+    "id": "8RL7Ebjkn7xOlkKyTvQW",
+    "nome": "TESTE RAPIDO DE GRAVIDEZ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 57,
+    "metodo": 5
+  },
+  {
+    "unidade": "CAF",
+    "id": "XtiYebtSxs1wElQm2EKc",
+    "nome": "TRAMADOL 50MG/ML(TRAMAL)- AMP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 681,
+    "metodo": 87
+  },
+  {
+    "unidade": "CAF",
+    "id": "APjy5lCrCAV2RV1tTJD1",
+    "nome": "AGULHA PARA CANETA DE INSULINA 4MM",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1935,
+    "metodo": 800
+  },
+  {
+    "unidade": "CAF",
+    "id": "SznnW3tdowjbifaVTKFn",
+    "nome": "CANETA PARA APLICAÇÃO DE INSULINAS HUMANAS - REUTILIZAVEL",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 68,
+    "metodo": 3
+  },
+  {
+    "unidade": "CAF",
+    "id": "lROa2Gs3AimBCtFXRpLs",
+    "nome": "CINTA POS OPERATORIA COMPLETA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "fD56pc3qO86ZwsJxE1Nm",
+    "nome": "SORO FISIOLOGICO 250 ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "4T4qEzwmxJYy56sut147",
+    "nome": "SORO MANITOL 250ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 28,
+    "metodo": 4
+  },
+  {
+    "unidade": "CAF",
+    "id": "4t1rqrLwT4vXCN1Au6dF",
+    "nome": "TALA METALICA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "oXettr5jWlsgohP2E6km",
+    "nome": "TESTE DE TROPONINA CARDIACA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 63,
+    "metodo": 2
+  },
+  {
+    "unidade": "CAF",
+    "id": "NNPlmIEDCCQujeWNm1rN",
+    "nome": "AGULHA PARA CANETA DE INSULINA 6MM",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 300,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "Q9mx1w1gqtE3CVn2GeWo",
+    "nome": "INSULINA NOVORRAPID FLEX PEN",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 10,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "WcyqEEh4Fc4EYjxrrpNX",
+    "nome": "INSULINA TRESIBA FLEX PEN",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "yDx6WgbID3OnFCM1dLlm",
+    "nome": "OFEV - ESILATO DE NINTEDANIBE 100MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "CAF",
+    "id": "MD3c0KFRfTkZrERhSFaT",
+    "nome": "FRALDA DESC GERIATRICA - G",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1980,
+    "metodo": 272
+  },
+  {
+    "unidade": "CAF",
+    "id": "EWmZRPac8tZM46tn81EE",
+    "nome": "FRALDA DESC GERIATRICA - M",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 542,
+    "metodo": 100
+  },
+  {
+    "unidade": "CAF",
+    "id": "sR4MsfzzyqGEIrQ8mj3k",
+    "nome": "FRALDA DESC GERIATRICA - P",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 686,
+    "metodo": 72
+  },
+  {
+    "unidade": "CAF",
+    "id": "jVzJ6ZhcmhwUecyEOrWH",
+    "nome": "FRALDA DESC GERIATRICA - XG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1661,
+    "metodo": 106
+  },
+  {
+    "unidade": "CAF",
+    "id": "rZ5kSMNk2eBqclJjwI13",
+    "nome": "FRALDA DESC GERIATRICA - XXG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 401,
+    "metodo": 26
+  },
+  {
+    "unidade": "CAF",
+    "id": "zqS1qbgrX7qxANwXlYqt",
+    "nome": "FOSFATO OSELTAMIVIR 30MG - TAMIFLU",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 220,
+    "metodo": 13
+  },
+  {
+    "unidade": "CAF",
+    "id": "nUIcMgmqjfKYe7qbivZJ",
+    "nome": "FOSFATO OSELTAMIVIR 45 MG - TAMIFLU",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 230,
+    "metodo": 9
+  },
+  {
+    "unidade": "CAF",
+    "id": "AspdbvJmWoVCORYURLxf",
+    "nome": "FOSFATO OSELTAMIVIR 75 MG - TAMIFLU",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 34
+  },
+  {
+    "unidade": "CAF",
+    "id": "lVQpXUf7zv3g8CsH44N1",
+    "nome": "INSULINA HUMANA NPH 100 UI/ML - CANETA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 0,
+    "metodo": 68
+  },
+  {
+    "unidade": "CAF",
+    "id": "KMlEtoC6XtrsuyAMISov",
+    "nome": "INSULINA HUMANA NPH 100 UI/ML - FRASCO 10 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 79,
+    "metodo": 10
+  },
+  {
+    "unidade": "CAF",
+    "id": "bj0aU8kwmo2aLuHpDJFV",
+    "nome": "INSULINA HUMANA REGULAR 100 UI/ ML - FRASCO 10 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 33,
+    "metodo": 5
+  },
+  {
+    "unidade": "CAF",
+    "id": "kUc1a8M4JUuqK1ZevS3d",
+    "nome": "INSULINA HUMANA REGULAR 100 UI/ML - CANETA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": -8,
+    "metodo": 7
+  },
+  {
+    "unidade": "CAF",
+    "id": "hS9bW6rXkY7sUuTvEOUE",
+    "nome": "ADESIVO NICOTINA 14 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 8127,
+    "metodo": 25
+  },
+  {
+    "unidade": "CAF",
+    "id": "maGZaavZp63S6zI2giKP",
+    "nome": "ADESIVO NICOTINA 21 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 6594,
+    "metodo": 84
+  },
+  {
+    "unidade": "CAF",
+    "id": "nSFvDaejRDKhmQFGJy0U",
+    "nome": "ADESIVO NICOTINA 7 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 5292,
+    "metodo": 25
+  },
+  {
+    "unidade": "CAF",
+    "id": "Nvt7QHS31SneVvwTkhFL",
+    "nome": "BUPROPIONA 150 MG - TABAGISMO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5570,
+    "metodo": 180
+  },
+  {
+    "unidade": "CAF",
+    "id": "bEhvqoNj6FFpUHv3q2dt",
+    "nome": "GOMA NICOTINA 2 MG (NICORETTE)",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 630,
+    "metodo": 38
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Y0NdS9EtNuHYtsW3MNYz",
+    "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1730,
+    "metodo": 710
+  },
+  {
+    "unidade": "Olavo",
+    "id": "AhyfLC4kNuH5U1rTeCSM",
+    "nome": "ACICLOVIR 200 MG CPR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 375,
+    "metodo": 210
+  },
+  {
+    "unidade": "Olavo",
+    "id": "5du7SojbGuRYOglwv5B9",
+    "nome": "ACICLOVIR 5 % CREME 10 G",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 15,
+    "metodo": 4
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Qiyiiw1AKBFd0mcDxyOV",
+    "nome": "ACIDO FOLICO 5MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1000,
+    "metodo": 240
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ar7py7W1ovgaUNkG9sxn",
+    "nome": "ACIDO TRANEXÂMICO 250MG - TRANSAMIN",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 234,
+    "metodo": 94
+  },
+  {
+    "unidade": "Olavo",
+    "id": "AT2I5tvPW8nzVLJPj2od",
+    "nome": "ACIDO VALPROICO 500MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 190,
+    "metodo": 106
+  },
+  {
+    "unidade": "Olavo",
+    "id": "zcaYTVrhInInu8osSNrr",
+    "nome": "ALBENDAZOL 40 MG/ML FRASCO 10 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 8,
+    "metodo": 5
+  },
+  {
+    "unidade": "Olavo",
+    "id": "I9JZ0Fwgdf5gCxFGkEZg",
+    "nome": "ALBENDAZOL 400 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 0,
+    "metodo": 8
+  },
+  {
+    "unidade": "Olavo",
+    "id": "3j6NzqbvlK3bNAqbAdqJ",
+    "nome": "ALOPURINOL  300MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 320,
+    "metodo": 210
+  },
+  {
+    "unidade": "Olavo",
+    "id": "HUiJPmxmUlUOwDZ326ck",
+    "nome": "ALOPURINOL 100MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 149,
+    "metodo": 90
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Zonrgn2w8AckspM0stKs",
+    "nome": "AMBROXOL XAROPE ADULTO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 88,
+    "metodo": 44
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Nw16JkTZjizCRp8q3HA8",
+    "nome": "AMBROXOL XAROPE INFANTIL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 37,
+    "metodo": 14
+  },
+  {
+    "unidade": "Olavo",
+    "id": "VKGCHP2NXpxgOFWGZKD0",
+    "nome": "AMINOFILINA 100 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "i9NplhqSxBhiZHtQ6ebL",
+    "nome": "AMIODARONA, CLORIDRATO  200 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 380,
+    "metodo": 200
+  },
+  {
+    "unidade": "Olavo",
+    "id": "4MRYOdjmvvnHPhQBBy1G",
+    "nome": "AMITRIPTILINA, CLORIDRATO  25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2490,
+    "metodo": 880
+  },
+  {
+    "unidade": "Olavo",
+    "id": "DPvuPRCxUO8hEldj4UID",
+    "nome": "AMOXICILINA + CLAVULANATO 500/125 MCG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1082,
+    "metodo": 720
+  },
+  {
+    "unidade": "Olavo",
+    "id": "S8fmUNFB3426OqKbjfR7",
+    "nome": "AMOXICILINA + CLAVULANATO SUSP 250 MG/5 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 74,
+    "metodo": 29
+  },
+  {
+    "unidade": "Olavo",
+    "id": "THvvIYXS8ljPDu05UnMz",
+    "nome": "AMOXICILINA 250 MG/5ML - 150 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 30,
+    "metodo": 12
+  },
+  {
+    "unidade": "Olavo",
+    "id": "utU4LiKaP001g9zKHEDE",
+    "nome": "AMOXICILINA 500 MG - CAPSULA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1171,
+    "metodo": 374
+  },
+  {
+    "unidade": "Olavo",
+    "id": "BzR4a51phcuxt8FHFxIA",
+    "nome": "ANLODIPINO, BESILATO 5MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1100,
+    "metodo": 580
+  },
+  {
+    "unidade": "Olavo",
+    "id": "0zq1ii4opCDXSyfmWRbe",
+    "nome": "AZITROMICINA 500 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 428,
+    "metodo": 181
+  },
+  {
+    "unidade": "Olavo",
+    "id": "OnuxOr1bq7glRxgJ9ZbG",
+    "nome": "AZITROMICINA SUSP. 200MG/5ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 72,
+    "metodo": 29
+  },
+  {
+    "unidade": "Olavo",
+    "id": "7WrapTzzoU4DHkbFqIeN",
+    "nome": "BIPERIDENO, CLORIDRATO 2 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 520,
+    "metodo": 175
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Yn25hFzUH6BP6DZxwLQZ",
+    "nome": "BISACODIL 5MG - DULCOLAX",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 63,
+    "metodo": 26
+  },
+  {
+    "unidade": "Olavo",
+    "id": "8MsuugD0hw37vZOy1tv9",
+    "nome": "BROMOPRIDA 10MG CPR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1350,
+    "metodo": 450
+  },
+  {
+    "unidade": "Olavo",
+    "id": "qlbzechfleRNu8aWDFCN",
+    "nome": "BROMOPRIDA GTS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 30,
+    "metodo": 11
+  },
+  {
+    "unidade": "Olavo",
+    "id": "iVuf0pYciPpzoEf4ctc2",
+    "nome": "BUSCOPAM COMPOSTO  GOTAS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "YT7EY2JLDdu7mHL2C8iR",
+    "nome": "BUSCOPAM COMPOSTO CPR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1220,
+    "metodo": 595
+  },
+  {
+    "unidade": "Olavo",
+    "id": "cC0NZcr6Fdxml72EkH8U",
+    "nome": "BUSCOPAM SIMPLES CP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 419,
+    "metodo": 200
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ZPOWGuOQXqErfI1F87KQ",
+    "nome": "BUSCOPAM SIMPLES GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 24,
+    "metodo": 10
+  },
+  {
+    "unidade": "Olavo",
+    "id": "CZWkLjam0S6vK4NjSF5z",
+    "nome": "CAPTOPRIL 25 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 200,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "cakU0oklJZyYSMnGFNcg",
+    "nome": "CARBAMAZEPINA 200 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1060,
+    "metodo": 610
+  },
+  {
+    "unidade": "Olavo",
+    "id": "PWOmn9xX3BNjmRWsxVkd",
+    "nome": "CARBAMAZEPINA SUSP. 100 ML- 20 MG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 12,
+    "metodo": 2
+  },
+  {
+    "unidade": "Olavo",
+    "id": "hlMNyfdQfObUfJDb6Xay",
+    "nome": "CARBONATO DE CALCIO 1.250MG + VITAMINA D 400UI",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 240,
+    "metodo": 105
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ValZ34ROSqQGfNLcBsOu",
+    "nome": "CARBONATO DE LITIO 300 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 640,
+    "metodo": 300
+  },
+  {
+    "unidade": "Olavo",
+    "id": "7vVSvh2kNOHwT62n8glU",
+    "nome": "CARVEDILOL 12,5 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 420,
+    "metodo": 120
+  },
+  {
+    "unidade": "Olavo",
+    "id": "GvGAvvAxz0UP6qY6SExd",
+    "nome": "CARVEDILOL 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 540,
+    "metodo": 210
+  },
+  {
+    "unidade": "Olavo",
+    "id": "sKRDOYZsRDOmNzMYS4rU",
+    "nome": "CARVEDILOL 6,25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 510,
+    "metodo": 120
+  },
+  {
+    "unidade": "Olavo",
+    "id": "t0p2swfvePTJxuVJXfYd",
+    "nome": "CEFALEXINA 500 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1016,
+    "metodo": 435
+  },
+  {
+    "unidade": "Olavo",
+    "id": "qZ0Y984MzRDZ5CtFU2Bn",
+    "nome": "CEFALEXINA SUSPENSÃO 250 MG/ 5 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 18,
+    "metodo": 7
+  },
+  {
+    "unidade": "Olavo",
+    "id": "uHIV7my2J7Ystwu6HBX4",
+    "nome": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ EV",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 420,
+    "metodo": 161
+  },
+  {
+    "unidade": "Olavo",
+    "id": "uFj6cksYM6KHReRG04u8",
+    "nome": "CERUMIN GOTAS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "frT5Fu0320ZFs4jzPO7n",
+    "nome": "CETOCONAZOL + BETAMETASONA POMADA 30 GR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1,
+    "metodo": 6
+  },
+  {
+    "unidade": "Olavo",
+    "id": "xtQU4HvTwg2nMpQNOpUP",
+    "nome": "CETOCONAZOL 200 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 210,
+    "metodo": 18
+  },
+  {
+    "unidade": "Olavo",
+    "id": "PMhrkidXIWBFfjPAsDZE",
+    "nome": "CETOPROFENO 50 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1812,
+    "metodo": 744
+  },
+  {
+    "unidade": "Olavo",
+    "id": "eV40Kyk4KiHjgGNwcqNh",
+    "nome": "CICLOBENZAPRINA 5MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2415,
+    "metodo": 1140
+  },
+  {
+    "unidade": "Olavo",
+    "id": "kU8QpzKxtjaY0v94e2Ah",
+    "nome": "CILOSTAZOL 100 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 300,
+    "metodo": 120
+  },
+  {
+    "unidade": "Olavo",
+    "id": "uClosV3HaMp9DldTHKYh",
+    "nome": "CIMEGRIPE GTS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 9,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ziyd9TdifUfKlqb4HLaR",
+    "nome": "CIMETIDINA 200MG COMPRIMIDO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 210,
+    "metodo": 110
+  },
+  {
+    "unidade": "Olavo",
+    "id": "4l1B7yxWZGAD5ovfTLH8",
+    "nome": "CINARIZINA 75MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 430,
+    "metodo": 190
+  },
+  {
+    "unidade": "Olavo",
+    "id": "bmBFIzUkZx3dCvyCZV35",
+    "nome": "CIPROFLOXACINO 500MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 525,
+    "metodo": 263
+  },
+  {
+    "unidade": "Olavo",
+    "id": "3gQyRWQd3PYpYRSx7zXL",
+    "nome": "CLARITROMICINA 500 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 95,
+    "metodo": 28
+  },
+  {
+    "unidade": "Olavo",
+    "id": "CPU2vRQLkfytohdOVraj",
+    "nome": "CLOMIPRAMINA, CLORIDRATO 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 670,
+    "metodo": 280
+  },
+  {
+    "unidade": "Olavo",
+    "id": "oppyhjAgTPvG484JeI2A",
+    "nome": "CLONAZEPAM 2,5 MG/ ML - GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 40,
+    "metodo": 17
+  },
+  {
+    "unidade": "Olavo",
+    "id": "UezXyv21JnmKrvc5AHNd",
+    "nome": "CLONAZEPAM 2MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3387,
+    "metodo": 1540
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ltbinnvu0lu0cnaSB0bP",
+    "nome": "CLORPROMAZINA, CLORIDRATO 100MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 500,
+    "metodo": 160
+  },
+  {
+    "unidade": "Olavo",
+    "id": "bnVcbFYPfAto3cZBJYNI",
+    "nome": "CLORPROMAZINA, CLORIDRATO 25MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 250,
+    "metodo": 95
+  },
+  {
+    "unidade": "Olavo",
+    "id": "WYGOoXFTiy6lEp1hiRi0",
+    "nome": "COMPLEXO B CP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 630,
+    "metodo": 120
+  },
+  {
+    "unidade": "Olavo",
+    "id": "wtl0kgVnqfSuETWPbnHn",
+    "nome": "DECONGEX PLUS GOTAS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 5,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Ds7HUMqcHXBVAkcqjkGU",
+    "nome": "DELTAMETRINA 0,2MG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 1,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "xX9XYHMqDhL709Xoijq1",
+    "nome": "DEXAMETASONA 0,5 MG/5ML- ELIXIR",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "MlhrzykGAS7cvX6fVErS",
+    "nome": "DEXAMETASONA 0.1% CREME 10 GR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 54,
+    "metodo": 30
+  },
+  {
+    "unidade": "Olavo",
+    "id": "jzTGxsolJkdPBsCRChZ5",
+    "nome": "DEXCLORFENIRAMINA + BETAMETASONA SUSP ORAL 120",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 99,
+    "metodo": 58
+  },
+  {
+    "unidade": "Olavo",
+    "id": "d7Qmp5e4mHUyfNt69zLf",
+    "nome": "DEXCLORFENIRAMINA, MALEATO  2MG/5ML - SUSPENSÃO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 20,
+    "metodo": 7
+  },
+  {
+    "unidade": "Olavo",
+    "id": "51HzMZ9iDtC6SC6g2KFm",
+    "nome": "DIAZEPAM 10 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 656,
+    "metodo": 374
+  },
+  {
+    "unidade": "Olavo",
+    "id": "iKG4SnD9CsspJWR1WJmr",
+    "nome": "DICLOFENACO 50 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 660,
+    "metodo": 280
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Fyr72LE1ZnjrDGrIebwJ",
+    "nome": "DIGOXINA 0.25 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 150,
+    "metodo": 49
+  },
+  {
+    "unidade": "Olavo",
+    "id": "NGlPflxlERpeWD20cliS",
+    "nome": "DIOSMINA + HESPERIDINA 450/50 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3343,
+    "metodo": 1490
+  },
+  {
+    "unidade": "Olavo",
+    "id": "lLXhdANMDoWuTFfYJwxz",
+    "nome": "DIPIRONA SÓDICA COMPRIMIDO 500MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 9056,
+    "metodo": 4770
+  },
+  {
+    "unidade": "Olavo",
+    "id": "GDUHq6tsEpZnOihSTcpL",
+    "nome": "DIPIRONA SÓDICA GOTAS 500 MG / ML 10 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 230,
+    "metodo": 93
+  },
+  {
+    "unidade": "Olavo",
+    "id": "DEoGLHH4DQWlowhJfeDQ",
+    "nome": "DISPOSITIVO INTRA-UTERINO - DIU",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "5Y2Ahlc099pF2hnK7fkS",
+    "nome": "DOXAZOSINA 2 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 690,
+    "metodo": 345
+  },
+  {
+    "unidade": "Olavo",
+    "id": "YmDC4V45iNYogCTfLuFz",
+    "nome": "DOXAZOSINA MESILATO 4MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 90,
+    "metodo": 90
+  },
+  {
+    "unidade": "Olavo",
+    "id": "qZePRkFgZq3FXOubnNL7",
+    "nome": "DRAMIN  GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 18,
+    "metodo": 10
+  },
+  {
+    "unidade": "Olavo",
+    "id": "vtWQFfYE9BRN22pP6vhX",
+    "nome": "DROPROPIZINA 1,5 MG/ML -XAROPE PEDIATRICO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 15,
+    "metodo": 5
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ZBiDosDkbR744DMY7PzK",
+    "nome": "DROPROPIZINA 3 MG/ML - XAROPE ADULTO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 49,
+    "metodo": 20
+  },
+  {
+    "unidade": "Olavo",
+    "id": "fLR6th4X1aGE29qtpUSM",
+    "nome": "ENALAPRIL 10MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "WlgQFQL2jAwxkiDDvLhS",
+    "nome": "ENOXAPARINA SÓDICA 40 MG/0,4ML - CLEXANE",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 106,
+    "metodo": 30
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Wihd4aR6NSX4Whbd2Z5x",
+    "nome": "ESPIRONOLACTONA 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 290,
+    "metodo": 300
+  },
+  {
+    "unidade": "Olavo",
+    "id": "j62VRBpKEKqqBJToxpsl",
+    "nome": "ESTRIOL 1MG/G - CR VAGINAL 50 GR",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 6,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "41OLt9E4yHudY1YJYTkq",
+    "nome": "FENITOINA 100 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 870,
+    "metodo": 340
+  },
+  {
+    "unidade": "Olavo",
+    "id": "idlujL1Vao4vylpbQtIL",
+    "nome": "FENOBARBITAL 100 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 470,
+    "metodo": 235
+  },
+  {
+    "unidade": "Olavo",
+    "id": "jQRO7MmAoa6p5DMMI4o2",
+    "nome": "FENOBARBITAL 40 MG/ML - GOTAS",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 5,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "miAZZOoWSsK0FgeCbq7Z",
+    "nome": "FINASTERIDA 5 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 300,
+    "metodo": 285
+  },
+  {
+    "unidade": "Olavo",
+    "id": "UdG60OwuOZMFGMqyQwyN",
+    "nome": "FLUCONAZOL 150 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 22,
+    "metodo": 12
+  },
+  {
+    "unidade": "Olavo",
+    "id": "T3fmeB6RxoISLmltETDf",
+    "nome": "FLUOXETINA, CLORIDRATO 20 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2245,
+    "metodo": 918
+  },
+  {
+    "unidade": "Olavo",
+    "id": "uuTf5jnVMDohQir4wJL5",
+    "nome": "FUROSEMIDA 40MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1200,
+    "metodo": 515
+  },
+  {
+    "unidade": "Olavo",
+    "id": "mYWSI6qhLbYnXUOwL3dF",
+    "nome": "GLIBENCLAMIDA 5 MG.",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 300,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "akAQXusSFULh879kLlDY",
+    "nome": "GLICLAZIDA 30 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 620,
+    "metodo": 300
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ahiPQz27a2iDScDcDHwA",
+    "nome": "GLICLAZIDA 60 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 850,
+    "metodo": 225
+  },
+  {
+    "unidade": "Olavo",
+    "id": "wztx8Q1VDttKSbkooGSk",
+    "nome": "HALOPERIDOL 5MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 290,
+    "metodo": 90
+  },
+  {
+    "unidade": "Olavo",
+    "id": "9V3iLhqkAhbuA69FLwK8",
+    "nome": "HIDRALAZINA 25MG, CLORIDRATO DE",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 268,
+    "metodo": 8
+  },
+  {
+    "unidade": "Olavo",
+    "id": "GNyZxvv3XqwXNF0ZPEFZ",
+    "nome": "HIDROCLOROTIAZIADA 25MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 180,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "kgQ9sYeJ4OWrT755hs0z",
+    "nome": "HIDROXIDO DE ALUMINIO 6.2% SUSP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 12,
+    "metodo": 8
+  },
+  {
+    "unidade": "Olavo",
+    "id": "SvL0UjrJvMsaXODzgsKp",
+    "nome": "IBUPROFENO 100MG/ML -  GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 88,
+    "metodo": 46
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Z5HWFgYImcZOdJFP33Jr",
+    "nome": "IBUPROFENO 300 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1640,
+    "metodo": 630
+  },
+  {
+    "unidade": "Olavo",
+    "id": "LHFIZ1IJfaHE2LkGng4q",
+    "nome": "IBUPROFENO 50MG/ML - GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 16,
+    "metodo": 6
+  },
+  {
+    "unidade": "Olavo",
+    "id": "NtEM50U9ZMnynsXOlsXB",
+    "nome": "IMIPRAMINA 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 310,
+    "metodo": 240
+  },
+  {
+    "unidade": "Olavo",
+    "id": "udYhIoyKNpLKX8HfhFBr",
+    "nome": "ITRACONAZOL 100 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 120,
+    "metodo": 31
+  },
+  {
+    "unidade": "Olavo",
+    "id": "4pLIHFqJEKocU9UeWgjB",
+    "nome": "IVERMECTINA 6 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 26,
+    "metodo": 13
+  },
+  {
+    "unidade": "Olavo",
+    "id": "IVUKUy6cgthUHOSR9tPE",
+    "nome": "LEVODOPA + BENSERAZIDA 100/25MG - PROLOPA BD",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 120,
+    "metodo": 18
+  },
+  {
+    "unidade": "Olavo",
+    "id": "uDvaQ9SzuhXuU7N7lyTv",
+    "nome": "LEVODOPA + BENSERAZIDA 200/50MG - PROLOPA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 510,
+    "metodo": 240
+  },
+  {
+    "unidade": "Olavo",
+    "id": "DB5E9or9HfNLjj9yOmWc",
+    "nome": "LEVOFLOXACINO 500 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 533,
+    "metodo": 204
+  },
+  {
+    "unidade": "Olavo",
+    "id": "guYn2KuvTsucA94611IC",
+    "nome": "LEVOMEPROMAZINA 100 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 390,
+    "metodo": 60
+  },
+  {
+    "unidade": "Olavo",
+    "id": "UIWBnN3JUpaJsHSyDbKv",
+    "nome": "LEVOMEPROMAZINA 25MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 350,
+    "metodo": 61
+  },
+  {
+    "unidade": "Olavo",
+    "id": "InFfzsdlK7XLplfbv2eP",
+    "nome": "LEVONORGESTREL 0,15MG+ETINILESTRADIOL 0,03MG- CICLO 21",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 273,
+    "metodo": 125
+  },
+  {
+    "unidade": "Olavo",
+    "id": "aMOOQfEwPAfEIEuUb6uX",
+    "nome": "LEVONORGESTREL 0,75 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "92xaXlUUHJ5BCINs15cs",
+    "nome": "LEVOTIROXINA SÓDICA 100MCG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 720,
+    "metodo": 300
+  },
+  {
+    "unidade": "Olavo",
+    "id": "AJzxaAWfT4SOvo5ebJge",
+    "nome": "LEVOTIROXINA SODICA 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 800,
+    "metodo": 355
+  },
+  {
+    "unidade": "Olavo",
+    "id": "kashC63gTTchGL8kIYQC",
+    "nome": "LEVOTIROXINA SODICA 50MCG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1364,
+    "metodo": 615
+  },
+  {
+    "unidade": "Olavo",
+    "id": "3A9U9vQpWCnqrwe3whSx",
+    "nome": "LORATADINA 1 MG/ML - XAROPE",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 87,
+    "metodo": 34
+  },
+  {
+    "unidade": "Olavo",
+    "id": "N1miJb4FNdfQTQlaeHKH",
+    "nome": "LORATADINA 10 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2027,
+    "metodo": 906
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ImpU1zu1DKfNeXVeNm2p",
+    "nome": "MEDROXIPROGESTERONA, ACETATO + CIPIONATO DE ESTRADIOL (CYCLOFEMINA)",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 7,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "neWbBxmpb1uK3yqI02Ak",
+    "nome": "METFORMINA, CLORIDRATO 850MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 100,
+    "metodo": 23
+  },
+  {
+    "unidade": "Olavo",
+    "id": "yrbJzRyT8qnBkYgIs2By",
+    "nome": "METILDOPA 250 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1880,
+    "metodo": 600
+  },
+  {
+    "unidade": "Olavo",
+    "id": "lPmeAOrAm4kLKzL1BPdM",
+    "nome": "METOCLOPRAMIDA 10 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 480,
+    "metodo": 40
+  },
+  {
+    "unidade": "Olavo",
+    "id": "6fnGH0AmUaOqJYTqZOlN",
+    "nome": "METOPROLOL 100 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 88,
+    "metodo": 34
+  },
+  {
+    "unidade": "Olavo",
+    "id": "MxeAoDos70zvRVo8OhYL",
+    "nome": "METOPROLOL 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 540,
+    "metodo": 210
+  },
+  {
+    "unidade": "Olavo",
+    "id": "kM4qa8AnXykceTWAPUCp",
+    "nome": "METOPROLOL 50 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 190,
+    "metodo": 120
+  },
+  {
+    "unidade": "Olavo",
+    "id": "gnSeaKCfKEFolV4fzoCV",
+    "nome": "METRONIDAZOL 100 MG/G - GEL VAGINAL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3,
+    "metodo": 3
+  },
+  {
+    "unidade": "Olavo",
+    "id": "QrjEEaTZW3XHtrJ8sLrd",
+    "nome": "METRONIDAZOL 250 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 360,
+    "metodo": 90
+  },
+  {
+    "unidade": "Olavo",
+    "id": "eqgU7eEUBfZjrb77PoUx",
+    "nome": "METRONIDAZOL 40 MG/ML -  SUSPENSÃO ORAL",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 6,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "WPlPMYx34Ip5q7kL6Xrv",
+    "nome": "MICONAZOL, NITRATO 0,02 MG/G -  80 G CREME VAGINAL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2,
+    "metodo": 2
+  },
+  {
+    "unidade": "Olavo",
+    "id": "JmGt8tIRjps8XczJ0Nmd",
+    "nome": "NEOMICINA + BACITRACINA POMADA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 36,
+    "metodo": 16
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ZnMkLJ98yyf3K8oNdjOP",
+    "nome": "NIFEDIPINA 20MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 750,
+    "metodo": 270
+  },
+  {
+    "unidade": "Olavo",
+    "id": "4gbzUvqPEbxudYYJsJlt",
+    "nome": "NIMESULIDA 100 MG  CP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2520,
+    "metodo": 1200
+  },
+  {
+    "unidade": "Olavo",
+    "id": "76SFD8JnksjViSFdk77V",
+    "nome": "NIMESULIDA GTS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 16,
+    "metodo": 3
+  },
+  {
+    "unidade": "Olavo",
+    "id": "r6C45DUqzS10MjnhEgBZ",
+    "nome": "NIMODIPINO 30 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "L9u4YJVkI2LZbn8lbH7Q",
+    "nome": "NISTATINA 100.000 SUSP FRASCO 60 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 11,
+    "metodo": 8
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Jjcqqg7qyM1hitKRyAqa",
+    "nome": "NISTATINA POMADA VAG.",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 16,
+    "metodo": 5
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Czo6heCAL9DH7EDlczPf",
+    "nome": "NITRAZEPAN 5 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 260,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "FF97SnayvR4CFNeSyYWk",
+    "nome": "NITROFURANTOINA 100MG CAPSULA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 556,
+    "metodo": 258
+  },
+  {
+    "unidade": "Olavo",
+    "id": "KCIPC4zyfSTVF8iC2tAt",
+    "nome": "NORFLOXACINO 400MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 210,
+    "metodo": 21
+  },
+  {
+    "unidade": "Olavo",
+    "id": "vTWeZVPLEMHVGEfDiGWW",
+    "nome": "NORTRIPTILINA, CLORIDRATO 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1200,
+    "metodo": 320
+  },
+  {
+    "unidade": "Olavo",
+    "id": "XNjINNnktK6U5NRQ8IFv",
+    "nome": "OLEO MINERAL 100 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 15,
+    "metodo": 6
+  },
+  {
+    "unidade": "Olavo",
+    "id": "xQcxq0ZdKU2JWtz59hFb",
+    "nome": "OMEPRAZOL 20MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2410,
+    "metodo": 1240
+  },
+  {
+    "unidade": "Olavo",
+    "id": "rIRKDbYkd0fXEmm5HQG8",
+    "nome": "OXCARBAMAZEPINA 60 MG/ML SUSP ORAL",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Q849JBETjdICuxTTWxfG",
+    "nome": "OXCARBAZEPINA 300 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 300,
+    "metodo": 195
+  },
+  {
+    "unidade": "Olavo",
+    "id": "kHlWJ8fY4vwzQIOXJ1Is",
+    "nome": "PARACETAMOL + CODEINA 500/30 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 30,
+    "metodo": 299
+  },
+  {
+    "unidade": "Olavo",
+    "id": "NCKFIMqOCLxkmYjQSLtc",
+    "nome": "PARACETAMOL 200 MG/ ML -  FRASCO 15 ML GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 30,
+    "metodo": 12
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Q6tiygo9yBTEe6Ikjdb8",
+    "nome": "PARACETAMOL 500 MG - COMP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 620,
+    "metodo": 225
+  },
+  {
+    "unidade": "Olavo",
+    "id": "FqBlhgLcPomc1sFvY5Dl",
+    "nome": "PARACETAMOL 750 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 170,
+    "metodo": 80
+  },
+  {
+    "unidade": "Olavo",
+    "id": "UDaUhVlmzYvh2HlXJ3qp",
+    "nome": "PENTOXIFILINA 400 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 200,
+    "metodo": 62
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Vp1lDl55C0bI9HCsQ2Xe",
+    "nome": "PERMANGANTO DE POTASSIO 100 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 140,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "DJJy6dJTlabkHZCaq0ji",
+    "nome": "PERMETRINA 5% LOÇÃO",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 1,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "LgOMwJqdquip3M2Tumrr",
+    "nome": "PHOSFOENEMA 130ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 14,
+    "metodo": 3
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Ko0FX9SYervqWEVqly8u",
+    "nome": "POLIVITAMINICO GTS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "u6NiCB3Fy3nJwt1AmEPV",
+    "nome": "POMADA PARA ASSADURA ( NIST+ OX ZINCO) PMD",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 8,
+    "metodo": 8
+  },
+  {
+    "unidade": "Olavo",
+    "id": "EsNe88qhJVtv99ur2VgQ",
+    "nome": "PREDNISOLONA 3MG/ML, FOSFATO SODICO DE",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 84,
+    "metodo": 33
+  },
+  {
+    "unidade": "Olavo",
+    "id": "copRiLYkVUAD7i5tF34k",
+    "nome": "PREDNISONA 20 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2120,
+    "metodo": 838
+  },
+  {
+    "unidade": "Olavo",
+    "id": "NmxkmXxFkj0mE5kKo8JI",
+    "nome": "PREDNISONA 5 MG - CP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 240,
+    "metodo": 70
+  },
+  {
+    "unidade": "Olavo",
+    "id": "yBHjvD2L6GLyH0gEBXdu",
+    "nome": "PROMETAZINA 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 276,
+    "metodo": 160
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Ojln7V7XDS6YHqQCg3YC",
+    "nome": "PROPRANOLOL 40MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 380,
+    "metodo": 160
+  },
+  {
+    "unidade": "Olavo",
+    "id": "3vRSpzIHKiIrcalwmMmH",
+    "nome": "RIFOCINA SPRAY",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "sRs0vhiQkqj8lhYZN9BE",
+    "nome": "SAIS P/REIDRATAÇÃO ORAL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 329,
+    "metodo": 126
+  },
+  {
+    "unidade": "Olavo",
+    "id": "1x9L70Nwoh5CLx8FKVWy",
+    "nome": "SALBUTAMOL, SULFATO 100 MCG/ DOSE -  AEROSOL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 19,
+    "metodo": 7
+  },
+  {
+    "unidade": "Olavo",
+    "id": "SAR2quLl5971g6OmMze2",
+    "nome": "SERTRALINA 50MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5059,
+    "metodo": 2033
+  },
+  {
+    "unidade": "Olavo",
+    "id": "HZE0zTtK7u9CS9fFcDxl",
+    "nome": "SIMETICONA GTS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 67,
+    "metodo": 24
+  },
+  {
+    "unidade": "Olavo",
+    "id": "f1dhwvEs33hsP4m9jmGo",
+    "nome": "SINVASTATINA 20MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 200,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "tYrAayXKyhdcCSd5lZ38",
+    "nome": "SORO NASAL ADULTO -30 ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "B4k0rBdv2nyN1b0U7leE",
+    "nome": "SORO NASAL INFANTIL/ADULTO -30 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 23,
+    "metodo": 6
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ViG7nkSrlf3ou9Xe4GRn",
+    "nome": "SULFADIAZINA DE PRATA 0,01",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "QmNktjS2DztsoOp4Cz3z",
+    "nome": "SULFAM. + TRIMETROP. 40 + 8 MG/ML - SUSPENSÃO ORAL 100 ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 4,
+    "metodo": 2
+  },
+  {
+    "unidade": "Olavo",
+    "id": "LPn5JlPciAuH8AyuXNs0",
+    "nome": "SULFAMET. +TRIMETOPRIMA  400 + 80MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 120,
+    "metodo": 60
+  },
+  {
+    "unidade": "Olavo",
+    "id": "EILe0KnhhRsKta6UBseA",
+    "nome": "SULFATO FERROSO 25 MG/ML - GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 8,
+    "metodo": 2
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ol4yCJRhKCHOYv97cahK",
+    "nome": "SULFATO FERROSO 40 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 487,
+    "metodo": 255
+  },
+  {
+    "unidade": "Olavo",
+    "id": "OzRa7xmRB9wYQLD76EzF",
+    "nome": "SUPLEMENTO VITAMINICO A-Z",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 510,
+    "metodo": 195
+  },
+  {
+    "unidade": "Olavo",
+    "id": "7B6VR8fOQO5UezEFAXeK",
+    "nome": "TIAMAZOL 5MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 200,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ZfcbIadu328W0uGyvC9X",
+    "nome": "TIAMINA 300 MG - CP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 500,
+    "metodo": 180
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Om1ZOUZOm4pRQJvTocrG",
+    "nome": "TIBOLONA 1,25MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 255,
+    "metodo": 105
+  },
+  {
+    "unidade": "Olavo",
+    "id": "isC33tDAfzPgkx8daBxk",
+    "nome": "TOBRAMICINA 0,3 % COLIRIO - FRASCO 5 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 17,
+    "metodo": 7
+  },
+  {
+    "unidade": "Olavo",
+    "id": "WgKce4VAKytsBJZdFq63",
+    "nome": "TORVAL 500MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "UdLeD1TSvli8aB3yDgBQ",
+    "nome": "VALPROATO DE SÓDIO 50 MG/ML - XPE",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 33,
+    "metodo": 12
+  },
+  {
+    "unidade": "Olavo",
+    "id": "0s6U16OJhayvp6ETg1TK",
+    "nome": "VARFARINA SODICA 5MG - MAREVAN",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 210,
+    "metodo": 60
+  },
+  {
+    "unidade": "Olavo",
+    "id": "yJradAtpCopZLZNkgSMR",
+    "nome": "VITAMINA D3 7.000 UI",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 300,
+    "metodo": 165
+  },
+  {
+    "unidade": "Olavo",
+    "id": "vt4z05tS2yn7UPXqkk9b",
+    "nome": "BISSULFATO DE CLOPIDOGREL 75 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 2
+  },
+  {
+    "unidade": "Olavo",
+    "id": "TbW3P7DDBdIy2Oy1o5F5",
+    "nome": "ISOSSORBIDA, DINITRATO 5 MG - SUB LINGUAL",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "KLaO2dnYh0wNVPLcFnJO",
+    "nome": "ACETILCISTEINA 600 MG - FLUIMUCIL",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "myPAPofwR78TcwuRQU5Q",
+    "nome": "ACIDO FUSIDICO + VALERATO DE BETAMETASONA CREME",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "atupCDUedKZClHFdBKH9",
+    "nome": "ADORLAN 25",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "G00AwUIjdfr80ZlZcCe3",
+    "nome": "ARIPIPRAZOL 20MG/ML SUSP GTS",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "uHiGYd4Tj3E7yjvz30gF",
+    "nome": "BACLOFENO 10 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "5mD6OCxAjdItTmIJLZ41",
+    "nome": "BETAISTINA, DICLORIDRATO 16MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "AjAdjBhTpIX6xEf1mZkD",
+    "nome": "BIOVISC ORTHO SINGLE 90MG 3ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "mOJs6KQVUrIzz8qoXMpo",
+    "nome": "BOLSA DE OSTOMIA DRENAVEL SOFT CONVEXA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "aBNutedi8gV6LW1J6JBb",
+    "nome": "BUPROPIONA 150 MG - ASSISTENCIAL",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 18
+  },
+  {
+    "unidade": "Olavo",
+    "id": "hKjok85U3DK8gY3g7hHr",
+    "nome": "BUPROPIONA XL 150 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "3f5hXMQE6ZePdXeh65GD",
+    "nome": "CETAPHIL LOCAO HIDRATANTE",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 1,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "r4lFtJY7p5ANLzjbGH0G",
+    "nome": "CILODEX COLIRIO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "DxxTOJEyItqdQfqwr2gI",
+    "nome": "CINTO P/ BOLSA DE OSTOMIA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "rBskahJz6g5RABUMWQoL",
+    "nome": "CIPROFLOXACINO + DEXAMETASONA COLIRIO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "f037uwL1yyxXTKHb2Ucq",
+    "nome": "CITONEURIN 5000 MCG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "EwfwARu3JPX1gWjbGPSZ",
+    "nome": "CLINDAMICINA, CLORIDRATO 300 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "RC6CiR6G0WiGsBT1LzxR",
+    "nome": "CLINDOXYL GEL",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "9Zh2JZODyg1olpBN6FNq",
+    "nome": "CLOBAZAM 10MG (URBANIL)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "n0dTIBdct2HUyM0wi0FJ",
+    "nome": "CLONIDINA 0,150MG - ATENSINA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Na6sK5Po82gvAxxNIBk1",
+    "nome": "COLAGENO TIPO II + VITAMINAS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "XvW7XrsF4YkaPO5bUQQo",
+    "nome": "COLCHICINA0,5MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 60,
+    "metodo": 10
+  },
+  {
+    "unidade": "Olavo",
+    "id": "FhZ1oIxlPO5XbxIj3Vpe",
+    "nome": "CREATINA PROBIOTICA PURA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "fMMqoOoPvJek02vJbgY9",
+    "nome": "CROMOLERG 4%",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "iLEoJzUJCgl4uv4N0vge",
+    "nome": "CUTISANOL BABY 120G",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "vO5gbWEY8MVmts4Jseyu",
+    "nome": "DESLORATADINA SOLUÇÃO ORAL",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "qM4eiW1UUj74cyk0dQfU",
+    "nome": "DESVENLAFAXINA 50MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 2
+  },
+  {
+    "unidade": "Olavo",
+    "id": "cVxsbGncMyIF87WgMdHJ",
+    "nome": "DEXAMETASONA 4 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 280,
+    "metodo": 82
+  },
+  {
+    "unidade": "Olavo",
+    "id": "laUjsp2lCVGBXDKyzGSs",
+    "nome": "DOMPERIDONA 10 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 150,
+    "metodo": 30
+  },
+  {
+    "unidade": "Olavo",
+    "id": "sGh0O1Jvq5Yo7Vydpqme",
+    "nome": "DORZOLAMIDA 2%",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "wMnIKsxuJ2sXAXofgN8u",
+    "nome": "DOXICICLINA 100MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "9xNRL6LjGUBd2ibT5RkQ",
+    "nome": "DOZEMAST 1000MCG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "zSXnDQ9qnZJo8cIe8rSF",
+    "nome": "DULOXETINA, CLORIDRATO 60MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 30,
+    "metodo": 22
+  },
+  {
+    "unidade": "Olavo",
+    "id": "RporcIR59CGU2BPDrTTZ",
+    "nome": "EMPAGLIFLOZINA 25MG (JARDIANCE)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "KC8FkYl5SqckKZafAi7m",
+    "nome": "ENSURE LATA 400G",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3,
+    "metodo": 14
+  },
+  {
+    "unidade": "Olavo",
+    "id": "hTsr31JNAB4MwCeccZtw",
+    "nome": "ENTEROGERMINA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ZfXojYcFjGVgxYm4m6fH",
+    "nome": "ESOMEPRAZOL 40MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "xz6Trih0Sxq0yUOakek3",
+    "nome": "ESPAÇADOR P/ MEDICAMENTO ADULTO E INFANTILL",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "N8DzyEw6uCIRLa6eqC6y",
+    "nome": "ESPIRAMICINA 1,5 MG CP",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "FJHAsNJN5ZBkQNx2gHM4",
+    "nome": "FENAZOPIRIDA 200MG - PYRIDIUM",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "wqdeGhLdjAcVL5GMgUma",
+    "nome": "FLUTINOL COLIRIO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "tzQ4C6pMBOdjd2ufENzP",
+    "nome": "FORXIGA 10MG (DAPAGLIFLOZINA)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "nlIgJvEOfmfrNCXtk5JP",
+    "nome": "FOSFOMICINA TROMETAMOL - MONURIL",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Cvk3YcPs6GO48zL66HEK",
+    "nome": "GLUCERNA 400G",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 3,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "f8NNdH8aF1euLyGE2bO7",
+    "nome": "GUACO XAROPE - MIKANIA GLOMERATA 117,5MG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 5,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "5sloN0BA6rDVFYIYoCWd",
+    "nome": "HIDROXIZINA XAROPE",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "H4PQNal6K6UfqS6ky2k0",
+    "nome": "IMPACT NUTRICAO ORAL E ENTERAL",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "oVcF7SMlvyWE223ioOTQ",
+    "nome": "INELATTE 800DKM",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 30,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Vi1NYrkJmLiT1jUCCmsN",
+    "nome": "ISOSOURCE 1.5",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "wj1wvSdHHIEhvCtxudwC",
+    "nome": "IZIZ C/28",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "uHVolVSkeMREgNE4jTrn",
+    "nome": "LACTULOSE XAROPE 120 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 10,
+    "metodo": 14
+  },
+  {
+    "unidade": "Olavo",
+    "id": "rO5a7DqUmWIdLYaheF38",
+    "nome": "LEITE APTAMIL AR 800G",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "AwTPCJxvB3yUOFU9UwTY",
+    "nome": "LEITE APTAMIL PREMIUM 1 - LATA 800G",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "G1bkiQkbWm5UWHxLcWO8",
+    "nome": "LEITE APTAMIL PRO EXPERT SOJA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "L5sTc35OXchtHvKe1Fz0",
+    "nome": "LEITE NAN COMFOR 1 - LATA 800 G",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 6,
+    "metodo": 2
+  },
+  {
+    "unidade": "Olavo",
+    "id": "zRVPai9bnGs9hFlv8XlP",
+    "nome": "LEITE NAN COMFOR 2 - LATA 800 G",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 2,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "a197Ph5mxRjTZ6I6Mt9X",
+    "nome": "LEITE NAN ESPESSAR- LATA 800 G",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "auLTrVVWC5VT6hpgVYAL",
+    "nome": "LEITE NAN SUPREME 1- 800G",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "vxmX41cc6AwUL7QpkUBd",
+    "nome": "LEITE NESTOGENO 1 - LATA 800G",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "uO50UzljfVkhD7L9GbOA",
+    "nome": "LEITE NINHO FASE I",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "wtr0CaAaSl2cof3pNgSg",
+    "nome": "LISDEXANFETAMINA, DIMESILATO DE 30MG - VENVANSE",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 30,
+    "metodo": 6
+  },
+  {
+    "unidade": "Olavo",
+    "id": "U887Ukh1Ipp3BjVrzjfa",
+    "nome": "LOPERAMIDA 2 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 276,
+    "metodo": 62
+  },
+  {
+    "unidade": "Olavo",
+    "id": "NkIJSFfwdFnMnyuoUBMX",
+    "nome": "LURASIDONA, CLORIDRATO DE 40MG (LATUDA)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "YlwhYbx295LoDKagiYcB",
+    "nome": "MAXIDEX - DEXAMETASONA 1MG/ML COLIRIO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "cTkqMNDXXRiqHDNgCvgc",
+    "nome": "MAXIDRATE GEL HIDRATANTE",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Ma4mvD6UzTYT4mMH5cCo",
+    "nome": "MEIA 3/4 20-30MM",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Sku6aaOXI1XJWmpeou30",
+    "nome": "MELOXICAM 15MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "8kvvrwNM4xZHm6wRUH9t",
+    "nome": "METILCOBALAMINA 1.000MCG - DOZEMAST - MECOBE",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 100,
+    "metodo": 8
+  },
+  {
+    "unidade": "Olavo",
+    "id": "j0gZ7nQN5ImWudxsiNeH",
+    "nome": "METILFENIDATO 10 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 270,
+    "metodo": 120
+  },
+  {
+    "unidade": "Olavo",
+    "id": "SvGqXG6teBLhKHZtNBur",
+    "nome": "MIRABEGRONA 50MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Vo6p3KbjJrS8zxHlGC8K",
+    "nome": "MIRTAZAPINA 15MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 90,
+    "metodo": 6
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Ye9fubvGOul8fOkWe4go",
+    "nome": "MIRTAZAPINA 15MG COMPRIMIDO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "CjQm41rUjDY0IRFyx3EF",
+    "nome": "MIRTAZAPINA 30MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "QtNkzn9KLxcGiH2xPzjb",
+    "nome": "NALTREXONA 50 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 30,
+    "metodo": 6
+  },
+  {
+    "unidade": "Olavo",
+    "id": "UGv9E0oV5lJGAoq4hTf4",
+    "nome": "NAPROXENO 500MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "z8FpyOQhskRZxFO2Z9EC",
+    "nome": "NEOCATE LCP",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 2,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "SWb1BMEExoye8nZaAoAE",
+    "nome": "NEULEPTIL - PERICIAZINA 40MG/ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "pkmBFOM4VT7G1L07Sp0E",
+    "nome": "NUTRASENIOR 400 GR",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "pS5kc4NsMVglyr5BNufS",
+    "nome": "NUTREN SENIOR",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "x4QGE3GI8siDvr0fhbJe",
+    "nome": "OFTPRED COLIRIO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "uVFNQ4JFpSja2q7jKL9X",
+    "nome": "OLMESARTANA 40MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "0No2vlIILI1QabwLj5bT",
+    "nome": "ONDANSETRONA 4 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 480,
+    "metodo": 43
+  },
+  {
+    "unidade": "Olavo",
+    "id": "DqH8yYHamSZMSq4wZaQD",
+    "nome": "ONDANSETRONA 8 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 70,
+    "metodo": 48
+  },
+  {
+    "unidade": "Olavo",
+    "id": "d77QCKVJMo4pdczLgSJc",
+    "nome": "PANT SPRAY",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Yk3PgAy1vbsrWnrqL61H",
+    "nome": "PANTOPRAZOL 20 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "sPeFvTIvHlI3AFq3vPr4",
+    "nome": "PANTOPRAZOL 40 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 28,
+    "metodo": 12
+  },
+  {
+    "unidade": "Olavo",
+    "id": "oPwsJ7DEpjI052B6KZ9u",
+    "nome": "PARACETAMOL + TRAMADOL 325/37,5MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "AcAw0ihkMvVoKy70eRAq",
+    "nome": "PAROXETINA 12,5MG - PONDERA XR",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "wENvJDJOT9AwaFXorjAx",
+    "nome": "PAROXETINA 20 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 58
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Jvfnd0CTv3b1G89yBsKD",
+    "nome": "PIRACETAM 400 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "f8zCDljUelFa34N0PZVD",
+    "nome": "PREGABALINA 100MG - PREBICTAL",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Jn9HhZUqQhmcolgn5315",
+    "nome": "PREGABALINA 75MG - LYRICA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 478,
+    "metodo": 280
+  },
+  {
+    "unidade": "Olavo",
+    "id": "f8EgkDTSxytcUmT3UI0m",
+    "nome": "PREVDERM SPRAY 50ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "CE8xytIYDm3zj5in5Ajk",
+    "nome": "PROPAFENONA 300 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "pdEYEThXGeqCF5ph3eLi",
+    "nome": "QUETIAPINA 100MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "RHGsCUG28W7LSJvG7dWB",
+    "nome": "RISPERIDONA 1 MG/ML SOLUÇÃO",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 48,
+    "metodo": 2
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Dk8KnDhYbPPXOmTLhx9Q",
+    "nome": "RISPERIDONA 1MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "QfH8qKd6MeTcavEjWCrU",
+    "nome": "RIVAROXABANA 10 MG (XARELTO)",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 13
+  },
+  {
+    "unidade": "Olavo",
+    "id": "dcZSnn9VVHDwO4sH80fR",
+    "nome": "RIVAROXABANA 15 MG (XARELTO)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "hH5kbdT4dH8TlirlVuzc",
+    "nome": "RIVAROXABANA 20MG (XARELTO)",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 30,
+    "metodo": 16
+  },
+  {
+    "unidade": "Olavo",
+    "id": "tHeSKqz1sOULWxlAZwJn",
+    "nome": "ROSUVASTATINA 10MG + EZETIMIBA 10MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "weDLu8yMe9zQ9ZRwtB5I",
+    "nome": "SALBUTAMOL GOTAS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Za5qKbNFrzi0zdcxWXbD",
+    "nome": "SILIMARINA 200MG (FIGMED)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "K5TbT9MaEes5P81hKGXG",
+    "nome": "SILYBUM MARIANUM 300MG (FORFIG)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ztuXjF3ARhOwvd6zjUTM",
+    "nome": "SUSTAGEN ADULTOS+",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "UZLkBMFgrkcHP7om69ly",
+    "nome": "TAMARINE CP",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "DAjlrTkcokT2PSlGpCxC",
+    "nome": "TOPCOID GEL - POLISSULFATO DE MUCOPOLISSACARIDEO",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "cZkjb6ekCAf0hUUOMGG8",
+    "nome": "TRAMADOL 100 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "HyAzv5kxVpbc4oeBf9Cm",
+    "nome": "TRAMADOL 50MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 74
+  },
+  {
+    "unidade": "Olavo",
+    "id": "YYf8HVMEM9MfEwfnPiW4",
+    "nome": "TRAZODONA, CLORIDRATO 50MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 2
+  },
+  {
+    "unidade": "Olavo",
+    "id": "kq9VySRyLdzDQowcy9d3",
+    "nome": "TRIADE MULHER",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "g7kPWITmB5qXakYULPLr",
+    "nome": "TROK-G (BETAMETASONA+ GENTAMICINA) POMADA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "6uC8n8MiysPuygIeC3R8",
+    "nome": "TROPHIC BASIC NUTRICAO ENTERAL E ORAL 800G",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ZdChj61efiAYyEVLjnB1",
+    "nome": "URSACOL 300 MG - ÁCIDO URSODESOXICOLICO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "pLVijZfRjAt2PxJi19K2",
+    "nome": "VENLAFAXINA 75 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 242,
+    "metodo": 124
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Qsji7IMLTXixMxjoIBNH",
+    "nome": "VICOG 5MG - VIMPOCETINA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Sd5uwluvTEVdoewMxc8o",
+    "nome": "VIGADEXA COL - MOXIFLOXACINO + DEXAMETASONA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "gRBgFTwAwyJQ9qHFx69P",
+    "nome": "VITAMINA D 15.000UI",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "xEhwvYJ4FwtH42Rv1IHS",
+    "nome": "VITAMINA D 200 UI - GOTAS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "LaIu8WfOUxcdHMH677bg",
+    "nome": "VITAMINA D 2000UI",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 7
+  },
+  {
+    "unidade": "Olavo",
+    "id": "vL8EAXUgM0FUvUvk72xH",
+    "nome": "VITAMINA E",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "cdd5bqfYbZjz16zbssMF",
+    "nome": "WHEY PROTEIN ISOLADO",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "2EE5WnGUOEj9SBwjyJ0R",
+    "nome": "ZIPRASIDONA, CLORIDRATO DE 40MG (GEODON)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "NS4nH8tLXv5lnyK493d3",
+    "nome": "AMIODARONA 50MG/ML - AMP",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 6,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "2dcUY3GieNDZM8wpk0bQ",
+    "nome": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ IM",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 40,
+    "metodo": 17
+  },
+  {
+    "unidade": "Olavo",
+    "id": "vlFzQC3jr9VYs8QlcJUP",
+    "nome": "CEFTRIAXONA 500 MG INJ -IM",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 14,
+    "metodo": 3
+  },
+  {
+    "unidade": "Olavo",
+    "id": "J4OACzyShcsIlJ6PUNi7",
+    "nome": "CETOPROFENO 100 MG - EV",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 34,
+    "metodo": 61
+  },
+  {
+    "unidade": "Olavo",
+    "id": "XnEij4At4nVyBI98irs6",
+    "nome": "HALOPERIDOL,DECANOATO 70,52MG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 21,
+    "metodo": 4
+  },
+  {
+    "unidade": "Olavo",
+    "id": "M7gudYKNp4NU5Kd9Ryku",
+    "nome": "MEDROXIPROGESTERONA, ACETATO 150MG/ML (DEPOPROVERA)",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 9,
+    "metodo": 4
+  },
+  {
+    "unidade": "Olavo",
+    "id": "jjfF12Ymg3ctXdXUlJL6",
+    "nome": "NORETISTERONA + ESTRADIOL 50 + 5 MG/ML  (MESIGYNA) INJETAVEL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 7,
+    "metodo": 8
+  },
+  {
+    "unidade": "Olavo",
+    "id": "oOSKKL6DZly1msHsW0nt",
+    "nome": "NORIPURUM INJ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 0,
+    "metodo": 16
+  },
+  {
+    "unidade": "Olavo",
+    "id": "rofyzlhGQDsozDHntD6i",
+    "nome": "OXITOCINA 5UI/ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "LKVFT7SZWkPRVf9p0J12",
+    "nome": "ROCURÔNIO 50 MG/ 5 ML - IV",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "DqVut1yRI9mfm0pryIao",
+    "nome": "ADENOSINA 3MG/2ML - AMP",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 35,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "naaH0NxliZ2svPYVowmq",
+    "nome": "AMINOFILINA 24 MG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 20,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "tfYQHlODBQyrfgYDFV8z",
+    "nome": "ATROPINA, SULFATO 0,50MG/ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 20,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "zYuIiP0InsxKPBYKgSDO",
+    "nome": "CLONIDINA, CLORIDRATO DE 150MCG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 20,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "hoylwhzUtDUBLYjF8Cxs",
+    "nome": "CLORETO DE POTASSIO 19,1% - 10 ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 32,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "rgQOvN0RRWSaldUyBT0B",
+    "nome": "CLORETO DE SODIO 20% - 10 ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 19,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "kkbz0CfGMQEOAWoZ4RZb",
+    "nome": "CLORPROMAZINA 25MG/5ML INJ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 29,
+    "metodo": 4
+  },
+  {
+    "unidade": "Olavo",
+    "id": "bAktNCfjjwz6yhn4cJ19",
+    "nome": "DIAZEPAM 10 MG/ 2ML - AMP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 50,
+    "metodo": 5
+  },
+  {
+    "unidade": "Olavo",
+    "id": "kqzFEXwpWY3zHV8lLX6e",
+    "nome": "DIFENIDRAMINA 50 MG/ML - AMP",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 15,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "FTSLloLufiZKvHzrVfr6",
+    "nome": "DOBUTAMINA 12,5MG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 2,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "23gUmc0Rw6vf8ll22ziU",
+    "nome": "DOPAMINA 5 MG/ ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 30,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "tHxklSdqEcuq0sDvDzUC",
+    "nome": "EPINEFRINA 1MG/ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 30,
+    "metodo": 12
+  },
+  {
+    "unidade": "Olavo",
+    "id": "JGptJA04bUFl8gsolFjm",
+    "nome": "ETOMIDATO 2 MG/ML - AMP",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 9,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "7VwSckst09sxMtjiFuU1",
+    "nome": "FENITOINA 50 MG / ML- AMPOLA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 43,
+    "metodo": 4
+  },
+  {
+    "unidade": "Olavo",
+    "id": "ZGwR86NdHd0jlkCEKwaA",
+    "nome": "FENOBARBITAL 200 MG/ ML - AMPOLA",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 7,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "fI6qMpBroVBvrnM2JoLv",
+    "nome": "FENTANILA,CITRATO 78,5MCG/5ML EQUIVALENTE A 50MCG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 10,
+    "metodo": 2
+  },
+  {
+    "unidade": "Olavo",
+    "id": "8WMBrGo1GtmS3z5TGkjx",
+    "nome": "FLUMAZENIL 0,1 MG/ 5 ML SOL INJ.",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 20,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "U584fV1Q1BFNAPnNEbWv",
+    "nome": "GLICONATO DE CALCIO 10% - AMP",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 5,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Ek3PCZlZj2AfFSAhwbl6",
+    "nome": "HALOPERIDOL 5 MG /ML - AMPOLA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 30,
+    "metodo": 7
+  },
+  {
+    "unidade": "Olavo",
+    "id": "qYVb2RxUj8eksNE8sqDH",
+    "nome": "HEPARINA SÓDICA 5.000 UI",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 10,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "lOsNDhedY93wyQ7Etaml",
+    "nome": "HIDRALAZINA 20 MG/ML - AMPOLAS",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 15,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "wYKcTaRPyKwkVpsld96e",
+    "nome": "METOPROLOL 1 MG/ML - AMPOLA",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 20,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "7mbnrk81HQ1v6K0TmtW3",
+    "nome": "MIDAZOLAM, CLORIDRATO 5MG/ML 10ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 15,
+    "metodo": 3
+  },
+  {
+    "unidade": "Olavo",
+    "id": "nEq5WIQhXQD8Q4nJagV7",
+    "nome": "MIDAZOLAM, CLORIDRATO 5MG/ML 3ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "d9AIZYtb5aMsP6l2cAmD",
+    "nome": "MORFINA 10MG/ML INJ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 10,
+    "metodo": 4
+  },
+  {
+    "unidade": "Olavo",
+    "id": "0Fp36sUPo0M5e2OnG5NZ",
+    "nome": "MORFINA 1MG/ML INJ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 20,
+    "metodo": 5
+  },
+  {
+    "unidade": "Olavo",
+    "id": "E6u72LIcimJJF0BOeUe6",
+    "nome": "NALOXONA, CLORIDRATO DE  0,4 MG/ 1 ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 4,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "JnG93Acp7p4boD3jY12j",
+    "nome": "NITROGLICERINA 5 MG/ML - TRIDIL",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 25,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "o7HvAhyNj2Pv8TYImrpA",
+    "nome": "NITROPRUSSETO DE SÓDIO 25 MG/ML - NITROP",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 20,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "HO8vxnQelzpn4prHllxZ",
+    "nome": "NOREPINEFRINA 2MG/4ML - AMP",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 30,
+    "metodo": 3
+  },
+  {
+    "unidade": "Olavo",
+    "id": "LRFBmBMKeRiV5vBKJRDx",
+    "nome": "OMEPRAZOL SODICO PO INJETAVEL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 10,
+    "metodo": 9
+  },
+  {
+    "unidade": "Olavo",
+    "id": "TFC45pHbTgerHRSOXx7C",
+    "nome": "PETIDINA 50MG/ML(DOLANTINA)",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "6XPj7byX7NZtY2yHpTGF",
+    "nome": "PROMETAZINA 50 MG/ 2ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 38,
+    "metodo": 13
+  },
+  {
+    "unidade": "Olavo",
+    "id": "9JdgYmt7NR8fP9EnymVZ",
+    "nome": "SULFATO DE MAGNESIO 10%",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 14,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "32MhY4xyCFbr0aNJd1e9",
+    "nome": "SUXAMETONIO 100MG SUSP INJ",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 14,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "j9V9pAWBKoTomzRC3Tbz",
+    "nome": "TERBUTALINA 0,5MG/ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 15,
+    "metodo": 1
+  },
+  {
+    "unidade": "Olavo",
+    "id": "wK3Yyars5fu0nlGdl3if",
+    "nome": "TESTE RAPIDO COMBO (COVID-19/ INFLUENZA A/B)",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 52,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "UGUpUYhvBbD65A1qIFkG",
+    "nome": "TESTE RAPIDO DE GRAVIDEZ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 10,
+    "metodo": 4
+  },
+  {
+    "unidade": "Olavo",
+    "id": "oou9OOb4yTjwjsHmjYpY",
+    "nome": "TRAMADOL 50MG/ML(TRAMAL)- AMP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 85,
+    "metodo": 56
+  },
+  {
+    "unidade": "Olavo",
+    "id": "XIglJEXFdICY0lLVMA05",
+    "nome": "AGULHA PARA CANETA DE INSULINA 4MM",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 990,
+    "metodo": 420
+  },
+  {
+    "unidade": "Olavo",
+    "id": "2SmxrMuliw5sKuuE6eZL",
+    "nome": "CANETA PARA APLICAÇÃO DE INSULINAS HUMANAS - REUTILIZAVEL",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 29,
+    "metodo": 2
+  },
+  {
+    "unidade": "Olavo",
+    "id": "JNm6jB4gCHve06QzRiTp",
+    "nome": "CINTA POS OPERATORIA COMPLETA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "PLlvIUjUSfEQMxNXpMR6",
+    "nome": "SORO MANITOL 250ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 22,
+    "metodo": 3
+  },
+  {
+    "unidade": "Olavo",
+    "id": "Ncve5Ai6KFcNaj5TD5g9",
+    "nome": "TALA METALICA",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "5lJvAL7fEdlntrU5wWam",
+    "nome": "TESTE DE TROPONINA CARDIACA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 13,
+    "metodo": 2
+  },
+  {
+    "unidade": "Olavo",
+    "id": "lCxLLsVmgAzF6c5ZLhhO",
+    "nome": "AGULHA PARA CANETA DE INSULINA 6MM",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "BeQbV545FqLZJmPER8D8",
+    "nome": "INSULINA NOVORRAPID FLEX PEN",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "qSoB7pUt1OVt894BZZH5",
+    "nome": "INSULINA TRESIBA FLEX PEN",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "c4Rz6AHrZja6MDlqhSgc",
+    "nome": "OFEV - ESILATO DE NINTEDANIBE 100MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "Olavo",
+    "id": "jzd6jHqZqOmtySjJdV6i",
+    "nome": "FRALDA DESC GERIATRICA - G",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 380,
+    "metodo": 207
+  },
+  {
+    "unidade": "Olavo",
+    "id": "IWoJxls6TDoHUTBolrJN",
+    "nome": "FRALDA DESC GERIATRICA - M",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 222,
+    "metodo": 92
+  },
+  {
+    "unidade": "Olavo",
+    "id": "JwDWghkuahdrAU9zgG42",
+    "nome": "FRALDA DESC GERIATRICA - P",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 174,
+    "metodo": 68
+  },
+  {
+    "unidade": "Olavo",
+    "id": "QHdy3hORPw5PSefsbZmo",
+    "nome": "FRALDA DESC GERIATRICA - XG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 159,
+    "metodo": 92
+  },
+  {
+    "unidade": "Olavo",
+    "id": "7iDxnn9V9bbXa9C4EuK6",
+    "nome": "FRALDA DESC GERIATRICA - XXG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 203,
+    "metodo": 20
+  },
+  {
+    "unidade": "Olavo",
+    "id": "jQ8UM1FzLtiFD2tkyZ69",
+    "nome": "FOSFATO OSELTAMIVIR 30MG - TAMIFLU",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 90,
+    "metodo": 11
+  },
+  {
+    "unidade": "Olavo",
+    "id": "9sC4mQ8WfxoRCfZaZueM",
+    "nome": "FOSFATO OSELTAMIVIR 45 MG - TAMIFLU",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 80,
+    "metodo": 6
+  },
+  {
+    "unidade": "Olavo",
+    "id": "kFJysROwdeAp4erM7LRF",
+    "nome": "FOSFATO OSELTAMIVIR 75 MG - TAMIFLU",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 31
+  },
+  {
+    "unidade": "Olavo",
+    "id": "LcTd3qLVGW0a5EKvdZ4A",
+    "nome": "INSULINA HUMANA NPH 100 UI/ML - CANETA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 0,
+    "metodo": 51
+  },
+  {
+    "unidade": "Olavo",
+    "id": "lh1xzHTWBVh1vAafYUgF",
+    "nome": "INSULINA HUMANA NPH 100 UI/ML - FRASCO 10 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 9,
+    "metodo": 4
+  },
+  {
+    "unidade": "Olavo",
+    "id": "AAxObb7geDVre7ZAJBlv",
+    "nome": "INSULINA HUMANA REGULAR 100 UI/ ML - FRASCO 10 ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 6,
+    "metodo": 2
+  },
+  {
+    "unidade": "Olavo",
+    "id": "iTGP1tJojpNesMsUVum8",
+    "nome": "INSULINA HUMANA REGULAR 100 UI/ML - CANETA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": -8,
+    "metodo": 8
+  },
+  {
+    "unidade": "Olavo",
+    "id": "i2suyuDcW5yPuX26buMz",
+    "nome": "ADESIVO NICOTINA 14 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 8127,
+    "metodo": 25
+  },
+  {
+    "unidade": "Olavo",
+    "id": "LzJXivalnaxkq8k7LUwp",
+    "nome": "ADESIVO NICOTINA 21 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 6594,
+    "metodo": 70
+  },
+  {
+    "unidade": "Olavo",
+    "id": "IUpdCOWPEow7pBnxm07w",
+    "nome": "ADESIVO NICOTINA 7 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 5292,
+    "metodo": 25
+  },
+  {
+    "unidade": "Olavo",
+    "id": "PCTzTBGKFfRpZbWBsqvh",
+    "nome": "BUPROPIONA 150 MG - TABAGISMO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5570,
+    "metodo": 180
+  },
+  {
+    "unidade": "Olavo",
+    "id": "9aJQM08dxSehqDN9RIVm",
+    "nome": "GOMA NICOTINA 2 MG (NICORETTE)",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 630,
+    "metodo": 38
+  },
+  {
+    "unidade": "ESF3",
+    "id": "NukT4PSolpTtDTExtGkW",
+    "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1540,
+    "metodo": 565
+  },
+  {
+    "unidade": "ESF3",
+    "id": "WW0ushu0Cr84OhvRHjf0",
+    "nome": "ACICLOVIR 200 MG CPR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 210,
+    "metodo": 180
+  },
+  {
+    "unidade": "ESF3",
+    "id": "rETsLcNEypm7eT5BylNR",
+    "nome": "ACICLOVIR 5 % CREME 10 G",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5,
+    "metodo": 4
+  },
+  {
+    "unidade": "ESF3",
+    "id": "8nCGbc5EhcI8wZwth9Gf",
+    "nome": "ACIDO FOLICO 5MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 390,
+    "metodo": 240
+  },
+  {
+    "unidade": "ESF3",
+    "id": "zrOXty7oRQOLWo64IeNg",
+    "nome": "ACIDO TRANEXÂMICO 250MG - TRANSAMIN",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 84,
+    "metodo": 79
+  },
+  {
+    "unidade": "ESF3",
+    "id": "b344g0MqH2Fq7ZqsXHR1",
+    "nome": "ACIDO VALPROICO 500MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 200,
+    "metodo": 47
+  },
+  {
+    "unidade": "ESF3",
+    "id": "DC2rauMdRmxNKrSjE3of",
+    "nome": "ALBENDAZOL 40 MG/ML FRASCO 10 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 32,
+    "metodo": 11
+  },
+  {
+    "unidade": "ESF3",
+    "id": "EFbriR21lfUkV6sPnOfJ",
+    "nome": "ALBENDAZOL 400 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 17,
+    "metodo": 12
+  },
+  {
+    "unidade": "ESF3",
+    "id": "p3m0Ds21uhutudbdR2jp",
+    "nome": "ALOPURINOL  300MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 340,
+    "metodo": 165
+  },
+  {
+    "unidade": "ESF3",
+    "id": "3xR4g2gGnhTnXhxqdrwG",
+    "nome": "ALOPURINOL 100MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 240,
+    "metodo": 60
+  },
+  {
+    "unidade": "ESF3",
+    "id": "i6rjMUQbiuivcM1H7ZM2",
+    "nome": "AMBROXOL XAROPE ADULTO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 19,
+    "metodo": 38
+  },
+  {
+    "unidade": "ESF3",
+    "id": "ikI75aRtaWBhgguWikHt",
+    "nome": "AMBROXOL XAROPE INFANTIL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 7,
+    "metodo": 12
+  },
+  {
+    "unidade": "ESF3",
+    "id": "ZJlktrVBSzUJcDTmgo86",
+    "nome": "AMINOFILINA 100 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "QyiQU1VXeQn3TUheP7fv",
+    "nome": "AMIODARONA, CLORIDRATO  200 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 180,
+    "metodo": 135
+  },
+  {
+    "unidade": "ESF3",
+    "id": "8zgbmUzSvLSjUJCSSuyn",
+    "nome": "AMITRIPTILINA, CLORIDRATO  25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2060,
+    "metodo": 735
+  },
+  {
+    "unidade": "ESF3",
+    "id": "6a5xQZxtPOE9ktoVcjBb",
+    "nome": "AMOXICILINA + CLAVULANATO 500/125 MCG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 304,
+    "metodo": 666
+  },
+  {
+    "unidade": "ESF3",
+    "id": "twnzGZpyWL1DWi4m6ZXk",
+    "nome": "AMOXICILINA + CLAVULANATO SUSP 250 MG/5 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 10,
+    "metodo": 21
+  },
+  {
+    "unidade": "ESF3",
+    "id": "eHAdTiN6udE6bIprZQFv",
+    "nome": "AMOXICILINA 250 MG/5ML - 150 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 9,
+    "metodo": 8
+  },
+  {
+    "unidade": "ESF3",
+    "id": "H4CREaSgvRHURm6gCA91",
+    "nome": "AMOXICILINA 500 MG - CAPSULA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 250,
+    "metodo": 273
+  },
+  {
+    "unidade": "ESF3",
+    "id": "66XFnYhQNcrFuZsMn14m",
+    "nome": "ANLODIPINO, BESILATO 5MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1190,
+    "metodo": 480
+  },
+  {
+    "unidade": "ESF3",
+    "id": "PUtWxQEajwx0Z6Z8ZnZb",
+    "nome": "AZITROMICINA 500 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 379,
+    "metodo": 163
+  },
+  {
+    "unidade": "ESF3",
+    "id": "UoXUHx2PauHikdXCWJGq",
+    "nome": "AZITROMICINA SUSP. 200MG/5ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 7,
+    "metodo": 25
+  },
+  {
+    "unidade": "ESF3",
+    "id": "0dGOoOc8aX7LEYWGfDuT",
+    "nome": "BIPERIDENO, CLORIDRATO 2 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 500,
+    "metodo": 175
+  },
+  {
+    "unidade": "ESF3",
+    "id": "uYekECMfILeBdsbVxmV6",
+    "nome": "BISACODIL 5MG - DULCOLAX",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 52,
+    "metodo": 23
+  },
+  {
+    "unidade": "ESF3",
+    "id": "SZcagxOtiJZlPmsxODRk",
+    "nome": "BROMOPRIDA 10MG CPR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 160,
+    "metodo": 370
+  },
+  {
+    "unidade": "ESF3",
+    "id": "AB8HydOAVLjaGQ6DITN6",
+    "nome": "BROMOPRIDA GTS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 7,
+    "metodo": 10
+  },
+  {
+    "unidade": "ESF3",
+    "id": "hGD5lCoPcrzgQiFWkr5s",
+    "nome": "BUSCOPAM COMPOSTO  GOTAS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "we6AzV8mcfyL9pLT19SR",
+    "nome": "BUSCOPAM COMPOSTO CPR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 120,
+    "metodo": 480
+  },
+  {
+    "unidade": "ESF3",
+    "id": "8b4ItSofh7SOlybaepvm",
+    "nome": "BUSCOPAM SIMPLES CP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 140,
+    "metodo": 130
+  },
+  {
+    "unidade": "ESF3",
+    "id": "tCPwaqzLT4mSGUWsB4OS",
+    "nome": "BUSCOPAM SIMPLES GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5,
+    "metodo": 7
+  },
+  {
+    "unidade": "ESF3",
+    "id": "PewxFOnzlKeBs4us5jpZ",
+    "nome": "CAPTOPRIL 25 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 153,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "mbuxUy9wncrbpEYmhXT1",
+    "nome": "CARBAMAZEPINA 200 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 800,
+    "metodo": 500
+  },
+  {
+    "unidade": "ESF3",
+    "id": "zuRRaub7tz3KJ99MF19y",
+    "nome": "CARBAMAZEPINA SUSP. 100 ML- 20 MG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 20,
+    "metodo": 1
+  },
+  {
+    "unidade": "ESF3",
+    "id": "d2LNZhZMLPjvFkClIlav",
+    "nome": "CARBONATO DE CALCIO 1.250MG + VITAMINA D 400UI",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 120,
+    "metodo": 90
+  },
+  {
+    "unidade": "ESF3",
+    "id": "iBZRB4q2o7wqCUAtOt21",
+    "nome": "CARBONATO DE LITIO 300 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 680,
+    "metodo": 180
+  },
+  {
+    "unidade": "ESF3",
+    "id": "P3M0jSAOX6xPYs8ieB08",
+    "nome": "CARVEDILOL 12,5 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 210,
+    "metodo": 90
+  },
+  {
+    "unidade": "ESF3",
+    "id": "za33TVjHqZh1b3odQNMf",
+    "nome": "CARVEDILOL 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 330,
+    "metodo": 120
+  },
+  {
+    "unidade": "ESF3",
+    "id": "USvBacmyFRq0hRMWBAPL",
+    "nome": "CARVEDILOL 6,25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 180,
+    "metodo": 180
+  },
+  {
+    "unidade": "ESF3",
+    "id": "t2BNiX2oI51N3TOxv8RD",
+    "nome": "CEFALEXINA 500 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 285,
+    "metodo": 406
+  },
+  {
+    "unidade": "ESF3",
+    "id": "ElCsXM6GNj0EIZwisJsq",
+    "nome": "CEFALEXINA SUSPENSÃO 250 MG/ 5 ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 2,
+    "metodo": 3
+  },
+  {
+    "unidade": "ESF3",
+    "id": "nydVK8Fu0ZDFfslUvKTB",
+    "nome": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ EV",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 63,
+    "metodo": 138
+  },
+  {
+    "unidade": "ESF3",
+    "id": "zWj3Zl6fKVpGCLxOiP3W",
+    "nome": "CERUMIN GOTAS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "zscvGVU83Yx04JslNya2",
+    "nome": "CETOCONAZOL + BETAMETASONA POMADA 30 GR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1,
+    "metodo": 5
+  },
+  {
+    "unidade": "ESF3",
+    "id": "9frvKpFb7dtUpMsfzvXn",
+    "nome": "CETOCONAZOL 200 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 120,
+    "metodo": 5
+  },
+  {
+    "unidade": "ESF3",
+    "id": "8SoVWkp7YyjyDz5AkRYz",
+    "nome": "CETOPROFENO 50 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 188,
+    "metodo": 588
+  },
+  {
+    "unidade": "ESF3",
+    "id": "VE8yJWOOCkdNiqoeBUdT",
+    "nome": "CICLOBENZAPRINA 5MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1040,
+    "metodo": 945
+  },
+  {
+    "unidade": "ESF3",
+    "id": "8dqDScTAGRdtYA0NyrA3",
+    "nome": "CILOSTAZOL 100 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 160,
+    "metodo": 110
+  },
+  {
+    "unidade": "ESF3",
+    "id": "6FzP69uEsmkl3PZFYL6e",
+    "nome": "CIMETIDINA 200MG COMPRIMIDO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 400,
+    "metodo": 100
+  },
+  {
+    "unidade": "ESF3",
+    "id": "NsfKtFpdvboFlBtOjl1t",
+    "nome": "CINARIZINA 75MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 410,
+    "metodo": 185
+  },
+  {
+    "unidade": "ESF3",
+    "id": "k68JpylQ2Qinp9OjXFZx",
+    "nome": "CIPROFLOXACINO 500MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 109,
+    "metodo": 240
+  },
+  {
+    "unidade": "ESF3",
+    "id": "Mh592iRS5nzfubF5fo8w",
+    "nome": "CLARITROMICINA 500 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 80,
+    "metodo": 17
+  },
+  {
+    "unidade": "ESF3",
+    "id": "p0doJdebewQd1fK3WCD1",
+    "nome": "CLOMIPRAMINA, CLORIDRATO 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 900,
+    "metodo": 270
+  },
+  {
+    "unidade": "ESF3",
+    "id": "lIAiXxi728Xz9w91AUQo",
+    "nome": "CLONAZEPAM 2,5 MG/ ML - GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 28,
+    "metodo": 14
+  },
+  {
+    "unidade": "ESF3",
+    "id": "zLQgQ2awmW0kMMpv70Je",
+    "nome": "CLONAZEPAM 2MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2810,
+    "metodo": 1238
+  },
+  {
+    "unidade": "ESF3",
+    "id": "yXaW5crPmXcqarfDt0aw",
+    "nome": "CLORPROMAZINA, CLORIDRATO 100MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 170,
+    "metodo": 110
+  },
+  {
+    "unidade": "ESF3",
+    "id": "4PCZw1De73EIZPCmysC1",
+    "nome": "CLORPROMAZINA, CLORIDRATO 25MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 130,
+    "metodo": 70
+  },
+  {
+    "unidade": "ESF3",
+    "id": "aePACqwbGsPRqKTmZWAI",
+    "nome": "COMPLEXO B CP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 465,
+    "metodo": 85
+  },
+  {
+    "unidade": "ESF3",
+    "id": "LJGDh9Xk1B0rQRX7f1TW",
+    "nome": "DECONGEX PLUS GOTAS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 2,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "8Cep5fdgtKbthfXuJR07",
+    "nome": "DELTAMETRINA 0,2MG/ML",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 5,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "3JmyAHqyWQQ8BgrFP8db",
+    "nome": "DEXAMETASONA 0,5 MG/5ML- ELIXIR",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "zwP4fTXosdwRuIBdjFaU",
+    "nome": "DEXAMETASONA 0.1% CREME 10 GR",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 31,
+    "metodo": 18
+  },
+  {
+    "unidade": "ESF3",
+    "id": "WIAntUFOHoIKUjKfNa9a",
+    "nome": "DEXCLORFENIRAMINA + BETAMETASONA SUSP ORAL 120",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 25,
+    "metodo": 30
+  },
+  {
+    "unidade": "ESF3",
+    "id": "DFiW0L0Q9k8987gxsal6",
+    "nome": "DEXCLORFENIRAMINA, MALEATO  2MG/5ML - SUSPENSÃO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 11,
+    "metodo": 4
+  },
+  {
+    "unidade": "ESF3",
+    "id": "op2bwLUzB57jQynvY7qS",
+    "nome": "DIAZEPAM 10 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1100,
+    "metodo": 290
+  },
+  {
+    "unidade": "ESF3",
+    "id": "eRB4xnzeWYyNYDUmSxKw",
+    "nome": "DICLOFENACO 50 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 250,
+    "metodo": 280
+  },
+  {
+    "unidade": "ESF3",
+    "id": "lCeIuKMM2vRXXo3akaky",
+    "nome": "DIGOXINA 0.25 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 150,
+    "metodo": 24
+  },
+  {
+    "unidade": "ESF3",
+    "id": "QFhiu7hc6C8NJxWMcCVr",
+    "nome": "DIOSMINA + HESPERIDINA 450/50 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2880,
+    "metodo": 1310
+  },
+  {
+    "unidade": "ESF3",
+    "id": "PIoI9lyUjongjUkBWI2e",
+    "nome": "DIPIRONA SÓDICA COMPRIMIDO 500MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1020,
+    "metodo": 4361
+  },
+  {
+    "unidade": "ESF3",
+    "id": "ikE8fRhMdZLGI8AYdmC1",
+    "nome": "DIPIRONA SÓDICA GOTAS 500 MG / ML 10 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 97,
+    "metodo": 64
+  },
+  {
+    "unidade": "ESF3",
+    "id": "LqkExu1jr9FldsuwxqEv",
+    "nome": "DOXAZOSINA 2 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 570,
+    "metodo": 285
+  },
+  {
+    "unidade": "ESF3",
+    "id": "BrJLHGVbQ2gRtjrKMnJR",
+    "nome": "DOXAZOSINA MESILATO 4MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 330,
+    "metodo": 75
+  },
+  {
+    "unidade": "ESF3",
+    "id": "57EmumiURUd1MQKkhBPU",
+    "nome": "DRAMIN  GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 2,
+    "metodo": 5
+  },
+  {
+    "unidade": "ESF3",
+    "id": "pTaHNsq4XjAUAT7XMOO2",
+    "nome": "DROPROPIZINA 1,5 MG/ML -XAROPE PEDIATRICO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5,
+    "metodo": 5
+  },
+  {
+    "unidade": "ESF3",
+    "id": "EJuxDDVK9VKdtShHPzHY",
+    "nome": "DROPROPIZINA 3 MG/ML - XAROPE ADULTO",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 16,
+    "metodo": 18
+  },
+  {
+    "unidade": "ESF3",
+    "id": "wgO3tB3cu758KQt4SM6Z",
+    "nome": "ENALAPRIL 10MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "88nbNmWqhfX4pITanuXG",
+    "nome": "ENOXAPARINA SÓDICA 40 MG/0,4ML - CLEXANE",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 23,
+    "metodo": 10
+  },
+  {
+    "unidade": "ESF3",
+    "id": "X5gSTbqaxa3mGkgRNnN0",
+    "nome": "ESPIRONOLACTONA 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 356,
+    "metodo": 240
+  },
+  {
+    "unidade": "ESF3",
+    "id": "ttxM8KetwJCy4JGupVMZ",
+    "nome": "ESTRIOL 1MG/G - CR VAGINAL 50 GR",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 5,
+    "metodo": 1
+  },
+  {
+    "unidade": "ESF3",
+    "id": "vWGb4VBJqbnk0hYijDnx",
+    "nome": "FENITOINA 100 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 700,
+    "metodo": 260
+  },
+  {
+    "unidade": "ESF3",
+    "id": "ad12D9qfjAAYDwB7nplF",
+    "nome": "FENOBARBITAL 100 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 290,
+    "metodo": 155
+  },
+  {
+    "unidade": "ESF3",
+    "id": "aDwvJ1Hq4Ut1XPRCqu09",
+    "nome": "FENOBARBITAL 40 MG/ML - GOTAS",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 4,
+    "metodo": 1
+  },
+  {
+    "unidade": "ESF3",
+    "id": "3eKTImSS5nN1NS9N9IXt",
+    "nome": "FINASTERIDA 5 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 660,
+    "metodo": 240
+  },
+  {
+    "unidade": "ESF3",
+    "id": "iFmMaH0vOOXaHNLuJPLO",
+    "nome": "FLUCONAZOL 150 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 26,
+    "metodo": 9
+  },
+  {
+    "unidade": "ESF3",
+    "id": "82riP9fpmZZRKeZ4y7yJ",
+    "nome": "FLUOXETINA, CLORIDRATO 20 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 610,
+    "metodo": 802
+  },
+  {
+    "unidade": "ESF3",
+    "id": "YxKPLlZ1sJAKzmQvA4T0",
+    "nome": "FUROSEMIDA 40MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 820,
+    "metodo": 400
+  },
+  {
+    "unidade": "ESF3",
+    "id": "4Bhn0w0zwCN8eElHThMX",
+    "nome": "GLIBENCLAMIDA 5 MG.",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 120,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "eIrNEIdSv6YG3OwdtPb8",
+    "nome": "GLICLAZIDA 30 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 780,
+    "metodo": 420
+  },
+  {
+    "unidade": "ESF3",
+    "id": "4TDVp0JrfaMIGOm4L3xO",
+    "nome": "GLICLAZIDA 60 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1170,
+    "metodo": 210
+  },
+  {
+    "unidade": "ESF3",
+    "id": "uYJdBldgnAt6cGP5eHJl",
+    "nome": "HALOPERIDOL 5MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 370,
+    "metodo": 150
+  },
+  {
+    "unidade": "ESF3",
+    "id": "cFN65kOzU8azxX2QFB0W",
+    "nome": "HIDRALAZINA 25MG, CLORIDRATO DE",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 200,
+    "metodo": 16
+  },
+  {
+    "unidade": "ESF3",
+    "id": "9E7sIyNOuw5bFtZKVePZ",
+    "nome": "HIDROCLOROTIAZIADA 25MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 20
+  },
+  {
+    "unidade": "ESF3",
+    "id": "gsRExxjlZw5w8zPkgeN0",
+    "nome": "HIDROXIDO DE ALUMINIO 6.2% SUSP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 19,
+    "metodo": 4
+  },
+  {
+    "unidade": "ESF3",
+    "id": "lNOi6iuhhEpUUsu6pCKg",
+    "nome": "IBUPROFENO 100MG/ML -  GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 16,
+    "metodo": 35
+  },
+  {
+    "unidade": "ESF3",
+    "id": "ZO7DDxN898TcXffomcfG",
+    "nome": "IBUPROFENO 300 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 400,
+    "metodo": 585
+  },
+  {
+    "unidade": "ESF3",
+    "id": "usxRls0GIDJ4dLWODq6x",
+    "nome": "IBUPROFENO 50MG/ML - GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 19,
+    "metodo": 5
+  },
+  {
+    "unidade": "ESF3",
+    "id": "32C5jUNQ0i7v19z1bAYd",
+    "nome": "IMIPRAMINA 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 400,
+    "metodo": 120
+  },
+  {
+    "unidade": "ESF3",
+    "id": "eF2rJNNgS3CfhQNKJXRV",
+    "nome": "ITRACONAZOL 100 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 70,
+    "metodo": 14
+  },
+  {
+    "unidade": "ESF3",
+    "id": "F90BZCkATpleImUYa6Zy",
+    "nome": "IVERMECTINA 6 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 20,
+    "metodo": 13
+  },
+  {
+    "unidade": "ESF3",
+    "id": "t86PcSmuBbSOPOVKnzyj",
+    "nome": "LEVODOPA + BENSERAZIDA 100/25MG - PROLOPA BD",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 120,
+    "metodo": 12
+  },
+  {
+    "unidade": "ESF3",
+    "id": "rzttzcZ6hfFql4oLO4yZ",
+    "nome": "LEVODOPA + BENSERAZIDA 200/50MG - PROLOPA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 480,
+    "metodo": 180
+  },
+  {
+    "unidade": "ESF3",
+    "id": "cgDJdbiFAfDoZuuejm0H",
+    "nome": "LEVOFLOXACINO 500 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 62,
+    "metodo": 118
+  },
+  {
+    "unidade": "ESF3",
+    "id": "58En4ak2jxbJKhXotvCP",
+    "nome": "LEVOMEPROMAZINA 100 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 720,
+    "metodo": 52
+  },
+  {
+    "unidade": "ESF3",
+    "id": "LqiPxoZKgOU9cgsL694l",
+    "nome": "LEVOMEPROMAZINA 25MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 170,
+    "metodo": 10
+  },
+  {
+    "unidade": "ESF3",
+    "id": "wylasPUrThnkRSEndzzY",
+    "nome": "LEVONORGESTREL 0,15MG+ETINILESTRADIOL 0,03MG- CICLO 21",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 230,
+    "metodo": 84
+  },
+  {
+    "unidade": "ESF3",
+    "id": "QlvB75UizQt2zdkoGtIK",
+    "nome": "LEVOTIROXINA SÓDICA 100MCG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 710,
+    "metodo": 218
+  },
+  {
+    "unidade": "ESF3",
+    "id": "KWzJ7wjJETCGpy5ZYRol",
+    "nome": "LEVOTIROXINA SODICA 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1095,
+    "metodo": 340
+  },
+  {
+    "unidade": "ESF3",
+    "id": "Wvc2CMANPpwCKdLCj0zc",
+    "nome": "LEVOTIROXINA SODICA 50MCG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1365,
+    "metodo": 495
+  },
+  {
+    "unidade": "ESF3",
+    "id": "Z8BNTUehfWfh3uWi7LVN",
+    "nome": "LORATADINA 1 MG/ML - XAROPE",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 19,
+    "metodo": 32
+  },
+  {
+    "unidade": "ESF3",
+    "id": "M1JW7rMTqeW1j9SENtc2",
+    "nome": "LORATADINA 10 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 281,
+    "metodo": 780
+  },
+  {
+    "unidade": "ESF3",
+    "id": "xBDYWzksJNXzMgNgSePn",
+    "nome": "METFORMINA, CLORIDRATO 850MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 8
+  },
+  {
+    "unidade": "ESF3",
+    "id": "03AZQ3rnPj0MPTUrNioV",
+    "nome": "METILDOPA 250 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 170,
+    "metodo": 420
+  },
+  {
+    "unidade": "ESF3",
+    "id": "G5tACwis2jeNneddJdhu",
+    "nome": "METOCLOPRAMIDA 10 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 90,
+    "metodo": 20
+  },
+  {
+    "unidade": "ESF3",
+    "id": "dpRx8TtnyGYYQUzZjwye",
+    "nome": "METOPROLOL 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 780,
+    "metodo": 180
+  },
+  {
+    "unidade": "ESF3",
+    "id": "EutMUlMyxwO0K2QZptnW",
+    "nome": "METOPROLOL 50 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 270,
+    "metodo": 90
+  },
+  {
+    "unidade": "ESF3",
+    "id": "FOWD3LPmjQ5cc24kjdQq",
+    "nome": "METRONIDAZOL 100 MG/G - GEL VAGINAL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 4,
+    "metodo": 3
+  },
+  {
+    "unidade": "ESF3",
+    "id": "8yrLSeKiIqSpMkEsts1G",
+    "nome": "METRONIDAZOL 250 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 392,
+    "metodo": 60
+  },
+  {
+    "unidade": "ESF3",
+    "id": "BBmvS59psHcShmlfIvZ5",
+    "nome": "METRONIDAZOL 40 MG/ML -  SUSPENSÃO ORAL",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 6,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "Noij7qRQTnfqYLSJHfx3",
+    "nome": "MICONAZOL, NITRATO 0,02 MG/G -  80 G CREME VAGINAL",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 5,
+    "metodo": 1
+  },
+  {
+    "unidade": "ESF3",
+    "id": "s45SeIf6ZNEti1hvySNe",
+    "nome": "NEOMICINA + BACITRACINA POMADA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 20,
+    "metodo": 10
+  },
+  {
+    "unidade": "ESF3",
+    "id": "YhVDi6tIR4meR8DI3KfN",
+    "nome": "NIFEDIPINA 20MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 690,
+    "metodo": 270
+  },
+  {
+    "unidade": "ESF3",
+    "id": "rTrt29qM8e8L0HEpJKGw",
+    "nome": "NIMESULIDA 100 MG  CP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 506,
+    "metodo": 1110
+  },
+  {
+    "unidade": "ESF3",
+    "id": "jUDLnEvzBKM0eyfEU5zq",
+    "nome": "NIMESULIDA GTS",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 4,
+    "metodo": 3
+  },
+  {
+    "unidade": "ESF3",
+    "id": "hk5quNYRAYs1nt3N1lXh",
+    "nome": "NIMODIPINO 30 MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "qTC0CPUJZMEZioIEnexS",
+    "nome": "NISTATINA 100.000 SUSP FRASCO 60 ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 2
+  },
+  {
+    "unidade": "ESF3",
+    "id": "Be1cBxK8fxltZ8rkiQ0T",
+    "nome": "NISTATINA POMADA VAG.",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 9,
+    "metodo": 4
+  },
+  {
+    "unidade": "ESF3",
+    "id": "UZMFwzwxZCTe2WBJ24KS",
+    "nome": "NITRAZEPAN 5 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 4
+  },
+  {
+    "unidade": "ESF3",
+    "id": "V7QbQceVUXOq3Wpq1P7b",
+    "nome": "NITROFURANTOINA 100MG CAPSULA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 624,
+    "metodo": 182
+  },
+  {
+    "unidade": "ESF3",
+    "id": "XiuYopYW3UrvhwYcxXMC",
+    "nome": "NORETISTERONA 0,35MG CAIXA COM 35 CPR",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 315,
+    "metodo": 3
+  },
+  {
+    "unidade": "ESF3",
+    "id": "A05l5IqapT6oIs3pQiTe",
+    "nome": "NORFLOXACINO 400MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 42,
+    "metodo": 9
+  },
+  {
+    "unidade": "ESF3",
+    "id": "NAeW5bZYbuky3BhWAvhN",
+    "nome": "NORTRIPTILINA, CLORIDRATO 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 400,
+    "metodo": 300
+  },
+  {
+    "unidade": "ESF3",
+    "id": "JL0QhHWVJmQNttRQjLR4",
+    "nome": "OLEO MINERAL 100 ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 3,
+    "metodo": 2
+  },
+  {
+    "unidade": "ESF3",
+    "id": "DUZp4RxGg00FrniPW0JS",
+    "nome": "OMEPRAZOL 20MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1718,
+    "metodo": 1061
+  },
+  {
+    "unidade": "ESF3",
+    "id": "iGkfsgYhpn1xhWcBeJcb",
+    "nome": "OXCARBAZEPINA 300 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 720,
+    "metodo": 180
+  },
+  {
+    "unidade": "ESF3",
+    "id": "tAHC0TsP2hvHmuaXishx",
+    "nome": "PARACETAMOL + CODEINA 500/30 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 194,
+    "metodo": 276
+  },
+  {
+    "unidade": "ESF3",
+    "id": "TDPpl1ASmpqcfNfH2S2c",
+    "nome": "PARACETAMOL 200 MG/ ML -  FRASCO 15 ML GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 9,
+    "metodo": 7
+  },
+  {
+    "unidade": "ESF3",
+    "id": "ejhnkJr9F1gUxK4pZRgJ",
+    "nome": "PARACETAMOL 500 MG - COMP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 270,
+    "metodo": 120
+  },
+  {
+    "unidade": "ESF3",
+    "id": "SLY9F3cQDmxzmOnroAR7",
+    "nome": "PARACETAMOL 750 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 50,
+    "metodo": 70
+  },
+  {
+    "unidade": "ESF3",
+    "id": "dZc14LalEPdXFtlR7NHS",
+    "nome": "PENTOXIFILINA 400 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 140,
+    "metodo": 28
+  },
+  {
+    "unidade": "ESF3",
+    "id": "joNEdv1XTC7ok0btrvkW",
+    "nome": "PERMETRINA 5% LOÇÃO",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 6,
+    "metodo": 1
+  },
+  {
+    "unidade": "ESF3",
+    "id": "SUHIqhLF3wovOk1g8HQO",
+    "nome": "PHOSFOENEMA 130ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 5,
+    "metodo": 1
+  },
+  {
+    "unidade": "ESF3",
+    "id": "Ivfegda0Ia2tTHx3Mcna",
+    "nome": "POLIVITAMINICO GTS",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 1,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "ueqwID6EmHnoGQhtXaSg",
+    "nome": "POMADA PARA ASSADURA ( NIST+ OX ZINCO) PMD",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 27,
+    "metodo": 7
+  },
+  {
+    "unidade": "ESF3",
+    "id": "4qaeAailfTDJR1t9pVd4",
+    "nome": "PREDNISOLONA 3MG/ML, FOSFATO SODICO DE",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 20,
+    "metodo": 30
+  },
+  {
+    "unidade": "ESF3",
+    "id": "uqIP0ngTTHjdxAsNfCWx",
+    "nome": "PREDNISONA 20 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 240,
+    "metodo": 706
+  },
+  {
+    "unidade": "ESF3",
+    "id": "ohSUNCWfUHGGnS0y760V",
+    "nome": "PREDNISONA 5 MG - CP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 80,
+    "metodo": 60
+  },
+  {
+    "unidade": "ESF3",
+    "id": "VBwvRdZgWGyisJ743MH3",
+    "nome": "PROMETAZINA 25 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 240,
+    "metodo": 122
+  },
+  {
+    "unidade": "ESF3",
+    "id": "ufTHrUnGseSgxeEtHdJf",
+    "nome": "PROPRANOLOL 40MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 540,
+    "metodo": 160
+  },
+  {
+    "unidade": "ESF3",
+    "id": "aMcs1ZfGGN5pV1VgZxJn",
+    "nome": "SAIS P/REIDRATAÇÃO ORAL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 50,
+    "metodo": 116
+  },
+  {
+    "unidade": "ESF3",
+    "id": "Y1t0kwmNQbtOjE3ATyHl",
+    "nome": "SALBUTAMOL, SULFATO 100 MCG/ DOSE -  AEROSOL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 5,
+    "metodo": 2
+  },
+  {
+    "unidade": "ESF3",
+    "id": "abu4gv0n4B0MfzTYRr1J",
+    "nome": "SERTRALINA 50MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 3300,
+    "metodo": 1640
+  },
+  {
+    "unidade": "ESF3",
+    "id": "boNj3uHtHdPKfts1HQCk",
+    "nome": "SIMETICONA GTS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 23,
+    "metodo": 22
+  },
+  {
+    "unidade": "ESF3",
+    "id": "1oUU7H3FkvLw5y4NtFid",
+    "nome": "SINVASTATINA 10MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "V9R66p0UVWGIxLxtB4m4",
+    "nome": "SINVASTATINA 20MG",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 80,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "mMe972NC4v9ZaoaE0199",
+    "nome": "SORO NASAL INFANTIL/ADULTO -30 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 28,
+    "metodo": 3
+  },
+  {
+    "unidade": "ESF3",
+    "id": "aN5rYgt2eCVGrpHEy5g7",
+    "nome": "SULFAM. + TRIMETROP. 40 + 8 MG/ML - SUSPENSÃO ORAL 100 ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 6,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "KjivbTREJnEAaeGuOsmb",
+    "nome": "SULFAMET. +TRIMETOPRIMA  400 + 80MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 100,
+    "metodo": 36
+  },
+  {
+    "unidade": "ESF3",
+    "id": "SHzu5UGH8UnPQ14lgHsp",
+    "nome": "SULFATO FERROSO 25 MG/ML - GOTAS",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 20,
+    "metodo": 3
+  },
+  {
+    "unidade": "ESF3",
+    "id": "AjG6kUmeS4eqXCRZIndn",
+    "nome": "SULFATO FERROSO 40 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 1350,
+    "metodo": 225
+  },
+  {
+    "unidade": "ESF3",
+    "id": "FQsYv7RsAxiJ72fVW5l6",
+    "nome": "SUPLEMENTO VITAMINICO A-Z",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 480,
+    "metodo": 150
+  },
+  {
+    "unidade": "ESF3",
+    "id": "kAhdFIdCviLfqNwieFoq",
+    "nome": "TIAMINA 300 MG - CP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 520,
+    "metodo": 120
+  },
+  {
+    "unidade": "ESF3",
+    "id": "WyOwkjZ1GU8r0R2D4ugI",
+    "nome": "TIBOLONA 1,25MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 455,
+    "metodo": 140
+  },
+  {
+    "unidade": "ESF3",
+    "id": "Tphy1SH9WPGfPBFMCG8R",
+    "nome": "TOBRAMICINA 0,3 % COLIRIO - FRASCO 5 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 7,
+    "metodo": 5
+  },
+  {
+    "unidade": "ESF3",
+    "id": "smdqZYSa6WOAcoNaHg8o",
+    "nome": "VALPROATO DE SÓDIO 50 MG/ML - XPE",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 17,
+    "metodo": 3
+  },
+  {
+    "unidade": "ESF3",
+    "id": "cwSKUfK9KwEm0AbHNMpd",
+    "nome": "VARFARINA SODICA 5MG - MAREVAN",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 90,
+    "metodo": 45
+  },
+  {
+    "unidade": "ESF3",
+    "id": "K3nm5RU6RUm5fEkUOldH",
+    "nome": "VITAMINA D3 7.000 UI",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 988,
+    "metodo": 158
+  },
+  {
+    "unidade": "ESF3",
+    "id": "5jukKOr5xjKRMwAXonPl",
+    "nome": "CUTISANOL BABY 120G",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "gHCb6Fe23ndETJRlkmat",
+    "nome": "DEXAMETASONA 4 MG",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 420,
+    "metodo": 110
+  },
+  {
+    "unidade": "ESF3",
+    "id": "QL7c8lsB8Ee4EozpecLK",
+    "nome": "GUACO XAROPE - MIKANIA GLOMERATA 117,5MG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 8,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "Cj6Z8K0G1dYIJX3Iu1AW",
+    "nome": "LACTULOSE XAROPE 120 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 12,
+    "metodo": 12
+  },
+  {
+    "unidade": "ESF3",
+    "id": "C0QoeeiRRzXBuHz3bxH0",
+    "nome": "LOPERAMIDA 2 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 96,
+    "metodo": 22
+  },
+  {
+    "unidade": "ESF3",
+    "id": "RQoWHgxYJeIJkHGIRBfn",
+    "nome": "METILFENIDATO 10 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 36
+  },
+  {
+    "unidade": "ESF3",
+    "id": "sfs7pkeEGVamSdUzjrT9",
+    "nome": "ONDANSETRONA 4 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 150,
+    "metodo": 53
+  },
+  {
+    "unidade": "ESF3",
+    "id": "AykbjXRBTzOIwfOFYsKn",
+    "nome": "ONDANSETRONA 8 MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 16
+  },
+  {
+    "unidade": "ESF3",
+    "id": "WGyCdFl9G5keZFjx10wy",
+    "nome": "TRAMADOL 50MG",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 19
+  },
+  {
+    "unidade": "ESF3",
+    "id": "bhNKCBdY00TQa4IhLHDX",
+    "nome": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ IM",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 7,
+    "metodo": 16
+  },
+  {
+    "unidade": "ESF3",
+    "id": "33d4jptMgyEWY1UPjKzp",
+    "nome": "CEFTRIAXONA 500 MG INJ -IM",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 9,
+    "metodo": 1
+  },
+  {
+    "unidade": "ESF3",
+    "id": "mDTcBggAs5f1dVfVJ6Mb",
+    "nome": "HALOPERIDOL,DECANOATO 70,52MG/ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 19,
+    "metodo": 3
+  },
+  {
+    "unidade": "ESF3",
+    "id": "6ZagEIZAlgMs9K4KCrLQ",
+    "nome": "MEDROXIPROGESTERONA, ACETATO 150MG/ML (DEPOPROVERA)",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 9,
+    "metodo": 3
+  },
+  {
+    "unidade": "ESF3",
+    "id": "tXh8zAvQhbihWPVNAz1T",
+    "nome": "NORETISTERONA + ESTRADIOL 50 + 5 MG/ML  (MESIGYNA) INJETAVEL",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 12,
+    "metodo": 7
+  },
+  {
+    "unidade": "ESF3",
+    "id": "JGbUEtE3dUZjtNbr55Q4",
+    "nome": "NORIPURUM INJ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 10,
+    "metodo": 14
+  },
+  {
+    "unidade": "ESF3",
+    "id": "tbMAva24epBAL70YcRaN",
+    "nome": "DIAZEPAM 10 MG/ 2ML - AMP",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 2
+  },
+  {
+    "unidade": "ESF3",
+    "id": "T9oaAYqJrrxyDbbFINzh",
+    "nome": "HEPARINA SÓDICA 5.000 UI",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "PTqTsiVrDOcpvZIlmTwq",
+    "nome": "PROMETAZINA 50 MG/ 2ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 17,
+    "metodo": 5
+  },
+  {
+    "unidade": "ESF3",
+    "id": "f6Sub0kWhm74yKgnVPUD",
+    "nome": "TESTE RAPIDO DE GRAVIDEZ",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 9,
+    "metodo": 2
+  },
+  {
+    "unidade": "ESF3",
+    "id": "fpUktjrc6b4KmDsTQSYH",
+    "nome": "TRAMADOL 50MG/ML(TRAMAL)- AMP",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 10,
+    "metodo": 55
+  },
+  {
+    "unidade": "ESF3",
+    "id": "CbMzO4g6F82SIv05We0x",
+    "nome": "AGULHA PARA CANETA DE INSULINA 4MM",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 545,
+    "metodo": 335
+  },
+  {
+    "unidade": "ESF3",
+    "id": "klrza3RwQV9FBYH46oOq",
+    "nome": "AGULHA PARA CANETA DE INSULINA 6MM",
+    "tp_metodo": "3.INATIVOS",
+    "estoque": 0,
+    "metodo": "N/A"
+  },
+  {
+    "unidade": "ESF3",
+    "id": "MK2nNKh0PKnVAZFFLC4E",
+    "nome": "FOSFATO OSELTAMIVIR 30MG - TAMIFLU",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 30,
+    "metodo": 2
+  },
+  {
+    "unidade": "ESF3",
+    "id": "q3yCwGbaoSxBxrOArwpN",
+    "nome": "FOSFATO OSELTAMIVIR 45 MG - TAMIFLU",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 50,
+    "metodo": 2
+  },
+  {
+    "unidade": "ESF3",
+    "id": "3dKQd5DFdCh6IVOiLr01",
+    "nome": "FOSFATO OSELTAMIVIR 75 MG - TAMIFLU",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 0,
+    "metodo": 10
+  },
+  {
+    "unidade": "ESF3",
+    "id": "8VrRwNgwRkGiAAxCai2w",
+    "nome": "INSULINA HUMANA NPH 100 UI/ML - CANETA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 0,
+    "metodo": 22
+  },
+  {
+    "unidade": "ESF3",
+    "id": "oCxU84LZtEAhArccBGok",
+    "nome": "INSULINA HUMANA NPH 100 UI/ML - FRASCO 10 ML",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 10,
+    "metodo": 2
+  },
+  {
+    "unidade": "ESF3",
+    "id": "AAucqSO7wqZgI6LV0BMV",
+    "nome": "INSULINA HUMANA REGULAR 100 UI/ ML - FRASCO 10 ML",
+    "tp_metodo": "2.INTERMITENTES",
+    "estoque": 7,
+    "metodo": 1
+  },
+  {
+    "unidade": "ESF3",
+    "id": "HoM3oi8alTnBI5GSFpzd",
+    "nome": "INSULINA HUMANA REGULAR 100 UI/ML - CANETA",
+    "tp_metodo": "1.ORDINÁRIOS",
+    "estoque": 0,
+    "metodo": 8
+  }
+]

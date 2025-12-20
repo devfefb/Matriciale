@@ -5,12 +5,10 @@
     "serve": "npm run build && node dist/local-dev.js",
     "start": "npm run serve",
     "deploy": "firebase deploy --only functions",
-    
     "emulator": "powershell -ExecutionPolicy Bypass -File ./scripts/start-emulator.ps1",
     "emulator:start": "npm run emulator",
     "emulator:test": "powershell -ExecutionPolicy Bypass -File ./scripts/test-emulator.ps1",
     "emulator:ui": "start http://localhost:4000",
-    
     "inserir-dados": "ts-node src/scripts/executar-insercao.ts",
     "validar-dados": "ts-node src/scripts/executar-validacao.ts",
     "inserir-semana": "ts-node src/scripts/auxiliar/executar-inserir-semana.ts",
@@ -19,18 +17,16 @@
     "calcular-estoques": "ts-node src/scripts/executar-processamento-estoque.ts",
     "validar-calculos": "ts-node src/scripts/testes/executar-validacao-completa.ts",
     "inserir-tipos-medicamentos": "ts-node src/scripts/inserir-tp-medicamentos/inserir-tp-med.ts",
-
     "download-storage": "ts-node src/scripts/utils/executar-download.ts",
     "adicionar-cod-item": "ts-node src/scripts/utils/executar-adicionar-cod-item.ts",
     "script-deletar-medicamentos": "ts-node src/scripts/testes/script.ts",
     "atualizar-movimentacoes": "ts-node src/scripts/inserir_semanas/executar-atualizacao.ts",
     "reprocessar-nao-encontrados": "ts-node src/scripts/inserir_semanas/executar-reprocessamento.ts",
     "limpar-duplicados": "ts-node src/scripts/inserir_semanas/executar-limpeza.ts",
-
     "remover-espurios": "ts-node src/scripts/utils/remover_campos_indesejados.ts",
-
     "calcular-campos": "ts-node \"src/scripts/testes/[MAIN] executar-calculos.ts\"",
-    "testar-fluxo": "ts-node src/scripts/testes/testar-fluxo-completo.ts"
+    "testar-fluxo": "ts-node src/scripts/testes/testar-fluxo-completo.ts",
+    "inserir-estoques": "ts-node src/scripts/inserir_semanas/atualizarEstoque.ts"
   },
   "engines": {
     "node": "20"
@@ -65,7 +61,7 @@
     "@types/mime-types": "^2.1.4",
     "@types/morgan": "^1.9.10",
     "@types/multer": "^1.4.11",
-    "@types/node": "^24.3.0",
+    "@types/node": "^24.10.4",
     "@types/node-cache": "^4.2.5",
     "@types/node-fetch": "^2.6.11",
     "@types/uuid": "^9.0.8",
