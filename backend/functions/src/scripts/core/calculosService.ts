@@ -99,31 +99,109 @@ export function calcularEstoqueDinamico(
   return estoqueAgrupado;
 }
 
+/**
+ * NOVA IMPLEMENTAÇÃO: Busca dados do Cloud Storage ao invés de arquivos locais
+ * Esta função busca os JSONs mais recentes de cada unidade do bucket e calcula os estoques consolidados
+ */
 async function calcularEstoquesUnidades(): Promise<Map<string, EstoqueCalculado>> {
   if (estoqueConsolidadoCache) {
     return estoqueConsolidadoCache;
   }
 
-  // TODO: nomes devem ser dinamicos, e nao hard-coded. existira um padrao de reconhecimento dos nomes
-  const caminhoCAF = "D:/Beets/Matriciale/Well/backend/functions/src/scripts/utils/downloads/uploads/Palmares/CAF/inventoryData/2025-09-27T19-18-23-367Z_c1f616a1-2185-44b5-b81d-b883008fd4d5_inventoryDataCAF.json";
-  const caminhoESF3 = "D:/Beets/Matriciale/Well/backend/functions/src/scripts/utils/downloads/uploads/Palmares/ESF3/inventoryData/2025-09-27T20-39-26-804Z_d776fc4d-ef1b-484a-ae95-d57aabe3f464_inventoryDataESF3.json";
-  const caminhoOlavo = "D:/Beets/Matriciale/Well/backend/functions/src/scripts/utils/downloads/uploads/Palmares/OLAVO/inventoryData/2025-09-27T20-40-00-865Z_dc047633-0f66-4c36-a5c4-e33b47f81b72_inventoryDataOLAVO.json";
+  try {
+    const { bucket } = require('../../config/firebase');
+    
+    if (!bucket) {
+      console.warn('⚠️ Cloud Storage não configurado. Retornando cache vazio.');
+      return new Map();
+    }
 
-  const dadosCAF = carregarDadosUnidade(caminhoCAF);
-  const dadosESF3 = carregarDadosUnidade(caminhoESF3);
-  const dadosOlavo = carregarDadosUnidade(caminhoOlavo);
+    // Buscar JSONs mais recentes de cada unidade
+    const municipio = 'Palmares'; // TODO: tornar dinâmico
+    const unidades = ['CAF', 'ESF3', 'Olavo']; // TODO: buscar dinamicamente
+    
+    const todasUnidades: DadosTodasUnidades = {};
 
-  estoqueConsolidadoCache = calcularEstoqueDinamico({
-    CAF: dadosCAF,
-    ESF3: dadosESF3,
-    Olavo: dadosOlavo
-  });
+    for (const unidade of unidades) {
+      try {
+        const inventoryData = await buscarInventoryDataDoBucket(municipio, unidade);
+        if (inventoryData) {
+          todasUnidades[unidade] = inventoryData;
+          console.log(`✅ Dados carregados para ${unidade}: ${inventoryData.itens.length} itens`);
+        } else {
+          console.warn(`⚠️ Nenhum dado encontrado para ${unidade}`);
+        }
+      } catch (error) {
+        console.error(`❌ Erro ao carregar dados de ${unidade}:`, error);
+      }
+    }
 
-  // salvar o estoque consolidado em um arquivo para inspeção manual
-  const caminhoEstoqueConsolidado = path.join(__dirname, './estoqueConsolidado.json');
-  fs.writeFileSync(caminhoEstoqueConsolidado, JSON.stringify(Array.from(estoqueConsolidadoCache.entries()), null, 2), 'utf8');
+    if (Object.keys(todasUnidades).length === 0) {
+      console.warn('⚠️ Nenhuma unidade com dados encontrada. Retornando cache vazio.');
+      return new Map();
+    }
 
-  return estoqueConsolidadoCache;
+    estoqueConsolidadoCache = calcularEstoqueDinamico(todasUnidades);
+
+    console.log(`✅ Estoque consolidado calculado com ${estoqueConsolidadoCache.size} itens`);
+
+    return estoqueConsolidadoCache;
+  } catch (error) {
+    console.error('❌ Erro ao calcular estoques das unidades:', error);
+    return new Map();
+  }
+}
+
+/**
+ * Busca o arquivo inventoryData mais recente de uma unidade no Cloud Storage
+ */
+async function buscarInventoryDataDoBucket(
+  municipio: string,
+  unidade: string
+): Promise<DadosUnidade | null> {
+  try {
+    const { bucket } = require('../../config/firebase');
+    
+    if (!bucket) {
+      return null;
+    }
+
+    const prefixo = `uploads/${municipio}/${unidade}/inventoryData/`;
+    
+    // Listar todos os arquivos da pasta
+    const [files] = await bucket.getFiles({ prefix: prefixo });
+
+    if (files.length === 0) {
+      return null;
+    }
+
+    // Filtrar apenas arquivos JSON
+    const jsonFiles = files.filter((file: any) => file.name.endsWith('.json'));
+
+    if (jsonFiles.length === 0) {
+      return null;
+    }
+
+    // Ordenar por data de atualização (mais recente primeiro)
+    jsonFiles.sort((a: any, b: any) => {
+      const timeA = a.metadata.updated ? new Date(a.metadata.updated).getTime() : 0;
+      const timeB = b.metadata.updated ? new Date(b.metadata.updated).getTime() : 0;
+      return timeB - timeA;
+    });
+
+    // Pegar o arquivo mais recente
+    const arquivoMaisRecente = jsonFiles[0];
+
+    // Baixar e parsear o JSON
+    const [conteudo] = await arquivoMaisRecente.download();
+    const inventoryData: DadosUnidade = JSON.parse(conteudo.toString());
+
+    return inventoryData;
+
+  } catch (error) {
+    console.error(`❌ Erro ao buscar inventoryData para ${unidade}:`, error);
+    return null;
+  }
 }
 
 async function buscarEstoqueMedicamento(

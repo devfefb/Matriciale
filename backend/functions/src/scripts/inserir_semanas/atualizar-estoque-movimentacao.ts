@@ -84,9 +84,34 @@ export async function atualizarEstoqueEMovimentacaoSemanal(
     console.log(`📊 Próximo índice sequencial calculado: ${indiceAnoSemana}`);
 
     // 5. Criar mapa de medicamentos processados para busca rápida
+    // MUDANÇA: Agora usa descricao_item como chave para melhor correspondência
     const medicamentosProcessadosMap = new Map<string, ItemProcessado>();
+    console.log(`\n📦 Criando mapa com ${inventoryData.itens.length} itens do JSON`);
+
+    // Função auxiliar para normalizar nome (limpar e padronizar)
+    const normalizarNome = (nome: string): string => {
+      return nome
+        .trim()
+        .toUpperCase()
+        .replace(/\s+/g, ' '); // Normalizar espaços múltiplos
+    };
+
     inventoryData.itens.forEach(item => {
-      medicamentosProcessadosMap.set(item.cod_sistemico_item, item);
+      const nomeNormalizado = normalizarNome(item.descricao_item);
+      medicamentosProcessadosMap.set(nomeNormalizado, item);
+    });
+
+    // Debug: Mostrar amostra dos nomes no mapa
+    console.log('📋 Amostra de nomes no mapa (normalizados):');
+    Array.from(medicamentosProcessadosMap.keys()).slice(0, 3).forEach(key => {
+      console.log(`   ${key}`);
+    });
+
+    // Debug: Mostrar amostra dos nomes do Firestore
+    console.log('\n📋 Amostra de nomes do Firestore (normalizados):');
+    medicamentosSnapshot.docs.slice(0, 3).forEach(doc => {
+      const nome = doc.data().nome || '';
+      console.log(`   ${normalizarNome(nome)}`);
     });
 
     let medicamentosAtualizados = 0;
@@ -94,50 +119,68 @@ export async function atualizarEstoqueEMovimentacaoSemanal(
     let medicamentosNaoEncontrados = 0;
 
     // 6. Iterar sobre todos os medicamentos da unidade
+    console.log(`\n🔄 Processando ${medicamentosSnapshot.size} medicamentos do Firestore...\n`);
+
     for (const medicamentoDoc of medicamentosSnapshot.docs) {
       const medicamento = medicamentoDoc.data();
+      const nomeMedicamento = medicamento.nome || '';
       const codItem = medicamento.cod_item;
+      const nomeNormalizado = normalizarNome(nomeMedicamento);
 
-      // Verificar se o medicamento foi processado
-      const itemProcessado = medicamentosProcessadosMap.get(codItem);
+      // Verificar se o medicamento foi processado (usando nome normalizado)
+      const itemProcessado = medicamentosProcessadosMap.get(nomeNormalizado);
 
-      let estoque: number;
+      let estoque: number | undefined;
       let movimentacaoSemanal: number;
+      let foiEncontradoNoJSON: boolean;
 
       if (itemProcessado) {
         // Medicamento foi movimentado - usar dados do processamento
         estoque = itemProcessado.qtd_periodo_final || 0;
         movimentacaoSemanal = itemProcessado.movimentacao_semanal_calculada || itemProcessado.qtd_saidas_periodo || 0;
+        foiEncontradoNoJSON = true;
         
         console.log(`  ✅ ${medicamento.nome} (${codItem}): Estoque=${estoque}, Mov=${movimentacaoSemanal}`);
         medicamentosAtualizados++;
       } else {
-        // Medicamento NÃO foi movimentado - preencher com 0
-        estoque = medicamento.estoque || 0; // Manter estoque anterior
+        // Medicamento NÃO foi movimentado - NÃO atualizar estoque
+        estoque = undefined; // Não será incluído no update
         movimentacaoSemanal = 0;
+        foiEncontradoNoJSON = false;
         
-        console.log(`  ⚠️ ${medicamento.nome} (${codItem}): Não movimentado - Mov=0`);
+        console.log(`  ⚠️ ${medicamento.nome} (${codItem}): Não encontrado no JSON - Mantendo estoque atual, Mov=0`);
         medicamentosZerados++;
       }
 
       // 7. Preparar dados para atualização
       const movimentacoesSemanais = medicamento.movimentacoes_semanais || {};
       
-      // Adicionar nova movimentação semanal no índice calculado
+      // Adicionar ou sobrescrever movimentação semanal no índice calculado
       movimentacoesSemanais[indiceAnoSemana] = movimentacaoSemanal;
 
       // 8. Atualizar documento no Firestore
-      await medicamentoDoc.ref.update({
-        estoque: estoque,
+      // IMPORTANTE: Se não foi encontrado no JSON, NÃO atualiza o campo estoque
+      const dadosParaAtualizar: any = {
         movimentacoes_semanais: movimentacoesSemanais,
         data_atualizacao: new Date()
-      });
+      };
+
+      // Só adiciona estoque ao update se foi encontrado no JSON
+      if (foiEncontradoNoJSON && estoque !== undefined) {
+        dadosParaAtualizar.estoque = estoque;
+      }
+
+      await medicamentoDoc.ref.update(dadosParaAtualizar);
     }
 
     // 9. Verificar se há medicamentos no processamento que não existem no banco
     for (const item of inventoryData.itens) {
+      const nomeItemNormalizado = normalizarNome(item.descricao_item);
       const existeNoBanco = medicamentosSnapshot.docs.some(
-        doc => doc.data().cod_item === item.cod_sistemico_item
+        doc => {
+          const nomeBancoNormalizado = normalizarNome(doc.data().nome || '');
+          return nomeBancoNormalizado === nomeItemNormalizado;
+        }
       );
       
       if (!existeNoBanco) {

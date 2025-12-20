@@ -2,21 +2,68 @@ import { db } from '../../config/firebase';
 
 import { MedicamentoCalculado } from '../interfaces/interfaces-campos-calculados';
 import { calcularCamposParaMedicamento } from '../core/calculosService';
+import { prepararDadosParaCalculos, listarUnidadesDisponiveis } from '../core/preparar-dados-calculos';
 
 // por enquanto executado com: npx ts-node "src/scripts/testes/[MAIN] executar-calculos.ts"
 
-// essa função nao atualiza o array de movimentacoes semanais com o valor correspondente da semana atual; isso pois para fins de testes
-// nós inserimos a semana atual no banco manualmente. contudo, no fluxo normal, essa atualização é feita ANTES DE QUALQUER COISA.
-// ao implementar essa inserção inicial automática, lembre-se de atualizar esse script para refletir isso. alem disso, nao se esquecer
-// de inserir como 0 o valor para aquela semana de medicamentos não encontrados.
 /**
- * Função principal para CALCULAR e SALVAR os campos no Firestore.
+ * Função principal para PREPARAR DADOS, CALCULAR e SALVAR os campos no Firestore.
+ * 
+ * FLUXO EM 2 ETAPAS:
+ * 1. PREPARAÇÃO: Busca JSONs do Cloud Storage e insere estoque + movimentação no Firestore
+ * 2. CÁLCULOS: Calcula os campos restantes com base nos dados já inseridos
+ * 
+ * @param municipioId - ID do município (ex: 'Palmares')
+ * @param unidades - Array opcional com nomes das unidades. Se não fornecido, busca automaticamente
  */
-export async function atualizarCamposCalculadosNoFirestore(municipioId: string): Promise<any> {
+export async function atualizarCamposCalculadosNoFirestore(
+  municipioId: string, 
+  unidades?: string[]
+): Promise<any> {
   try {
-    console.log('🚀 Iniciando atualização dos campos calculados no Firestore...');
+    console.log('╔════════════════════════════════════════════════════════════════════╗');
+    console.log('║         INÍCIO DO PROCESSO DE ATUALIZAÇÃO DE CAMPOS              ║');
+    console.log('╚════════════════════════════════════════════════════════════════════╝');
+    console.log(`📍 Município: ${municipioId}\n`);
 
-      // Busca dados do Firebase
+    // ═══════════════════════════════════════════════════════════════════════
+    // ETAPA 1: PREPARAÇÃO - Inserir estoque e movimentação do Cloud Storage
+    // ═══════════════════════════════════════════════════════════════════════
+    console.log('╔════════════════════════════════════════════════════════════════════╗');
+    console.log('║  ETAPA 1: PREPARAÇÃO DOS DADOS (Estoque + Movimentação)          ║');
+    console.log('╚════════════════════════════════════════════════════════════════════╝\n');
+
+    // Se unidades não foram fornecidas, busca automaticamente do Cloud Storage
+    if (!unidades || unidades.length === 0) {
+      console.log('🔍 Buscando unidades disponíveis no Cloud Storage...');
+      unidades = await listarUnidadesDisponiveis(municipioId);
+      
+      if (unidades.length === 0) {
+        throw new Error(`Nenhuma unidade encontrada no Cloud Storage para ${municipioId}`);
+      }
+      
+      console.log(`✅ Unidades encontradas: ${unidades.join(', ')}\n`);
+    }
+
+    // Preparar dados: buscar JSONs e inserir estoque + movimentação
+    const resultadoPreparacao = await prepararDadosParaCalculos(municipioId, unidades);
+
+    if (!resultadoPreparacao.sucesso) {
+      throw new Error(`Erro na preparação de dados: ${resultadoPreparacao.erro}`);
+    }
+
+    console.log('\n✅ Etapa 1 concluída com sucesso!');
+    console.log(`📊 Unidades processadas: ${resultadoPreparacao.unidades_processadas}`);
+    console.log(`📊 Medicamentos atualizados: ${resultadoPreparacao.total_medicamentos_atualizados}`);
+    console.log(`📊 Medicamentos zerados: ${resultadoPreparacao.total_medicamentos_zerados}\n`);
+
+    // ═══════════════════════════════════════════════════════════════════════
+    // ETAPA 2: CÁLCULOS - Calcular campos restantes
+    // ═══════════════════════════════════════════════════════════════════════
+    console.log('╔════════════════════════════════════════════════════════════════════╗');
+    console.log('║  ETAPA 2: CÁLCULO DOS CAMPOS RESTANTES                            ║');
+    console.log('╚════════════════════════════════════════════════════════════════════╝\n');
+
       let totalProcessados = 0;
       let totalSucessos = 0;
       let totalErros = 0;
@@ -28,7 +75,7 @@ export async function atualizarCamposCalculadosNoFirestore(municipioId: string):
         throw new Error(`Município com ID "${municipioId}" não encontrado`);
       }
 
-      console.log(`\nProcessando Município: ${municipioDoc.id}`);
+      console.log(`Processando Município: ${municipioDoc.id}`);
       
       // 2. Busca unidades do município
       const unidadesSnapshot = await municipioDoc.ref.collection('unidades').get();
@@ -93,13 +140,38 @@ export async function atualizarCamposCalculadosNoFirestore(municipioId: string):
     }
 
     // Relatório final
-    console.log('\n🎉 Atualização concluída!');
-    console.log('📊 Estatísticas finais:');
-    console.log(`  Total de medicamentos verificados: ${totalProcessados}`);
-    console.log(`  ✅ Atualizados com sucesso: ${totalSucessos}`);
-    console.log(`  ❌ Falharam: ${totalErros}`);
+    console.log('\n╔════════════════════════════════════════════════════════════════════╗');
+    console.log('║  PROCESSO CONCLUÍDO COM SUCESSO!                                  ║');
+    console.log('╚════════════════════════════════════════════════════════════════════╝\n');
+    
+    console.log('📊 RESUMO GERAL:');
+    console.log('─'.repeat(70));
+    console.log('ETAPA 1 - Preparação de Dados:');
+    console.log(`  ✅ Unidades processadas: ${resultadoPreparacao.unidades_processadas}`);
+    console.log(`  ✅ Medicamentos atualizados: ${resultadoPreparacao.total_medicamentos_atualizados}`);
+    console.log(`  ⚠️  Medicamentos zerados: ${resultadoPreparacao.total_medicamentos_zerados}`);
+    console.log('');
+    console.log('ETAPA 2 - Cálculos:');
+    console.log(`  ✅ Medicamentos processados: ${totalProcessados}`);
+    console.log(`  ✅ Cálculos bem-sucedidos: ${totalSucessos}`);
+    console.log(`  ❌ Erros: ${totalErros}`);
+    console.log('─'.repeat(70));
 
     return {
+      // Etapa 1
+      preparacao: {
+        unidades_processadas: resultadoPreparacao.unidades_processadas,
+        medicamentos_atualizados: resultadoPreparacao.total_medicamentos_atualizados,
+        medicamentos_zerados: resultadoPreparacao.total_medicamentos_zerados,
+        resultados_por_unidade: resultadoPreparacao.resultados_por_unidade
+      },
+      // Etapa 2
+      calculos: {
+        totalProcessados,
+        totalSucessos,
+        totalErros
+      },
+      // Compatibilidade com versão anterior
       totalProcessados,
       totalSucessos,
       totalErros

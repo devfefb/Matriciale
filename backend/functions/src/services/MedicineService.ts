@@ -36,9 +36,21 @@ export class MedicineService {
 
     const mappedMedicines = medicines.map((med: any) => {
       
-      // [TODO] rever esse calculo com o andre posteriormente, pois há muitos voltando zerado por nao haver metodo talvez?
-      // como é aqui que se escolhe qual o satus, a atenção tem que ser dada para essa parte aqui.
-      const status = med.metodo ? (med.estoque / med.metodo) : 0;
+      // Calcula o status (semanas de estoque) de forma correta
+      let status = 0;
+      
+      if (med.estoque === 0) {
+        // Estoque zerado = status 0
+        status = 0;
+      } else if (!med.metodo || med.metodo === 0) {
+        // Estoque positivo mas sem método = valor alto (indica estoque sem consumo)
+        // Usa 9999 para representar "estoque sem consumo"
+        status = 9999;
+      } else {
+        // Ambos positivos = calcula normalmente (estoque / método)
+        status = med.estoque / med.metodo;
+      }
+      
       return {
         id: med.id,
         cod_item: med.cod_item,
@@ -47,7 +59,7 @@ export class MedicineService {
         tp_metodo: med.tp_metodo,
         tp_unidade_medicamento: med.tp_unidade_medicamento,
         estoque: med.estoque,
-        status: med.estoque === 0 ? 0 : status,
+        status: status,
         metodo: med.metodo,
         // Indica se é inativo para facilitar a classificação no frontend
         isInativo: med.tp_metodo === "3.INATIVOS"

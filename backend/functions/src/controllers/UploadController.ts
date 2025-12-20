@@ -583,23 +583,43 @@ export class UploadController {
       // Importar e executar função de cálculos
       const { atualizarCamposCalculadosNoFirestore } = require('../scripts/testes/[MAIN] executar-calculos');
       
-      const resultado = await atualizarCamposCalculadosNoFirestore(municipio);
+      const resultado = await atualizarCamposCalculadosNoFirestore(municipio, ['CAF', 'ESF3', 'Olavo']);
       
       console.log(`✅ Cálculos concluídos com sucesso!`);
       console.log(`📊 Total processados: ${resultado.totalProcessados}`);
       console.log(`✅ Sucessos: ${resultado.totalSucessos}`);
       console.log(`❌ Erros: ${resultado.totalErros}`);
       
+      // Preparar resposta detalhada
+      const responseData: any = {
+        municipio,
+        total_processados: resultado.totalProcessados,
+        total_sucessos: resultado.totalSucessos,
+        total_erros: resultado.totalErros,
+        taxa_sucesso: `${((resultado.totalSucessos / resultado.totalProcessados) * 100).toFixed(2)}%`
+      };
+
+      // Se houver informações detalhadas das etapas, incluir na resposta
+      if (resultado.preparacao) {
+        responseData.etapa_1_preparacao = {
+          unidades_processadas: resultado.preparacao.unidades_processadas,
+          medicamentos_atualizados: resultado.preparacao.medicamentos_atualizados,
+          medicamentos_zerados: resultado.preparacao.medicamentos_zerados
+        };
+      }
+
+      if (resultado.calculos) {
+        responseData.etapa_2_calculos = {
+          medicamentos_processados: resultado.calculos.totalProcessados,
+          calculos_bem_sucedidos: resultado.calculos.totalSucessos,
+          erros: resultado.calculos.totalErros
+        };
+      }
+      
       return res.status(200).json({
         status: 'success',
-        message: 'Cálculos executados com sucesso',
-        data: {
-          municipio,
-          total_processados: resultado.totalProcessados,
-          total_sucessos: resultado.totalSucessos,
-          total_erros: resultado.totalErros,
-          taxa_sucesso: `${((resultado.totalSucessos / resultado.totalProcessados) * 100).toFixed(2)}%`
-        },
+        message: 'Cálculos executados com sucesso (2 etapas: preparação + cálculos)',
+        data: responseData,
         timestamp: new Date().toISOString()
       });
       
