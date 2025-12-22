@@ -62,12 +62,12 @@ export class CalculosService {
               "maximo": camposCalculados.maximo,
               "metodo": camposCalculados.metodo,
               "met_est": camposCalculados.metEst,
-              "estoque": camposCalculados.estoque,
+              // "estoque": camposCalculados.estoque, // comentei o estoque pois ele ja é inserido de antemão no processamento
               "reposicao": camposCalculados.reposicao,
               "tp_metodo": camposCalculados.tp_metodo,
 
               // Bônus: Salva a análise e a data do cálculo para rastreabilidade
-              "analise_reposicao": camposCalculados.analise_reposicao,
+              // "analise_reposicao": camposCalculados.analise_reposicao,
               "data_ultimo_calculo": new Date().toISOString(),
               "ultima_semana_calculo": camposCalculados.ultimaSemana
             };

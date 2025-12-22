@@ -1,3 +1,6 @@
+// Esse script serve para verificar quais medicamentos estão faltando em cada unidade e salvar em um arquivo txt. para posteriormente serem
+// inseridos no banco de dados.
+
 const fs = require('fs');
 const path = require('path');
 

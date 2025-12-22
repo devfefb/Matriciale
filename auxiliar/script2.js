@@ -1,3 +1,6 @@
+// Esse script serve para separar as abas de cada unidade em duas abas, com uma contendo os medicamentos faltantes e outra contendo os medicamentos que já existiam no banco.
+// Isso para que depois possamos pegar estes faltantes e realizar a inserção
+
 const fs = require('fs');
 const path = require('path');
 const xlsx = require('xlsx');
