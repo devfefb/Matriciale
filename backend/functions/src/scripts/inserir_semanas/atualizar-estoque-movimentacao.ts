@@ -93,25 +93,15 @@ export async function atualizarEstoqueEMovimentacaoSemanal(
     // Se os codigos de itens no banco forem noramlizados em algum momento, essa
     // função deve ser removida.
     //=====================================================
-    
-    // Função auxiliar para normalizar código do item
-    // Converte de XXX.XXX.XXX (JSON) para XXXXXXXXX (banco, sem pontos e sem zeros à esquerda)
     const normalizarCodigoItem = (codigo: string): string => {
       if (!codigo) return '';
-      
-      // Remove pontos e divide em segmentos
-      const segmentos = codigo.split('.');
-      
-      // Remove zeros à esquerda de cada segmento e junta tudo
-      const codigoNormalizado = segmentos
-        .map(seg => {
-          // Converte para número (remove zeros à esquerda) e volta para string
-          const num = parseInt(seg, 10);
-          return isNaN(num) ? seg : num.toString();
-        })
-        .join('');
-      
-      return codigoNormalizado;
+    
+      // 1. Remove todos os pontos da string: "001.002.003" -> "001002003"
+      const semPontos = codigo.replace(/\./g, '');
+    
+      // 2. Converte para Number (remove zeros à esquerda) e volta para String
+      // "001002003" -> 1002003 -> "1002003"
+      return Number(semPontos).toString();
     };
 
     inventoryData.itens.forEach(item => {

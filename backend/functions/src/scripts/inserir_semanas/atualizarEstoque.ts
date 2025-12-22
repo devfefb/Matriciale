@@ -46,15 +46,29 @@ async function atualizarEstoqueGerandoRelatorios() {
       // Loop começando da linha 1 (pula cabeçalho)
       for (let i = 1; i < linhas.length; i++) {
         const linha = linhas[i];
+        const classificacao = linha[0]; // Coluna A
         const nomeItem = linha[1]; // Coluna B
+        const codItem = linha[2]; // Coluna C
         const novoEstoque = linha[3]; // Coluna D
 
-        if (!nomeItem || novoEstoque === undefined) continue;
+        if (!classificacao || !nomeItem || !codItem || novoEstoque === undefined) continue;
 
         try {
-          // Busca medicamentos com o nome correspondente (mesma lógica do inserir-banco.ts)
+          const normalizarCodigoItem = (codigo: string): string => {
+            if (!codigo) return '';
+          
+            // 1. Remove todos os pontos da string: "001.002.003" -> "001002003"
+            const semPontos = codigo.replace(/\./g, '');
+          
+            // 2. Converte para Number (remove zeros à esquerda) e volta para String
+            // "001002003" -> 1002003 -> "1002003"
+            return Number(semPontos).toString();
+          };
+
+          const codItemNormalizado = normalizarCodigoItem(codItem);
+
           const snapshot = await medicamentosRef
-            .where('nome', '==', nomeItem)
+            .where('cod_item', '==', codItemNormalizado)
             .get();
 
           if (!snapshot.empty) {

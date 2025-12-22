@@ -27,7 +27,7 @@
     "calcular-campos": "ts-node \"src/scripts/core/[MAIN] executar-calculos.ts\"",
     "testar-fluxo": "ts-node src/scripts/testes/testar-fluxo-completo.ts",
     "inserir-estoques": "ts-node src/scripts/inserir_semanas/atualizarEstoque.ts",
-    "inserir-faltantes": "ts-node src/scripts/inserir_semanas/inserirMedicamentosFaltantes.ts",
+    "atualizar-meds": "ts-node src/scripts/inserir_semanas/atualizarMedicamentos.ts",
     "contar-meds": "ts-node src/scripts/utils/contaMeds.ts"
   },
   "engines": {
