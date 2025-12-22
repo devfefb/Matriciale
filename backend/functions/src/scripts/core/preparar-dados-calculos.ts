@@ -187,6 +187,9 @@ async function buscarInventoryDataDoBucket(
     }
 
     // Ordenar por data de atualização (mais recente primeiro)
+    // essa funcionalidade provavelmente dispensa que apaguemos os arquivos antigos, mas vamos manter por enquanto
+    // penso que podemos manter, para evitar reprocessamento se necessário e manter um historico.
+    // são arquivos bem pequenos, então não devemos ter problema de performance ou custo...
     jsonFiles.sort((a, b) => {
       const timeA = a.metadata.updated ? new Date(a.metadata.updated).getTime() : 0;
       const timeB = b.metadata.updated ? new Date(b.metadata.updated).getTime() : 0;

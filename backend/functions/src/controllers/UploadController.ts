@@ -581,9 +581,14 @@ export class UploadController {
       console.log(`🧮 Iniciando cálculos para município: ${municipio}`);
       
       // Importar e executar função de cálculos
-      const { atualizarCamposCalculadosNoFirestore } = require('../scripts/testes/[MAIN] executar-calculos');
-      
-      const resultado = await atualizarCamposCalculadosNoFirestore(municipio, ['CAF', 'ESF3', 'Olavo']);
+      const { atualizarCamposCalculadosNoFirestore } = require('../scripts/core/[MAIN] executar-calculos');
+
+      // 1) Buscar unidades cadastradas no Firestore
+      const municipioRef = db.collection('municipio').doc(String(municipio));
+      const unidadesSnapshot = await municipioRef.collection('unidades').get();
+      const nomesUnidades = unidadesSnapshot.docs.map(doc => doc.id);
+
+      const resultado = await atualizarCamposCalculadosNoFirestore(municipio, nomesUnidades as string[]);
       
       console.log(`✅ Cálculos concluídos com sucesso!`);
       console.log(`📊 Total processados: ${resultado.totalProcessados}`);

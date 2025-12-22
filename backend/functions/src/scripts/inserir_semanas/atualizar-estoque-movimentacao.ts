@@ -84,34 +84,54 @@ export async function atualizarEstoqueEMovimentacaoSemanal(
     console.log(`📊 Próximo índice sequencial calculado: ${indiceAnoSemana}`);
 
     // 5. Criar mapa de medicamentos processados para busca rápida
-    // MUDANÇA: Agora usa descricao_item como chave para melhor correspondência
+    // MUDANÇA: Agora usa cod_sistemico_item como chave para melhor correspondência
     const medicamentosProcessadosMap = new Map<string, ItemProcessado>();
     console.log(`\n📦 Criando mapa com ${inventoryData.itens.length} itens do JSON`);
 
-    // Função auxiliar para normalizar nome (limpar e padronizar)
-    const normalizarNome = (nome: string): string => {
-      return nome
-        .trim()
-        .toUpperCase()
-        .replace(/\s+/g, ' '); // Normalizar espaços múltiplos
+    //=====================================================
+    // ATENÇÃO:
+    // Se os codigos de itens no banco forem noramlizados em algum momento, essa
+    // função deve ser removida.
+    //=====================================================
+    
+    // Função auxiliar para normalizar código do item
+    // Converte de XXX.XXX.XXX (JSON) para XXXXXXXXX (banco, sem pontos e sem zeros à esquerda)
+    const normalizarCodigoItem = (codigo: string): string => {
+      if (!codigo) return '';
+      
+      // Remove pontos e divide em segmentos
+      const segmentos = codigo.split('.');
+      
+      // Remove zeros à esquerda de cada segmento e junta tudo
+      const codigoNormalizado = segmentos
+        .map(seg => {
+          // Converte para número (remove zeros à esquerda) e volta para string
+          const num = parseInt(seg, 10);
+          return isNaN(num) ? seg : num.toString();
+        })
+        .join('');
+      
+      return codigoNormalizado;
     };
 
     inventoryData.itens.forEach(item => {
-      const nomeNormalizado = normalizarNome(item.descricao_item);
-      medicamentosProcessadosMap.set(nomeNormalizado, item);
+      if (item.cod_sistemico_item) {
+        const codigoNormalizado = normalizarCodigoItem(item.cod_sistemico_item);
+        medicamentosProcessadosMap.set(codigoNormalizado, item);
+      }
     });
 
-    // Debug: Mostrar amostra dos nomes no mapa
-    console.log('📋 Amostra de nomes no mapa (normalizados):');
-    Array.from(medicamentosProcessadosMap.keys()).slice(0, 3).forEach(key => {
-      console.log(`   ${key}`);
+    // Debug: Mostrar amostra dos códigos no mapa
+    console.log('📋 Amostra de códigos no mapa (normalizados):');
+    Array.from(medicamentosProcessadosMap.entries()).slice(0, 3).forEach(([codigo, item]) => {
+      console.log(`   ${item.cod_sistemico_item} -> ${codigo}`);
     });
 
-    // Debug: Mostrar amostra dos nomes do Firestore
-    console.log('\n📋 Amostra de nomes do Firestore (normalizados):');
+    // Debug: Mostrar amostra dos códigos do Firestore
+    console.log('\n📋 Amostra de códigos do Firestore:');
     medicamentosSnapshot.docs.slice(0, 3).forEach(doc => {
-      const nome = doc.data().nome || '';
-      console.log(`   ${normalizarNome(nome)}`);
+      const codItem = doc.data().cod_item || '';
+      console.log(`   ${codItem}`);
     });
 
     let medicamentosAtualizados = 0;
@@ -124,11 +144,14 @@ export async function atualizarEstoqueEMovimentacaoSemanal(
     for (const medicamentoDoc of medicamentosSnapshot.docs) {
       const medicamento = medicamentoDoc.data();
       const nomeMedicamento = medicamento.nome || '';
-      const codItem = medicamento.cod_item;
-      const nomeNormalizado = normalizarNome(nomeMedicamento);
+      const codItem = medicamento.cod_item || '';
+      
+      // O código do banco já está no formato XXXXXXXXX (sem pontos e sem zeros à esquerda)
+      // Apenas convertemos para string para garantir a comparação correta
+      const codigoNormalizado = codItem ? codItem.toString() : '';
 
-      // Verificar se o medicamento foi processado (usando nome normalizado)
-      const itemProcessado = medicamentosProcessadosMap.get(nomeNormalizado);
+      // Verificar se o medicamento foi processado (usando código normalizado)
+      const itemProcessado = medicamentosProcessadosMap.get(codigoNormalizado);
 
       let estoque: number | undefined;
       let movimentacaoSemanal: number;
@@ -175,16 +198,18 @@ export async function atualizarEstoqueEMovimentacaoSemanal(
 
     // 9. Verificar se há medicamentos no processamento que não existem no banco
     for (const item of inventoryData.itens) {
-      const nomeItemNormalizado = normalizarNome(item.descricao_item);
+      if (!item.cod_sistemico_item) continue;
+      
+      const codigoItemNormalizado = normalizarCodigoItem(item.cod_sistemico_item);
       const existeNoBanco = medicamentosSnapshot.docs.some(
         doc => {
-          const nomeBancoNormalizado = normalizarNome(doc.data().nome || '');
-          return nomeBancoNormalizado === nomeItemNormalizado;
+          const codItemBanco = doc.data().cod_item || '';
+          return codItemBanco.toString() === codigoItemNormalizado;
         }
       );
       
       if (!existeNoBanco) {
-        console.log(`  ⚠️ AVISO: Medicamento ${item.descricao_item} (${item.cod_sistemico_item}) existe no processamento mas não no banco`);
+        console.log(`  ⚠️ AVISO: Medicamento ${item.descricao_item} (${item.cod_sistemico_item} -> ${codigoItemNormalizado}) existe no processamento mas não no banco`);
         medicamentosNaoEncontrados++;
       }
     }

@@ -4,31 +4,31 @@ import * as XLSX from 'xlsx';
 // Função melhorada para extrair nome da unidade do arquivo
 export const extrairNomeUnidade = (nomeArquivo) => {
   console.log(`🔍 [EXTRAÇÃO] Processando arquivo: ${nomeArquivo}`);
-  
+
   // Padrões ordenados por especificidade (mais específicos primeiro)
   const patterns = [
     // Novos formatos: "Balancete CAF 20251123" ou "Movimentação CAF 20251123"
     /(?:balancete|movimenta[cç][aã]o|moviment)\s+([A-Za-z0-9]+)\s+\d{8}/i,
-    
+
     // Formatos existentes: "movimentacao CAF" ou "balancete CAF"
     /movimentac[aã]o\s+([A-Za-z0-9]+)/i,
     /balancete\s+([A-Za-z0-9]+)/i,
     /moviment\s+([A-Za-z0-9]+)/i,
-    
+
     // Formatos com datas: "CAF 01-06" ou "CAF_01-06"
     /([A-Za-z0-9]+)\s+\d{2}-\d{2}/i,
     /([A-Za-z0-9]+)[-_]\d{2}-\d{2}/i,
-    
+
     // Formatos com datas: "CAF 01/06"
     /([A-Za-z0-9]+)\s*\d{2}\/\d{2}/i,
-    
+
     // Formato com data YYYYMMDD no final: "CAF 20251123"
     /([A-Za-z0-9]+)\s+\d{8}/i,
-    
+
     // Último recurso: pegar qualquer sequência alfanumérica
     /([A-Za-z0-9]+)$/i
   ];
-  
+
   for (const pattern of patterns) {
     const match = nomeArquivo.match(pattern);
     if (match && match[1] && match[1].length >= 2) {
@@ -37,7 +37,7 @@ export const extrairNomeUnidade = (nomeArquivo) => {
       return unidade;
     }
   }
-  
+
   const fallback = nomeArquivo.replace(/\.(xlsx|xls|csv)$/i, '').replace(/[^A-Za-z0-9]/g, '').toUpperCase() || 'DESCONHECIDO';
   console.log(`⚠️ [EXTRAÇÃO] Usando fallback: ${fallback}`);
   return fallback;
@@ -57,22 +57,22 @@ export const determinarTipoArquivo = (nomeArquivo) => {
 // Função para extrair data do nome do arquivo (formato YYYYMMDD)
 export const extrairDataDoNomeArquivo = (nomeArquivo) => {
   console.log(`📅 [EXTRAÇÃO DATA] Processando arquivo: ${nomeArquivo}`);
-  
+
   // Padrão para data no formato YYYYMMDD (ex: 20251123)
   const patternData = /\d{8}/;
   const match = nomeArquivo.match(patternData);
-  
+
   if (match) {
     const dataStr = match[0];
     const ano = dataStr.substring(0, 4);
     const mes = dataStr.substring(4, 6);
     const dia = dataStr.substring(6, 8);
-    
+
     // Validar se é uma data válida
     const data = new Date(parseInt(ano), parseInt(mes) - 1, parseInt(dia));
-    if (data.getFullYear() == ano && 
-        data.getMonth() == parseInt(mes) - 1 && 
-        data.getDate() == parseInt(dia)) {
+    if (data.getFullYear() == ano &&
+      data.getMonth() == parseInt(mes) - 1 &&
+      data.getDate() == parseInt(dia)) {
       const dataFormatada = `${dia}/${mes}/${ano}`;
       console.log(`✅ [EXTRAÇÃO DATA] Data encontrada: ${dataFormatada} (formato YYYYMMDD: ${dataStr})`);
       return {
@@ -84,7 +84,7 @@ export const extrairDataDoNomeArquivo = (nomeArquivo) => {
       console.log(`⚠️ [EXTRAÇÃO DATA] Data inválida encontrada: ${dataStr}`);
     }
   }
-  
+
   // Tentar outros formatos de data comuns
   const patternDDMMYYYY = /(\d{2})[\/\-](\d{2})[\/\-](\d{4})/;
   const matchDDMMYYYY = nomeArquivo.match(patternDDMMYYYY);
@@ -100,7 +100,7 @@ export const extrairDataDoNomeArquivo = (nomeArquivo) => {
       dataObjeto: new Date(parseInt(ano), parseInt(mes) - 1, parseInt(dia))
     };
   }
-  
+
   console.log(`⚠️ [EXTRAÇÃO DATA] Nenhuma data encontrada no nome do arquivo`);
   return null;
 };
@@ -236,7 +236,7 @@ export const processarArquivoBalancete = (arquivo, unidade) => {
     const reader = new FileReader();
     reader.onload = (e) => {
       try {
-        const workbook = XLSX.read(e.target.result, { 
+        const workbook = XLSX.read(e.target.result, {
           type: 'binary',
           cellDates: true,
           dateNF: 'dd/mm/yyyy'
@@ -298,7 +298,7 @@ export const processarArquivoMovimentacao = (arquivo, unidade, itens) => {
     const reader = new FileReader();
     reader.onload = (e) => {
       try {
-        const workbook = XLSX.read(e.target.result, { 
+        const workbook = XLSX.read(e.target.result, {
           type: 'binary',
           cellDates: true,
           dateNF: 'dd/mm/yyyy'
@@ -523,6 +523,7 @@ export const salvarResultados = async (inventoryDataPorUnidade, files) => {
       arquivos: arquivosParaUpload.map(a => `${a.unidade}/${a.nome_arquivo}`),
       tamanho_total_mb: (arquivosParaUpload.reduce((acc, a) => acc + a.tamanho_estimado, 0) / 1024 / 1024).toFixed(2)
     });
+
     console.log('🌐 Fazendo requisição para: /api/upload/solicitar-signed-urls');
     const signedUrlsResponse = await fetch('/api/upload/solicitar-signed-urls', {
       method: 'POST',
@@ -631,103 +632,121 @@ export const salvarResultados = async (inventoryDataPorUnidade, files) => {
           });
         }
       }
-      if (anexosRequests.length === 0) {
-        console.log('📎 [ANEXOS] Nenhum anexo para enviar');
-      } else {
-        console.log(`📎 [ANEXOS] Solicitando signed URLs para ${anexosRequests.length} anexos:`, anexosRequests.map(a => `${a.unidade}/${a.nome_arquivo}`));
-        const signedAnexosResp = await fetch('/api/upload/solicitar-signed-urls', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ municipio: 'Palmares', arquivos: anexosRequests })
-        });
-        if (!signedAnexosResp.ok) {
-          const errorText = await signedAnexosResp.text();
-          const errorMsg = `Erro ao solicitar URLs de anexos: ${signedAnexosResp.status} - ${errorText}`;
-          console.error('❌ [ANEXOS]', errorMsg);
-          throw new Error(errorMsg);
-        }
-        const signedAnexos = await signedAnexosResp.json();
-        console.log('📎 [ANEXOS] Resposta signed URLs:', signedAnexos);
-        if (signedAnexos.status !== 'success') {
-          const errorMsg = signedAnexos.message || 'Erro ao gerar signed URLs para anexos';
-          console.error('❌ [ANEXOS]', errorMsg);
-          throw new Error(errorMsg);
-        }
-        const anexosUrls = signedAnexos.data.urls;
-        console.log(`📎 [ANEXOS] Recebidas ${anexosUrls.length} URLs. Iniciando uploads...`);
-        const anexosEnviados = [];
-        const anexosFalhados = [];
-        for (let i = 0; i < anexosUrls.length; i++) {
-          const urlInfo = anexosUrls[i];
-          const requestInfo = anexosRequests[i];
-          const unidade = requestInfo.unidade;
-          const fileName = requestInfo.nome_arquivo;
-          const arquivosUnidade = files[unidade] || {};
-          const fileToSend = [arquivosUnidade.balancete, arquivosUnidade.movimentacao]
-            .find(f => f && f.name === fileName);
-          if (!fileToSend) {
-            console.warn(`⚠️ [ANEXOS] Arquivo não encontrado: ${fileName}`);
-            anexosFalhados.push({ arquivo: fileName, erro: 'Arquivo não encontrado' });
-            continue;
-          }
-          console.log(`📤 [ANEXOS] Enviando ${fileToSend.name} (${(fileToSend.size / 1024).toFixed(2)} KB) para ${urlInfo.upload_url}`);
-          try {
-            let uploadResp;
-            if (storageType === 'local_storage') {
-              console.log(`📁 [ANEXOS] Modo local - POST com raw body`);
-              uploadResp = await fetch(urlInfo.upload_url, {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/octet-stream',
-                  'x-filename': fileToSend.name
-                },
-                body: fileToSend
-              });
-            } else {
-              console.log(`☁️ [ANEXOS] Modo cloud - PUT com signed URL`);
-              uploadResp = await fetch(urlInfo.upload_url, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/octet-stream' },
-                body: fileToSend
-              });
-            }
-            if (!uploadResp.ok) {
-              const errorText = await uploadResp.text();
-              const errorMsg = `Falha upload ${fileToSend.name}: ${uploadResp.status} - ${errorText}`;
-              console.error(`❌ [ANEXOS]`, errorMsg);
-              anexosFalhados.push({ arquivo: fileToSend.name, erro: errorMsg });
-            } else {
-              console.log(`✅ [ANEXOS] Anexo enviado com sucesso: ${fileToSend.name}`);
-              try {
-                const respData = await uploadResp.json();
-                console.log(`📄 [ANEXOS] Resposta do servidor:`, respData);
-                anexosEnviados.push({ 
-                  arquivo: fileToSend.name, 
-                  unidade, 
-                  arquivo_path: respData.data?.arquivo_path 
-                });
-              } catch {
-                anexosEnviados.push({ arquivo: fileToSend.name, unidade });
-              }
-            }
-          } catch (uploadError) {
-            const errorMsg = uploadError instanceof Error ? uploadError.message : 'Erro desconhecido';
-            console.error(`❌ [ANEXOS] Erro no upload de ${fileToSend.name}:`, uploadError);
-            anexosFalhados.push({ arquivo: fileToSend.name, erro: errorMsg });
-          }
-        }
-        console.log(`📊 [ANEXOS] Resumo do upload de anexos:`);
-        console.log(`   ✅ Enviados com sucesso: ${anexosEnviados.length}`);
-        console.log(`   ❌ Falhados: ${anexosFalhados.length}`);
-        if (anexosEnviados.length > 0) {
-          console.log(`   📁 Anexos enviados:`, anexosEnviados);
-        }
-        if (anexosFalhados.length > 0) {
-          console.error(`   ⚠️ Anexos falhados:`, anexosFalhados);
-          const errosMsg = anexosFalhados.map(f => `${f.arquivo}: ${f.erro}`).join('\n');
-          console.warn(`⚠️ [ANEXOS] Alguns anexos não foram enviados:\n${errosMsg}`);
-        }
-      }
+
+      // ====================================================================
+      // SERÁ REAPROVEITADO PARA FAZER UPLOAD DOS RELATÓRIOS DE MOVIMENTAÇÃO
+      // ====================================================================
+      // Este bloco é responsável por realizar o upload dos arquivos de anexos (balancete, movimentação, etc) das unidades para o backend, usando signed URLs:
+      // 1. Se não há anexos para enviar, apenas loga e não faz nada.
+      // 2. Caso haja anexos:
+      //    a) Solicita (para o backend) as signed URLs para upload, enviando os metadados dos arquivos (nome, tipo, unidade, etc).
+      //    b) Valida se a resposta veio ok e se o status é "success".
+      //    c) Recebe as signed URLs de upload específicas para cada anexo.
+      //    d) Para cada anexo:
+      //       - Localiza o arquivo correspondente no objeto `files`.
+      //       - Se não encontra, registra o erro.
+      //       - Se encontra, faz o upload:
+      //         • Se for ambiente local, faz um POST para a rota local com o arquivo no body.
+      //         • Se for cloud, faz um PUT para a signed URL retornada.
+      //       - Caso upload falhe, salva o erro; caso tenha sucesso, registra o arquivo enviado.
+      //    e) Ao final, loga um resumo dos uploads feitos (sucessos e falhas), mas não interrompe o processamento principal em caso de erro.
+      // if (anexosRequests.length === 0) {
+      //   console.log('📎 [ANEXOS] Nenhum anexo para enviar');
+      // } else {
+      //   console.log(`📎 [ANEXOS] Solicitando signed URLs para ${anexosRequests.length} anexos:`, anexosRequests.map(a => `${a.unidade}/${a.nome_arquivo}`));
+      //   const signedAnexosResp = await fetch('/api/upload/solicitar-signed-urls', {
+      //     method: 'POST',
+      //     headers: { 'Content-Type': 'application/json' },
+      //     body: JSON.stringify({ municipio: 'Palmares', arquivos: anexosRequests })
+      //   });
+      //   if (!signedAnexosResp.ok) {
+      //     const errorText = await signedAnexosResp.text();
+      //     const errorMsg = `Erro ao solicitar URLs de anexos: ${signedAnexosResp.status} - ${errorText}`;
+      //     console.error('❌ [ANEXOS]', errorMsg);
+      //     throw new Error(errorMsg);
+      //   }
+      //   const signedAnexos = await signedAnexosResp.json();
+      //   console.log('📎 [ANEXOS] Resposta signed URLs:', signedAnexos);
+      //   if (signedAnexos.status !== 'success') {
+      //     const errorMsg = signedAnexos.message || 'Erro ao gerar signed URLs para anexos';
+      //     console.error('❌ [ANEXOS]', errorMsg);
+      //     throw new Error(errorMsg);
+      //   }
+      //   const anexosUrls = signedAnexos.data.urls;
+      //   console.log(`📎 [ANEXOS] Recebidas ${anexosUrls.length} URLs. Iniciando uploads...`);
+      //   const anexosEnviados = [];
+      //   const anexosFalhados = [];
+      //   for (let i = 0; i < anexosUrls.length; i++) {
+      //     const urlInfo = anexosUrls[i];
+      //     const requestInfo = anexosRequests[i];
+      //     const unidade = requestInfo.unidade;
+      //     const fileName = requestInfo.nome_arquivo;
+      //     const arquivosUnidade = files[unidade] || {};
+      //     const fileToSend = [arquivosUnidade.balancete, arquivosUnidade.movimentacao]
+      //       .find(f => f && f.name === fileName);
+      //     if (!fileToSend) {
+      //       console.warn(`⚠️ [ANEXOS] Arquivo não encontrado: ${fileName}`);
+      //       anexosFalhados.push({ arquivo: fileName, erro: 'Arquivo não encontrado' });
+      //       continue;
+      //     }
+      //     console.log(`📤 [ANEXOS] Enviando ${fileToSend.name} (${(fileToSend.size / 1024).toFixed(2)} KB) para ${urlInfo.upload_url}`);
+      //     try {
+      //       let uploadResp;
+      //       if (storageType === 'local_storage') {
+      //         console.log(`📁 [ANEXOS] Modo local - POST com raw body`);
+      //         uploadResp = await fetch(urlInfo.upload_url, {
+      //           method: 'POST',
+      //           headers: {
+      //             'Content-Type': 'application/octet-stream',
+      //             'x-filename': fileToSend.name
+      //           },
+      //           body: fileToSend
+      //         });
+      //       } else {
+      //         console.log(`☁️ [ANEXOS] Modo cloud - PUT com signed URL`);
+      //         uploadResp = await fetch(urlInfo.upload_url, {
+      //           method: 'PUT',
+      //           headers: { 'Content-Type': 'application/octet-stream' },
+      //           body: fileToSend
+      //         });
+      //       }
+      //       if (!uploadResp.ok) {
+      //         const errorText = await uploadResp.text();
+      //         const errorMsg = `Falha upload ${fileToSend.name}: ${uploadResp.status} - ${errorText}`;
+      //         console.error(`❌ [ANEXOS]`, errorMsg);
+      //         anexosFalhados.push({ arquivo: fileToSend.name, erro: errorMsg });
+      //       } else {
+      //         console.log(`✅ [ANEXOS] Anexo enviado com sucesso: ${fileToSend.name}`);
+      //         try {
+      //           const respData = await uploadResp.json();
+      //           console.log(`📄 [ANEXOS] Resposta do servidor:`, respData);
+      //           anexosEnviados.push({
+      //             arquivo: fileToSend.name,
+      //             unidade,
+      //             arquivo_path: respData.data?.arquivo_path
+      //           });
+      //         } catch {
+      //           anexosEnviados.push({ arquivo: fileToSend.name, unidade });
+      //         }
+      //       }
+      //     } catch (uploadError) {
+      //       const errorMsg = uploadError instanceof Error ? uploadError.message : 'Erro desconhecido';
+      //       console.error(`❌ [ANEXOS] Erro no upload de ${fileToSend.name}:`, uploadError);
+      //       anexosFalhados.push({ arquivo: fileToSend.name, erro: errorMsg });
+      //     }
+      //   }
+      //   console.log(`📊 [ANEXOS] Resumo do upload de anexos:`);
+      //   console.log(`   ✅ Enviados com sucesso: ${anexosEnviados.length}`);
+      //   console.log(`   ❌ Falhados: ${anexosFalhados.length}`);
+      //   if (anexosEnviados.length > 0) {
+      //     console.log(`   📁 Anexos enviados:`, anexosEnviados);
+      //   }
+      //   if (anexosFalhados.length > 0) {
+      //     console.error(`   ⚠️ Anexos falhados:`, anexosFalhados);
+      //     const errosMsg = anexosFalhados.map(f => `${f.arquivo}: ${f.erro}`).join('\n');
+      //     console.warn(`⚠️ [ANEXOS] Alguns anexos não foram enviados:\n${errosMsg}`);
+      //   }
+      // }
     } catch (anexosError) {
       const errorMsg = anexosError instanceof Error ? anexosError.message : 'Erro desconhecido';
       console.error('❌ [ANEXOS] Erro geral no upload de anexos:', anexosError);

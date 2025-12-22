@@ -7,6 +7,7 @@ const UNIDADES = ['CAF', 'Olavo', 'ESF3'];
 interface ResumoMedicamento {
   id: string;
   nome: string;
+  cod_item: string;
 }
 
 async function listarIdsNomes() {
@@ -26,7 +27,8 @@ async function listarIdsNomes() {
         
         listaMedicamentos.push({
           id: doc.id as string, // O ID do documento (ex: -Mz92...)
-          nome: dados.nome || 'NOME NÃO INFORMADO' // Garante que não quebre se faltar nome
+          nome: dados.nome || 'NOME NÃO INFORMADO', // Garante que não quebre se faltar nome,
+          cod_item: dados.cod_item || 'CODIGO NÃO INFORMADO' // Garante que não quebre se faltar cod_item
         });
       });
 

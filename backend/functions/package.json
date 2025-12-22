@@ -24,7 +24,7 @@
     "reprocessar-nao-encontrados": "ts-node src/scripts/inserir_semanas/executar-reprocessamento.ts",
     "limpar-duplicados": "ts-node src/scripts/inserir_semanas/executar-limpeza.ts",
     "remover-espurios": "ts-node src/scripts/utils/remover_campos_indesejados.ts",
-    "calcular-campos": "ts-node \"src/scripts/testes/[MAIN] executar-calculos.ts\"",
+    "calcular-campos": "ts-node \"src/scripts/core/[MAIN] executar-calculos.ts\"",
     "testar-fluxo": "ts-node src/scripts/testes/testar-fluxo-completo.ts",
     "inserir-estoques": "ts-node src/scripts/inserir_semanas/atualizarEstoque.ts",
     "inserir-faltantes": "ts-node src/scripts/inserir_semanas/inserirMedicamentosFaltantes.ts",

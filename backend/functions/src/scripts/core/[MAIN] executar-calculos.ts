@@ -1,10 +1,10 @@
 import { db } from '../../config/firebase';
 
 import { MedicamentoCalculado } from '../interfaces/interfaces-campos-calculados';
-import { calcularCamposParaMedicamento } from '../core/calculosService';
-import { prepararDadosParaCalculos, listarUnidadesDisponiveis } from '../core/preparar-dados-calculos';
+import { calcularCamposParaMedicamento } from './calculosService';
+import { prepararDadosParaCalculos, listarUnidadesDisponiveis } from './preparar-dados-calculos';
 
-// por enquanto executado com: npx ts-node "src/scripts/testes/[MAIN] executar-calculos.ts"
+// por enquanto executado com: npx ts-node "src/scripts/core/[MAIN] executar-calculos.ts"
 
 /**
  * Função principal para PREPARAR DADOS, CALCULAR e SALVAR os campos no Firestore.
@@ -91,7 +91,7 @@ export async function atualizarCamposCalculadosNoFirestore(
         const medicamento = medicamentoDoc.data() as MedicamentoCalculado;
 
         try {
-          // 4. CHAMA A LÓGICA DE CÁLCULO JÁ VALIDADA
+          // 4. CHAMA A LÓGICA DE CÁLCULO
           const camposCalculados = await calcularCamposParaMedicamento(medicamento, unidadeDoc.id);
 
           // 5. FORMATA O OBJETO PARA SALVAR NO FIRESTORE
@@ -115,12 +115,12 @@ export async function atualizarCamposCalculadosNoFirestore(
             "maximo": camposCalculados.maximo,
             "metodo": camposCalculados.metodo,
             "met_est": camposCalculados.metEst,
-            "estoque": camposCalculados.estoque,
+            // "estoque": camposCalculados.estoque, // comentei o estoque pois ele ja é inserido de antemão no processamento
             "reposicao": camposCalculados.reposicao,
             "tp_metodo": camposCalculados.tp_metodo,
 
             // Bônus: Salva a análise e a data do cálculo para rastreabilidade
-            "analise_reposicao": camposCalculados.analise_reposicao,
+            // "analise_reposicao": camposCalculados.analise_reposicao, // isso aqui é espurio, pois não é usado em lugar nenhum so consome dados
             "data_ultimo_calculo": new Date().toISOString(),
             "ultima_semana_calculo": camposCalculados.ultimaSemana
             };

@@ -1,1646 +1,2057 @@
 [
   {
     "id": "0Fp36sUPo0M5e2OnG5NZ",
-    "nome": "MORFINA 1MG/ML INJ"
+    "nome": "MORFINA 1MG/ML INJ",
+    "cod_item": "5000098"
   },
   {
     "id": "0No2vlIILI1QabwLj5bT",
-    "nome": "ONDANSETRONA 4 MG"
+    "nome": "ONDANSETRONA 4 MG",
+    "cod_item": "306001002"
   },
   {
     "id": "0RTCxKG5FnonShRPNc1p",
-    "nome": "DIPROGENTA - DIPROP DE BETAMETASONA + GENTAMICINA CREME"
+    "nome": "DIPROGENTA - DIPROP DE BETAMETASONA + GENTAMICINA CREME",
+    "cod_item": 325016001
   },
   {
     "id": "0akG41bHwnUHvgnFWyxW",
-    "nome": "PALMILHA PLANA COMPENSAÇÃO 0,5CM"
+    "nome": "PALMILHA PLANA COMPENSAÇÃO 0,5CM",
+    "cod_item": 21001116
   },
   {
     "id": "0s6U16OJhayvp6ETg1TK",
-    "nome": "VARFARINA SODICA 5MG - MAREVAN"
+    "nome": "VARFARINA SODICA 5MG - MAREVAN",
+    "cod_item": "304001004"
   },
   {
     "id": "0zq1ii4opCDXSyfmWRbe",
-    "nome": "AZITROMICINA 500 MG"
+    "nome": "AZITROMICINA 500 MG",
+    "cod_item": "325016010"
   },
   {
     "id": "1x9L70Nwoh5CLx8FKVWy",
-    "nome": "SALBUTAMOL, SULFATO 100 MCG/ DOSE -  AEROSOL"
+    "nome": "SALBUTAMOL, SULFATO 100 MCG/ DOSE -  AEROSOL",
+    "cod_item": "7000002"
   },
   {
     "id": "23gUmc0Rw6vf8ll22ziU",
-    "nome": "DOPAMINA 5 MG/ ML"
+    "nome": "DOPAMINA 5 MG/ ML",
+    "cod_item": "2000084"
   },
   {
     "id": "2EE5WnGUOEj9SBwjyJ0R",
-    "nome": "ZIPRASIDONA, CLORIDRATO DE 40MG (GEODON)"
+    "nome": "ZIPRASIDONA, CLORIDRATO DE 40MG (GEODON)",
+    "cod_item": "325002002"
   },
   {
     "id": "2SmxrMuliw5sKuuE6eZL",
-    "nome": "CANETA PARA APLICAÇÃO DE INSULINAS HUMANAS - REUTILIZAVEL"
+    "nome": "CANETA PARA APLICAÇÃO DE INSULINAS HUMANAS - REUTILIZAVEL",
+    "cod_item": "321003002"
   },
   {
     "id": "2dcUY3GieNDZM8wpk0bQ",
-    "nome": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ IM"
+    "nome": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ IM",
+    "cod_item": "2000138"
   },
   {
     "id": "32MhY4xyCFbr0aNJd1e9",
-    "nome": "SUXAMETONIO 100MG SUSP INJ"
+    "nome": "SUXAMETONIO 100MG SUSP INJ",
+    "cod_item": "5000055"
   },
   {
     "id": "3A9U9vQpWCnqrwe3whSx",
-    "nome": "LORATADINA 1 MG/ML - XAROPE"
+    "nome": "LORATADINA 1 MG/ML - XAROPE",
+    "cod_item": "10001003"
   },
   {
     "id": "3f5hXMQE6ZePdXeh65GD",
-    "nome": "CETAPHIL LOCAO HIDRATANTE"
+    "nome": "CETAPHIL LOCAO HIDRATANTE",
+    "cod_item": "21001096"
   },
   {
     "id": "3gQyRWQd3PYpYRSx7zXL",
-    "nome": "CLARITROMICINA 500 MG"
+    "nome": "CLARITROMICINA 500 MG",
+    "cod_item": "22001009"
   },
   {
     "id": "3j6NzqbvlK3bNAqbAdqJ",
-    "nome": "ALOPURINOL  300MG"
+    "nome": "ALOPURINOL  300MG",
+    "cod_item": "325032001"
   },
   {
     "id": "3vRSpzIHKiIrcalwmMmH",
-    "nome": "RIFOCINA SPRAY"
+    "nome": "RIFOCINA SPRAY",
+    "cod_item": "2000099"
   },
   {
     "id": "41OLt9E4yHudY1YJYTkq",
-    "nome": "FENITOINA 100 MG"
+    "nome": "FENITOINA 100 MG",
+    "cod_item": "5000002"
   },
   {
     "id": "4MRYOdjmvvnHPhQBBy1G",
-    "nome": "AMITRIPTILINA, CLORIDRATO  25 MG"
+    "nome": "AMITRIPTILINA, CLORIDRATO  25 MG",
+    "cod_item": "325001004"
   },
   {
     "id": "4gbzUvqPEbxudYYJsJlt",
-    "nome": "NIMESULIDA 100 MG  CP"
+    "nome": "NIMESULIDA 100 MG  CP",
+    "cod_item": "2000058"
   },
   {
     "id": "4l1B7yxWZGAD5ovfTLH8",
-    "nome": "CINARIZINA 75MG"
+    "nome": "CINARIZINA 75MG",
+    "cod_item": "5000100"
   },
   {
     "id": "4pLIHFqJEKocU9UeWgjB",
-    "nome": "IVERMECTINA 6 MG"
+    "nome": "IVERMECTINA 6 MG",
+    "cod_item": "21001060"
   },
   {
     "id": "51HzMZ9iDtC6SC6g2KFm",
-    "nome": "DIAZEPAM 10 MG"
+    "nome": "DIAZEPAM 10 MG",
+    "cod_item": "5000001"
   },
   {
     "id": "5Y2Ahlc099pF2hnK7fkS",
-    "nome": "DOXAZOSINA 2 MG"
+    "nome": "DOXAZOSINA 2 MG",
+    "cod_item": "307001001"
   },
   {
     "id": "5du7SojbGuRYOglwv5B9",
-    "nome": "ACICLOVIR 5 % CREME 10 G"
+    "nome": "ACICLOVIR 5 % CREME 10 G",
+    "cod_item": "325025002"
   },
   {
     "id": "5lJvAL7fEdlntrU5wWam",
-    "nome": "TESTE DE TROPONINA CARDIACA"
+    "nome": "TESTE DE TROPONINA CARDIACA",
+    "cod_item": "8001010"
   },
   {
     "id": "5mD6OCxAjdItTmIJLZ41",
-    "nome": "BETAISTINA, DICLORIDRATO 16MG"
+    "nome": "BETAISTINA, DICLORIDRATO 16MG",
+    "cod_item": "1002"
   },
   {
     "id": "5sloN0BA6rDVFYIYoCWd",
-    "nome": "HIDROXIZINA XAROPE"
+    "nome": "HIDROXIZINA XAROPE",
+    "cod_item": "10001011"
   },
   {
     "id": "6XPj7byX7NZtY2yHpTGF",
-    "nome": "PROMETAZINA 50 MG/ 2ML"
+    "nome": "PROMETAZINA 50 MG/ 2ML",
+    "cod_item": "5000051"
   },
   {
     "id": "6fnGH0AmUaOqJYTqZOlN",
-    "nome": "METOPROLOL 100 MG"
+    "nome": "METOPROLOL 100 MG",
+    "cod_item": "8001007"
   },
   {
     "id": "6lmoqvKY3h8tItw6uybZ",
-    "nome": "NORETISTERONA 0,35MG CAIXA COM 35 CPR"
+    "nome": "NORETISTERONA 0,35MG CAIXA COM 35 CPR",
+    "cod_item": 2000047
   },
   {
     "id": "6uC8n8MiysPuygIeC3R8",
-    "nome": "TROPHIC BASIC NUTRICAO ENTERAL E ORAL 800G"
+    "nome": "TROPHIC BASIC NUTRICAO ENTERAL E ORAL 800G",
+    "cod_item": "311002001"
   },
   {
     "id": "76SFD8JnksjViSFdk77V",
-    "nome": "NIMESULIDA GTS"
+    "nome": "NIMESULIDA GTS",
+    "cod_item": "2000039"
   },
   {
     "id": "7B6VR8fOQO5UezEFAXeK",
-    "nome": "TIAMAZOL 5MG"
+    "nome": "TIAMAZOL 5MG",
+    "cod_item": "308003001"
   },
   {
     "id": "7VwSckst09sxMtjiFuU1",
-    "nome": "FENITOINA 50 MG / ML- AMPOLA"
+    "nome": "FENITOINA 50 MG / ML- AMPOLA",
+    "cod_item": "5000047"
   },
   {
     "id": "7WrapTzzoU4DHkbFqIeN",
-    "nome": "BIPERIDENO, CLORIDRATO 2 MG"
+    "nome": "BIPERIDENO, CLORIDRATO 2 MG",
+    "cod_item": "325038001"
   },
   {
     "id": "7iDxnn9V9bbXa9C4EuK6",
-    "nome": "FRALDA DESC GERIATRICA - XXG"
+    "nome": "FRALDA DESC GERIATRICA - XXG",
+    "cod_item": "21001106"
   },
   {
     "id": "7mbnrk81HQ1v6K0TmtW3",
-    "nome": "MIDAZOLAM, CLORIDRATO 5MG/ML 10ML"
+    "nome": "MIDAZOLAM, CLORIDRATO 5MG/ML 10ML",
+    "cod_item": "5000102"
   },
   {
     "id": "7vVSvh2kNOHwT62n8glU",
-    "nome": "CARVEDILOL 12,5 MG"
+    "nome": "CARVEDILOL 12,5 MG",
+    "cod_item": "21001024"
   },
   {
     "id": "8MsuugD0hw37vZOy1tv9",
-    "nome": "BROMOPRIDA 10MG CPR"
+    "nome": "BROMOPRIDA 10MG CPR",
+    "cod_item": "325040001"
   },
   {
     "id": "8P2U61WJX6CWG51QAY4R",
-    "nome": "MEROPENEM TRI-HIDRATADO 1G IV"
+    "nome": "MEROPENEM TRI-HIDRATADO 1G IV",
+    "cod_item": 325016004
   },
   {
     "id": "8WMBrGo1GtmS3z5TGkjx",
-    "nome": "FLUMAZENIL 0,1 MG/ 5 ML SOL INJ."
+    "nome": "FLUMAZENIL 0,1 MG/ 5 ML SOL INJ.",
+    "cod_item": "5000060"
   },
   {
     "id": "8XG5cOIbBp0eF6l8myMX",
-    "nome": "ENTEROGERMINA PLUS FLAC"
+    "nome": "ENTEROGERMINA PLUS FLAC",
+    "cod_item": 306001005
   },
   {
     "id": "8kvvrwNM4xZHm6wRUH9t",
-    "nome": "METILCOBALAMINA 1.000MCG - DOZEMAST - MECOBE"
+    "nome": "METILCOBALAMINA 1.000MCG - DOZEMAST - MECOBE",
+    "cod_item": "230001012"
   },
   {
     "id": "92xaXlUUHJ5BCINs15cs",
-    "nome": "LEVOTIROXINA SÓDICA 100MCG"
+    "nome": "LEVOTIROXINA SÓDICA 100MCG",
+    "cod_item": "21001032"
   },
   {
     "id": "9JdgYmt7NR8fP9EnymVZ",
-    "nome": "SULFATO DE MAGNESIO 10%"
+    "nome": "SULFATO DE MAGNESIO 10%",
+    "cod_item": "8001003"
   },
   {
     "id": "9V3iLhqkAhbuA69FLwK8",
-    "nome": "HIDRALAZINA 25MG, CLORIDRATO DE"
+    "nome": "HIDRALAZINA 25MG, CLORIDRATO DE",
+    "cod_item": "1000025"
   },
   {
     "id": "9Zh2JZODyg1olpBN6FNq",
-    "nome": "CLOBAZAM 10MG (URBANIL)"
+    "nome": "CLOBAZAM 10MG (URBANIL)",
+    "cod_item": "5001001"
   },
   {
     "id": "9aJQM08dxSehqDN9RIVm",
-    "nome": "GOMA NICOTINA 2 MG (NICORETTE)"
+    "nome": "GOMA NICOTINA 2 MG (NICORETTE)",
+    "cod_item": "300001005"
   },
   {
     "id": "9sC4mQ8WfxoRCfZaZueM",
-    "nome": "FOSFATO OSELTAMIVIR 45 MG - TAMIFLU"
+    "nome": "FOSFATO OSELTAMIVIR 45 MG - TAMIFLU",
+    "cod_item": "301002003"
   },
   {
     "id": "9xNRL6LjGUBd2ibT5RkQ",
-    "nome": "DOZEMAST 1000MCG"
+    "nome": "DOZEMAST 1000MCG",
+    "cod_item": "230001016"
   },
   {
     "id": "A7vTjNRtRneuJo5H1eFy",
-    "nome": "SUPLEMENTO VITAMINICO A-Z LIQUIDO"
+    "nome": "SUPLEMENTO VITAMINICO A-Z LIQUIDO",
+    "cod_item": 325004005
   },
   {
     "id": "AAxObb7geDVre7ZAJBlv",
-    "nome": "INSULINA HUMANA REGULAR 100 UI/ ML - FRASCO 10 ML"
+    "nome": "INSULINA HUMANA REGULAR 100 UI/ ML - FRASCO 10 ML",
+    "cod_item": "3000005"
   },
   {
     "id": "AJzxaAWfT4SOvo5ebJge",
-    "nome": "LEVOTIROXINA SODICA 25 MG"
+    "nome": "LEVOTIROXINA SODICA 25 MG",
+    "cod_item": "9000011"
   },
   {
     "id": "AT2I5tvPW8nzVLJPj2od",
-    "nome": "ACIDO VALPROICO 500MG"
+    "nome": "ACIDO VALPROICO 500MG",
+    "cod_item": "325028002"
   },
   {
     "id": "AcAw0ihkMvVoKy70eRAq",
-    "nome": "PAROXETINA 12,5MG - PONDERA XR"
+    "nome": "PAROXETINA 12,5MG - PONDERA XR",
+    "cod_item": "5000082"
   },
   {
     "id": "AhyfLC4kNuH5U1rTeCSM",
-    "nome": "ACICLOVIR 200 MG CPR"
+    "nome": "ACICLOVIR 200 MG CPR",
+    "cod_item": "325025001"
   },
   {
     "id": "AjAdjBhTpIX6xEf1mZkD",
-    "nome": "BIOVISC ORTHO SINGLE 90MG 3ML"
+    "nome": "BIOVISC ORTHO SINGLE 90MG 3ML",
+    "cod_item": "21001110"
   },
   {
     "id": "AwTPCJxvB3yUOFU9UwTY",
-    "nome": "LEITE APTAMIL PREMIUM 1 - LATA 800G"
+    "nome": "LEITE APTAMIL PREMIUM 1 - LATA 800G",
+    "cod_item": "311001012"
   },
   {
     "id": "B4k0rBdv2nyN1b0U7leE",
-    "nome": "SORO NASAL INFANTIL/ADULTO -30 ML"
+    "nome": "SORO NASAL INFANTIL/ADULTO -30 ML",
+    "cod_item": "21001095"
   },
   {
     "id": "BeQbV545FqLZJmPER8D8",
-    "nome": "INSULINA NOVORRAPID FLEX PEN"
+    "nome": "INSULINA NOVORRAPID FLEX PEN",
+    "cod_item": "23001002"
   },
   {
     "id": "BzR4a51phcuxt8FHFxIA",
-    "nome": "ANLODIPINO, BESILATO 5MG"
+    "nome": "ANLODIPINO, BESILATO 5MG",
+    "cod_item": "325035001"
   },
   {
     "id": "C70PCqWxTJtGXy955BCh",
-    "nome": "QUETIAPINA 25 MG"
+    "nome": "QUETIAPINA 25 MG",
+    "cod_item": 325009002
   },
   {
     "id": "CE8xytIYDm3zj5in5Ajk",
-    "nome": "PROPAFENONA 300 MG"
+    "nome": "PROPAFENONA 300 MG",
+    "cod_item": "1000017"
   },
   {
     "id": "CPU2vRQLkfytohdOVraj",
-    "nome": "CLOMIPRAMINA, CLORIDRATO 25 MG"
+    "nome": "CLOMIPRAMINA, CLORIDRATO 25 MG",
+    "cod_item": "5000020"
   },
   {
     "id": "CZWkLjam0S6vK4NjSF5z",
-    "nome": "CAPTOPRIL 25 MG"
+    "nome": "CAPTOPRIL 25 MG",
+    "cod_item": "325045001"
   },
   {
     "id": "CjQm41rUjDY0IRFyx3EF",
-    "nome": "MIRTAZAPINA 30MG"
+    "nome": "MIRTAZAPINA 30MG",
+    "cod_item": "228001006"
   },
   {
     "id": "Cvk3YcPs6GO48zL66HEK",
-    "nome": "GLUCERNA 400G"
+    "nome": "GLUCERNA 400G",
+    "cod_item": "311002005"
   },
   {
     "id": "Czo6heCAL9DH7EDlczPf",
-    "nome": "NITRAZEPAN 5 MG"
+    "nome": "NITRAZEPAN 5 MG",
+    "cod_item": "5000025"
   },
   {
     "id": "DAjlrTkcokT2PSlGpCxC",
-    "nome": "TOPCOID GEL - POLISSULFATO DE MUCOPOLISSACARIDEO"
+    "nome": "TOPCOID GEL - POLISSULFATO DE MUCOPOLISSACARIDEO",
+    "cod_item": "325046001"
   },
   {
     "id": "DB5E9or9HfNLjj9yOmWc",
-    "nome": "LEVOFLOXACINO 500 MG"
+    "nome": "LEVOFLOXACINO 500 MG",
+    "cod_item": "22001002"
   },
   {
     "id": "DEoGLHH4DQWlowhJfeDQ",
-    "nome": "DISPOSITIVO INTRA-UTERINO - DIU"
+    "nome": "DISPOSITIVO INTRA-UTERINO - DIU",
+    "cod_item": "9000009"
   },
   {
     "id": "DJJy6dJTlabkHZCaq0ji",
-    "nome": "PERMETRINA 5% LOÇÃO"
+    "nome": "PERMETRINA 5% LOÇÃO",
+    "cod_item": "325014001"
   },
   {
     "id": "DNdVOiiLeKI1BcH9VdnZ",
-    "nome": "ESENTA SPRAY BARREIRA - CONVATEC"
+    "nome": "ESENTA SPRAY BARREIRA - CONVATEC",
+    "cod_item": 21001112
   },
   {
     "id": "DPvuPRCxUO8hEldj4UID",
-    "nome": "AMOXICILINA + CLAVULANATO 500/125 MCG"
+    "nome": "AMOXICILINA + CLAVULANATO 500/125 MCG",
+    "cod_item": "325016005"
   },
   {
     "id": "Dk8KnDhYbPPXOmTLhx9Q",
-    "nome": "RISPERIDONA 1MG"
+    "nome": "RISPERIDONA 1MG",
+    "cod_item": "5000016"
   },
   {
     "id": "DqH8yYHamSZMSq4wZaQD",
-    "nome": "ONDANSETRONA 8 MG"
+    "nome": "ONDANSETRONA 8 MG",
+    "cod_item": "12001002"
   },
   {
     "id": "DqVut1yRI9mfm0pryIao",
-    "nome": "ADENOSINA 3MG/2ML - AMP"
+    "nome": "ADENOSINA 3MG/2ML - AMP",
+    "cod_item": "325029001"
   },
   {
     "id": "Ds7HUMqcHXBVAkcqjkGU",
-    "nome": "DELTAMETRINA 0,2MG/ML"
+    "nome": "DELTAMETRINA 0,2MG/ML",
+    "cod_item": "21001071"
   },
   {
     "id": "DxxTOJEyItqdQfqwr2gI",
-    "nome": "CINTO P/ BOLSA DE OSTOMIA"
+    "nome": "CINTO P/ BOLSA DE OSTOMIA",
+    "cod_item": "21001100"
   },
   {
     "id": "E6u72LIcimJJF0BOeUe6",
-    "nome": "NALOXONA, CLORIDRATO DE  0,4 MG/ 1 ML"
+    "nome": "NALOXONA, CLORIDRATO DE  0,4 MG/ 1 ML",
+    "cod_item": "5000059"
   },
   {
     "id": "EILe0KnhhRsKta6UBseA",
-    "nome": "SULFATO FERROSO 25 MG/ML - GOTAS"
+    "nome": "SULFATO FERROSO 25 MG/ML - GOTAS",
+    "cod_item": "2000037"
   },
   {
     "id": "Ek3PCZlZj2AfFSAhwbl6",
-    "nome": "HALOPERIDOL 5 MG /ML - AMPOLA"
+    "nome": "HALOPERIDOL 5 MG /ML - AMPOLA",
+    "cod_item": "5000036"
   },
   {
     "id": "EsNe88qhJVtv99ur2VgQ",
-    "nome": "PREDNISOLONA 3MG/ML, FOSFATO SODICO DE"
+    "nome": "PREDNISOLONA 3MG/ML, FOSFATO SODICO DE",
+    "cod_item": "10001002"
   },
   {
     "id": "EwfwARu3JPX1gWjbGPSZ",
-    "nome": "CLINDAMICINA, CLORIDRATO 300 MG"
+    "nome": "CLINDAMICINA, CLORIDRATO 300 MG",
+    "cod_item": "301001005"
   },
   {
     "id": "FF97SnayvR4CFNeSyYWk",
-    "nome": "NITROFURANTOINA 100MG CAPSULA"
+    "nome": "NITROFURANTOINA 100MG CAPSULA",
+    "cod_item": "2000073"
   },
   {
     "id": "FJHAsNJN5ZBkQNx2gHM4",
-    "nome": "FENAZOPIRIDA 200MG - PYRIDIUM"
+    "nome": "FENAZOPIRIDA 200MG - PYRIDIUM",
+    "cod_item": "325011001"
   },
   {
     "id": "FLRTaIfiT2yt3cIFaigm",
-    "nome": "ESCITALOPRAM 20MG"
+    "nome": "ESCITALOPRAM 20MG",
+    "cod_item": 325001003
   },
   {
     "id": "FTSLloLufiZKvHzrVfr6",
-    "nome": "DOBUTAMINA 12,5MG/ML"
+    "nome": "DOBUTAMINA 12,5MG/ML",
+    "cod_item": "8001009"
   },
   {
     "id": "FhZ1oIxlPO5XbxIj3Vpe",
-    "nome": "CREATINA PROBIOTICA PURA"
+    "nome": "CREATINA PROBIOTICA PURA",
+    "cod_item": "311002003"
   },
   {
     "id": "FqBlhgLcPomc1sFvY5Dl",
-    "nome": "PARACETAMOL 750 MG"
+    "nome": "PARACETAMOL 750 MG",
+    "cod_item": "21001063"
   },
   {
     "id": "Fyr72LE1ZnjrDGrIebwJ",
-    "nome": "DIGOXINA 0.25 MG"
+    "nome": "DIGOXINA 0.25 MG",
+    "cod_item": "1000003"
   },
   {
     "id": "G00AwUIjdfr80ZlZcCe3",
-    "nome": "ARIPIPRAZOL 20MG/ML SUSP GTS"
+    "nome": "ARIPIPRAZOL 20MG/ML SUSP GTS",
+    "cod_item": "228001011"
   },
   {
     "id": "G1bkiQkbWm5UWHxLcWO8",
-    "nome": "LEITE APTAMIL PRO EXPERT SOJA"
+    "nome": "LEITE APTAMIL PRO EXPERT SOJA",
+    "cod_item": "311001029"
   },
   {
     "id": "GDUHq6tsEpZnOihSTcpL",
-    "nome": "DIPIRONA SÓDICA GOTAS 500 MG / ML 10 ML"
+    "nome": "DIPIRONA SÓDICA GOTAS 500 MG / ML 10 ML",
+    "cod_item": "2000015"
   },
   {
     "id": "GNyZxvv3XqwXNF0ZPEFZ",
-    "nome": "HIDROCLOROTIAZIADA 25MG"
+    "nome": "HIDROCLOROTIAZIADA 25MG",
+    "cod_item": "1000004"
   },
   {
     "id": "GvGAvvAxz0UP6qY6SExd",
-    "nome": "CARVEDILOL 25 MG"
+    "nome": "CARVEDILOL 25 MG",
+    "cod_item": "303007002"
   },
   {
     "id": "H4PQNal6K6UfqS6ky2k0",
-    "nome": "IMPACT NUTRICAO ORAL E ENTERAL"
+    "nome": "IMPACT NUTRICAO ORAL E ENTERAL",
+    "cod_item": "329003001"
   },
   {
     "id": "HO8vxnQelzpn4prHllxZ",
-    "nome": "NOREPINEFRINA 2MG/4ML - AMP"
+    "nome": "NOREPINEFRINA 2MG/4ML - AMP",
+    "cod_item": "5000079"
   },
   {
     "id": "HUiJPmxmUlUOwDZ326ck",
-    "nome": "ALOPURINOL 100MG"
+    "nome": "ALOPURINOL 100MG",
+    "cod_item": "325032002"
   },
   {
     "id": "HZE0zTtK7u9CS9fFcDxl",
-    "nome": "SIMETICONA GTS"
+    "nome": "SIMETICONA GTS",
+    "cod_item": "2000056"
   },
   {
     "id": "HyAzv5kxVpbc4oeBf9Cm",
-    "nome": "TRAMADOL 50MG"
+    "nome": "TRAMADOL 50MG",
+    "cod_item": "21001090"
   },
   {
     "id": "I9JZ0Fwgdf5gCxFGkEZg",
-    "nome": "ALBENDAZOL 400 MG"
+    "nome": "ALBENDAZOL 400 MG",
+    "cod_item": "325031002"
   },
   {
     "id": "IP8z8Z504ecvdCQGIlpQ",
-    "nome": "ESPINHEIRA SANTA CP - MAYTENUS ILICIFOLIA"
+    "nome": "ESPINHEIRA SANTA CP - MAYTENUS ILICIFOLIA",
+    "cod_item": 325048002
   },
   {
     "id": "IUpdCOWPEow7pBnxm07w",
-    "nome": "ADESIVO NICOTINA 7 MG"
+    "nome": "ADESIVO NICOTINA 7 MG",
+    "cod_item": "300001003"
   },
   {
     "id": "IVUKUy6cgthUHOSR9tPE",
-    "nome": "LEVODOPA + BENSERAZIDA 100/25MG - PROLOPA BD"
+    "nome": "LEVODOPA + BENSERAZIDA 100/25MG - PROLOPA BD",
+    "cod_item": "327001002"
   },
   {
     "id": "IWoJxls6TDoHUTBolrJN",
-    "nome": "FRALDA DESC GERIATRICA - M"
+    "nome": "FRALDA DESC GERIATRICA - M",
+    "cod_item": "21001068"
   },
   {
     "id": "ImpU1zu1DKfNeXVeNm2p",
-    "nome": "MEDROXIPROGESTERONA, ACETATO + CIPIONATO DE ESTRADIOL (CYCLOFEMINA)"
+    "nome": "MEDROXIPROGESTERONA, ACETATO + CIPIONATO DE ESTRADIOL (CYCLOFEMINA)",
+    "cod_item": "330001002"
   },
   {
     "id": "InFfzsdlK7XLplfbv2eP",
-    "nome": "LEVONORGESTREL 0,15MG+ETINILESTRADIOL 0,03MG- CICLO 21"
+    "nome": "LEVONORGESTREL 0,15MG+ETINILESTRADIOL 0,03MG- CICLO 21",
+    "cod_item": "308001002"
   },
   {
     "id": "J4OACzyShcsIlJ6PUNi7",
-    "nome": "CETOPROFENO 100 MG - EV"
+    "nome": "CETOPROFENO 100 MG - EV",
+    "cod_item": "2000122"
   },
   {
     "id": "JGptJA04bUFl8gsolFjm",
-    "nome": "ETOMIDATO 2 MG/ML - AMP"
+    "nome": "ETOMIDATO 2 MG/ML - AMP",
+    "cod_item": "5000090"
   },
   {
     "id": "JNm6jB4gCHve06QzRiTp",
-    "nome": "CINTA POS OPERATORIA COMPLETA"
+    "nome": "CINTA POS OPERATORIA COMPLETA",
+    "cod_item": "321003003"
   },
   {
     "id": "Jjcqqg7qyM1hitKRyAqa",
-    "nome": "NISTATINA POMADA VAG."
+    "nome": "NISTATINA POMADA VAG.",
+    "cod_item": "2000028"
   },
   {
     "id": "JmGt8tIRjps8XczJ0Nmd",
-    "nome": "NEOMICINA + BACITRACINA POMADA"
+    "nome": "NEOMICINA + BACITRACINA POMADA",
+    "cod_item": "2000027"
   },
   {
     "id": "Jn9HhZUqQhmcolgn5315",
-    "nome": "PREGABALINA 75MG - LYRICA"
+    "nome": "PREGABALINA 75MG - LYRICA",
+    "cod_item": "302004001"
   },
   {
     "id": "JnG93Acp7p4boD3jY12j",
-    "nome": "NITROGLICERINA 5 MG/ML - TRIDIL"
+    "nome": "NITROGLICERINA 5 MG/ML - TRIDIL",
+    "cod_item": "5000061"
   },
   {
     "id": "Jvfnd0CTv3b1G89yBsKD",
-    "nome": "PIRACETAM 400 MG"
+    "nome": "PIRACETAM 400 MG",
+    "cod_item": "303006001"
   },
   {
     "id": "JwDWghkuahdrAU9zgG42",
-    "nome": "FRALDA DESC GERIATRICA - P"
+    "nome": "FRALDA DESC GERIATRICA - P",
+    "cod_item": "21001069"
   },
   {
     "id": "K5TbT9MaEes5P81hKGXG",
-    "nome": "SILYBUM MARIANUM 300MG (FORFIG)"
+    "nome": "SILYBUM MARIANUM 300MG (FORFIG)",
+    "cod_item": "325047001"
   },
   {
     "id": "KC8FkYl5SqckKZafAi7m",
-    "nome": "ENSURE LATA 400G"
+    "nome": "ENSURE LATA 400G",
+    "cod_item": "230001003"
   },
   {
     "id": "KCIPC4zyfSTVF8iC2tAt",
-    "nome": "NORFLOXACINO 400MG"
+    "nome": "NORFLOXACINO 400MG",
+    "cod_item": "2000140"
   },
   {
     "id": "KLaO2dnYh0wNVPLcFnJO",
-    "nome": "ACETILCISTEINA 600 MG - FLUIMUCIL"
+    "nome": "ACETILCISTEINA 600 MG - FLUIMUCIL",
+    "cod_item": "325024001"
   },
   {
     "id": "Kb1gjrBrnYA2w9NHonfv",
-    "nome": "SERINGA DESC. (1) 1ML PARA INSULINA"
+    "nome": "SERINGA DESC. (1) 1ML PARA INSULINA",
+    "cod_item": 321001191
   },
   {
     "id": "Ko0FX9SYervqWEVqly8u",
-    "nome": "POLIVITAMINICO GTS"
+    "nome": "POLIVITAMINICO GTS",
+    "cod_item": "2000032"
   },
   {
     "id": "L5sTc35OXchtHvKe1Fz0",
-    "nome": "LEITE NAN COMFOR 1 - LATA 800 G"
+    "nome": "LEITE NAN COMFOR 1 - LATA 800 G",
+    "cod_item": "311001004"
   },
   {
     "id": "L9u4YJVkI2LZbn8lbH7Q",
-    "nome": "NISTATINA 100.000 SUSP FRASCO 60 ML"
+    "nome": "NISTATINA 100.000 SUSP FRASCO 60 ML",
+    "cod_item": "21001058"
   },
   {
     "id": "LHFIZ1IJfaHE2LkGng4q",
-    "nome": "IBUPROFENO 50MG/ML - GOTAS"
+    "nome": "IBUPROFENO 50MG/ML - GOTAS",
+    "cod_item": "50001005"
   },
   {
     "id": "LKVFT7SZWkPRVf9p0J12",
-    "nome": "ROCURÔNIO 50 MG/ 5 ML - IV"
+    "nome": "ROCURÔNIO 50 MG/ 5 ML - IV",
+    "cod_item": "302008002"
   },
   {
     "id": "LPn5JlPciAuH8AyuXNs0",
-    "nome": "SULFAMET. +TRIMETOPRIMA  400 + 80MG"
+    "nome": "SULFAMET. +TRIMETOPRIMA  400 + 80MG",
+    "cod_item": "2000035"
   },
   {
     "id": "LRFBmBMKeRiV5vBKJRDx",
-    "nome": "OMEPRAZOL SODICO PO INJETAVEL"
+    "nome": "OMEPRAZOL SODICO PO INJETAVEL",
+    "cod_item": "1001007"
   },
   {
     "id": "LaIu8WfOUxcdHMH677bg",
-    "nome": "VITAMINA D 2000UI"
+    "nome": "VITAMINA D 2000UI",
+    "cod_item": "230001017"
   },
   {
     "id": "LcTd3qLVGW0a5EKvdZ4A",
-    "nome": "INSULINA HUMANA NPH 100 UI/ML - CANETA"
+    "nome": "INSULINA HUMANA NPH 100 UI/ML - CANETA",
+    "cod_item": "3000006"
   },
   {
     "id": "LgOMwJqdquip3M2Tumrr",
-    "nome": "PHOSFOENEMA 130ML"
+    "nome": "PHOSFOENEMA 130ML",
+    "cod_item": "2000132"
   },
   {
     "id": "LzJXivalnaxkq8k7LUwp",
-    "nome": "ADESIVO NICOTINA 21 MG"
+    "nome": "ADESIVO NICOTINA 21 MG",
+    "cod_item": "300001004"
   },
   {
     "id": "M7gudYKNp4NU5Kd9Ryku",
-    "nome": "MEDROXIPROGESTERONA, ACETATO 150MG/ML (DEPOPROVERA)"
+    "nome": "MEDROXIPROGESTERONA, ACETATO 150MG/ML (DEPOPROVERA)",
+    "cod_item": "9000005"
   },
   {
     "id": "Ma4mvD6UzTYT4mMH5cCo",
-    "nome": "MEIA 3/4 20-30MM"
+    "nome": "MEIA 3/4 20-30MM",
+    "cod_item": "21001101"
   },
   {
     "id": "MlhrzykGAS7cvX6fVErS",
-    "nome": "DEXAMETASONA 0.1% CREME 10 GR"
+    "nome": "DEXAMETASONA 0.1% CREME 10 GR",
+    "cod_item": "2000013"
   },
   {
     "id": "MxeAoDos70zvRVo8OhYL",
-    "nome": "METOPROLOL 25 MG"
+    "nome": "METOPROLOL 25 MG",
+    "cod_item": "8001008"
   },
   {
     "id": "N1miJb4FNdfQTQlaeHKH",
-    "nome": "LORATADINA 10 MG"
+    "nome": "LORATADINA 10 MG",
+    "cod_item": "10001004"
   },
   {
     "id": "N2Vyky4YZAn2co9KiM5E",
-    "nome": "ARIPIPRAZOL 10 MG - CP"
+    "nome": "ARIPIPRAZOL 10 MG - CP",
+    "cod_item": 325002003
   },
   {
     "id": "N8DzyEw6uCIRLa6eqC6y",
-    "nome": "ESPIRAMICINA 1,5 MG CP"
+    "nome": "ESPIRAMICINA 1,5 MG CP",
+    "cod_item": "40001001"
   },
   {
     "id": "NCKFIMqOCLxkmYjQSLtc",
-    "nome": "PARACETAMOL 200 MG/ ML -  FRASCO 15 ML GOTAS"
+    "nome": "PARACETAMOL 200 MG/ ML -  FRASCO 15 ML GOTAS",
+    "cod_item": "2000043"
   },
   {
     "id": "NGlPflxlERpeWD20cliS",
-    "nome": "DIOSMINA + HESPERIDINA 450/50 MG"
+    "nome": "DIOSMINA + HESPERIDINA 450/50 MG",
+    "cod_item": "21001030"
   },
   {
     "id": "NS4nH8tLXv5lnyK493d3",
-    "nome": "AMIODARONA 50MG/ML - AMP"
+    "nome": "AMIODARONA 50MG/ML - AMP",
+    "cod_item": "325029002"
   },
   {
     "id": "Na6sK5Po82gvAxxNIBk1",
-    "nome": "COLAGENO TIPO II + VITAMINAS"
+    "nome": "COLAGENO TIPO II + VITAMINAS",
+    "cod_item": "329001001"
   },
   {
     "id": "Ncve5Ai6KFcNaj5TD5g9",
-    "nome": "TALA METALICA"
+    "nome": "TALA METALICA",
+    "cod_item": "321001457"
   },
   {
     "id": "NkIJSFfwdFnMnyuoUBMX",
-    "nome": "LURASIDONA, CLORIDRATO DE 40MG (LATUDA)"
+    "nome": "LURASIDONA, CLORIDRATO DE 40MG (LATUDA)",
+    "cod_item": "326001001"
   },
   {
     "id": "NmxkmXxFkj0mE5kKo8JI",
-    "nome": "PREDNISONA 5 MG - CP"
+    "nome": "PREDNISONA 5 MG - CP",
+    "cod_item": "7000001"
   },
   {
     "id": "NtEM50U9ZMnynsXOlsXB",
-    "nome": "IMIPRAMINA 25 MG"
+    "nome": "IMIPRAMINA 25 MG",
+    "cod_item": "5000011"
   },
   {
     "id": "Nw16JkTZjizCRp8q3HA8",
-    "nome": "AMBROXOL XAROPE INFANTIL"
+    "nome": "AMBROXOL XAROPE INFANTIL",
+    "cod_item": "325021003"
   },
   {
     "id": "O1QYKDwHl32l9z3z90GX",
-    "nome": "BUDESONIDA 50MCG SPRAY"
+    "nome": "BUDESONIDA 50MCG SPRAY",
+    "cod_item": 325019005
   },
   {
     "id": "OQCheT5ZicGuOTr2qbtv",
-    "nome": "ENOXAPARINA SODICA 60 MG"
+    "nome": "ENOXAPARINA SODICA 60 MG",
+    "cod_item": 21001065
   },
   {
     "id": "OU9mNfDucdzvoxHUxAAg",
-    "nome": "REXULTI 1 MG"
+    "nome": "REXULTI 1 MG",
+    "cod_item": 228001008
   },
   {
     "id": "Ojln7V7XDS6YHqQCg3YC",
-    "nome": "PROPRANOLOL 40MG"
+    "nome": "PROPRANOLOL 40MG",
+    "cod_item": "1000011"
   },
   {
     "id": "Om1ZOUZOm4pRQJvTocrG",
-    "nome": "TIBOLONA 1,25MG"
+    "nome": "TIBOLONA 1,25MG",
+    "cod_item": "308001001"
   },
   {
     "id": "OnuxOr1bq7glRxgJ9ZbG",
-    "nome": "AZITROMICINA SUSP. 200MG/5ML"
+    "nome": "AZITROMICINA SUSP. 200MG/5ML",
+    "cod_item": "325016009"
   },
   {
     "id": "OzRa7xmRB9wYQLD76EzF",
-    "nome": "SUPLEMENTO VITAMINICO A-Z"
+    "nome": "SUPLEMENTO VITAMINICO A-Z",
+    "cod_item": "2000038"
   },
   {
     "id": "PCTzTBGKFfRpZbWBsqvh",
-    "nome": "BUPROPIONA 150 MG - TABAGISMO"
+    "nome": "BUPROPIONA 150 MG - TABAGISMO",
+    "cod_item": "5000063"
   },
   {
     "id": "PLlvIUjUSfEQMxNXpMR6",
-    "nome": "SORO MANITOL 250ML"
+    "nome": "SORO MANITOL 250ML",
+    "cod_item": "321001230"
   },
   {
     "id": "PMhrkidXIWBFfjPAsDZE",
-    "nome": "CETOPROFENO 50 MG"
+    "nome": "CETOPROFENO 50 MG",
+    "cod_item": "2000082"
   },
   {
     "id": "PWOmn9xX3BNjmRWsxVkd",
-    "nome": "CARBAMAZEPINA SUSP. 100 ML- 20 MG/ML"
+    "nome": "CARBAMAZEPINA SUSP. 100 ML- 20 MG/ML",
+    "cod_item": "5000066"
   },
   {
     "id": "Q6tiygo9yBTEe6Ikjdb8",
-    "nome": "PARACETAMOL 500 MG - COMP"
+    "nome": "PARACETAMOL 500 MG - COMP",
+    "cod_item": "2000031"
   },
   {
     "id": "Q849JBETjdICuxTTWxfG",
-    "nome": "OXCARBAZEPINA 300 MG"
+    "nome": "OXCARBAZEPINA 300 MG",
+    "cod_item": "302004003"
   },
   {
     "id": "QHdy3hORPw5PSefsbZmo",
-    "nome": "FRALDA DESC GERIATRICA - XG"
+    "nome": "FRALDA DESC GERIATRICA - XG",
+    "cod_item": "320002004"
   },
   {
     "id": "QYGUXDNrdipuk5XQlF39",
-    "nome": "FORMULA"
+    "nome": "FORMULA",
+    "cod_item": 563001002
   },
   {
     "id": "QfH8qKd6MeTcavEjWCrU",
-    "nome": "RIVAROXABANA 10 MG (XARELTO)"
+    "nome": "RIVAROXABANA 10 MG (XARELTO)",
+    "cod_item": "55001002"
   },
   {
     "id": "Qiyiiw1AKBFd0mcDxyOV",
-    "nome": "ACIDO FOLICO 5MG"
+    "nome": "ACIDO FOLICO 5MG",
+    "cod_item": "325026001"
   },
   {
     "id": "QkoEnRrNGMdMNvP5H8Ge",
-    "nome": "INSULINA HUMANA REGULAR - REUTILIZÁVEL"
+    "nome": "INSULINA HUMANA REGULAR - REUTILIZÁVEL",
+    "cod_item": 325005003
   },
   {
     "id": "QmNktjS2DztsoOp4Cz3z",
-    "nome": "SULFAM. + TRIMETROP. 40 + 8 MG/ML - SUSPENSÃO ORAL 100 ML"
+    "nome": "SULFAM. + TRIMETROP. 40 + 8 MG/ML - SUSPENSÃO ORAL 100 ML",
+    "cod_item": "2000036"
   },
   {
     "id": "QrjEEaTZW3XHtrJ8sLrd",
-    "nome": "METRONIDAZOL 250 MG"
+    "nome": "METRONIDAZOL 250 MG",
+    "cod_item": "2000025"
   },
   {
     "id": "Qsji7IMLTXixMxjoIBNH",
-    "nome": "VICOG 5MG - VIMPOCETINA"
+    "nome": "VICOG 5MG - VIMPOCETINA",
+    "cod_item": "302004006"
   },
   {
     "id": "QtNkzn9KLxcGiH2xPzjb",
-    "nome": "NALTREXONA 50 MG"
+    "nome": "NALTREXONA 50 MG",
+    "cod_item": "21001023"
   },
   {
     "id": "RC6CiR6G0WiGsBT1LzxR",
-    "nome": "CLINDOXYL GEL"
+    "nome": "CLINDOXYL GEL",
+    "cod_item": "22001014"
   },
   {
     "id": "RHGsCUG28W7LSJvG7dWB",
-    "nome": "RISPERIDONA 1 MG/ML SOLUÇÃO"
+    "nome": "RISPERIDONA 1 MG/ML SOLUÇÃO",
+    "cod_item": "228001007"
   },
   {
     "id": "RporcIR59CGU2BPDrTTZ",
-    "nome": "EMPAGLIFLOZINA 25MG (JARDIANCE)"
+    "nome": "EMPAGLIFLOZINA 25MG (JARDIANCE)",
+    "cod_item": "3000018"
   },
   {
     "id": "S8fmUNFB3426OqKbjfR7",
-    "nome": "AMOXICILINA + CLAVULANATO SUSP 250 MG/5 ML"
+    "nome": "AMOXICILINA + CLAVULANATO SUSP 250 MG/5 ML",
+    "cod_item": "325016006"
   },
   {
     "id": "SAR2quLl5971g6OmMze2",
-    "nome": "SERTRALINA 50MG"
+    "nome": "SERTRALINA 50MG",
+    "cod_item": "5000033"
   },
   {
     "id": "SDeUCUXXlKIYkeFFLpjk",
-    "nome": "METILFENIDATO 18MG - CONCERTA"
+    "nome": "METILFENIDATO 18MG - CONCERTA",
+    "cod_item": 325012002
   },
   {
     "id": "SWb1BMEExoye8nZaAoAE",
-    "nome": "NEULEPTIL - PERICIAZINA 40MG/ML"
+    "nome": "NEULEPTIL - PERICIAZINA 40MG/ML",
+    "cod_item": "56002001"
   },
   {
     "id": "Sd5uwluvTEVdoewMxc8o",
-    "nome": "VIGADEXA COL - MOXIFLOXACINO + DEXAMETASONA"
+    "nome": "VIGADEXA COL - MOXIFLOXACINO + DEXAMETASONA",
+    "cod_item": "325016002"
   },
   {
     "id": "Sku6aaOXI1XJWmpeou30",
-    "nome": "MELOXICAM 15MG"
+    "nome": "MELOXICAM 15MG",
+    "cod_item": "50001004"
   },
   {
     "id": "SvGqXG6teBLhKHZtNBur",
-    "nome": "MIRABEGRONA 50MG"
+    "nome": "MIRABEGRONA 50MG",
+    "cod_item": "325044001"
   },
   {
     "id": "SvL0UjrJvMsaXODzgsKp",
-    "nome": "IBUPROFENO 100MG/ML -  GOTAS"
+    "nome": "IBUPROFENO 100MG/ML -  GOTAS",
+    "cod_item": "2000130"
   },
   {
     "id": "T3fmeB6RxoISLmltETDf",
-    "nome": "FLUOXETINA, CLORIDRATO 20 MG"
+    "nome": "FLUOXETINA, CLORIDRATO 20 MG",
+    "cod_item": "5000013"
   },
   {
     "id": "TFC45pHbTgerHRSOXx7C",
-    "nome": "PETIDINA 50MG/ML(DOLANTINA)"
+    "nome": "PETIDINA 50MG/ML(DOLANTINA)",
+    "cod_item": "5000050"
   },
   {
     "id": "THvvIYXS8ljPDu05UnMz",
-    "nome": "AMOXICILINA 250 MG/5ML - 150 ML"
+    "nome": "AMOXICILINA 250 MG/5ML - 150 ML",
+    "cod_item": "325016007"
   },
   {
     "id": "TIUIHap5So585fvWDk5p",
-    "nome": "CARBONATO DE CALCIO 500MG"
+    "nome": "CARBONATO DE CALCIO 500MG",
+    "cod_item": 2000068
   },
   {
     "id": "TbW3P7DDBdIy2Oy1o5F5",
-    "nome": "ISOSSORBIDA, DINITRATO 5 MG - SUB LINGUAL"
+    "nome": "ISOSSORBIDA, DINITRATO 5 MG - SUB LINGUAL",
+    "cod_item": "2000119"
   },
   {
     "id": "U584fV1Q1BFNAPnNEbWv",
-    "nome": "GLICONATO DE CALCIO 10% - AMP"
+    "nome": "GLICONATO DE CALCIO 10% - AMP",
+    "cod_item": "1001001"
   },
   {
     "id": "U887Ukh1Ipp3BjVrzjfa",
-    "nome": "LOPERAMIDA 2 MG"
+    "nome": "LOPERAMIDA 2 MG",
+    "cod_item": "21001072"
   },
   {
     "id": "UDaUhVlmzYvh2HlXJ3qp",
-    "nome": "PENTOXIFILINA 400 MG"
+    "nome": "PENTOXIFILINA 400 MG",
+    "cod_item": "303006004"
   },
   {
     "id": "UGUpUYhvBbD65A1qIFkG",
-    "nome": "TESTE RAPIDO DE GRAVIDEZ"
+    "nome": "TESTE RAPIDO DE GRAVIDEZ",
+    "cod_item": "1001006"
   },
   {
     "id": "UGv9E0oV5lJGAoq4hTf4",
-    "nome": "NAPROXENO 500MG"
+    "nome": "NAPROXENO 500MG",
+    "cod_item": "325019002"
   },
   {
     "id": "UIWBnN3JUpaJsHSyDbKv",
-    "nome": "LEVOMEPROMAZINA 25MG"
+    "nome": "LEVOMEPROMAZINA 25MG",
+    "cod_item": "5000009"
   },
   {
     "id": "UJCEcFLMDqSqtcqLBlwt",
-    "nome": "ACIDO VALPROICO 250MG"
+    "nome": "ACIDO VALPROICO 250MG",
+    "cod_item": 325028001
   },
   {
     "id": "UZLkBMFgrkcHP7om69ly",
-    "nome": "TAMARINE CP"
+    "nome": "TAMARINE CP",
+    "cod_item": "21001028"
   },
   {
     "id": "UdG60OwuOZMFGMqyQwyN",
-    "nome": "FLUCONAZOL 150 MG"
+    "nome": "FLUCONAZOL 150 MG",
+    "cod_item": "2000060"
   },
   {
     "id": "UdLeD1TSvli8aB3yDgBQ",
-    "nome": "VALPROATO DE SÓDIO 50 MG/ML - XPE"
+    "nome": "VALPROATO DE SÓDIO 50 MG/ML - XPE",
+    "cod_item": "5000021"
   },
   {
     "id": "UezXyv21JnmKrvc5AHNd",
-    "nome": "CLONAZEPAM 2MG"
+    "nome": "CLONAZEPAM 2MG",
+    "cod_item": "5000015"
   },
   {
     "id": "VKGCHP2NXpxgOFWGZKD0",
-    "nome": "AMINOFILINA 100 MG"
+    "nome": "AMINOFILINA 100 MG",
+    "cod_item": "325033001"
   },
   {
     "id": "ValZ34ROSqQGfNLcBsOu",
-    "nome": "CARBONATO DE LITIO 300 MG"
+    "nome": "CARBONATO DE LITIO 300 MG",
+    "cod_item": "5000024"
   },
   {
     "id": "Vi1NYrkJmLiT1jUCCmsN",
-    "nome": "ISOSOURCE 1.5"
+    "nome": "ISOSOURCE 1.5",
+    "cod_item": "311002006"
   },
   {
     "id": "ViG7nkSrlf3ou9Xe4GRn",
-    "nome": "SULFADIAZINA DE PRATA 0,01"
+    "nome": "SULFADIAZINA DE PRATA 0,01",
+    "cod_item": "9000002"
   },
   {
     "id": "Vo6p3KbjJrS8zxHlGC8K",
-    "nome": "MIRTAZAPINA 15MG"
+    "nome": "MIRTAZAPINA 15MG",
+    "cod_item": "228001001"
   },
   {
     "id": "Vp1lDl55C0bI9HCsQ2Xe",
-    "nome": "PERMANGANTO DE POTASSIO 100 MG"
+    "nome": "PERMANGANTO DE POTASSIO 100 MG",
+    "cod_item": "11001001"
   },
   {
     "id": "WPlPMYx34Ip5q7kL6Xrv",
-    "nome": "MICONAZOL, NITRATO 0,02 MG/G -  80 G CREME VAGINAL"
+    "nome": "MICONAZOL, NITRATO 0,02 MG/G -  80 G CREME VAGINAL",
+    "cod_item": "2000059"
   },
   {
     "id": "WYGOoXFTiy6lEp1hiRi0",
-    "nome": "COMPLEXO B CP"
+    "nome": "COMPLEXO B CP",
+    "cod_item": "21001025"
   },
   {
     "id": "WgKce4VAKytsBJZdFq63",
-    "nome": "TORVAL 500MG"
+    "nome": "TORVAL 500MG",
+    "cod_item": "13001001"
   },
   {
     "id": "Wihd4aR6NSX4Whbd2Z5x",
-    "nome": "ESPIRONOLACTONA 25 MG"
+    "nome": "ESPIRONOLACTONA 25 MG",
+    "cod_item": "303003001"
   },
   {
     "id": "WlgQFQL2jAwxkiDDvLhS",
-    "nome": "ENOXAPARINA SÓDICA 40 MG/0,4ML - CLEXANE"
+    "nome": "ENOXAPARINA SÓDICA 40 MG/0,4ML - CLEXANE",
+    "cod_item": "304001003"
   },
   {
     "id": "XIglJEXFdICY0lLVMA05",
-    "nome": "AGULHA PARA CANETA DE INSULINA 4MM"
+    "nome": "AGULHA PARA CANETA DE INSULINA 4MM",
+    "cod_item": "321003001"
   },
   {
     "id": "XNjINNnktK6U5NRQ8IFv",
-    "nome": "OLEO MINERAL 100 ML"
+    "nome": "OLEO MINERAL 100 ML",
+    "cod_item": "2000141"
   },
   {
     "id": "XnEij4At4nVyBI98irs6",
-    "nome": "HALOPERIDOL,DECANOATO 70,52MG/ML"
+    "nome": "HALOPERIDOL,DECANOATO 70,52MG/ML",
+    "cod_item": "5000048"
   },
   {
     "id": "XvW7XrsF4YkaPO5bUQQo",
-    "nome": "COLCHICINA0,5MG"
+    "nome": "COLCHICINA0,5MG",
+    "cod_item": "324001001"
   },
   {
     "id": "Y0NdS9EtNuHYtsW3MNYz",
-    "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG"
+    "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
+    "cod_item": "325023001"
   },
   {
     "id": "YLgEmklXsq2CCbyoz7f5",
-    "nome": "DESVENLAFAXINA 100 MG"
+    "nome": "DESVENLAFAXINA 100 MG",
+    "cod_item": 21002001
   },
   {
     "id": "YT7EY2JLDdu7mHL2C8iR",
-    "nome": "BUSCOPAM COMPOSTO CPR"
+    "nome": "BUSCOPAM COMPOSTO CPR",
+    "cod_item": "325042002"
   },
   {
     "id": "YYf8HVMEM9MfEwfnPiW4",
-    "nome": "TRAZODONA, CLORIDRATO 50MG"
+    "nome": "TRAZODONA, CLORIDRATO 50MG",
+    "cod_item": "325001001"
   },
   {
     "id": "Ye9fubvGOul8fOkWe4go",
-    "nome": "MIRTAZAPINA 15MG COMPRIMIDO"
+    "nome": "MIRTAZAPINA 15MG COMPRIMIDO",
+    "cod_item": "228001010"
   },
   {
     "id": "Yk3PgAy1vbsrWnrqL61H",
-    "nome": "PANTOPRAZOL 20 MG"
+    "nome": "PANTOPRAZOL 20 MG",
+    "cod_item": "12001004"
   },
   {
     "id": "YlwhYbx295LoDKagiYcB",
-    "nome": "MAXIDEX - DEXAMETASONA 1MG/ML COLIRIO"
+    "nome": "MAXIDEX - DEXAMETASONA 1MG/ML COLIRIO",
+    "cod_item": "315002002"
   },
   {
     "id": "YmDC4V45iNYogCTfLuFz",
-    "nome": "DOXAZOSINA MESILATO 4MG"
+    "nome": "DOXAZOSINA MESILATO 4MG",
+    "cod_item": "21001094"
   },
   {
     "id": "Yn25hFzUH6BP6DZxwLQZ",
-    "nome": "BISACODIL 5MG - DULCOLAX"
+    "nome": "BISACODIL 5MG - DULCOLAX",
+    "cod_item": "325039001"
   },
   {
     "id": "Z5HWFgYImcZOdJFP33Jr",
-    "nome": "IBUPROFENO 300 MG"
+    "nome": "IBUPROFENO 300 MG",
+    "cod_item": "21001012"
   },
   {
     "id": "ZBiDosDkbR744DMY7PzK",
-    "nome": "DROPROPIZINA 3 MG/ML - XAROPE ADULTO"
+    "nome": "DROPROPIZINA 3 MG/ML - XAROPE ADULTO",
+    "cod_item": "21001061"
   },
   {
     "id": "ZGwR86NdHd0jlkCEKwaA",
-    "nome": "FENOBARBITAL 200 MG/ ML - AMPOLA"
+    "nome": "FENOBARBITAL 200 MG/ ML - AMPOLA",
+    "cod_item": "5000046"
   },
   {
     "id": "ZPOWGuOQXqErfI1F87KQ",
-    "nome": "BUSCOPAM SIMPLES GOTAS"
+    "nome": "BUSCOPAM SIMPLES GOTAS",
+    "cod_item": "325042004"
   },
   {
     "id": "ZVLQ5fba64p6vEAcdMrA",
-    "nome": "LEVOFLOXACINO 750MG (5MG/ML)"
+    "nome": "LEVOFLOXACINO 750MG (5MG/ML)",
+    "cod_item": 22001016
   },
   {
     "id": "Za5qKbNFrzi0zdcxWXbD",
-    "nome": "SILIMARINA 200MG (FIGMED)"
+    "nome": "SILIMARINA 200MG (FIGMED)",
+    "cod_item": "79001003"
   },
   {
     "id": "ZdChj61efiAYyEVLjnB1",
-    "nome": "URSACOL 300 MG - ÁCIDO URSODESOXICOLICO"
+    "nome": "URSACOL 300 MG - ÁCIDO URSODESOXICOLICO",
+    "cod_item": "306001004"
   },
   {
     "id": "ZfXojYcFjGVgxYm4m6fH",
-    "nome": "ESOMEPRAZOL 40MG"
+    "nome": "ESOMEPRAZOL 40MG",
+    "cod_item": "325048001"
   },
   {
     "id": "ZfcbIadu328W0uGyvC9X",
-    "nome": "TIAMINA 300 MG - CP"
+    "nome": "TIAMINA 300 MG - CP",
+    "cod_item": "6000002"
   },
   {
     "id": "ZnMkLJ98yyf3K8oNdjOP",
-    "nome": "NIFEDIPINA 20MG"
+    "nome": "NIFEDIPINA 20MG",
+    "cod_item": "1000008"
   },
   {
     "id": "Zonrgn2w8AckspM0stKs",
-    "nome": "AMBROXOL XAROPE ADULTO"
+    "nome": "AMBROXOL XAROPE ADULTO",
+    "cod_item": "325021002"
   },
   {
     "id": "a197Ph5mxRjTZ6I6Mt9X",
-    "nome": "LEITE NAN ESPESSAR- LATA 800 G"
+    "nome": "LEITE NAN ESPESSAR- LATA 800 G",
+    "cod_item": "311001015"
   },
   {
     "id": "aBNutedi8gV6LW1J6JBb",
-    "nome": "BUPROPIONA 150 MG - ASSISTENCIAL"
+    "nome": "BUPROPIONA 150 MG - ASSISTENCIAL",
+    "cod_item": "325001005"
   },
   {
     "id": "aMOOQfEwPAfEIEuUb6uX",
-    "nome": "LEVONORGESTREL 0,75 MG"
+    "nome": "LEVONORGESTREL 0,75 MG",
+    "cod_item": "9000001"
   },
   {
     "id": "ahiPQz27a2iDScDcDHwA",
-    "nome": "GLICLAZIDA 60 MG"
+    "nome": "GLICLAZIDA 60 MG",
+    "cod_item": "3000016"
   },
   {
     "id": "akAQXusSFULh879kLlDY",
-    "nome": "GLICLAZIDA 30 MG"
+    "nome": "GLICLAZIDA 30 MG",
+    "cod_item": "23001001"
   },
   {
     "id": "ar7py7W1ovgaUNkG9sxn",
-    "nome": "ACIDO TRANEXÂMICO 250MG - TRANSAMIN"
+    "nome": "ACIDO TRANEXÂMICO 250MG - TRANSAMIN",
+    "cod_item": "325027001"
   },
   {
     "id": "atupCDUedKZClHFdBKH9",
-    "nome": "ADORLAN 25"
+    "nome": "ADORLAN 25",
+    "cod_item": "5000083"
   },
   {
     "id": "auLTrVVWC5VT6hpgVYAL",
-    "nome": "LEITE NAN SUPREME 1- 800G"
+    "nome": "LEITE NAN SUPREME 1- 800G",
+    "cod_item": "311001006"
   },
   {
     "id": "bAktNCfjjwz6yhn4cJ19",
-    "nome": "DIAZEPAM 10 MG/ 2ML - AMP"
+    "nome": "DIAZEPAM 10 MG/ 2ML - AMP",
+    "cod_item": "5000045"
   },
   {
     "id": "bmBFIzUkZx3dCvyCZV35",
-    "nome": "CIPROFLOXACINO 500MG"
+    "nome": "CIPROFLOXACINO 500MG",
+    "cod_item": "2000045"
   },
   {
     "id": "bnVcbFYPfAto3cZBJYNI",
-    "nome": "CLORPROMAZINA, CLORIDRATO 25MG"
+    "nome": "CLORPROMAZINA, CLORIDRATO 25MG",
+    "cod_item": "5000004"
   },
   {
     "id": "c2xjxTKPnyYLCisGb6rx",
-    "nome": "PROPATILNITRATO 10MG - SUSTRATE"
+    "nome": "PROPATILNITRATO 10MG - SUSTRATE",
+    "cod_item": 100001001
   },
   {
     "id": "c4Rz6AHrZja6MDlqhSgc",
-    "nome": "OFEV - ESILATO DE NINTEDANIBE 100MG"
+    "nome": "OFEV - ESILATO DE NINTEDANIBE 100MG",
+    "cod_item": "335001001"
   },
   {
     "id": "cC0NZcr6Fdxml72EkH8U",
-    "nome": "BUSCOPAM SIMPLES CP"
+    "nome": "BUSCOPAM SIMPLES CP",
+    "cod_item": "325042003"
   },
   {
     "id": "cTkqMNDXXRiqHDNgCvgc",
-    "nome": "MAXIDRATE GEL HIDRATANTE"
+    "nome": "MAXIDRATE GEL HIDRATANTE",
+    "cod_item": "325007001"
   },
   {
     "id": "cVxsbGncMyIF87WgMdHJ",
-    "nome": "DEXAMETASONA 4 MG"
+    "nome": "DEXAMETASONA 4 MG",
+    "cod_item": "305002004"
   },
   {
     "id": "cZkjb6ekCAf0hUUOMGG8",
-    "nome": "TRAMADOL 100 MG"
+    "nome": "TRAMADOL 100 MG",
+    "cod_item": "21001091"
   },
   {
     "id": "cakU0oklJZyYSMnGFNcg",
-    "nome": "CARBAMAZEPINA 200 MG"
+    "nome": "CARBAMAZEPINA 200 MG",
+    "cod_item": "325028003"
   },
   {
     "id": "cdd5bqfYbZjz16zbssMF",
-    "nome": "WHEY PROTEIN ISOLADO"
+    "nome": "WHEY PROTEIN ISOLADO",
+    "cod_item": "311002004"
   },
   {
     "id": "copRiLYkVUAD7i5tF34k",
-    "nome": "PREDNISONA 20 MG"
+    "nome": "PREDNISONA 20 MG",
+    "cod_item": "308002001"
   },
   {
     "id": "d77QCKVJMo4pdczLgSJc",
-    "nome": "PANT SPRAY"
+    "nome": "PANT SPRAY",
+    "cod_item": "21001107"
   },
   {
     "id": "d7Qmp5e4mHUyfNt69zLf",
-    "nome": "DEXCLORFENIRAMINA, MALEATO  2MG/5ML - SUSPENSÃO"
+    "nome": "DEXCLORFENIRAMINA, MALEATO  2MG/5ML - SUSPENSÃO",
+    "cod_item": "7000004"
   },
   {
     "id": "d9AIZYtb5aMsP6l2cAmD",
-    "nome": "MORFINA 10MG/ML INJ"
+    "nome": "MORFINA 10MG/ML INJ",
+    "cod_item": "5000049"
   },
   {
     "id": "dF3BBxERCJvIS4SdjJC8",
-    "nome": "LIDOCAINA 2% - S/ VASO - SOL. INJETAVEL 20ML"
+    "nome": "LIDOCAINA 2% - S/ VASO - SOL. INJETAVEL 20ML",
+    "cod_item": 5000053
   },
   {
     "id": "dcZSnn9VVHDwO4sH80fR",
-    "nome": "RIVAROXABANA 15 MG (XARELTO)"
+    "nome": "RIVAROXABANA 15 MG (XARELTO)",
+    "cod_item": "303007005"
   },
   {
     "id": "eV40Kyk4KiHjgGNwcqNh",
-    "nome": "CICLOBENZAPRINA 5MG"
+    "nome": "CICLOBENZAPRINA 5MG",
+    "cod_item": "302008001"
   },
   {
     "id": "epER72KOf5ypYEAV5OzY",
-    "nome": "OTOSPORIN GOTAS"
+    "nome": "OTOSPORIN GOTAS",
+    "cod_item": 325016003
   },
   {
     "id": "eqgU7eEUBfZjrb77PoUx",
-    "nome": "METRONIDAZOL 40 MG/ML -  SUSPENSÃO ORAL"
+    "nome": "METRONIDAZOL 40 MG/ML -  SUSPENSÃO ORAL",
+    "cod_item": "2000026"
   },
   {
     "id": "f037uwL1yyxXTKHb2Ucq",
-    "nome": "CITONEURIN 5000 MCG"
+    "nome": "CITONEURIN 5000 MCG",
+    "cod_item": "230001014"
   },
   {
     "id": "f1dhwvEs33hsP4m9jmGo",
-    "nome": "SINVASTATINA 20MG"
+    "nome": "SINVASTATINA 20MG",
+    "cod_item": "222001001"
   },
   {
     "id": "f8EgkDTSxytcUmT3UI0m",
-    "nome": "PREVDERM SPRAY 50ML"
+    "nome": "PREVDERM SPRAY 50ML",
+    "cod_item": "21001103"
   },
   {
     "id": "f8NNdH8aF1euLyGE2bO7",
-    "nome": "GUACO XAROPE - MIKANIA GLOMERATA 117,5MG/ML"
+    "nome": "GUACO XAROPE - MIKANIA GLOMERATA 117,5MG/ML",
+    "cod_item": "325021001"
   },
   {
     "id": "f8zCDljUelFa34N0PZVD",
-    "nome": "PREGABALINA 100MG - PREBICTAL"
+    "nome": "PREGABALINA 100MG - PREBICTAL",
+    "cod_item": "325010001"
   },
   {
     "id": "fI6qMpBroVBvrnM2JoLv",
-    "nome": "FENTANILA,CITRATO 78,5MCG/5ML EQUIVALENTE A 50MCG"
+    "nome": "FENTANILA,CITRATO 78,5MCG/5ML EQUIVALENTE A 50MCG",
+    "cod_item": "5000056"
   },
   {
     "id": "fLR6th4X1aGE29qtpUSM",
-    "nome": "ENALAPRIL 10MG"
+    "nome": "ENALAPRIL 10MG",
+    "cod_item": "1000016"
   },
   {
     "id": "fMMqoOoPvJek02vJbgY9",
-    "nome": "CROMOLERG 4%"
+    "nome": "CROMOLERG 4%",
+    "cod_item": "325013001"
   },
   {
     "id": "frT5Fu0320ZFs4jzPO7n",
-    "nome": "CETOCONAZOL + BETAMETASONA POMADA 30 GR"
+    "nome": "CETOCONAZOL + BETAMETASONA POMADA 30 GR",
+    "cod_item": "2000134"
   },
   {
     "id": "g7kPWITmB5qXakYULPLr",
-    "nome": "TROK-G (BETAMETASONA+ GENTAMICINA) POMADA"
+    "nome": "TROK-G (BETAMETASONA+ GENTAMICINA) POMADA",
+    "cod_item": "313001003"
   },
   {
     "id": "gRBgFTwAwyJQ9qHFx69P",
-    "nome": "VITAMINA D 15.000UI"
+    "nome": "VITAMINA D 15.000UI",
+    "cod_item": "230001015"
   },
   {
     "id": "gnSeaKCfKEFolV4fzoCV",
-    "nome": "METRONIDAZOL 100 MG/G - GEL VAGINAL"
+    "nome": "METRONIDAZOL 100 MG/G - GEL VAGINAL",
+    "cod_item": "2000024"
   },
   {
     "id": "guYn2KuvTsucA94611IC",
-    "nome": "LEVOMEPROMAZINA 100 MG"
+    "nome": "LEVOMEPROMAZINA 100 MG",
+    "cod_item": "5000037"
   },
   {
     "id": "hH5kbdT4dH8TlirlVuzc",
-    "nome": "RIVAROXABANA 20MG (XARELTO)"
+    "nome": "RIVAROXABANA 20MG (XARELTO)",
+    "cod_item": "55001001"
   },
   {
     "id": "hKjok85U3DK8gY3g7hHr",
-    "nome": "BUPROPIONA XL 150 MG"
+    "nome": "BUPROPIONA XL 150 MG",
+    "cod_item": "5000092"
   },
   {
     "id": "hTsr31JNAB4MwCeccZtw",
-    "nome": "ENTEROGERMINA"
+    "nome": "ENTEROGERMINA",
+    "cod_item": "306002004"
   },
   {
     "id": "hlMNyfdQfObUfJDb6Xay",
-    "nome": "CARBONATO DE CALCIO 1.250MG + VITAMINA D 400UI"
+    "nome": "CARBONATO DE CALCIO 1.250MG + VITAMINA D 400UI",
+    "cod_item": "230001019"
   },
   {
     "id": "hmfw1FMlJoVxEIEYL1vM",
-    "nome": "PARACETAMOL 10MG/ML - 1% SOLUÇÃO INJETAVEL"
+    "nome": "PARACETAMOL 10MG/ML - 1% SOLUÇÃO INJETAVEL",
+    "cod_item": 30001008
   },
   {
     "id": "hoylwhzUtDUBLYjF8Cxs",
-    "nome": "CLORETO DE POTASSIO 19,1% - 10 ML"
+    "nome": "CLORETO DE POTASSIO 19,1% - 10 ML",
+    "cod_item": "2000109"
   },
   {
     "id": "i2suyuDcW5yPuX26buMz",
-    "nome": "ADESIVO NICOTINA 14 MG"
+    "nome": "ADESIVO NICOTINA 14 MG",
+    "cod_item": "300001002"
   },
   {
     "id": "i9NplhqSxBhiZHtQ6ebL",
-    "nome": "AMIODARONA, CLORIDRATO  200 MG"
+    "nome": "AMIODARONA, CLORIDRATO  200 MG",
+    "cod_item": "325029003"
   },
   {
     "id": "iKG4SnD9CsspJWR1WJmr",
-    "nome": "DICLOFENACO 50 MG"
+    "nome": "DICLOFENACO 50 MG",
+    "cod_item": "2000014"
   },
   {
     "id": "iLEoJzUJCgl4uv4N0vge",
-    "nome": "CUTISANOL BABY 120G"
+    "nome": "CUTISANOL BABY 120G",
+    "cod_item": "325050001"
   },
   {
     "id": "iTGP1tJojpNesMsUVum8",
-    "nome": "INSULINA HUMANA REGULAR 100 UI/ML - CANETA"
+    "nome": "INSULINA HUMANA REGULAR 100 UI/ML - CANETA",
+    "cod_item": "3000007"
   },
   {
     "id": "iVuf0pYciPpzoEf4ctc2",
-    "nome": "BUSCOPAM COMPOSTO  GOTAS"
+    "nome": "BUSCOPAM COMPOSTO  GOTAS",
+    "cod_item": "2000009"
   },
   {
     "id": "idlujL1Vao4vylpbQtIL",
-    "nome": "FENOBARBITAL 100 MG"
+    "nome": "FENOBARBITAL 100 MG",
+    "cod_item": "5000003"
   },
   {
     "id": "isC33tDAfzPgkx8daBxk",
-    "nome": "TOBRAMICINA 0,3 % COLIRIO - FRASCO 5 ML"
+    "nome": "TOBRAMICINA 0,3 % COLIRIO - FRASCO 5 ML",
+    "cod_item": "315001002"
   },
   {
     "id": "it7pqJZYOwNhNwcWcmoM",
-    "nome": "TANSULOSINA, CLORIDRATO DE 0,4MG"
+    "nome": "TANSULOSINA, CLORIDRATO DE 0,4MG",
+    "cod_item": 325052001
   },
   {
     "id": "j0gZ7nQN5ImWudxsiNeH",
-    "nome": "METILFENIDATO 10 MG"
+    "nome": "METILFENIDATO 10 MG",
+    "cod_item": "11001006"
   },
   {
     "id": "j62VRBpKEKqqBJToxpsl",
-    "nome": "ESTRIOL 1MG/G - CR VAGINAL 50 GR"
+    "nome": "ESTRIOL 1MG/G - CR VAGINAL 50 GR",
+    "cod_item": "9000008"
   },
   {
     "id": "j9V9pAWBKoTomzRC3Tbz",
-    "nome": "TERBUTALINA 0,5MG/ML"
+    "nome": "TERBUTALINA 0,5MG/ML",
+    "cod_item": "2000095"
   },
   {
     "id": "jQ4wIR8dfY8yHiPbtgQt",
-    "nome": "HIDROXIZINA, CLORIDRATO DE 25 MG"
+    "nome": "HIDROXIZINA, CLORIDRATO DE 25 MG",
+    "cod_item": 21001088
   },
   {
     "id": "jQ8UM1FzLtiFD2tkyZ69",
-    "nome": "FOSFATO OSELTAMIVIR 30MG - TAMIFLU"
+    "nome": "FOSFATO OSELTAMIVIR 30MG - TAMIFLU",
+    "cod_item": "301002004"
   },
   {
     "id": "jQRO7MmAoa6p5DMMI4o2",
-    "nome": "FENOBARBITAL 40 MG/ML - GOTAS"
+    "nome": "FENOBARBITAL 40 MG/ML - GOTAS",
+    "cod_item": "5000032"
   },
   {
     "id": "jQwk6R5mMWmW960m5Vnl",
-    "nome": "TORVAL CR 500MG"
+    "nome": "TORVAL CR 500MG",
+    "cod_item": 325028005
   },
   {
     "id": "jjfF12Ymg3ctXdXUlJL6",
-    "nome": "NORETISTERONA + ESTRADIOL 50 + 5 MG/ML  (MESIGYNA) INJETAVEL"
+    "nome": "NORETISTERONA + ESTRADIOL 50 + 5 MG/ML  (MESIGYNA) INJETAVEL",
+    "cod_item": "2000048"
   },
   {
     "id": "jzTGxsolJkdPBsCRChZ5",
-    "nome": "DEXCLORFENIRAMINA + BETAMETASONA SUSP ORAL 120"
+    "nome": "DEXCLORFENIRAMINA + BETAMETASONA SUSP ORAL 120",
+    "cod_item": "2000127"
   },
   {
     "id": "jzd6jHqZqOmtySjJdV6i",
-    "nome": "FRALDA DESC GERIATRICA - G"
+    "nome": "FRALDA DESC GERIATRICA - G",
+    "cod_item": "21001066"
   },
   {
     "id": "kFJysROwdeAp4erM7LRF",
-    "nome": "FOSFATO OSELTAMIVIR 75 MG - TAMIFLU"
+    "nome": "FOSFATO OSELTAMIVIR 75 MG - TAMIFLU",
+    "cod_item": "301002005"
   },
   {
     "id": "kHlWJ8fY4vwzQIOXJ1Is",
-    "nome": "PARACETAMOL + CODEINA 500/30 MG"
+    "nome": "PARACETAMOL + CODEINA 500/30 MG",
+    "cod_item": "30001007"
   },
   {
     "id": "kM4qa8AnXykceTWAPUCp",
-    "nome": "METOPROLOL 50 MG"
+    "nome": "METOPROLOL 50 MG",
+    "cod_item": "8001005"
   },
   {
     "id": "kU8QpzKxtjaY0v94e2Ah",
-    "nome": "CILOSTAZOL 100 MG"
+    "nome": "CILOSTAZOL 100 MG",
+    "cod_item": "8001001"
   },
   {
     "id": "kashC63gTTchGL8kIYQC",
-    "nome": "LEVOTIROXINA SODICA 50MCG"
+    "nome": "LEVOTIROXINA SODICA 50MCG",
+    "cod_item": "21001033"
   },
   {
     "id": "kgQ9sYeJ4OWrT755hs0z",
-    "nome": "HIDROXIDO DE ALUMINIO 6.2% SUSP"
+    "nome": "HIDROXIDO DE ALUMINIO 6.2% SUSP",
+    "cod_item": "2000020"
   },
   {
     "id": "kkbz0CfGMQEOAWoZ4RZb",
-    "nome": "CLORPROMAZINA 25MG/5ML INJ"
+    "nome": "CLORPROMAZINA 25MG/5ML INJ",
+    "cod_item": "5000044"
   },
   {
     "id": "kq9VySRyLdzDQowcy9d3",
-    "nome": "TRIADE MULHER"
+    "nome": "TRIADE MULHER",
+    "cod_item": "325004001"
   },
   {
     "id": "kqzFEXwpWY3zHV8lLX6e",
-    "nome": "DIFENIDRAMINA 50 MG/ML - AMP"
+    "nome": "DIFENIDRAMINA 50 MG/ML - AMP",
+    "cod_item": "5000091"
   },
   {
     "id": "lCxLLsVmgAzF6c5ZLhhO",
-    "nome": "AGULHA PARA CANETA DE INSULINA 6MM"
+    "nome": "AGULHA PARA CANETA DE INSULINA 6MM",
+    "cod_item": "321001392"
   },
   {
     "id": "lLXhdANMDoWuTFfYJwxz",
-    "nome": "DIPIRONA SÓDICA COMPRIMIDO 500MG"
+    "nome": "DIPIRONA SÓDICA COMPRIMIDO 500MG",
+    "cod_item": "323001001"
   },
   {
     "id": "lOsNDhedY93wyQ7Etaml",
-    "nome": "HIDRALAZINA 20 MG/ML - AMPOLAS"
+    "nome": "HIDRALAZINA 20 MG/ML - AMPOLAS",
+    "cod_item": "1000015"
   },
   {
     "id": "lPmeAOrAm4kLKzL1BPdM",
-    "nome": "METOCLOPRAMIDA 10 MG"
+    "nome": "METOCLOPRAMIDA 10 MG",
+    "cod_item": "2000023"
   },
   {
     "id": "laUjsp2lCVGBXDKyzGSs",
-    "nome": "DOMPERIDONA 10 MG"
+    "nome": "DOMPERIDONA 10 MG",
+    "cod_item": "21001073"
   },
   {
     "id": "lh1xzHTWBVh1vAafYUgF",
-    "nome": "INSULINA HUMANA NPH 100 UI/ML - FRASCO 10 ML"
+    "nome": "INSULINA HUMANA NPH 100 UI/ML - FRASCO 10 ML",
+    "cod_item": "3000004"
   },
   {
     "id": "ltbinnvu0lu0cnaSB0bP",
-    "nome": "CLORPROMAZINA, CLORIDRATO 100MG"
+    "nome": "CLORPROMAZINA, CLORIDRATO 100MG",
+    "cod_item": "5000014"
   },
   {
     "id": "mANpDXSSFZd0M5du4cBi",
-    "nome": "STOMAHESIVE PÓ PROTETOR - CONVATEC"
+    "nome": "STOMAHESIVE PÓ PROTETOR - CONVATEC",
+    "cod_item": 21001113
   },
   {
     "id": "mOJs6KQVUrIzz8qoXMpo",
-    "nome": "BOLSA DE OSTOMIA DRENAVEL SOFT CONVEXA"
+    "nome": "BOLSA DE OSTOMIA DRENAVEL SOFT CONVEXA",
+    "cod_item": "21001099"
   },
   {
     "id": "mYWSI6qhLbYnXUOwL3dF",
-    "nome": "GLIBENCLAMIDA 5 MG."
+    "nome": "GLIBENCLAMIDA 5 MG.",
+    "cod_item": "3000001"
   },
   {
     "id": "miAZZOoWSsK0FgeCbq7Z",
-    "nome": "FINASTERIDA 5 MG"
+    "nome": "FINASTERIDA 5 MG",
+    "cod_item": "307001002"
   },
   {
     "id": "mls83w1ZCh6YhBs7oVrH",
-    "nome": "TROPHIC 1.5 1L"
+    "nome": "TROPHIC 1.5 1L",
+    "cod_item": 311002009
   },
   {
     "id": "myPAPofwR78TcwuRQU5Q",
-    "nome": "ACIDO FUSIDICO + VALERATO DE BETAMETASONA CREME"
+    "nome": "ACIDO FUSIDICO + VALERATO DE BETAMETASONA CREME",
+    "cod_item": "313004003"
   },
   {
     "id": "n0dTIBdct2HUyM0wi0FJ",
-    "nome": "CLONIDINA 0,150MG - ATENSINA"
+    "nome": "CLONIDINA 0,150MG - ATENSINA",
+    "cod_item": "1000024"
   },
   {
     "id": "nEq5WIQhXQD8Q4nJagV7",
-    "nome": "MIDAZOLAM, CLORIDRATO 5MG/ML 3ML"
+    "nome": "MIDAZOLAM, CLORIDRATO 5MG/ML 3ML",
+    "cod_item": "5000054"
   },
   {
     "id": "naaH0NxliZ2svPYVowmq",
-    "nome": "AMINOFILINA 24 MG/ML"
+    "nome": "AMINOFILINA 24 MG/ML",
+    "cod_item": "325033002"
   },
   {
     "id": "neWbBxmpb1uK3yqI02Ak",
-    "nome": "METFORMINA, CLORIDRATO 850MG"
+    "nome": "METFORMINA, CLORIDRATO 850MG",
+    "cod_item": "3000002"
   },
   {
     "id": "nlIgJvEOfmfrNCXtk5JP",
-    "nome": "FOSFOMICINA TROMETAMOL - MONURIL"
+    "nome": "FOSFOMICINA TROMETAMOL - MONURIL",
+    "cod_item": "22001015"
   },
   {
     "id": "nunhBb0BB7PB1UfCMkV4",
-    "nome": "INSULINA HUMANA NPH - REUTILIZÁVEL"
+    "nome": "INSULINA HUMANA NPH - REUTILIZÁVEL",
+    "cod_item": 325005002
   },
   {
     "id": "o7HvAhyNj2Pv8TYImrpA",
-    "nome": "NITROPRUSSETO DE SÓDIO 25 MG/ML - NITROP"
+    "nome": "NITROPRUSSETO DE SÓDIO 25 MG/ML - NITROP",
+    "cod_item": "5000062"
   },
   {
     "id": "oOSKKL6DZly1msHsW0nt",
-    "nome": "NORIPURUM INJ"
+    "nome": "NORIPURUM INJ",
+    "cod_item": "304002002"
   },
   {
     "id": "oPwsJ7DEpjI052B6KZ9u",
-    "nome": "PARACETAMOL + TRAMADOL 325/37,5MG"
+    "nome": "PARACETAMOL + TRAMADOL 325/37,5MG",
+    "cod_item": "30001001"
   },
   {
     "id": "oVcF7SMlvyWE223ioOTQ",
-    "nome": "INELATTE 800DKM"
+    "nome": "INELATTE 800DKM",
+    "cod_item": "325004002"
   },
   {
     "id": "ol4yCJRhKCHOYv97cahK",
-    "nome": "SULFATO FERROSO 40 MG"
+    "nome": "SULFATO FERROSO 40 MG",
+    "cod_item": "2000046"
   },
   {
     "id": "oou9OOb4yTjwjsHmjYpY",
-    "nome": "TRAMADOL 50MG/ML(TRAMAL)- AMP"
+    "nome": "TRAMADOL 50MG/ML(TRAMAL)- AMP",
+    "cod_item": "5000052"
   },
   {
     "id": "oppyhjAgTPvG484JeI2A",
-    "nome": "CLONAZEPAM 2,5 MG/ ML - GOTAS"
+    "nome": "CLONAZEPAM 2,5 MG/ ML - GOTAS",
+    "cod_item": "5000022"
   },
   {
     "id": "pLVijZfRjAt2PxJi19K2",
-    "nome": "VENLAFAXINA 75 MG"
+    "nome": "VENLAFAXINA 75 MG",
+    "cod_item": "5000068"
   },
   {
     "id": "pS5kc4NsMVglyr5BNufS",
-    "nome": "NUTREN SENIOR"
+    "nome": "NUTREN SENIOR",
+    "cod_item": "311001021"
   },
   {
     "id": "pdEYEThXGeqCF5ph3eLi",
-    "nome": "QUETIAPINA 100MG"
+    "nome": "QUETIAPINA 100MG",
+    "cod_item": "325009001"
   },
   {
     "id": "pkmBFOM4VT7G1L07Sp0E",
-    "nome": "NUTRASENIOR 400 GR"
+    "nome": "NUTRASENIOR 400 GR",
+    "cod_item": "230001013"
   },
   {
     "id": "qM4eiW1UUj74cyk0dQfU",
-    "nome": "DESVENLAFAXINA 50MG"
+    "nome": "DESVENLAFAXINA 50MG",
+    "cod_item": "325001002"
   },
   {
     "id": "qSoB7pUt1OVt894BZZH5",
-    "nome": "INSULINA TRESIBA FLEX PEN"
+    "nome": "INSULINA TRESIBA FLEX PEN",
+    "cod_item": "23001003"
   },
   {
     "id": "qYVb2RxUj8eksNE8sqDH",
-    "nome": "HEPARINA SÓDICA 5.000 UI"
+    "nome": "HEPARINA SÓDICA 5.000 UI",
+    "cod_item": "21001053"
   },
   {
     "id": "qZ0Y984MzRDZ5CtFU2Bn",
-    "nome": "CEFALEXINA SUSPENSÃO 250 MG/ 5 ML"
+    "nome": "CEFALEXINA SUSPENSÃO 250 MG/ 5 ML",
+    "cod_item": "2000011"
   },
   {
     "id": "qZAR3Di8tBcylkKweFGV",
-    "nome": "DERMA PROTECT SPRAY BARREIRA 28ML"
+    "nome": "DERMA PROTECT SPRAY BARREIRA 28ML",
+    "cod_item": 21001115
   },
   {
     "id": "qZePRkFgZq3FXOubnNL7",
-    "nome": "DRAMIN  GOTAS"
+    "nome": "DRAMIN  GOTAS",
+    "cod_item": "11001002"
   },
   {
     "id": "qlbzechfleRNu8aWDFCN",
-    "nome": "BROMOPRIDA GTS"
+    "nome": "BROMOPRIDA GTS",
+    "cod_item": "325040003"
   },
   {
     "id": "r4lFtJY7p5ANLzjbGH0G",
-    "nome": "CILODEX COLIRIO"
+    "nome": "CILODEX COLIRIO",
+    "cod_item": "315003001"
   },
   {
     "id": "r6C45DUqzS10MjnhEgBZ",
-    "nome": "NIMODIPINO 30 MG"
+    "nome": "NIMODIPINO 30 MG",
+    "cod_item": "8001002"
   },
   {
     "id": "rBskahJz6g5RABUMWQoL",
-    "nome": "CIPROFLOXACINO + DEXAMETASONA COLIRIO"
+    "nome": "CIPROFLOXACINO + DEXAMETASONA COLIRIO",
+    "cod_item": "315001003"
   },
   {
     "id": "rIRKDbYkd0fXEmm5HQG8",
-    "nome": "OXCARBAMAZEPINA 60 MG/ML SUSP ORAL"
+    "nome": "OXCARBAMAZEPINA 60 MG/ML SUSP ORAL",
+    "cod_item": "5000080"
   },
   {
     "id": "rO5a7DqUmWIdLYaheF38",
-    "nome": "LEITE APTAMIL AR 800G"
+    "nome": "LEITE APTAMIL AR 800G",
+    "cod_item": "311001022"
   },
   {
     "id": "rgQOvN0RRWSaldUyBT0B",
-    "nome": "CLORETO DE SODIO 20% - 10 ML"
+    "nome": "CLORETO DE SODIO 20% - 10 ML",
+    "cod_item": "2000108"
   },
   {
     "id": "rofyzlhGQDsozDHntD6i",
-    "nome": "OXITOCINA 5UI/ML"
+    "nome": "OXITOCINA 5UI/ML",
+    "cod_item": "2000094"
   },
   {
     "id": "s1youPS76B4uu4uLDGr7",
-    "nome": "ACECLOFENACO 100MG - PROFLAM"
+    "nome": "ACECLOFENACO 100MG - PROFLAM",
+    "cod_item": 325019006
   },
   {
     "id": "sGh0O1Jvq5Yo7Vydpqme",
-    "nome": "DORZOLAMIDA 2%"
+    "nome": "DORZOLAMIDA 2%",
+    "cod_item": "328001001"
   },
   {
     "id": "sKRDOYZsRDOmNzMYS4rU",
-    "nome": "CARVEDILOL 6,25 MG"
+    "nome": "CARVEDILOL 6,25 MG",
+    "cod_item": "303002004"
   },
   {
     "id": "sPeFvTIvHlI3AFq3vPr4",
-    "nome": "PANTOPRAZOL 40 MG"
+    "nome": "PANTOPRAZOL 40 MG",
+    "cod_item": "21001074"
   },
   {
     "id": "sRs0vhiQkqj8lhYZN9BE",
-    "nome": "SAIS P/REIDRATAÇÃO ORAL"
+    "nome": "SAIS P/REIDRATAÇÃO ORAL",
+    "cod_item": "2000033"
   },
   {
     "id": "t0p2swfvePTJxuVJXfYd",
-    "nome": "CEFALEXINA 500 MG"
+    "nome": "CEFALEXINA 500 MG",
+    "cod_item": "2000010"
   },
   {
     "id": "tHeSKqz1sOULWxlAZwJn",
-    "nome": "ROSUVASTATINA 10MG + EZETIMIBA 10MG"
+    "nome": "ROSUVASTATINA 10MG + EZETIMIBA 10MG",
+    "cod_item": "325017001"
   },
   {
     "id": "tHxklSdqEcuq0sDvDzUC",
-    "nome": "EPINEFRINA 1MG/ML"
+    "nome": "EPINEFRINA 1MG/ML",
+    "cod_item": "2000087"
   },
   {
     "id": "tYrAayXKyhdcCSd5lZ38",
-    "nome": "SORO NASAL ADULTO -30 ML"
+    "nome": "SORO NASAL ADULTO -30 ML",
+    "cod_item": "2000049"
   },
   {
     "id": "teHm1T8NTFNIM8VufxaC",
-    "nome": "AMOXICILINA + CLAVULANATO 1000MG + 200MG - INJETÁVEL"
+    "nome": "AMOXICILINA + CLAVULANATO 1000MG + 200MG - INJETÁVEL",
+    "cod_item": 301001002
   },
   {
     "id": "tfYQHlODBQyrfgYDFV8z",
-    "nome": "ATROPINA, SULFATO 0,50MG/ML"
+    "nome": "ATROPINA, SULFATO 0,50MG/ML",
+    "cod_item": "325037001"
   },
   {
     "id": "tzQ4C6pMBOdjd2ufENzP",
-    "nome": "FORXIGA 10MG (DAPAGLIFLOZINA)"
+    "nome": "FORXIGA 10MG (DAPAGLIFLOZINA)",
+    "cod_item": "325005001"
   },
   {
     "id": "u6NiCB3Fy3nJwt1AmEPV",
-    "nome": "POMADA PARA ASSADURA ( NIST+ OX ZINCO) PMD"
+    "nome": "POMADA PARA ASSADURA ( NIST+ OX ZINCO) PMD",
+    "cod_item": "313001001"
   },
   {
     "id": "uClosV3HaMp9DldTHKYh",
-    "nome": "CIMEGRIPE GTS"
+    "nome": "CIMEGRIPE GTS",
+    "cod_item": "325003001"
   },
   {
     "id": "uDvaQ9SzuhXuU7N7lyTv",
-    "nome": "LEVODOPA + BENSERAZIDA 200/50MG - PROLOPA"
+    "nome": "LEVODOPA + BENSERAZIDA 200/50MG - PROLOPA",
+    "cod_item": "327001001"
   },
   {
     "id": "uFj6cksYM6KHReRG04u8",
-    "nome": "CERUMIN GOTAS"
+    "nome": "CERUMIN GOTAS",
+    "cod_item": "21004006"
   },
   {
     "id": "uHIV7my2J7Ystwu6HBX4",
-    "nome": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ EV"
+    "nome": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ EV",
+    "cod_item": "22001012"
   },
   {
     "id": "uHVolVSkeMREgNE4jTrn",
-    "nome": "LACTULOSE XAROPE 120 ML"
+    "nome": "LACTULOSE XAROPE 120 ML",
+    "cod_item": "21001035"
   },
   {
     "id": "uHiGYd4Tj3E7yjvz30gF",
-    "nome": "BACLOFENO 10 MG"
+    "nome": "BACLOFENO 10 MG",
+    "cod_item": "21001064"
   },
   {
     "id": "uO50UzljfVkhD7L9GbOA",
-    "nome": "LEITE NINHO FASE I"
+    "nome": "LEITE NINHO FASE I",
+    "cod_item": "311001023"
   },
   {
     "id": "uVFNQ4JFpSja2q7jKL9X",
-    "nome": "OLMESARTANA 40MG"
+    "nome": "OLMESARTANA 40MG",
+    "cod_item": "1000020"
   },
   {
     "id": "udYhIoyKNpLKX8HfhFBr",
-    "nome": "ITRACONAZOL 100 MG"
+    "nome": "ITRACONAZOL 100 MG",
+    "cod_item": "301004001"
   },
   {
     "id": "utU4LiKaP001g9zKHEDE",
-    "nome": "AMOXICILINA 500 MG - CAPSULA"
+    "nome": "AMOXICILINA 500 MG - CAPSULA",
+    "cod_item": "325016008"
   },
   {
     "id": "uuTf5jnVMDohQir4wJL5",
-    "nome": "FUROSEMIDA 40MG"
+    "nome": "FUROSEMIDA 40MG",
+    "cod_item": "2000019"
   },
   {
     "id": "vL8EAXUgM0FUvUvk72xH",
-    "nome": "VITAMINA E"
+    "nome": "VITAMINA E",
+    "cod_item": "325004003"
   },
   {
     "id": "vO5gbWEY8MVmts4Jseyu",
-    "nome": "DESLORATADINA SOLUÇÃO ORAL"
+    "nome": "DESLORATADINA SOLUÇÃO ORAL",
+    "cod_item": "10001010"
   },
   {
     "id": "vTWeZVPLEMHVGEfDiGWW",
-    "nome": "NORTRIPTILINA, CLORIDRATO 25 MG"
+    "nome": "NORTRIPTILINA, CLORIDRATO 25 MG",
+    "cod_item": "5000028"
   },
   {
     "id": "vlFzQC3jr9VYs8QlcJUP",
-    "nome": "CEFTRIAXONA 500 MG INJ -IM"
+    "nome": "CEFTRIAXONA 500 MG INJ -IM",
+    "cod_item": "2000137"
   },
   {
     "id": "vt4z05tS2yn7UPXqkk9b",
-    "nome": "BISSULFATO DE CLOPIDOGREL 75 MG"
+    "nome": "BISSULFATO DE CLOPIDOGREL 75 MG",
+    "cod_item": "325023002"
   },
   {
     "id": "vtWQFfYE9BRN22pP6vhX",
-    "nome": "DROPROPIZINA 1,5 MG/ML -XAROPE PEDIATRICO"
+    "nome": "DROPROPIZINA 1,5 MG/ML -XAROPE PEDIATRICO",
+    "cod_item": "2000144"
   },
   {
     "id": "vxmX41cc6AwUL7QpkUBd",
-    "nome": "LEITE NESTOGENO 1 - LATA 800G"
+    "nome": "LEITE NESTOGENO 1 - LATA 800G",
+    "cod_item": "311001011"
   },
   {
     "id": "wENvJDJOT9AwaFXorjAx",
-    "nome": "PAROXETINA 20 MG"
+    "nome": "PAROXETINA 20 MG",
+    "cod_item": "5000064"
   },
   {
     "id": "wK3Yyars5fu0nlGdl3if",
-    "nome": "TESTE RAPIDO COMBO (COVID-19/ INFLUENZA A/B)"
+    "nome": "TESTE RAPIDO COMBO (COVID-19/ INFLUENZA A/B)",
+    "cod_item": "321002001"
   },
   {
     "id": "wMnIKsxuJ2sXAXofgN8u",
-    "nome": "DOXICICLINA 100MG"
+    "nome": "DOXICICLINA 100MG",
+    "cod_item": "22001013"
   },
   {
     "id": "wYKcTaRPyKwkVpsld96e",
-    "nome": "METOPROLOL 1 MG/ML - AMPOLA"
+    "nome": "METOPROLOL 1 MG/ML - AMPOLA",
+    "cod_item": "8001006"
   },
   {
     "id": "weDLu8yMe9zQ9ZRwtB5I",
-    "nome": "SALBUTAMOL GOTAS"
+    "nome": "SALBUTAMOL GOTAS",
+    "cod_item": "305002007"
   },
   {
     "id": "wj1wvSdHHIEhvCtxudwC",
-    "nome": "IZIZ C/28"
+    "nome": "IZIZ C/28",
+    "cod_item": "330001001"
   },
   {
     "id": "wqdeGhLdjAcVL5GMgUma",
-    "nome": "FLUTINOL COLIRIO"
+    "nome": "FLUTINOL COLIRIO",
+    "cod_item": "10001009"
   },
   {
     "id": "wtl0kgVnqfSuETWPbnHn",
-    "nome": "DECONGEX PLUS GOTAS"
+    "nome": "DECONGEX PLUS GOTAS",
+    "cod_item": "11001004"
   },
   {
     "id": "wtr0CaAaSl2cof3pNgSg",
-    "nome": "LISDEXANFETAMINA, DIMESILATO DE 30MG - VENVANSE"
+    "nome": "LISDEXANFETAMINA, DIMESILATO DE 30MG - VENVANSE",
+    "cod_item": "325012001"
   },
   {
     "id": "wztx8Q1VDttKSbkooGSk",
-    "nome": "HALOPERIDOL 5MG"
+    "nome": "HALOPERIDOL 5MG",
+    "cod_item": "5000006"
   },
   {
     "id": "x4QGE3GI8siDvr0fhbJe",
-    "nome": "OFTPRED COLIRIO"
+    "nome": "OFTPRED COLIRIO",
+    "cod_item": "315002001"
   },
   {
     "id": "x8EtteJtDQ4D0WWostjL",
-    "nome": "CATETER VENOSO CENTRAL DUPLO LUMEN"
+    "nome": "CATETER VENOSO CENTRAL DUPLO LUMEN",
+    "cod_item": 321003007
   },
   {
     "id": "xEhwvYJ4FwtH42Rv1IHS",
-    "nome": "VITAMINA D 200 UI - GOTAS"
+    "nome": "VITAMINA D 200 UI - GOTAS",
+    "cod_item": "311001002"
   },
   {
     "id": "xQcxq0ZdKU2JWtz59hFb",
-    "nome": "OMEPRAZOL 20MG"
+    "nome": "OMEPRAZOL 20MG",
+    "cod_item": "12001001"
   },
   {
     "id": "xX9XYHMqDhL709Xoijq1",
-    "nome": "DEXAMETASONA 0,5 MG/5ML- ELIXIR"
+    "nome": "DEXAMETASONA 0,5 MG/5ML- ELIXIR",
+    "cod_item": "10001005"
   },
   {
     "id": "xtQU4HvTwg2nMpQNOpUP",
-    "nome": "CETOCONAZOL 200 MG"
+    "nome": "CETOCONAZOL 200 MG",
+    "cod_item": "301004002"
   },
   {
     "id": "xz6Trih0Sxq0yUOakek3",
-    "nome": "ESPAÇADOR P/ MEDICAMENTO ADULTO E INFANTILL"
+    "nome": "ESPAÇADOR P/ MEDICAMENTO ADULTO E INFANTILL",
+    "cod_item": "321001097"
   },
   {
     "id": "yBHjvD2L6GLyH0gEBXdu",
-    "nome": "PROMETAZINA 25 MG"
+    "nome": "PROMETAZINA 25 MG",
+    "cod_item": "5000007"
   },
   {
     "id": "yJradAtpCopZLZNkgSMR",
-    "nome": "VITAMINA D3 7.000 UI"
+    "nome": "VITAMINA D3 7.000 UI",
+    "cod_item": "230001001"
   },
   {
     "id": "yrbJzRyT8qnBkYgIs2By",
-    "nome": "METILDOPA 250 MG"
+    "nome": "METILDOPA 250 MG",
+    "cod_item": "1000006"
   },
   {
     "id": "z8FpyOQhskRZxFO2Z9EC",
-    "nome": "NEOCATE LCP"
+    "nome": "NEOCATE LCP",
+    "cod_item": "311002002"
   },
   {
     "id": "zRVPai9bnGs9hFlv8XlP",
-    "nome": "LEITE NAN COMFOR 2 - LATA 800 G"
+    "nome": "LEITE NAN COMFOR 2 - LATA 800 G",
+    "cod_item": "311001005"
   },
   {
     "id": "zSXnDQ9qnZJo8cIe8rSF",
-    "nome": "DULOXETINA, CLORIDRATO 60MG"
+    "nome": "DULOXETINA, CLORIDRATO 60MG",
+    "cod_item": "228001004"
   },
   {
     "id": "zYuIiP0InsxKPBYKgSDO",
-    "nome": "CLONIDINA, CLORIDRATO DE 150MCG/ML"
+    "nome": "CLONIDINA, CLORIDRATO DE 150MCG/ML",
+    "cod_item": "5000093"
   },
   {
     "id": "zcaYTVrhInInu8osSNrr",
-    "nome": "ALBENDAZOL 40 MG/ML FRASCO 10 ML"
+    "nome": "ALBENDAZOL 40 MG/ML FRASCO 10 ML",
+    "cod_item": "325031001"
   },
   {
     "id": "ziyd9TdifUfKlqb4HLaR",
-    "nome": "CIMETIDINA 200MG COMPRIMIDO"
+    "nome": "CIMETIDINA 200MG COMPRIMIDO",
+    "cod_item": "2000012"
   },
   {
     "id": "ztuXjF3ARhOwvd6zjUTM",
-    "nome": "SUSTAGEN ADULTOS+"
+    "nome": "SUSTAGEN ADULTOS+",
+    "cod_item": "230001018"
   }
 ]

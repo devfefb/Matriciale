@@ -6,7 +6,7 @@
  * Executar com: npx ts-node "src/scripts/testes/testar-fluxo-completo-2etapas.ts"
  */
 
-import { atualizarCamposCalculadosNoFirestore } from './[MAIN] executar-calculos';
+import { atualizarCamposCalculadosNoFirestore } from '../core/[MAIN] executar-calculos';
 
 async function testarFluxoCompleto() {
   console.log('╔════════════════════════════════════════════════════════════════════╗');

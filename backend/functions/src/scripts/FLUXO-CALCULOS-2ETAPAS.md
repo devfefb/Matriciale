@@ -173,7 +173,7 @@ Função principal:
 
 **Script 1**: Execução com unidades especificadas
 ```bash
-npx ts-node "src/scripts/testes/[MAIN] executar-calculos.ts"
+npx ts-node "src/scripts/core/[MAIN] executar-calculos.ts"
 ```
 
 **Script 2**: Teste completo (2 cenários)
