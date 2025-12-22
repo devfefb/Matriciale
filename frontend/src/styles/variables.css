@@ -22,14 +22,14 @@
   --btn-secondary-hover: #E04A47;
   
   /* Cores de Tabela - Status (para botões de detalhes) */
-  --status-zerado-inativo: #6A1B9A;
-  --status-zerado-dispensacao: #8D2ABB;
-  --status-4-semanas: #C52626;
-  --status-8-semanas: #F46600;
-  --status-12-semanas: #379A13;
-  --status-16-semanas: #005E00;
-  --status-16-semanas-inativo: #FFB300;
-  --status-azul-claro: #64B5F6;
-  --status-azul-escuro: #1565C0;
+  --status-zerado-inativo: #CC99FF;
+  --status-zerado-dispensacao: #C00000;
+  --status-4-semanas: #FF0000;
+  --status-8-semanas: #FF9900;
+  --status-12-semanas: #00CC00;
+  --status-16-semanas: #008000;
+  --status-16-semanas-inativo: #6600CC;
+  --status-azul-claro: #0000FF;
+  --status-azul-escuro: #000099;
 }
 

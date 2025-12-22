@@ -1,6 +1,3 @@
-
-
-
 * {
 	margin: 0;
 	padding: 0;
@@ -79,51 +76,51 @@
 
 /* Categoria Roxo - Itens Zerados */
 .color-circle-zerado-inativo {
-  background-color: #6A1B9A; /* Roxo escuro */
+  background-color: #CC99FF; /* INATIVOS ZERADOS */
 }
 
 .color-circle-zerado-dispensacao {
-  background-color: #8D2ABB; /* Roxo médio */
+  background-color: #C00000; /* ZERADOS COM DISPENSAÇÕES */
 }
 
 /* Categorias Normais */
 .color-circle2 {
-  background-color: #C5262678; /* 4 semanas */
+  background-color: #FF0000; /* ATÉ UM MÊS DE ESTOQUE (4 semanas) */
 }
 
 .color-circle3 {
-  background-color: #F4660070; /* 8 semanas */
+  background-color: #FF9900; /* ATÉ DOIS MESES DE ESTOQUE (8 semanas) */
 }
 
 .color-circle4 {
-  background-color: #379A1352; /* 12 semanas */
+  background-color: #00CC00; /* ATÉ TRÊS MESES DE ESTOQUE (12 semanas) */
 }
 
 .color-circle5 {
-  background-color: #005E0070; /* 16 semanas */
+  background-color: #008000; /* ATÉ QUATRO MESES DE ESTOQUE (16 semanas) */
 }
 
 /* Categoria Acima de 16 Semanas */
 .color-circle-azul-claro {
-  background-color: #64B5F6; /* 16-52 semanas */
+  background-color: #0000FF; /* ATÉ DOZE MESES DE ESTOQUE (16-52 semanas) */
 }
 
 .color-circle-azul-escuro {
-  background-color: #1565C0; /* >52 semanas */
+  background-color: #000099; /* ACIMA DE DOZE MESES DE ESTOQUE (>52 semanas) */
 }
 
 /* Alerta Especial */
 .color-circle-alerta {
-  background-color: #FFB300; /* 16 semanas inativo */
+  background-color: #6600CC; /* INATIVOS COM ESTOQUES (16 semanas inativo) */
   animation: pulse-circle 2s infinite;
 }
 
 @keyframes pulse-circle {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(255, 179, 0, 0.7);
+    box-shadow: 0 0 0 0 rgba(102, 0, 204, 0.7);
   }
   50% {
-    box-shadow: 0 0 0 5px rgba(255, 179, 0, 0);
+    box-shadow: 0 0 0 5px rgba(102, 0, 204, 0);
   }
 }
 
