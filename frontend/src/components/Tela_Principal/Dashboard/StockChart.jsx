@@ -59,63 +59,44 @@ const StockChart = () => {
         medicines.forEach(med => {
           const status = med.status;
           const isInativo = med.isInativo || med.tp_metodo === "3.INATIVOS";
+          const estoque = med.estoque || med.estoque_atual || 0;
           
-          // Categoria: Itens Zerados
-          if (status === 0) {
-            if (isInativo) {
-              statusCounts['INATIVOS ZERADOS']++;
-            } else {
-              statusCounts['ZERADOS COM DISPENSAÇÕES']++;
-            }
+          // Seguindo a ordem do padrão em a.txt:
+          // 1. INATIVOS COM ESTOQUE (tp_metodo="3.INATIVOS" e estoque<>0)
+          if (isInativo && estoque !== 0) {
+            statusCounts['INATIVOS COM ESTOQUES']++;
           }
-          // Categorias por meses de estoque (1 mês = 4 semanas)
-          // ATÉ UM MÊS (até 4 semanas)
+          // 2. ZERADOS INATIVOS (tp_metodo="3.INATIVOS" e estoque=0)
+          else if (isInativo && estoque === 0) {
+            statusCounts['INATIVOS ZERADOS']++;
+          }
+          // 3. ZERADOS COM DISPENSAÇÕES (status=0)
+          else if (estoque === 0) {
+            statusCounts['ZERADOS COM DISPENSAÇÕES']++;
+          }
+          // 4. ATÉ UM MÊS DE ESTOQUE (status<=4)
           else if (status <= 4) {
-            if (isInativo) {
-              statusCounts['INATIVOS COM ESTOQUES']++;
-            } else {
-              statusCounts['ATÉ UM MÊS DE ESTOQUE']++;
-            }
+            statusCounts['ATÉ UM MÊS DE ESTOQUE']++;
           }
-          // ATÉ DOIS MESES (5-8 semanas)
+          // 5. ATÉ DOIS MESES DE ESTOQUE (status<=8)
           else if (status <= 8) {
-            if (isInativo) {
-              statusCounts['INATIVOS COM ESTOQUES']++;
-            } else {
-              statusCounts['ATÉ DOIS MESES DE ESTOQUE']++;
-            }
+            statusCounts['ATÉ DOIS MESES DE ESTOQUE']++;
           }
-          // ATÉ TRÊS MESES (9-12 semanas)
+          // 6. ATÉ TRÊS MESES DE ESTOQUE (status<=12)
           else if (status <= 12) {
-            if (isInativo) {
-              statusCounts['INATIVOS COM ESTOQUES']++;
-            } else {
-              statusCounts['ATÉ TRÊS MESES DE ESTOQUE']++;
-            }
+            statusCounts['ATÉ TRÊS MESES DE ESTOQUE']++;
           }
-          // ATÉ QUATRO MESES (13-16 semanas)
+          // 7. ATÉ QUATRO MESES DE ESTOQUE (status<=16)
           else if (status <= 16) {
-            if (isInativo) {
-              statusCounts['INATIVOS COM ESTOQUES']++;
-            } else {
-              statusCounts['ATÉ QUATRO MESES DE ESTOQUE']++;
-            }
+            statusCounts['ATÉ QUATRO MESES DE ESTOQUE']++;
           }
-          // ATÉ DOZE MESES (17-52 semanas)
+          // 8. ATÉ DOZE MESES DE ESTOQUE (status<=52)
           else if (status <= 52) {
-            if (isInativo) {
-              statusCounts['INATIVOS COM ESTOQUES']++;
-            } else {
-              statusCounts['ATÉ DOZE MESES DE ESTOQUE']++;
-            }
+            statusCounts['ATÉ DOZE MESES DE ESTOQUE']++;
           }
-          // ACIMA DE DOZE MESES (> 52 semanas)
+          // 9. OUTROS COM MAIS DE DOZE MESES DE ESTOQUE (status>52)
           else {
-            if (isInativo) {
-              statusCounts['INATIVOS COM ESTOQUES']++;
-            } else {
-              statusCounts['ACIMA DE DOZE MESES DE ESTOQUE']++;
-            }
+            statusCounts['ACIMA DE DOZE MESES DE ESTOQUE']++;
           }
         });
 

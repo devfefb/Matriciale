@@ -42,10 +42,6 @@ export class MedicineService {
       if (med.estoque === 0) {
         // Estoque zerado = status 0
         status = 0;
-      } else if (!med.metodo || med.metodo === 0) {
-        // Estoque positivo mas sem método = valor alto (indica estoque sem consumo)
-        // Usa 9999 para representar "estoque sem consumo"
-        status = 9999;
       } else {
         // Ambos positivos = calcula normalmente (estoque / método)
         status = med.estoque / med.metodo;
@@ -59,7 +55,7 @@ export class MedicineService {
         tp_metodo: med.tp_metodo,
         tp_unidade_medicamento: med.tp_unidade_medicamento,
         estoque: med.estoque,
-        status: status,
+        status: Math.floor(status),
         metodo: med.metodo,
         // Indica se é inativo para facilitar a classificação no frontend
         isInativo: med.tp_metodo === "3.INATIVOS"
