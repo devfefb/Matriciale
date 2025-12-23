@@ -29,33 +29,33 @@ export async function atualizarCamposCalculadosNoFirestore(
     // ═══════════════════════════════════════════════════════════════════════
     // ETAPA 1: PREPARAÇÃO - Inserir estoque e movimentação do Cloud Storage
     // ═══════════════════════════════════════════════════════════════════════
-    console.log('╔════════════════════════════════════════════════════════════════════╗');
-    console.log('║  ETAPA 1: PREPARAÇÃO DOS DADOS (Estoque + Movimentação)          ║');
-    console.log('╚════════════════════════════════════════════════════════════════════╝\n');
+    // console.log('╔════════════════════════════════════════════════════════════════════╗');
+    // console.log('║  ETAPA 1: PREPARAÇÃO DOS DADOS (Estoque + Movimentação)          ║');
+    // console.log('╚════════════════════════════════════════════════════════════════════╝\n');
 
-    // Se unidades não foram fornecidas, busca automaticamente do Cloud Storage
-    if (!unidades || unidades.length === 0) {
-      console.log('🔍 Buscando unidades disponíveis no Cloud Storage...');
-      unidades = await listarUnidadesDisponiveis(municipioId);
+    // // Se unidades não foram fornecidas, busca automaticamente do Cloud Storage
+    // if (!unidades || unidades.length === 0) {
+    //   console.log('🔍 Buscando unidades disponíveis no Cloud Storage...');
+    //   unidades = await listarUnidadesDisponiveis(municipioId);
       
-      if (unidades.length === 0) {
-        throw new Error(`Nenhuma unidade encontrada no Cloud Storage para ${municipioId}`);
-      }
+    //   if (unidades.length === 0) {
+    //     throw new Error(`Nenhuma unidade encontrada no Cloud Storage para ${municipioId}`);
+    //   }
       
-      console.log(`✅ Unidades encontradas: ${unidades.join(', ')}\n`);
-    }
+    //   console.log(`✅ Unidades encontradas: ${unidades.join(', ')}\n`);
+    // }
 
-    // Preparar dados: buscar JSONs e inserir estoque + movimentação
-    const resultadoPreparacao = await prepararDadosParaCalculos(municipioId, unidades);
+    // // Preparar dados: buscar JSONs e inserir estoque + movimentação
+    // const resultadoPreparacao = await prepararDadosParaCalculos(municipioId, unidades);
 
-    if (!resultadoPreparacao.sucesso) {
-      throw new Error(`Erro na preparação de dados: ${resultadoPreparacao.erro}`);
-    }
+    // if (!resultadoPreparacao.sucesso) {
+    //   throw new Error(`Erro na preparação de dados: ${resultadoPreparacao.erro}`);
+    // }
 
-    console.log('\n✅ Etapa 1 concluída com sucesso!');
-    console.log(`📊 Unidades processadas: ${resultadoPreparacao.unidades_processadas}`);
-    console.log(`📊 Medicamentos atualizados: ${resultadoPreparacao.total_medicamentos_atualizados}`);
-    console.log(`📊 Medicamentos zerados: ${resultadoPreparacao.total_medicamentos_zerados}\n`);
+    // console.log('\n✅ Etapa 1 concluída com sucesso!');
+    // console.log(`📊 Unidades processadas: ${resultadoPreparacao.unidades_processadas}`);
+    // console.log(`📊 Medicamentos atualizados: ${resultadoPreparacao.total_medicamentos_atualizados}`);
+    // console.log(`📊 Medicamentos zerados: ${resultadoPreparacao.total_medicamentos_zerados}\n`);
 
     // ═══════════════════════════════════════════════════════════════════════
     // ETAPA 2: CÁLCULOS - Calcular campos restantes
@@ -115,7 +115,6 @@ export async function atualizarCamposCalculadosNoFirestore(
             "maximo": camposCalculados.maximo,
             "metodo": camposCalculados.metodo,
             "met_est": camposCalculados.metEst,
-            // "estoque": camposCalculados.estoque, // comentei o estoque pois ele ja é inserido de antemão no processamento
             "reposicao": camposCalculados.reposicao,
             "tp_metodo": camposCalculados.tp_metodo,
 
@@ -147,9 +146,9 @@ export async function atualizarCamposCalculadosNoFirestore(
     console.log('📊 RESUMO GERAL:');
     console.log('─'.repeat(70));
     console.log('ETAPA 1 - Preparação de Dados:');
-    console.log(`  ✅ Unidades processadas: ${resultadoPreparacao.unidades_processadas}`);
-    console.log(`  ✅ Medicamentos atualizados: ${resultadoPreparacao.total_medicamentos_atualizados}`);
-    console.log(`  ⚠️  Medicamentos zerados: ${resultadoPreparacao.total_medicamentos_zerados}`);
+    // console.log(`  ✅ Unidades processadas: ${resultadoPreparacao.unidades_processadas}`);
+    // console.log(`  ✅ Medicamentos atualizados: ${resultadoPreparacao.total_medicamentos_atualizados}`);
+    // console.log(`  ⚠️  Medicamentos zerados: ${resultadoPreparacao.total_medicamentos_zerados}`);
     console.log('');
     console.log('ETAPA 2 - Cálculos:');
     console.log(`  ✅ Medicamentos processados: ${totalProcessados}`);
@@ -160,10 +159,10 @@ export async function atualizarCamposCalculadosNoFirestore(
     return {
       // Etapa 1
       preparacao: {
-        unidades_processadas: resultadoPreparacao.unidades_processadas,
-        medicamentos_atualizados: resultadoPreparacao.total_medicamentos_atualizados,
-        medicamentos_zerados: resultadoPreparacao.total_medicamentos_zerados,
-        resultados_por_unidade: resultadoPreparacao.resultados_por_unidade
+        // unidades_processadas: resultadoPreparacao.unidades_processadas,
+        // medicamentos_atualizados: resultadoPreparacao.total_medicamentos_atualizados,
+        // medicamentos_zerados: resultadoPreparacao.total_medicamentos_zerados,
+        // resultados_por_unidade: resultadoPreparacao.resultados_por_unidade
       },
       // Etapa 2
       calculos: {

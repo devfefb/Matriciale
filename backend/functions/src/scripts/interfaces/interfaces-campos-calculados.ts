@@ -90,6 +90,7 @@ export interface AnaliseReposicao {
 }
 
 export interface MedicamentoCalculado extends MedicamentoFirebase {
+  estoque?: number;
   contagens?: Contagens;
   maximo?: number;
   medianas?: Medianas;

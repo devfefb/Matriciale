@@ -546,7 +546,8 @@ export async function calcularCamposParaMedicamento(
   });
 
   const metEst = calcularMetEst(tp_metodo, metodo, unidadeId, maximo);
-  const estoque = await buscarEstoqueMedicamento(medicamento.nome, unidadeId);
+  // const estoque = await buscarEstoqueMedicamento(medicamento.nome, unidadeId);
+  const estoque = medicamento.estoque;
   const reposicao = calcularReposicao(metEst, estoque);
 
   const analise_reposicao: AnaliseReposicao = {
