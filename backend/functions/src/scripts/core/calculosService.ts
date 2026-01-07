@@ -322,18 +322,15 @@ function calcularMediana(numeros: number[]): number {
 }
 
 /**
- * Calcula todas as medianas espelhando a lógica do Excel (inclui zeros, ignora nulos).
- * Mantém a opção de alternar entre 49 e 52 semanas para o cálculo principal.
- */
-/**
- * Calcula todas as medianas com a lógica de negócio dupla e definitiva.
- * Mantém a opção de alternar entre 49 e 52 semanas.
+ * Calcula todas as medianas espelhando a lógica do Excel.
+ * CORREÇÃO: Removemos o filtro de zeros no MdTotal e MdAno para bater com a fórmula =MED().
  */
 function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[]): Medianas {
 
+  // Mapeia apenas os valores. O Excel considera ZEROS na função MED().
   const valoresComZeros = historicoSemanas.map(s => s.value);
   
-  // Para médias móveis (04 a 52), use o array COM zeros
+  // Medianas Móveis
   const md04 = calcularMediana(valoresComZeros.slice(-4)); 
   const md08 = calcularMediana(valoresComZeros.slice(-8));
   const md12 = calcularMediana(valoresComZeros.slice(-12));
@@ -341,22 +338,24 @@ function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[]): Med
   const md26 = calcularMediana(valoresComZeros.slice(-26));
   const md52 = calcularMediana(valoresComZeros.slice(-52));
   
-  // Para MdTotal e MdAno, a lógica de negócio costuma ignorar zeros (magnitude de venda quando ocorre)
-  // Mantenha o filtro APENAS se essa for a regra específica para estes dois campos.
-  const valoresSemZeros = valoresComZeros.filter(v => v > 0);
-  const mdTotal = calcularMediana(valoresSemZeros);
+  // MdTotal (DZ)
+  // Fórmula Excel: =MED(D2:DQ2) -> Considera zeros.
+  // CODIGO CORRIGIDO: Usar valoresComZeros em vez de filtrar > 0.
+  const mdTotal = calcularMediana(valoresComZeros);
 
+  // MdAno (DY)
+  // Fórmula Excel: =MED(BT2:DQ2) -> Considera zeros no range do ano.
   let mdAno = 0;
   if (historicoSemanas.length > 0) {
     const anoMaisRecente = historicoSemanas[historicoSemanas.length - 1].week.substring(0, 4);
     const valoresDoAno = historicoSemanas
       .filter(s => s.week.startsWith(anoMaisRecente))
-      .map(s => s.value)
-      .filter(v => v > 0); // Magnitude do ano também filtra zeros
+      .map(s => s.value); 
+      
+    // CODIGO CORRIGIDO: Passamos o array com zeros direto para o cálculo
     mdAno = calcularMediana(valoresDoAno);
   }
 
-  // O retorno usa a sua função `calcularMediana` que já faz o arredondamento.
   return {
     Md04: md04,
     Md08: md08,
@@ -487,10 +486,26 @@ function calcularReposicao(metEst: number, estoque: number): number {
 }
 
 function converterMovimentacoesParaHistorico(movimentacoes: { [key: string]: number }): SemanaHistorico[] {
-  const historico: SemanaHistorico[] = [];
-  const semanas = Object.keys(movimentacoes).sort();
+  // 1. Extrai as chaves (ex: "2024_08", "2023_45")
+  const chaves = Object.keys(movimentacoes);
 
-  for (const semana of semanas) {
+  if (chaves.length === 0) return [];
+
+  // 2. ORDENAÇÃO CRÍTICA
+  // Isso garante que 2023 venha antes de 2024, e semana 08 antes da 09.
+  const chavesOrdenadas = chaves.sort((a, b) => {
+    // Método seguro: divide "2024_08" em [2024, 8]
+    const [anoA, semA] = a.split('_').map(Number);
+    const [anoB, semB] = b.split('_').map(Number);
+
+    if (anoA !== anoB) return anoA - anoB; // Compara ano
+    return semA - semB; // Compara semana
+  });
+
+  // 3. Constrói o histórico ordenado
+  const historico: SemanaHistorico[] = [];
+  
+  for (const semana of chavesOrdenadas) {
     historico.push({
       week: semana,
       value: movimentacoes[semana]
@@ -499,7 +514,6 @@ function converterMovimentacoesParaHistorico(movimentacoes: { [key: string]: num
 
   return historico;
 }
-
 
 // --- FUNÇÃO PRINCIPAL DE CÁLCULO (O "Motor") ---
 /**

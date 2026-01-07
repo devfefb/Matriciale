@@ -1,0 +1,2917 @@
+=== RELATÓRIO DE DIVERGÊNCIAS ===
+Data da geração: 06/01/2026, 23:21:30
+Total de itens analisados: 467
+Total de itens com divergência: 382
+=================================
+
+--- DETALHAMENTO ---
+[1] ID: 0080eMOHAR6Xaw7KITGT | COD: 002.000.010
+   -> MdTt | JSON: 450 | TXT: 468
+---------------------------------
+[2] ID: 03xukFiKViEfrwg603S1 | COD: 315.002.002
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[3] ID: 07OsYcmU03iWz3VotUGW | COD: 325.019.002
+   -> Md52 | JSON: 0 | TXT: 10
+   -> MdAno | JSON: 0 | TXT: 10
+   -> MdTt | JSON: 0 | TXT: 10
+---------------------------------
+[4] ID: 09W43eDQzqcoQxKf9wt5 | COD: 021.001.073
+   -> Md08 | JSON: 0 | TXT: 90
+   -> Md12 | JSON: 0 | TXT: 90
+   -> Md16 | JSON: 0 | TXT: 90
+   -> Md26 | JSON: 0 | TXT: 90
+   -> Md52 | JSON: 0 | TXT: 90
+   -> MdAno | JSON: 0 | TXT: 90
+   -> MdTt | JSON: 0 | TXT: 90
+---------------------------------
+[5] ID: 0UzmCcfqoK39sEAf6Rwf | COD: 005.000.021
+   -> Metodo | JSON: 7 | TXT: 15
+   -> MetEst | JSON: 112 | TXT: 240
+   -> Md04 | JSON: 7 | TXT: 15
+   -> Md08 | JSON: 3 | TXT: 15
+   -> Md12 | JSON: 2 | TXT: 11
+   -> Md16 | JSON: 2 | TXT: 11
+   -> Md26 | JSON: 4 | TXT: 11
+   -> Md52 | JSON: 6 | TXT: 9
+   -> MdAno | JSON: 7 | TXT: 9
+   -> MdTt | JSON: 7 | TXT: 9
+---------------------------------
+[6] ID: 0ZQT8TIgDGevRLg9qYT8 | COD: 005.000.048
+   -> Md26 | JSON: 4 | TXT: 6
+   -> Md52 | JSON: 4 | TXT: 6
+   -> MdAno | JSON: 4 | TXT: 6
+   -> MdTt | JSON: 3 | TXT: 5
+---------------------------------
+[7] ID: 0ZZw2LpzKVUZeLcKDwwZ | COD: 325.034.002
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[8] ID: 0dtX2C7XcuNMQSaKg3PK | COD: 313.001.002
+   -> Metodo | JSON: 1 | TXT: 10
+   -> MetEst | JSON: 16 | TXT: 160
+   -> Md04 | JSON: 0 | TXT: 10
+   -> Md08 | JSON: 0 | TXT: 10
+   -> Md12 | JSON: 1 | TXT: 2
+   -> Md16 | JSON: 1 | TXT: 3
+   -> Md26 | JSON: 1 | TXT: 2
+   -> Md52 | JSON: 1 | TXT: 2
+   -> MdAno | JSON: 1 | TXT: 2
+   -> MdTt | JSON: 1 | TXT: 3
+---------------------------------
+[9] ID: 0h3oFBQuqfA2g5KduUMQ | COD: 002.000.039
+   -> Metodo | JSON: 3 | TXT: 4
+   -> MetEst | JSON: 48 | TXT: 64
+   -> Md04 | JSON: 2 | TXT: 3
+   -> MdTt | JSON: 3 | TXT: 4
+---------------------------------
+[10] ID: 0j02HLpxyERdvCmoU6D4 | COD: 002.000.047
+   -> Md08 | JSON: 0 | TXT: 35
+   -> Md12 | JSON: 0 | TXT: 35
+   -> Md16 | JSON: 0 | TXT: 35
+   -> Md26 | JSON: 0 | TXT: 35
+   -> Md52 | JSON: 0 | TXT: 35
+   -> MdAno | JSON: 0 | TXT: 35
+   -> MdTt | JSON: 0 | TXT: 35
+---------------------------------
+[11] ID: 0r07lukfiRG013r1NUT9 | COD: 325.016.001
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[12] ID: 0vBTBgj71echtFl8jbhc | COD: 325.005.002
+   -> Md52 | JSON: 0 | TXT: 67
+   -> MdAno | JSON: 2 | TXT: 67
+   -> MdTt | JSON: 0 | TXT: 67
+---------------------------------
+[13] ID: 13gLOOpsVgz8OroJeUOY | COD: 311.001.015
+   -> Md04 | JSON: 0 | TXT: 2
+   -> Md08 | JSON: 0 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[14] ID: 19Jxt9OroinRNtefpnXo | COD: 302.008.002
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[15] ID: 19tGQni3pqGnzpl8jpLj | COD: 325.012.001
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[16] ID: 1zOCi8SfjBWCfmohrhEM | COD: 325.027.001
+   -> Metodo | JSON: 66 | TXT: 78
+   -> MetEst | JSON: 1056 | TXT: 1248
+   -> Md16 | JSON: 66 | TXT: 72
+   -> Md26 | JSON: 66 | TXT: 78
+   -> MdTt | JSON: 48 | TXT: 60
+---------------------------------
+[17] ID: 2A3Rs9qginsrbwJ3I20Q | COD: 311.002.002
+   -> Md04 | JSON: 0 | TXT: 2
+   -> Md08 | JSON: 0 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[18] ID: 2eW3vLaiFqi3ChhSNowB | COD: 315.001.002
+   -> MdTt | JSON: 4 | TXT: 5
+---------------------------------
+[19] ID: 2n8I86Tv3rQcHMeBSFMD | COD: 021.001.103
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[20] ID: 2t7XTo7OGzG4qO7cuULT | COD: 021.001.028
+   -> MdTt | JSON: 0 | TXT: 20
+---------------------------------
+[21] ID: 2tzpAbxhQFo9r3SVRZyg | COD: 325.016.006
+   -> MdTt | JSON: 9 | TXT: 10
+---------------------------------
+[22] ID: 3HbIItfasiveaTbsyMAD | COD: 010.001.010
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[23] ID: 3MXMAwoKO7Q32Ywgtutg | COD: 325.017.001
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[24] ID: 3QTsCWQ1lntjW1fE9M7R | COD: 325.021.001
+   -> Md04 | JSON: 0 | TXT: 2
+   -> Md08 | JSON: 0 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[25] ID: 3oGdVlNa059ZVrN80juJ | COD: 010.001.005
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[26] ID: 3tirqyk36kwx1ff8U08C | COD: 021.001.101
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[27] ID: 4OmR30yxPaiJO7ZQ3GTF | COD: 021.001.091
+   -> MdTt | JSON: 0 | TXT: 10
+---------------------------------
+[28] ID: 4PGLiZ16rU66BmBx0ro7 | COD: 311.002.006
+   -> MdTt | JSON: 0 | TXT: 13
+---------------------------------
+[29] ID: 4T4qEzwmxJYy56sut147 | COD: 321.001.230
+   -> Md08 | JSON: 1 | TXT: 2
+   -> Md12 | JSON: 1 | TXT: 2
+   -> Md26 | JSON: 1 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[30] ID: 4mPPUkosxWeFeGVQ79Y7 | COD: 002.000.106
+   -> Metodo | JSON: 150 | TXT: 200
+   -> MetEst | JSON: 2400 | TXT: 3200
+   -> Md04 | JSON: 150 | TXT: 200
+   -> Md12 | JSON: 150 | TXT: 200
+   -> Md16 | JSON: 125 | TXT: 150
+   -> Md26 | JSON: 100 | TXT: 150
+   -> Md52 | JSON: 100 | TXT: 150
+   -> MdAno | JSON: 100 | TXT: 150
+   -> MdTt | JSON: 100 | TXT: 125
+---------------------------------
+[31] ID: 4q0bckGlRtLfELiglo4t | COD: 313.004.005
+   -> Md04 | JSON: 0 | TXT: 8
+   -> Md08 | JSON: 0 | TXT: 8
+   -> Md12 | JSON: 0 | TXT: 4
+   -> Md16 | JSON: 0 | TXT: 4
+   -> Md26 | JSON: 0 | TXT: 4
+   -> Md52 | JSON: 0 | TXT: 4
+   -> MdAno | JSON: 0 | TXT: 4
+   -> MdTt | JSON: 0 | TXT: 4
+---------------------------------
+[32] ID: 4t1rqrLwT4vXCN1Au6dF | COD: 321.001.457
+   -> MdTt | JSON: 0 | TXT: 6
+---------------------------------
+[33] ID: 50vzIDjU9aprGKKnfceC | COD: 021.002.001
+   -> Md04 | JSON: 15 | TXT: 30
+   -> Md08 | JSON: 0 | TXT: 30
+   -> Md12 | JSON: 0 | TXT: 30
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[34] ID: 5Auij8873CW92QAyECdA | COD: 325.039.001
+   -> Md52 | JSON: 27 | TXT: 28
+---------------------------------
+[35] ID: 5COFKL9cvlFEbeIWC5nR | COD: 011.001.004
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[36] ID: 5fkEDG5c03LYs7cUySqc | COD: 021.001.110
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[37] ID: 5nPi6KGKn9FlILDho39n | COD: 325.031.001
+   -> Md52 | JSON: 8 | TXT: 9
+   -> MdTt | JSON: 7 | TXT: 8
+---------------------------------
+[38] ID: 69EfGhC5FGRKuKiAtAne | COD: 005.000.054
+   -> MdTt | JSON: 0 | TXT: 4
+---------------------------------
+[39] ID: 6DDkEYy3gAwPOoUoe3sX | COD: 325.019.005
+   -> Metodo | JSON: 2 | TXT: 3
+   -> MetEst | JSON: 32 | TXT: 48
+   -> Md04 | JSON: 0 | TXT: 1
+   -> Md08 | JSON: 1 | TXT: 2
+   -> Md12 | JSON: 2 | TXT: 3
+   -> Md16 | JSON: 1 | TXT: 2
+   -> Md26 | JSON: 1 | TXT: 3
+   -> Md52 | JSON: 0 | TXT: 3
+   -> MdAno | JSON: 0 | TXT: 3
+   -> MdTt | JSON: 0 | TXT: 3
+---------------------------------
+[40] ID: 6SgxCvM6iiyeZZUZQmxI | COD: 002.000.009
+   -> MdTt | JSON: 0 | TXT: 6
+---------------------------------
+[41] ID: 6U3OsKtk6SDK5owtoLQ4 | COD: 325.042.003
+   -> MdTt | JSON: 100 | TXT: 101
+---------------------------------
+[42] ID: 6XcVIKT1RkuhgIFMTALB | COD: 002.000.099
+   -> Metodo | JSON: 1 | TXT: 7
+   -> MetEst | JSON: 16 | TXT: 112
+   -> Md04 | JSON: 0 | TXT: 7
+   -> Md08 | JSON: 0 | TXT: 4
+   -> Md12 | JSON: 1 | TXT: 3
+   -> Md16 | JSON: 1 | TXT: 2
+   -> Md26 | JSON: 1 | TXT: 3
+   -> Md52 | JSON: 1 | TXT: 2
+   -> MdAno | JSON: 1 | TXT: 2
+   -> MdTt | JSON: 1 | TXT: 2
+---------------------------------
+[43] ID: 6dFlmOMvVOKSLjhKl1CC | COD: 005.000.009
+   -> Md04 | JSON: 0 | TXT: 70
+   -> Md08 | JSON: 0 | TXT: 50
+   -> Md12 | JSON: 0 | TXT: 50
+   -> Md16 | JSON: 0 | TXT: 60
+   -> Md26 | JSON: 0 | TXT: 60
+   -> Md52 | JSON: 0 | TXT: 60
+   -> MdAno | JSON: 0 | TXT: 60
+   -> MdTt | JSON: 15 | TXT: 60
+---------------------------------
+[44] ID: 6ys2yC1k8vGdC2HtW3yr | COD: 022.001.001
+   -> Md16 | JSON: 0 | TXT: 55
+   -> Md26 | JSON: 0 | TXT: 55
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 25
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[45] ID: 7D0haFb7SnW7PW1K9DRx | COD: 230.001.014
+   -> MdTt | JSON: 0 | TXT: 3
+---------------------------------
+[46] ID: 7NmKnCCb7ji6E1DDHdFr | COD: 002.000.140
+   -> Md08 | JSON: 0 | TXT: 28
+   -> Md12 | JSON: 0 | TXT: 28
+   -> Md16 | JSON: 0 | TXT: 28
+   -> Md26 | JSON: 0 | TXT: 28
+   -> Md52 | JSON: 0 | TXT: 28
+   -> MdAno | JSON: 0 | TXT: 28
+   -> MdTt | JSON: 0 | TXT: 28
+---------------------------------
+[47] ID: 7nqlElQCZGw1OCQ1U3H9 | COD: 056.002.001
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[48] ID: 882r7HgKgsw7NDFtOCAD | COD: 325.048.001
+   -> Md52 | JSON: 0 | TXT: 28
+   -> MdAno | JSON: 0 | TXT: 28
+   -> MdTt | JSON: 0 | TXT: 28
+---------------------------------
+[49] ID: 8AL8fcCMigUZqDvIvcIS | COD: 007.000.001
+   -> Md16 | JSON: 80 | TXT: 90
+   -> Md26 | JSON: 70 | TXT: 80
+   -> Md52 | JSON: 60 | TXT: 80
+   -> MdAno | JSON: 60 | TXT: 80
+   -> MdTt | JSON: 60 | TXT: 80
+---------------------------------
+[50] ID: 8BhUDa0uaKtDrF32jSjE | COD: 325.042.005
+   -> Md04 | JSON: 0 | TXT: 10
+   -> Md08 | JSON: 0 | TXT: 15
+   -> Md12 | JSON: 0 | TXT: 15
+   -> Md16 | JSON: 0 | TXT: 15
+   -> Md26 | JSON: 0 | TXT: 15
+   -> Md52 | JSON: 0 | TXT: 100
+   -> MdAno | JSON: 0 | TXT: 100
+   -> MdTt | JSON: 0 | TXT: 100
+---------------------------------
+[51] ID: 8EQKbDHBb8aKVpzyLWZk | COD: 021.001.109
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[52] ID: 8GSjqvk8AQCwqv9SQdRc | COD: 002.000.038
+   -> MdTt | JSON: 290 | TXT: 295
+---------------------------------
+[53] ID: 8b0oAgadQN5cd0HcFtBl | COD: 001.000.020
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[54] ID: 8hQIWv1uToNf0w0dJ3hc | COD: 008.001.009
+   -> Md08 | JSON: 0 | TXT: 1
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[55] ID: 94pnJDsNkVvEuTXeGMjS | COD: 311.002.009
+   -> Md04 | JSON: 0 | TXT: 7
+   -> Md08 | JSON: 0 | TXT: 7
+   -> Md12 | JSON: 0 | TXT: 7
+   -> Md16 | JSON: 0 | TXT: 7
+   -> Md26 | JSON: 0 | TXT: 7
+   -> Md52 | JSON: 0 | TXT: 7
+   -> MdAno | JSON: 0 | TXT: 7
+   -> MdTt | JSON: 0 | TXT: 7
+---------------------------------
+[56] ID: 95oQoYhgP6egDawHRrX7 | COD: 021.001.058
+   -> Metodo | JSON: 5 | TXT: 9
+   -> MetEst | JSON: 80 | TXT: 144
+   -> Md04 | JSON: 5 | TXT: 8
+   -> Md08 | JSON: 1 | TXT: 9
+   -> Md12 | JSON: 1 | TXT: 8
+   -> Md16 | JSON: 2 | TXT: 8
+   -> Md26 | JSON: 3 | TXT: 8
+   -> Md52 | JSON: 1 | TXT: 3
+   -> MdAno | JSON: 1 | TXT: 3
+   -> MdTt | JSON: 1 | TXT: 3
+---------------------------------
+[57] ID: 98Y4aUei09v22k3Lghu5 | COD: 000.001.002
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[58] ID: 98m981as3l4Ih5DayJFR | COD: 055.001.002
+   -> Md04 | JSON: 0 | TXT: 30
+   -> Md08 | JSON: 0 | TXT: 30
+   -> Md12 | JSON: 0 | TXT: 30
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[59] ID: 9vXdAVxBHpTn7zOCOFvy | COD: 325.031.002
+   -> Metodo | JSON: 8 | TXT: 11
+   -> MetEst | JSON: 128 | TXT: 176
+   -> Md12 | JSON: 8 | TXT: 11
+   -> Md16 | JSON: 7 | TXT: 9
+   -> Md26 | JSON: 7 | TXT: 10
+   -> Md52 | JSON: 7 | TXT: 10
+   -> MdAno | JSON: 7 | TXT: 9
+   -> MdTt | JSON: 8 | TXT: 10
+---------------------------------
+[60] ID: 9wullEaa3dQ2EBotlTzB | COD: 005.001.001
+   -> MdTt | JSON: 0 | TXT: 40
+---------------------------------
+[61] ID: 9xkBe5FaLqDO1pbGtTlt | COD: 021.001.013
+   -> Md04 | JSON: 1 | TXT: 2
+   -> Md08 | JSON: 0 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 3
+   -> MdAno | JSON: 0 | TXT: 3
+   -> MdTt | JSON: 0 | TXT: 3
+---------------------------------
+[62] ID: A1Hx5rKefA8PMNJV10Yu | COD: 228.001.010
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[63] ID: AOAWIppJtCTZGSqJxt9y | COD: 324.001.001
+   -> Md08 | JSON: 0 | TXT: 30
+   -> Md12 | JSON: 0 | TXT: 30
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[64] ID: AhX3QLsBeypbxsFWWMqe | COD: 325.016.003
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[65] ID: ApinTW1CHNX94E5CMW9T | COD: 010.001.009
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[66] ID: AsfwwaQi1KQerQUMt8hn | COD: 002.000.137
+   -> Md04 | JSON: 0 | TXT: 2
+   -> Md08 | JSON: 0 | TXT: 1
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[67] ID: AspdbvJmWoVCORYURLxf | COD: 301.002.005
+   -> Md08 | JSON: 5 | TXT: 50
+   -> Md12 | JSON: 10 | TXT: 60
+   -> Md16 | JSON: 10 | TXT: 40
+   -> Md26 | JSON: 10 | TXT: 20
+   -> Md52 | JSON: 0 | TXT: 20
+   -> MdAno | JSON: 5 | TXT: 20
+   -> MdTt | JSON: 0 | TXT: 20
+---------------------------------
+[68] ID: Awf2gbPNSmMl5p0a9QZm | COD: 313.001.003
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[69] ID: AzZQFCFXWxKaSrXJwUi8 | COD: 002.000.093
+   -> Md26 | JSON: 0 | TXT: 10
+   -> Md52 | JSON: 0 | TXT: 55
+   -> MdAno | JSON: 0 | TXT: 55
+   -> MdTt | JSON: 0 | TXT: 55
+---------------------------------
+[70] ID: B3MNnwdTOM7272bHx5HM | COD: 304.001.003
+   -> Metodo | JSON: 21 | TXT: 30
+   -> MetEst | JSON: 336 | TXT: 480
+   -> Md04 | JSON: 3 | TXT: 29
+   -> Md08 | JSON: 8 | TXT: 10
+   -> Md16 | JSON: 10 | TXT: 14
+   -> Md26 | JSON: 10 | TXT: 23
+   -> Md52 | JSON: 21 | TXT: 30
+   -> MdAno | JSON: 21 | TXT: 30
+   -> MdTt | JSON: 14 | TXT: 23
+---------------------------------
+[71] ID: B4uaYbs78PcgBWXcoPHv | COD: 228.001.011
+   -> Md04 | JSON: 0 | TXT: 2
+   -> Md08 | JSON: 0 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[72] ID: BDRBMEQRb53tUxpZ3GgX | COD: 002.000.091
+   -> Metodo | JSON: 15 | TXT: 20
+   -> MetEst | JSON: 240 | TXT: 320
+   -> Md04 | JSON: 13 | TXT: 15
+   -> Md08 | JSON: 5 | TXT: 10
+   -> Md12 | JSON: 8 | TXT: 15
+   -> Md16 | JSON: 13 | TXT: 20
+   -> Md26 | JSON: 15 | TXT: 20
+   -> Md52 | JSON: 15 | TXT: 20
+   -> MdAno | JSON: 15 | TXT: 20
+   -> MdTt | JSON: 10 | TXT: 20
+---------------------------------
+[73] ID: BHQackUU2RPmCk7UZSqj | COD: 022.001.006
+   -> Md52 | JSON: 0 | TXT: 100
+   -> MdAno | JSON: 0 | TXT: 100
+   -> MdTt | JSON: 0 | TXT: 100
+---------------------------------
+[74] ID: BHTWHIpseAqErTkbKUvk | COD: 325.027.002
+   -> Metodo | JSON: 18 | TXT: 35
+   -> MetEst | JSON: 288 | TXT: 560
+   -> Md08 | JSON: 0 | TXT: 35
+   -> Md12 | JSON: 0 | TXT: 35
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 18 | TXT: 25
+   -> Md52 | JSON: 10 | TXT: 20
+   -> MdAno | JSON: 10 | TXT: 20
+   -> MdTt | JSON: 0 | TXT: 20
+---------------------------------
+[75] ID: BLJXgqUYz7ilA09dySs8 | COD: 002.000.049
+   -> MdTt | JSON: 0 | TXT: 5
+---------------------------------
+[76] ID: BQW5qeJbatnGQ6Kdx2ov | COD: 325.048.002
+   -> Md08 | JSON: 0 | TXT: 30
+   -> Md12 | JSON: 0 | TXT: 30
+   -> Md16 | JSON: 0 | TXT: 23
+   -> Md26 | JSON: 0 | TXT: 23
+   -> Md52 | JSON: 0 | TXT: 23
+   -> MdAno | JSON: 0 | TXT: 23
+   -> MdTt | JSON: 0 | TXT: 23
+---------------------------------
+[77] ID: BoJJeaG3DzWWxitoV4Yd | COD: 002.000.108
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 3
+   -> Md52 | JSON: 0 | TXT: 3
+   -> MdAno | JSON: 0 | TXT: 3
+   -> MdTt | JSON: 0 | TXT: 3
+---------------------------------
+[78] ID: C6gTpWB17MUDhyOwpjH4 | COD: 079.001.003
+   -> MdTt | JSON: 0 | TXT: 60
+---------------------------------
+[79] ID: CD2qZwyRmCJIdhcMWrZv | COD: 311.001.004
+   -> Md12 | JSON: 1 | TXT: 2
+   -> Md52 | JSON: 1 | TXT: 2
+   -> MdAno | JSON: 1 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[80] ID: CDPqxd9oTiVbjr9NwrZb | COD: 002.000.023
+   -> Metodo | JSON: 40 | TXT: 75
+   -> MetEst | JSON: 640 | TXT: 1200
+   -> Md04 | JSON: 30 | TXT: 75
+   -> Md08 | JSON: 10 | TXT: 50
+   -> Md12 | JSON: 0 | TXT: 40
+   -> Md16 | JSON: 20 | TXT: 40
+   -> Md26 | JSON: 20 | TXT: 40
+   -> Md52 | JSON: 30 | TXT: 40
+   -> MdAno | JSON: 30 | TXT: 40
+   -> MdTt | JSON: 40 | TXT: 60
+---------------------------------
+[81] ID: CIsf4DnWmPHhh0SxEOg9 | COD: 002.000.095
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[82] ID: CSqJcb3TBXbbxAV2OEpG | COD: 325.034.001
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[83] ID: CTC28iTkZtAj72RtoGbh | COD: 305.002.004
+   -> Md52 | JSON: 40 | TXT: 65
+   -> MdAno | JSON: 40 | TXT: 70
+   -> MdTt | JSON: 40 | TXT: 60
+---------------------------------
+[84] ID: D1IPbVFWQgAy8PdnI0qy | COD: 002.000.060
+   -> MdTt | JSON: 13 | TXT: 14
+---------------------------------
+[85] ID: DMX1vO8BBZtpxVyufK84 | COD: 321.001.097
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[86] ID: DOAnfCR9evVvCEMzhfip | COD: 002.000.067
+   -> Md04 | JSON: 8 | TXT: 23
+   -> Md08 | JSON: 8 | TXT: 30
+   -> Md12 | JSON: 0 | TXT: 30
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[87] ID: DPavErRGBCftcFqKUv2V | COD: 230.001.018
+   -> Md04 | JSON: 0 | TXT: 2
+   -> Md08 | JSON: 0 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[88] ID: DRFzshvap5fD11wRvdiz | COD: 021.001.023
+   -> Md08 | JSON: 0 | TXT: 30
+   -> Md12 | JSON: 0 | TXT: 30
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[89] ID: DrTDtCxTpd4EXePMOogj | COD: 325.045.001
+   -> Metodo | JSON: 100 | TXT: 120
+   -> MetEst | JSON: 1600 | TXT: 1920
+   -> Md04 | JSON: 30 | TXT: 120
+   -> Md08 | JSON: 80 | TXT: 120
+   -> Md12 | JSON: 90 | TXT: 120
+   -> Md16 | JSON: 90 | TXT: 120
+   -> Md26 | JSON: 80 | TXT: 100
+   -> Md52 | JSON: 84 | TXT: 100
+   -> MdAno | JSON: 89 | TXT: 100
+   -> MdTt | JSON: 100 | TXT: 120
+---------------------------------
+[90] ID: Dy20KseCwfDRVp3tp8Bd | COD: 326.001.001
+   -> MdTt | JSON: 0 | TXT: 60
+---------------------------------
+[91] ID: E3hM7B60nc95IKNveJpd | COD: 041.001.005
+   -> MdTt | JSON: 0 | TXT: 11
+---------------------------------
+[92] ID: E9C2UVwPFuQ6EQz7wquc | COD: 021.001.035
+   -> MdAno | JSON: 7 | TXT: 8
+   -> MdTt | JSON: 3 | TXT: 6
+---------------------------------
+[93] ID: EWmZRPac8tZM46tn81EE | COD: 021.001.068
+   -> Md12 | JSON: 64 | TXT: 100
+   -> Md16 | JSON: 64 | TXT: 100
+   -> Md26 | JSON: 50 | TXT: 100
+   -> Md52 | JSON: 0 | TXT: 64
+   -> MdAno | JSON: 25 | TXT: 64
+   -> MdTt | JSON: 50 | TXT: 57
+---------------------------------
+[94] ID: EYaXTEZ05VkVjw9uJmYF | COD: 021.001.116
+   -> Md08 | JSON: 0 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[95] ID: EbGdBfopFqlpd4fTrDrj | COD: 325.044.001
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[96] ID: EpJ8og89rBADtGSoq7XC | COD: 050.001.005
+   -> MdTt | JSON: 3 | TXT: 6
+---------------------------------
+[97] ID: F1xC4EyjEoZdNBKv3lvp | COD: 303.002.004
+   -> Md04 | JSON: 120 | TXT: 180
+   -> Md08 | JSON: 105 | TXT: 120
+   -> Md12 | JSON: 135 | TXT: 150
+   -> Md52 | JSON: 165 | TXT: 180
+   -> MdTt | JSON: 135 | TXT: 150
+---------------------------------
+[98] ID: F2Prcb1OpyPLVH3FcCng | COD: 325.046.001
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[99] ID: FiQRvlEAZ4xXqGjcdilP | COD: 002.000.068
+   -> Metodo | JSON: 75 | TXT: 90
+   -> MetEst | JSON: 1200 | TXT: 1440
+   -> Md04 | JSON: 75 | TXT: 90
+   -> Md08 | JSON: 45 | TXT: 60
+   -> Md12 | JSON: 60 | TXT: 75
+   -> MdTt | JSON: 30 | TXT: 60
+---------------------------------
+[100] ID: FvzRUa4xpMLqpMmGvZKk | COD: 022.001.012
+   -> Md52 | JSON: 113 | TXT: 116
+   -> MdAno | JSON: 116 | TXT: 122
+---------------------------------
+[101] ID: FwACT0nUN8St05ELhQE5 | COD: 002.000.143
+   -> Md04 | JSON: 0 | TXT: 5
+   -> Md08 | JSON: 3 | TXT: 10
+   -> Md12 | JSON: 0 | TXT: 10
+   -> Md16 | JSON: 0 | TXT: 10
+   -> Md26 | JSON: 0 | TXT: 10
+   -> Md52 | JSON: 0 | TXT: 10
+   -> MdAno | JSON: 0 | TXT: 10
+   -> MdTt | JSON: 0 | TXT: 10
+---------------------------------
+[102] ID: GAa6AD63zZ3CBA14RRL6 | COD: 005.000.032
+   -> Md04 | JSON: 2 | TXT: 6
+   -> Md08 | JSON: 0 | TXT: 6
+   -> Md12 | JSON: 0 | TXT: 5
+   -> Md16 | JSON: 0 | TXT: 6
+   -> Md26 | JSON: 0 | TXT: 5
+   -> Md52 | JSON: 0 | TXT: 6
+   -> MdAno | JSON: 0 | TXT: 6
+   -> MdTt | JSON: 0 | TXT: 6
+---------------------------------
+[103] ID: GFn8q9hkFcV9LWqHpUuk | COD: 002.000.032
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[104] ID: GW6LrwI2MpYoFVOwMJXi | COD: 325.001.002
+   -> Md08 | JSON: 0 | TXT: 60
+   -> Md12 | JSON: 0 | TXT: 60
+   -> Md16 | JSON: 0 | TXT: 60
+   -> Md26 | JSON: 0 | TXT: 60
+   -> Md52 | JSON: 0 | TXT: 45
+   -> MdAno | JSON: 0 | TXT: 45
+   -> MdTt | JSON: 0 | TXT: 45
+---------------------------------
+[105] ID: GcDMF2v2e5s3d0q0XAW4 | COD: 005.000.025
+   -> Md04 | JSON: 0 | TXT: 40
+   -> Md08 | JSON: 0 | TXT: 40
+   -> Md12 | JSON: 0 | TXT: 40
+   -> Md16 | JSON: 0 | TXT: 40
+   -> Md26 | JSON: 0 | TXT: 40
+   -> Md52 | JSON: 0 | TXT: 40
+   -> MdAno | JSON: 0 | TXT: 40
+   -> MdTt | JSON: 0 | TXT: 40
+---------------------------------
+[106] ID: GfxXvMBDTl08yr410jgV | COD: 005.000.066
+   -> Md04 | JSON: 3 | TXT: 5
+   -> Md08 | JSON: 0 | TXT: 5
+   -> Md12 | JSON: 0 | TXT: 5
+   -> Md16 | JSON: 3 | TXT: 5
+   -> Md26 | JSON: 0 | TXT: 6
+   -> Md52 | JSON: 0 | TXT: 6
+   -> MdAno | JSON: 0 | TXT: 6
+   -> MdTt | JSON: 0 | TXT: 6
+---------------------------------
+[107] ID: Gz2njaOUSH3JOHjUfmCq | COD: 021.001.053
+   -> Md52 | JSON: 0 | TXT: 10
+   -> MdAno | JSON: 0 | TXT: 10
+   -> MdTt | JSON: 0 | TXT: 10
+---------------------------------
+[108] ID: H6vqTSQNU7kMGUVXjLuL | COD: 308.001.001
+   -> Md26 | JSON: 84 | TXT: 103
+   -> Md52 | JSON: 70 | TXT: 90
+   -> MdAno | JSON: 70 | TXT: 84
+---------------------------------
+[109] ID: H99uvzb5MTIbFRe6pwoI | COD: 230.001.019
+   -> Metodo | JSON: 90 | TXT: 105
+   -> MetEst | JSON: 1440 | TXT: 1680
+   -> Md26 | JSON: 90 | TXT: 105
+   -> MdTt | JSON: 30 | TXT: 90
+---------------------------------
+[110] ID: HC5caGAMBZDMM36rvjgA | COD: 325.013.001
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[111] ID: HQ91S9Rbm4QVBWjY2jJS | COD: 055.001.001
+   -> Md04 | JSON: 0 | TXT: 60
+   -> Md08 | JSON: 0 | TXT: 45
+   -> Md12 | JSON: 0 | TXT: 30
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[112] ID: HZCQCNK29JRZhSPnYRSb | COD: 002.000.036
+   -> Md04 | JSON: 0 | TXT: 1
+   -> Md08 | JSON: 0 | TXT: 1
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[113] ID: HitgMH1qX5Nt6QqanGB7 | COD: 030.001.008
+   -> Md08 | JSON: 0 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[114] ID: HvrcXGBTYRoBShzsvZkP | COD: 325.016.005
+   -> Md26 | JSON: 599 | TXT: 624
+   -> Md52 | JSON: 525 | TXT: 531
+   -> MdAno | JSON: 531 | TXT: 539
+   -> MdTt | JSON: 255 | TXT: 293
+---------------------------------
+[115] ID: IB8ZvSzr8GlQSYB1QXFn | COD: 321.001.191
+   -> Metodo | JSON: 86 | TXT: 120
+   -> MetEst | JSON: 1376 | TXT: 1920
+   -> Md04 | JSON: 35 | TXT: 49
+   -> Md08 | JSON: 35 | TXT: 60
+   -> Md12 | JSON: 86 | TXT: 120
+   -> Md16 | JSON: 35 | TXT: 120
+   -> Md26 | JSON: 0 | TXT: 120
+   -> Md52 | JSON: 0 | TXT: 120
+   -> MdAno | JSON: 0 | TXT: 120
+   -> MdTt | JSON: 0 | TXT: 120
+---------------------------------
+[116] ID: IeqdHuULWqS8hJj2N0yB | COD: 325.038.001
+   -> Metodo | JSON: 195 | TXT: 210
+   -> MetEst | JSON: 3120 | TXT: 3360
+   -> Md52 | JSON: 180 | TXT: 210
+   -> MdAno | JSON: 180 | TXT: 210
+   -> MdTt | JSON: 180 | TXT: 195
+---------------------------------
+[117] ID: ImM838wEkxf6WlBmAiHn | COD: 311.002.005
+   -> Md16 | JSON: 1 | TXT: 3
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[118] ID: Iz6pJB9xr6jBqkEFvROS | COD: 022.001.013
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[119] ID: JPyfPllfescUpNsqh1H9 | COD: 325.009.001
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[120] ID: JRfBHiICtzGkjoTRyS1c | COD: 325.033.002
+   -> Md04 | JSON: 0 | TXT: 1
+   -> Md08 | JSON: 0 | TXT: 1
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 3
+---------------------------------
+[121] ID: JSZIL11se7bJ6zL8P9xn | COD: 022.001.014
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[122] ID: JWWONjOYX2mcM9FA9SIw | COD: 311.001.011
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[123] ID: JatoPcC7zNNLAaBoPJu0 | COD: 021.001.025
+   -> Md52 | JSON: 105 | TXT: 120
+   -> MdAno | JSON: 105 | TXT: 120
+---------------------------------
+[124] ID: JqmU8WKAqGbsLZsVmi9I | COD: 311.001.002
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[125] ID: K8qNPhoM8cuuNpX6uvUQ | COD: 001.000.004
+   -> Md26 | JSON: 0 | TXT: 40
+   -> Md52 | JSON: 0 | TXT: 40
+   -> MdAno | JSON: 0 | TXT: 40
+   -> MdTt | JSON: 0 | TXT: 40
+---------------------------------
+[126] ID: KMlEtoC6XtrsuyAMISov | COD: 003.000.004
+   -> Metodo | JSON: 4 | TXT: 5
+   -> MetEst | JSON: 64 | TXT: 80
+   -> Md16 | JSON: 4 | TXT: 5
+   -> Md52 | JSON: 3 | TXT: 4
+   -> MdAno | JSON: 3 | TXT: 4
+---------------------------------
+[127] ID: KZeoKt7z0mLf3GZdrxL5 | COD: 330.001.001
+   -> MdTt | JSON: 0 | TXT: 28
+---------------------------------
+[128] ID: KgXPPZ971FhQPgd6CkIg | COD: 325.028.002
+   -> Md04 | JSON: 80 | TXT: 100
+   -> Md26 | JSON: 25 | TXT: 100
+   -> Md52 | JSON: 0 | TXT: 100
+   -> MdAno | JSON: 0 | TXT: 100
+   -> MdTt | JSON: 0 | TXT: 150
+---------------------------------
+[129] ID: KzhsRnoIURyy5BxZqwdL | COD: 327.001.001
+   -> Metodo | JSON: 225 | TXT: 240
+   -> MetEst | JSON: 3600 | TXT: 3840
+   -> Md04 | JSON: 195 | TXT: 240
+   -> Md08 | JSON: 195 | TXT: 240
+   -> Md12 | JSON: 195 | TXT: 240
+   -> Md16 | JSON: 195 | TXT: 240
+   -> Md26 | JSON: 210 | TXT: 240
+   -> Md52 | JSON: 225 | TXT: 240
+   -> MdAno | JSON: 225 | TXT: 240
+   -> MdTt | JSON: 180 | TXT: 210
+---------------------------------
+[130] ID: L1XjFJCqNhzezk1GQ0ec | COD: 013.001.001
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[131] ID: L3ruHFDo0Nn38JLOMt61 | COD: 321.003.006
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[132] ID: L4XgzFbK5ELxtfnu7jaM | COD: 021.001.100
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[133] ID: LIfnnCUwlnvQ6j4kIyCX | COD: 002.000.141
+   -> Metodo | JSON: 4 | TXT: 5
+   -> MetEst | JSON: 64 | TXT: 80
+   -> Md08 | JSON: 1 | TXT: 4
+   -> Md12 | JSON: 2 | TXT: 3
+   -> Md16 | JSON: 2 | TXT: 5
+   -> Md26 | JSON: 3 | TXT: 5
+   -> MdAno | JSON: 4 | TXT: 5
+---------------------------------
+[134] ID: LT6dyVhjx0YDIyHfakHd | COD: 325.002.003
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[135] ID: LV6hs8LIRsCYA7lcIw6x | COD: 325.028.005
+   -> Md26 | JSON: 0 | TXT: 60
+   -> Md52 | JSON: 0 | TXT: 60
+   -> MdAno | JSON: 0 | TXT: 60
+   -> MdTt | JSON: 0 | TXT: 60
+---------------------------------
+[136] ID: LqUsROsACRRkxB15wm2r | COD: 002.000.059
+   -> MdTt | JSON: 1 | TXT: 2
+---------------------------------
+[137] ID: M4g15BF3472srpMLxx2R | COD: 021.001.097
+   -> MdTt | JSON: 0 | TXT: 20
+---------------------------------
+[138] ID: M7PcBqTegT2YeQ38lgGD | COD: 311.001.029
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[139] ID: M8o6281pyoPqBrSPTvVP | COD: 021.001.074
+   -> Md26 | JSON: 0 | TXT: 59
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[140] ID: MAUFyz1jl4RcqnXrjYTx | COD: 325.033.001
+   -> Md52 | JSON: 0 | TXT: 20
+   -> MdAno | JSON: 0 | TXT: 20
+   -> MdTt | JSON: 0 | TXT: 40
+---------------------------------
+[141] ID: MAxfhJnqgoYibEvwsg4A | COD: 325.025.001
+   -> Metodo | JSON: 150 | TXT: 153
+   -> MetEst | JSON: 2400 | TXT: 2448
+   -> Md04 | JSON: 100 | TXT: 105
+   -> Md08 | JSON: 128 | TXT: 150
+   -> Md12 | JSON: 128 | TXT: 153
+   -> Md16 | JSON: 113 | TXT: 135
+   -> Md26 | JSON: 130 | TXT: 150
+   -> Md52 | JSON: 146 | TXT: 150
+   -> MdAno | JSON: 150 | TXT: 153
+   -> MdTt | JSON: 118 | TXT: 140
+---------------------------------
+[142] ID: MD3c0KFRfTkZrERhSFaT | COD: 021.001.066
+   -> Metodo | JSON: 207 | TXT: 320
+   -> MetEst | JSON: 3312 | TXT: 5120
+   -> Md04 | JSON: 190 | TXT: 320
+   -> Md12 | JSON: 207 | TXT: 222
+   -> Md26 | JSON: 188 | TXT: 192
+   -> MdTt | JSON: 111 | TXT: 150
+---------------------------------
+[143] ID: MejxRDFFOsggZLHsNCXH | COD: 230.001.017
+   -> Md26 | JSON: 0 | TXT: 40
+   -> Md52 | JSON: 0 | TXT: 40
+   -> MdAno | JSON: 0 | TXT: 40
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[144] ID: MkIXeBIAEZEaNkkeAkt8 | COD: 005.000.006
+   -> Md52 | JSON: 145 | TXT: 150
+   -> MdAno | JSON: 145 | TXT: 150
+---------------------------------
+[145] ID: MkUItNIa99H9Vis78Wc0 | COD: 003.000.017
+   -> Md26 | JSON: 0 | TXT: 20
+   -> Md52 | JSON: 0 | TXT: 20
+   -> MdAno | JSON: 0 | TXT: 15
+   -> MdTt | JSON: 0 | TXT: 20
+---------------------------------
+[146] ID: MwlTHGO2TUhepUbU27Gx | COD: 325.005.001
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[147] ID: N5L0bTWXlCrUnRcrOznE | COD: 009.000.001
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[148] ID: N7gYusqFhoxvv3Osolz1 | COD: 302.004.003
+   -> Md52 | JSON: 150 | TXT: 165
+   -> MdAno | JSON: 150 | TXT: 165
+   -> MdTt | JSON: 120 | TXT: 150
+---------------------------------
+[149] ID: NAMDqbsNQpih2yjkoLRY | COD: 030.001.001
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[150] ID: NB6O3v2lrjliFDtLWG0p | COD: 325.001.004
+   -> Md04 | JSON: 1330 | TXT: 133
+---------------------------------
+[151] ID: NI8GS3kl1eMLSHJo3WoW | COD: 003.000.002
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 80
+---------------------------------
+[152] ID: NJks0S26PveorCeDPgQb | COD: 315.002.001
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[153] ID: NNPlmIEDCCQujeWNm1rN | COD: 321.001.392
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[154] ID: NSke2BrzZl67sb4q101x | COD: 325.053.002
+   -> Md16 | JSON: 0 | TXT: 60
+   -> Md26 | JSON: 0 | TXT: 60
+   -> Md52 | JSON: 0 | TXT: 60
+   -> MdAno | JSON: 0 | TXT: 60
+   -> MdTt | JSON: 0 | TXT: 60
+---------------------------------
+[155] ID: NWoQNOV9u0lOsDSAIhvD | COD: 021.001.057
+   -> MdTt | JSON: 0 | TXT: 25
+---------------------------------
+[156] ID: Nsiizo5oeODpZx9PMMPP | COD: 325.004.005
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[157] ID: Nvt7QHS31SneVvwTkhFL | COD: 005.000.063
+   -> Md52 | JSON: 120 | TXT: 150
+   -> MdAno | JSON: 120 | TXT: 150
+   -> MdTt | JSON: 120 | TXT: 135
+---------------------------------
+[158] ID: Nyld68otgN4WDSIaz5t3 | COD: 005.000.102
+   -> Md04 | JSON: 3 | TXT: 4
+   -> Md08 | JSON: 2 | TXT: 4
+   -> Md12 | JSON: 1 | TXT: 4
+   -> Md16 | JSON: 0 | TXT: 4
+   -> Md26 | JSON: 0 | TXT: 4
+   -> Md52 | JSON: 0 | TXT: 4
+   -> MdAno | JSON: 0 | TXT: 4
+   -> MdTt | JSON: 0 | TXT: 3
+---------------------------------
+[159] ID: O1nXHMn4kACm2rm9PuHY | COD: 005.000.062
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[160] ID: ODy1bHylMb3P7LQBpkct | COD: 005.000.091
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[161] ID: ORoe2dIZIyGyED7S2bP9 | COD: 002.000.116
+   -> Metodo | JSON: 47 | TXT: 50
+   -> MetEst | JSON: 752 | TXT: 800
+   -> Md04 | JSON: 35 | TXT: 40
+   -> Md08 | JSON: 35 | TXT: 40
+   -> Md12 | JSON: 38 | TXT: 40
+   -> Md16 | JSON: 38 | TXT: 40
+   -> Md26 | JSON: 45 | TXT: 50
+   -> Md52 | JSON: 43 | TXT: 48
+   -> MdAno | JSON: 47 | TXT: 50
+   -> MdTt | JSON: 40 | TXT: 42
+---------------------------------
+[162] ID: OkB0krDlwWExy2P6LO11 | COD: 325.042.004
+   -> MdTt | JSON: 4 | TXT: 6
+---------------------------------
+[163] ID: PZC8uTZ7cXB91hZJwubI | COD: 002.000.098
+   -> Md04 | JSON: 0 | TXT: 1
+   -> Md08 | JSON: 0 | TXT: 1
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[164] ID: PcRwIBw1hEXOmdWVMjHP | COD: 002.000.025
+   -> MdTt | JSON: 80 | TXT: 100
+---------------------------------
+[165] ID: PfmcJVFRZZ6AbPvYhaFQ | COD: 228.001.004
+   -> Md04 | JSON: 15 | TXT: 60
+   -> Md08 | JSON: 15 | TXT: 68
+   -> Md12 | JSON: 30 | TXT: 60
+   -> Md16 | JSON: 30 | TXT: 45
+   -> Md52 | JSON: 0 | TXT: 45
+   -> MdAno | JSON: 0 | TXT: 45
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[166] ID: PnJ3gJ6g7oszGLv91275 | COD: 304.002.003
+   -> Md16 | JSON: 0 | TXT: 20
+   -> Md26 | JSON: 0 | TXT: 20
+   -> Md52 | JSON: 0 | TXT: 20
+   -> MdAno | JSON: 0 | TXT: 20
+   -> MdTt | JSON: 0 | TXT: 20
+---------------------------------
+[167] ID: Pr63wxqUImB2mzmujRVe | COD: 002.000.144
+   -> Md52 | JSON: 3 | TXT: 4
+   -> MdTt | JSON: 1 | TXT: 2
+---------------------------------
+[168] ID: PzDtDOL1Z75lHTMXZTYc | COD: 005.000.064
+   -> Md04 | JSON: 43 | TXT: 88
+   -> Md08 | JSON: 15 | TXT: 88
+   -> Md12 | JSON: 0 | TXT: 90
+   -> Md16 | JSON: 0 | TXT: 88
+   -> Md26 | JSON: 0 | TXT: 90
+   -> Md52 | JSON: 0 | TXT: 90
+   -> MdAno | JSON: 0 | TXT: 90
+   -> MdTt | JSON: 0 | TXT: 60
+---------------------------------
+[169] ID: Q1Wen7HkRWNjO47N1frr | COD: 005.000.004
+   -> Metodo | JSON: 155 | TXT: 180
+   -> MetEst | JSON: 2480 | TXT: 2880
+   -> Md04 | JSON: 150 | TXT: 180
+   -> Md08 | JSON: 155 | TXT: 180
+   -> Md12 | JSON: 155 | TXT: 180
+   -> Md16 | JSON: 125 | TXT: 155
+   -> Md52 | JSON: 95 | TXT: 120
+   -> MdAno | JSON: 110 | TXT: 120
+---------------------------------
+[170] ID: Q9mx1w1gqtE3CVn2GeWo | COD: 023.001.002
+   -> MdTt | JSON: 0 | TXT: 3
+---------------------------------
+[171] ID: QDVPqQMjOYszZANBiy0J | COD: 002.000.011
+   -> Metodo | JSON: 5 | TXT: 6
+   -> MetEst | JSON: 80 | TXT: 96
+   -> Md52 | JSON: 5 | TXT: 6
+   -> MdAno | JSON: 5 | TXT: 6
+---------------------------------
+[172] ID: QMUK4Xt0WQ3BIlIDbGKj | COD: 005.000.036
+   -> Metodo | JSON: 2 | TXT: 3
+   -> MetEst | JSON: 32 | TXT: 48
+   -> Md08 | JSON: 1 | TXT: 2
+   -> Md52 | JSON: 1 | TXT: 2
+   -> MdAno | JSON: 1 | TXT: 2
+   -> MdTt | JSON: 2 | TXT: 3
+---------------------------------
+[173] ID: QO4I6SGPARdr2EnWQ3jD | COD: 021.001.115
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[174] ID: QPcg4NF1FLInXf8AaKVp | COD: 325.016.011
+   -> Metodo | JSON: 25 | TXT: 43
+   -> MetEst | JSON: 400 | TXT: 688
+   -> Md04 | JSON: 25 | TXT: 40
+   -> Md08 | JSON: 5 | TXT: 43
+   -> Md12 | JSON: 13 | TXT: 43
+   -> Md16 | JSON: 15 | TXT: 28
+---------------------------------
+[175] ID: QeX3lfZhvIyVkUysujiZ | COD: 002.000.090
+   -> Md08 | JSON: 8 | TXT: 10
+   -> Md12 | JSON: 3 | TXT: 13
+   -> Md16 | JSON: 8 | TXT: 13
+   -> Md26 | JSON: 0 | TXT: 15
+   -> Md52 | JSON: 0 | TXT: 15
+   -> MdAno | JSON: 0 | TXT: 15
+   -> MdTt | JSON: 0 | TXT: 15
+---------------------------------
+[176] ID: QedbtYv4v0IkcxQdxccC | COD: 002.000.086
+   -> Md04 | JSON: 97 | TXT: 100
+---------------------------------
+[177] ID: QvRSOoIEZRS9PdZx0v6f | COD: 329.001.001
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[178] ID: R6XNm7p2dJO5DHd4iv5E | COD: 009.000.008
+   -> Md04 | JSON: 0 | TXT: 1
+   -> Md08 | JSON: 1 | TXT: 2
+   -> Md26 | JSON: 1 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 1 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[179] ID: RDXCFe15NY5cGdJCODwa | COD: 308.003.001
+   -> Md04 | JSON: 0 | TXT: 30
+   -> Md08 | JSON: 0 | TXT: 30
+   -> Md12 | JSON: 0 | TXT: 30
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[180] ID: RdfvdBBjmR0wBBvpxC7O | COD: 315.003.001
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[181] ID: RivLPqxYggjlSiHtjzBb | COD: 228.001.001
+   -> Md04 | JSON: 0 | TXT: 30
+   -> Md08 | JSON: 0 | TXT: 30
+   -> Md12 | JSON: 0 | TXT: 30
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[182] ID: RtPgBqsst5FJymohBetm | COD: 325.016.002
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[183] ID: Ru9ngfjA74SkV1UgTkNT | COD: 311.001.006
+   -> Md04 | JSON: 1 | TXT: 3
+   -> Md08 | JSON: 1 | TXT: 3
+   -> Md16 | JSON: 1 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[184] ID: RvCLE8rrI6WlVdsbXCuU | COD: 311.001.023
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[185] ID: RyNxNaeVvTnfmgjWFXZj | COD: 303.007.005
+   -> MdTt | JSON: 0 | TXT: 29
+---------------------------------
+[186] ID: SLPbpcG5Pb7NEVolVUYi | COD: 021.001.064
+   -> MdTt | JSON: 0 | TXT: 60
+---------------------------------
+[187] ID: SOCRfdwTqG60lfAPK8pd | COD: 301.001.002
+   -> Md04 | JSON: 0 | TXT: 2
+   -> Md08 | JSON: 0 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[188] ID: SSw3pBZbTmyx8jSNe8o4 | COD: 325.050.001
+   -> Md26 | JSON: 0 | TXT: 3
+   -> Md52 | JSON: 0 | TXT: 10
+   -> MdAno | JSON: 0 | TXT: 10
+   -> MdTt | JSON: 0 | TXT: 10
+---------------------------------
+[189] ID: SUuNiwGv28CHq5U2sUdt | COD: 325.002.002
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[190] ID: SraMhaaWroF3PIbQ6qfs | COD: 002.000.109
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[191] ID: Sv7vBJO9kleMNQGnwOGa | COD: 325.001.003
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[192] ID: Sz1dDl8opRFHwKCh6TvK | COD: 325.016.004
+   -> Md04 | JSON: 0 | TXT: 2
+   -> Md08 | JSON: 0 | TXT: 5
+   -> Md12 | JSON: 0 | TXT: 5
+   -> Md16 | JSON: 0 | TXT: 5
+   -> Md26 | JSON: 0 | TXT: 5
+   -> Md52 | JSON: 0 | TXT: 5
+   -> MdAno | JSON: 0 | TXT: 5
+   -> MdTt | JSON: 0 | TXT: 5
+---------------------------------
+[193] ID: SznnW3tdowjbifaVTKFn | COD: 321.003.002
+   -> Md12 | JSON: 3 | TXT: 4
+   -> Md26 | JSON: 4 | TXT: 5
+   -> Md52 | JSON: 0 | TXT: 5
+   -> MdAno | JSON: 0 | TXT: 5
+   -> MdTt | JSON: 0 | TXT: 5
+---------------------------------
+[194] ID: TDgwN7ITx69tfOez9J0v | COD: 050.001.004
+   -> MdTt | JSON: 0 | TXT: 10
+---------------------------------
+[195] ID: TMGB9Vcm8kKf3feRCSrC | COD: 005.000.060
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[196] ID: TPWWnWt24YQbzX8oLhwi | COD: 021.001.096
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[197] ID: TPmNeAmZWfMnxpNtpYz0 | COD: 005.000.082
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[198] ID: TrqWwOISNJemstLha0Nb | COD: 325.014.001
+   -> Md26 | JSON: 1 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[199] ID: TwnLk2XLCOXfWk15nZvW | COD: 306.002.004
+   -> MdTt | JSON: 0 | TXT: 10
+---------------------------------
+[200] ID: Tytodluzuy9UGORTwC8N | COD: 325.053.001
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[201] ID: UVOhucSTdWGTdVNKfHzJ | COD: 228.001.007
+   -> Md08 | JSON: 0 | TXT: 1
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[202] ID: UYi5uq1ifhoGdHlRZxnG | COD: 022.001.002
+   -> MdAno | JSON: 112 | TXT: 113
+---------------------------------
+[203] ID: UcY1o7bjFnmOJ9Es5WJI | COD: 306.001.005
+   -> Md26 | JSON: 0 | TXT: 5
+   -> Md52 | JSON: 0 | TXT: 5
+   -> MdAno | JSON: 0 | TXT: 5
+   -> MdTt | JSON: 0 | TXT: 5
+---------------------------------
+[204] ID: UfuclvzO32nzTjpZ0zat | COD: 315.001.003
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[205] ID: UtfJGlUYQY97C5AWMNmP | COD: 008.001.002
+   -> MdTt | JSON: 0 | TXT: 120
+---------------------------------
+[206] ID: UvWJHiijp79TzHRgubfa | COD: 304.001.004
+   -> Md12 | JSON: 30 | TXT: 45
+   -> Md16 | JSON: 45 | TXT: 60
+   -> Md26 | JSON: 45 | TXT: 60
+---------------------------------
+[207] ID: VQQsb9LC1cycPtYIqDzC | COD: 325.040.001
+   -> MdTt | JSON: 505 | TXT: 510
+---------------------------------
+[208] ID: VQVaXnKrtkJRFItNT8an | COD: 009.000.011
+   -> MdTt | JSON: 375 | TXT: 480
+---------------------------------
+[209] ID: W9oRz64u78M0Gj4HvEiq | COD: 002.000.087
+   -> Metodo | JSON: 1 | TXT: 3
+   -> MetEst | JSON: 16 | TXT: 48
+   -> Md08 | JSON: 1 | TXT: 2
+   -> Md12 | JSON: 1 | TXT: 2
+   -> Md16 | JSON: 1 | TXT: 2
+   -> Md26 | JSON: 1 | TXT: 2
+   -> Md52 | JSON: 1 | TXT: 3
+   -> MdAno | JSON: 1 | TXT: 3
+   -> MdTt | JSON: 1 | TXT: 3
+---------------------------------
+[210] ID: WHpBYcwEGzirCTzIVJ9H | COD: 005.000.046
+   -> Md26 | JSON: 0 | TXT: 18
+   -> Md52 | JSON: 0 | TXT: 10
+   -> MdAno | JSON: 0 | TXT: 10
+   -> MdTt | JSON: 0 | TXT: 8
+---------------------------------
+[211] ID: WMHwZMb2EBJAXATKLbLu | COD: 002.000.084
+   -> Md26 | JSON: 0 | TXT: 10
+   -> Md52 | JSON: 0 | TXT: 10
+   -> MdAno | JSON: 0 | TXT: 10
+   -> MdTt | JSON: 0 | TXT: 9
+---------------------------------
+[212] ID: WWZ4BYfYPLB10PYdoCJV | COD: 005.000.079
+   -> Md04 | JSON: 2 | TXT: 4
+   -> Md08 | JSON: 1 | TXT: 4
+   -> Md12 | JSON: 0 | TXT: 4
+   -> Md16 | JSON: 0 | TXT: 4
+   -> Md26 | JSON: 0 | TXT: 4
+   -> Md52 | JSON: 0 | TXT: 4
+   -> MdAno | JSON: 0 | TXT: 4
+   -> MdTt | JSON: 0 | TXT: 4
+---------------------------------
+[213] ID: WWwsLJKLLs5wOIcOz8l9 | COD: 008.001.008
+   -> Md52 | JSON: 165 | TXT: 180
+   -> MdAno | JSON: 150 | TXT: 180
+   -> MdTt | JSON: 90 | TXT: 150
+---------------------------------
+[214] ID: WcyqEEh4Fc4EYjxrrpNX | COD: 023.001.003
+   -> Md52 | JSON: 0 | TXT: 4
+   -> MdAno | JSON: 0 | TXT: 5
+   -> MdTt | JSON: 0 | TXT: 4
+---------------------------------
+[215] ID: Wlvoc7dBw2sRPIJ8RJGg | COD: 040.001.001
+   -> MdTt | JSON: 0 | TXT: 32
+---------------------------------
+[216] ID: XES0KoO074StqVRY52PC | COD: 325.001.005
+   -> Md04 | JSON: 15 | TXT: 30
+   -> Md08 | JSON: 15 | TXT: 45
+   -> Md12 | JSON: 15 | TXT: 30
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 45
+   -> MdTt | JSON: 0 | TXT: 60
+---------------------------------
+[217] ID: XFqTEkA6JbJlFrmsw5oq | COD: 002.000.096
+   -> Metodo | JSON: 7 | TXT: 10
+   -> MetEst | JSON: 112 | TXT: 160
+   -> Md04 | JSON: 7 | TXT: 10
+   -> Md08 | JSON: 4 | TXT: 5
+   -> Md12 | JSON: 4 | TXT: 5
+   -> Md16 | JSON: 4 | TXT: 5
+   -> Md52 | JSON: 3 | TXT: 4
+   -> MdAno | JSON: 3 | TXT: 4
+   -> MdTt | JSON: 2 | TXT: 3
+---------------------------------
+[218] ID: Xt8VbHIYjLPVr9Jwpvf6 | COD: 325.035.002
+   -> Md26 | JSON: 0 | TXT: 90
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[219] ID: Xze3I7yOZcEPDaUe1i5T | COD: 002.000.085
+   -> MdTt | JSON: 0 | TXT: 50
+---------------------------------
+[220] ID: Y8elAqaC5Kq1HJFm11lf | COD: 021.001.094
+   -> MdTt | JSON: 90 | TXT: 120
+---------------------------------
+[221] ID: YJAiDSLRkMXdCG3P0qqF | COD: 021.001.024
+   -> Metodo | JSON: 90 | TXT: 120
+   -> MetEst | JSON: 1440 | TXT: 1920
+   -> Md04 | JSON: 90 | TXT: 120
+   -> Md08 | JSON: 90 | TXT: 120
+   -> Md12 | JSON: 90 | TXT: 120
+   -> Md16 | JSON: 60 | TXT: 90
+   -> Md26 | JSON: 60 | TXT: 120
+   -> Md52 | JSON: 60 | TXT: 120
+   -> MdAno | JSON: 60 | TXT: 120
+   -> MdTt | JSON: 60 | TXT: 120
+---------------------------------
+[222] ID: YTBeBEKQq1OhxwRyI5Pe | COD: 311.001.005
+   -> Metodo | JSON: 1 | TXT: 2
+   -> MetEst | JSON: 16 | TXT: 32
+   -> Md04 | JSON: 1 | TXT: 2
+   -> Md08 | JSON: 1 | TXT: 2
+   -> Md12 | JSON: 1 | TXT: 2
+   -> Md26 | JSON: 1 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[223] ID: YVT2YxcRe6YEMdMZGY1g | COD: 321.003.005
+   -> Md12 | JSON: 0 | TXT: 15
+   -> Md16 | JSON: 0 | TXT: 15
+   -> Md26 | JSON: 0 | TXT: 15
+   -> Md52 | JSON: 0 | TXT: 15
+   -> MdAno | JSON: 0 | TXT: 15
+   -> MdTt | JSON: 0 | TXT: 15
+---------------------------------
+[224] ID: YeLFXp9w10wtRyrYPITJ | COD: 321.003.007
+   -> Md08 | JSON: 0 | TXT: 1
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[225] ID: Z1cKPvQNVtZnS3i3CaS7 | COD: 228.001.008
+   -> Md12 | JSON: 0 | TXT: 30
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[226] ID: Z49OqLPpqLl0XSeGs9P5 | COD: 001.000.024
+   -> MdTt | JSON: 0 | TXT: 90
+---------------------------------
+[227] ID: ZJa9CxNSJn4YfA9tkFHR | COD: 002.000.119
+   -> Md08 | JSON: 0 | TXT: 30
+   -> Md12 | JSON: 0 | TXT: 45
+   -> Md16 | JSON: 0 | TXT: 45
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[228] ID: ZNjo9cGBSuHR6PFq3lxV | COD: 021.001.088
+   -> Md12 | JSON: 0 | TXT: 30
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[229] ID: ZyYUcta8OxB69JaRMr1f | COD: 001.001.001
+   -> MdTt | JSON: 0 | TXT: 9
+---------------------------------
+[230] ID: Zyzp1rmN7IuAYFhLaq5V | COD: 329.003.001
+   -> Md52 | JSON: 0 | TXT: 42
+   -> MdAno | JSON: 0 | TXT: 42
+   -> MdTt | JSON: 0 | TXT: 51
+---------------------------------
+[231] ID: aHk79gkBb0S1T3VFT1km | COD: 306.001.004
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[232] ID: aI3TeiVNbCodCjFVa1KE | COD: 321.002.001
+   -> Md08 | JSON: 0 | TXT: 40
+   -> Md12 | JSON: 0 | TXT: 30
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 20
+   -> MdAno | JSON: 0 | TXT: 20
+   -> MdTt | JSON: 0 | TXT: 20
+---------------------------------
+[233] ID: aQWAtjVgpF1kF54jO0tf | COD: 021.001.071
+   -> Md04 | JSON: 0 | TXT: 5
+   -> Md08 | JSON: 0 | TXT: 4
+   -> Md12 | JSON: 0 | TXT: 4
+   -> Md16 | JSON: 0 | TXT: 4
+   -> Md26 | JSON: 0 | TXT: 3
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[234] ID: b5rtVtITjxkJU7xTGyew | COD: 002.000.058
+   -> MdTt | JSON: 852 | TXT: 862
+---------------------------------
+[235] ID: bEhvqoNj6FFpUHv3q2dt | COD: 300.001.005
+   -> Md04 | JSON: 15 | TXT: 30
+   -> Md08 | JSON: 0 | TXT: 30
+   -> Md12 | JSON: 0 | TXT: 60
+   -> Md16 | JSON: 0 | TXT: 45
+   -> Md26 | JSON: 30 | TXT: 45
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 45
+   -> MdTt | JSON: 0 | TXT: 45
+---------------------------------
+[236] ID: bRJjbuW1KK9I4TbZMGoC | COD: 021.001.112
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[237] ID: bTUH4tyOjUfMlYImT9MW | COD: 308.002.001
+   -> Metodo | JSON: 879 | TXT: 880
+   -> MetEst | JSON: 14064 | TXT: 14080
+   -> MdTt | JSON: 879 | TXT: 880
+---------------------------------
+[238] ID: bdgH9O7yKc2aql3VChkM | COD: 001.000.025
+   -> Md04 | JSON: 0 | TXT: 60
+   -> Md08 | JSON: 30 | TXT: 105
+   -> Md12 | JSON: 0 | TXT: 60
+   -> Md16 | JSON: 0 | TXT: 60
+   -> Md26 | JSON: 0 | TXT: 60
+   -> Md52 | JSON: 0 | TXT: 120
+   -> MdAno | JSON: 0 | TXT: 120
+   -> MdTt | JSON: 0 | TXT: 120
+---------------------------------
+[239] ID: be8ZK8PxhMykXammDkPw | COD: 230.001.012
+   -> Md04 | JSON: 15 | TXT: 45
+   -> Md08 | JSON: 0 | TXT: 60
+   -> Md12 | JSON: 0 | TXT: 60
+   -> Md16 | JSON: 0 | TXT: 45
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[240] ID: bj0aU8kwmo2aLuHpDJFV | COD: 003.000.005
+   -> Metodo | JSON: 1 | TXT: 2
+   -> MetEst | JSON: 16 | TXT: 32
+   -> Md08 | JSON: 1 | TXT: 2
+   -> Md16 | JSON: 1 | TXT: 2
+   -> Md26 | JSON: 1 | TXT: 2
+   -> Md52 | JSON: 1 | TXT: 2
+   -> MdAno | JSON: 1 | TXT: 2
+   -> MdTt | JSON: 1 | TXT: 2
+---------------------------------
+[241] ID: bnDNWjqqJB5LHOm13mCp | COD: 011.001.001
+   -> MdTt | JSON: 0 | TXT: 20
+---------------------------------
+[242] ID: bq7miTmU2vjt19uGrmH4 | COD: 005.000.059
+   -> Md26 | JSON: 0 | TXT: 6
+   -> Md52 | JSON: 0 | TXT: 6
+   -> MdAno | JSON: 0 | TXT: 6
+   -> MdTt | JSON: 0 | TXT: 5
+---------------------------------
+[243] ID: bxdRCRoBy4jkVvs1ujfv | COD: 230.001.016
+   -> MdTt | JSON: 0 | TXT: 90
+---------------------------------
+[244] ID: c3ftTbJoOAeptQZIfEku | COD: 325.037.001
+   -> Md52 | JSON: 0 | TXT: 3
+   -> MdAno | JSON: 0 | TXT: 3
+   -> MdTt | JSON: 0 | TXT: 3
+---------------------------------
+[245] ID: c5nKpQDvirnn2gwUrOhU | COD: 021.001.095
+   -> Metodo | JSON: 5 | TXT: 6
+   -> MetEst | JSON: 80 | TXT: 96
+   -> Md04 | JSON: 0 | TXT: 4
+   -> Md52 | JSON: 4 | TXT: 6
+   -> MdAno | JSON: 4 | TXT: 6
+   -> MdTt | JSON: 5 | TXT: 6
+---------------------------------
+[246] ID: cPQYHGJQHa6qzWMGNzXS | COD: 100.001.001
+   -> Md08 | JSON: 0 | TXT: 100
+   -> Md12 | JSON: 0 | TXT: 100
+   -> Md16 | JSON: 0 | TXT: 100
+   -> Md26 | JSON: 0 | TXT: 100
+   -> Md52 | JSON: 0 | TXT: 100
+   -> MdAno | JSON: 0 | TXT: 100
+   -> MdTt | JSON: 0 | TXT: 100
+---------------------------------
+[247] ID: cjZBdxbXM80XcmFkPmhW | COD: 325.040.002
+   -> Md04 | JSON: 35 | TXT: 50
+   -> Md08 | JSON: 35 | TXT: 50
+   -> Md26 | JSON: 0 | TXT: 50
+   -> Md52 | JSON: 0 | TXT: 50
+   -> MdAno | JSON: 0 | TXT: 50
+   -> MdTt | JSON: 0 | TXT: 50
+---------------------------------
+[248] ID: clCjD9TVH5wMU60o7VRh | COD: 325.023.002
+   -> Md08 | JSON: 10 | TXT: 20
+   -> Md12 | JSON: 5 | TXT: 24
+   -> Md16 | JSON: 0 | TXT: 28
+   -> Md26 | JSON: 0 | TXT: 20
+   -> Md52 | JSON: 0 | TXT: 20
+   -> MdAno | JSON: 0 | TXT: 20
+   -> MdTt | JSON: 0 | TXT: 20
+---------------------------------
+[249] ID: coDu8DVlfNI88cRryg2O | COD: 325.003.001
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[250] ID: cveG6asAv3IOJpS5d8H7 | COD: 325.030.001
+   -> Metodo | JSON: 125 | TXT: 200
+   -> MetEst | JSON: 2000 | TXT: 3200
+   -> Md08 | JSON: 50 | TXT: 125
+   -> Md12 | JSON: 50 | TXT: 125
+   -> Md16 | JSON: 50 | TXT: 200
+   -> Md26 | JSON: 75 | TXT: 200
+   -> Md52 | JSON: 90 | TXT: 200
+   -> MdAno | JSON: 90 | TXT: 200
+   -> MdTt | JSON: 55 | TXT: 200
+---------------------------------
+[251] ID: d2PpmfmPZkT7yisrV45Q | COD: 021.001.113
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[252] ID: dkMaXa5gbzXWWNGfILzX | COD: 005.000.061
+   -> Md04 | JSON: 0 | TXT: 2
+   -> Md08 | JSON: 0 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[253] ID: dxT2SA3ZcjWBHEgXqZN7 | COD: 301.001.005
+   -> Md16 | JSON: 0 | TXT: 32
+   -> Md26 | JSON: 0 | TXT: 32
+   -> Md52 | JSON: 0 | TXT: 32
+   -> MdAno | JSON: 0 | TXT: 32
+   -> MdTt | JSON: 0 | TXT: 32
+---------------------------------
+[254] ID: e5OqCuFHfsj3Ob3zTcw5 | COD: 325.010.001
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[255] ID: eBO4BTdlLCexzseFnlyT | COD: 325.012.002
+   -> Md08 | JSON: 0 | TXT: 30
+   -> Md12 | JSON: 0 | TXT: 30
+   -> Md16 | JSON: 0 | TXT: 30
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[256] ID: eEKbxdYXBzxOKArLEIs2 | COD: 230.001.003
+   -> MdTt | JSON: 7 | TXT: 8
+---------------------------------
+[257] ID: eQPnFCc0i5t23CSvmrNc | COD: 001.000.016
+   -> Md08 | JSON: 0 | TXT: 40
+   -> Md12 | JSON: 0 | TXT: 40
+   -> Md16 | JSON: 0 | TXT: 40
+   -> Md26 | JSON: 0 | TXT: 50
+   -> Md52 | JSON: 0 | TXT: 50
+   -> MdAno | JSON: 0 | TXT: 40
+   -> MdTt | JSON: 0 | TXT: 40
+---------------------------------
+[258] ID: ebbs7PfVgFYgOZcAEtBI | COD: 328.001.001
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[259] ID: ehu65Xw6PanbsuaXVOlQ | COD: 005.000.055
+   -> Md04 | JSON: 1 | TXT: 2
+   -> Md08 | JSON: 1 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[260] ID: fD56pc3qO86ZwsJxE1Nm | COD: 321.001.222
+   -> Md52 | JSON: 0 | TXT: 70
+   -> MdAno | JSON: 0 | TXT: 70
+   -> MdTt | JSON: 0 | TXT: 105
+---------------------------------
+[261] ID: fY1BssgaOFUhTmWeXYTM | COD: 002.000.100
+   -> Md08 | JSON: 2 | TXT: 3
+   -> Md12 | JSON: 2 | TXT: 3
+   -> Md16 | JSON: 2 | TXT: 3
+   -> Md26 | JSON: 2 | TXT: 3
+   -> Md52 | JSON: 1 | TXT: 2
+   -> MdAno | JSON: 1 | TXT: 2
+   -> MdTt | JSON: 1 | TXT: 3
+---------------------------------
+[262] ID: fjbxYOmvs3a9Eqn1ky4U | COD: 005.000.098
+   -> Md52 | JSON: 3 | TXT: 4
+   -> MdAno | JSON: 3 | TXT: 4
+   -> MdTt | JSON: 4 | TXT: 5
+---------------------------------
+[263] ID: fju0esXlYLX8rEWVDTmm | COD: 230.001.013
+   -> MdTt | JSON: 0 | TXT: 8
+---------------------------------
+[264] ID: fp3L47r9UcjndNILA1Kp | COD: 311.001.012
+   -> Md04 | JSON: 0 | TXT: 2
+   -> Md08 | JSON: 0 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[265] ID: fqEheyRghlUUOCmh9GiS | COD: 325.011.001
+   -> Md52 | JSON: 0 | TXT: 14
+   -> MdAno | JSON: 0 | TXT: 14
+   -> MdTt | JSON: 0 | TXT: 14
+---------------------------------
+[266] ID: fqdgpMD6qrsGW1vI6JDK | COD: 311.001.022
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[267] ID: g7kLeT7WICheEqQPioP5 | COD: 001.000.015
+   -> Md04 | JSON: 0 | TXT: 1
+   -> Md08 | JSON: 0 | TXT: 1
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[268] ID: g9hqgoSQqQJxAFlMb0Q6 | COD: 001.000.003
+   -> Metodo | JSON: 30 | TXT: 40
+   -> MetEst | JSON: 480 | TXT: 640
+   -> Md08 | JSON: 25 | TXT: 30
+   -> Md12 | JSON: 25 | TXT: 30
+   -> Md26 | JSON: 20 | TXT: 30
+   -> MdTt | JSON: 30 | TXT: 40
+---------------------------------
+[269] ID: gEjOmcMmd9yhB6GuUzRz | COD: 005.000.068
+   -> Md04 | JSON: 15 | TXT: 85
+   -> Md08 | JSON: 30 | TXT: 112
+   -> Md12 | JSON: 30 | TXT: 84
+   -> Md16 | JSON: 30 | TXT: 112
+   -> Md26 | JSON: 30 | TXT: 112
+   -> Md52 | JSON: 0 | TXT: 120
+   -> MdAno | JSON: 0 | TXT: 120
+   -> MdTt | JSON: 15 | TXT: 119
+---------------------------------
+[270] ID: gFUSmDpP8uC8fXPM0uGq | COD: 002.000.028
+   -> MdTt | JSON: 4 | TXT: 5
+---------------------------------
+[271] ID: gMMWRPT1VBGYr2C7MK6i | COD: 002.000.113
+   -> Md52 | JSON: 185 | TXT: 200
+   -> MdAno | JSON: 165 | TXT: 200
+---------------------------------
+[272] ID: gRgfjDPbPWJYVRjO2xPH | COD: 012.001.004
+   -> MdTt | JSON: 0 | TXT: 28
+---------------------------------
+[273] ID: gWIbA8tTx5DGt13nd2xI | COD: 301.004.001
+   -> Md04 | JSON: 0 | TXT: 60
+   -> Md08 | JSON: 0 | TXT: 60
+   -> Md12 | JSON: 5 | TXT: 60
+   -> Md16 | JSON: 5 | TXT: 60
+   -> Md26 | JSON: 0 | TXT: 60
+   -> Md52 | JSON: 0 | TXT: 60
+   -> MdAno | JSON: 0 | TXT: 60
+   -> MdTt | JSON: 0 | TXT: 40
+---------------------------------
+[274] ID: h0GQiNa8UInYe8Gv1bLr | COD: 325.052.001
+   -> Md26 | JSON: 0 | TXT: 20
+   -> Md52 | JSON: 0 | TXT: 20
+   -> MdAno | JSON: 0 | TXT: 20
+   -> MdTt | JSON: 0 | TXT: 20
+---------------------------------
+[275] ID: h9WNgxJUzz5eZOzBpTXc | COD: 005.000.083
+   -> Md52 | JSON: 0 | TXT: 20
+   -> MdAno | JSON: 0 | TXT: 20
+   -> MdTt | JSON: 0 | TXT: 20
+---------------------------------
+[276] ID: hASa42igEW2V4UtCaNTG | COD: 005.000.011
+   -> Metodo | JSON: 200 | TXT: 210
+   -> MetEst | JSON: 3200 | TXT: 3360
+   -> Md26 | JSON: 200 | TXT: 210
+   -> Md52 | JSON: 150 | TXT: 165
+   -> MdAno | JSON: 165 | TXT: 180
+---------------------------------
+[277] ID: hDFA1F3viPhOw8vOYbtm | COD: 002.000.083
+   -> Md16 | JSON: 250 | TXT: 300
+   -> MdAno | JSON: 275 | TXT: 300
+---------------------------------
+[278] ID: hKDp09qVIgqfMfVHnjyu | COD: 022.001.009
+   -> Metodo | JSON: 15 | TXT: 30
+   -> MetEst | JSON: 240 | TXT: 480
+   -> Md04 | JSON: 13 | TXT: 15
+   -> Md08 | JSON: 11 | TXT: 15
+   -> Md12 | JSON: 14 | TXT: 15
+   -> Md16 | JSON: 14 | TXT: 15
+   -> Md26 | JSON: 15 | TXT: 23
+   -> Md52 | JSON: 15 | TXT: 30
+   -> MdAno | JSON: 15 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[279] ID: hNd8TOd86Dz69700VMoi | COD: 305.002.007
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[280] ID: hS9bW6rXkY7sUuTvEOUE | COD: 300.001.002
+   -> Md08 | JSON: 0 | TXT: 56
+   -> Md12 | JSON: 0 | TXT: 35
+   -> Md16 | JSON: 0 | TXT: 42
+   -> Md26 | JSON: 0 | TXT: 42
+   -> Md52 | JSON: 0 | TXT: 42
+   -> MdAno | JSON: 0 | TXT: 42
+   -> MdTt | JSON: 0 | TXT: 42
+---------------------------------
+[281] ID: hddICtUqAgZX87q2RtKA | COD: 001.001.007
+   -> MdTt | JSON: 4 | TXT: 5
+---------------------------------
+[282] ID: hhqXwctMfKgMvqVaUQ4P | COD: 001.000.017
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[283] ID: hwKC6jEYd61qjEUbhOx1 | COD: 002.000.092
+   -> Md04 | JSON: 0 | TXT: 10
+   -> Md08 | JSON: 0 | TXT: 10
+   -> Md12 | JSON: 0 | TXT: 10
+   -> Md16 | JSON: 0 | TXT: 10
+   -> Md26 | JSON: 0 | TXT: 10
+   -> Md52 | JSON: 0 | TXT: 10
+   -> MdAno | JSON: 0 | TXT: 10
+   -> MdTt | JSON: 0 | TXT: 25
+---------------------------------
+[284] ID: iJufesYcE5fE1V1DB1p4 | COD: 002.000.088
+   -> Md04 | JSON: 5 | TXT: 55
+   -> Md08 | JSON: 0 | TXT: 10
+   -> Md12 | JSON: 0 | TXT: 10
+   -> Md16 | JSON: 0 | TXT: 10
+   -> Md26 | JSON: 0 | TXT: 20
+   -> Md52 | JSON: 0 | TXT: 20
+   -> MdAno | JSON: 0 | TXT: 20
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[285] ID: iOxWYCVu3Vb4ZMlcKK6T | COD: 327.001.002
+   -> Md04 | JSON: 15 | TXT: 60
+   -> Md08 | JSON: 15 | TXT: 90
+   -> Md12 | JSON: 0 | TXT: 90
+   -> Md16 | JSON: 0 | TXT: 90
+   -> Md26 | JSON: 0 | TXT: 90
+   -> Md52 | JSON: 0 | TXT: 90
+   -> MdAno | JSON: 0 | TXT: 90
+   -> MdTt | JSON: 0 | TXT: 90
+---------------------------------
+[286] ID: iWMSs1skdOO7imZtrfKD | COD: 022.001.016
+   -> Md04 | JSON: 0 | TXT: 1
+   -> Md08 | JSON: 0 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[287] ID: igbElbC6l3qQRyfBpsOa | COD: 325.047.001
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[288] ID: itWtgRkikuutMPPLynVQ | COD: 002.000.135
+   -> Md04 | JSON: 2 | TXT: 5
+   -> Md08 | JSON: 1 | TXT: 4
+   -> Md12 | JSON: 1 | TXT: 4
+   -> Md16 | JSON: 1 | TXT: 4
+   -> Md26 | JSON: 0 | TXT: 3
+   -> Md52 | JSON: 0 | TXT: 3
+   -> MdAno | JSON: 0 | TXT: 3
+   -> MdTt | JSON: 0 | TXT: 3
+---------------------------------
+[289] ID: itilE0RioXc5AZpJz6RS | COD: 002.000.026
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[290] ID: ivu9tqKY8MXA6xNUJLE7 | COD: 325.004.002
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[291] ID: iygjuFivoSWKplZS3itG | COD: 002.000.105
+   -> Metodo | JSON: 50 | TXT: 100
+   -> MetEst | JSON: 800 | TXT: 1600
+   -> Md04 | JSON: 25 | TXT: 50
+   -> Md08 | JSON: 25 | TXT: 75
+   -> Md26 | JSON: 25 | TXT: 50
+   -> Md52 | JSON: 50 | TXT: 60
+   -> MdAno | JSON: 35 | TXT: 65
+   -> MdTt | JSON: 50 | TXT: 100
+---------------------------------
+[292] ID: jHv2oZMcGMxASatNvJKc | COD: 563.001.002
+   -> Md26 | JSON: 0 | TXT: 60
+   -> Md52 | JSON: 0 | TXT: 60
+   -> MdAno | JSON: 0 | TXT: 60
+   -> MdTt | JSON: 0 | TXT: 60
+---------------------------------
+[293] ID: jVzJ6ZhcmhwUecyEOrWH | COD: 320.002.004
+   -> Metodo | JSON: 92 | TXT: 109
+   -> MetEst | JSON: 1472 | TXT: 1744
+   -> Md04 | JSON: 78 | TXT: 109
+   -> MdTt | JSON: 92 | TXT: 94
+---------------------------------
+[294] ID: jiItXVwAniuUCuVFBQdw | COD: 325.029.002
+   -> Md04 | JSON: 0 | TXT: 2
+   -> Md08 | JSON: 0 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 3
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 3
+   -> MdAno | JSON: 0 | TXT: 3
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[295] ID: jzkPj7seiSYs2VhMmuJO | COD: 303.006.001
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[296] ID: k0TmRRuBVyTHn9ehRcMD | COD: 002.000.114
+   -> Metodo | JSON: 100 | TXT: 200
+   -> MetEst | JSON: 1600 | TXT: 3200
+   -> Md04 | JSON: 50 | TXT: 200
+---------------------------------
+[297] ID: k6t7PoZjUEd8VpyDl0tA | COD: 325.001.001
+   -> Md04 | JSON: 0 | TXT: 60
+   -> Md08 | JSON: 0 | TXT: 60
+   -> Md12 | JSON: 0 | TXT: 60
+   -> Md16 | JSON: 0 | TXT: 60
+   -> Md26 | JSON: 0 | TXT: 60
+   -> Md52 | JSON: 0 | TXT: 60
+   -> MdAno | JSON: 0 | TXT: 60
+   -> MdTt | JSON: 0 | TXT: 45
+---------------------------------
+[298] ID: k9Q52ikdimagiGTWLTJG | COD: 010.001.011
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[299] ID: kMFEL6MITcXGCVAUto4x | COD: 002.000.132
+   -> Metodo | JSON: 3 | TXT: 4
+   -> MetEst | JSON: 48 | TXT: 64
+   -> Md08 | JSON: 2 | TXT: 3
+   -> Md12 | JSON: 3 | TXT: 4
+   -> Md16 | JSON: 3 | TXT: 4
+   -> Md52 | JSON: 2 | TXT: 3
+   -> MdAno | JSON: 2 | TXT: 3
+   -> MdTt | JSON: 2 | TXT: 3
+---------------------------------
+[300] ID: kUc1a8M4JUuqK1ZevS3d | COD: 003.000.007
+   -> Metodo | JSON: 6 | TXT: 7
+   -> MetEst | JSON: 96 | TXT: 112
+   -> Md08 | JSON: 0 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 3
+   -> Md16 | JSON: 1 | TXT: 3
+   -> Md26 | JSON: 3 | TXT: 4
+   -> Md52 | JSON: 5 | TXT: 7
+   -> MdAno | JSON: 6 | TXT: 7
+   -> MdTt | JSON: 5 | TXT: 6
+---------------------------------
+[301] ID: kjDoYjmKFHAe6SiZvAdr | COD: 003.000.001
+   -> Md08 | JSON: 0 | TXT: 20
+   -> Md12 | JSON: 0 | TXT: 60
+   -> Md16 | JSON: 0 | TXT: 60
+   -> Md26 | JSON: 0 | TXT: 45
+   -> Md52 | JSON: 0 | TXT: 25
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[302] ID: kp1CZYWdFdQD7XaCfIJI | COD: 005.000.053
+   -> Md04 | JSON: 2 | TXT: 3
+   -> Md08 | JSON: 2 | TXT: 3
+   -> Md12 | JSON: 2 | TXT: 3
+   -> Md16 | JSON: 2 | TXT: 3
+---------------------------------
+[303] ID: l0hrgmHcJwYa5hxrHUSm | COD: 230.001.001
+   -> MdTt | JSON: 147 | TXT: 166
+---------------------------------
+[304] ID: lNvFtsQXhZYQA1O5tqVQ | COD: 012.001.002
+   -> Metodo | JSON: 30 | TXT: 65
+   -> MetEst | JSON: 480 | TXT: 1040
+   -> Md04 | JSON: 30 | TXT: 65
+   -> Md08 | JSON: 25 | TXT: 45
+   -> Md16 | JSON: 30 | TXT: 35
+   -> Md26 | JSON: 20 | TXT: 30
+   -> Md52 | JSON: 20 | TXT: 35
+   -> MdAno | JSON: 20 | TXT: 30
+   -> MdTt | JSON: 20 | TXT: 40
+---------------------------------
+[305] ID: lROa2Gs3AimBCtFXRpLs | COD: 321.003.003
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[306] ID: lVQpXUf7zv3g8CsH44N1 | COD: 003.000.006
+   -> Metodo | JSON: 62 | TXT: 68
+   -> MetEst | JSON: 992 | TXT: 1088
+   -> Md12 | JSON: 0 | TXT: 5
+   -> Md16 | JSON: 0 | TXT: 23
+   -> Md26 | JSON: 12 | TXT: 23
+   -> Md52 | JSON: 55 | TXT: 68
+   -> MdAno | JSON: 47 | TXT: 68
+   -> MdTt | JSON: 62 | TXT: 64
+---------------------------------
+[307] ID: la5qFTbBKIRhaVm11HId | COD: 325.007.001
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[308] ID: lbRMYtmjWOwFo21WzM4C | COD: 021.004.006
+   -> Md04 | JSON: 0 | TXT: 7
+   -> Md08 | JSON: 0 | TXT: 4
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[309] ID: m1SAI1Qzx5fCO4vjoweP | COD: 009.000.009
+   -> Md04 | JSON: 0 | TXT: 1
+   -> Md08 | JSON: 0 | TXT: 1
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[310] ID: mD4mVoifdrB4MwI6kwij | COD: 311.002.001
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[311] ID: mPVhS9kazM4rJZIkIc5Q | COD: 021.001.060
+   -> Md12 | JSON: 10 | TXT: 15
+   -> Md52 | JSON: 9 | TXT: 12
+   -> MdAno | JSON: 8 | TXT: 12
+   -> MdTt | JSON: 6 | TXT: 8
+---------------------------------
+[312] ID: maGZaavZp63S6zI2giKP | COD: 300.001.004
+   -> Md12 | JSON: 63 | TXT: 70
+   -> Md52 | JSON: 42 | TXT: 70
+   -> MdAno | JSON: 42 | TXT: 70
+   -> MdTt | JSON: 0 | TXT: 63
+---------------------------------
+[313] ID: mf2dKoHaemouClQcH7HK | COD: 021.001.098
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[314] ID: n0vYviKWqyGh8eBCuFMo | COD: 005.000.037
+   -> Metodo | JSON: 30 | TXT: 120
+   -> MetEst | JSON: 480 | TXT: 1920
+   -> Md04 | JSON: 15 | TXT: 120
+   -> Md08 | JSON: 30 | TXT: 45
+   -> Md12 | JSON: 30 | TXT: 60
+   -> Md16 | JSON: 30 | TXT: 45
+   -> Md26 | JSON: 30 | TXT: 65
+   -> Md52 | JSON: 30 | TXT: 90
+   -> MdAno | JSON: 30 | TXT: 80
+   -> MdTt | JSON: 30 | TXT: 80
+---------------------------------
+[315] ID: n1mVvVTMqSduy7h6h4nY | COD: 325.042.001
+   -> Md04 | JSON: 90 | TXT: 100
+---------------------------------
+[316] ID: nA42QCrvNDS7aPYzERCc | COD: 003.000.018
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[317] ID: nK0a0peVtRUYiSCSoPuX | COD: 330.001.002
+   -> Md08 | JSON: 0 | TXT: 1
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[318] ID: nLo5NGr4oziADuekgiiR | COD: 301.004.002
+   -> Md08 | JSON: 0 | TXT: 15
+   -> Md12 | JSON: 0 | TXT: 15
+   -> Md16 | JSON: 0 | TXT: 15
+   -> Md26 | JSON: 0 | TXT: 15
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[319] ID: nQT0sFcuyN3wPyWWiVGv | COD: 325.024.001
+   -> MdTt | JSON: 0 | TXT: 5
+---------------------------------
+[320] ID: nSFvDaejRDKhmQFGJy0U | COD: 300.001.003
+   -> Md04 | JSON: 21 | TXT: 28
+   -> Md08 | JSON: 0 | TXT: 28
+   -> Md12 | JSON: 0 | TXT: 21
+   -> Md16 | JSON: 0 | TXT: 28
+   -> Md26 | JSON: 0 | TXT: 28
+   -> Md52 | JSON: 0 | TXT: 28
+   -> MdAno | JSON: 0 | TXT: 28
+   -> MdTt | JSON: 0 | TXT: 42
+---------------------------------
+[321] ID: nUIcMgmqjfKYe7qbivZJ | COD: 301.002.003
+   -> Md04 | JSON: 25 | TXT: 40
+   -> Md08 | JSON: 35 | TXT: 40
+   -> Md12 | JSON: 15 | TXT: 40
+   -> Md16 | JSON: 0 | TXT: 40
+   -> Md26 | JSON: 0 | TXT: 40
+   -> Md52 | JSON: 0 | TXT: 20
+   -> MdAno | JSON: 0 | TXT: 20
+   -> MdTt | JSON: 0 | TXT: 25
+---------------------------------
+[322] ID: nbAlVf2c4odbDZO6pqsO | COD: 002.000.115
+   -> Metodo | JSON: 2 | TXT: 6
+   -> MetEst | JSON: 32 | TXT: 96
+   -> Md04 | JSON: 0 | TXT: 6
+   -> Md08 | JSON: 1 | TXT: 3
+   -> Md16 | JSON: 1 | TXT: 2
+   -> Md26 | JSON: 1 | TXT: 2
+   -> Md52 | JSON: 1 | TXT: 2
+   -> MdAno | JSON: 1 | TXT: 2
+   -> MdTt | JSON: 2 | TXT: 3
+---------------------------------
+[323] ID: o5Ng0hCLtrCU2TtIdWX1 | COD: 008.001.007
+   -> Md04 | JSON: 0 | TXT: 90
+   -> Md08 | JSON: 0 | TXT: 105
+   -> Md12 | JSON: 0 | TXT: 90
+   -> Md16 | JSON: 0 | TXT: 90
+   -> Md26 | JSON: 0 | TXT: 60
+   -> Md52 | JSON: 0 | TXT: 60
+   -> MdAno | JSON: 0 | TXT: 60
+   -> MdTt | JSON: 0 | TXT: 60
+---------------------------------
+[324] ID: oAsHJoA1Se15gspTa3If | COD: 011.001.006
+   -> Metodo | JSON: 90 | TXT: 120
+   -> MetEst | JSON: 1440 | TXT: 1920
+   -> Md08 | JSON: 90 | TXT: 120
+   -> Md12 | JSON: 60 | TXT: 120
+   -> Md16 | JSON: 60 | TXT: 90
+   -> Md26 | JSON: 45 | TXT: 60
+   -> Md52 | JSON: 60 | TXT: 75
+   -> MdAno | JSON: 60 | TXT: 90
+   -> MdTt | JSON: 30 | TXT: 60
+---------------------------------
+[325] ID: oIyUT49A80lBGHPVcCYi | COD: 009.000.002
+   -> Md04 | JSON: 1 | TXT: 8
+   -> Md08 | JSON: 0 | TXT: 4
+   -> Md12 | JSON: 0 | TXT: 3
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 4
+---------------------------------
+[326] ID: oSLNM5Eiq2ZCLzZZMtve | COD: 325.004.001
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[327] ID: oXettr5jWlsgohP2E6km | COD: 008.001.010
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[328] ID: oe2giHGUYF2mLe7WlVxj | COD: 313.004.003
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[329] ID: ofJUpurbbdrkn8HSUyRw | COD: 302.004.006
+   -> Md52 | JSON: 0 | TXT: 90
+   -> MdTt | JSON: 0 | TXT: 90
+---------------------------------
+[330] ID: okw2jLL0S4Yp0UVk2eBi | COD: 021.001.107
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[331] ID: osDAJU7UwBbcW5SL665C | COD: 311.002.004
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[332] ID: p6v8Ve69ohbeSfGjuvUo | COD: 302.004.001
+   -> Metodo | JSON: 238 | TXT: 280
+   -> MetEst | JSON: 3808 | TXT: 4480
+   -> Md08 | JSON: 230 | TXT: 280
+   -> Md12 | JSON: 230 | TXT: 280
+   -> Md16 | JSON: 161 | TXT: 180
+   -> Md26 | JSON: 180 | TXT: 210
+   -> Md52 | JSON: 180 | TXT: 240
+   -> MdAno | JSON: 180 | TXT: 240
+   -> MdTt | JSON: 150 | TXT: 180
+---------------------------------
+[333] ID: p92VvabmWDLoDrf900uf | COD: 008.001.006
+   -> Md04 | JSON: 0 | TXT: 1
+   -> Md08 | JSON: 0 | TXT: 1
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[334] ID: pERQcq3mcLxO5lSikCEC | COD: 002.000.110
+   -> Md08 | JSON: 0 | TXT: 50
+   -> Md12 | JSON: 0 | TXT: 50
+   -> Md16 | JSON: 0 | TXT: 50
+   -> Md26 | JSON: 0 | TXT: 50
+   -> Md52 | JSON: 0 | TXT: 50
+   -> MdAno | JSON: 0 | TXT: 50
+   -> MdTt | JSON: 0 | TXT: 50
+---------------------------------
+[335] ID: pH5LCRQCRTpnkjZkQCbD | COD: 306.001.002
+   -> Metodo | JSON: 185 | TXT: 190
+   -> MetEst | JSON: 2960 | TXT: 3040
+   -> Md12 | JSON: 185 | TXT: 190
+   -> Md16 | JSON: 185 | TXT: 190
+   -> Md26 | JSON: 110 | TXT: 130
+   -> Md52 | JSON: 30 | TXT: 70
+   -> MdAno | JSON: 35 | TXT: 70
+   -> MdTt | JSON: 0 | TXT: 35
+---------------------------------
+[336] ID: pR1rQSQGD5GsIN1TPCZT | COD: 005.000.090
+   -> Md04 | JSON: 1 | TXT: 2
+   -> Md08 | JSON: 1 | TXT: 2
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[337] ID: phMru882PJazuffuNMr2 | COD: 325.004.003
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[338] ID: pnN8N2uBfSNefEhNh6oE | COD: 325.016.009
+   -> MdAno | JSON: 14 | TXT: 15
+---------------------------------
+[339] ID: psPzS4n0uK5yJSsH463L | COD: 002.000.111
+   -> Md04 | JSON: 0 | TXT: 10
+   -> Md08 | JSON: 0 | TXT: 100
+   -> Md12 | JSON: 0 | TXT: 100
+   -> Md16 | JSON: 0 | TXT: 100
+   -> Md26 | JSON: 0 | TXT: 100
+   -> Md52 | JSON: 0 | TXT: 100
+   -> MdAno | JSON: 0 | TXT: 100
+   -> MdTt | JSON: 0 | TXT: 100
+---------------------------------
+[340] ID: qZhgOZYzszihiHx0Y09r | COD: 325.004.004
+   -> Md04 | JSON: 0 | TXT: 100
+   -> Md08 | JSON: 0 | TXT: 100
+   -> Md12 | JSON: 0 | TXT: 100
+   -> Md16 | JSON: 0 | TXT: 100
+   -> Md26 | JSON: 0 | TXT: 70
+   -> Md52 | JSON: 0 | TXT: 100
+   -> MdAno | JSON: 0 | TXT: 100
+   -> MdTt | JSON: 0 | TXT: 100
+---------------------------------
+[341] ID: qqidJqvTN5DPkTlaSY1V | COD: 302.008.003
+   -> Md16 | JSON: 30 | TXT: 50
+   -> Md26 | JSON: 25 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[342] ID: qtK9ZXjqQVBppBrelKVw | COD: 002.000.035
+   -> Metodo | JSON: 50 | TXT: 60
+   -> MetEst | JSON: 800 | TXT: 960
+   -> Md12 | JSON: 35 | TXT: 45
+   -> Md16 | JSON: 50 | TXT: 55
+   -> Md26 | JSON: 50 | TXT: 60
+   -> Md52 | JSON: 50 | TXT: 55
+---------------------------------
+[343] ID: r38EfOCdjGoN6NrtsrdS | COD: 222.001.002
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[344] ID: rZ5kSMNk2eBqclJjwI13 | COD: 021.001.106
+   -> Md04 | JSON: 53 | TXT: 77
+   -> Md08 | JSON: 67 | TXT: 81
+   -> Md12 | JSON: 28 | TXT: 77
+   -> Md16 | JSON: 11 | TXT: 67
+   -> Md26 | JSON: 0 | TXT: 49
+   -> Md52 | JSON: 0 | TXT: 33
+   -> MdAno | JSON: 0 | TXT: 33
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[345] ID: s6Yq6Aaiz7ZO1exj6zji | COD: 005.000.050
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 4
+---------------------------------
+[346] ID: sP5HFzyGj5FeehtrpI7g | COD: 002.000.122
+   -> Metodo | JSON: 61 | TXT: 76
+   -> MetEst | JSON: 976 | TXT: 1216
+   -> Md04 | JSON: 55 | TXT: 76
+   -> Md08 | JSON: 61 | TXT: 64
+   -> Md12 | JSON: 61 | TXT: 64
+   -> Md16 | JSON: 61 | TXT: 64
+   -> Md26 | JSON: 57 | TXT: 58
+   -> Md52 | JSON: 41 | TXT: 43
+   -> MdTt | JSON: 3 | TXT: 35
+---------------------------------
+[347] ID: sR4MsfzzyqGEIrQ8mj3k | COD: 021.001.069
+   -> Md04 | JSON: 57 | TXT: 64
+   -> Md08 | JSON: 50 | TXT: 64
+   -> Md12 | JSON: 25 | TXT: 82
+   -> Md16 | JSON: 0 | TXT: 100
+   -> Md26 | JSON: 0 | TXT: 100
+   -> Md52 | JSON: 0 | TXT: 100
+   -> MdAno | JSON: 0 | TXT: 100
+   -> MdTt | JSON: 0 | TXT: 100
+---------------------------------
+[348] ID: sYEg26Fo7hDHW6E7CKOM | COD: 005.000.049
+   -> Md08 | JSON: 1 | TXT: 2
+   -> Md12 | JSON: 1 | TXT: 2
+   -> Md16 | JSON: 1 | TXT: 2
+   -> Md52 | JSON: 1 | TXT: 2
+   -> MdAno | JSON: 1 | TXT: 2
+---------------------------------
+[349] ID: sd8mTUNGn83cIP3w3dAA | COD: 228.001.006
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[350] ID: t9Mv8tFZD6ieDTxKDw6i | COD: 021.001.072
+   -> Metodo | JSON: 10 | TXT: 44
+   -> MetEst | JSON: 160 | TXT: 704
+   -> Md04 | JSON: 0 | TXT: 24
+   -> Md08 | JSON: 0 | TXT: 24
+   -> Md12 | JSON: 0 | TXT: 24
+   -> Md16 | JSON: 0 | TXT: 24
+   -> Md26 | JSON: 0 | TXT: 28
+   -> Md52 | JSON: 8 | TXT: 44
+   -> MdAno | JSON: 8 | TXT: 44
+   -> MdTt | JSON: 10 | TXT: 24
+---------------------------------
+[351] ID: tGHgK3AhX3gwvjUkWJTQ | COD: 005.000.056
+   -> Md04 | JSON: 2 | TXT: 6
+   -> Md08 | JSON: 1 | TXT: 4
+   -> Md12 | JSON: 0 | TXT: 4
+   -> Md16 | JSON: 0 | TXT: 4
+   -> Md26 | JSON: 0 | TXT: 4
+   -> Md52 | JSON: 0 | TXT: 3
+   -> MdAno | JSON: 0 | TXT: 3
+   -> MdTt | JSON: 0 | TXT: 3
+---------------------------------
+[352] ID: tR1YAKp88EaqeThFVQ3v | COD: 005.000.093
+   -> Md12 | JSON: 0 | TXT: 1
+   -> Md16 | JSON: 0 | TXT: 1
+   -> Md26 | JSON: 0 | TXT: 1
+   -> Md52 | JSON: 0 | TXT: 1
+   -> MdAno | JSON: 0 | TXT: 1
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[353] ID: tzM5HyBfI8JKl0fVkRxX | COD: 006.000.002
+   -> MdTt | JSON: 210 | TXT: 211
+---------------------------------
+[354] ID: u1RBTgAqson1RdfjSfBq | COD: 222.001.001
+   -> Md08 | JSON: 0 | TXT: 60
+   -> Md12 | JSON: 0 | TXT: 60
+   -> Md16 | JSON: 0 | TXT: 60
+   -> Md26 | JSON: 0 | TXT: 60
+   -> Md52 | JSON: 0 | TXT: 60
+   -> MdAno | JSON: 0 | TXT: 60
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[355] ID: u4npOHvNY4cU7uvcq5pa | COD: 021.001.061
+   -> Md52 | JSON: 10 | TXT: 11
+   -> MdTt | JSON: 8 | TXT: 9
+---------------------------------
+[356] ID: v1Xp5UxmsAgmqPwJxeY7 | COD: 021.001.099
+   -> MdTt | JSON: 0 | TXT: 28
+---------------------------------
+[357] ID: v3ZPZ2D4Vv25sq6blCjc | COD: 325.009.002
+   -> Md26 | JSON: 0 | TXT: 30
+   -> Md52 | JSON: 0 | TXT: 30
+   -> MdAno | JSON: 0 | TXT: 30
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[358] ID: vHbOBZ4zbWatcr0WzcpC | COD: 021.001.065
+   -> Md26 | JSON: 0 | TXT: 14
+   -> Md52 | JSON: 0 | TXT: 14
+   -> MdAno | JSON: 0 | TXT: 14
+   -> MdTt | JSON: 0 | TXT: 14
+---------------------------------
+[359] ID: vPTqIE0lST34hTmYqYYH | COD: 005.000.047
+   -> Metodo | JSON: 3 | TXT: 4
+   -> MetEst | JSON: 48 | TXT: 64
+   -> Md04 | JSON: 0 | TXT: 4
+   -> Md08 | JSON: 2 | TXT: 4
+   -> Md12 | JSON: 0 | TXT: 3
+   -> Md16 | JSON: 1 | TXT: 3
+   -> Md26 | JSON: 3 | TXT: 4
+   -> Md52 | JSON: 3 | TXT: 4
+   -> MdAno | JSON: 3 | TXT: 4
+   -> MdTt | JSON: 3 | TXT: 4
+---------------------------------
+[360] ID: vm4LJ5Jh5uajOQ7SS4rK | COD: 230.001.015
+   -> MdTt | JSON: 0 | TXT: 8
+---------------------------------
+[361] ID: wHmUnagFZnuJPWIdxliV | COD: 021.001.090
+   -> Md04 | JSON: 45 | TXT: 60
+   -> Md08 | JSON: 15 | TXT: 120
+   -> Md12 | JSON: 0 | TXT: 180
+   -> Md16 | JSON: 0 | TXT: 180
+   -> Md26 | JSON: 0 | TXT: 90
+   -> Md52 | JSON: 0 | TXT: 60
+   -> MdAno | JSON: 0 | TXT: 90
+   -> MdTt | JSON: 0 | TXT: 60
+---------------------------------
+[362] ID: wP3CCoiGWFa2yur8rBbh | COD: 021.004.008
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[363] ID: wg20dEOvLs84yilKxx2g | COD: 325.005.003
+   -> Md26 | JSON: 3 | TXT: 5
+   -> Md52 | JSON: 0 | TXT: 5
+   -> MdAno | JSON: 0 | TXT: 5
+   -> MdTt | JSON: 0 | TXT: 5
+---------------------------------
+[364] ID: wtrRuyLsAhYrnLqelXhu | COD: 005.000.092
+   -> MdTt | JSON: 0 | TXT: 60
+---------------------------------
+[365] ID: x2cD8JDXAaNUfW011eak | COD: 311.002.003
+   -> MdTt | JSON: 0 | TXT: 1
+---------------------------------
+[366] ID: x5eil6ATv0YJAnHYEz8Y | COD: 325.029.001
+   -> Md04 | JSON: 0 | TXT: 1
+   -> Md08 | JSON: 0 | TXT: 1
+   -> Md12 | JSON: 0 | TXT: 2
+   -> Md16 | JSON: 0 | TXT: 2
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 3
+---------------------------------
+[367] ID: xJG4xM95BVjKT5OvE2d0 | COD: 325.008.001
+   -> MdTt | JSON: 0 | TXT: 180
+---------------------------------
+[368] ID: xTonu2zccY6sWMErE6wZ | COD: 002.000.103
+   -> Metodo | JSON: 10 | TXT: 15
+   -> MetEst | JSON: 160 | TXT: 240
+   -> Md04 | JSON: 3 | TXT: 8
+   -> Md12 | JSON: 8 | TXT: 10
+   -> Md16 | JSON: 5 | TXT: 10
+   -> Md26 | JSON: 8 | TXT: 10
+   -> Md52 | JSON: 10 | TXT: 13
+   -> MdAno | JSON: 8 | TXT: 13
+   -> MdTt | JSON: 10 | TXT: 15
+---------------------------------
+[369] ID: xXVce28GF6OclKUsmvan | COD: 005.000.016
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[370] ID: xnikQu2YQn0bZLiKnckF | COD: 008.001.003
+   -> Md04 | JSON: 0 | TXT: 4
+   -> Md08 | JSON: 0 | TXT: 3
+   -> Md12 | JSON: 0 | TXT: 3
+   -> Md16 | JSON: 0 | TXT: 3
+   -> Md26 | JSON: 0 | TXT: 2
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[371] ID: y64oy8sLotMN2GanX2DP | COD: 002.000.037
+   -> Md04 | JSON: 2 | TXT: 3
+---------------------------------
+[372] ID: y75avTQeD67eWNKJQ15l | COD: 311.001.021
+   -> Md52 | JSON: 0 | TXT: 2
+   -> MdAno | JSON: 0 | TXT: 2
+   -> MdTt | JSON: 0 | TXT: 2
+---------------------------------
+[373] ID: yDx6WgbID3OnFCM1dLlm | COD: 335.001.001
+   -> MdTt | JSON: 0 | TXT: 120
+---------------------------------
+[374] ID: yIaeAARlgH074Y1dfP1X | COD: 022.001.015
+   -> MdTt | JSON: 0 | TXT: 16
+---------------------------------
+[375] ID: yNWX9oxPmoMr6ZzE3X9d | COD: 303.006.004
+   -> Md08 | JSON: 40 | TXT: 55
+   -> Md16 | JSON: 55 | TXT: 60
+   -> Md26 | JSON: 55 | TXT: 60
+   -> Md52 | JSON: 55 | TXT: 60
+   -> MdAno | JSON: 55 | TXT: 60
+   -> MdTt | JSON: 30 | TXT: 60
+---------------------------------
+[376] ID: ymL7GXkyn9ogZ7HI8vRj | COD: 002.000.094
+   -> MdTt | JSON: 0 | TXT: 6
+---------------------------------
+[377] ID: ynn41vY6gUW9GfxBPOUR | COD: 325.002.001
+   -> MdTt | JSON: 0 | TXT: 30
+---------------------------------
+[378] ID: zUuYGCZDZxoB0nsWBsyp | COD: 304.002.002
+   -> MdTt | JSON: 6 | TXT: 10
+---------------------------------
+[379] ID: zgk7cDgcrR6Xpb6nN8Xu | COD: 325.019.006
+   -> Md08 | JSON: 0 | TXT: 24
+   -> Md12 | JSON: 0 | TXT: 24
+   -> Md16 | JSON: 0 | TXT: 24
+   -> Md26 | JSON: 0 | TXT: 24
+   -> Md52 | JSON: 0 | TXT: 24
+   -> MdAno | JSON: 0 | TXT: 24
+   -> MdTt | JSON: 0 | TXT: 24
+---------------------------------
+[380] ID: zn1KN1pgJzTUIskpyo9f | COD: 002.000.138
+   -> Metodo | JSON: 15 | TXT: 17
+   -> MetEst | JSON: 240 | TXT: 272
+   -> Md26 | JSON: 14 | TXT: 17
+   -> Md52 | JSON: 14 | TXT: 16
+   -> MdAno | JSON: 15 | TXT: 16
+   -> MdTt | JSON: 9 | TXT: 13
+---------------------------------
+[381] ID: zqS1qbgrX7qxANwXlYqt | COD: 301.002.004
+   -> Md04 | JSON: 35 | TXT: 60
+   -> Md08 | JSON: 10 | TXT: 40
+   -> Md12 | JSON: 0 | TXT: 40
+   -> Md16 | JSON: 0 | TXT: 40
+   -> Md26 | JSON: 0 | TXT: 40
+   -> Md52 | JSON: 0 | TXT: 10
+   -> MdAno | JSON: 0 | TXT: 10
+   -> MdTt | JSON: 0 | TXT: 20
+---------------------------------
+[382] ID: ztkKXi1alZVIeCXrYrpr | COD: 005.000.080
+   -> Md04 | JSON: 0 | TXT: 6
+   -> Md08 | JSON: 0 | TXT: 5
+   -> Md12 | JSON: 0 | TXT: 3
+   -> Md16 | JSON: 0 | TXT: 3
+   -> Md26 | JSON: 0 | TXT: 3
+   -> Md52 | JSON: 0 | TXT: 3
+   -> MdAno | JSON: 0 | TXT: 3
+   -> MdTt | JSON: 0 | TXT: 3
+---------------------------------
+
+
+=== LISTA DE IDs (JSON Array) ===
+[
+  "0080eMOHAR6Xaw7KITGT",
+  "03xukFiKViEfrwg603S1",
+  "07OsYcmU03iWz3VotUGW",
+  "09W43eDQzqcoQxKf9wt5",
+  "0UzmCcfqoK39sEAf6Rwf",
+  "0ZQT8TIgDGevRLg9qYT8",
+  "0ZZw2LpzKVUZeLcKDwwZ",
+  "0dtX2C7XcuNMQSaKg3PK",
+  "0h3oFBQuqfA2g5KduUMQ",
+  "0j02HLpxyERdvCmoU6D4",
+  "0r07lukfiRG013r1NUT9",
+  "0vBTBgj71echtFl8jbhc",
+  "13gLOOpsVgz8OroJeUOY",
+  "19Jxt9OroinRNtefpnXo",
+  "19tGQni3pqGnzpl8jpLj",
+  "1zOCi8SfjBWCfmohrhEM",
+  "2A3Rs9qginsrbwJ3I20Q",
+  "2eW3vLaiFqi3ChhSNowB",
+  "2n8I86Tv3rQcHMeBSFMD",
+  "2t7XTo7OGzG4qO7cuULT",
+  "2tzpAbxhQFo9r3SVRZyg",
+  "3HbIItfasiveaTbsyMAD",
+  "3MXMAwoKO7Q32Ywgtutg",
+  "3QTsCWQ1lntjW1fE9M7R",
+  "3oGdVlNa059ZVrN80juJ",
+  "3tirqyk36kwx1ff8U08C",
+  "4OmR30yxPaiJO7ZQ3GTF",
+  "4PGLiZ16rU66BmBx0ro7",
+  "4T4qEzwmxJYy56sut147",
+  "4mPPUkosxWeFeGVQ79Y7",
+  "4q0bckGlRtLfELiglo4t",
+  "4t1rqrLwT4vXCN1Au6dF",
+  "50vzIDjU9aprGKKnfceC",
+  "5Auij8873CW92QAyECdA",
+  "5COFKL9cvlFEbeIWC5nR",
+  "5fkEDG5c03LYs7cUySqc",
+  "5nPi6KGKn9FlILDho39n",
+  "69EfGhC5FGRKuKiAtAne",
+  "6DDkEYy3gAwPOoUoe3sX",
+  "6SgxCvM6iiyeZZUZQmxI",
+  "6U3OsKtk6SDK5owtoLQ4",
+  "6XcVIKT1RkuhgIFMTALB",
+  "6dFlmOMvVOKSLjhKl1CC",
+  "6ys2yC1k8vGdC2HtW3yr",
+  "7D0haFb7SnW7PW1K9DRx",
+  "7NmKnCCb7ji6E1DDHdFr",
+  "7nqlElQCZGw1OCQ1U3H9",
+  "882r7HgKgsw7NDFtOCAD",
+  "8AL8fcCMigUZqDvIvcIS",
+  "8BhUDa0uaKtDrF32jSjE",
+  "8EQKbDHBb8aKVpzyLWZk",
+  "8GSjqvk8AQCwqv9SQdRc",
+  "8b0oAgadQN5cd0HcFtBl",
+  "8hQIWv1uToNf0w0dJ3hc",
+  "94pnJDsNkVvEuTXeGMjS",
+  "95oQoYhgP6egDawHRrX7",
+  "98Y4aUei09v22k3Lghu5",
+  "98m981as3l4Ih5DayJFR",
+  "9vXdAVxBHpTn7zOCOFvy",
+  "9wullEaa3dQ2EBotlTzB",
+  "9xkBe5FaLqDO1pbGtTlt",
+  "A1Hx5rKefA8PMNJV10Yu",
+  "AOAWIppJtCTZGSqJxt9y",
+  "AhX3QLsBeypbxsFWWMqe",
+  "ApinTW1CHNX94E5CMW9T",
+  "AsfwwaQi1KQerQUMt8hn",
+  "AspdbvJmWoVCORYURLxf",
+  "Awf2gbPNSmMl5p0a9QZm",
+  "AzZQFCFXWxKaSrXJwUi8",
+  "B3MNnwdTOM7272bHx5HM",
+  "B4uaYbs78PcgBWXcoPHv",
+  "BDRBMEQRb53tUxpZ3GgX",
+  "BHQackUU2RPmCk7UZSqj",
+  "BHTWHIpseAqErTkbKUvk",
+  "BLJXgqUYz7ilA09dySs8",
+  "BQW5qeJbatnGQ6Kdx2ov",
+  "BoJJeaG3DzWWxitoV4Yd",
+  "C6gTpWB17MUDhyOwpjH4",
+  "CD2qZwyRmCJIdhcMWrZv",
+  "CDPqxd9oTiVbjr9NwrZb",
+  "CIsf4DnWmPHhh0SxEOg9",
+  "CSqJcb3TBXbbxAV2OEpG",
+  "CTC28iTkZtAj72RtoGbh",
+  "D1IPbVFWQgAy8PdnI0qy",
+  "DMX1vO8BBZtpxVyufK84",
+  "DOAnfCR9evVvCEMzhfip",
+  "DPavErRGBCftcFqKUv2V",
+  "DRFzshvap5fD11wRvdiz",
+  "DrTDtCxTpd4EXePMOogj",
+  "Dy20KseCwfDRVp3tp8Bd",
+  "E3hM7B60nc95IKNveJpd",
+  "E9C2UVwPFuQ6EQz7wquc",
+  "EWmZRPac8tZM46tn81EE",
+  "EYaXTEZ05VkVjw9uJmYF",
+  "EbGdBfopFqlpd4fTrDrj",
+  "EpJ8og89rBADtGSoq7XC",
+  "F1xC4EyjEoZdNBKv3lvp",
+  "F2Prcb1OpyPLVH3FcCng",
+  "FiQRvlEAZ4xXqGjcdilP",
+  "FvzRUa4xpMLqpMmGvZKk",
+  "FwACT0nUN8St05ELhQE5",
+  "GAa6AD63zZ3CBA14RRL6",
+  "GFn8q9hkFcV9LWqHpUuk",
+  "GW6LrwI2MpYoFVOwMJXi",
+  "GcDMF2v2e5s3d0q0XAW4",
+  "GfxXvMBDTl08yr410jgV",
+  "Gz2njaOUSH3JOHjUfmCq",
+  "H6vqTSQNU7kMGUVXjLuL",
+  "H99uvzb5MTIbFRe6pwoI",
+  "HC5caGAMBZDMM36rvjgA",
+  "HQ91S9Rbm4QVBWjY2jJS",
+  "HZCQCNK29JRZhSPnYRSb",
+  "HitgMH1qX5Nt6QqanGB7",
+  "HvrcXGBTYRoBShzsvZkP",
+  "IB8ZvSzr8GlQSYB1QXFn",
+  "IeqdHuULWqS8hJj2N0yB",
+  "ImM838wEkxf6WlBmAiHn",
+  "Iz6pJB9xr6jBqkEFvROS",
+  "JPyfPllfescUpNsqh1H9",
+  "JRfBHiICtzGkjoTRyS1c",
+  "JSZIL11se7bJ6zL8P9xn",
+  "JWWONjOYX2mcM9FA9SIw",
+  "JatoPcC7zNNLAaBoPJu0",
+  "JqmU8WKAqGbsLZsVmi9I",
+  "K8qNPhoM8cuuNpX6uvUQ",
+  "KMlEtoC6XtrsuyAMISov",
+  "KZeoKt7z0mLf3GZdrxL5",
+  "KgXPPZ971FhQPgd6CkIg",
+  "KzhsRnoIURyy5BxZqwdL",
+  "L1XjFJCqNhzezk1GQ0ec",
+  "L3ruHFDo0Nn38JLOMt61",
+  "L4XgzFbK5ELxtfnu7jaM",
+  "LIfnnCUwlnvQ6j4kIyCX",
+  "LT6dyVhjx0YDIyHfakHd",
+  "LV6hs8LIRsCYA7lcIw6x",
+  "LqUsROsACRRkxB15wm2r",
+  "M4g15BF3472srpMLxx2R",
+  "M7PcBqTegT2YeQ38lgGD",
+  "M8o6281pyoPqBrSPTvVP",
+  "MAUFyz1jl4RcqnXrjYTx",
+  "MAxfhJnqgoYibEvwsg4A",
+  "MD3c0KFRfTkZrERhSFaT",
+  "MejxRDFFOsggZLHsNCXH",
+  "MkIXeBIAEZEaNkkeAkt8",
+  "MkUItNIa99H9Vis78Wc0",
+  "MwlTHGO2TUhepUbU27Gx",
+  "N5L0bTWXlCrUnRcrOznE",
+  "N7gYusqFhoxvv3Osolz1",
+  "NAMDqbsNQpih2yjkoLRY",
+  "NB6O3v2lrjliFDtLWG0p",
+  "NI8GS3kl1eMLSHJo3WoW",
+  "NJks0S26PveorCeDPgQb",
+  "NNPlmIEDCCQujeWNm1rN",
+  "NSke2BrzZl67sb4q101x",
+  "NWoQNOV9u0lOsDSAIhvD",
+  "Nsiizo5oeODpZx9PMMPP",
+  "Nvt7QHS31SneVvwTkhFL",
+  "Nyld68otgN4WDSIaz5t3",
+  "O1nXHMn4kACm2rm9PuHY",
+  "ODy1bHylMb3P7LQBpkct",
+  "ORoe2dIZIyGyED7S2bP9",
+  "OkB0krDlwWExy2P6LO11",
+  "PZC8uTZ7cXB91hZJwubI",
+  "PcRwIBw1hEXOmdWVMjHP",
+  "PfmcJVFRZZ6AbPvYhaFQ",
+  "PnJ3gJ6g7oszGLv91275",
+  "Pr63wxqUImB2mzmujRVe",
+  "PzDtDOL1Z75lHTMXZTYc",
+  "Q1Wen7HkRWNjO47N1frr",
+  "Q9mx1w1gqtE3CVn2GeWo",
+  "QDVPqQMjOYszZANBiy0J",
+  "QMUK4Xt0WQ3BIlIDbGKj",
+  "QO4I6SGPARdr2EnWQ3jD",
+  "QPcg4NF1FLInXf8AaKVp",
+  "QeX3lfZhvIyVkUysujiZ",
+  "QedbtYv4v0IkcxQdxccC",
+  "QvRSOoIEZRS9PdZx0v6f",
+  "R6XNm7p2dJO5DHd4iv5E",
+  "RDXCFe15NY5cGdJCODwa",
+  "RdfvdBBjmR0wBBvpxC7O",
+  "RivLPqxYggjlSiHtjzBb",
+  "RtPgBqsst5FJymohBetm",
+  "Ru9ngfjA74SkV1UgTkNT",
+  "RvCLE8rrI6WlVdsbXCuU",
+  "RyNxNaeVvTnfmgjWFXZj",
+  "SLPbpcG5Pb7NEVolVUYi",
+  "SOCRfdwTqG60lfAPK8pd",
+  "SSw3pBZbTmyx8jSNe8o4",
+  "SUuNiwGv28CHq5U2sUdt",
+  "SraMhaaWroF3PIbQ6qfs",
+  "Sv7vBJO9kleMNQGnwOGa",
+  "Sz1dDl8opRFHwKCh6TvK",
+  "SznnW3tdowjbifaVTKFn",
+  "TDgwN7ITx69tfOez9J0v",
+  "TMGB9Vcm8kKf3feRCSrC",
+  "TPWWnWt24YQbzX8oLhwi",
+  "TPmNeAmZWfMnxpNtpYz0",
+  "TrqWwOISNJemstLha0Nb",
+  "TwnLk2XLCOXfWk15nZvW",
+  "Tytodluzuy9UGORTwC8N",
+  "UVOhucSTdWGTdVNKfHzJ",
+  "UYi5uq1ifhoGdHlRZxnG",
+  "UcY1o7bjFnmOJ9Es5WJI",
+  "UfuclvzO32nzTjpZ0zat",
+  "UtfJGlUYQY97C5AWMNmP",
+  "UvWJHiijp79TzHRgubfa",
+  "VQQsb9LC1cycPtYIqDzC",
+  "VQVaXnKrtkJRFItNT8an",
+  "W9oRz64u78M0Gj4HvEiq",
+  "WHpBYcwEGzirCTzIVJ9H",
+  "WMHwZMb2EBJAXATKLbLu",
+  "WWZ4BYfYPLB10PYdoCJV",
+  "WWwsLJKLLs5wOIcOz8l9",
+  "WcyqEEh4Fc4EYjxrrpNX",
+  "Wlvoc7dBw2sRPIJ8RJGg",
+  "XES0KoO074StqVRY52PC",
+  "XFqTEkA6JbJlFrmsw5oq",
+  "Xt8VbHIYjLPVr9Jwpvf6",
+  "Xze3I7yOZcEPDaUe1i5T",
+  "Y8elAqaC5Kq1HJFm11lf",
+  "YJAiDSLRkMXdCG3P0qqF",
+  "YTBeBEKQq1OhxwRyI5Pe",
+  "YVT2YxcRe6YEMdMZGY1g",
+  "YeLFXp9w10wtRyrYPITJ",
+  "Z1cKPvQNVtZnS3i3CaS7",
+  "Z49OqLPpqLl0XSeGs9P5",
+  "ZJa9CxNSJn4YfA9tkFHR",
+  "ZNjo9cGBSuHR6PFq3lxV",
+  "ZyYUcta8OxB69JaRMr1f",
+  "Zyzp1rmN7IuAYFhLaq5V",
+  "aHk79gkBb0S1T3VFT1km",
+  "aI3TeiVNbCodCjFVa1KE",
+  "aQWAtjVgpF1kF54jO0tf",
+  "b5rtVtITjxkJU7xTGyew",
+  "bEhvqoNj6FFpUHv3q2dt",
+  "bRJjbuW1KK9I4TbZMGoC",
+  "bTUH4tyOjUfMlYImT9MW",
+  "bdgH9O7yKc2aql3VChkM",
+  "be8ZK8PxhMykXammDkPw",
+  "bj0aU8kwmo2aLuHpDJFV",
+  "bnDNWjqqJB5LHOm13mCp",
+  "bq7miTmU2vjt19uGrmH4",
+  "bxdRCRoBy4jkVvs1ujfv",
+  "c3ftTbJoOAeptQZIfEku",
+  "c5nKpQDvirnn2gwUrOhU",
+  "cPQYHGJQHa6qzWMGNzXS",
+  "cjZBdxbXM80XcmFkPmhW",
+  "clCjD9TVH5wMU60o7VRh",
+  "coDu8DVlfNI88cRryg2O",
+  "cveG6asAv3IOJpS5d8H7",
+  "d2PpmfmPZkT7yisrV45Q",
+  "dkMaXa5gbzXWWNGfILzX",
+  "dxT2SA3ZcjWBHEgXqZN7",
+  "e5OqCuFHfsj3Ob3zTcw5",
+  "eBO4BTdlLCexzseFnlyT",
+  "eEKbxdYXBzxOKArLEIs2",
+  "eQPnFCc0i5t23CSvmrNc",
+  "ebbs7PfVgFYgOZcAEtBI",
+  "ehu65Xw6PanbsuaXVOlQ",
+  "fD56pc3qO86ZwsJxE1Nm",
+  "fY1BssgaOFUhTmWeXYTM",
+  "fjbxYOmvs3a9Eqn1ky4U",
+  "fju0esXlYLX8rEWVDTmm",
+  "fp3L47r9UcjndNILA1Kp",
+  "fqEheyRghlUUOCmh9GiS",
+  "fqdgpMD6qrsGW1vI6JDK",
+  "g7kLeT7WICheEqQPioP5",
+  "g9hqgoSQqQJxAFlMb0Q6",
+  "gEjOmcMmd9yhB6GuUzRz",
+  "gFUSmDpP8uC8fXPM0uGq",
+  "gMMWRPT1VBGYr2C7MK6i",
+  "gRgfjDPbPWJYVRjO2xPH",
+  "gWIbA8tTx5DGt13nd2xI",
+  "h0GQiNa8UInYe8Gv1bLr",
+  "h9WNgxJUzz5eZOzBpTXc",
+  "hASa42igEW2V4UtCaNTG",
+  "hDFA1F3viPhOw8vOYbtm",
+  "hKDp09qVIgqfMfVHnjyu",
+  "hNd8TOd86Dz69700VMoi",
+  "hS9bW6rXkY7sUuTvEOUE",
+  "hddICtUqAgZX87q2RtKA",
+  "hhqXwctMfKgMvqVaUQ4P",
+  "hwKC6jEYd61qjEUbhOx1",
+  "iJufesYcE5fE1V1DB1p4",
+  "iOxWYCVu3Vb4ZMlcKK6T",
+  "iWMSs1skdOO7imZtrfKD",
+  "igbElbC6l3qQRyfBpsOa",
+  "itWtgRkikuutMPPLynVQ",
+  "itilE0RioXc5AZpJz6RS",
+  "ivu9tqKY8MXA6xNUJLE7",
+  "iygjuFivoSWKplZS3itG",
+  "jHv2oZMcGMxASatNvJKc",
+  "jVzJ6ZhcmhwUecyEOrWH",
+  "jiItXVwAniuUCuVFBQdw",
+  "jzkPj7seiSYs2VhMmuJO",
+  "k0TmRRuBVyTHn9ehRcMD",
+  "k6t7PoZjUEd8VpyDl0tA",
+  "k9Q52ikdimagiGTWLTJG",
+  "kMFEL6MITcXGCVAUto4x",
+  "kUc1a8M4JUuqK1ZevS3d",
+  "kjDoYjmKFHAe6SiZvAdr",
+  "kp1CZYWdFdQD7XaCfIJI",
+  "l0hrgmHcJwYa5hxrHUSm",
+  "lNvFtsQXhZYQA1O5tqVQ",
+  "lROa2Gs3AimBCtFXRpLs",
+  "lVQpXUf7zv3g8CsH44N1",
+  "la5qFTbBKIRhaVm11HId",
+  "lbRMYtmjWOwFo21WzM4C",
+  "m1SAI1Qzx5fCO4vjoweP",
+  "mD4mVoifdrB4MwI6kwij",
+  "mPVhS9kazM4rJZIkIc5Q",
+  "maGZaavZp63S6zI2giKP",
+  "mf2dKoHaemouClQcH7HK",
+  "n0vYviKWqyGh8eBCuFMo",
+  "n1mVvVTMqSduy7h6h4nY",
+  "nA42QCrvNDS7aPYzERCc",
+  "nK0a0peVtRUYiSCSoPuX",
+  "nLo5NGr4oziADuekgiiR",
+  "nQT0sFcuyN3wPyWWiVGv",
+  "nSFvDaejRDKhmQFGJy0U",
+  "nUIcMgmqjfKYe7qbivZJ",
+  "nbAlVf2c4odbDZO6pqsO",
+  "o5Ng0hCLtrCU2TtIdWX1",
+  "oAsHJoA1Se15gspTa3If",
+  "oIyUT49A80lBGHPVcCYi",
+  "oSLNM5Eiq2ZCLzZZMtve",
+  "oXettr5jWlsgohP2E6km",
+  "oe2giHGUYF2mLe7WlVxj",
+  "ofJUpurbbdrkn8HSUyRw",
+  "okw2jLL0S4Yp0UVk2eBi",
+  "osDAJU7UwBbcW5SL665C",
+  "p6v8Ve69ohbeSfGjuvUo",
+  "p92VvabmWDLoDrf900uf",
+  "pERQcq3mcLxO5lSikCEC",
+  "pH5LCRQCRTpnkjZkQCbD",
+  "pR1rQSQGD5GsIN1TPCZT",
+  "phMru882PJazuffuNMr2",
+  "pnN8N2uBfSNefEhNh6oE",
+  "psPzS4n0uK5yJSsH463L",
+  "qZhgOZYzszihiHx0Y09r",
+  "qqidJqvTN5DPkTlaSY1V",
+  "qtK9ZXjqQVBppBrelKVw",
+  "r38EfOCdjGoN6NrtsrdS",
+  "rZ5kSMNk2eBqclJjwI13",
+  "s6Yq6Aaiz7ZO1exj6zji",
+  "sP5HFzyGj5FeehtrpI7g",
+  "sR4MsfzzyqGEIrQ8mj3k",
+  "sYEg26Fo7hDHW6E7CKOM",
+  "sd8mTUNGn83cIP3w3dAA",
+  "t9Mv8tFZD6ieDTxKDw6i",
+  "tGHgK3AhX3gwvjUkWJTQ",
+  "tR1YAKp88EaqeThFVQ3v",
+  "tzM5HyBfI8JKl0fVkRxX",
+  "u1RBTgAqson1RdfjSfBq",
+  "u4npOHvNY4cU7uvcq5pa",
+  "v1Xp5UxmsAgmqPwJxeY7",
+  "v3ZPZ2D4Vv25sq6blCjc",
+  "vHbOBZ4zbWatcr0WzcpC",
+  "vPTqIE0lST34hTmYqYYH",
+  "vm4LJ5Jh5uajOQ7SS4rK",
+  "wHmUnagFZnuJPWIdxliV",
+  "wP3CCoiGWFa2yur8rBbh",
+  "wg20dEOvLs84yilKxx2g",
+  "wtrRuyLsAhYrnLqelXhu",
+  "x2cD8JDXAaNUfW011eak",
+  "x5eil6ATv0YJAnHYEz8Y",
+  "xJG4xM95BVjKT5OvE2d0",
+  "xTonu2zccY6sWMErE6wZ",
+  "xXVce28GF6OclKUsmvan",
+  "xnikQu2YQn0bZLiKnckF",
+  "y64oy8sLotMN2GanX2DP",
+  "y75avTQeD67eWNKJQ15l",
+  "yDx6WgbID3OnFCM1dLlm",
+  "yIaeAARlgH074Y1dfP1X",
+  "yNWX9oxPmoMr6ZzE3X9d",
+  "ymL7GXkyn9ogZ7HI8vRj",
+  "ynn41vY6gUW9GfxBPOUR",
+  "zUuYGCZDZxoB0nsWBsyp",
+  "zgk7cDgcrR6Xpb6nN8Xu",
+  "zn1KN1pgJzTUIskpyo9f",
+  "zqS1qbgrX7qxANwXlYqt",
+  "ztkKXi1alZVIeCXrYrpr"
+]
