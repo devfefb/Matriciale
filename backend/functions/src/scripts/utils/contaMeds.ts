@@ -6,12 +6,13 @@ const UNIDADES = ['CAF', 'Olavo', 'ESF3'];
 // Define a estrutura do objeto que será salvo
 interface ResumoMedicamento {
   id: string;
-  nome: string;
-  tp_metodo: string;
+  // nome: string;
+  // tp_metodo: string;
   cod_item: string;
-  metodo: number;
+  // metodo: number;
   estoque: number;
-  status: number;
+  // status: number;
+  met_est: number;
 }
 
 async function listarIdsNomes() {
@@ -31,12 +32,13 @@ async function listarIdsNomes() {
         
         listaMedicamentos.push({
           id: doc.id as string, // O ID do documento (ex: -Mz92...)
-          nome: dados.nome || 'NOME NÃO INFORMADO', // Garante que não quebre se faltar nome,
-          tp_metodo: dados.tp_metodo || 'TP_METODO NÃO INFORMADO', // Garante que não quebre se faltar tp_metodo
-          metodo: dados.metodo || 0, // Garante que não quebre se faltar metodo
+          // nome: dados.nome || 'NOME NÃO INFORMADO', // Garante que não quebre se faltar nome,
+          // tp_metodo: dados.tp_metodo || 'TP_METODO NÃO INFORMADO', // Garante que não quebre se faltar tp_metodo
+          // metodo: dados.metodo || 0, // Garante que não quebre se faltar metodo
           estoque: dados.estoque || 0, // Garante que não quebre se faltar estoque
-          status: dados. estoque / dados.metodo || 0, // Garante que não quebre se faltar status
-          cod_item: dados.cod_item || 'CODIGO NÃO INFORMADO' // Garante que não quebre se faltar cod_item
+          // status: dados. estoque / dados.metodo || 0, // Garante que não quebre se faltar status
+          cod_item: dados.cod_item || 'CODIGO NÃO INFORMADO', // Garante que não quebre se faltar cod_item
+          met_est: dados.met_est || 0, // Garante que não quebre se faltar met_est
         });
       });
 

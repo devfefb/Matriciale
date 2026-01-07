@@ -331,20 +331,20 @@ function calcularMediana(numeros: number[]): number {
  */
 function calcularMedianasParaHistorico(historicoSemanas: SemanaHistorico[]): Medianas {
 
-  const historicoValoresComZeros = historicoSemanas.map(s => s.value);
-
-  const historicoValoresSemZeros = historicoValoresComZeros.filter(v => v > 0);
-
-  const md04 = calcularMediana(historicoValoresComZeros.slice(-4).filter(v => v > 0)); // Inclui zeros, mas ignora nulos
-  const md08 = calcularMediana(historicoValoresComZeros.slice(-8).filter(v => v > 0));
-  const md12 = calcularMediana(historicoValoresComZeros.slice(-12).filter(v => v > 0));
-  const md16 = calcularMediana(historicoValoresComZeros.slice(-16).filter(v => v > 0));
-
-  // --- Cálculos de MAGNITUDE (usam o dataset SEM ZEROS) ---
-  // O nome da propriedade no retorno continua Md52, mesmo que o cálculo possa usar 49 semanas.
-  const md52 = calcularMediana(historicoValoresComZeros.slice(-52).filter(v => v > 0));
-  const md26 = calcularMediana(historicoValoresComZeros.slice(-26).filter(v => v > 0));
-  const mdTotal = calcularMediana(historicoValoresSemZeros);
+  const valoresComZeros = historicoSemanas.map(s => s.value);
+  
+  // Para médias móveis (04 a 52), use o array COM zeros
+  const md04 = calcularMediana(valoresComZeros.slice(-4)); 
+  const md08 = calcularMediana(valoresComZeros.slice(-8));
+  const md12 = calcularMediana(valoresComZeros.slice(-12));
+  const md16 = calcularMediana(valoresComZeros.slice(-16));
+  const md26 = calcularMediana(valoresComZeros.slice(-26));
+  const md52 = calcularMediana(valoresComZeros.slice(-52));
+  
+  // Para MdTotal e MdAno, a lógica de negócio costuma ignorar zeros (magnitude de venda quando ocorre)
+  // Mantenha o filtro APENAS se essa for a regra específica para estes dois campos.
+  const valoresSemZeros = valoresComZeros.filter(v => v > 0);
+  const mdTotal = calcularMediana(valoresSemZeros);
 
   let mdAno = 0;
   if (historicoSemanas.length > 0) {
@@ -455,20 +455,27 @@ function calcularMetodo(dadosMedicamento: {
 }
 
 function calcularMetEst(tpMetodo: string, metodo: number, unidade: String, maximo: number): number {
+  // UBS geralmente multiplica por 4 e Farmácia por 3
   switch (tpMetodo) {
     case "1.ORDINÁRIOS":
       if (unidade === 'ESF3') return metodo * 4;
       else if (unidade === 'Olavo') return metodo * 3;
       else return metodo * 16;
     case "2.INTERMITENTES":
-      if (unidade === 'CAF') return maximo * 3;
-      else return maximo;
-    case "3.INATIVOS": return 0;
+      if (unidade === 'CAF') return metodo * 16;
+      else if (unidade === 'ESF3') return metodo * 4;
+      else if (unidade === 'Olavo') return metodo * 3;
+      else return 0;
+    case "3.INATIVOS": return metodo * 3;
     case "5.ENTRANTES":
       if ('ESF3' === unidade) return metodo * 4;
       return metodo * 16;
-    case "4.RECENTES": return maximo * 3;
-    default: return metodo * 16;
+    case "4.RECENTES": 
+      if (unidade === 'CAF') return metodo * 16;
+      else if (unidade === 'ESF3') return metodo * 4;
+      else if (unidade === 'Olavo') return metodo * 3;
+      else return 0;
+    default: return 0;
   }
 }
 

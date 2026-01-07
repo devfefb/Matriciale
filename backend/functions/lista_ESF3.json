@@ -1,1865 +1,1244 @@
 [
   {
     "id": "03AZQ3rnPj0MPTUrNioV",
-    "nome": "METILDOPA 250 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 180,
     "estoque": 170,
-    "status": 0.9444444444444444,
-    "cod_item": "001.000.006"
+    "cod_item": "001.000.006",
+    "met_est": 720
   },
   {
     "id": "0dGOoOc8aX7LEYWGfDuT",
-    "nome": "BIPERIDENO, CLORIDRATO 2 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 150,
     "estoque": 500,
-    "status": 3.3333333333333335,
-    "cod_item": "325.038.001"
+    "cod_item": "325.038.001",
+    "met_est": 480
   },
   {
     "id": "1oUU7H3FkvLw5y4NtFid",
-    "nome": "SINVASTATINA 10MG",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "222.001.002"
+    "cod_item": "222.001.002",
+    "met_est": 0
   },
   {
     "id": "2HvkZWJywK6gD9C0hEou",
-    "nome": "TIAMAZOL 5MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 70,
-    "status": 70,
-    "cod_item": "308.003.001"
+    "cod_item": "308.003.001",
+    "met_est": 4
   },
   {
     "id": "32C5jUNQ0i7v19z1bAYd",
-    "nome": "IMIPRAMINA 25 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 90,
     "estoque": 400,
-    "status": 4.444444444444445,
-    "cod_item": "005.000.011"
+    "cod_item": "005.000.011",
+    "met_est": 360
   },
   {
     "id": "33d4jptMgyEWY1UPjKzp",
-    "nome": "CEFTRIAXONA 500 MG INJ -IM",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 9,
-    "status": null,
-    "cod_item": "002.000.137"
+    "cod_item": "002.000.137",
+    "met_est": 0
   },
   {
     "id": "3JmyAHqyWQQ8BgrFP8db",
-    "nome": "DEXAMETASONA 0,5 MG/5ML- ELIXIR",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "010.001.005"
+    "cod_item": "010.001.005",
+    "met_est": 0
   },
   {
     "id": "3dKQd5DFdCh6IVOiLr01",
-    "nome": "FOSFATO OSELTAMIVIR 75 MG - TAMIFLU",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 3,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "301.002.005"
+    "cod_item": "301.002.005",
+    "met_est": 12
   },
   {
     "id": "3eKTImSS5nN1NS9N9IXt",
-    "nome": "FINASTERIDA 5 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 165,
     "estoque": 660,
-    "status": 4,
-    "cod_item": "307.001.002"
+    "cod_item": "307.001.002",
+    "met_est": 660
   },
   {
     "id": "3xR4g2gGnhTnXhxqdrwG",
-    "nome": "ALOPURINOL 100MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 60,
     "estoque": 240,
-    "status": 4,
-    "cod_item": "325.032.002"
+    "cod_item": "325.032.002",
+    "met_est": 240
   },
   {
     "id": "4Bhn0w0zwCN8eElHThMX",
-    "nome": "GLIBENCLAMIDA 5 MG.",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 10,
     "estoque": 120,
-    "status": 12,
-    "cod_item": "003.000.001"
+    "cod_item": "003.000.001",
+    "met_est": 40
   },
   {
     "id": "4PCZw1De73EIZPCmysC1",
-    "nome": "CLORPROMAZINA, CLORIDRATO 25MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 90,
     "estoque": 130,
-    "status": 1.4444444444444444,
-    "cod_item": "005.000.004"
+    "cod_item": "005.000.004",
+    "met_est": 300
   },
   {
     "id": "4TDVp0JrfaMIGOm4L3xO",
-    "nome": "GLICLAZIDA 60 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 120,
     "estoque": 1170,
-    "status": 9.75,
-    "cod_item": "003.000.016"
+    "cod_item": "003.000.016",
+    "met_est": 420
   },
   {
     "id": "4qaeAailfTDJR1t9pVd4",
-    "nome": "PREDNISOLONA 3MG/ML, FOSFATO SODICO DE",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 3,
     "estoque": 20,
-    "status": 6.666666666666667,
-    "cod_item": "010.001.002"
+    "cod_item": "010.001.002",
+    "met_est": 12
   },
   {
     "id": "57EmumiURUd1MQKkhBPU",
-    "nome": "DRAMIN  GOTAS",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 3,
     "estoque": 2,
-    "status": 0.6666666666666666,
-    "cod_item": "011.001.002"
+    "cod_item": "011.001.002",
+    "met_est": 8
   },
   {
     "id": "58En4ak2jxbJKhXotvCP",
-    "nome": "LEVOMEPROMAZINA 100 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 62,
     "estoque": 720,
-    "status": 11.612903225806452,
-    "cod_item": "005.000.037"
+    "cod_item": "005.000.037",
+    "met_est": 248
   },
   {
     "id": "5jukKOr5xjKRMwAXonPl",
-    "nome": "CUTISANOL BABY 120G",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "325.050.001"
+    "cod_item": "325.050.001",
+    "met_est": 0
   },
   {
     "id": "66XFnYhQNcrFuZsMn14m",
-    "nome": "ANLODIPINO, BESILATO 5MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 310,
     "estoque": 1190,
-    "status": 3.838709677419355,
-    "cod_item": "325.035.001"
+    "cod_item": "325.035.001",
+    "met_est": 1240
   },
   {
     "id": "6FzP69uEsmkl3PZFYL6e",
-    "nome": "CIMETIDINA 200MG COMPRIMIDO",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 80,
     "estoque": 400,
-    "status": 5,
-    "cod_item": "002.000.012"
+    "cod_item": "002.000.012",
+    "met_est": 320
   },
   {
     "id": "6ZagEIZAlgMs9K4KCrLQ",
-    "nome": "MEDROXIPROGESTERONA, ACETATO 150MG/ML (DEPOPROVERA)",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 3,
     "estoque": 9,
-    "status": 3,
-    "cod_item": "009.000.005"
+    "cod_item": "009.000.005",
+    "met_est": 12
   },
   {
     "id": "6a5xQZxtPOE9ktoVcjBb",
-    "nome": "AMOXICILINA + CLAVULANATO 500/125 MCG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 72,
     "estoque": 304,
-    "status": 4.222222222222222,
-    "cod_item": "325.016.005"
+    "cod_item": "325.016.005",
+    "met_est": 276
   },
   {
     "id": "6uoiphZz4c4x1Fi9IwPI",
-    "nome": "FRALDA DESC GERIATRICA - M",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 2,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "021.001.068"
+    "cod_item": "021.001.068",
+    "met_est": 8
   },
   {
     "id": "82riP9fpmZZRKeZ4y7yJ",
-    "nome": "FLUOXETINA, CLORIDRATO 20 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 238,
     "estoque": 610,
-    "status": 2.563025210084034,
-    "cod_item": "005.000.013"
+    "cod_item": "005.000.013",
+    "met_est": 896
   },
   {
     "id": "88nbNmWqhfX4pITanuXG",
-    "nome": "ENOXAPARINA SÓDICA 40 MG/0,4ML - CLEXANE",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 5,
     "estoque": 23,
-    "status": 4.6,
-    "cod_item": "304.001.003"
+    "cod_item": "304.001.003",
+    "met_est": 20
   },
   {
     "id": "8Cep5fdgtKbthfXuJR07",
-    "nome": "DELTAMETRINA 0,2MG/ML",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 5,
-    "status": 5,
-    "cod_item": "021.001.071"
+    "cod_item": "021.001.071",
+    "met_est": 4
   },
   {
     "id": "8SoVWkp7YyjyDz5AkRYz",
-    "nome": "CETOPROFENO 50 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 132,
     "estoque": 188,
-    "status": 1.4242424242424243,
-    "cod_item": "002.000.082"
+    "cod_item": "002.000.082",
+    "met_est": 528
   },
   {
     "id": "8VrRwNgwRkGiAAxCai2w",
-    "nome": "INSULINA HUMANA NPH 100 UI/ML - CANETA",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 21,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "003.000.006"
+    "cod_item": "003.000.006",
+    "met_est": 84
   },
   {
     "id": "8b4ItSofh7SOlybaepvm",
-    "nome": "BUSCOPAM SIMPLES CP",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 40,
     "estoque": 140,
-    "status": 3.5,
-    "cod_item": "325.042.003"
+    "cod_item": "325.042.003",
+    "met_est": 160
   },
   {
     "id": "8dqDScTAGRdtYA0NyrA3",
-    "nome": "CILOSTAZOL 100 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 60,
     "estoque": 160,
-    "status": 2.6666666666666665,
-    "cod_item": "008.001.001"
+    "cod_item": "008.001.001",
+    "met_est": 240
   },
   {
     "id": "8nCGbc5EhcI8wZwth9Gf",
-    "nome": "ACIDO FOLICO 5MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 120,
     "estoque": 390,
-    "status": 3.25,
-    "cod_item": "325.026.001"
+    "cod_item": "325.026.001",
+    "met_est": 320
   },
   {
     "id": "8yrLSeKiIqSpMkEsts1G",
-    "nome": "METRONIDAZOL 250 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 22,
     "estoque": 392,
-    "status": 17.818181818181817,
-    "cod_item": "002.000.025"
+    "cod_item": "002.000.025",
+    "met_est": 88
   },
   {
     "id": "8zgbmUzSvLSjUJCSSuyn",
-    "nome": "AMITRIPTILINA, CLORIDRATO  25 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 605,
     "estoque": 2060,
-    "status": 3.4049586776859506,
-    "cod_item": "325.001.004"
+    "cod_item": "325.001.004",
+    "met_est": 2420
   },
   {
     "id": "9E7sIyNOuw5bFtZKVePZ",
-    "nome": "HIDROCLOROTIAZIADA 25MG",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "001.000.004"
+    "cod_item": "001.000.004",
+    "met_est": 0
   },
   {
     "id": "9frvKpFb7dtUpMsfzvXn",
-    "nome": "CETOCONAZOL 200 MG",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 120,
-    "status": null,
-    "cod_item": "301.004.002"
+    "cod_item": "301.004.002",
+    "met_est": 0
   },
   {
     "id": "A05l5IqapT6oIs3pQiTe",
-    "nome": "NORFLOXACINO 400MG",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 42,
-    "status": null,
-    "cod_item": "002.000.140"
+    "cod_item": "002.000.140",
+    "met_est": 0
   },
   {
     "id": "AAucqSO7wqZgI6LV0BMV",
-    "nome": "INSULINA HUMANA REGULAR 100 UI/ ML - FRASCO 10 ML",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 7,
-    "status": null,
-    "cod_item": "003.000.005"
+    "cod_item": "003.000.005",
+    "met_est": 0
   },
   {
     "id": "AB8HydOAVLjaGQ6DITN6",
-    "nome": "BROMOPRIDA GTS",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 1,
     "estoque": 7,
-    "status": 7,
-    "cod_item": "325.040.003"
+    "cod_item": "325.040.003",
+    "met_est": 4
   },
   {
     "id": "AjG6kUmeS4eqXCRZIndn",
-    "nome": "SULFATO FERROSO 40 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 225,
     "estoque": 1350,
-    "status": 6,
-    "cod_item": "002.000.046"
+    "cod_item": "002.000.046",
+    "met_est": 900
   },
   {
     "id": "AykbjXRBTzOIwfOFYsKn",
-    "nome": "ONDANSETRONA 8 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 7,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "012.001.002"
+    "cod_item": "012.001.002",
+    "met_est": 28
   },
   {
     "id": "BBmvS59psHcShmlfIvZ5",
-    "nome": "METRONIDAZOL 40 MG/ML -  SUSPENSÃO ORAL",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 6,
-    "status": null,
-    "cod_item": "002.000.026"
+    "cod_item": "002.000.026",
+    "met_est": 0
   },
   {
     "id": "Be1cBxK8fxltZ8rkiQ0T",
-    "nome": "NISTATINA POMADA VAG.",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 1,
     "estoque": 9,
-    "status": 9,
-    "cod_item": "002.000.028"
+    "cod_item": "002.000.028",
+    "met_est": 4
   },
   {
     "id": "BrJLHGVbQ2gRtjrKMnJR",
-    "nome": "DOXAZOSINA MESILATO 4MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 60,
     "estoque": 330,
-    "status": 5.5,
-    "cod_item": "021.001.094"
+    "cod_item": "021.001.094",
+    "met_est": 240
   },
   {
     "id": "C0QoeeiRRzXBuHz3bxH0",
-    "nome": "LOPERAMIDA 2 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 7,
     "estoque": 96,
-    "status": 13.714285714285714,
-    "cod_item": "021.001.072"
+    "cod_item": "021.001.072",
+    "met_est": 28
   },
   {
     "id": "CbMzO4g6F82SIv05We0x",
-    "nome": "AGULHA PARA CANETA DE INSULINA 4MM",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 180,
     "estoque": 545,
-    "status": 3.0277777777777777,
-    "cod_item": "321.003.001"
+    "cod_item": "321.003.001",
+    "met_est": 720
   },
   {
     "id": "Cj6Z8K0G1dYIJX3Iu1AW",
-    "nome": "LACTULOSE XAROPE 120 ML",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 12,
-    "status": 12,
-    "cod_item": "021.001.035"
+    "cod_item": "021.001.035",
+    "met_est": 4
   },
   {
     "id": "DC2rauMdRmxNKrSjE3of",
-    "nome": "ALBENDAZOL 40 MG/ML FRASCO 10 ML",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 11,
     "estoque": 32,
-    "status": 2.909090909090909,
-    "cod_item": "325.031.001"
+    "cod_item": "325.031.001",
+    "met_est": 16
   },
   {
     "id": "DFiW0L0Q9k8987gxsal6",
-    "nome": "DEXCLORFENIRAMINA, MALEATO  2MG/5ML - SUSPENSÃO",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 11,
-    "status": 11,
-    "cod_item": "007.000.004"
+    "cod_item": "007.000.004",
+    "met_est": 4
   },
   {
     "id": "DUZp4RxGg00FrniPW0JS",
-    "nome": "OMEPRAZOL 20MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 425,
     "estoque": 1718,
-    "status": 4.04235294117647,
-    "cod_item": "012.001.001"
+    "cod_item": "012.001.001",
+    "met_est": 1700
   },
   {
     "id": "EFbriR21lfUkV6sPnOfJ",
-    "nome": "ALBENDAZOL 400 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 4,
     "estoque": 17,
-    "status": 4.25,
-    "cod_item": "325.031.002"
+    "cod_item": "325.031.002",
+    "met_est": 16
   },
   {
     "id": "EJuxDDVK9VKdtShHPzHY",
-    "nome": "DROPROPIZINA 3 MG/ML - XAROPE ADULTO",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 4,
     "estoque": 16,
-    "status": 4,
-    "cod_item": "021.001.061"
+    "cod_item": "021.001.061",
+    "met_est": 12
   },
   {
     "id": "ElCsXM6GNj0EIZwisJsq",
-    "nome": "CEFALEXINA SUSPENSÃO 250 MG/ 5 ML",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 2,
-    "status": null,
-    "cod_item": "002.000.011"
+    "cod_item": "002.000.011",
+    "met_est": 0
   },
   {
     "id": "EutMUlMyxwO0K2QZptnW",
-    "nome": "METOPROLOL 50 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 60,
     "estoque": 270,
-    "status": 4.5,
-    "cod_item": "008.001.005"
+    "cod_item": "008.001.005",
+    "met_est": 240
   },
   {
     "id": "F90BZCkATpleImUYa6Zy",
-    "nome": "IVERMECTINA 6 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 4,
     "estoque": 20,
-    "status": 5,
-    "cod_item": "021.001.060"
+    "cod_item": "021.001.060",
+    "met_est": 16
   },
   {
     "id": "FIMNmxKpL3gWUHLdATP3",
-    "nome": "RISPERIDONA 1 MG/ML SOLUÇÃO",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "228.001.007"
+    "cod_item": "228.001.007",
+    "met_est": 0
   },
   {
     "id": "FOWD3LPmjQ5cc24kjdQq",
-    "nome": "METRONIDAZOL 100 MG/G - GEL VAGINAL",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 3,
     "estoque": 4,
-    "status": 1.3333333333333333,
-    "cod_item": "002.000.024"
+    "cod_item": "002.000.024",
+    "met_est": 12
   },
   {
     "id": "FQsYv7RsAxiJ72fVW5l6",
-    "nome": "SUPLEMENTO VITAMINICO A-Z",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 140,
     "estoque": 480,
-    "status": 3.4285714285714284,
-    "cod_item": "002.000.038"
+    "cod_item": "002.000.038",
+    "met_est": 520
   },
   {
     "id": "G5tACwis2jeNneddJdhu",
-    "nome": "METOCLOPRAMIDA 10 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 14,
     "estoque": 90,
-    "status": 6.428571428571429,
-    "cod_item": "002.000.023"
+    "cod_item": "002.000.023",
+    "met_est": 56
   },
   {
     "id": "GDLYAS8AJkYNTk8R172I",
-    "nome": "CANETA PARA APLICAÇÃO DE INSULINAS HUMANAS - REUTILIZAVEL",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 11,
-    "status": 11,
-    "cod_item": "321.003.002"
+    "cod_item": "321.003.002",
+    "met_est": 4
   },
   {
     "id": "H4CREaSgvRHURm6gCA91",
-    "nome": "AMOXICILINA 500 MG - CAPSULA",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 82,
     "estoque": 250,
-    "status": 3.048780487804878,
-    "cod_item": "325.016.008"
+    "cod_item": "325.016.008",
+    "met_est": 328
   },
   {
     "id": "HoM3oi8alTnBI5GSFpzd",
-    "nome": "INSULINA HUMANA REGULAR 100 UI/ML - CANETA",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 2,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "003.000.007"
+    "cod_item": "003.000.007",
+    "met_est": 8
   },
   {
     "id": "IcPSKoysFoCBq95HnyA5",
-    "nome": "INSULINA HUMANA REGULAR - REUTILIZÁVEL",
-    "tp_metodo": "4.RECENTES",
-    "metodo": 4,
     "estoque": 5,
-    "status": 1.25,
-    "cod_item": "325.005.003"
+    "cod_item": "325.005.003",
+    "met_est": 8
   },
   {
     "id": "Ivfegda0Ia2tTHx3Mcna",
-    "nome": "POLIVITAMINICO GTS",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 1,
-    "status": null,
-    "cod_item": "002.000.032"
+    "cod_item": "002.000.032",
+    "met_est": 0
   },
   {
     "id": "JDTCgyOkgoLRjiTGAp6Q",
-    "nome": "INSULINA HUMANA NPH - REUTILIZÁVEL",
-    "tp_metodo": "4.RECENTES",
-    "metodo": 32,
     "estoque": 39,
-    "status": 1.21875,
-    "cod_item": "325.005.002"
+    "cod_item": "325.005.002",
+    "met_est": 128
   },
   {
     "id": "JGbUEtE3dUZjtNbr55Q4",
-    "nome": "NORIPURUM INJ",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 2,
     "estoque": 10,
-    "status": 5,
-    "cod_item": "304.002.002"
+    "cod_item": "304.002.002",
+    "met_est": 8
   },
   {
     "id": "JL0QhHWVJmQNttRQjLR4",
-    "nome": "OLEO MINERAL 100 ML",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 3,
-    "status": null,
-    "cod_item": "002.000.141"
+    "cod_item": "002.000.141",
+    "met_est": 0
   },
   {
     "id": "K3nm5RU6RUm5fEkUOldH",
-    "nome": "VITAMINA D3 7.000 UI",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 124,
     "estoque": 988,
-    "status": 7.967741935483871,
-    "cod_item": "230.001.001"
+    "cod_item": "230.001.001",
+    "met_est": 496
   },
   {
     "id": "KWzJ7wjJETCGpy5ZYRol",
-    "nome": "LEVOTIROXINA SODICA 25 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 278,
     "estoque": 1095,
-    "status": 3.9388489208633093,
-    "cod_item": "009.000.011"
+    "cod_item": "009.000.011",
+    "met_est": 1112
   },
   {
     "id": "KjivbTREJnEAaeGuOsmb",
-    "nome": "SULFAMET. +TRIMETOPRIMA  400 + 80MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 19,
     "estoque": 100,
-    "status": 5.2631578947368425,
-    "cod_item": "002.000.035"
+    "cod_item": "002.000.035",
+    "met_est": 76
   },
   {
     "id": "LJGDh9Xk1B0rQRX7f1TW",
-    "nome": "DECONGEX PLUS GOTAS",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 2,
-    "status": null,
-    "cod_item": "011.001.004"
+    "cod_item": "011.001.004",
+    "met_est": 0
   },
   {
     "id": "LqiPxoZKgOU9cgsL694l",
-    "nome": "LEVOMEPROMAZINA 25MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 9,
     "estoque": 170,
-    "status": 18.88888888888889,
-    "cod_item": "005.000.009"
+    "cod_item": "005.000.009",
+    "met_est": 36
   },
   {
     "id": "LqkExu1jr9FldsuwxqEv",
-    "nome": "DOXAZOSINA 2 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 120,
     "estoque": 570,
-    "status": 4.75,
-    "cod_item": "307.001.001"
+    "cod_item": "307.001.001",
+    "met_est": 480
   },
   {
     "id": "M1JW7rMTqeW1j9SENtc2",
-    "nome": "LORATADINA 10 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 66,
     "estoque": 281,
-    "status": 4.257575757575758,
-    "cod_item": "010.001.004"
+    "cod_item": "010.001.004",
+    "met_est": 264
   },
   {
     "id": "MK2nNKh0PKnVAZFFLC4E",
-    "nome": "FOSFATO OSELTAMIVIR 30MG - TAMIFLU",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 30,
-    "status": 30,
-    "cod_item": "301.002.004"
+    "cod_item": "301.002.004",
+    "met_est": 4
   },
   {
     "id": "Mh592iRS5nzfubF5fo8w",
-    "nome": "CLARITROMICINA 500 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 6,
     "estoque": 80,
-    "status": 13.333333333333334,
-    "cod_item": "022.001.009"
+    "cod_item": "022.001.009",
+    "met_est": 24
   },
   {
     "id": "NAeW5bZYbuky3BhWAvhN",
-    "nome": "NORTRIPTILINA, CLORIDRATO 25 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 105,
     "estoque": 400,
-    "status": 3.8095238095238093,
-    "cod_item": "005.000.028"
+    "cod_item": "005.000.028",
+    "met_est": 420
   },
   {
     "id": "NDpDXI25E9w6mSTcZ8AE",
-    "nome": "ACIDO FOLINICO 15MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 20,
-    "status": null,
-    "cod_item": "304.002.003"
+    "cod_item": "304.002.003",
+    "met_est": 0
   },
   {
     "id": "Noij7qRQTnfqYLSJHfx3",
-    "nome": "MICONAZOL, NITRATO 0,02 MG/G -  80 G CREME VAGINAL",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 5,
-    "status": null,
-    "cod_item": "002.000.059"
+    "cod_item": "002.000.059",
+    "met_est": 0
   },
   {
     "id": "NsfKtFpdvboFlBtOjl1t",
-    "nome": "CINARIZINA 75MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 180,
     "estoque": 410,
-    "status": 2.2777777777777777,
-    "cod_item": "005.000.100"
+    "cod_item": "005.000.100",
+    "met_est": 720
   },
   {
     "id": "NukT4PSolpTtDTExtGkW",
-    "nome": "AAS - ÁCIDO ACETIL SALICILICO 100MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 480,
     "estoque": 1540,
-    "status": 3.2083333333333335,
-    "cod_item": "325.023.001"
+    "cod_item": "325.023.001",
+    "met_est": 1920
   },
   {
     "id": "P3M0jSAOX6xPYs8ieB08",
-    "nome": "CARVEDILOL 12,5 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 33,
     "estoque": 210,
-    "status": 6.363636363636363,
-    "cod_item": "021.001.024"
+    "cod_item": "021.001.024",
+    "met_est": 132
   },
   {
     "id": "PIoI9lyUjongjUkBWI2e",
-    "nome": "DIPIRONA SÓDICA COMPRIMIDO 500MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 615,
     "estoque": 1020,
-    "status": 1.6585365853658536,
-    "cod_item": "323.001.001"
+    "cod_item": "323.001.001",
+    "met_est": 2460
   },
   {
     "id": "PTqTsiVrDOcpvZIlmTwq",
-    "nome": "PROMETAZINA 50 MG/ 2ML",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 17,
-    "status": null,
-    "cod_item": "005.000.051"
+    "cod_item": "005.000.051",
+    "met_est": 0
   },
   {
     "id": "PUtWxQEajwx0Z6Z8ZnZb",
-    "nome": "AZITROMICINA 500 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 42,
     "estoque": 379,
-    "status": 9.023809523809524,
-    "cod_item": "325.016.010"
+    "cod_item": "325.016.010",
+    "met_est": 168
   },
   {
     "id": "PewxFOnzlKeBs4us5jpZ",
-    "nome": "CAPTOPRIL 25 MG",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 153,
-    "status": null,
-    "cod_item": "325.045.001"
+    "cod_item": "325.045.001",
+    "met_est": 0
   },
   {
     "id": "QFhiu7hc6C8NJxWMcCVr",
-    "nome": "DIOSMINA + HESPERIDINA 450/50 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 945,
     "estoque": 2880,
-    "status": 3.0476190476190474,
-    "cod_item": "021.001.030"
+    "cod_item": "021.001.030",
+    "met_est": 3780
   },
   {
     "id": "QL7c8lsB8Ee4EozpecLK",
-    "nome": "GUACO XAROPE - MIKANIA GLOMERATA 117,5MG/ML",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 8,
-    "status": null,
-    "cod_item": "325.021.001"
+    "cod_item": "325.021.001",
+    "met_est": 0
   },
   {
     "id": "QlvB75UizQt2zdkoGtIK",
-    "nome": "LEVOTIROXINA SÓDICA 100MCG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 200,
     "estoque": 710,
-    "status": 3.55,
-    "cod_item": "021.001.032"
+    "cod_item": "021.001.032",
+    "met_est": 800
   },
   {
     "id": "QyiQU1VXeQn3TUheP7fv",
-    "nome": "AMIODARONA, CLORIDRATO  200 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 75,
     "estoque": 180,
-    "status": 2.4,
-    "cod_item": "325.029.003"
+    "cod_item": "325.029.003",
+    "met_est": 300
   },
   {
     "id": "R764SOwVHGRrUEXsSHfu",
-    "nome": "BUDESONIDA 50MCG SPRAY",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 11,
-    "status": null,
-    "cod_item": "325.019.005"
+    "cod_item": "325.019.005",
+    "met_est": 0
   },
   {
     "id": "RQoWHgxYJeIJkHGIRBfn",
-    "nome": "METILFENIDATO 10 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 14,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "011.001.006"
+    "cod_item": "011.001.006",
+    "met_est": 56
   },
   {
     "id": "SHzu5UGH8UnPQ14lgHsp",
-    "nome": "SULFATO FERROSO 25 MG/ML - GOTAS",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 3,
     "estoque": 20,
-    "status": 6.666666666666667,
-    "cod_item": "002.000.037"
+    "cod_item": "002.000.037",
+    "met_est": 12
   },
   {
     "id": "SLY9F3cQDmxzmOnroAR7",
-    "nome": "PARACETAMOL 750 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 20,
     "estoque": 50,
-    "status": 2.5,
-    "cod_item": "021.001.063"
+    "cod_item": "021.001.063",
+    "met_est": 80
   },
   {
     "id": "SUHIqhLF3wovOk1g8HQO",
-    "nome": "PHOSFOENEMA 130ML",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 5,
-    "status": null,
-    "cod_item": "002.000.132"
+    "cod_item": "002.000.132",
+    "met_est": 0
   },
   {
     "id": "SZcagxOtiJZlPmsxODRk",
-    "nome": "BROMOPRIDA 10MG CPR",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 80,
     "estoque": 160,
-    "status": 2,
-    "cod_item": "325.040.001"
+    "cod_item": "325.040.001",
+    "met_est": 320
   },
   {
     "id": "T9oaAYqJrrxyDbbFINzh",
-    "nome": "HEPARINA SÓDICA 5.000 UI",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "021.001.053"
+    "cod_item": "021.001.053",
+    "met_est": 0
   },
   {
     "id": "TDPpl1ASmpqcfNfH2S2c",
-    "nome": "PARACETAMOL 200 MG/ ML -  FRASCO 15 ML GOTAS",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 2,
     "estoque": 9,
-    "status": 4.5,
-    "cod_item": "002.000.043"
+    "cod_item": "002.000.043",
+    "met_est": 8
   },
   {
     "id": "Tphy1SH9WPGfPBFMCG8R",
-    "nome": "TOBRAMICINA 0,3 % COLIRIO - FRASCO 5 ML",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 7,
-    "status": 7,
-    "cod_item": "315.001.002"
+    "cod_item": "315.001.002",
+    "met_est": 4
   },
   {
     "id": "USvBacmyFRq0hRMWBAPL",
-    "nome": "CARVEDILOL 6,25 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 180,
     "estoque": 180,
-    "status": 1,
-    "cod_item": "303.002.004"
+    "cod_item": "303.002.004",
+    "met_est": 360
   },
   {
     "id": "UZMFwzwxZCTe2WBJ24KS",
-    "nome": "NITRAZEPAN 5 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 7,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "005.000.025"
+    "cod_item": "005.000.025",
+    "met_est": 28
   },
   {
     "id": "UoXUHx2PauHikdXCWJGq",
-    "nome": "AZITROMICINA SUSP. 200MG/5ML",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 7,
-    "status": 7,
-    "cod_item": "325.016.009"
+    "cod_item": "325.016.009",
+    "met_est": 4
   },
   {
     "id": "V7QbQceVUXOq3Wpq1P7b",
-    "nome": "NITROFURANTOINA 100MG CAPSULA",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 91,
     "estoque": 624,
-    "status": 6.857142857142857,
-    "cod_item": "002.000.073"
+    "cod_item": "002.000.073",
+    "met_est": 224
   },
   {
     "id": "V9R66p0UVWGIxLxtB4m4",
-    "nome": "SINVASTATINA 20MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 8,
     "estoque": 80,
-    "status": 10,
-    "cod_item": "222.001.001"
+    "cod_item": "222.001.001",
+    "met_est": 32
   },
   {
     "id": "VBwvRdZgWGyisJ743MH3",
-    "nome": "PROMETAZINA 25 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 120,
     "estoque": 240,
-    "status": 2,
-    "cod_item": "005.000.007"
+    "cod_item": "005.000.007",
+    "met_est": 480
   },
   {
     "id": "VE8yJWOOCkdNiqoeBUdT",
-    "nome": "CICLOBENZAPRINA 5MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 270,
     "estoque": 1040,
-    "status": 3.8518518518518516,
-    "cod_item": "302.008.001"
+    "cod_item": "302.008.001",
+    "met_est": 1080
   },
   {
     "id": "WGyCdFl9G5keZFjx10wy",
-    "nome": "TRAMADOL 50MG",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "021.001.090"
+    "cod_item": "021.001.090",
+    "met_est": 0
   },
   {
     "id": "WIAntUFOHoIKUjKfNa9a",
-    "nome": "DEXCLORFENIRAMINA + BETAMETASONA SUSP ORAL 120",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 6,
     "estoque": 25,
-    "status": 4.166666666666667,
-    "cod_item": "002.000.127"
+    "cod_item": "002.000.127",
+    "met_est": 24
   },
   {
     "id": "WW0ushu0Cr84OhvRHjf0",
-    "nome": "ACICLOVIR 200 MG CPR",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 15,
     "estoque": 210,
-    "status": 14,
-    "cod_item": "325.025.001"
+    "cod_item": "325.025.001",
+    "met_est": 60
   },
   {
     "id": "Wvc2CMANPpwCKdLCj0zc",
-    "nome": "LEVOTIROXINA SODICA 50MCG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 503,
     "estoque": 1365,
-    "status": 2.713717693836978,
-    "cod_item": "021.001.033"
+    "cod_item": "021.001.033",
+    "met_est": 2012
   },
   {
     "id": "WyOwkjZ1GU8r0R2D4ugI",
-    "nome": "TIBOLONA 1,25MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 140,
     "estoque": 455,
-    "status": 3.25,
-    "cod_item": "308.001.001"
+    "cod_item": "308.001.001",
+    "met_est": 280
   },
   {
     "id": "X5gSTbqaxa3mGkgRNnN0",
-    "nome": "ESPIRONOLACTONA 25 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 135,
     "estoque": 356,
-    "status": 2.637037037037037,
-    "cod_item": "303.003.001"
+    "cod_item": "303.003.001",
+    "met_est": 540
   },
   {
     "id": "XiuYopYW3UrvhwYcxXMC",
-    "nome": "NORETISTERONA 0,35MG CAIXA COM 35 CPR",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 315,
-    "status": null,
-    "cod_item": "002.000.047"
+    "cod_item": "002.000.047",
+    "met_est": 0
   },
   {
     "id": "Y1t0kwmNQbtOjE3ATyHl",
-    "nome": "SALBUTAMOL, SULFATO 100 MCG/ DOSE -  AEROSOL",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 2,
     "estoque": 5,
-    "status": 2.5,
-    "cod_item": "007.000.002"
+    "cod_item": "007.000.002",
+    "met_est": 8
   },
   {
     "id": "Yh8JGZIhubp9rkNLXVWP",
-    "nome": "SORO MANITOL 250ML",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 6,
-    "status": null,
-    "cod_item": "321.001.230"
+    "cod_item": "321.001.230",
+    "met_est": 0
   },
   {
     "id": "YhVDi6tIR4meR8DI3KfN",
-    "nome": "NIFEDIPINA 20MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 210,
     "estoque": 690,
-    "status": 3.2857142857142856,
-    "cod_item": "001.000.008"
+    "cod_item": "001.000.008",
+    "met_est": 720
   },
   {
     "id": "YxKPLlZ1sJAKzmQvA4T0",
-    "nome": "FUROSEMIDA 40MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 190,
     "estoque": 820,
-    "status": 4.315789473684211,
-    "cod_item": "002.000.019"
+    "cod_item": "002.000.019",
+    "met_est": 760
   },
   {
     "id": "Z8BNTUehfWfh3uWi7LVN",
-    "nome": "LORATADINA 1 MG/ML - XAROPE",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 3,
     "estoque": 19,
-    "status": 6.333333333333333,
-    "cod_item": "010.001.003"
+    "cod_item": "010.001.003",
+    "met_est": 12
   },
   {
     "id": "ZJlktrVBSzUJcDTmgo86",
-    "nome": "AMINOFILINA 100 MG",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "325.033.001"
+    "cod_item": "325.033.001",
+    "met_est": 0
   },
   {
     "id": "ZO7DDxN898TcXffomcfG",
-    "nome": "IBUPROFENO 300 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 80,
     "estoque": 400,
-    "status": 5,
-    "cod_item": "021.001.012"
+    "cod_item": "021.001.012",
+    "met_est": 320
   },
   {
     "id": "aDwvJ1Hq4Ut1XPRCqu09",
-    "nome": "FENOBARBITAL 40 MG/ML - GOTAS",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 4,
-    "status": 4,
-    "cod_item": "005.000.032"
+    "cod_item": "005.000.032",
+    "met_est": 4
   },
   {
     "id": "aMcs1ZfGGN5pV1VgZxJn",
-    "nome": "SAIS P/REIDRATAÇÃO ORAL",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 12,
     "estoque": 50,
-    "status": 4.166666666666667,
-    "cod_item": "002.000.033"
+    "cod_item": "002.000.033",
+    "met_est": 24
   },
   {
     "id": "aN5rYgt2eCVGrpHEy5g7",
-    "nome": "SULFAM. + TRIMETROP. 40 + 8 MG/ML - SUSPENSÃO ORAL 100 ML",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 6,
-    "status": null,
-    "cod_item": "002.000.036"
+    "cod_item": "002.000.036",
+    "met_est": 0
   },
   {
     "id": "abu4gv0n4B0MfzTYRr1J",
-    "nome": "SERTRALINA 50MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 1349,
     "estoque": 3300,
-    "status": 2.446256486286138,
-    "cod_item": "005.000.033"
+    "cod_item": "005.000.033",
+    "met_est": 5396
   },
   {
     "id": "ad12D9qfjAAYDwB7nplF",
-    "nome": "FENOBARBITAL 100 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 140,
     "estoque": 290,
-    "status": 2.0714285714285716,
-    "cod_item": "005.000.003"
+    "cod_item": "005.000.003",
+    "met_est": 520
   },
   {
     "id": "ad2ow4H2QrGm62RRZmM1",
-    "nome": "CARBONATO DE CALCIO 500MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 60,
     "estoque": 180,
-    "status": 3,
-    "cod_item": "002.000.068"
+    "cod_item": "002.000.068",
+    "met_est": 240
   },
   {
     "id": "aePACqwbGsPRqKTmZWAI",
-    "nome": "COMPLEXO B CP",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 50,
     "estoque": 465,
-    "status": 9.3,
-    "cod_item": "021.001.025"
+    "cod_item": "021.001.025",
+    "met_est": 200
   },
   {
     "id": "b344g0MqH2Fq7ZqsXHR1",
-    "nome": "ACIDO VALPROICO 500MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 31,
     "estoque": 200,
-    "status": 6.451612903225806,
-    "cod_item": "325.028.002"
+    "cod_item": "325.028.002",
+    "met_est": 124
   },
   {
     "id": "bhNKCBdY00TQa4IhLHDX",
-    "nome": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ IM",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 3,
     "estoque": 7,
-    "status": 2.3333333333333335,
-    "cod_item": "002.000.138"
+    "cod_item": "002.000.138",
+    "met_est": 12
   },
   {
     "id": "boNj3uHtHdPKfts1HQCk",
-    "nome": "SIMETICONA GTS",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 6,
     "estoque": 23,
-    "status": 3.8333333333333335,
-    "cod_item": "002.000.056"
+    "cod_item": "002.000.056",
+    "met_est": 24
   },
   {
     "id": "c5Lv8Qfkn2RxbB9CcLRp",
-    "nome": "ACIDO VALPROICO 250MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 250,
     "estoque": 800,
-    "status": 3.2,
-    "cod_item": "325.028.001"
+    "cod_item": "325.028.001",
+    "met_est": 900
   },
   {
     "id": "cFN65kOzU8azxX2QFB0W",
-    "nome": "HIDRALAZINA 25MG, CLORIDRATO DE",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 32,
     "estoque": 200,
-    "status": 6.25,
-    "cod_item": "001.000.025"
+    "cod_item": "001.000.025",
+    "met_est": 128
   },
   {
     "id": "cgDJdbiFAfDoZuuejm0H",
-    "nome": "LEVOFLOXACINO 500 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 20,
     "estoque": 62,
-    "status": 3.1,
-    "cod_item": "022.001.002"
+    "cod_item": "022.001.002",
+    "met_est": 80
   },
   {
     "id": "cwSKUfK9KwEm0AbHNMpd",
-    "nome": "VARFARINA SODICA 5MG - MAREVAN",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 18,
     "estoque": 90,
-    "status": 5,
-    "cod_item": "304.001.004"
+    "cod_item": "304.001.004",
+    "met_est": 72
   },
   {
     "id": "d2LNZhZMLPjvFkClIlav",
-    "nome": "CARBONATO DE CALCIO 1.250MG + VITAMINA D 400UI",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 15,
     "estoque": 120,
-    "status": 8,
-    "cod_item": "230.001.019"
+    "cod_item": "230.001.019",
+    "met_est": 60
   },
   {
     "id": "dZc14LalEPdXFtlR7NHS",
-    "nome": "PENTOXIFILINA 400 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 41,
     "estoque": 140,
-    "status": 3.4146341463414633,
-    "cod_item": "303.006.004"
+    "cod_item": "303.006.004",
+    "met_est": 164
   },
   {
     "id": "dpRx8TtnyGYYQUzZjwye",
-    "nome": "METOPROLOL 25 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 120,
     "estoque": 780,
-    "status": 6.5,
-    "cod_item": "008.001.008"
+    "cod_item": "008.001.008",
+    "met_est": 240
   },
   {
     "id": "eF2rJNNgS3CfhQNKJXRV",
-    "nome": "ITRACONAZOL 100 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 5,
     "estoque": 70,
-    "status": 14,
-    "cod_item": "301.004.001"
+    "cod_item": "301.004.001",
+    "met_est": 20
   },
   {
     "id": "eHAdTiN6udE6bIprZQFv",
-    "nome": "AMOXICILINA 250 MG/5ML - 150 ML",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 9,
-    "status": 9,
-    "cod_item": "325.016.007"
+    "cod_item": "325.016.007",
+    "met_est": 4
   },
   {
     "id": "eIrNEIdSv6YG3OwdtPb8",
-    "nome": "GLICLAZIDA 30 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 420,
     "estoque": 780,
-    "status": 1.8571428571428572,
-    "cod_item": "023.001.001"
+    "cod_item": "023.001.001",
+    "met_est": 1260
   },
   {
     "id": "eRB4xnzeWYyNYDUmSxKw",
-    "nome": "DICLOFENACO 50 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 40,
     "estoque": 250,
-    "status": 6.25,
-    "cod_item": "002.000.014"
+    "cod_item": "002.000.014",
+    "met_est": 160
   },
   {
     "id": "ejhnkJr9F1gUxK4pZRgJ",
-    "nome": "PARACETAMOL 500 MG - COMP",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 50,
     "estoque": 270,
-    "status": 5.4,
-    "cod_item": "002.000.031"
+    "cod_item": "002.000.031",
+    "met_est": 200
   },
   {
     "id": "f6Sub0kWhm74yKgnVPUD",
-    "nome": "TESTE RAPIDO DE GRAVIDEZ",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 2,
     "estoque": 9,
-    "status": 4.5,
-    "cod_item": "001.001.006"
+    "cod_item": "001.001.006",
+    "met_est": 8
   },
   {
     "id": "fpUktjrc6b4KmDsTQSYH",
-    "nome": "TRAMADOL 50MG/ML(TRAMAL)- AMP",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 10,
-    "status": 10,
-    "cod_item": "005.000.052"
+    "cod_item": "005.000.052",
+    "met_est": 4
   },
   {
     "id": "gHCb6Fe23ndETJRlkmat",
-    "nome": "DEXAMETASONA 4 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 50,
     "estoque": 420,
-    "status": 8.4,
-    "cod_item": "305.002.004"
+    "cod_item": "305.002.004",
+    "met_est": 120
   },
   {
     "id": "gsRExxjlZw5w8zPkgeN0",
-    "nome": "HIDROXIDO DE ALUMINIO 6.2% SUSP",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 3,
     "estoque": 19,
-    "status": 6.333333333333333,
-    "cod_item": "002.000.020"
+    "cod_item": "002.000.020",
+    "met_est": 8
   },
   {
     "id": "hGD5lCoPcrzgQiFWkr5s",
-    "nome": "BUSCOPAM COMPOSTO  GOTAS",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "002.000.009"
+    "cod_item": "002.000.009",
+    "met_est": 0
   },
   {
     "id": "hk5quNYRAYs1nt3N1lXh",
-    "nome": "NIMODIPINO 30 MG",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "008.001.002"
+    "cod_item": "008.001.002",
+    "met_est": 0
   },
   {
     "id": "i6rjMUQbiuivcM1H7ZM2",
-    "nome": "AMBROXOL XAROPE ADULTO",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 6,
     "estoque": 19,
-    "status": 3.1666666666666665,
-    "cod_item": "325.021.002"
+    "cod_item": "325.021.002",
+    "met_est": 24
   },
   {
     "id": "iBZRB4q2o7wqCUAtOt21",
-    "nome": "CARBONATO DE LITIO 300 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 90,
     "estoque": 680,
-    "status": 7.555555555555555,
-    "cod_item": "005.000.024"
+    "cod_item": "005.000.024",
+    "met_est": 360
   },
   {
     "id": "iFmMaH0vOOXaHNLuJPLO",
-    "nome": "FLUCONAZOL 150 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 8,
     "estoque": 26,
-    "status": 3.25,
-    "cod_item": "002.000.060"
+    "cod_item": "002.000.060",
+    "met_est": 20
   },
   {
     "id": "iGkfsgYhpn1xhWcBeJcb",
-    "nome": "OXCARBAZEPINA 300 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 67,
     "estoque": 720,
-    "status": 10.746268656716419,
-    "cod_item": "302.004.003"
+    "cod_item": "302.004.003",
+    "met_est": 268
   },
   {
     "id": "ikE8fRhMdZLGI8AYdmC1",
-    "nome": "DIPIRONA SÓDICA GOTAS 500 MG / ML 10 ML",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 14,
     "estoque": 97,
-    "status": 6.928571428571429,
-    "cod_item": "002.000.015"
+    "cod_item": "002.000.015",
+    "met_est": 56
   },
   {
     "id": "ikI75aRtaWBhgguWikHt",
-    "nome": "AMBROXOL XAROPE INFANTIL",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 2,
     "estoque": 7,
-    "status": 3.5,
-    "cod_item": "325.021.003"
+    "cod_item": "325.021.003",
+    "met_est": 8
   },
   {
     "id": "jUDLnEvzBKM0eyfEU5zq",
-    "nome": "NIMESULIDA GTS",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 4,
-    "status": 4,
-    "cod_item": "002.000.039"
+    "cod_item": "002.000.039",
+    "met_est": 4
   },
   {
     "id": "joNEdv1XTC7ok0btrvkW",
-    "nome": "PERMETRINA 5% LOÇÃO",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 6,
-    "status": null,
-    "cod_item": "325.014.001"
+    "cod_item": "325.014.001",
+    "met_est": 0
   },
   {
     "id": "k68JpylQ2Qinp9OjXFZx",
-    "nome": "CIPROFLOXACINO 500MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 45,
     "estoque": 109,
-    "status": 2.422222222222222,
-    "cod_item": "002.000.045"
+    "cod_item": "002.000.045",
+    "met_est": 180
   },
   {
     "id": "kAhdFIdCviLfqNwieFoq",
-    "nome": "TIAMINA 300 MG - CP",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 60,
     "estoque": 520,
-    "status": 8.666666666666666,
-    "cod_item": "006.000.002"
+    "cod_item": "006.000.002",
+    "met_est": 240
   },
   {
     "id": "klrza3RwQV9FBYH46oOq",
-    "nome": "AGULHA PARA CANETA DE INSULINA 6MM",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "321.001.392"
+    "cod_item": "321.001.392",
+    "met_est": 0
   },
   {
     "id": "lCeIuKMM2vRXXo3akaky",
-    "nome": "DIGOXINA 0.25 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 28,
     "estoque": 150,
-    "status": 5.357142857142857,
-    "cod_item": "001.000.003"
+    "cod_item": "001.000.003",
+    "met_est": 112
   },
   {
     "id": "lIAiXxi728Xz9w91AUQo",
-    "nome": "CLONAZEPAM 2,5 MG/ ML - GOTAS",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 7,
     "estoque": 28,
-    "status": 4,
-    "cod_item": "005.000.022"
+    "cod_item": "005.000.022",
+    "met_est": 28
   },
   {
     "id": "lNOi6iuhhEpUUsu6pCKg",
-    "nome": "IBUPROFENO 100MG/ML -  GOTAS",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 3,
     "estoque": 16,
-    "status": 5.333333333333333,
-    "cod_item": "002.000.130"
+    "cod_item": "002.000.130",
+    "met_est": 12
   },
   {
     "id": "m2oRBeWddojGGpgkS4el",
-    "nome": "PIRIMETAMINA 25MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 30,
-    "status": 30,
-    "cod_item": "325.053.001"
+    "cod_item": "325.053.001",
+    "met_est": 4
   },
   {
     "id": "mDTcBggAs5f1dVfVJ6Mb",
-    "nome": "HALOPERIDOL,DECANOATO 70,52MG/ML",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 8,
     "estoque": 19,
-    "status": 2.375,
-    "cod_item": "005.000.048"
+    "cod_item": "005.000.048",
+    "met_est": 16
   },
   {
     "id": "mMe972NC4v9ZaoaE0199",
-    "nome": "SORO NASAL INFANTIL/ADULTO -30 ML",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 2,
     "estoque": 28,
-    "status": 14,
-    "cod_item": "021.001.095"
+    "cod_item": "021.001.095",
+    "met_est": 8
   },
   {
     "id": "mbuxUy9wncrbpEYmhXT1",
-    "nome": "CARBAMAZEPINA 200 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 420,
     "estoque": 800,
-    "status": 1.9047619047619047,
-    "cod_item": "325.028.003"
+    "cod_item": "325.028.003",
+    "met_est": 1680
   },
   {
     "id": "nydVK8Fu0ZDFfslUvKTB",
-    "nome": "CEFTRIAXONA 1 G - PÓ P/ SOL. INJ EV",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 20,
     "estoque": 63,
-    "status": 3.15,
-    "cod_item": "022.001.012"
+    "cod_item": "022.001.012",
+    "met_est": 80
   },
   {
     "id": "oCxU84LZtEAhArccBGok",
-    "nome": "INSULINA HUMANA NPH 100 UI/ML - FRASCO 10 ML",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 10,
-    "status": 10,
-    "cod_item": "003.000.004"
+    "cod_item": "003.000.004",
+    "met_est": 4
   },
   {
     "id": "ohSUNCWfUHGGnS0y760V",
-    "nome": "PREDNISONA 5 MG - CP",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 23,
     "estoque": 80,
-    "status": 3.4782608695652173,
-    "cod_item": "007.000.001"
+    "cod_item": "007.000.001",
+    "met_est": 92
   },
   {
     "id": "op2bwLUzB57jQynvY7qS",
-    "nome": "DIAZEPAM 10 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 230,
     "estoque": 1100,
-    "status": 4.782608695652174,
-    "cod_item": "005.000.001"
+    "cod_item": "005.000.001",
+    "met_est": 920
   },
   {
     "id": "p0doJdebewQd1fK3WCD1",
-    "nome": "CLOMIPRAMINA, CLORIDRATO 25 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 170,
     "estoque": 900,
-    "status": 5.294117647058823,
-    "cod_item": "005.000.020"
+    "cod_item": "005.000.020",
+    "met_est": 680
   },
   {
     "id": "p3m0Ds21uhutudbdR2jp",
-    "nome": "ALOPURINOL  300MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 105,
     "estoque": 340,
-    "status": 3.238095238095238,
-    "cod_item": "325.032.001"
+    "cod_item": "325.032.001",
+    "met_est": 420
   },
   {
     "id": "pTaHNsq4XjAUAT7XMOO2",
-    "nome": "DROPROPIZINA 1,5 MG/ML -XAROPE PEDIATRICO",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 5,
-    "status": null,
-    "cod_item": "002.000.144"
+    "cod_item": "002.000.144",
+    "met_est": 0
   },
   {
     "id": "q3yCwGbaoSxBxrOArwpN",
-    "nome": "FOSFATO OSELTAMIVIR 45 MG - TAMIFLU",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 50,
-    "status": 50,
-    "cod_item": "301.002.003"
+    "cod_item": "301.002.003",
+    "met_est": 4
   },
   {
     "id": "qTC0CPUJZMEZioIEnexS",
-    "nome": "NISTATINA 100.000 SUSP FRASCO 60 ML",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "021.001.058"
+    "cod_item": "021.001.058",
+    "met_est": 0
   },
   {
     "id": "rETsLcNEypm7eT5BylNR",
-    "nome": "ACICLOVIR 5 % CREME 10 G",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 5,
-    "status": 5,
-    "cod_item": "325.025.002"
+    "cod_item": "325.025.002",
+    "met_est": 4
   },
   {
     "id": "rTrt29qM8e8L0HEpJKGw",
-    "nome": "NIMESULIDA 100 MG  CP",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 180,
     "estoque": 506,
-    "status": 2.811111111111111,
-    "cod_item": "002.000.058"
+    "cod_item": "002.000.058",
+    "met_est": 720
   },
   {
     "id": "rzttzcZ6hfFql4oLO4yZ",
-    "nome": "LEVODOPA + BENSERAZIDA 200/50MG - PROLOPA",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 90,
     "estoque": 480,
-    "status": 5.333333333333333,
-    "cod_item": "327.001.001"
+    "cod_item": "327.001.001",
+    "met_est": 360
   },
   {
     "id": "s45SeIf6ZNEti1hvySNe",
-    "nome": "NEOMICINA + BACITRACINA POMADA",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 4,
     "estoque": 20,
-    "status": 5,
-    "cod_item": "002.000.027"
+    "cod_item": "002.000.027",
+    "met_est": 16
   },
   {
     "id": "sfs7pkeEGVamSdUzjrT9",
-    "nome": "ONDANSETRONA 4 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 40,
     "estoque": 150,
-    "status": 3.75,
-    "cod_item": "306.001.002"
+    "cod_item": "306.001.002",
+    "met_est": 120
   },
   {
     "id": "smdqZYSa6WOAcoNaHg8o",
-    "nome": "VALPROATO DE SÓDIO 50 MG/ML - XPE",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 4,
     "estoque": 17,
-    "status": 4.25,
-    "cod_item": "005.000.021"
+    "cod_item": "005.000.021",
+    "met_est": 16
   },
   {
     "id": "t2BNiX2oI51N3TOxv8RD",
-    "nome": "CEFALEXINA 500 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 90,
     "estoque": 285,
-    "status": 3.1666666666666665,
-    "cod_item": "002.000.010"
+    "cod_item": "002.000.010",
+    "met_est": 320
   },
   {
     "id": "t86PcSmuBbSOPOVKnzyj",
-    "nome": "LEVODOPA + BENSERAZIDA 100/25MG - PROLOPA BD",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 120,
-    "status": null,
-    "cod_item": "327.001.002"
+    "cod_item": "327.001.002",
+    "met_est": 0
   },
   {
     "id": "tAHC0TsP2hvHmuaXishx",
-    "nome": "PARACETAMOL + CODEINA 500/30 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 99,
     "estoque": 194,
-    "status": 1.9595959595959596,
-    "cod_item": "030.001.007"
+    "cod_item": "030.001.007",
+    "met_est": 396
   },
   {
     "id": "tCPwaqzLT4mSGUWsB4OS",
-    "nome": "BUSCOPAM SIMPLES GOTAS",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 5,
-    "status": 5,
-    "cod_item": "325.042.004"
+    "cod_item": "325.042.004",
+    "met_est": 4
   },
   {
     "id": "tXh8zAvQhbihWPVNAz1T",
-    "nome": "NORETISTERONA + ESTRADIOL 50 + 5 MG/ML  (MESIGYNA) INJETAVEL",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 5,
     "estoque": 12,
-    "status": 2.4,
-    "cod_item": "002.000.048"
+    "cod_item": "002.000.048",
+    "met_est": 20
   },
   {
     "id": "tbMAva24epBAL70YcRaN",
-    "nome": "DIAZEPAM 10 MG/ 2ML - AMP",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "005.000.045"
+    "cod_item": "005.000.045",
+    "met_est": 0
   },
   {
     "id": "ttxM8KetwJCy4JGupVMZ",
-    "nome": "ESTRIOL 1MG/G - CR VAGINAL 50 GR",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 5,
-    "status": null,
-    "cod_item": "009.000.008"
+    "cod_item": "009.000.008",
+    "met_est": 0
   },
   {
     "id": "twnzGZpyWL1DWi4m6ZXk",
-    "nome": "AMOXICILINA + CLAVULANATO SUSP 250 MG/5 ML",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 3,
     "estoque": 10,
-    "status": 3.3333333333333335,
-    "cod_item": "325.016.006"
+    "cod_item": "325.016.006",
+    "met_est": 12
   },
   {
     "id": "uYJdBldgnAt6cGP5eHJl",
-    "nome": "HALOPERIDOL 5MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 150,
     "estoque": 370,
-    "status": 2.466666666666667,
-    "cod_item": "005.000.006"
+    "cod_item": "005.000.006",
+    "met_est": 420
   },
   {
     "id": "uYekECMfILeBdsbVxmV6",
-    "nome": "BISACODIL 5MG - DULCOLAX",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 9,
     "estoque": 52,
-    "status": 5.777777777777778,
-    "cod_item": "325.039.001"
+    "cod_item": "325.039.001",
+    "met_est": 32
   },
   {
     "id": "ueqwID6EmHnoGQhtXaSg",
-    "nome": "POMADA PARA ASSADURA ( NIST+ OX ZINCO) PMD",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 4,
     "estoque": 27,
-    "status": 6.75,
-    "cod_item": "313.001.001"
+    "cod_item": "313.001.001",
+    "met_est": 16
   },
   {
     "id": "ufTHrUnGseSgxeEtHdJf",
-    "nome": "PROPRANOLOL 40MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 160,
     "estoque": 540,
-    "status": 3.375,
-    "cod_item": "001.000.011"
+    "cod_item": "001.000.011",
+    "met_est": 480
   },
   {
     "id": "uqIP0ngTTHjdxAsNfCWx",
-    "nome": "PREDNISONA 20 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 90,
     "estoque": 240,
-    "status": 2.6666666666666665,
-    "cod_item": "308.002.001"
+    "cod_item": "308.002.001",
+    "met_est": 360
   },
   {
     "id": "usxRls0GIDJ4dLWODq6x",
-    "nome": "IBUPROFENO 50MG/ML - GOTAS",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 2,
     "estoque": 19,
-    "status": 9.5,
-    "cod_item": "050.001.005"
+    "cod_item": "050.001.005",
+    "met_est": 4
   },
   {
     "id": "vWGb4VBJqbnk0hYijDnx",
-    "nome": "FENITOINA 100 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 240,
     "estoque": 700,
-    "status": 2.9166666666666665,
-    "cod_item": "005.000.002"
+    "cod_item": "005.000.002",
+    "met_est": 600
   },
   {
     "id": "we6AzV8mcfyL9pLT19SR",
-    "nome": "BUSCOPAM COMPOSTO CPR",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 65,
     "estoque": 120,
-    "status": 1.8461538461538463,
-    "cod_item": "325.042.002"
+    "cod_item": "325.042.002",
+    "met_est": 260
   },
   {
     "id": "wgO3tB3cu758KQt4SM6Z",
-    "nome": "ENALAPRIL 10MG",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "001.000.016"
+    "cod_item": "001.000.016",
+    "met_est": 0
   },
   {
     "id": "wylasPUrThnkRSEndzzY",
-    "nome": "LEVONORGESTREL 0,15MG+ETINILESTRADIOL 0,03MG- CICLO 21",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 84,
     "estoque": 230,
-    "status": 2.738095238095238,
-    "cod_item": "308.001.002"
+    "cod_item": "308.001.002",
+    "met_est": 336
   },
   {
     "id": "xBDYWzksJNXzMgNgSePn",
-    "nome": "METFORMINA, CLORIDRATO 850MG",
-    "tp_metodo": "3.INATIVOS",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "003.000.002"
+    "cod_item": "003.000.002",
+    "met_est": 0
   },
   {
     "id": "xeh7b3yiMoW68WHqxPn8",
-    "nome": "SULFADIAZINA 500 MG",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 60,
-    "status": 60,
-    "cod_item": "325.053.002"
+    "cod_item": "325.053.002",
+    "met_est": 4
   },
   {
     "id": "yXaW5crPmXcqarfDt0aw",
-    "nome": "CLORPROMAZINA, CLORIDRATO 100MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 115,
     "estoque": 170,
-    "status": 1.4782608695652173,
-    "cod_item": "005.000.014"
+    "cod_item": "005.000.014",
+    "met_est": 460
   },
   {
     "id": "zLQgQ2awmW0kMMpv70Je",
-    "nome": "CLONAZEPAM 2MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 980,
     "estoque": 2810,
-    "status": 2.86734693877551,
-    "cod_item": "005.000.015"
+    "cod_item": "005.000.015",
+    "met_est": 3920
   },
   {
     "id": "zWj3Zl6fKVpGCLxOiP3W",
-    "nome": "CERUMIN GOTAS",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 0,
     "estoque": 0,
-    "status": 0,
-    "cod_item": "021.004.006"
+    "cod_item": "021.004.006",
+    "met_est": 0
   },
   {
     "id": "za33TVjHqZh1b3odQNMf",
-    "nome": "CARVEDILOL 25 MG",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 75,
     "estoque": 330,
-    "status": 4.4,
-    "cod_item": "303.007.002"
+    "cod_item": "303.007.002",
+    "met_est": 240
   },
   {
     "id": "zrOXty7oRQOLWo64IeNg",
-    "nome": "ACIDO TRANEXÂMICO 250MG - TRANSAMIN",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 24,
     "estoque": 84,
-    "status": 3.5,
-    "cod_item": "325.027.001"
+    "cod_item": "325.027.001",
+    "met_est": 96
   },
   {
     "id": "zscvGVU83Yx04JslNya2",
-    "nome": "CETOCONAZOL + BETAMETASONA POMADA 30 GR",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 4,
     "estoque": 1,
-    "status": 0.25,
-    "cod_item": "002.000.134"
+    "cod_item": "002.000.134",
+    "met_est": 12
   },
   {
     "id": "zuRRaub7tz3KJ99MF19y",
-    "nome": "CARBAMAZEPINA SUSP. 100 ML- 20 MG/ML",
-    "tp_metodo": "2.INTERMITENTES",
-    "metodo": 1,
     "estoque": 20,
-    "status": 20,
-    "cod_item": "005.000.066"
+    "cod_item": "005.000.066",
+    "met_est": 4
   },
   {
     "id": "zwP4fTXosdwRuIBdjFaU",
-    "nome": "DEXAMETASONA 0.1% CREME 10 GR",
-    "tp_metodo": "1.ORDINÁRIOS",
-    "metodo": 12,
     "estoque": 31,
-    "status": 2.5833333333333335,
-    "cod_item": "002.000.013"
+    "cod_item": "002.000.013",
+    "met_est": 44
   }
 ]
